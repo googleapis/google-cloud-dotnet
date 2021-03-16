@@ -17,6 +17,7 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -36,30 +37,367 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Description = "description2cf9da67",
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DryRun = true,
-                InstanceFilter = new PatchInstanceFilter(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
                 DisplayName = "display_name137f65c2",
-                Rollout = new PatchRollout(),
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             PatchJob expectedResponse = new PatchJob
             {
                 PatchJobName = PatchJobName.FromProjectPatchJob("[PROJECT]", "[PATCH_JOB]"),
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = PatchJob.Types.State.Canceled,
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary(),
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary
+                {
+                    PendingInstanceCount = 5041607246872704290L,
+                    InactiveInstanceCount = 1476399414561865165L,
+                    NotifiedInstanceCount = 6572005596452216615L,
+                    StartedInstanceCount = -8486596626939925010L,
+                    DownloadingPatchesInstanceCount = -8280237828449013491L,
+                    ApplyingPatchesInstanceCount = 733029096933397144L,
+                    RebootingInstanceCount = 1589494670285280093L,
+                    SucceededInstanceCount = 8614651926872146748L,
+                    SucceededRebootRequiredInstanceCount = -8666710509699920105L,
+                    FailedInstanceCount = 9051978147181781014L,
+                    AckedInstanceCount = -5688688631666406798L,
+                    TimedOutInstanceCount = -6788084822644593742L,
+                    PrePatchStepInstanceCount = 2592432338715006109L,
+                    PostPatchStepInstanceCount = -3042377396779731288L,
+                    NoAgentDetectedInstanceCount = 6109887116482889714L,
+                },
                 DryRun = true,
                 ErrorMessage = "error_messaged73952bd",
                 PercentComplete = 67289115664290224,
-                InstanceFilter = new PatchInstanceFilter(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
-                Rollout = new PatchRollout(),
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ExecutePatchJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -76,30 +414,367 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 Description = "description2cf9da67",
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DryRun = true,
-                InstanceFilter = new PatchInstanceFilter(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
                 DisplayName = "display_name137f65c2",
-                Rollout = new PatchRollout(),
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             PatchJob expectedResponse = new PatchJob
             {
                 PatchJobName = PatchJobName.FromProjectPatchJob("[PROJECT]", "[PATCH_JOB]"),
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = PatchJob.Types.State.Canceled,
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary(),
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary
+                {
+                    PendingInstanceCount = 5041607246872704290L,
+                    InactiveInstanceCount = 1476399414561865165L,
+                    NotifiedInstanceCount = 6572005596452216615L,
+                    StartedInstanceCount = -8486596626939925010L,
+                    DownloadingPatchesInstanceCount = -8280237828449013491L,
+                    ApplyingPatchesInstanceCount = 733029096933397144L,
+                    RebootingInstanceCount = 1589494670285280093L,
+                    SucceededInstanceCount = 8614651926872146748L,
+                    SucceededRebootRequiredInstanceCount = -8666710509699920105L,
+                    FailedInstanceCount = 9051978147181781014L,
+                    AckedInstanceCount = -5688688631666406798L,
+                    TimedOutInstanceCount = -6788084822644593742L,
+                    PrePatchStepInstanceCount = 2592432338715006109L,
+                    PostPatchStepInstanceCount = -3042377396779731288L,
+                    NoAgentDetectedInstanceCount = 6109887116482889714L,
+                },
                 DryRun = true,
                 ErrorMessage = "error_messaged73952bd",
                 PercentComplete = 67289115664290224,
-                InstanceFilter = new PatchInstanceFilter(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
-                Rollout = new PatchRollout(),
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ExecutePatchJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -122,19 +797,200 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 PatchJobName = PatchJobName.FromProjectPatchJob("[PROJECT]", "[PATCH_JOB]"),
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = PatchJob.Types.State.Canceled,
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary(),
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary
+                {
+                    PendingInstanceCount = 5041607246872704290L,
+                    InactiveInstanceCount = 1476399414561865165L,
+                    NotifiedInstanceCount = 6572005596452216615L,
+                    StartedInstanceCount = -8486596626939925010L,
+                    DownloadingPatchesInstanceCount = -8280237828449013491L,
+                    ApplyingPatchesInstanceCount = 733029096933397144L,
+                    RebootingInstanceCount = 1589494670285280093L,
+                    SucceededInstanceCount = 8614651926872146748L,
+                    SucceededRebootRequiredInstanceCount = -8666710509699920105L,
+                    FailedInstanceCount = 9051978147181781014L,
+                    AckedInstanceCount = -5688688631666406798L,
+                    TimedOutInstanceCount = -6788084822644593742L,
+                    PrePatchStepInstanceCount = 2592432338715006109L,
+                    PostPatchStepInstanceCount = -3042377396779731288L,
+                    NoAgentDetectedInstanceCount = 6109887116482889714L,
+                },
                 DryRun = true,
                 ErrorMessage = "error_messaged73952bd",
                 PercentComplete = 67289115664290224,
-                InstanceFilter = new PatchInstanceFilter(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
-                Rollout = new PatchRollout(),
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPatchJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -155,19 +1011,200 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 PatchJobName = PatchJobName.FromProjectPatchJob("[PROJECT]", "[PATCH_JOB]"),
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = PatchJob.Types.State.Canceled,
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary(),
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary
+                {
+                    PendingInstanceCount = 5041607246872704290L,
+                    InactiveInstanceCount = 1476399414561865165L,
+                    NotifiedInstanceCount = 6572005596452216615L,
+                    StartedInstanceCount = -8486596626939925010L,
+                    DownloadingPatchesInstanceCount = -8280237828449013491L,
+                    ApplyingPatchesInstanceCount = 733029096933397144L,
+                    RebootingInstanceCount = 1589494670285280093L,
+                    SucceededInstanceCount = 8614651926872146748L,
+                    SucceededRebootRequiredInstanceCount = -8666710509699920105L,
+                    FailedInstanceCount = 9051978147181781014L,
+                    AckedInstanceCount = -5688688631666406798L,
+                    TimedOutInstanceCount = -6788084822644593742L,
+                    PrePatchStepInstanceCount = 2592432338715006109L,
+                    PostPatchStepInstanceCount = -3042377396779731288L,
+                    NoAgentDetectedInstanceCount = 6109887116482889714L,
+                },
                 DryRun = true,
                 ErrorMessage = "error_messaged73952bd",
                 PercentComplete = 67289115664290224,
-                InstanceFilter = new PatchInstanceFilter(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
-                Rollout = new PatchRollout(),
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPatchJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -190,19 +1227,200 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 PatchJobName = PatchJobName.FromProjectPatchJob("[PROJECT]", "[PATCH_JOB]"),
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = PatchJob.Types.State.Canceled,
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary(),
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary
+                {
+                    PendingInstanceCount = 5041607246872704290L,
+                    InactiveInstanceCount = 1476399414561865165L,
+                    NotifiedInstanceCount = 6572005596452216615L,
+                    StartedInstanceCount = -8486596626939925010L,
+                    DownloadingPatchesInstanceCount = -8280237828449013491L,
+                    ApplyingPatchesInstanceCount = 733029096933397144L,
+                    RebootingInstanceCount = 1589494670285280093L,
+                    SucceededInstanceCount = 8614651926872146748L,
+                    SucceededRebootRequiredInstanceCount = -8666710509699920105L,
+                    FailedInstanceCount = 9051978147181781014L,
+                    AckedInstanceCount = -5688688631666406798L,
+                    TimedOutInstanceCount = -6788084822644593742L,
+                    PrePatchStepInstanceCount = 2592432338715006109L,
+                    PostPatchStepInstanceCount = -3042377396779731288L,
+                    NoAgentDetectedInstanceCount = 6109887116482889714L,
+                },
                 DryRun = true,
                 ErrorMessage = "error_messaged73952bd",
                 PercentComplete = 67289115664290224,
-                InstanceFilter = new PatchInstanceFilter(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
-                Rollout = new PatchRollout(),
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPatchJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -223,19 +1441,200 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 PatchJobName = PatchJobName.FromProjectPatchJob("[PROJECT]", "[PATCH_JOB]"),
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = PatchJob.Types.State.Canceled,
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary(),
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary
+                {
+                    PendingInstanceCount = 5041607246872704290L,
+                    InactiveInstanceCount = 1476399414561865165L,
+                    NotifiedInstanceCount = 6572005596452216615L,
+                    StartedInstanceCount = -8486596626939925010L,
+                    DownloadingPatchesInstanceCount = -8280237828449013491L,
+                    ApplyingPatchesInstanceCount = 733029096933397144L,
+                    RebootingInstanceCount = 1589494670285280093L,
+                    SucceededInstanceCount = 8614651926872146748L,
+                    SucceededRebootRequiredInstanceCount = -8666710509699920105L,
+                    FailedInstanceCount = 9051978147181781014L,
+                    AckedInstanceCount = -5688688631666406798L,
+                    TimedOutInstanceCount = -6788084822644593742L,
+                    PrePatchStepInstanceCount = 2592432338715006109L,
+                    PostPatchStepInstanceCount = -3042377396779731288L,
+                    NoAgentDetectedInstanceCount = 6109887116482889714L,
+                },
                 DryRun = true,
                 ErrorMessage = "error_messaged73952bd",
                 PercentComplete = 67289115664290224,
-                InstanceFilter = new PatchInstanceFilter(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
-                Rollout = new PatchRollout(),
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPatchJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -258,19 +1657,200 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 PatchJobName = PatchJobName.FromProjectPatchJob("[PROJECT]", "[PATCH_JOB]"),
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = PatchJob.Types.State.Canceled,
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary(),
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary
+                {
+                    PendingInstanceCount = 5041607246872704290L,
+                    InactiveInstanceCount = 1476399414561865165L,
+                    NotifiedInstanceCount = 6572005596452216615L,
+                    StartedInstanceCount = -8486596626939925010L,
+                    DownloadingPatchesInstanceCount = -8280237828449013491L,
+                    ApplyingPatchesInstanceCount = 733029096933397144L,
+                    RebootingInstanceCount = 1589494670285280093L,
+                    SucceededInstanceCount = 8614651926872146748L,
+                    SucceededRebootRequiredInstanceCount = -8666710509699920105L,
+                    FailedInstanceCount = 9051978147181781014L,
+                    AckedInstanceCount = -5688688631666406798L,
+                    TimedOutInstanceCount = -6788084822644593742L,
+                    PrePatchStepInstanceCount = 2592432338715006109L,
+                    PostPatchStepInstanceCount = -3042377396779731288L,
+                    NoAgentDetectedInstanceCount = 6109887116482889714L,
+                },
                 DryRun = true,
                 ErrorMessage = "error_messaged73952bd",
                 PercentComplete = 67289115664290224,
-                InstanceFilter = new PatchInstanceFilter(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
-                Rollout = new PatchRollout(),
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPatchJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -291,19 +1871,200 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 PatchJobName = PatchJobName.FromProjectPatchJob("[PROJECT]", "[PATCH_JOB]"),
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = PatchJob.Types.State.Canceled,
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary(),
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary
+                {
+                    PendingInstanceCount = 5041607246872704290L,
+                    InactiveInstanceCount = 1476399414561865165L,
+                    NotifiedInstanceCount = 6572005596452216615L,
+                    StartedInstanceCount = -8486596626939925010L,
+                    DownloadingPatchesInstanceCount = -8280237828449013491L,
+                    ApplyingPatchesInstanceCount = 733029096933397144L,
+                    RebootingInstanceCount = 1589494670285280093L,
+                    SucceededInstanceCount = 8614651926872146748L,
+                    SucceededRebootRequiredInstanceCount = -8666710509699920105L,
+                    FailedInstanceCount = 9051978147181781014L,
+                    AckedInstanceCount = -5688688631666406798L,
+                    TimedOutInstanceCount = -6788084822644593742L,
+                    PrePatchStepInstanceCount = 2592432338715006109L,
+                    PostPatchStepInstanceCount = -3042377396779731288L,
+                    NoAgentDetectedInstanceCount = 6109887116482889714L,
+                },
                 DryRun = true,
                 ErrorMessage = "error_messaged73952bd",
                 PercentComplete = 67289115664290224,
-                InstanceFilter = new PatchInstanceFilter(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
-                Rollout = new PatchRollout(),
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPatchJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -326,19 +2087,200 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 PatchJobName = PatchJobName.FromProjectPatchJob("[PROJECT]", "[PATCH_JOB]"),
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = PatchJob.Types.State.Canceled,
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary(),
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary
+                {
+                    PendingInstanceCount = 5041607246872704290L,
+                    InactiveInstanceCount = 1476399414561865165L,
+                    NotifiedInstanceCount = 6572005596452216615L,
+                    StartedInstanceCount = -8486596626939925010L,
+                    DownloadingPatchesInstanceCount = -8280237828449013491L,
+                    ApplyingPatchesInstanceCount = 733029096933397144L,
+                    RebootingInstanceCount = 1589494670285280093L,
+                    SucceededInstanceCount = 8614651926872146748L,
+                    SucceededRebootRequiredInstanceCount = -8666710509699920105L,
+                    FailedInstanceCount = 9051978147181781014L,
+                    AckedInstanceCount = -5688688631666406798L,
+                    TimedOutInstanceCount = -6788084822644593742L,
+                    PrePatchStepInstanceCount = 2592432338715006109L,
+                    PostPatchStepInstanceCount = -3042377396779731288L,
+                    NoAgentDetectedInstanceCount = 6109887116482889714L,
+                },
                 DryRun = true,
                 ErrorMessage = "error_messaged73952bd",
                 PercentComplete = 67289115664290224,
-                InstanceFilter = new PatchInstanceFilter(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
-                Rollout = new PatchRollout(),
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CancelPatchJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -359,19 +2301,200 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 PatchJobName = PatchJobName.FromProjectPatchJob("[PROJECT]", "[PATCH_JOB]"),
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = PatchJob.Types.State.Canceled,
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary(),
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InstanceDetailsSummary = new PatchJob.Types.InstanceDetailsSummary
+                {
+                    PendingInstanceCount = 5041607246872704290L,
+                    InactiveInstanceCount = 1476399414561865165L,
+                    NotifiedInstanceCount = 6572005596452216615L,
+                    StartedInstanceCount = -8486596626939925010L,
+                    DownloadingPatchesInstanceCount = -8280237828449013491L,
+                    ApplyingPatchesInstanceCount = 733029096933397144L,
+                    RebootingInstanceCount = 1589494670285280093L,
+                    SucceededInstanceCount = 8614651926872146748L,
+                    SucceededRebootRequiredInstanceCount = -8666710509699920105L,
+                    FailedInstanceCount = 9051978147181781014L,
+                    AckedInstanceCount = -5688688631666406798L,
+                    TimedOutInstanceCount = -6788084822644593742L,
+                    PrePatchStepInstanceCount = 2592432338715006109L,
+                    PostPatchStepInstanceCount = -3042377396779731288L,
+                    NoAgentDetectedInstanceCount = 6109887116482889714L,
+                },
                 DryRun = true,
                 ErrorMessage = "error_messaged73952bd",
                 PercentComplete = 67289115664290224,
-                InstanceFilter = new PatchInstanceFilter(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
-                Rollout = new PatchRollout(),
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CancelPatchJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -390,21 +2513,480 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 PatchDeploymentId = "patch_deployment_id084ea38b",
-                PatchDeployment = new PatchDeployment(),
+                PatchDeployment = new PatchDeployment
+                {
+                    PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                    Description = "description2cf9da67",
+                    InstanceFilter = new PatchInstanceFilter
+                    {
+                        All = true,
+                        GroupLabels =
+                        {
+                            new PatchInstanceFilter.Types.GroupLabel
+                            {
+                                Labels =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        Zones = { "zones3641f926", },
+                        Instances =
+                        {
+                            "instances5432a96f",
+                        },
+                        InstanceNamePrefixes =
+                        {
+                            "instance_name_prefixesedd638f3",
+                        },
+                    },
+                    PatchConfig = new PatchConfig
+                    {
+                        RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                        Apt = new AptSettings
+                        {
+                            Type = AptSettings.Types.Type.Unspecified,
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePackages =
+                            {
+                                "exclusive_packagesaa5cfd55",
+                            },
+                        },
+                        Yum = new YumSettings
+                        {
+                            Security = true,
+                            Minimal = true,
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePackages =
+                            {
+                                "exclusive_packagesaa5cfd55",
+                            },
+                        },
+                        Goo = new GooSettings { },
+                        Zypper = new ZypperSettings
+                        {
+                            WithOptional = false,
+                            WithUpdate = false,
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                            Severities =
+                            {
+                                "severitiesd4ce3dcd",
+                            },
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePatches =
+                            {
+                                "exclusive_patchesb47b8881",
+                            },
+                        },
+                        WindowsUpdate = new WindowsUpdateSettings
+                        {
+                            Classifications =
+                            {
+                                WindowsUpdateSettings.Types.Classification.Update,
+                            },
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePatches =
+                            {
+                                "exclusive_patchesb47b8881",
+                            },
+                        },
+                        PreStep = new ExecStep
+                        {
+                            LinuxExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                            WindowsExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                        },
+                        PostStep = new ExecStep
+                        {
+                            LinuxExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                            WindowsExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                        },
+                    },
+                    Duration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    OneTimeSchedule = new OneTimeSchedule
+                    {
+                        ExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    RecurringSchedule = new RecurringSchedule
+                    {
+                        TimeZone = new gt::TimeZone
+                        {
+                            Id = "id74b70bb8",
+                            Version = "version102ff72a",
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        TimeOfDay = new gt::TimeOfDay
+                        {
+                            Hours = -673329805,
+                            Minutes = -858779804,
+                            Seconds = 697187960,
+                            Nanos = 985689544,
+                        },
+                        Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                        Weekly = new WeeklySchedule
+                        {
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        Monthly = new MonthlySchedule
+                        {
+                            WeekDayOfMonth = new WeekDayOfMonth
+                            {
+                                WeekOrdinal = -852312922,
+                                DayOfWeek = gt::DayOfWeek.Thursday,
+                            },
+                            MonthDay = 776203719,
+                        },
+                        LastExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NextExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Rollout = new PatchRollout
+                    {
+                        Mode = PatchRollout.Types.Mode.Unspecified,
+                        DisruptionBudget = new FixedOrPercent
+                        {
+                            Fixed = -485112882,
+                            Percent = 2063879989,
+                        },
+                    },
+                },
             };
             PatchDeployment expectedResponse = new PatchDeployment
             {
                 PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
                 Description = "description2cf9da67",
-                InstanceFilter = new PatchInstanceFilter(),
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                OneTimeSchedule = new OneTimeSchedule(),
-                RecurringSchedule = new RecurringSchedule(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                LastExecuteTime = new wkt::Timestamp(),
-                Rollout = new PatchRollout(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                OneTimeSchedule = new OneTimeSchedule
+                {
+                    ExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RecurringSchedule = new RecurringSchedule
+                {
+                    TimeZone = new gt::TimeZone
+                    {
+                        Id = "id74b70bb8",
+                        Version = "version102ff72a",
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TimeOfDay = new gt::TimeOfDay
+                    {
+                        Hours = -673329805,
+                        Minutes = -858779804,
+                        Seconds = 697187960,
+                        Nanos = 985689544,
+                    },
+                    Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                    Weekly = new WeeklySchedule
+                    {
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Monthly = new MonthlySchedule
+                    {
+                        WeekDayOfMonth = new WeekDayOfMonth
+                        {
+                            WeekOrdinal = -852312922,
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        MonthDay = 776203719,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastExecuteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -421,21 +3003,480 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 PatchDeploymentId = "patch_deployment_id084ea38b",
-                PatchDeployment = new PatchDeployment(),
+                PatchDeployment = new PatchDeployment
+                {
+                    PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                    Description = "description2cf9da67",
+                    InstanceFilter = new PatchInstanceFilter
+                    {
+                        All = true,
+                        GroupLabels =
+                        {
+                            new PatchInstanceFilter.Types.GroupLabel
+                            {
+                                Labels =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        Zones = { "zones3641f926", },
+                        Instances =
+                        {
+                            "instances5432a96f",
+                        },
+                        InstanceNamePrefixes =
+                        {
+                            "instance_name_prefixesedd638f3",
+                        },
+                    },
+                    PatchConfig = new PatchConfig
+                    {
+                        RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                        Apt = new AptSettings
+                        {
+                            Type = AptSettings.Types.Type.Unspecified,
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePackages =
+                            {
+                                "exclusive_packagesaa5cfd55",
+                            },
+                        },
+                        Yum = new YumSettings
+                        {
+                            Security = true,
+                            Minimal = true,
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePackages =
+                            {
+                                "exclusive_packagesaa5cfd55",
+                            },
+                        },
+                        Goo = new GooSettings { },
+                        Zypper = new ZypperSettings
+                        {
+                            WithOptional = false,
+                            WithUpdate = false,
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                            Severities =
+                            {
+                                "severitiesd4ce3dcd",
+                            },
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePatches =
+                            {
+                                "exclusive_patchesb47b8881",
+                            },
+                        },
+                        WindowsUpdate = new WindowsUpdateSettings
+                        {
+                            Classifications =
+                            {
+                                WindowsUpdateSettings.Types.Classification.Update,
+                            },
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePatches =
+                            {
+                                "exclusive_patchesb47b8881",
+                            },
+                        },
+                        PreStep = new ExecStep
+                        {
+                            LinuxExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                            WindowsExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                        },
+                        PostStep = new ExecStep
+                        {
+                            LinuxExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                            WindowsExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                        },
+                    },
+                    Duration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    OneTimeSchedule = new OneTimeSchedule
+                    {
+                        ExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    RecurringSchedule = new RecurringSchedule
+                    {
+                        TimeZone = new gt::TimeZone
+                        {
+                            Id = "id74b70bb8",
+                            Version = "version102ff72a",
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        TimeOfDay = new gt::TimeOfDay
+                        {
+                            Hours = -673329805,
+                            Minutes = -858779804,
+                            Seconds = 697187960,
+                            Nanos = 985689544,
+                        },
+                        Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                        Weekly = new WeeklySchedule
+                        {
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        Monthly = new MonthlySchedule
+                        {
+                            WeekDayOfMonth = new WeekDayOfMonth
+                            {
+                                WeekOrdinal = -852312922,
+                                DayOfWeek = gt::DayOfWeek.Thursday,
+                            },
+                            MonthDay = 776203719,
+                        },
+                        LastExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NextExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Rollout = new PatchRollout
+                    {
+                        Mode = PatchRollout.Types.Mode.Unspecified,
+                        DisruptionBudget = new FixedOrPercent
+                        {
+                            Fixed = -485112882,
+                            Percent = 2063879989,
+                        },
+                    },
+                },
             };
             PatchDeployment expectedResponse = new PatchDeployment
             {
                 PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
                 Description = "description2cf9da67",
-                InstanceFilter = new PatchInstanceFilter(),
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                OneTimeSchedule = new OneTimeSchedule(),
-                RecurringSchedule = new RecurringSchedule(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                LastExecuteTime = new wkt::Timestamp(),
-                Rollout = new PatchRollout(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                OneTimeSchedule = new OneTimeSchedule
+                {
+                    ExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RecurringSchedule = new RecurringSchedule
+                {
+                    TimeZone = new gt::TimeZone
+                    {
+                        Id = "id74b70bb8",
+                        Version = "version102ff72a",
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TimeOfDay = new gt::TimeOfDay
+                    {
+                        Hours = -673329805,
+                        Minutes = -858779804,
+                        Seconds = 697187960,
+                        Nanos = 985689544,
+                    },
+                    Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                    Weekly = new WeeklySchedule
+                    {
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Monthly = new MonthlySchedule
+                    {
+                        WeekDayOfMonth = new WeekDayOfMonth
+                        {
+                            WeekOrdinal = -852312922,
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        MonthDay = 776203719,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastExecuteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -454,21 +3495,480 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 PatchDeploymentId = "patch_deployment_id084ea38b",
-                PatchDeployment = new PatchDeployment(),
+                PatchDeployment = new PatchDeployment
+                {
+                    PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                    Description = "description2cf9da67",
+                    InstanceFilter = new PatchInstanceFilter
+                    {
+                        All = true,
+                        GroupLabels =
+                        {
+                            new PatchInstanceFilter.Types.GroupLabel
+                            {
+                                Labels =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        Zones = { "zones3641f926", },
+                        Instances =
+                        {
+                            "instances5432a96f",
+                        },
+                        InstanceNamePrefixes =
+                        {
+                            "instance_name_prefixesedd638f3",
+                        },
+                    },
+                    PatchConfig = new PatchConfig
+                    {
+                        RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                        Apt = new AptSettings
+                        {
+                            Type = AptSettings.Types.Type.Unspecified,
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePackages =
+                            {
+                                "exclusive_packagesaa5cfd55",
+                            },
+                        },
+                        Yum = new YumSettings
+                        {
+                            Security = true,
+                            Minimal = true,
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePackages =
+                            {
+                                "exclusive_packagesaa5cfd55",
+                            },
+                        },
+                        Goo = new GooSettings { },
+                        Zypper = new ZypperSettings
+                        {
+                            WithOptional = false,
+                            WithUpdate = false,
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                            Severities =
+                            {
+                                "severitiesd4ce3dcd",
+                            },
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePatches =
+                            {
+                                "exclusive_patchesb47b8881",
+                            },
+                        },
+                        WindowsUpdate = new WindowsUpdateSettings
+                        {
+                            Classifications =
+                            {
+                                WindowsUpdateSettings.Types.Classification.Update,
+                            },
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePatches =
+                            {
+                                "exclusive_patchesb47b8881",
+                            },
+                        },
+                        PreStep = new ExecStep
+                        {
+                            LinuxExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                            WindowsExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                        },
+                        PostStep = new ExecStep
+                        {
+                            LinuxExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                            WindowsExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                        },
+                    },
+                    Duration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    OneTimeSchedule = new OneTimeSchedule
+                    {
+                        ExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    RecurringSchedule = new RecurringSchedule
+                    {
+                        TimeZone = new gt::TimeZone
+                        {
+                            Id = "id74b70bb8",
+                            Version = "version102ff72a",
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        TimeOfDay = new gt::TimeOfDay
+                        {
+                            Hours = -673329805,
+                            Minutes = -858779804,
+                            Seconds = 697187960,
+                            Nanos = 985689544,
+                        },
+                        Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                        Weekly = new WeeklySchedule
+                        {
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        Monthly = new MonthlySchedule
+                        {
+                            WeekDayOfMonth = new WeekDayOfMonth
+                            {
+                                WeekOrdinal = -852312922,
+                                DayOfWeek = gt::DayOfWeek.Thursday,
+                            },
+                            MonthDay = 776203719,
+                        },
+                        LastExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NextExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Rollout = new PatchRollout
+                    {
+                        Mode = PatchRollout.Types.Mode.Unspecified,
+                        DisruptionBudget = new FixedOrPercent
+                        {
+                            Fixed = -485112882,
+                            Percent = 2063879989,
+                        },
+                    },
+                },
             };
             PatchDeployment expectedResponse = new PatchDeployment
             {
                 PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
                 Description = "description2cf9da67",
-                InstanceFilter = new PatchInstanceFilter(),
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                OneTimeSchedule = new OneTimeSchedule(),
-                RecurringSchedule = new RecurringSchedule(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                LastExecuteTime = new wkt::Timestamp(),
-                Rollout = new PatchRollout(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                OneTimeSchedule = new OneTimeSchedule
+                {
+                    ExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RecurringSchedule = new RecurringSchedule
+                {
+                    TimeZone = new gt::TimeZone
+                    {
+                        Id = "id74b70bb8",
+                        Version = "version102ff72a",
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TimeOfDay = new gt::TimeOfDay
+                    {
+                        Hours = -673329805,
+                        Minutes = -858779804,
+                        Seconds = 697187960,
+                        Nanos = 985689544,
+                    },
+                    Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                    Weekly = new WeeklySchedule
+                    {
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Monthly = new MonthlySchedule
+                    {
+                        WeekDayOfMonth = new WeekDayOfMonth
+                        {
+                            WeekOrdinal = -852312922,
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        MonthDay = 776203719,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastExecuteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -485,21 +3985,480 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 PatchDeploymentId = "patch_deployment_id084ea38b",
-                PatchDeployment = new PatchDeployment(),
+                PatchDeployment = new PatchDeployment
+                {
+                    PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                    Description = "description2cf9da67",
+                    InstanceFilter = new PatchInstanceFilter
+                    {
+                        All = true,
+                        GroupLabels =
+                        {
+                            new PatchInstanceFilter.Types.GroupLabel
+                            {
+                                Labels =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        Zones = { "zones3641f926", },
+                        Instances =
+                        {
+                            "instances5432a96f",
+                        },
+                        InstanceNamePrefixes =
+                        {
+                            "instance_name_prefixesedd638f3",
+                        },
+                    },
+                    PatchConfig = new PatchConfig
+                    {
+                        RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                        Apt = new AptSettings
+                        {
+                            Type = AptSettings.Types.Type.Unspecified,
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePackages =
+                            {
+                                "exclusive_packagesaa5cfd55",
+                            },
+                        },
+                        Yum = new YumSettings
+                        {
+                            Security = true,
+                            Minimal = true,
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePackages =
+                            {
+                                "exclusive_packagesaa5cfd55",
+                            },
+                        },
+                        Goo = new GooSettings { },
+                        Zypper = new ZypperSettings
+                        {
+                            WithOptional = false,
+                            WithUpdate = false,
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                            Severities =
+                            {
+                                "severitiesd4ce3dcd",
+                            },
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePatches =
+                            {
+                                "exclusive_patchesb47b8881",
+                            },
+                        },
+                        WindowsUpdate = new WindowsUpdateSettings
+                        {
+                            Classifications =
+                            {
+                                WindowsUpdateSettings.Types.Classification.Update,
+                            },
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePatches =
+                            {
+                                "exclusive_patchesb47b8881",
+                            },
+                        },
+                        PreStep = new ExecStep
+                        {
+                            LinuxExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                            WindowsExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                        },
+                        PostStep = new ExecStep
+                        {
+                            LinuxExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                            WindowsExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                        },
+                    },
+                    Duration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    OneTimeSchedule = new OneTimeSchedule
+                    {
+                        ExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    RecurringSchedule = new RecurringSchedule
+                    {
+                        TimeZone = new gt::TimeZone
+                        {
+                            Id = "id74b70bb8",
+                            Version = "version102ff72a",
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        TimeOfDay = new gt::TimeOfDay
+                        {
+                            Hours = -673329805,
+                            Minutes = -858779804,
+                            Seconds = 697187960,
+                            Nanos = 985689544,
+                        },
+                        Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                        Weekly = new WeeklySchedule
+                        {
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        Monthly = new MonthlySchedule
+                        {
+                            WeekDayOfMonth = new WeekDayOfMonth
+                            {
+                                WeekOrdinal = -852312922,
+                                DayOfWeek = gt::DayOfWeek.Thursday,
+                            },
+                            MonthDay = 776203719,
+                        },
+                        LastExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NextExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Rollout = new PatchRollout
+                    {
+                        Mode = PatchRollout.Types.Mode.Unspecified,
+                        DisruptionBudget = new FixedOrPercent
+                        {
+                            Fixed = -485112882,
+                            Percent = 2063879989,
+                        },
+                    },
+                },
             };
             PatchDeployment expectedResponse = new PatchDeployment
             {
                 PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
                 Description = "description2cf9da67",
-                InstanceFilter = new PatchInstanceFilter(),
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                OneTimeSchedule = new OneTimeSchedule(),
-                RecurringSchedule = new RecurringSchedule(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                LastExecuteTime = new wkt::Timestamp(),
-                Rollout = new PatchRollout(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                OneTimeSchedule = new OneTimeSchedule
+                {
+                    ExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RecurringSchedule = new RecurringSchedule
+                {
+                    TimeZone = new gt::TimeZone
+                    {
+                        Id = "id74b70bb8",
+                        Version = "version102ff72a",
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TimeOfDay = new gt::TimeOfDay
+                    {
+                        Hours = -673329805,
+                        Minutes = -858779804,
+                        Seconds = 697187960,
+                        Nanos = 985689544,
+                    },
+                    Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                    Weekly = new WeeklySchedule
+                    {
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Monthly = new MonthlySchedule
+                    {
+                        WeekDayOfMonth = new WeekDayOfMonth
+                        {
+                            WeekOrdinal = -852312922,
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        MonthDay = 776203719,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastExecuteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -518,21 +4477,480 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 PatchDeploymentId = "patch_deployment_id084ea38b",
-                PatchDeployment = new PatchDeployment(),
+                PatchDeployment = new PatchDeployment
+                {
+                    PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                    Description = "description2cf9da67",
+                    InstanceFilter = new PatchInstanceFilter
+                    {
+                        All = true,
+                        GroupLabels =
+                        {
+                            new PatchInstanceFilter.Types.GroupLabel
+                            {
+                                Labels =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        Zones = { "zones3641f926", },
+                        Instances =
+                        {
+                            "instances5432a96f",
+                        },
+                        InstanceNamePrefixes =
+                        {
+                            "instance_name_prefixesedd638f3",
+                        },
+                    },
+                    PatchConfig = new PatchConfig
+                    {
+                        RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                        Apt = new AptSettings
+                        {
+                            Type = AptSettings.Types.Type.Unspecified,
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePackages =
+                            {
+                                "exclusive_packagesaa5cfd55",
+                            },
+                        },
+                        Yum = new YumSettings
+                        {
+                            Security = true,
+                            Minimal = true,
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePackages =
+                            {
+                                "exclusive_packagesaa5cfd55",
+                            },
+                        },
+                        Goo = new GooSettings { },
+                        Zypper = new ZypperSettings
+                        {
+                            WithOptional = false,
+                            WithUpdate = false,
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                            Severities =
+                            {
+                                "severitiesd4ce3dcd",
+                            },
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePatches =
+                            {
+                                "exclusive_patchesb47b8881",
+                            },
+                        },
+                        WindowsUpdate = new WindowsUpdateSettings
+                        {
+                            Classifications =
+                            {
+                                WindowsUpdateSettings.Types.Classification.Update,
+                            },
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePatches =
+                            {
+                                "exclusive_patchesb47b8881",
+                            },
+                        },
+                        PreStep = new ExecStep
+                        {
+                            LinuxExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                            WindowsExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                        },
+                        PostStep = new ExecStep
+                        {
+                            LinuxExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                            WindowsExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                        },
+                    },
+                    Duration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    OneTimeSchedule = new OneTimeSchedule
+                    {
+                        ExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    RecurringSchedule = new RecurringSchedule
+                    {
+                        TimeZone = new gt::TimeZone
+                        {
+                            Id = "id74b70bb8",
+                            Version = "version102ff72a",
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        TimeOfDay = new gt::TimeOfDay
+                        {
+                            Hours = -673329805,
+                            Minutes = -858779804,
+                            Seconds = 697187960,
+                            Nanos = 985689544,
+                        },
+                        Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                        Weekly = new WeeklySchedule
+                        {
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        Monthly = new MonthlySchedule
+                        {
+                            WeekDayOfMonth = new WeekDayOfMonth
+                            {
+                                WeekOrdinal = -852312922,
+                                DayOfWeek = gt::DayOfWeek.Thursday,
+                            },
+                            MonthDay = 776203719,
+                        },
+                        LastExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NextExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Rollout = new PatchRollout
+                    {
+                        Mode = PatchRollout.Types.Mode.Unspecified,
+                        DisruptionBudget = new FixedOrPercent
+                        {
+                            Fixed = -485112882,
+                            Percent = 2063879989,
+                        },
+                    },
+                },
             };
             PatchDeployment expectedResponse = new PatchDeployment
             {
                 PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
                 Description = "description2cf9da67",
-                InstanceFilter = new PatchInstanceFilter(),
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                OneTimeSchedule = new OneTimeSchedule(),
-                RecurringSchedule = new RecurringSchedule(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                LastExecuteTime = new wkt::Timestamp(),
-                Rollout = new PatchRollout(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                OneTimeSchedule = new OneTimeSchedule
+                {
+                    ExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RecurringSchedule = new RecurringSchedule
+                {
+                    TimeZone = new gt::TimeZone
+                    {
+                        Id = "id74b70bb8",
+                        Version = "version102ff72a",
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TimeOfDay = new gt::TimeOfDay
+                    {
+                        Hours = -673329805,
+                        Minutes = -858779804,
+                        Seconds = 697187960,
+                        Nanos = 985689544,
+                    },
+                    Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                    Weekly = new WeeklySchedule
+                    {
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Monthly = new MonthlySchedule
+                    {
+                        WeekDayOfMonth = new WeekDayOfMonth
+                        {
+                            WeekOrdinal = -852312922,
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        MonthDay = 776203719,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastExecuteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -549,21 +4967,480 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 PatchDeploymentId = "patch_deployment_id084ea38b",
-                PatchDeployment = new PatchDeployment(),
+                PatchDeployment = new PatchDeployment
+                {
+                    PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                    Description = "description2cf9da67",
+                    InstanceFilter = new PatchInstanceFilter
+                    {
+                        All = true,
+                        GroupLabels =
+                        {
+                            new PatchInstanceFilter.Types.GroupLabel
+                            {
+                                Labels =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        Zones = { "zones3641f926", },
+                        Instances =
+                        {
+                            "instances5432a96f",
+                        },
+                        InstanceNamePrefixes =
+                        {
+                            "instance_name_prefixesedd638f3",
+                        },
+                    },
+                    PatchConfig = new PatchConfig
+                    {
+                        RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                        Apt = new AptSettings
+                        {
+                            Type = AptSettings.Types.Type.Unspecified,
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePackages =
+                            {
+                                "exclusive_packagesaa5cfd55",
+                            },
+                        },
+                        Yum = new YumSettings
+                        {
+                            Security = true,
+                            Minimal = true,
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePackages =
+                            {
+                                "exclusive_packagesaa5cfd55",
+                            },
+                        },
+                        Goo = new GooSettings { },
+                        Zypper = new ZypperSettings
+                        {
+                            WithOptional = false,
+                            WithUpdate = false,
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                            Severities =
+                            {
+                                "severitiesd4ce3dcd",
+                            },
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePatches =
+                            {
+                                "exclusive_patchesb47b8881",
+                            },
+                        },
+                        WindowsUpdate = new WindowsUpdateSettings
+                        {
+                            Classifications =
+                            {
+                                WindowsUpdateSettings.Types.Classification.Update,
+                            },
+                            Excludes =
+                            {
+                                "excludesec981b7d",
+                            },
+                            ExclusivePatches =
+                            {
+                                "exclusive_patchesb47b8881",
+                            },
+                        },
+                        PreStep = new ExecStep
+                        {
+                            LinuxExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                            WindowsExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                        },
+                        PostStep = new ExecStep
+                        {
+                            LinuxExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                            WindowsExecStepConfig = new ExecStepConfig
+                            {
+                                LocalPath = "local_path765e4871",
+                                GcsObject = new GcsObject
+                                {
+                                    Bucket = "bucket17d0bfc2",
+                                    Object = "object63decfa8",
+                                    GenerationNumber = 4405671230710386073L,
+                                },
+                                AllowedSuccessCodes = { 1723014339, },
+                                Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                            },
+                        },
+                    },
+                    Duration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    OneTimeSchedule = new OneTimeSchedule
+                    {
+                        ExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    RecurringSchedule = new RecurringSchedule
+                    {
+                        TimeZone = new gt::TimeZone
+                        {
+                            Id = "id74b70bb8",
+                            Version = "version102ff72a",
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        TimeOfDay = new gt::TimeOfDay
+                        {
+                            Hours = -673329805,
+                            Minutes = -858779804,
+                            Seconds = 697187960,
+                            Nanos = 985689544,
+                        },
+                        Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                        Weekly = new WeeklySchedule
+                        {
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        Monthly = new MonthlySchedule
+                        {
+                            WeekDayOfMonth = new WeekDayOfMonth
+                            {
+                                WeekOrdinal = -852312922,
+                                DayOfWeek = gt::DayOfWeek.Thursday,
+                            },
+                            MonthDay = 776203719,
+                        },
+                        LastExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NextExecuteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Rollout = new PatchRollout
+                    {
+                        Mode = PatchRollout.Types.Mode.Unspecified,
+                        DisruptionBudget = new FixedOrPercent
+                        {
+                            Fixed = -485112882,
+                            Percent = 2063879989,
+                        },
+                    },
+                },
             };
             PatchDeployment expectedResponse = new PatchDeployment
             {
                 PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
                 Description = "description2cf9da67",
-                InstanceFilter = new PatchInstanceFilter(),
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                OneTimeSchedule = new OneTimeSchedule(),
-                RecurringSchedule = new RecurringSchedule(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                LastExecuteTime = new wkt::Timestamp(),
-                Rollout = new PatchRollout(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                OneTimeSchedule = new OneTimeSchedule
+                {
+                    ExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RecurringSchedule = new RecurringSchedule
+                {
+                    TimeZone = new gt::TimeZone
+                    {
+                        Id = "id74b70bb8",
+                        Version = "version102ff72a",
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TimeOfDay = new gt::TimeOfDay
+                    {
+                        Hours = -673329805,
+                        Minutes = -858779804,
+                        Seconds = 697187960,
+                        Nanos = 985689544,
+                    },
+                    Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                    Weekly = new WeeklySchedule
+                    {
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Monthly = new MonthlySchedule
+                    {
+                        WeekDayOfMonth = new WeekDayOfMonth
+                        {
+                            WeekOrdinal = -852312922,
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        MonthDay = 776203719,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastExecuteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -586,15 +5463,238 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
                 Description = "description2cf9da67",
-                InstanceFilter = new PatchInstanceFilter(),
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                OneTimeSchedule = new OneTimeSchedule(),
-                RecurringSchedule = new RecurringSchedule(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                LastExecuteTime = new wkt::Timestamp(),
-                Rollout = new PatchRollout(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                OneTimeSchedule = new OneTimeSchedule
+                {
+                    ExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RecurringSchedule = new RecurringSchedule
+                {
+                    TimeZone = new gt::TimeZone
+                    {
+                        Id = "id74b70bb8",
+                        Version = "version102ff72a",
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TimeOfDay = new gt::TimeOfDay
+                    {
+                        Hours = -673329805,
+                        Minutes = -858779804,
+                        Seconds = 697187960,
+                        Nanos = 985689544,
+                    },
+                    Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                    Weekly = new WeeklySchedule
+                    {
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Monthly = new MonthlySchedule
+                    {
+                        WeekDayOfMonth = new WeekDayOfMonth
+                        {
+                            WeekOrdinal = -852312922,
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        MonthDay = 776203719,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastExecuteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -615,15 +5715,238 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
                 Description = "description2cf9da67",
-                InstanceFilter = new PatchInstanceFilter(),
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                OneTimeSchedule = new OneTimeSchedule(),
-                RecurringSchedule = new RecurringSchedule(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                LastExecuteTime = new wkt::Timestamp(),
-                Rollout = new PatchRollout(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                OneTimeSchedule = new OneTimeSchedule
+                {
+                    ExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RecurringSchedule = new RecurringSchedule
+                {
+                    TimeZone = new gt::TimeZone
+                    {
+                        Id = "id74b70bb8",
+                        Version = "version102ff72a",
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TimeOfDay = new gt::TimeOfDay
+                    {
+                        Hours = -673329805,
+                        Minutes = -858779804,
+                        Seconds = 697187960,
+                        Nanos = 985689544,
+                    },
+                    Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                    Weekly = new WeeklySchedule
+                    {
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Monthly = new MonthlySchedule
+                    {
+                        WeekDayOfMonth = new WeekDayOfMonth
+                        {
+                            WeekOrdinal = -852312922,
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        MonthDay = 776203719,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastExecuteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -646,15 +5969,238 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
                 Description = "description2cf9da67",
-                InstanceFilter = new PatchInstanceFilter(),
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                OneTimeSchedule = new OneTimeSchedule(),
-                RecurringSchedule = new RecurringSchedule(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                LastExecuteTime = new wkt::Timestamp(),
-                Rollout = new PatchRollout(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                OneTimeSchedule = new OneTimeSchedule
+                {
+                    ExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RecurringSchedule = new RecurringSchedule
+                {
+                    TimeZone = new gt::TimeZone
+                    {
+                        Id = "id74b70bb8",
+                        Version = "version102ff72a",
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TimeOfDay = new gt::TimeOfDay
+                    {
+                        Hours = -673329805,
+                        Minutes = -858779804,
+                        Seconds = 697187960,
+                        Nanos = 985689544,
+                    },
+                    Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                    Weekly = new WeeklySchedule
+                    {
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Monthly = new MonthlySchedule
+                    {
+                        WeekDayOfMonth = new WeekDayOfMonth
+                        {
+                            WeekOrdinal = -852312922,
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        MonthDay = 776203719,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastExecuteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -675,15 +6221,238 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
                 Description = "description2cf9da67",
-                InstanceFilter = new PatchInstanceFilter(),
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                OneTimeSchedule = new OneTimeSchedule(),
-                RecurringSchedule = new RecurringSchedule(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                LastExecuteTime = new wkt::Timestamp(),
-                Rollout = new PatchRollout(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                OneTimeSchedule = new OneTimeSchedule
+                {
+                    ExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RecurringSchedule = new RecurringSchedule
+                {
+                    TimeZone = new gt::TimeZone
+                    {
+                        Id = "id74b70bb8",
+                        Version = "version102ff72a",
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TimeOfDay = new gt::TimeOfDay
+                    {
+                        Hours = -673329805,
+                        Minutes = -858779804,
+                        Seconds = 697187960,
+                        Nanos = 985689544,
+                    },
+                    Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                    Weekly = new WeeklySchedule
+                    {
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Monthly = new MonthlySchedule
+                    {
+                        WeekDayOfMonth = new WeekDayOfMonth
+                        {
+                            WeekOrdinal = -852312922,
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        MonthDay = 776203719,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastExecuteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -706,15 +6475,238 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
                 Description = "description2cf9da67",
-                InstanceFilter = new PatchInstanceFilter(),
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                OneTimeSchedule = new OneTimeSchedule(),
-                RecurringSchedule = new RecurringSchedule(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                LastExecuteTime = new wkt::Timestamp(),
-                Rollout = new PatchRollout(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                OneTimeSchedule = new OneTimeSchedule
+                {
+                    ExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RecurringSchedule = new RecurringSchedule
+                {
+                    TimeZone = new gt::TimeZone
+                    {
+                        Id = "id74b70bb8",
+                        Version = "version102ff72a",
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TimeOfDay = new gt::TimeOfDay
+                    {
+                        Hours = -673329805,
+                        Minutes = -858779804,
+                        Seconds = 697187960,
+                        Nanos = 985689544,
+                    },
+                    Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                    Weekly = new WeeklySchedule
+                    {
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Monthly = new MonthlySchedule
+                    {
+                        WeekDayOfMonth = new WeekDayOfMonth
+                        {
+                            WeekOrdinal = -852312922,
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        MonthDay = 776203719,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastExecuteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -735,15 +6727,238 @@ namespace Google.Cloud.OsConfig.V1.Tests
             {
                 PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
                 Description = "description2cf9da67",
-                InstanceFilter = new PatchInstanceFilter(),
-                PatchConfig = new PatchConfig(),
-                Duration = new wkt::Duration(),
-                OneTimeSchedule = new OneTimeSchedule(),
-                RecurringSchedule = new RecurringSchedule(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                LastExecuteTime = new wkt::Timestamp(),
-                Rollout = new PatchRollout(),
+                InstanceFilter = new PatchInstanceFilter
+                {
+                    All = true,
+                    GroupLabels =
+                    {
+                        new PatchInstanceFilter.Types.GroupLabel
+                        {
+                            Labels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    Zones = { "zones3641f926", },
+                    Instances =
+                    {
+                        "instances5432a96f",
+                    },
+                    InstanceNamePrefixes =
+                    {
+                        "instance_name_prefixesedd638f3",
+                    },
+                },
+                PatchConfig = new PatchConfig
+                {
+                    RebootConfig = PatchConfig.Types.RebootConfig.Always,
+                    Apt = new AptSettings
+                    {
+                        Type = AptSettings.Types.Type.Unspecified,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Yum = new YumSettings
+                    {
+                        Security = true,
+                        Minimal = true,
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePackages =
+                        {
+                            "exclusive_packagesaa5cfd55",
+                        },
+                    },
+                    Goo = new GooSettings { },
+                    Zypper = new ZypperSettings
+                    {
+                        WithOptional = false,
+                        WithUpdate = false,
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                        Severities =
+                        {
+                            "severitiesd4ce3dcd",
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    WindowsUpdate = new WindowsUpdateSettings
+                    {
+                        Classifications =
+                        {
+                            WindowsUpdateSettings.Types.Classification.Update,
+                        },
+                        Excludes =
+                        {
+                            "excludesec981b7d",
+                        },
+                        ExclusivePatches =
+                        {
+                            "exclusive_patchesb47b8881",
+                        },
+                    },
+                    PreStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                    PostStep = new ExecStep
+                    {
+                        LinuxExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                        WindowsExecStepConfig = new ExecStepConfig
+                        {
+                            LocalPath = "local_path765e4871",
+                            GcsObject = new GcsObject
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                GenerationNumber = 4405671230710386073L,
+                            },
+                            AllowedSuccessCodes = { 1723014339, },
+                            Interpreter = ExecStepConfig.Types.Interpreter.Shell,
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                OneTimeSchedule = new OneTimeSchedule
+                {
+                    ExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RecurringSchedule = new RecurringSchedule
+                {
+                    TimeZone = new gt::TimeZone
+                    {
+                        Id = "id74b70bb8",
+                        Version = "version102ff72a",
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TimeOfDay = new gt::TimeOfDay
+                    {
+                        Hours = -673329805,
+                        Minutes = -858779804,
+                        Seconds = 697187960,
+                        Nanos = 985689544,
+                    },
+                    Frequency = RecurringSchedule.Types.Frequency.Monthly,
+                    Weekly = new WeeklySchedule
+                    {
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Monthly = new MonthlySchedule
+                    {
+                        WeekDayOfMonth = new WeekDayOfMonth
+                        {
+                            WeekOrdinal = -852312922,
+                            DayOfWeek = gt::DayOfWeek.Thursday,
+                        },
+                        MonthDay = 776203719,
+                    },
+                    LastExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextExecuteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastExecuteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Rollout = new PatchRollout
+                {
+                    Mode = PatchRollout.Types.Mode.Unspecified,
+                    DisruptionBudget = new FixedOrPercent
+                    {
+                        Fixed = -485112882,
+                        Percent = 2063879989,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
