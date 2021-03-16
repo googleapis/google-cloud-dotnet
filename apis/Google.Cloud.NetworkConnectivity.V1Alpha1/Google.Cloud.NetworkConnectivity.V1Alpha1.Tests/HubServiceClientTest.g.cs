@@ -40,8 +40,16 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
             Hub expectedResponse = new Hub
             {
                 HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -76,8 +84,16 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
             Hub expectedResponse = new Hub
             {
                 HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -114,8 +130,16 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
             Hub expectedResponse = new Hub
             {
                 HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -150,8 +174,16 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
             Hub expectedResponse = new Hub
             {
                 HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -188,8 +220,16 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
             Hub expectedResponse = new Hub
             {
                 HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -224,8 +264,16 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
             Hub expectedResponse = new Hub
             {
                 HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -262,8 +310,16 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
             Spoke expectedResponse = new Spoke
             {
                 SpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -284,7 +340,14 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 },
                 LinkedRouterApplianceInstances =
                 {
-                    new RouterApplianceInstance(),
+                    new RouterApplianceInstance
+                    {
+                        VirtualMachineAsInstanceName = InstanceName.FromProjectZoneInstance("[PROJECT]", "[ZONE]", "[INSTANCE]"),
+#pragma warning disable CS0612
+                        NetworkInterface = "network_interfaceb50da44f",
+#pragma warning restore CS0612
+                        IpAddress = "ip_address46a72553",
+                    },
                 },
                 State = State.Active,
             };
@@ -307,8 +370,16 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
             Spoke expectedResponse = new Spoke
             {
                 SpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -329,7 +400,14 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 },
                 LinkedRouterApplianceInstances =
                 {
-                    new RouterApplianceInstance(),
+                    new RouterApplianceInstance
+                    {
+                        VirtualMachineAsInstanceName = InstanceName.FromProjectZoneInstance("[PROJECT]", "[ZONE]", "[INSTANCE]"),
+#pragma warning disable CS0612
+                        NetworkInterface = "network_interfaceb50da44f",
+#pragma warning restore CS0612
+                        IpAddress = "ip_address46a72553",
+                    },
                 },
                 State = State.Active,
             };
@@ -354,8 +432,16 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
             Spoke expectedResponse = new Spoke
             {
                 SpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -376,7 +462,14 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 },
                 LinkedRouterApplianceInstances =
                 {
-                    new RouterApplianceInstance(),
+                    new RouterApplianceInstance
+                    {
+                        VirtualMachineAsInstanceName = InstanceName.FromProjectZoneInstance("[PROJECT]", "[ZONE]", "[INSTANCE]"),
+#pragma warning disable CS0612
+                        NetworkInterface = "network_interfaceb50da44f",
+#pragma warning restore CS0612
+                        IpAddress = "ip_address46a72553",
+                    },
                 },
                 State = State.Active,
             };
@@ -399,8 +492,16 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
             Spoke expectedResponse = new Spoke
             {
                 SpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -421,7 +522,14 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 },
                 LinkedRouterApplianceInstances =
                 {
-                    new RouterApplianceInstance(),
+                    new RouterApplianceInstance
+                    {
+                        VirtualMachineAsInstanceName = InstanceName.FromProjectZoneInstance("[PROJECT]", "[ZONE]", "[INSTANCE]"),
+#pragma warning disable CS0612
+                        NetworkInterface = "network_interfaceb50da44f",
+#pragma warning restore CS0612
+                        IpAddress = "ip_address46a72553",
+                    },
                 },
                 State = State.Active,
             };
@@ -446,8 +554,16 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
             Spoke expectedResponse = new Spoke
             {
                 SpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -468,7 +584,14 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 },
                 LinkedRouterApplianceInstances =
                 {
-                    new RouterApplianceInstance(),
+                    new RouterApplianceInstance
+                    {
+                        VirtualMachineAsInstanceName = InstanceName.FromProjectZoneInstance("[PROJECT]", "[ZONE]", "[INSTANCE]"),
+#pragma warning disable CS0612
+                        NetworkInterface = "network_interfaceb50da44f",
+#pragma warning restore CS0612
+                        IpAddress = "ip_address46a72553",
+                    },
                 },
                 State = State.Active,
             };
@@ -491,8 +614,16 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
             Spoke expectedResponse = new Spoke
             {
                 SpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -513,7 +644,14 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Tests
                 },
                 LinkedRouterApplianceInstances =
                 {
-                    new RouterApplianceInstance(),
+                    new RouterApplianceInstance
+                    {
+                        VirtualMachineAsInstanceName = InstanceName.FromProjectZoneInstance("[PROJECT]", "[ZONE]", "[INSTANCE]"),
+#pragma warning disable CS0612
+                        NetworkInterface = "network_interfaceb50da44f",
+#pragma warning restore CS0612
+                        IpAddress = "ip_address46a72553",
+                    },
                 },
                 State = State.Active,
             };
