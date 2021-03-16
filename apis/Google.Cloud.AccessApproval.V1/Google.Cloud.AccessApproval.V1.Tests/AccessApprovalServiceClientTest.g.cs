@@ -39,13 +39,51 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             {
                 Name = "name1c9368b0",
                 RequestedResourceName = "requested_resource_name3898f866",
-                RequestedReason = new AccessReason(),
-                RequestedLocations = new AccessLocations(),
-                RequestTime = new wkt::Timestamp(),
-                RequestedExpiration = new wkt::Timestamp(),
-                Approve = new ApproveDecision(),
-                Dismiss = new DismissDecision(),
-                RequestedResourceProperties = new ResourceProperties(),
+                RequestedReason = new AccessReason
+                {
+                    Type = AccessReason.Types.Type.GoogleInitiatedReview,
+                    Detail = "detailb7a61d95",
+                },
+                RequestedLocations = new AccessLocations
+                {
+                    PrincipalOfficeCountry = "principal_office_countrycc1b3079",
+                    PrincipalPhysicalLocationCountry = "principal_physical_location_country22dd267a",
+                },
+                RequestTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RequestedExpiration = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Approve = new ApproveDecision
+                {
+                    ApproveTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                Dismiss = new DismissDecision
+                {
+                    DismissTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RequestedResourceProperties = new ResourceProperties
+                {
+                    ExcludesDescendants = true,
+                },
             };
             mockGrpcClient.Setup(x => x.GetApprovalRequest(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -66,13 +104,51 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             {
                 Name = "name1c9368b0",
                 RequestedResourceName = "requested_resource_name3898f866",
-                RequestedReason = new AccessReason(),
-                RequestedLocations = new AccessLocations(),
-                RequestTime = new wkt::Timestamp(),
-                RequestedExpiration = new wkt::Timestamp(),
-                Approve = new ApproveDecision(),
-                Dismiss = new DismissDecision(),
-                RequestedResourceProperties = new ResourceProperties(),
+                RequestedReason = new AccessReason
+                {
+                    Type = AccessReason.Types.Type.GoogleInitiatedReview,
+                    Detail = "detailb7a61d95",
+                },
+                RequestedLocations = new AccessLocations
+                {
+                    PrincipalOfficeCountry = "principal_office_countrycc1b3079",
+                    PrincipalPhysicalLocationCountry = "principal_physical_location_country22dd267a",
+                },
+                RequestTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RequestedExpiration = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Approve = new ApproveDecision
+                {
+                    ApproveTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                Dismiss = new DismissDecision
+                {
+                    DismissTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RequestedResourceProperties = new ResourceProperties
+                {
+                    ExcludesDescendants = true,
+                },
             };
             mockGrpcClient.Setup(x => x.GetApprovalRequestAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ApprovalRequest>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -95,13 +171,51 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             {
                 Name = "name1c9368b0",
                 RequestedResourceName = "requested_resource_name3898f866",
-                RequestedReason = new AccessReason(),
-                RequestedLocations = new AccessLocations(),
-                RequestTime = new wkt::Timestamp(),
-                RequestedExpiration = new wkt::Timestamp(),
-                Approve = new ApproveDecision(),
-                Dismiss = new DismissDecision(),
-                RequestedResourceProperties = new ResourceProperties(),
+                RequestedReason = new AccessReason
+                {
+                    Type = AccessReason.Types.Type.GoogleInitiatedReview,
+                    Detail = "detailb7a61d95",
+                },
+                RequestedLocations = new AccessLocations
+                {
+                    PrincipalOfficeCountry = "principal_office_countrycc1b3079",
+                    PrincipalPhysicalLocationCountry = "principal_physical_location_country22dd267a",
+                },
+                RequestTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RequestedExpiration = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Approve = new ApproveDecision
+                {
+                    ApproveTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                Dismiss = new DismissDecision
+                {
+                    DismissTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RequestedResourceProperties = new ResourceProperties
+                {
+                    ExcludesDescendants = true,
+                },
             };
             mockGrpcClient.Setup(x => x.GetApprovalRequest(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -122,13 +236,51 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             {
                 Name = "name1c9368b0",
                 RequestedResourceName = "requested_resource_name3898f866",
-                RequestedReason = new AccessReason(),
-                RequestedLocations = new AccessLocations(),
-                RequestTime = new wkt::Timestamp(),
-                RequestedExpiration = new wkt::Timestamp(),
-                Approve = new ApproveDecision(),
-                Dismiss = new DismissDecision(),
-                RequestedResourceProperties = new ResourceProperties(),
+                RequestedReason = new AccessReason
+                {
+                    Type = AccessReason.Types.Type.GoogleInitiatedReview,
+                    Detail = "detailb7a61d95",
+                },
+                RequestedLocations = new AccessLocations
+                {
+                    PrincipalOfficeCountry = "principal_office_countrycc1b3079",
+                    PrincipalPhysicalLocationCountry = "principal_physical_location_country22dd267a",
+                },
+                RequestTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RequestedExpiration = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Approve = new ApproveDecision
+                {
+                    ApproveTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                Dismiss = new DismissDecision
+                {
+                    DismissTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RequestedResourceProperties = new ResourceProperties
+                {
+                    ExcludesDescendants = true,
+                },
             };
             mockGrpcClient.Setup(x => x.GetApprovalRequestAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ApprovalRequest>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -146,19 +298,61 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             ApproveApprovalRequestMessage request = new ApproveApprovalRequestMessage
             {
                 Name = "name1c9368b0",
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             ApprovalRequest expectedResponse = new ApprovalRequest
             {
                 Name = "name1c9368b0",
                 RequestedResourceName = "requested_resource_name3898f866",
-                RequestedReason = new AccessReason(),
-                RequestedLocations = new AccessLocations(),
-                RequestTime = new wkt::Timestamp(),
-                RequestedExpiration = new wkt::Timestamp(),
-                Approve = new ApproveDecision(),
-                Dismiss = new DismissDecision(),
-                RequestedResourceProperties = new ResourceProperties(),
+                RequestedReason = new AccessReason
+                {
+                    Type = AccessReason.Types.Type.GoogleInitiatedReview,
+                    Detail = "detailb7a61d95",
+                },
+                RequestedLocations = new AccessLocations
+                {
+                    PrincipalOfficeCountry = "principal_office_countrycc1b3079",
+                    PrincipalPhysicalLocationCountry = "principal_physical_location_country22dd267a",
+                },
+                RequestTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RequestedExpiration = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Approve = new ApproveDecision
+                {
+                    ApproveTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                Dismiss = new DismissDecision
+                {
+                    DismissTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RequestedResourceProperties = new ResourceProperties
+                {
+                    ExcludesDescendants = true,
+                },
             };
             mockGrpcClient.Setup(x => x.ApproveApprovalRequest(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -174,19 +368,61 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             ApproveApprovalRequestMessage request = new ApproveApprovalRequestMessage
             {
                 Name = "name1c9368b0",
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             ApprovalRequest expectedResponse = new ApprovalRequest
             {
                 Name = "name1c9368b0",
                 RequestedResourceName = "requested_resource_name3898f866",
-                RequestedReason = new AccessReason(),
-                RequestedLocations = new AccessLocations(),
-                RequestTime = new wkt::Timestamp(),
-                RequestedExpiration = new wkt::Timestamp(),
-                Approve = new ApproveDecision(),
-                Dismiss = new DismissDecision(),
-                RequestedResourceProperties = new ResourceProperties(),
+                RequestedReason = new AccessReason
+                {
+                    Type = AccessReason.Types.Type.GoogleInitiatedReview,
+                    Detail = "detailb7a61d95",
+                },
+                RequestedLocations = new AccessLocations
+                {
+                    PrincipalOfficeCountry = "principal_office_countrycc1b3079",
+                    PrincipalPhysicalLocationCountry = "principal_physical_location_country22dd267a",
+                },
+                RequestTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RequestedExpiration = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Approve = new ApproveDecision
+                {
+                    ApproveTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                Dismiss = new DismissDecision
+                {
+                    DismissTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RequestedResourceProperties = new ResourceProperties
+                {
+                    ExcludesDescendants = true,
+                },
             };
             mockGrpcClient.Setup(x => x.ApproveApprovalRequestAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ApprovalRequest>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -209,13 +445,51 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             {
                 Name = "name1c9368b0",
                 RequestedResourceName = "requested_resource_name3898f866",
-                RequestedReason = new AccessReason(),
-                RequestedLocations = new AccessLocations(),
-                RequestTime = new wkt::Timestamp(),
-                RequestedExpiration = new wkt::Timestamp(),
-                Approve = new ApproveDecision(),
-                Dismiss = new DismissDecision(),
-                RequestedResourceProperties = new ResourceProperties(),
+                RequestedReason = new AccessReason
+                {
+                    Type = AccessReason.Types.Type.GoogleInitiatedReview,
+                    Detail = "detailb7a61d95",
+                },
+                RequestedLocations = new AccessLocations
+                {
+                    PrincipalOfficeCountry = "principal_office_countrycc1b3079",
+                    PrincipalPhysicalLocationCountry = "principal_physical_location_country22dd267a",
+                },
+                RequestTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RequestedExpiration = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Approve = new ApproveDecision
+                {
+                    ApproveTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                Dismiss = new DismissDecision
+                {
+                    DismissTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RequestedResourceProperties = new ResourceProperties
+                {
+                    ExcludesDescendants = true,
+                },
             };
             mockGrpcClient.Setup(x => x.DismissApprovalRequest(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -236,13 +510,51 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             {
                 Name = "name1c9368b0",
                 RequestedResourceName = "requested_resource_name3898f866",
-                RequestedReason = new AccessReason(),
-                RequestedLocations = new AccessLocations(),
-                RequestTime = new wkt::Timestamp(),
-                RequestedExpiration = new wkt::Timestamp(),
-                Approve = new ApproveDecision(),
-                Dismiss = new DismissDecision(),
-                RequestedResourceProperties = new ResourceProperties(),
+                RequestedReason = new AccessReason
+                {
+                    Type = AccessReason.Types.Type.GoogleInitiatedReview,
+                    Detail = "detailb7a61d95",
+                },
+                RequestedLocations = new AccessLocations
+                {
+                    PrincipalOfficeCountry = "principal_office_countrycc1b3079",
+                    PrincipalPhysicalLocationCountry = "principal_physical_location_country22dd267a",
+                },
+                RequestTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RequestedExpiration = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Approve = new ApproveDecision
+                {
+                    ApproveTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                Dismiss = new DismissDecision
+                {
+                    DismissTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                RequestedResourceProperties = new ResourceProperties
+                {
+                    ExcludesDescendants = true,
+                },
             };
             mockGrpcClient.Setup(x => x.DismissApprovalRequestAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ApprovalRequest>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AccessApprovalServiceClient client = new AccessApprovalServiceClientImpl(mockGrpcClient.Object, null);
@@ -270,7 +582,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                 },
                 EnrolledServices =
                 {
-                    new EnrolledService(),
+                    new EnrolledService
+                    {
+                        CloudProduct = "cloud_product8fa668e8",
+                        EnrollmentLevel = EnrollmentLevel.BlockAll,
+                    },
                 },
                 EnrolledAncestor = true,
             };
@@ -298,7 +614,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                 },
                 EnrolledServices =
                 {
-                    new EnrolledService(),
+                    new EnrolledService
+                    {
+                        CloudProduct = "cloud_product8fa668e8",
+                        EnrollmentLevel = EnrollmentLevel.BlockAll,
+                    },
                 },
                 EnrolledAncestor = true,
             };
@@ -328,7 +648,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                 },
                 EnrolledServices =
                 {
-                    new EnrolledService(),
+                    new EnrolledService
+                    {
+                        CloudProduct = "cloud_product8fa668e8",
+                        EnrollmentLevel = EnrollmentLevel.BlockAll,
+                    },
                 },
                 EnrolledAncestor = true,
             };
@@ -356,7 +680,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                 },
                 EnrolledServices =
                 {
-                    new EnrolledService(),
+                    new EnrolledService
+                    {
+                        CloudProduct = "cloud_product8fa668e8",
+                        EnrollmentLevel = EnrollmentLevel.BlockAll,
+                    },
                 },
                 EnrolledAncestor = true,
             };
@@ -375,8 +703,27 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             UpdateAccessApprovalSettingsMessage request = new UpdateAccessApprovalSettingsMessage
             {
-                Settings = new AccessApprovalSettings(),
-                UpdateMask = new wkt::FieldMask(),
+                Settings = new AccessApprovalSettings
+                {
+                    Name = "name1c9368b0",
+                    NotificationEmails =
+                    {
+                        "notification_emails936d0793",
+                    },
+                    EnrolledServices =
+                    {
+                        new EnrolledService
+                        {
+                            CloudProduct = "cloud_product8fa668e8",
+                            EnrollmentLevel = EnrollmentLevel.BlockAll,
+                        },
+                    },
+                    EnrolledAncestor = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             AccessApprovalSettings expectedResponse = new AccessApprovalSettings
             {
@@ -387,7 +734,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                 },
                 EnrolledServices =
                 {
-                    new EnrolledService(),
+                    new EnrolledService
+                    {
+                        CloudProduct = "cloud_product8fa668e8",
+                        EnrollmentLevel = EnrollmentLevel.BlockAll,
+                    },
                 },
                 EnrolledAncestor = true,
             };
@@ -404,8 +755,27 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             UpdateAccessApprovalSettingsMessage request = new UpdateAccessApprovalSettingsMessage
             {
-                Settings = new AccessApprovalSettings(),
-                UpdateMask = new wkt::FieldMask(),
+                Settings = new AccessApprovalSettings
+                {
+                    Name = "name1c9368b0",
+                    NotificationEmails =
+                    {
+                        "notification_emails936d0793",
+                    },
+                    EnrolledServices =
+                    {
+                        new EnrolledService
+                        {
+                            CloudProduct = "cloud_product8fa668e8",
+                            EnrollmentLevel = EnrollmentLevel.BlockAll,
+                        },
+                    },
+                    EnrolledAncestor = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             AccessApprovalSettings expectedResponse = new AccessApprovalSettings
             {
@@ -416,7 +786,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                 },
                 EnrolledServices =
                 {
-                    new EnrolledService(),
+                    new EnrolledService
+                    {
+                        CloudProduct = "cloud_product8fa668e8",
+                        EnrollmentLevel = EnrollmentLevel.BlockAll,
+                    },
                 },
                 EnrolledAncestor = true,
             };
@@ -435,8 +809,27 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             UpdateAccessApprovalSettingsMessage request = new UpdateAccessApprovalSettingsMessage
             {
-                Settings = new AccessApprovalSettings(),
-                UpdateMask = new wkt::FieldMask(),
+                Settings = new AccessApprovalSettings
+                {
+                    Name = "name1c9368b0",
+                    NotificationEmails =
+                    {
+                        "notification_emails936d0793",
+                    },
+                    EnrolledServices =
+                    {
+                        new EnrolledService
+                        {
+                            CloudProduct = "cloud_product8fa668e8",
+                            EnrollmentLevel = EnrollmentLevel.BlockAll,
+                        },
+                    },
+                    EnrolledAncestor = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             AccessApprovalSettings expectedResponse = new AccessApprovalSettings
             {
@@ -447,7 +840,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                 },
                 EnrolledServices =
                 {
-                    new EnrolledService(),
+                    new EnrolledService
+                    {
+                        CloudProduct = "cloud_product8fa668e8",
+                        EnrollmentLevel = EnrollmentLevel.BlockAll,
+                    },
                 },
                 EnrolledAncestor = true,
             };
@@ -464,8 +861,27 @@ namespace Google.Cloud.AccessApproval.V1.Tests
             moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             UpdateAccessApprovalSettingsMessage request = new UpdateAccessApprovalSettingsMessage
             {
-                Settings = new AccessApprovalSettings(),
-                UpdateMask = new wkt::FieldMask(),
+                Settings = new AccessApprovalSettings
+                {
+                    Name = "name1c9368b0",
+                    NotificationEmails =
+                    {
+                        "notification_emails936d0793",
+                    },
+                    EnrolledServices =
+                    {
+                        new EnrolledService
+                        {
+                            CloudProduct = "cloud_product8fa668e8",
+                            EnrollmentLevel = EnrollmentLevel.BlockAll,
+                        },
+                    },
+                    EnrolledAncestor = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             AccessApprovalSettings expectedResponse = new AccessApprovalSettings
             {
@@ -476,7 +892,11 @@ namespace Google.Cloud.AccessApproval.V1.Tests
                 },
                 EnrolledServices =
                 {
-                    new EnrolledService(),
+                    new EnrolledService
+                    {
+                        CloudProduct = "cloud_product8fa668e8",
+                        EnrollmentLevel = EnrollmentLevel.BlockAll,
+                    },
                 },
                 EnrolledAncestor = true,
             };
