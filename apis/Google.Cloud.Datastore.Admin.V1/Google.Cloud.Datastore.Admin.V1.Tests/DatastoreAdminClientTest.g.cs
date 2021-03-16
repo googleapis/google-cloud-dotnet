@@ -45,7 +45,11 @@ namespace Google.Cloud.Datastore.Admin.V1.Tests
                 Ancestor = Index.Types.AncestorMode.None,
                 Properties =
                 {
-                    new Index.Types.IndexedProperty(),
+                    new Index.Types.IndexedProperty
+                    {
+                        Name = "name1c9368b0",
+                        Direction = Index.Types.Direction.Descending,
+                    },
                 },
                 State = Index.Types.State.Deleting,
             };
@@ -74,7 +78,11 @@ namespace Google.Cloud.Datastore.Admin.V1.Tests
                 Ancestor = Index.Types.AncestorMode.None,
                 Properties =
                 {
-                    new Index.Types.IndexedProperty(),
+                    new Index.Types.IndexedProperty
+                    {
+                        Name = "name1c9368b0",
+                        Direction = Index.Types.Direction.Descending,
+                    },
                 },
                 State = Index.Types.State.Deleting,
             };
