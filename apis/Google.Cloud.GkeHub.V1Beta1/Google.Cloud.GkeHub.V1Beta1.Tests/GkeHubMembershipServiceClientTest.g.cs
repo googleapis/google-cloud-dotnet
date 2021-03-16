@@ -50,14 +50,91 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
                     },
                 },
                 Description = "description2cf9da67",
-                Endpoint = new MembershipEndpoint(),
-                State = new MembershipState(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
-                Authority = new Authority(),
+                Endpoint = new MembershipEndpoint
+                {
+                    GkeCluster = new GkeCluster
+                    {
+                        ResourceLink = "resource_link182528d9",
+                    },
+                    KubernetesMetadata = new KubernetesMetadata
+                    {
+                        KubernetesApiServerVersion = "kubernetes_api_server_version716eda33",
+                        NodeProviderId = "node_provider_idc532164a",
+                        NodeCount = -1659500730,
+                        VcpuCount = -1702761793,
+                        MemoryMb = -1241574521,
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    KubernetesResource = new KubernetesResource
+                    {
+                        MembershipCrManifest = "membership_cr_manifestec6be4f1",
+                        MembershipResources =
+                        {
+                            new ResourceManifest
+                            {
+                                Manifest = "manifest4ab75c7f",
+                                ClusterScoped = false,
+                            },
+                        },
+                        ConnectResources =
+                        {
+                            new ResourceManifest
+                            {
+                                Manifest = "manifest4ab75c7f",
+                                ClusterScoped = false,
+                            },
+                        },
+                        ResourceOptions = new ResourceOptions
+                        {
+                            ConnectVersion = "connect_version76940d70",
+                            V1Beta1Crd = false,
+                        },
+                    },
+                },
+                State = new MembershipState
+                {
+                    Code = MembershipState.Types.Code.Creating,
+#pragma warning disable CS0612
+                    Description = "description2cf9da67",
+                    UpdateTime = new wkt::Timestamp
+#pragma warning restore CS0612
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeleteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Authority = new Authority
+                {
+                    Issuer = "issuerc12b6c3e",
+                    WorkloadIdentityPool = "workload_identity_pool63099a52",
+                    IdentityProvider = "identity_provider43fd87ee",
+                    OidcJwks = proto::ByteString.CopyFromUtf8("oidc_jwksbaa1cfd3"),
+                },
                 ExternalId = "external_id9442680e",
-                LastConnectionTime = new wkt::Timestamp(),
+                LastConnectionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UniqueId = "unique_idee0c0869",
                 InfrastructureType = Membership.Types.InfrastructureType.Unspecified,
             };
@@ -88,14 +165,91 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
                     },
                 },
                 Description = "description2cf9da67",
-                Endpoint = new MembershipEndpoint(),
-                State = new MembershipState(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
-                Authority = new Authority(),
+                Endpoint = new MembershipEndpoint
+                {
+                    GkeCluster = new GkeCluster
+                    {
+                        ResourceLink = "resource_link182528d9",
+                    },
+                    KubernetesMetadata = new KubernetesMetadata
+                    {
+                        KubernetesApiServerVersion = "kubernetes_api_server_version716eda33",
+                        NodeProviderId = "node_provider_idc532164a",
+                        NodeCount = -1659500730,
+                        VcpuCount = -1702761793,
+                        MemoryMb = -1241574521,
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    KubernetesResource = new KubernetesResource
+                    {
+                        MembershipCrManifest = "membership_cr_manifestec6be4f1",
+                        MembershipResources =
+                        {
+                            new ResourceManifest
+                            {
+                                Manifest = "manifest4ab75c7f",
+                                ClusterScoped = false,
+                            },
+                        },
+                        ConnectResources =
+                        {
+                            new ResourceManifest
+                            {
+                                Manifest = "manifest4ab75c7f",
+                                ClusterScoped = false,
+                            },
+                        },
+                        ResourceOptions = new ResourceOptions
+                        {
+                            ConnectVersion = "connect_version76940d70",
+                            V1Beta1Crd = false,
+                        },
+                    },
+                },
+                State = new MembershipState
+                {
+                    Code = MembershipState.Types.Code.Creating,
+#pragma warning disable CS0612
+                    Description = "description2cf9da67",
+                    UpdateTime = new wkt::Timestamp
+#pragma warning restore CS0612
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeleteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Authority = new Authority
+                {
+                    Issuer = "issuerc12b6c3e",
+                    WorkloadIdentityPool = "workload_identity_pool63099a52",
+                    IdentityProvider = "identity_provider43fd87ee",
+                    OidcJwks = proto::ByteString.CopyFromUtf8("oidc_jwksbaa1cfd3"),
+                },
                 ExternalId = "external_id9442680e",
-                LastConnectionTime = new wkt::Timestamp(),
+                LastConnectionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UniqueId = "unique_idee0c0869",
                 InfrastructureType = Membership.Types.InfrastructureType.Unspecified,
             };
@@ -128,14 +282,91 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
                     },
                 },
                 Description = "description2cf9da67",
-                Endpoint = new MembershipEndpoint(),
-                State = new MembershipState(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
-                Authority = new Authority(),
+                Endpoint = new MembershipEndpoint
+                {
+                    GkeCluster = new GkeCluster
+                    {
+                        ResourceLink = "resource_link182528d9",
+                    },
+                    KubernetesMetadata = new KubernetesMetadata
+                    {
+                        KubernetesApiServerVersion = "kubernetes_api_server_version716eda33",
+                        NodeProviderId = "node_provider_idc532164a",
+                        NodeCount = -1659500730,
+                        VcpuCount = -1702761793,
+                        MemoryMb = -1241574521,
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    KubernetesResource = new KubernetesResource
+                    {
+                        MembershipCrManifest = "membership_cr_manifestec6be4f1",
+                        MembershipResources =
+                        {
+                            new ResourceManifest
+                            {
+                                Manifest = "manifest4ab75c7f",
+                                ClusterScoped = false,
+                            },
+                        },
+                        ConnectResources =
+                        {
+                            new ResourceManifest
+                            {
+                                Manifest = "manifest4ab75c7f",
+                                ClusterScoped = false,
+                            },
+                        },
+                        ResourceOptions = new ResourceOptions
+                        {
+                            ConnectVersion = "connect_version76940d70",
+                            V1Beta1Crd = false,
+                        },
+                    },
+                },
+                State = new MembershipState
+                {
+                    Code = MembershipState.Types.Code.Creating,
+#pragma warning disable CS0612
+                    Description = "description2cf9da67",
+                    UpdateTime = new wkt::Timestamp
+#pragma warning restore CS0612
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeleteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Authority = new Authority
+                {
+                    Issuer = "issuerc12b6c3e",
+                    WorkloadIdentityPool = "workload_identity_pool63099a52",
+                    IdentityProvider = "identity_provider43fd87ee",
+                    OidcJwks = proto::ByteString.CopyFromUtf8("oidc_jwksbaa1cfd3"),
+                },
                 ExternalId = "external_id9442680e",
-                LastConnectionTime = new wkt::Timestamp(),
+                LastConnectionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UniqueId = "unique_idee0c0869",
                 InfrastructureType = Membership.Types.InfrastructureType.Unspecified,
             };
@@ -166,14 +397,91 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
                     },
                 },
                 Description = "description2cf9da67",
-                Endpoint = new MembershipEndpoint(),
-                State = new MembershipState(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
-                Authority = new Authority(),
+                Endpoint = new MembershipEndpoint
+                {
+                    GkeCluster = new GkeCluster
+                    {
+                        ResourceLink = "resource_link182528d9",
+                    },
+                    KubernetesMetadata = new KubernetesMetadata
+                    {
+                        KubernetesApiServerVersion = "kubernetes_api_server_version716eda33",
+                        NodeProviderId = "node_provider_idc532164a",
+                        NodeCount = -1659500730,
+                        VcpuCount = -1702761793,
+                        MemoryMb = -1241574521,
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    KubernetesResource = new KubernetesResource
+                    {
+                        MembershipCrManifest = "membership_cr_manifestec6be4f1",
+                        MembershipResources =
+                        {
+                            new ResourceManifest
+                            {
+                                Manifest = "manifest4ab75c7f",
+                                ClusterScoped = false,
+                            },
+                        },
+                        ConnectResources =
+                        {
+                            new ResourceManifest
+                            {
+                                Manifest = "manifest4ab75c7f",
+                                ClusterScoped = false,
+                            },
+                        },
+                        ResourceOptions = new ResourceOptions
+                        {
+                            ConnectVersion = "connect_version76940d70",
+                            V1Beta1Crd = false,
+                        },
+                    },
+                },
+                State = new MembershipState
+                {
+                    Code = MembershipState.Types.Code.Creating,
+#pragma warning disable CS0612
+                    Description = "description2cf9da67",
+                    UpdateTime = new wkt::Timestamp
+#pragma warning restore CS0612
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeleteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Authority = new Authority
+                {
+                    Issuer = "issuerc12b6c3e",
+                    WorkloadIdentityPool = "workload_identity_pool63099a52",
+                    IdentityProvider = "identity_provider43fd87ee",
+                    OidcJwks = proto::ByteString.CopyFromUtf8("oidc_jwksbaa1cfd3"),
+                },
                 ExternalId = "external_id9442680e",
-                LastConnectionTime = new wkt::Timestamp(),
+                LastConnectionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UniqueId = "unique_idee0c0869",
                 InfrastructureType = Membership.Types.InfrastructureType.Unspecified,
             };
@@ -194,7 +502,14 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
             GenerateConnectManifestRequest request = new GenerateConnectManifestRequest
             {
                 Name = "name1c9368b0",
-                ConnectAgent = new ConnectAgent(),
+                ConnectAgent = new ConnectAgent
+                {
+#pragma warning disable CS0612
+                    Name = "name1c9368b0",
+#pragma warning restore CS0612
+                    Proxy = proto::ByteString.CopyFromUtf8("proxyeb871343"),
+                    Namespace = "namespace9e1e8089",
+                },
                 Version = "version102ff72a",
                 IsUpgrade = false,
                 Registry = "registrycf5d20a9",
@@ -204,7 +519,15 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
             {
                 Manifest =
                 {
-                    new ConnectAgentResource(),
+                    new ConnectAgentResource
+                    {
+                        Type = new TypeMeta
+                        {
+                            Kind = "kindf7aa39d9",
+                            ApiVersion = "api_versioncfc3cf41",
+                        },
+                        Manifest = "manifest4ab75c7f",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GenerateConnectManifest(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -222,7 +545,14 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
             GenerateConnectManifestRequest request = new GenerateConnectManifestRequest
             {
                 Name = "name1c9368b0",
-                ConnectAgent = new ConnectAgent(),
+                ConnectAgent = new ConnectAgent
+                {
+#pragma warning disable CS0612
+                    Name = "name1c9368b0",
+#pragma warning restore CS0612
+                    Proxy = proto::ByteString.CopyFromUtf8("proxyeb871343"),
+                    Namespace = "namespace9e1e8089",
+                },
                 Version = "version102ff72a",
                 IsUpgrade = false,
                 Registry = "registrycf5d20a9",
@@ -232,7 +562,15 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
             {
                 Manifest =
                 {
-                    new ConnectAgentResource(),
+                    new ConnectAgentResource
+                    {
+                        Type = new TypeMeta
+                        {
+                            Kind = "kindf7aa39d9",
+                            ApiVersion = "api_versioncfc3cf41",
+                        },
+                        Manifest = "manifest4ab75c7f",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GenerateConnectManifestAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateConnectManifestResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -257,7 +595,19 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
             };
             ValidateExclusivityResponse expectedResponse = new ValidateExclusivityResponse
             {
-                Status = new gr::Status(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ValidateExclusivity(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null);
@@ -279,7 +629,19 @@ namespace Google.Cloud.GkeHub.V1Beta1.Tests
             };
             ValidateExclusivityResponse expectedResponse = new ValidateExclusivityResponse
             {
-                Status = new gr::Status(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ValidateExclusivityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ValidateExclusivityResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GkeHubMembershipServiceClient client = new GkeHubMembershipServiceClientImpl(mockGrpcClient.Object, null);
