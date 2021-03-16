@@ -20,6 +20,7 @@ using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -176,8 +177,17 @@ namespace Google.Cloud.Billing.V1.Tests
             UpdateBillingAccountRequest request = new UpdateBillingAccountRequest
             {
                 BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
-                Account = new BillingAccount(),
-                UpdateMask = new wkt::FieldMask(),
+                Account = new BillingAccount
+                {
+                    BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                    Open = true,
+                    DisplayName = "display_name137f65c2",
+                    MasterBillingAccount = "master_billing_account42bd6a27",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             BillingAccount expectedResponse = new BillingAccount
             {
@@ -200,8 +210,17 @@ namespace Google.Cloud.Billing.V1.Tests
             UpdateBillingAccountRequest request = new UpdateBillingAccountRequest
             {
                 BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
-                Account = new BillingAccount(),
-                UpdateMask = new wkt::FieldMask(),
+                Account = new BillingAccount
+                {
+                    BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                    Open = true,
+                    DisplayName = "display_name137f65c2",
+                    MasterBillingAccount = "master_billing_account42bd6a27",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             BillingAccount expectedResponse = new BillingAccount
             {
@@ -226,7 +245,13 @@ namespace Google.Cloud.Billing.V1.Tests
             UpdateBillingAccountRequest request = new UpdateBillingAccountRequest
             {
                 BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
-                Account = new BillingAccount(),
+                Account = new BillingAccount
+                {
+                    BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                    Open = true,
+                    DisplayName = "display_name137f65c2",
+                    MasterBillingAccount = "master_billing_account42bd6a27",
+                },
             };
             BillingAccount expectedResponse = new BillingAccount
             {
@@ -249,7 +274,13 @@ namespace Google.Cloud.Billing.V1.Tests
             UpdateBillingAccountRequest request = new UpdateBillingAccountRequest
             {
                 BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
-                Account = new BillingAccount(),
+                Account = new BillingAccount
+                {
+                    BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                    Open = true,
+                    DisplayName = "display_name137f65c2",
+                    MasterBillingAccount = "master_billing_account42bd6a27",
+                },
             };
             BillingAccount expectedResponse = new BillingAccount
             {
@@ -274,7 +305,13 @@ namespace Google.Cloud.Billing.V1.Tests
             UpdateBillingAccountRequest request = new UpdateBillingAccountRequest
             {
                 BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
-                Account = new BillingAccount(),
+                Account = new BillingAccount
+                {
+                    BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                    Open = true,
+                    DisplayName = "display_name137f65c2",
+                    MasterBillingAccount = "master_billing_account42bd6a27",
+                },
             };
             BillingAccount expectedResponse = new BillingAccount
             {
@@ -297,7 +334,13 @@ namespace Google.Cloud.Billing.V1.Tests
             UpdateBillingAccountRequest request = new UpdateBillingAccountRequest
             {
                 BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
-                Account = new BillingAccount(),
+                Account = new BillingAccount
+                {
+                    BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                    Open = true,
+                    DisplayName = "display_name137f65c2",
+                    MasterBillingAccount = "master_billing_account42bd6a27",
+                },
             };
             BillingAccount expectedResponse = new BillingAccount
             {
@@ -321,7 +364,13 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             CreateBillingAccountRequest request = new CreateBillingAccountRequest
             {
-                BillingAccount = new BillingAccount(),
+                BillingAccount = new BillingAccount
+                {
+                    BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                    Open = true,
+                    DisplayName = "display_name137f65c2",
+                    MasterBillingAccount = "master_billing_account42bd6a27",
+                },
             };
             BillingAccount expectedResponse = new BillingAccount
             {
@@ -343,7 +392,13 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             CreateBillingAccountRequest request = new CreateBillingAccountRequest
             {
-                BillingAccount = new BillingAccount(),
+                BillingAccount = new BillingAccount
+                {
+                    BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                    Open = true,
+                    DisplayName = "display_name137f65c2",
+                    MasterBillingAccount = "master_billing_account42bd6a27",
+                },
             };
             BillingAccount expectedResponse = new BillingAccount
             {
@@ -367,7 +422,13 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             CreateBillingAccountRequest request = new CreateBillingAccountRequest
             {
-                BillingAccount = new BillingAccount(),
+                BillingAccount = new BillingAccount
+                {
+                    BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                    Open = true,
+                    DisplayName = "display_name137f65c2",
+                    MasterBillingAccount = "master_billing_account42bd6a27",
+                },
             };
             BillingAccount expectedResponse = new BillingAccount
             {
@@ -389,7 +450,13 @@ namespace Google.Cloud.Billing.V1.Tests
             moq::Mock<CloudBilling.CloudBillingClient> mockGrpcClient = new moq::Mock<CloudBilling.CloudBillingClient>(moq::MockBehavior.Strict);
             CreateBillingAccountRequest request = new CreateBillingAccountRequest
             {
-                BillingAccount = new BillingAccount(),
+                BillingAccount = new BillingAccount
+                {
+                    BillingAccountName = gagr::BillingAccountName.FromBillingAccount("[BILLING_ACCOUNT]"),
+                    Open = true,
+                    DisplayName = "display_name137f65c2",
+                    MasterBillingAccount = "master_billing_account42bd6a27",
+                },
             };
             BillingAccount expectedResponse = new BillingAccount
             {
@@ -506,7 +573,13 @@ namespace Google.Cloud.Billing.V1.Tests
             UpdateProjectBillingInfoRequest request = new UpdateProjectBillingInfoRequest
             {
                 Name = "name1c9368b0",
-                ProjectBillingInfo = new ProjectBillingInfo(),
+                ProjectBillingInfo = new ProjectBillingInfo
+                {
+                    Name = "name1c9368b0",
+                    ProjectId = "project_id43ad98b0",
+                    BillingAccountName = "billing_account_name68d77850",
+                    BillingEnabled = false,
+                },
             };
             ProjectBillingInfo expectedResponse = new ProjectBillingInfo
             {
@@ -529,7 +602,13 @@ namespace Google.Cloud.Billing.V1.Tests
             UpdateProjectBillingInfoRequest request = new UpdateProjectBillingInfoRequest
             {
                 Name = "name1c9368b0",
-                ProjectBillingInfo = new ProjectBillingInfo(),
+                ProjectBillingInfo = new ProjectBillingInfo
+                {
+                    Name = "name1c9368b0",
+                    ProjectId = "project_id43ad98b0",
+                    BillingAccountName = "billing_account_name68d77850",
+                    BillingEnabled = false,
+                },
             };
             ProjectBillingInfo expectedResponse = new ProjectBillingInfo
             {
@@ -554,7 +633,13 @@ namespace Google.Cloud.Billing.V1.Tests
             UpdateProjectBillingInfoRequest request = new UpdateProjectBillingInfoRequest
             {
                 Name = "name1c9368b0",
-                ProjectBillingInfo = new ProjectBillingInfo(),
+                ProjectBillingInfo = new ProjectBillingInfo
+                {
+                    Name = "name1c9368b0",
+                    ProjectId = "project_id43ad98b0",
+                    BillingAccountName = "billing_account_name68d77850",
+                    BillingEnabled = false,
+                },
             };
             ProjectBillingInfo expectedResponse = new ProjectBillingInfo
             {
@@ -577,7 +662,13 @@ namespace Google.Cloud.Billing.V1.Tests
             UpdateProjectBillingInfoRequest request = new UpdateProjectBillingInfoRequest
             {
                 Name = "name1c9368b0",
-                ProjectBillingInfo = new ProjectBillingInfo(),
+                ProjectBillingInfo = new ProjectBillingInfo
+                {
+                    Name = "name1c9368b0",
+                    ProjectId = "project_id43ad98b0",
+                    BillingAccountName = "billing_account_name68d77850",
+                    BillingEnabled = false,
+                },
             };
             ProjectBillingInfo expectedResponse = new ProjectBillingInfo
             {
@@ -602,7 +693,10 @@ namespace Google.Cloud.Billing.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -610,7 +704,18 @@ namespace Google.Cloud.Billing.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -627,7 +732,10 @@ namespace Google.Cloud.Billing.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -635,7 +743,18 @@ namespace Google.Cloud.Billing.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -661,7 +780,18 @@ namespace Google.Cloud.Billing.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -685,7 +815,18 @@ namespace Google.Cloud.Billing.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -711,7 +852,18 @@ namespace Google.Cloud.Billing.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -735,7 +887,18 @@ namespace Google.Cloud.Billing.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -754,7 +917,26 @@ namespace Google.Cloud.Billing.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -762,7 +944,18 @@ namespace Google.Cloud.Billing.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -779,7 +972,26 @@ namespace Google.Cloud.Billing.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -787,7 +999,18 @@ namespace Google.Cloud.Billing.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -806,7 +1029,26 @@ namespace Google.Cloud.Billing.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -814,7 +1056,18 @@ namespace Google.Cloud.Billing.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -831,7 +1084,26 @@ namespace Google.Cloud.Billing.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -839,7 +1111,18 @@ namespace Google.Cloud.Billing.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -858,7 +1141,26 @@ namespace Google.Cloud.Billing.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -866,7 +1168,18 @@ namespace Google.Cloud.Billing.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -883,7 +1196,26 @@ namespace Google.Cloud.Billing.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -891,7 +1223,18 @@ namespace Google.Cloud.Billing.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
