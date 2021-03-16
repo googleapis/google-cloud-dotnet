@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -34,7 +35,57 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateCompanyRequest request = new CreateCompanyRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                Company = new Company(),
+                Company = new Company
+                {
+                    CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    DisplayName = "display_name137f65c2",
+                    ExternalId = "external_id9442680e",
+                    Size = CompanySize.Mini,
+                    HeadquartersAddress = "headquarters_address64cd7eb7",
+                    HiringAgency = true,
+                    EeoText = "eeo_text70a1a576",
+                    WebsiteUri = "website_urid0c5dfce",
+                    CareerSiteUri = "career_site_uri62d45b74",
+                    ImageUri = "image_urieba3b1bc",
+                    KeywordSearchableJobCustomAttributes =
+                    {
+                        "keyword_searchable_job_custom_attributese72ec77c",
+                    },
+                    DerivedInfo = new Company.Types.DerivedInfo
+                    {
+                        HeadquartersLocation = new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    Suspended = true,
+                },
             };
             Company expectedResponse = new Company
             {
@@ -52,7 +103,39 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "keyword_searchable_job_custom_attributese72ec77c",
                 },
-                DerivedInfo = new Company.Types.DerivedInfo(),
+                DerivedInfo = new Company.Types.DerivedInfo
+                {
+                    HeadquartersLocation = new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.CreateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -69,7 +152,57 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateCompanyRequest request = new CreateCompanyRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                Company = new Company(),
+                Company = new Company
+                {
+                    CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    DisplayName = "display_name137f65c2",
+                    ExternalId = "external_id9442680e",
+                    Size = CompanySize.Mini,
+                    HeadquartersAddress = "headquarters_address64cd7eb7",
+                    HiringAgency = true,
+                    EeoText = "eeo_text70a1a576",
+                    WebsiteUri = "website_urid0c5dfce",
+                    CareerSiteUri = "career_site_uri62d45b74",
+                    ImageUri = "image_urieba3b1bc",
+                    KeywordSearchableJobCustomAttributes =
+                    {
+                        "keyword_searchable_job_custom_attributese72ec77c",
+                    },
+                    DerivedInfo = new Company.Types.DerivedInfo
+                    {
+                        HeadquartersLocation = new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    Suspended = true,
+                },
             };
             Company expectedResponse = new Company
             {
@@ -87,7 +220,39 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "keyword_searchable_job_custom_attributese72ec77c",
                 },
-                DerivedInfo = new Company.Types.DerivedInfo(),
+                DerivedInfo = new Company.Types.DerivedInfo
+                {
+                    HeadquartersLocation = new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.CreateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -106,7 +271,57 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateCompanyRequest request = new CreateCompanyRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                Company = new Company(),
+                Company = new Company
+                {
+                    CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    DisplayName = "display_name137f65c2",
+                    ExternalId = "external_id9442680e",
+                    Size = CompanySize.Mini,
+                    HeadquartersAddress = "headquarters_address64cd7eb7",
+                    HiringAgency = true,
+                    EeoText = "eeo_text70a1a576",
+                    WebsiteUri = "website_urid0c5dfce",
+                    CareerSiteUri = "career_site_uri62d45b74",
+                    ImageUri = "image_urieba3b1bc",
+                    KeywordSearchableJobCustomAttributes =
+                    {
+                        "keyword_searchable_job_custom_attributese72ec77c",
+                    },
+                    DerivedInfo = new Company.Types.DerivedInfo
+                    {
+                        HeadquartersLocation = new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    Suspended = true,
+                },
             };
             Company expectedResponse = new Company
             {
@@ -124,7 +339,39 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "keyword_searchable_job_custom_attributese72ec77c",
                 },
-                DerivedInfo = new Company.Types.DerivedInfo(),
+                DerivedInfo = new Company.Types.DerivedInfo
+                {
+                    HeadquartersLocation = new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.CreateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -141,7 +388,57 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateCompanyRequest request = new CreateCompanyRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                Company = new Company(),
+                Company = new Company
+                {
+                    CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    DisplayName = "display_name137f65c2",
+                    ExternalId = "external_id9442680e",
+                    Size = CompanySize.Mini,
+                    HeadquartersAddress = "headquarters_address64cd7eb7",
+                    HiringAgency = true,
+                    EeoText = "eeo_text70a1a576",
+                    WebsiteUri = "website_urid0c5dfce",
+                    CareerSiteUri = "career_site_uri62d45b74",
+                    ImageUri = "image_urieba3b1bc",
+                    KeywordSearchableJobCustomAttributes =
+                    {
+                        "keyword_searchable_job_custom_attributese72ec77c",
+                    },
+                    DerivedInfo = new Company.Types.DerivedInfo
+                    {
+                        HeadquartersLocation = new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    Suspended = true,
+                },
             };
             Company expectedResponse = new Company
             {
@@ -159,7 +456,39 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "keyword_searchable_job_custom_attributese72ec77c",
                 },
-                DerivedInfo = new Company.Types.DerivedInfo(),
+                DerivedInfo = new Company.Types.DerivedInfo
+                {
+                    HeadquartersLocation = new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.CreateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -178,7 +507,57 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateCompanyRequest request = new CreateCompanyRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                Company = new Company(),
+                Company = new Company
+                {
+                    CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    DisplayName = "display_name137f65c2",
+                    ExternalId = "external_id9442680e",
+                    Size = CompanySize.Mini,
+                    HeadquartersAddress = "headquarters_address64cd7eb7",
+                    HiringAgency = true,
+                    EeoText = "eeo_text70a1a576",
+                    WebsiteUri = "website_urid0c5dfce",
+                    CareerSiteUri = "career_site_uri62d45b74",
+                    ImageUri = "image_urieba3b1bc",
+                    KeywordSearchableJobCustomAttributes =
+                    {
+                        "keyword_searchable_job_custom_attributese72ec77c",
+                    },
+                    DerivedInfo = new Company.Types.DerivedInfo
+                    {
+                        HeadquartersLocation = new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    Suspended = true,
+                },
             };
             Company expectedResponse = new Company
             {
@@ -196,7 +575,39 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "keyword_searchable_job_custom_attributese72ec77c",
                 },
-                DerivedInfo = new Company.Types.DerivedInfo(),
+                DerivedInfo = new Company.Types.DerivedInfo
+                {
+                    HeadquartersLocation = new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.CreateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -213,7 +624,57 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateCompanyRequest request = new CreateCompanyRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                Company = new Company(),
+                Company = new Company
+                {
+                    CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    DisplayName = "display_name137f65c2",
+                    ExternalId = "external_id9442680e",
+                    Size = CompanySize.Mini,
+                    HeadquartersAddress = "headquarters_address64cd7eb7",
+                    HiringAgency = true,
+                    EeoText = "eeo_text70a1a576",
+                    WebsiteUri = "website_urid0c5dfce",
+                    CareerSiteUri = "career_site_uri62d45b74",
+                    ImageUri = "image_urieba3b1bc",
+                    KeywordSearchableJobCustomAttributes =
+                    {
+                        "keyword_searchable_job_custom_attributese72ec77c",
+                    },
+                    DerivedInfo = new Company.Types.DerivedInfo
+                    {
+                        HeadquartersLocation = new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    Suspended = true,
+                },
             };
             Company expectedResponse = new Company
             {
@@ -231,7 +692,39 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "keyword_searchable_job_custom_attributese72ec77c",
                 },
-                DerivedInfo = new Company.Types.DerivedInfo(),
+                DerivedInfo = new Company.Types.DerivedInfo
+                {
+                    HeadquartersLocation = new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.CreateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -267,7 +760,39 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "keyword_searchable_job_custom_attributese72ec77c",
                 },
-                DerivedInfo = new Company.Types.DerivedInfo(),
+                DerivedInfo = new Company.Types.DerivedInfo
+                {
+                    HeadquartersLocation = new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -301,7 +826,39 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "keyword_searchable_job_custom_attributese72ec77c",
                 },
-                DerivedInfo = new Company.Types.DerivedInfo(),
+                DerivedInfo = new Company.Types.DerivedInfo
+                {
+                    HeadquartersLocation = new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -337,7 +894,39 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "keyword_searchable_job_custom_attributese72ec77c",
                 },
-                DerivedInfo = new Company.Types.DerivedInfo(),
+                DerivedInfo = new Company.Types.DerivedInfo
+                {
+                    HeadquartersLocation = new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -371,7 +960,39 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "keyword_searchable_job_custom_attributese72ec77c",
                 },
-                DerivedInfo = new Company.Types.DerivedInfo(),
+                DerivedInfo = new Company.Types.DerivedInfo
+                {
+                    HeadquartersLocation = new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -407,7 +1028,39 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "keyword_searchable_job_custom_attributese72ec77c",
                 },
-                DerivedInfo = new Company.Types.DerivedInfo(),
+                DerivedInfo = new Company.Types.DerivedInfo
+                {
+                    HeadquartersLocation = new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -441,7 +1094,39 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "keyword_searchable_job_custom_attributese72ec77c",
                 },
-                DerivedInfo = new Company.Types.DerivedInfo(),
+                DerivedInfo = new Company.Types.DerivedInfo
+                {
+                    HeadquartersLocation = new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.GetCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -459,8 +1144,61 @@ namespace Google.Cloud.Talent.V4.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             UpdateCompanyRequest request = new UpdateCompanyRequest
             {
-                Company = new Company(),
-                UpdateMask = new wkt::FieldMask(),
+                Company = new Company
+                {
+                    CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    DisplayName = "display_name137f65c2",
+                    ExternalId = "external_id9442680e",
+                    Size = CompanySize.Mini,
+                    HeadquartersAddress = "headquarters_address64cd7eb7",
+                    HiringAgency = true,
+                    EeoText = "eeo_text70a1a576",
+                    WebsiteUri = "website_urid0c5dfce",
+                    CareerSiteUri = "career_site_uri62d45b74",
+                    ImageUri = "image_urieba3b1bc",
+                    KeywordSearchableJobCustomAttributes =
+                    {
+                        "keyword_searchable_job_custom_attributese72ec77c",
+                    },
+                    DerivedInfo = new Company.Types.DerivedInfo
+                    {
+                        HeadquartersLocation = new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    Suspended = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Company expectedResponse = new Company
             {
@@ -478,7 +1216,39 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "keyword_searchable_job_custom_attributese72ec77c",
                 },
-                DerivedInfo = new Company.Types.DerivedInfo(),
+                DerivedInfo = new Company.Types.DerivedInfo
+                {
+                    HeadquartersLocation = new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.UpdateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -494,8 +1264,61 @@ namespace Google.Cloud.Talent.V4.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             UpdateCompanyRequest request = new UpdateCompanyRequest
             {
-                Company = new Company(),
-                UpdateMask = new wkt::FieldMask(),
+                Company = new Company
+                {
+                    CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    DisplayName = "display_name137f65c2",
+                    ExternalId = "external_id9442680e",
+                    Size = CompanySize.Mini,
+                    HeadquartersAddress = "headquarters_address64cd7eb7",
+                    HiringAgency = true,
+                    EeoText = "eeo_text70a1a576",
+                    WebsiteUri = "website_urid0c5dfce",
+                    CareerSiteUri = "career_site_uri62d45b74",
+                    ImageUri = "image_urieba3b1bc",
+                    KeywordSearchableJobCustomAttributes =
+                    {
+                        "keyword_searchable_job_custom_attributese72ec77c",
+                    },
+                    DerivedInfo = new Company.Types.DerivedInfo
+                    {
+                        HeadquartersLocation = new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    Suspended = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Company expectedResponse = new Company
             {
@@ -513,7 +1336,39 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "keyword_searchable_job_custom_attributese72ec77c",
                 },
-                DerivedInfo = new Company.Types.DerivedInfo(),
+                DerivedInfo = new Company.Types.DerivedInfo
+                {
+                    HeadquartersLocation = new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.UpdateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -531,8 +1386,61 @@ namespace Google.Cloud.Talent.V4.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             UpdateCompanyRequest request = new UpdateCompanyRequest
             {
-                Company = new Company(),
-                UpdateMask = new wkt::FieldMask(),
+                Company = new Company
+                {
+                    CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    DisplayName = "display_name137f65c2",
+                    ExternalId = "external_id9442680e",
+                    Size = CompanySize.Mini,
+                    HeadquartersAddress = "headquarters_address64cd7eb7",
+                    HiringAgency = true,
+                    EeoText = "eeo_text70a1a576",
+                    WebsiteUri = "website_urid0c5dfce",
+                    CareerSiteUri = "career_site_uri62d45b74",
+                    ImageUri = "image_urieba3b1bc",
+                    KeywordSearchableJobCustomAttributes =
+                    {
+                        "keyword_searchable_job_custom_attributese72ec77c",
+                    },
+                    DerivedInfo = new Company.Types.DerivedInfo
+                    {
+                        HeadquartersLocation = new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    Suspended = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Company expectedResponse = new Company
             {
@@ -550,7 +1458,39 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "keyword_searchable_job_custom_attributese72ec77c",
                 },
-                DerivedInfo = new Company.Types.DerivedInfo(),
+                DerivedInfo = new Company.Types.DerivedInfo
+                {
+                    HeadquartersLocation = new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.UpdateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -566,8 +1506,61 @@ namespace Google.Cloud.Talent.V4.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             UpdateCompanyRequest request = new UpdateCompanyRequest
             {
-                Company = new Company(),
-                UpdateMask = new wkt::FieldMask(),
+                Company = new Company
+                {
+                    CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    DisplayName = "display_name137f65c2",
+                    ExternalId = "external_id9442680e",
+                    Size = CompanySize.Mini,
+                    HeadquartersAddress = "headquarters_address64cd7eb7",
+                    HiringAgency = true,
+                    EeoText = "eeo_text70a1a576",
+                    WebsiteUri = "website_urid0c5dfce",
+                    CareerSiteUri = "career_site_uri62d45b74",
+                    ImageUri = "image_urieba3b1bc",
+                    KeywordSearchableJobCustomAttributes =
+                    {
+                        "keyword_searchable_job_custom_attributese72ec77c",
+                    },
+                    DerivedInfo = new Company.Types.DerivedInfo
+                    {
+                        HeadquartersLocation = new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    Suspended = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Company expectedResponse = new Company
             {
@@ -585,7 +1578,39 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "keyword_searchable_job_custom_attributese72ec77c",
                 },
-                DerivedInfo = new Company.Types.DerivedInfo(),
+                DerivedInfo = new Company.Types.DerivedInfo
+                {
+                    HeadquartersLocation = new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 Suspended = true,
             };
             mockGrpcClient.Setup(x => x.UpdateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));

@@ -17,6 +17,7 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -36,7 +37,203 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    RequisitionId = "requisition_id21c2f0af",
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    Addresses =
+                    {
+                        "addresses2f3a3e96",
+                    },
+                    ApplicationInfo = new Job.Types.ApplicationInfo
+                    {
+                        Emails = { "emails2fca67af", },
+                        Instruction = "instructionfa6ecc39",
+                        Uris = { "uris9aee097b", },
+                    },
+                    JobBenefits = { JobBenefit.Dental, },
+                    CompensationInfo = new CompensationInfo
+                    {
+                        Entries =
+                        {
+                            new CompensationInfo.Types.CompensationEntry
+                            {
+                                Type = CompensationInfo.Types.CompensationType.Unspecified,
+                                Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                                Amount = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                Range = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Description = "description2cf9da67",
+                                ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                            },
+                        },
+                        AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    CustomAttributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new CustomAttribute
+                            {
+                                StringValues =
+                                {
+                                    "string_valuesc7b5c24c",
+                                },
+                                LongValues =
+                                {
+                                    -5952618049634455831L,
+                                },
+                                Filterable = true,
+                                KeywordSearchable = false,
+                            }
+                        },
+                    },
+                    DegreeTypes =
+                    {
+                        DegreeType.PrimaryEducation,
+                    },
+                    Department = "departmentca9f9d45",
+                    EmploymentTypes =
+                    {
+                        EmploymentType.OtherEmploymentType,
+                    },
+                    Incentives = "incentives80814488",
+                    LanguageCode = "language_code2f6c7160",
+                    JobLevel = JobLevel.Director,
+                    PromotionValue = 899484920,
+                    Qualifications = "qualifications920abb76",
+                    Responsibilities = "responsibilities978e5c9b",
+                    PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                    Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
+                    JobStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingPublishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingCreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CompanyDisplayName = "company_display_name07e5990f",
+                    DerivedInfo = new Job.Types.DerivedInfo
+                    {
+                        Locations =
+                        {
+                            new Location
+                            {
+                                LocationType = Location.Types.LocationType.SubLocality2,
+                                PostalAddress = new gt::PostalAddress
+                                {
+                                    Revision = -1171785291,
+                                    RegionCode = "region_code72561d46",
+                                    LanguageCode = "language_code2f6c7160",
+                                    PostalCode = "postal_code51d301e6",
+                                    SortingCode = "sorting_codeab47cbcd",
+                                    AdministrativeArea = "administrative_area5d9f9eab",
+                                    Locality = "locality2082e309",
+                                    Sublocality = "sublocality1a785e24",
+                                    AddressLines =
+                                    {
+                                        "address_lines4ab5c702",
+                                    },
+                                    Recipients =
+                                    {
+                                        "recipients9bf62a97",
+                                    },
+                                    Organization = "organization8c94c1b4",
+                                },
+                                LatLng = new gt::LatLng
+                                {
+                                    Latitude = 8.158369671878062E+17,
+                                    Longitude = 8.869183012043108E+17,
+                                },
+                                RadiusMiles = 77208654055655410,
+                            },
+                        },
+                        JobCategories =
+                        {
+                            JobCategory.ComputerAndIt,
+                        },
+                    },
+                    ProcessingOptions = new Job.Types.ProcessingOptions
+                    {
+                        DisableStreetAddressResolution = false,
+                        HtmlSanitization = HtmlSanitization.Unspecified,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
@@ -49,14 +246,94 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "addresses2f3a3e96",
                 },
-                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                ApplicationInfo = new Job.Types.ApplicationInfo
+                {
+                    Emails = { "emails2fca67af", },
+                    Instruction = "instructionfa6ecc39",
+                    Uris = { "uris9aee097b", },
+                },
                 JobBenefits = { JobBenefit.Dental, },
-                CompensationInfo = new CompensationInfo(),
+                CompensationInfo = new CompensationInfo
+                {
+                    Entries =
+                    {
+                        new CompensationInfo.Types.CompensationEntry
+                        {
+                            Type = CompensationInfo.Types.CompensationType.Unspecified,
+                            Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                            Amount = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            Range = new CompensationInfo.Types.CompensationRange
+                            {
+                                MinCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                MaxCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Description = "description2cf9da67",
+                            ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                        },
+                    },
+                    AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 CustomAttributes =
                 {
                     {
                         "key8a0b6e3c",
-                        new CustomAttribute()
+                        new CustomAttribute
+                        {
+                            StringValues =
+                            {
+                                "string_valuesc7b5c24c",
+                            },
+                            LongValues =
+                            {
+                                -5952618049634455831L,
+                            },
+                            Filterable = true,
+                            KeywordSearchable = false,
+                        }
                     },
                 },
                 DegreeTypes =
@@ -78,15 +355,82 @@ namespace Google.Cloud.Talent.V4.Tests
 #pragma warning disable CS0612
                 Visibility = Visibility.SharedWithPublic,
 #pragma warning restore CS0612
-                JobStartTime = new wkt::Timestamp(),
-                JobEndTime = new wkt::Timestamp(),
-                PostingPublishTime = new wkt::Timestamp(),
-                PostingExpireTime = new wkt::Timestamp(),
-                PostingCreateTime = new wkt::Timestamp(),
-                PostingUpdateTime = new wkt::Timestamp(),
+                JobStartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingPublishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingCreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CompanyDisplayName = "company_display_name07e5990f",
-                DerivedInfo = new Job.Types.DerivedInfo(),
-                ProcessingOptions = new Job.Types.ProcessingOptions(),
+                DerivedInfo = new Job.Types.DerivedInfo
+                {
+                    Locations =
+                    {
+                        new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                },
+                ProcessingOptions = new Job.Types.ProcessingOptions
+                {
+                    DisableStreetAddressResolution = false,
+                    HtmlSanitization = HtmlSanitization.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -103,7 +447,203 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    RequisitionId = "requisition_id21c2f0af",
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    Addresses =
+                    {
+                        "addresses2f3a3e96",
+                    },
+                    ApplicationInfo = new Job.Types.ApplicationInfo
+                    {
+                        Emails = { "emails2fca67af", },
+                        Instruction = "instructionfa6ecc39",
+                        Uris = { "uris9aee097b", },
+                    },
+                    JobBenefits = { JobBenefit.Dental, },
+                    CompensationInfo = new CompensationInfo
+                    {
+                        Entries =
+                        {
+                            new CompensationInfo.Types.CompensationEntry
+                            {
+                                Type = CompensationInfo.Types.CompensationType.Unspecified,
+                                Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                                Amount = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                Range = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Description = "description2cf9da67",
+                                ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                            },
+                        },
+                        AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    CustomAttributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new CustomAttribute
+                            {
+                                StringValues =
+                                {
+                                    "string_valuesc7b5c24c",
+                                },
+                                LongValues =
+                                {
+                                    -5952618049634455831L,
+                                },
+                                Filterable = true,
+                                KeywordSearchable = false,
+                            }
+                        },
+                    },
+                    DegreeTypes =
+                    {
+                        DegreeType.PrimaryEducation,
+                    },
+                    Department = "departmentca9f9d45",
+                    EmploymentTypes =
+                    {
+                        EmploymentType.OtherEmploymentType,
+                    },
+                    Incentives = "incentives80814488",
+                    LanguageCode = "language_code2f6c7160",
+                    JobLevel = JobLevel.Director,
+                    PromotionValue = 899484920,
+                    Qualifications = "qualifications920abb76",
+                    Responsibilities = "responsibilities978e5c9b",
+                    PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                    Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
+                    JobStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingPublishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingCreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CompanyDisplayName = "company_display_name07e5990f",
+                    DerivedInfo = new Job.Types.DerivedInfo
+                    {
+                        Locations =
+                        {
+                            new Location
+                            {
+                                LocationType = Location.Types.LocationType.SubLocality2,
+                                PostalAddress = new gt::PostalAddress
+                                {
+                                    Revision = -1171785291,
+                                    RegionCode = "region_code72561d46",
+                                    LanguageCode = "language_code2f6c7160",
+                                    PostalCode = "postal_code51d301e6",
+                                    SortingCode = "sorting_codeab47cbcd",
+                                    AdministrativeArea = "administrative_area5d9f9eab",
+                                    Locality = "locality2082e309",
+                                    Sublocality = "sublocality1a785e24",
+                                    AddressLines =
+                                    {
+                                        "address_lines4ab5c702",
+                                    },
+                                    Recipients =
+                                    {
+                                        "recipients9bf62a97",
+                                    },
+                                    Organization = "organization8c94c1b4",
+                                },
+                                LatLng = new gt::LatLng
+                                {
+                                    Latitude = 8.158369671878062E+17,
+                                    Longitude = 8.869183012043108E+17,
+                                },
+                                RadiusMiles = 77208654055655410,
+                            },
+                        },
+                        JobCategories =
+                        {
+                            JobCategory.ComputerAndIt,
+                        },
+                    },
+                    ProcessingOptions = new Job.Types.ProcessingOptions
+                    {
+                        DisableStreetAddressResolution = false,
+                        HtmlSanitization = HtmlSanitization.Unspecified,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
@@ -116,14 +656,94 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "addresses2f3a3e96",
                 },
-                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                ApplicationInfo = new Job.Types.ApplicationInfo
+                {
+                    Emails = { "emails2fca67af", },
+                    Instruction = "instructionfa6ecc39",
+                    Uris = { "uris9aee097b", },
+                },
                 JobBenefits = { JobBenefit.Dental, },
-                CompensationInfo = new CompensationInfo(),
+                CompensationInfo = new CompensationInfo
+                {
+                    Entries =
+                    {
+                        new CompensationInfo.Types.CompensationEntry
+                        {
+                            Type = CompensationInfo.Types.CompensationType.Unspecified,
+                            Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                            Amount = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            Range = new CompensationInfo.Types.CompensationRange
+                            {
+                                MinCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                MaxCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Description = "description2cf9da67",
+                            ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                        },
+                    },
+                    AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 CustomAttributes =
                 {
                     {
                         "key8a0b6e3c",
-                        new CustomAttribute()
+                        new CustomAttribute
+                        {
+                            StringValues =
+                            {
+                                "string_valuesc7b5c24c",
+                            },
+                            LongValues =
+                            {
+                                -5952618049634455831L,
+                            },
+                            Filterable = true,
+                            KeywordSearchable = false,
+                        }
                     },
                 },
                 DegreeTypes =
@@ -145,15 +765,82 @@ namespace Google.Cloud.Talent.V4.Tests
 #pragma warning disable CS0612
                 Visibility = Visibility.SharedWithPublic,
 #pragma warning restore CS0612
-                JobStartTime = new wkt::Timestamp(),
-                JobEndTime = new wkt::Timestamp(),
-                PostingPublishTime = new wkt::Timestamp(),
-                PostingExpireTime = new wkt::Timestamp(),
-                PostingCreateTime = new wkt::Timestamp(),
-                PostingUpdateTime = new wkt::Timestamp(),
+                JobStartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingPublishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingCreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CompanyDisplayName = "company_display_name07e5990f",
-                DerivedInfo = new Job.Types.DerivedInfo(),
-                ProcessingOptions = new Job.Types.ProcessingOptions(),
+                DerivedInfo = new Job.Types.DerivedInfo
+                {
+                    Locations =
+                    {
+                        new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                },
+                ProcessingOptions = new Job.Types.ProcessingOptions
+                {
+                    DisableStreetAddressResolution = false,
+                    HtmlSanitization = HtmlSanitization.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -172,7 +859,203 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    RequisitionId = "requisition_id21c2f0af",
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    Addresses =
+                    {
+                        "addresses2f3a3e96",
+                    },
+                    ApplicationInfo = new Job.Types.ApplicationInfo
+                    {
+                        Emails = { "emails2fca67af", },
+                        Instruction = "instructionfa6ecc39",
+                        Uris = { "uris9aee097b", },
+                    },
+                    JobBenefits = { JobBenefit.Dental, },
+                    CompensationInfo = new CompensationInfo
+                    {
+                        Entries =
+                        {
+                            new CompensationInfo.Types.CompensationEntry
+                            {
+                                Type = CompensationInfo.Types.CompensationType.Unspecified,
+                                Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                                Amount = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                Range = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Description = "description2cf9da67",
+                                ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                            },
+                        },
+                        AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    CustomAttributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new CustomAttribute
+                            {
+                                StringValues =
+                                {
+                                    "string_valuesc7b5c24c",
+                                },
+                                LongValues =
+                                {
+                                    -5952618049634455831L,
+                                },
+                                Filterable = true,
+                                KeywordSearchable = false,
+                            }
+                        },
+                    },
+                    DegreeTypes =
+                    {
+                        DegreeType.PrimaryEducation,
+                    },
+                    Department = "departmentca9f9d45",
+                    EmploymentTypes =
+                    {
+                        EmploymentType.OtherEmploymentType,
+                    },
+                    Incentives = "incentives80814488",
+                    LanguageCode = "language_code2f6c7160",
+                    JobLevel = JobLevel.Director,
+                    PromotionValue = 899484920,
+                    Qualifications = "qualifications920abb76",
+                    Responsibilities = "responsibilities978e5c9b",
+                    PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                    Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
+                    JobStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingPublishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingCreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CompanyDisplayName = "company_display_name07e5990f",
+                    DerivedInfo = new Job.Types.DerivedInfo
+                    {
+                        Locations =
+                        {
+                            new Location
+                            {
+                                LocationType = Location.Types.LocationType.SubLocality2,
+                                PostalAddress = new gt::PostalAddress
+                                {
+                                    Revision = -1171785291,
+                                    RegionCode = "region_code72561d46",
+                                    LanguageCode = "language_code2f6c7160",
+                                    PostalCode = "postal_code51d301e6",
+                                    SortingCode = "sorting_codeab47cbcd",
+                                    AdministrativeArea = "administrative_area5d9f9eab",
+                                    Locality = "locality2082e309",
+                                    Sublocality = "sublocality1a785e24",
+                                    AddressLines =
+                                    {
+                                        "address_lines4ab5c702",
+                                    },
+                                    Recipients =
+                                    {
+                                        "recipients9bf62a97",
+                                    },
+                                    Organization = "organization8c94c1b4",
+                                },
+                                LatLng = new gt::LatLng
+                                {
+                                    Latitude = 8.158369671878062E+17,
+                                    Longitude = 8.869183012043108E+17,
+                                },
+                                RadiusMiles = 77208654055655410,
+                            },
+                        },
+                        JobCategories =
+                        {
+                            JobCategory.ComputerAndIt,
+                        },
+                    },
+                    ProcessingOptions = new Job.Types.ProcessingOptions
+                    {
+                        DisableStreetAddressResolution = false,
+                        HtmlSanitization = HtmlSanitization.Unspecified,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
@@ -185,14 +1068,94 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "addresses2f3a3e96",
                 },
-                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                ApplicationInfo = new Job.Types.ApplicationInfo
+                {
+                    Emails = { "emails2fca67af", },
+                    Instruction = "instructionfa6ecc39",
+                    Uris = { "uris9aee097b", },
+                },
                 JobBenefits = { JobBenefit.Dental, },
-                CompensationInfo = new CompensationInfo(),
+                CompensationInfo = new CompensationInfo
+                {
+                    Entries =
+                    {
+                        new CompensationInfo.Types.CompensationEntry
+                        {
+                            Type = CompensationInfo.Types.CompensationType.Unspecified,
+                            Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                            Amount = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            Range = new CompensationInfo.Types.CompensationRange
+                            {
+                                MinCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                MaxCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Description = "description2cf9da67",
+                            ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                        },
+                    },
+                    AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 CustomAttributes =
                 {
                     {
                         "key8a0b6e3c",
-                        new CustomAttribute()
+                        new CustomAttribute
+                        {
+                            StringValues =
+                            {
+                                "string_valuesc7b5c24c",
+                            },
+                            LongValues =
+                            {
+                                -5952618049634455831L,
+                            },
+                            Filterable = true,
+                            KeywordSearchable = false,
+                        }
                     },
                 },
                 DegreeTypes =
@@ -214,15 +1177,82 @@ namespace Google.Cloud.Talent.V4.Tests
 #pragma warning disable CS0612
                 Visibility = Visibility.SharedWithPublic,
 #pragma warning restore CS0612
-                JobStartTime = new wkt::Timestamp(),
-                JobEndTime = new wkt::Timestamp(),
-                PostingPublishTime = new wkt::Timestamp(),
-                PostingExpireTime = new wkt::Timestamp(),
-                PostingCreateTime = new wkt::Timestamp(),
-                PostingUpdateTime = new wkt::Timestamp(),
+                JobStartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingPublishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingCreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CompanyDisplayName = "company_display_name07e5990f",
-                DerivedInfo = new Job.Types.DerivedInfo(),
-                ProcessingOptions = new Job.Types.ProcessingOptions(),
+                DerivedInfo = new Job.Types.DerivedInfo
+                {
+                    Locations =
+                    {
+                        new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                },
+                ProcessingOptions = new Job.Types.ProcessingOptions
+                {
+                    DisableStreetAddressResolution = false,
+                    HtmlSanitization = HtmlSanitization.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -239,7 +1269,203 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    RequisitionId = "requisition_id21c2f0af",
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    Addresses =
+                    {
+                        "addresses2f3a3e96",
+                    },
+                    ApplicationInfo = new Job.Types.ApplicationInfo
+                    {
+                        Emails = { "emails2fca67af", },
+                        Instruction = "instructionfa6ecc39",
+                        Uris = { "uris9aee097b", },
+                    },
+                    JobBenefits = { JobBenefit.Dental, },
+                    CompensationInfo = new CompensationInfo
+                    {
+                        Entries =
+                        {
+                            new CompensationInfo.Types.CompensationEntry
+                            {
+                                Type = CompensationInfo.Types.CompensationType.Unspecified,
+                                Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                                Amount = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                Range = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Description = "description2cf9da67",
+                                ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                            },
+                        },
+                        AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    CustomAttributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new CustomAttribute
+                            {
+                                StringValues =
+                                {
+                                    "string_valuesc7b5c24c",
+                                },
+                                LongValues =
+                                {
+                                    -5952618049634455831L,
+                                },
+                                Filterable = true,
+                                KeywordSearchable = false,
+                            }
+                        },
+                    },
+                    DegreeTypes =
+                    {
+                        DegreeType.PrimaryEducation,
+                    },
+                    Department = "departmentca9f9d45",
+                    EmploymentTypes =
+                    {
+                        EmploymentType.OtherEmploymentType,
+                    },
+                    Incentives = "incentives80814488",
+                    LanguageCode = "language_code2f6c7160",
+                    JobLevel = JobLevel.Director,
+                    PromotionValue = 899484920,
+                    Qualifications = "qualifications920abb76",
+                    Responsibilities = "responsibilities978e5c9b",
+                    PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                    Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
+                    JobStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingPublishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingCreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CompanyDisplayName = "company_display_name07e5990f",
+                    DerivedInfo = new Job.Types.DerivedInfo
+                    {
+                        Locations =
+                        {
+                            new Location
+                            {
+                                LocationType = Location.Types.LocationType.SubLocality2,
+                                PostalAddress = new gt::PostalAddress
+                                {
+                                    Revision = -1171785291,
+                                    RegionCode = "region_code72561d46",
+                                    LanguageCode = "language_code2f6c7160",
+                                    PostalCode = "postal_code51d301e6",
+                                    SortingCode = "sorting_codeab47cbcd",
+                                    AdministrativeArea = "administrative_area5d9f9eab",
+                                    Locality = "locality2082e309",
+                                    Sublocality = "sublocality1a785e24",
+                                    AddressLines =
+                                    {
+                                        "address_lines4ab5c702",
+                                    },
+                                    Recipients =
+                                    {
+                                        "recipients9bf62a97",
+                                    },
+                                    Organization = "organization8c94c1b4",
+                                },
+                                LatLng = new gt::LatLng
+                                {
+                                    Latitude = 8.158369671878062E+17,
+                                    Longitude = 8.869183012043108E+17,
+                                },
+                                RadiusMiles = 77208654055655410,
+                            },
+                        },
+                        JobCategories =
+                        {
+                            JobCategory.ComputerAndIt,
+                        },
+                    },
+                    ProcessingOptions = new Job.Types.ProcessingOptions
+                    {
+                        DisableStreetAddressResolution = false,
+                        HtmlSanitization = HtmlSanitization.Unspecified,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
@@ -252,14 +1478,94 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "addresses2f3a3e96",
                 },
-                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                ApplicationInfo = new Job.Types.ApplicationInfo
+                {
+                    Emails = { "emails2fca67af", },
+                    Instruction = "instructionfa6ecc39",
+                    Uris = { "uris9aee097b", },
+                },
                 JobBenefits = { JobBenefit.Dental, },
-                CompensationInfo = new CompensationInfo(),
+                CompensationInfo = new CompensationInfo
+                {
+                    Entries =
+                    {
+                        new CompensationInfo.Types.CompensationEntry
+                        {
+                            Type = CompensationInfo.Types.CompensationType.Unspecified,
+                            Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                            Amount = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            Range = new CompensationInfo.Types.CompensationRange
+                            {
+                                MinCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                MaxCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Description = "description2cf9da67",
+                            ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                        },
+                    },
+                    AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 CustomAttributes =
                 {
                     {
                         "key8a0b6e3c",
-                        new CustomAttribute()
+                        new CustomAttribute
+                        {
+                            StringValues =
+                            {
+                                "string_valuesc7b5c24c",
+                            },
+                            LongValues =
+                            {
+                                -5952618049634455831L,
+                            },
+                            Filterable = true,
+                            KeywordSearchable = false,
+                        }
                     },
                 },
                 DegreeTypes =
@@ -281,15 +1587,82 @@ namespace Google.Cloud.Talent.V4.Tests
 #pragma warning disable CS0612
                 Visibility = Visibility.SharedWithPublic,
 #pragma warning restore CS0612
-                JobStartTime = new wkt::Timestamp(),
-                JobEndTime = new wkt::Timestamp(),
-                PostingPublishTime = new wkt::Timestamp(),
-                PostingExpireTime = new wkt::Timestamp(),
-                PostingCreateTime = new wkt::Timestamp(),
-                PostingUpdateTime = new wkt::Timestamp(),
+                JobStartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingPublishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingCreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CompanyDisplayName = "company_display_name07e5990f",
-                DerivedInfo = new Job.Types.DerivedInfo(),
-                ProcessingOptions = new Job.Types.ProcessingOptions(),
+                DerivedInfo = new Job.Types.DerivedInfo
+                {
+                    Locations =
+                    {
+                        new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                },
+                ProcessingOptions = new Job.Types.ProcessingOptions
+                {
+                    DisableStreetAddressResolution = false,
+                    HtmlSanitization = HtmlSanitization.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -308,7 +1681,203 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    RequisitionId = "requisition_id21c2f0af",
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    Addresses =
+                    {
+                        "addresses2f3a3e96",
+                    },
+                    ApplicationInfo = new Job.Types.ApplicationInfo
+                    {
+                        Emails = { "emails2fca67af", },
+                        Instruction = "instructionfa6ecc39",
+                        Uris = { "uris9aee097b", },
+                    },
+                    JobBenefits = { JobBenefit.Dental, },
+                    CompensationInfo = new CompensationInfo
+                    {
+                        Entries =
+                        {
+                            new CompensationInfo.Types.CompensationEntry
+                            {
+                                Type = CompensationInfo.Types.CompensationType.Unspecified,
+                                Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                                Amount = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                Range = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Description = "description2cf9da67",
+                                ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                            },
+                        },
+                        AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    CustomAttributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new CustomAttribute
+                            {
+                                StringValues =
+                                {
+                                    "string_valuesc7b5c24c",
+                                },
+                                LongValues =
+                                {
+                                    -5952618049634455831L,
+                                },
+                                Filterable = true,
+                                KeywordSearchable = false,
+                            }
+                        },
+                    },
+                    DegreeTypes =
+                    {
+                        DegreeType.PrimaryEducation,
+                    },
+                    Department = "departmentca9f9d45",
+                    EmploymentTypes =
+                    {
+                        EmploymentType.OtherEmploymentType,
+                    },
+                    Incentives = "incentives80814488",
+                    LanguageCode = "language_code2f6c7160",
+                    JobLevel = JobLevel.Director,
+                    PromotionValue = 899484920,
+                    Qualifications = "qualifications920abb76",
+                    Responsibilities = "responsibilities978e5c9b",
+                    PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                    Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
+                    JobStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingPublishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingCreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CompanyDisplayName = "company_display_name07e5990f",
+                    DerivedInfo = new Job.Types.DerivedInfo
+                    {
+                        Locations =
+                        {
+                            new Location
+                            {
+                                LocationType = Location.Types.LocationType.SubLocality2,
+                                PostalAddress = new gt::PostalAddress
+                                {
+                                    Revision = -1171785291,
+                                    RegionCode = "region_code72561d46",
+                                    LanguageCode = "language_code2f6c7160",
+                                    PostalCode = "postal_code51d301e6",
+                                    SortingCode = "sorting_codeab47cbcd",
+                                    AdministrativeArea = "administrative_area5d9f9eab",
+                                    Locality = "locality2082e309",
+                                    Sublocality = "sublocality1a785e24",
+                                    AddressLines =
+                                    {
+                                        "address_lines4ab5c702",
+                                    },
+                                    Recipients =
+                                    {
+                                        "recipients9bf62a97",
+                                    },
+                                    Organization = "organization8c94c1b4",
+                                },
+                                LatLng = new gt::LatLng
+                                {
+                                    Latitude = 8.158369671878062E+17,
+                                    Longitude = 8.869183012043108E+17,
+                                },
+                                RadiusMiles = 77208654055655410,
+                            },
+                        },
+                        JobCategories =
+                        {
+                            JobCategory.ComputerAndIt,
+                        },
+                    },
+                    ProcessingOptions = new Job.Types.ProcessingOptions
+                    {
+                        DisableStreetAddressResolution = false,
+                        HtmlSanitization = HtmlSanitization.Unspecified,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
@@ -321,14 +1890,94 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "addresses2f3a3e96",
                 },
-                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                ApplicationInfo = new Job.Types.ApplicationInfo
+                {
+                    Emails = { "emails2fca67af", },
+                    Instruction = "instructionfa6ecc39",
+                    Uris = { "uris9aee097b", },
+                },
                 JobBenefits = { JobBenefit.Dental, },
-                CompensationInfo = new CompensationInfo(),
+                CompensationInfo = new CompensationInfo
+                {
+                    Entries =
+                    {
+                        new CompensationInfo.Types.CompensationEntry
+                        {
+                            Type = CompensationInfo.Types.CompensationType.Unspecified,
+                            Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                            Amount = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            Range = new CompensationInfo.Types.CompensationRange
+                            {
+                                MinCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                MaxCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Description = "description2cf9da67",
+                            ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                        },
+                    },
+                    AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 CustomAttributes =
                 {
                     {
                         "key8a0b6e3c",
-                        new CustomAttribute()
+                        new CustomAttribute
+                        {
+                            StringValues =
+                            {
+                                "string_valuesc7b5c24c",
+                            },
+                            LongValues =
+                            {
+                                -5952618049634455831L,
+                            },
+                            Filterable = true,
+                            KeywordSearchable = false,
+                        }
                     },
                 },
                 DegreeTypes =
@@ -350,15 +1999,82 @@ namespace Google.Cloud.Talent.V4.Tests
 #pragma warning disable CS0612
                 Visibility = Visibility.SharedWithPublic,
 #pragma warning restore CS0612
-                JobStartTime = new wkt::Timestamp(),
-                JobEndTime = new wkt::Timestamp(),
-                PostingPublishTime = new wkt::Timestamp(),
-                PostingExpireTime = new wkt::Timestamp(),
-                PostingCreateTime = new wkt::Timestamp(),
-                PostingUpdateTime = new wkt::Timestamp(),
+                JobStartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingPublishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingCreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CompanyDisplayName = "company_display_name07e5990f",
-                DerivedInfo = new Job.Types.DerivedInfo(),
-                ProcessingOptions = new Job.Types.ProcessingOptions(),
+                DerivedInfo = new Job.Types.DerivedInfo
+                {
+                    Locations =
+                    {
+                        new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                },
+                ProcessingOptions = new Job.Types.ProcessingOptions
+                {
+                    DisableStreetAddressResolution = false,
+                    HtmlSanitization = HtmlSanitization.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -375,7 +2091,203 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    RequisitionId = "requisition_id21c2f0af",
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    Addresses =
+                    {
+                        "addresses2f3a3e96",
+                    },
+                    ApplicationInfo = new Job.Types.ApplicationInfo
+                    {
+                        Emails = { "emails2fca67af", },
+                        Instruction = "instructionfa6ecc39",
+                        Uris = { "uris9aee097b", },
+                    },
+                    JobBenefits = { JobBenefit.Dental, },
+                    CompensationInfo = new CompensationInfo
+                    {
+                        Entries =
+                        {
+                            new CompensationInfo.Types.CompensationEntry
+                            {
+                                Type = CompensationInfo.Types.CompensationType.Unspecified,
+                                Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                                Amount = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                Range = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Description = "description2cf9da67",
+                                ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                            },
+                        },
+                        AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    CustomAttributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new CustomAttribute
+                            {
+                                StringValues =
+                                {
+                                    "string_valuesc7b5c24c",
+                                },
+                                LongValues =
+                                {
+                                    -5952618049634455831L,
+                                },
+                                Filterable = true,
+                                KeywordSearchable = false,
+                            }
+                        },
+                    },
+                    DegreeTypes =
+                    {
+                        DegreeType.PrimaryEducation,
+                    },
+                    Department = "departmentca9f9d45",
+                    EmploymentTypes =
+                    {
+                        EmploymentType.OtherEmploymentType,
+                    },
+                    Incentives = "incentives80814488",
+                    LanguageCode = "language_code2f6c7160",
+                    JobLevel = JobLevel.Director,
+                    PromotionValue = 899484920,
+                    Qualifications = "qualifications920abb76",
+                    Responsibilities = "responsibilities978e5c9b",
+                    PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                    Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
+                    JobStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingPublishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingCreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CompanyDisplayName = "company_display_name07e5990f",
+                    DerivedInfo = new Job.Types.DerivedInfo
+                    {
+                        Locations =
+                        {
+                            new Location
+                            {
+                                LocationType = Location.Types.LocationType.SubLocality2,
+                                PostalAddress = new gt::PostalAddress
+                                {
+                                    Revision = -1171785291,
+                                    RegionCode = "region_code72561d46",
+                                    LanguageCode = "language_code2f6c7160",
+                                    PostalCode = "postal_code51d301e6",
+                                    SortingCode = "sorting_codeab47cbcd",
+                                    AdministrativeArea = "administrative_area5d9f9eab",
+                                    Locality = "locality2082e309",
+                                    Sublocality = "sublocality1a785e24",
+                                    AddressLines =
+                                    {
+                                        "address_lines4ab5c702",
+                                    },
+                                    Recipients =
+                                    {
+                                        "recipients9bf62a97",
+                                    },
+                                    Organization = "organization8c94c1b4",
+                                },
+                                LatLng = new gt::LatLng
+                                {
+                                    Latitude = 8.158369671878062E+17,
+                                    Longitude = 8.869183012043108E+17,
+                                },
+                                RadiusMiles = 77208654055655410,
+                            },
+                        },
+                        JobCategories =
+                        {
+                            JobCategory.ComputerAndIt,
+                        },
+                    },
+                    ProcessingOptions = new Job.Types.ProcessingOptions
+                    {
+                        DisableStreetAddressResolution = false,
+                        HtmlSanitization = HtmlSanitization.Unspecified,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
@@ -388,14 +2300,94 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "addresses2f3a3e96",
                 },
-                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                ApplicationInfo = new Job.Types.ApplicationInfo
+                {
+                    Emails = { "emails2fca67af", },
+                    Instruction = "instructionfa6ecc39",
+                    Uris = { "uris9aee097b", },
+                },
                 JobBenefits = { JobBenefit.Dental, },
-                CompensationInfo = new CompensationInfo(),
+                CompensationInfo = new CompensationInfo
+                {
+                    Entries =
+                    {
+                        new CompensationInfo.Types.CompensationEntry
+                        {
+                            Type = CompensationInfo.Types.CompensationType.Unspecified,
+                            Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                            Amount = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            Range = new CompensationInfo.Types.CompensationRange
+                            {
+                                MinCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                MaxCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Description = "description2cf9da67",
+                            ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                        },
+                    },
+                    AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 CustomAttributes =
                 {
                     {
                         "key8a0b6e3c",
-                        new CustomAttribute()
+                        new CustomAttribute
+                        {
+                            StringValues =
+                            {
+                                "string_valuesc7b5c24c",
+                            },
+                            LongValues =
+                            {
+                                -5952618049634455831L,
+                            },
+                            Filterable = true,
+                            KeywordSearchable = false,
+                        }
                     },
                 },
                 DegreeTypes =
@@ -417,15 +2409,82 @@ namespace Google.Cloud.Talent.V4.Tests
 #pragma warning disable CS0612
                 Visibility = Visibility.SharedWithPublic,
 #pragma warning restore CS0612
-                JobStartTime = new wkt::Timestamp(),
-                JobEndTime = new wkt::Timestamp(),
-                PostingPublishTime = new wkt::Timestamp(),
-                PostingExpireTime = new wkt::Timestamp(),
-                PostingCreateTime = new wkt::Timestamp(),
-                PostingUpdateTime = new wkt::Timestamp(),
+                JobStartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingPublishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingCreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CompanyDisplayName = "company_display_name07e5990f",
-                DerivedInfo = new Job.Types.DerivedInfo(),
-                ProcessingOptions = new Job.Types.ProcessingOptions(),
+                DerivedInfo = new Job.Types.DerivedInfo
+                {
+                    Locations =
+                    {
+                        new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                },
+                ProcessingOptions = new Job.Types.ProcessingOptions
+                {
+                    DisableStreetAddressResolution = false,
+                    HtmlSanitization = HtmlSanitization.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -456,14 +2515,94 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "addresses2f3a3e96",
                 },
-                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                ApplicationInfo = new Job.Types.ApplicationInfo
+                {
+                    Emails = { "emails2fca67af", },
+                    Instruction = "instructionfa6ecc39",
+                    Uris = { "uris9aee097b", },
+                },
                 JobBenefits = { JobBenefit.Dental, },
-                CompensationInfo = new CompensationInfo(),
+                CompensationInfo = new CompensationInfo
+                {
+                    Entries =
+                    {
+                        new CompensationInfo.Types.CompensationEntry
+                        {
+                            Type = CompensationInfo.Types.CompensationType.Unspecified,
+                            Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                            Amount = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            Range = new CompensationInfo.Types.CompensationRange
+                            {
+                                MinCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                MaxCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Description = "description2cf9da67",
+                            ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                        },
+                    },
+                    AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 CustomAttributes =
                 {
                     {
                         "key8a0b6e3c",
-                        new CustomAttribute()
+                        new CustomAttribute
+                        {
+                            StringValues =
+                            {
+                                "string_valuesc7b5c24c",
+                            },
+                            LongValues =
+                            {
+                                -5952618049634455831L,
+                            },
+                            Filterable = true,
+                            KeywordSearchable = false,
+                        }
                     },
                 },
                 DegreeTypes =
@@ -485,15 +2624,82 @@ namespace Google.Cloud.Talent.V4.Tests
 #pragma warning disable CS0612
                 Visibility = Visibility.SharedWithPublic,
 #pragma warning restore CS0612
-                JobStartTime = new wkt::Timestamp(),
-                JobEndTime = new wkt::Timestamp(),
-                PostingPublishTime = new wkt::Timestamp(),
-                PostingExpireTime = new wkt::Timestamp(),
-                PostingCreateTime = new wkt::Timestamp(),
-                PostingUpdateTime = new wkt::Timestamp(),
+                JobStartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingPublishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingCreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CompanyDisplayName = "company_display_name07e5990f",
-                DerivedInfo = new Job.Types.DerivedInfo(),
-                ProcessingOptions = new Job.Types.ProcessingOptions(),
+                DerivedInfo = new Job.Types.DerivedInfo
+                {
+                    Locations =
+                    {
+                        new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                },
+                ProcessingOptions = new Job.Types.ProcessingOptions
+                {
+                    DisableStreetAddressResolution = false,
+                    HtmlSanitization = HtmlSanitization.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -522,14 +2728,94 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "addresses2f3a3e96",
                 },
-                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                ApplicationInfo = new Job.Types.ApplicationInfo
+                {
+                    Emails = { "emails2fca67af", },
+                    Instruction = "instructionfa6ecc39",
+                    Uris = { "uris9aee097b", },
+                },
                 JobBenefits = { JobBenefit.Dental, },
-                CompensationInfo = new CompensationInfo(),
+                CompensationInfo = new CompensationInfo
+                {
+                    Entries =
+                    {
+                        new CompensationInfo.Types.CompensationEntry
+                        {
+                            Type = CompensationInfo.Types.CompensationType.Unspecified,
+                            Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                            Amount = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            Range = new CompensationInfo.Types.CompensationRange
+                            {
+                                MinCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                MaxCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Description = "description2cf9da67",
+                            ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                        },
+                    },
+                    AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 CustomAttributes =
                 {
                     {
                         "key8a0b6e3c",
-                        new CustomAttribute()
+                        new CustomAttribute
+                        {
+                            StringValues =
+                            {
+                                "string_valuesc7b5c24c",
+                            },
+                            LongValues =
+                            {
+                                -5952618049634455831L,
+                            },
+                            Filterable = true,
+                            KeywordSearchable = false,
+                        }
                     },
                 },
                 DegreeTypes =
@@ -551,15 +2837,82 @@ namespace Google.Cloud.Talent.V4.Tests
 #pragma warning disable CS0612
                 Visibility = Visibility.SharedWithPublic,
 #pragma warning restore CS0612
-                JobStartTime = new wkt::Timestamp(),
-                JobEndTime = new wkt::Timestamp(),
-                PostingPublishTime = new wkt::Timestamp(),
-                PostingExpireTime = new wkt::Timestamp(),
-                PostingCreateTime = new wkt::Timestamp(),
-                PostingUpdateTime = new wkt::Timestamp(),
+                JobStartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingPublishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingCreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CompanyDisplayName = "company_display_name07e5990f",
-                DerivedInfo = new Job.Types.DerivedInfo(),
-                ProcessingOptions = new Job.Types.ProcessingOptions(),
+                DerivedInfo = new Job.Types.DerivedInfo
+                {
+                    Locations =
+                    {
+                        new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                },
+                ProcessingOptions = new Job.Types.ProcessingOptions
+                {
+                    DisableStreetAddressResolution = false,
+                    HtmlSanitization = HtmlSanitization.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -590,14 +2943,94 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "addresses2f3a3e96",
                 },
-                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                ApplicationInfo = new Job.Types.ApplicationInfo
+                {
+                    Emails = { "emails2fca67af", },
+                    Instruction = "instructionfa6ecc39",
+                    Uris = { "uris9aee097b", },
+                },
                 JobBenefits = { JobBenefit.Dental, },
-                CompensationInfo = new CompensationInfo(),
+                CompensationInfo = new CompensationInfo
+                {
+                    Entries =
+                    {
+                        new CompensationInfo.Types.CompensationEntry
+                        {
+                            Type = CompensationInfo.Types.CompensationType.Unspecified,
+                            Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                            Amount = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            Range = new CompensationInfo.Types.CompensationRange
+                            {
+                                MinCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                MaxCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Description = "description2cf9da67",
+                            ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                        },
+                    },
+                    AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 CustomAttributes =
                 {
                     {
                         "key8a0b6e3c",
-                        new CustomAttribute()
+                        new CustomAttribute
+                        {
+                            StringValues =
+                            {
+                                "string_valuesc7b5c24c",
+                            },
+                            LongValues =
+                            {
+                                -5952618049634455831L,
+                            },
+                            Filterable = true,
+                            KeywordSearchable = false,
+                        }
                     },
                 },
                 DegreeTypes =
@@ -619,15 +3052,82 @@ namespace Google.Cloud.Talent.V4.Tests
 #pragma warning disable CS0612
                 Visibility = Visibility.SharedWithPublic,
 #pragma warning restore CS0612
-                JobStartTime = new wkt::Timestamp(),
-                JobEndTime = new wkt::Timestamp(),
-                PostingPublishTime = new wkt::Timestamp(),
-                PostingExpireTime = new wkt::Timestamp(),
-                PostingCreateTime = new wkt::Timestamp(),
-                PostingUpdateTime = new wkt::Timestamp(),
+                JobStartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingPublishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingCreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CompanyDisplayName = "company_display_name07e5990f",
-                DerivedInfo = new Job.Types.DerivedInfo(),
-                ProcessingOptions = new Job.Types.ProcessingOptions(),
+                DerivedInfo = new Job.Types.DerivedInfo
+                {
+                    Locations =
+                    {
+                        new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                },
+                ProcessingOptions = new Job.Types.ProcessingOptions
+                {
+                    DisableStreetAddressResolution = false,
+                    HtmlSanitization = HtmlSanitization.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -656,14 +3156,94 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "addresses2f3a3e96",
                 },
-                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                ApplicationInfo = new Job.Types.ApplicationInfo
+                {
+                    Emails = { "emails2fca67af", },
+                    Instruction = "instructionfa6ecc39",
+                    Uris = { "uris9aee097b", },
+                },
                 JobBenefits = { JobBenefit.Dental, },
-                CompensationInfo = new CompensationInfo(),
+                CompensationInfo = new CompensationInfo
+                {
+                    Entries =
+                    {
+                        new CompensationInfo.Types.CompensationEntry
+                        {
+                            Type = CompensationInfo.Types.CompensationType.Unspecified,
+                            Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                            Amount = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            Range = new CompensationInfo.Types.CompensationRange
+                            {
+                                MinCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                MaxCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Description = "description2cf9da67",
+                            ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                        },
+                    },
+                    AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 CustomAttributes =
                 {
                     {
                         "key8a0b6e3c",
-                        new CustomAttribute()
+                        new CustomAttribute
+                        {
+                            StringValues =
+                            {
+                                "string_valuesc7b5c24c",
+                            },
+                            LongValues =
+                            {
+                                -5952618049634455831L,
+                            },
+                            Filterable = true,
+                            KeywordSearchable = false,
+                        }
                     },
                 },
                 DegreeTypes =
@@ -685,15 +3265,82 @@ namespace Google.Cloud.Talent.V4.Tests
 #pragma warning disable CS0612
                 Visibility = Visibility.SharedWithPublic,
 #pragma warning restore CS0612
-                JobStartTime = new wkt::Timestamp(),
-                JobEndTime = new wkt::Timestamp(),
-                PostingPublishTime = new wkt::Timestamp(),
-                PostingExpireTime = new wkt::Timestamp(),
-                PostingCreateTime = new wkt::Timestamp(),
-                PostingUpdateTime = new wkt::Timestamp(),
+                JobStartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingPublishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingCreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CompanyDisplayName = "company_display_name07e5990f",
-                DerivedInfo = new Job.Types.DerivedInfo(),
-                ProcessingOptions = new Job.Types.ProcessingOptions(),
+                DerivedInfo = new Job.Types.DerivedInfo
+                {
+                    Locations =
+                    {
+                        new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                },
+                ProcessingOptions = new Job.Types.ProcessingOptions
+                {
+                    DisableStreetAddressResolution = false,
+                    HtmlSanitization = HtmlSanitization.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -724,14 +3371,94 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "addresses2f3a3e96",
                 },
-                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                ApplicationInfo = new Job.Types.ApplicationInfo
+                {
+                    Emails = { "emails2fca67af", },
+                    Instruction = "instructionfa6ecc39",
+                    Uris = { "uris9aee097b", },
+                },
                 JobBenefits = { JobBenefit.Dental, },
-                CompensationInfo = new CompensationInfo(),
+                CompensationInfo = new CompensationInfo
+                {
+                    Entries =
+                    {
+                        new CompensationInfo.Types.CompensationEntry
+                        {
+                            Type = CompensationInfo.Types.CompensationType.Unspecified,
+                            Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                            Amount = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            Range = new CompensationInfo.Types.CompensationRange
+                            {
+                                MinCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                MaxCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Description = "description2cf9da67",
+                            ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                        },
+                    },
+                    AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 CustomAttributes =
                 {
                     {
                         "key8a0b6e3c",
-                        new CustomAttribute()
+                        new CustomAttribute
+                        {
+                            StringValues =
+                            {
+                                "string_valuesc7b5c24c",
+                            },
+                            LongValues =
+                            {
+                                -5952618049634455831L,
+                            },
+                            Filterable = true,
+                            KeywordSearchable = false,
+                        }
                     },
                 },
                 DegreeTypes =
@@ -753,15 +3480,82 @@ namespace Google.Cloud.Talent.V4.Tests
 #pragma warning disable CS0612
                 Visibility = Visibility.SharedWithPublic,
 #pragma warning restore CS0612
-                JobStartTime = new wkt::Timestamp(),
-                JobEndTime = new wkt::Timestamp(),
-                PostingPublishTime = new wkt::Timestamp(),
-                PostingExpireTime = new wkt::Timestamp(),
-                PostingCreateTime = new wkt::Timestamp(),
-                PostingUpdateTime = new wkt::Timestamp(),
+                JobStartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingPublishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingCreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CompanyDisplayName = "company_display_name07e5990f",
-                DerivedInfo = new Job.Types.DerivedInfo(),
-                ProcessingOptions = new Job.Types.ProcessingOptions(),
+                DerivedInfo = new Job.Types.DerivedInfo
+                {
+                    Locations =
+                    {
+                        new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                },
+                ProcessingOptions = new Job.Types.ProcessingOptions
+                {
+                    DisableStreetAddressResolution = false,
+                    HtmlSanitization = HtmlSanitization.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -790,14 +3584,94 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "addresses2f3a3e96",
                 },
-                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                ApplicationInfo = new Job.Types.ApplicationInfo
+                {
+                    Emails = { "emails2fca67af", },
+                    Instruction = "instructionfa6ecc39",
+                    Uris = { "uris9aee097b", },
+                },
                 JobBenefits = { JobBenefit.Dental, },
-                CompensationInfo = new CompensationInfo(),
+                CompensationInfo = new CompensationInfo
+                {
+                    Entries =
+                    {
+                        new CompensationInfo.Types.CompensationEntry
+                        {
+                            Type = CompensationInfo.Types.CompensationType.Unspecified,
+                            Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                            Amount = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            Range = new CompensationInfo.Types.CompensationRange
+                            {
+                                MinCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                MaxCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Description = "description2cf9da67",
+                            ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                        },
+                    },
+                    AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 CustomAttributes =
                 {
                     {
                         "key8a0b6e3c",
-                        new CustomAttribute()
+                        new CustomAttribute
+                        {
+                            StringValues =
+                            {
+                                "string_valuesc7b5c24c",
+                            },
+                            LongValues =
+                            {
+                                -5952618049634455831L,
+                            },
+                            Filterable = true,
+                            KeywordSearchable = false,
+                        }
                     },
                 },
                 DegreeTypes =
@@ -819,15 +3693,82 @@ namespace Google.Cloud.Talent.V4.Tests
 #pragma warning disable CS0612
                 Visibility = Visibility.SharedWithPublic,
 #pragma warning restore CS0612
-                JobStartTime = new wkt::Timestamp(),
-                JobEndTime = new wkt::Timestamp(),
-                PostingPublishTime = new wkt::Timestamp(),
-                PostingExpireTime = new wkt::Timestamp(),
-                PostingCreateTime = new wkt::Timestamp(),
-                PostingUpdateTime = new wkt::Timestamp(),
+                JobStartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingPublishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingCreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CompanyDisplayName = "company_display_name07e5990f",
-                DerivedInfo = new Job.Types.DerivedInfo(),
-                ProcessingOptions = new Job.Types.ProcessingOptions(),
+                DerivedInfo = new Job.Types.DerivedInfo
+                {
+                    Locations =
+                    {
+                        new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                },
+                ProcessingOptions = new Job.Types.ProcessingOptions
+                {
+                    DisableStreetAddressResolution = false,
+                    HtmlSanitization = HtmlSanitization.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -845,8 +3786,207 @@ namespace Google.Cloud.Talent.V4.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateJobRequest request = new UpdateJobRequest
             {
-                Job = new Job(),
-                UpdateMask = new wkt::FieldMask(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    RequisitionId = "requisition_id21c2f0af",
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    Addresses =
+                    {
+                        "addresses2f3a3e96",
+                    },
+                    ApplicationInfo = new Job.Types.ApplicationInfo
+                    {
+                        Emails = { "emails2fca67af", },
+                        Instruction = "instructionfa6ecc39",
+                        Uris = { "uris9aee097b", },
+                    },
+                    JobBenefits = { JobBenefit.Dental, },
+                    CompensationInfo = new CompensationInfo
+                    {
+                        Entries =
+                        {
+                            new CompensationInfo.Types.CompensationEntry
+                            {
+                                Type = CompensationInfo.Types.CompensationType.Unspecified,
+                                Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                                Amount = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                Range = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Description = "description2cf9da67",
+                                ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                            },
+                        },
+                        AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    CustomAttributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new CustomAttribute
+                            {
+                                StringValues =
+                                {
+                                    "string_valuesc7b5c24c",
+                                },
+                                LongValues =
+                                {
+                                    -5952618049634455831L,
+                                },
+                                Filterable = true,
+                                KeywordSearchable = false,
+                            }
+                        },
+                    },
+                    DegreeTypes =
+                    {
+                        DegreeType.PrimaryEducation,
+                    },
+                    Department = "departmentca9f9d45",
+                    EmploymentTypes =
+                    {
+                        EmploymentType.OtherEmploymentType,
+                    },
+                    Incentives = "incentives80814488",
+                    LanguageCode = "language_code2f6c7160",
+                    JobLevel = JobLevel.Director,
+                    PromotionValue = 899484920,
+                    Qualifications = "qualifications920abb76",
+                    Responsibilities = "responsibilities978e5c9b",
+                    PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                    Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
+                    JobStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingPublishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingCreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CompanyDisplayName = "company_display_name07e5990f",
+                    DerivedInfo = new Job.Types.DerivedInfo
+                    {
+                        Locations =
+                        {
+                            new Location
+                            {
+                                LocationType = Location.Types.LocationType.SubLocality2,
+                                PostalAddress = new gt::PostalAddress
+                                {
+                                    Revision = -1171785291,
+                                    RegionCode = "region_code72561d46",
+                                    LanguageCode = "language_code2f6c7160",
+                                    PostalCode = "postal_code51d301e6",
+                                    SortingCode = "sorting_codeab47cbcd",
+                                    AdministrativeArea = "administrative_area5d9f9eab",
+                                    Locality = "locality2082e309",
+                                    Sublocality = "sublocality1a785e24",
+                                    AddressLines =
+                                    {
+                                        "address_lines4ab5c702",
+                                    },
+                                    Recipients =
+                                    {
+                                        "recipients9bf62a97",
+                                    },
+                                    Organization = "organization8c94c1b4",
+                                },
+                                LatLng = new gt::LatLng
+                                {
+                                    Latitude = 8.158369671878062E+17,
+                                    Longitude = 8.869183012043108E+17,
+                                },
+                                RadiusMiles = 77208654055655410,
+                            },
+                        },
+                        JobCategories =
+                        {
+                            JobCategory.ComputerAndIt,
+                        },
+                    },
+                    ProcessingOptions = new Job.Types.ProcessingOptions
+                    {
+                        DisableStreetAddressResolution = false,
+                        HtmlSanitization = HtmlSanitization.Unspecified,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Job expectedResponse = new Job
             {
@@ -859,14 +3999,94 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "addresses2f3a3e96",
                 },
-                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                ApplicationInfo = new Job.Types.ApplicationInfo
+                {
+                    Emails = { "emails2fca67af", },
+                    Instruction = "instructionfa6ecc39",
+                    Uris = { "uris9aee097b", },
+                },
                 JobBenefits = { JobBenefit.Dental, },
-                CompensationInfo = new CompensationInfo(),
+                CompensationInfo = new CompensationInfo
+                {
+                    Entries =
+                    {
+                        new CompensationInfo.Types.CompensationEntry
+                        {
+                            Type = CompensationInfo.Types.CompensationType.Unspecified,
+                            Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                            Amount = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            Range = new CompensationInfo.Types.CompensationRange
+                            {
+                                MinCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                MaxCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Description = "description2cf9da67",
+                            ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                        },
+                    },
+                    AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 CustomAttributes =
                 {
                     {
                         "key8a0b6e3c",
-                        new CustomAttribute()
+                        new CustomAttribute
+                        {
+                            StringValues =
+                            {
+                                "string_valuesc7b5c24c",
+                            },
+                            LongValues =
+                            {
+                                -5952618049634455831L,
+                            },
+                            Filterable = true,
+                            KeywordSearchable = false,
+                        }
                     },
                 },
                 DegreeTypes =
@@ -888,15 +4108,82 @@ namespace Google.Cloud.Talent.V4.Tests
 #pragma warning disable CS0612
                 Visibility = Visibility.SharedWithPublic,
 #pragma warning restore CS0612
-                JobStartTime = new wkt::Timestamp(),
-                JobEndTime = new wkt::Timestamp(),
-                PostingPublishTime = new wkt::Timestamp(),
-                PostingExpireTime = new wkt::Timestamp(),
-                PostingCreateTime = new wkt::Timestamp(),
-                PostingUpdateTime = new wkt::Timestamp(),
+                JobStartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingPublishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingCreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CompanyDisplayName = "company_display_name07e5990f",
-                DerivedInfo = new Job.Types.DerivedInfo(),
-                ProcessingOptions = new Job.Types.ProcessingOptions(),
+                DerivedInfo = new Job.Types.DerivedInfo
+                {
+                    Locations =
+                    {
+                        new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                },
+                ProcessingOptions = new Job.Types.ProcessingOptions
+                {
+                    DisableStreetAddressResolution = false,
+                    HtmlSanitization = HtmlSanitization.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -912,8 +4199,207 @@ namespace Google.Cloud.Talent.V4.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateJobRequest request = new UpdateJobRequest
             {
-                Job = new Job(),
-                UpdateMask = new wkt::FieldMask(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    RequisitionId = "requisition_id21c2f0af",
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    Addresses =
+                    {
+                        "addresses2f3a3e96",
+                    },
+                    ApplicationInfo = new Job.Types.ApplicationInfo
+                    {
+                        Emails = { "emails2fca67af", },
+                        Instruction = "instructionfa6ecc39",
+                        Uris = { "uris9aee097b", },
+                    },
+                    JobBenefits = { JobBenefit.Dental, },
+                    CompensationInfo = new CompensationInfo
+                    {
+                        Entries =
+                        {
+                            new CompensationInfo.Types.CompensationEntry
+                            {
+                                Type = CompensationInfo.Types.CompensationType.Unspecified,
+                                Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                                Amount = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                Range = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Description = "description2cf9da67",
+                                ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                            },
+                        },
+                        AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    CustomAttributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new CustomAttribute
+                            {
+                                StringValues =
+                                {
+                                    "string_valuesc7b5c24c",
+                                },
+                                LongValues =
+                                {
+                                    -5952618049634455831L,
+                                },
+                                Filterable = true,
+                                KeywordSearchable = false,
+                            }
+                        },
+                    },
+                    DegreeTypes =
+                    {
+                        DegreeType.PrimaryEducation,
+                    },
+                    Department = "departmentca9f9d45",
+                    EmploymentTypes =
+                    {
+                        EmploymentType.OtherEmploymentType,
+                    },
+                    Incentives = "incentives80814488",
+                    LanguageCode = "language_code2f6c7160",
+                    JobLevel = JobLevel.Director,
+                    PromotionValue = 899484920,
+                    Qualifications = "qualifications920abb76",
+                    Responsibilities = "responsibilities978e5c9b",
+                    PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                    Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
+                    JobStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingPublishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingCreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CompanyDisplayName = "company_display_name07e5990f",
+                    DerivedInfo = new Job.Types.DerivedInfo
+                    {
+                        Locations =
+                        {
+                            new Location
+                            {
+                                LocationType = Location.Types.LocationType.SubLocality2,
+                                PostalAddress = new gt::PostalAddress
+                                {
+                                    Revision = -1171785291,
+                                    RegionCode = "region_code72561d46",
+                                    LanguageCode = "language_code2f6c7160",
+                                    PostalCode = "postal_code51d301e6",
+                                    SortingCode = "sorting_codeab47cbcd",
+                                    AdministrativeArea = "administrative_area5d9f9eab",
+                                    Locality = "locality2082e309",
+                                    Sublocality = "sublocality1a785e24",
+                                    AddressLines =
+                                    {
+                                        "address_lines4ab5c702",
+                                    },
+                                    Recipients =
+                                    {
+                                        "recipients9bf62a97",
+                                    },
+                                    Organization = "organization8c94c1b4",
+                                },
+                                LatLng = new gt::LatLng
+                                {
+                                    Latitude = 8.158369671878062E+17,
+                                    Longitude = 8.869183012043108E+17,
+                                },
+                                RadiusMiles = 77208654055655410,
+                            },
+                        },
+                        JobCategories =
+                        {
+                            JobCategory.ComputerAndIt,
+                        },
+                    },
+                    ProcessingOptions = new Job.Types.ProcessingOptions
+                    {
+                        DisableStreetAddressResolution = false,
+                        HtmlSanitization = HtmlSanitization.Unspecified,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Job expectedResponse = new Job
             {
@@ -926,14 +4412,94 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "addresses2f3a3e96",
                 },
-                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                ApplicationInfo = new Job.Types.ApplicationInfo
+                {
+                    Emails = { "emails2fca67af", },
+                    Instruction = "instructionfa6ecc39",
+                    Uris = { "uris9aee097b", },
+                },
                 JobBenefits = { JobBenefit.Dental, },
-                CompensationInfo = new CompensationInfo(),
+                CompensationInfo = new CompensationInfo
+                {
+                    Entries =
+                    {
+                        new CompensationInfo.Types.CompensationEntry
+                        {
+                            Type = CompensationInfo.Types.CompensationType.Unspecified,
+                            Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                            Amount = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            Range = new CompensationInfo.Types.CompensationRange
+                            {
+                                MinCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                MaxCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Description = "description2cf9da67",
+                            ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                        },
+                    },
+                    AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 CustomAttributes =
                 {
                     {
                         "key8a0b6e3c",
-                        new CustomAttribute()
+                        new CustomAttribute
+                        {
+                            StringValues =
+                            {
+                                "string_valuesc7b5c24c",
+                            },
+                            LongValues =
+                            {
+                                -5952618049634455831L,
+                            },
+                            Filterable = true,
+                            KeywordSearchable = false,
+                        }
                     },
                 },
                 DegreeTypes =
@@ -955,15 +4521,82 @@ namespace Google.Cloud.Talent.V4.Tests
 #pragma warning disable CS0612
                 Visibility = Visibility.SharedWithPublic,
 #pragma warning restore CS0612
-                JobStartTime = new wkt::Timestamp(),
-                JobEndTime = new wkt::Timestamp(),
-                PostingPublishTime = new wkt::Timestamp(),
-                PostingExpireTime = new wkt::Timestamp(),
-                PostingCreateTime = new wkt::Timestamp(),
-                PostingUpdateTime = new wkt::Timestamp(),
+                JobStartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingPublishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingCreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CompanyDisplayName = "company_display_name07e5990f",
-                DerivedInfo = new Job.Types.DerivedInfo(),
-                ProcessingOptions = new Job.Types.ProcessingOptions(),
+                DerivedInfo = new Job.Types.DerivedInfo
+                {
+                    Locations =
+                    {
+                        new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                },
+                ProcessingOptions = new Job.Types.ProcessingOptions
+                {
+                    DisableStreetAddressResolution = false,
+                    HtmlSanitization = HtmlSanitization.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -981,8 +4614,207 @@ namespace Google.Cloud.Talent.V4.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateJobRequest request = new UpdateJobRequest
             {
-                Job = new Job(),
-                UpdateMask = new wkt::FieldMask(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    RequisitionId = "requisition_id21c2f0af",
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    Addresses =
+                    {
+                        "addresses2f3a3e96",
+                    },
+                    ApplicationInfo = new Job.Types.ApplicationInfo
+                    {
+                        Emails = { "emails2fca67af", },
+                        Instruction = "instructionfa6ecc39",
+                        Uris = { "uris9aee097b", },
+                    },
+                    JobBenefits = { JobBenefit.Dental, },
+                    CompensationInfo = new CompensationInfo
+                    {
+                        Entries =
+                        {
+                            new CompensationInfo.Types.CompensationEntry
+                            {
+                                Type = CompensationInfo.Types.CompensationType.Unspecified,
+                                Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                                Amount = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                Range = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Description = "description2cf9da67",
+                                ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                            },
+                        },
+                        AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    CustomAttributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new CustomAttribute
+                            {
+                                StringValues =
+                                {
+                                    "string_valuesc7b5c24c",
+                                },
+                                LongValues =
+                                {
+                                    -5952618049634455831L,
+                                },
+                                Filterable = true,
+                                KeywordSearchable = false,
+                            }
+                        },
+                    },
+                    DegreeTypes =
+                    {
+                        DegreeType.PrimaryEducation,
+                    },
+                    Department = "departmentca9f9d45",
+                    EmploymentTypes =
+                    {
+                        EmploymentType.OtherEmploymentType,
+                    },
+                    Incentives = "incentives80814488",
+                    LanguageCode = "language_code2f6c7160",
+                    JobLevel = JobLevel.Director,
+                    PromotionValue = 899484920,
+                    Qualifications = "qualifications920abb76",
+                    Responsibilities = "responsibilities978e5c9b",
+                    PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                    Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
+                    JobStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingPublishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingCreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CompanyDisplayName = "company_display_name07e5990f",
+                    DerivedInfo = new Job.Types.DerivedInfo
+                    {
+                        Locations =
+                        {
+                            new Location
+                            {
+                                LocationType = Location.Types.LocationType.SubLocality2,
+                                PostalAddress = new gt::PostalAddress
+                                {
+                                    Revision = -1171785291,
+                                    RegionCode = "region_code72561d46",
+                                    LanguageCode = "language_code2f6c7160",
+                                    PostalCode = "postal_code51d301e6",
+                                    SortingCode = "sorting_codeab47cbcd",
+                                    AdministrativeArea = "administrative_area5d9f9eab",
+                                    Locality = "locality2082e309",
+                                    Sublocality = "sublocality1a785e24",
+                                    AddressLines =
+                                    {
+                                        "address_lines4ab5c702",
+                                    },
+                                    Recipients =
+                                    {
+                                        "recipients9bf62a97",
+                                    },
+                                    Organization = "organization8c94c1b4",
+                                },
+                                LatLng = new gt::LatLng
+                                {
+                                    Latitude = 8.158369671878062E+17,
+                                    Longitude = 8.869183012043108E+17,
+                                },
+                                RadiusMiles = 77208654055655410,
+                            },
+                        },
+                        JobCategories =
+                        {
+                            JobCategory.ComputerAndIt,
+                        },
+                    },
+                    ProcessingOptions = new Job.Types.ProcessingOptions
+                    {
+                        DisableStreetAddressResolution = false,
+                        HtmlSanitization = HtmlSanitization.Unspecified,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Job expectedResponse = new Job
             {
@@ -995,14 +4827,94 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "addresses2f3a3e96",
                 },
-                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                ApplicationInfo = new Job.Types.ApplicationInfo
+                {
+                    Emails = { "emails2fca67af", },
+                    Instruction = "instructionfa6ecc39",
+                    Uris = { "uris9aee097b", },
+                },
                 JobBenefits = { JobBenefit.Dental, },
-                CompensationInfo = new CompensationInfo(),
+                CompensationInfo = new CompensationInfo
+                {
+                    Entries =
+                    {
+                        new CompensationInfo.Types.CompensationEntry
+                        {
+                            Type = CompensationInfo.Types.CompensationType.Unspecified,
+                            Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                            Amount = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            Range = new CompensationInfo.Types.CompensationRange
+                            {
+                                MinCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                MaxCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Description = "description2cf9da67",
+                            ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                        },
+                    },
+                    AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 CustomAttributes =
                 {
                     {
                         "key8a0b6e3c",
-                        new CustomAttribute()
+                        new CustomAttribute
+                        {
+                            StringValues =
+                            {
+                                "string_valuesc7b5c24c",
+                            },
+                            LongValues =
+                            {
+                                -5952618049634455831L,
+                            },
+                            Filterable = true,
+                            KeywordSearchable = false,
+                        }
                     },
                 },
                 DegreeTypes =
@@ -1024,15 +4936,82 @@ namespace Google.Cloud.Talent.V4.Tests
 #pragma warning disable CS0612
                 Visibility = Visibility.SharedWithPublic,
 #pragma warning restore CS0612
-                JobStartTime = new wkt::Timestamp(),
-                JobEndTime = new wkt::Timestamp(),
-                PostingPublishTime = new wkt::Timestamp(),
-                PostingExpireTime = new wkt::Timestamp(),
-                PostingCreateTime = new wkt::Timestamp(),
-                PostingUpdateTime = new wkt::Timestamp(),
+                JobStartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingPublishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingCreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CompanyDisplayName = "company_display_name07e5990f",
-                DerivedInfo = new Job.Types.DerivedInfo(),
-                ProcessingOptions = new Job.Types.ProcessingOptions(),
+                DerivedInfo = new Job.Types.DerivedInfo
+                {
+                    Locations =
+                    {
+                        new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                },
+                ProcessingOptions = new Job.Types.ProcessingOptions
+                {
+                    DisableStreetAddressResolution = false,
+                    HtmlSanitization = HtmlSanitization.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -1048,8 +5027,207 @@ namespace Google.Cloud.Talent.V4.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateJobRequest request = new UpdateJobRequest
             {
-                Job = new Job(),
-                UpdateMask = new wkt::FieldMask(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    RequisitionId = "requisition_id21c2f0af",
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    Addresses =
+                    {
+                        "addresses2f3a3e96",
+                    },
+                    ApplicationInfo = new Job.Types.ApplicationInfo
+                    {
+                        Emails = { "emails2fca67af", },
+                        Instruction = "instructionfa6ecc39",
+                        Uris = { "uris9aee097b", },
+                    },
+                    JobBenefits = { JobBenefit.Dental, },
+                    CompensationInfo = new CompensationInfo
+                    {
+                        Entries =
+                        {
+                            new CompensationInfo.Types.CompensationEntry
+                            {
+                                Type = CompensationInfo.Types.CompensationType.Unspecified,
+                                Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                                Amount = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                Range = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Description = "description2cf9da67",
+                                ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                            },
+                        },
+                        AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    CustomAttributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new CustomAttribute
+                            {
+                                StringValues =
+                                {
+                                    "string_valuesc7b5c24c",
+                                },
+                                LongValues =
+                                {
+                                    -5952618049634455831L,
+                                },
+                                Filterable = true,
+                                KeywordSearchable = false,
+                            }
+                        },
+                    },
+                    DegreeTypes =
+                    {
+                        DegreeType.PrimaryEducation,
+                    },
+                    Department = "departmentca9f9d45",
+                    EmploymentTypes =
+                    {
+                        EmploymentType.OtherEmploymentType,
+                    },
+                    Incentives = "incentives80814488",
+                    LanguageCode = "language_code2f6c7160",
+                    JobLevel = JobLevel.Director,
+                    PromotionValue = 899484920,
+                    Qualifications = "qualifications920abb76",
+                    Responsibilities = "responsibilities978e5c9b",
+                    PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                    Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
+                    JobStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingPublishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingCreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PostingUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CompanyDisplayName = "company_display_name07e5990f",
+                    DerivedInfo = new Job.Types.DerivedInfo
+                    {
+                        Locations =
+                        {
+                            new Location
+                            {
+                                LocationType = Location.Types.LocationType.SubLocality2,
+                                PostalAddress = new gt::PostalAddress
+                                {
+                                    Revision = -1171785291,
+                                    RegionCode = "region_code72561d46",
+                                    LanguageCode = "language_code2f6c7160",
+                                    PostalCode = "postal_code51d301e6",
+                                    SortingCode = "sorting_codeab47cbcd",
+                                    AdministrativeArea = "administrative_area5d9f9eab",
+                                    Locality = "locality2082e309",
+                                    Sublocality = "sublocality1a785e24",
+                                    AddressLines =
+                                    {
+                                        "address_lines4ab5c702",
+                                    },
+                                    Recipients =
+                                    {
+                                        "recipients9bf62a97",
+                                    },
+                                    Organization = "organization8c94c1b4",
+                                },
+                                LatLng = new gt::LatLng
+                                {
+                                    Latitude = 8.158369671878062E+17,
+                                    Longitude = 8.869183012043108E+17,
+                                },
+                                RadiusMiles = 77208654055655410,
+                            },
+                        },
+                        JobCategories =
+                        {
+                            JobCategory.ComputerAndIt,
+                        },
+                    },
+                    ProcessingOptions = new Job.Types.ProcessingOptions
+                    {
+                        DisableStreetAddressResolution = false,
+                        HtmlSanitization = HtmlSanitization.Unspecified,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Job expectedResponse = new Job
             {
@@ -1062,14 +5240,94 @@ namespace Google.Cloud.Talent.V4.Tests
                 {
                     "addresses2f3a3e96",
                 },
-                ApplicationInfo = new Job.Types.ApplicationInfo(),
+                ApplicationInfo = new Job.Types.ApplicationInfo
+                {
+                    Emails = { "emails2fca67af", },
+                    Instruction = "instructionfa6ecc39",
+                    Uris = { "uris9aee097b", },
+                },
                 JobBenefits = { JobBenefit.Dental, },
-                CompensationInfo = new CompensationInfo(),
+                CompensationInfo = new CompensationInfo
+                {
+                    Entries =
+                    {
+                        new CompensationInfo.Types.CompensationEntry
+                        {
+                            Type = CompensationInfo.Types.CompensationType.Unspecified,
+                            Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                            Amount = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            Range = new CompensationInfo.Types.CompensationRange
+                            {
+                                MinCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                                MaxCompensation = new gt::Money
+                                {
+                                    CurrencyCode = "currency_code7f81e352",
+                                    Units = 1040752433522641849L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Description = "description2cf9da67",
+                            ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                        },
+                    },
+                    AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                    {
+                        MinCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                        MaxCompensation = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 CustomAttributes =
                 {
                     {
                         "key8a0b6e3c",
-                        new CustomAttribute()
+                        new CustomAttribute
+                        {
+                            StringValues =
+                            {
+                                "string_valuesc7b5c24c",
+                            },
+                            LongValues =
+                            {
+                                -5952618049634455831L,
+                            },
+                            Filterable = true,
+                            KeywordSearchable = false,
+                        }
                     },
                 },
                 DegreeTypes =
@@ -1091,15 +5349,82 @@ namespace Google.Cloud.Talent.V4.Tests
 #pragma warning disable CS0612
                 Visibility = Visibility.SharedWithPublic,
 #pragma warning restore CS0612
-                JobStartTime = new wkt::Timestamp(),
-                JobEndTime = new wkt::Timestamp(),
-                PostingPublishTime = new wkt::Timestamp(),
-                PostingExpireTime = new wkt::Timestamp(),
-                PostingCreateTime = new wkt::Timestamp(),
-                PostingUpdateTime = new wkt::Timestamp(),
+                JobStartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingPublishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingCreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                PostingUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CompanyDisplayName = "company_display_name07e5990f",
-                DerivedInfo = new Job.Types.DerivedInfo(),
-                ProcessingOptions = new Job.Types.ProcessingOptions(),
+                DerivedInfo = new Job.Types.DerivedInfo
+                {
+                    Locations =
+                    {
+                        new Location
+                        {
+                            LocationType = Location.Types.LocationType.SubLocality2,
+                            PostalAddress = new gt::PostalAddress
+                            {
+                                Revision = -1171785291,
+                                RegionCode = "region_code72561d46",
+                                LanguageCode = "language_code2f6c7160",
+                                PostalCode = "postal_code51d301e6",
+                                SortingCode = "sorting_codeab47cbcd",
+                                AdministrativeArea = "administrative_area5d9f9eab",
+                                Locality = "locality2082e309",
+                                Sublocality = "sublocality1a785e24",
+                                AddressLines =
+                                {
+                                    "address_lines4ab5c702",
+                                },
+                                Recipients =
+                                {
+                                    "recipients9bf62a97",
+                                },
+                                Organization = "organization8c94c1b4",
+                            },
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            RadiusMiles = 77208654055655410,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                },
+                ProcessingOptions = new Job.Types.ProcessingOptions
+                {
+                    DisableStreetAddressResolution = false,
+                    HtmlSanitization = HtmlSanitization.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -1218,12 +5543,131 @@ namespace Google.Cloud.Talent.V4.Tests
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 SearchMode = SearchJobsRequest.Types.SearchMode.FeaturedJobSearch,
-                RequestMetadata = new RequestMetadata(),
-                JobQuery = new JobQuery(),
+                RequestMetadata = new RequestMetadata
+                {
+                    Domain = "domaine8825fad",
+                    SessionId = "session_id54efc87f",
+                    UserId = "user_idd41a70e8",
+                    AllowMissingIds = true,
+                    DeviceInfo = new DeviceInfo
+                    {
+                        DeviceType = DeviceInfo.Types.DeviceType.Other,
+                        Id = "id74b70bb8",
+                    },
+                },
+                JobQuery = new JobQuery
+                {
+                    Query = "queryf0c71c1b",
+                    Companies =
+                    {
+                        "companies75166514",
+                    },
+                    LocationFilters =
+                    {
+                        new LocationFilter
+                        {
+                            Address = "address04984d88",
+                            RegionCode = "region_code72561d46",
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            DistanceInMiles = 6.393700656368388E+17,
+                            TelecommutePreference = LocationFilter.Types.TelecommutePreference.Unspecified,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                    CommuteFilter = new CommuteFilter
+                    {
+                        CommuteMethod = CommuteMethod.Transit,
+                        StartCoordinates = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        TravelDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        AllowImpreciseAddresses = true,
+                        RoadTraffic = CommuteFilter.Types.RoadTraffic.TrafficFree,
+                        DepartureTime = new gt::TimeOfDay
+                        {
+                            Hours = -673329805,
+                            Minutes = -858779804,
+                            Seconds = 697187960,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CompanyDisplayNames =
+                    {
+                        "company_display_names66095574",
+                    },
+                    CompensationFilter = new CompensationFilter
+                    {
+                        Type = CompensationFilter.Types.FilterType.Unspecified,
+                        Units =
+                        {
+                            CompensationInfo.Types.CompensationUnit.OtherCompensationUnit,
+                        },
+                        Range = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        IncludeJobsWithUnspecifiedCompensationRange = false,
+                    },
+                    CustomAttributeFilter = "custom_attribute_filter4b4e94a7",
+                    DisableSpellCheck = true,
+                    EmploymentTypes =
+                    {
+                        EmploymentType.OtherEmploymentType,
+                    },
+                    LanguageCodes =
+                    {
+                        "language_codes1de1a181",
+                    },
+                    PublishTimeRange = new TimestampRange
+                    {
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ExcludedJobs =
+                    {
+                        "excluded_jobs1a4cdb42",
+                    },
+                    QueryLanguageCode = "query_language_code819ce6b5",
+                },
                 EnableBroadening = false,
                 HistogramQueries =
                 {
-                    new HistogramQuery(),
+                    new HistogramQuery
+                    {
+                        HistogramQuery_ = "histogram_query515f7e5d",
+                    },
                 },
                 JobView = JobView.Small,
                 Offset = 1472300666,
@@ -1231,25 +5675,319 @@ namespace Google.Cloud.Talent.V4.Tests
                 PageToken = "page_tokenf09e5538",
                 OrderBy = "order_byb4d33ada",
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Disabled,
-                CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
+                CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo
+                {
+                    ImportanceLevel = SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel.Extreme,
+                    RankingExpression = "ranking_expression21d1daee",
+                },
                 DisableKeywordMatch = true,
             };
             SearchJobsResponse expectedResponse = new SearchJobsResponse
             {
                 MatchingJobs =
                 {
-                    new SearchJobsResponse.Types.MatchingJob(),
+                    new SearchJobsResponse.Types.MatchingJob
+                    {
+                        Job = new Job
+                        {
+                            JobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                            CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                            RequisitionId = "requisition_id21c2f0af",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Addresses =
+                            {
+                                "addresses2f3a3e96",
+                            },
+                            ApplicationInfo = new Job.Types.ApplicationInfo
+                            {
+                                Emails = { "emails2fca67af", },
+                                Instruction = "instructionfa6ecc39",
+                                Uris = { "uris9aee097b", },
+                            },
+                            JobBenefits = { JobBenefit.Dental, },
+                            CompensationInfo = new CompensationInfo
+                            {
+                                Entries =
+                                {
+                                    new CompensationInfo.Types.CompensationEntry
+                                    {
+                                        Type = CompensationInfo.Types.CompensationType.Unspecified,
+                                        Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                                        Amount = new gt::Money
+                                        {
+                                            CurrencyCode = "currency_code7f81e352",
+                                            Units = 1040752433522641849L,
+                                            Nanos = 985689544,
+                                        },
+                                        Range = new CompensationInfo.Types.CompensationRange
+                                        {
+                                            MinCompensation = new gt::Money
+                                            {
+                                                CurrencyCode = "currency_code7f81e352",
+                                                Units = 1040752433522641849L,
+                                                Nanos = 985689544,
+                                            },
+                                            MaxCompensation = new gt::Money
+                                            {
+                                                CurrencyCode = "currency_code7f81e352",
+                                                Units = 1040752433522641849L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        Description = "description2cf9da67",
+                                        ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                                    },
+                                },
+                                AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                            CustomAttributes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new CustomAttribute
+                                    {
+                                        StringValues =
+                                        {
+                                            "string_valuesc7b5c24c",
+                                        },
+                                        LongValues =
+                                        {
+                                            -5952618049634455831L,
+                                        },
+                                        Filterable = true,
+                                        KeywordSearchable = false,
+                                    }
+                                },
+                            },
+                            DegreeTypes =
+                            {
+                                DegreeType.PrimaryEducation,
+                            },
+                            Department = "departmentca9f9d45",
+                            EmploymentTypes =
+                            {
+                                EmploymentType.OtherEmploymentType,
+                            },
+                            Incentives = "incentives80814488",
+                            LanguageCode = "language_code2f6c7160",
+                            JobLevel = JobLevel.Director,
+                            PromotionValue = 899484920,
+                            Qualifications = "qualifications920abb76",
+                            Responsibilities = "responsibilities978e5c9b",
+                            PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                            Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
+                            JobStartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            JobEndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PostingPublishTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PostingExpireTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PostingCreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PostingUpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            CompanyDisplayName = "company_display_name07e5990f",
+                            DerivedInfo = new Job.Types.DerivedInfo
+                            {
+                                Locations =
+                                {
+                                    new Location
+                                    {
+                                        LocationType = Location.Types.LocationType.SubLocality2,
+                                        PostalAddress = new gt::PostalAddress
+                                        {
+                                            Revision = -1171785291,
+                                            RegionCode = "region_code72561d46",
+                                            LanguageCode = "language_code2f6c7160",
+                                            PostalCode = "postal_code51d301e6",
+                                            SortingCode = "sorting_codeab47cbcd",
+                                            AdministrativeArea = "administrative_area5d9f9eab",
+                                            Locality = "locality2082e309",
+                                            Sublocality = "sublocality1a785e24",
+                                            AddressLines =
+                                            {
+                                                "address_lines4ab5c702",
+                                            },
+                                            Recipients =
+                                            {
+                                                "recipients9bf62a97",
+                                            },
+                                            Organization = "organization8c94c1b4",
+                                        },
+                                        LatLng = new gt::LatLng
+                                        {
+                                            Latitude = 8.158369671878062E+17,
+                                            Longitude = 8.869183012043108E+17,
+                                        },
+                                        RadiusMiles = 77208654055655410,
+                                    },
+                                },
+                                JobCategories =
+                                {
+                                    JobCategory.ComputerAndIt,
+                                },
+                            },
+                            ProcessingOptions = new Job.Types.ProcessingOptions
+                            {
+                                DisableStreetAddressResolution = false,
+                                HtmlSanitization = HtmlSanitization.Unspecified,
+                            },
+                        },
+                        JobSummary = "job_summary28184b23",
+                        JobTitleSnippet = "job_title_snippet4f14afe7",
+                        SearchTextSnippet = "search_text_snippet84342ea2",
+                        CommuteInfo = new SearchJobsResponse.Types.CommuteInfo
+                        {
+                            JobLocation = new Location
+                            {
+                                LocationType = Location.Types.LocationType.SubLocality2,
+                                PostalAddress = new gt::PostalAddress
+                                {
+                                    Revision = -1171785291,
+                                    RegionCode = "region_code72561d46",
+                                    LanguageCode = "language_code2f6c7160",
+                                    PostalCode = "postal_code51d301e6",
+                                    SortingCode = "sorting_codeab47cbcd",
+                                    AdministrativeArea = "administrative_area5d9f9eab",
+                                    Locality = "locality2082e309",
+                                    Sublocality = "sublocality1a785e24",
+                                    AddressLines =
+                                    {
+                                        "address_lines4ab5c702",
+                                    },
+                                    Recipients =
+                                    {
+                                        "recipients9bf62a97",
+                                    },
+                                    Organization = "organization8c94c1b4",
+                                },
+                                LatLng = new gt::LatLng
+                                {
+                                    Latitude = 8.158369671878062E+17,
+                                    Longitude = 8.869183012043108E+17,
+                                },
+                                RadiusMiles = 77208654055655410,
+                            },
+                            TravelDuration = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
                 },
                 HistogramQueryResults =
                 {
-                    new HistogramQueryResult(),
+                    new HistogramQueryResult
+                    {
+                        HistogramQuery = "histogram_query515f7e5d",
+                        Histogram =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -5833447338835614944L
+                            },
+                        },
+                    },
                 },
                 NextPageToken = "next_page_tokendbee0940",
-                LocationFilters = { new Location(), },
+                LocationFilters =
+                {
+                    new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 TotalSize = 1202968108,
-                Metadata = new ResponseMetadata(),
+                Metadata = new ResponseMetadata
+                {
+                    RequestId = "request_id362c8df6",
+                },
                 BroadenedQueryJobsCount = 2131480093,
-                SpellCorrection = new SpellingCorrection(),
+                SpellCorrection = new SpellingCorrection
+                {
+                    Corrected = false,
+                    CorrectedText = "corrected_text126e3cb7",
+                    CorrectedHtml = "corrected_html5279788d",
+                },
             };
             mockGrpcClient.Setup(x => x.SearchJobs(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -1267,12 +6005,131 @@ namespace Google.Cloud.Talent.V4.Tests
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 SearchMode = SearchJobsRequest.Types.SearchMode.FeaturedJobSearch,
-                RequestMetadata = new RequestMetadata(),
-                JobQuery = new JobQuery(),
+                RequestMetadata = new RequestMetadata
+                {
+                    Domain = "domaine8825fad",
+                    SessionId = "session_id54efc87f",
+                    UserId = "user_idd41a70e8",
+                    AllowMissingIds = true,
+                    DeviceInfo = new DeviceInfo
+                    {
+                        DeviceType = DeviceInfo.Types.DeviceType.Other,
+                        Id = "id74b70bb8",
+                    },
+                },
+                JobQuery = new JobQuery
+                {
+                    Query = "queryf0c71c1b",
+                    Companies =
+                    {
+                        "companies75166514",
+                    },
+                    LocationFilters =
+                    {
+                        new LocationFilter
+                        {
+                            Address = "address04984d88",
+                            RegionCode = "region_code72561d46",
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            DistanceInMiles = 6.393700656368388E+17,
+                            TelecommutePreference = LocationFilter.Types.TelecommutePreference.Unspecified,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                    CommuteFilter = new CommuteFilter
+                    {
+                        CommuteMethod = CommuteMethod.Transit,
+                        StartCoordinates = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        TravelDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        AllowImpreciseAddresses = true,
+                        RoadTraffic = CommuteFilter.Types.RoadTraffic.TrafficFree,
+                        DepartureTime = new gt::TimeOfDay
+                        {
+                            Hours = -673329805,
+                            Minutes = -858779804,
+                            Seconds = 697187960,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CompanyDisplayNames =
+                    {
+                        "company_display_names66095574",
+                    },
+                    CompensationFilter = new CompensationFilter
+                    {
+                        Type = CompensationFilter.Types.FilterType.Unspecified,
+                        Units =
+                        {
+                            CompensationInfo.Types.CompensationUnit.OtherCompensationUnit,
+                        },
+                        Range = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        IncludeJobsWithUnspecifiedCompensationRange = false,
+                    },
+                    CustomAttributeFilter = "custom_attribute_filter4b4e94a7",
+                    DisableSpellCheck = true,
+                    EmploymentTypes =
+                    {
+                        EmploymentType.OtherEmploymentType,
+                    },
+                    LanguageCodes =
+                    {
+                        "language_codes1de1a181",
+                    },
+                    PublishTimeRange = new TimestampRange
+                    {
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ExcludedJobs =
+                    {
+                        "excluded_jobs1a4cdb42",
+                    },
+                    QueryLanguageCode = "query_language_code819ce6b5",
+                },
                 EnableBroadening = false,
                 HistogramQueries =
                 {
-                    new HistogramQuery(),
+                    new HistogramQuery
+                    {
+                        HistogramQuery_ = "histogram_query515f7e5d",
+                    },
                 },
                 JobView = JobView.Small,
                 Offset = 1472300666,
@@ -1280,25 +6137,319 @@ namespace Google.Cloud.Talent.V4.Tests
                 PageToken = "page_tokenf09e5538",
                 OrderBy = "order_byb4d33ada",
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Disabled,
-                CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
+                CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo
+                {
+                    ImportanceLevel = SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel.Extreme,
+                    RankingExpression = "ranking_expression21d1daee",
+                },
                 DisableKeywordMatch = true,
             };
             SearchJobsResponse expectedResponse = new SearchJobsResponse
             {
                 MatchingJobs =
                 {
-                    new SearchJobsResponse.Types.MatchingJob(),
+                    new SearchJobsResponse.Types.MatchingJob
+                    {
+                        Job = new Job
+                        {
+                            JobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                            CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                            RequisitionId = "requisition_id21c2f0af",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Addresses =
+                            {
+                                "addresses2f3a3e96",
+                            },
+                            ApplicationInfo = new Job.Types.ApplicationInfo
+                            {
+                                Emails = { "emails2fca67af", },
+                                Instruction = "instructionfa6ecc39",
+                                Uris = { "uris9aee097b", },
+                            },
+                            JobBenefits = { JobBenefit.Dental, },
+                            CompensationInfo = new CompensationInfo
+                            {
+                                Entries =
+                                {
+                                    new CompensationInfo.Types.CompensationEntry
+                                    {
+                                        Type = CompensationInfo.Types.CompensationType.Unspecified,
+                                        Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                                        Amount = new gt::Money
+                                        {
+                                            CurrencyCode = "currency_code7f81e352",
+                                            Units = 1040752433522641849L,
+                                            Nanos = 985689544,
+                                        },
+                                        Range = new CompensationInfo.Types.CompensationRange
+                                        {
+                                            MinCompensation = new gt::Money
+                                            {
+                                                CurrencyCode = "currency_code7f81e352",
+                                                Units = 1040752433522641849L,
+                                                Nanos = 985689544,
+                                            },
+                                            MaxCompensation = new gt::Money
+                                            {
+                                                CurrencyCode = "currency_code7f81e352",
+                                                Units = 1040752433522641849L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        Description = "description2cf9da67",
+                                        ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                                    },
+                                },
+                                AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                            CustomAttributes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new CustomAttribute
+                                    {
+                                        StringValues =
+                                        {
+                                            "string_valuesc7b5c24c",
+                                        },
+                                        LongValues =
+                                        {
+                                            -5952618049634455831L,
+                                        },
+                                        Filterable = true,
+                                        KeywordSearchable = false,
+                                    }
+                                },
+                            },
+                            DegreeTypes =
+                            {
+                                DegreeType.PrimaryEducation,
+                            },
+                            Department = "departmentca9f9d45",
+                            EmploymentTypes =
+                            {
+                                EmploymentType.OtherEmploymentType,
+                            },
+                            Incentives = "incentives80814488",
+                            LanguageCode = "language_code2f6c7160",
+                            JobLevel = JobLevel.Director,
+                            PromotionValue = 899484920,
+                            Qualifications = "qualifications920abb76",
+                            Responsibilities = "responsibilities978e5c9b",
+                            PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                            Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
+                            JobStartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            JobEndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PostingPublishTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PostingExpireTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PostingCreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PostingUpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            CompanyDisplayName = "company_display_name07e5990f",
+                            DerivedInfo = new Job.Types.DerivedInfo
+                            {
+                                Locations =
+                                {
+                                    new Location
+                                    {
+                                        LocationType = Location.Types.LocationType.SubLocality2,
+                                        PostalAddress = new gt::PostalAddress
+                                        {
+                                            Revision = -1171785291,
+                                            RegionCode = "region_code72561d46",
+                                            LanguageCode = "language_code2f6c7160",
+                                            PostalCode = "postal_code51d301e6",
+                                            SortingCode = "sorting_codeab47cbcd",
+                                            AdministrativeArea = "administrative_area5d9f9eab",
+                                            Locality = "locality2082e309",
+                                            Sublocality = "sublocality1a785e24",
+                                            AddressLines =
+                                            {
+                                                "address_lines4ab5c702",
+                                            },
+                                            Recipients =
+                                            {
+                                                "recipients9bf62a97",
+                                            },
+                                            Organization = "organization8c94c1b4",
+                                        },
+                                        LatLng = new gt::LatLng
+                                        {
+                                            Latitude = 8.158369671878062E+17,
+                                            Longitude = 8.869183012043108E+17,
+                                        },
+                                        RadiusMiles = 77208654055655410,
+                                    },
+                                },
+                                JobCategories =
+                                {
+                                    JobCategory.ComputerAndIt,
+                                },
+                            },
+                            ProcessingOptions = new Job.Types.ProcessingOptions
+                            {
+                                DisableStreetAddressResolution = false,
+                                HtmlSanitization = HtmlSanitization.Unspecified,
+                            },
+                        },
+                        JobSummary = "job_summary28184b23",
+                        JobTitleSnippet = "job_title_snippet4f14afe7",
+                        SearchTextSnippet = "search_text_snippet84342ea2",
+                        CommuteInfo = new SearchJobsResponse.Types.CommuteInfo
+                        {
+                            JobLocation = new Location
+                            {
+                                LocationType = Location.Types.LocationType.SubLocality2,
+                                PostalAddress = new gt::PostalAddress
+                                {
+                                    Revision = -1171785291,
+                                    RegionCode = "region_code72561d46",
+                                    LanguageCode = "language_code2f6c7160",
+                                    PostalCode = "postal_code51d301e6",
+                                    SortingCode = "sorting_codeab47cbcd",
+                                    AdministrativeArea = "administrative_area5d9f9eab",
+                                    Locality = "locality2082e309",
+                                    Sublocality = "sublocality1a785e24",
+                                    AddressLines =
+                                    {
+                                        "address_lines4ab5c702",
+                                    },
+                                    Recipients =
+                                    {
+                                        "recipients9bf62a97",
+                                    },
+                                    Organization = "organization8c94c1b4",
+                                },
+                                LatLng = new gt::LatLng
+                                {
+                                    Latitude = 8.158369671878062E+17,
+                                    Longitude = 8.869183012043108E+17,
+                                },
+                                RadiusMiles = 77208654055655410,
+                            },
+                            TravelDuration = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
                 },
                 HistogramQueryResults =
                 {
-                    new HistogramQueryResult(),
+                    new HistogramQueryResult
+                    {
+                        HistogramQuery = "histogram_query515f7e5d",
+                        Histogram =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -5833447338835614944L
+                            },
+                        },
+                    },
                 },
                 NextPageToken = "next_page_tokendbee0940",
-                LocationFilters = { new Location(), },
+                LocationFilters =
+                {
+                    new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 TotalSize = 1202968108,
-                Metadata = new ResponseMetadata(),
+                Metadata = new ResponseMetadata
+                {
+                    RequestId = "request_id362c8df6",
+                },
                 BroadenedQueryJobsCount = 2131480093,
-                SpellCorrection = new SpellingCorrection(),
+                SpellCorrection = new SpellingCorrection
+                {
+                    Corrected = false,
+                    CorrectedText = "corrected_text126e3cb7",
+                    CorrectedHtml = "corrected_html5279788d",
+                },
             };
             mockGrpcClient.Setup(x => x.SearchJobsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchJobsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -1318,12 +6469,131 @@ namespace Google.Cloud.Talent.V4.Tests
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 SearchMode = SearchJobsRequest.Types.SearchMode.FeaturedJobSearch,
-                RequestMetadata = new RequestMetadata(),
-                JobQuery = new JobQuery(),
+                RequestMetadata = new RequestMetadata
+                {
+                    Domain = "domaine8825fad",
+                    SessionId = "session_id54efc87f",
+                    UserId = "user_idd41a70e8",
+                    AllowMissingIds = true,
+                    DeviceInfo = new DeviceInfo
+                    {
+                        DeviceType = DeviceInfo.Types.DeviceType.Other,
+                        Id = "id74b70bb8",
+                    },
+                },
+                JobQuery = new JobQuery
+                {
+                    Query = "queryf0c71c1b",
+                    Companies =
+                    {
+                        "companies75166514",
+                    },
+                    LocationFilters =
+                    {
+                        new LocationFilter
+                        {
+                            Address = "address04984d88",
+                            RegionCode = "region_code72561d46",
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            DistanceInMiles = 6.393700656368388E+17,
+                            TelecommutePreference = LocationFilter.Types.TelecommutePreference.Unspecified,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                    CommuteFilter = new CommuteFilter
+                    {
+                        CommuteMethod = CommuteMethod.Transit,
+                        StartCoordinates = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        TravelDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        AllowImpreciseAddresses = true,
+                        RoadTraffic = CommuteFilter.Types.RoadTraffic.TrafficFree,
+                        DepartureTime = new gt::TimeOfDay
+                        {
+                            Hours = -673329805,
+                            Minutes = -858779804,
+                            Seconds = 697187960,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CompanyDisplayNames =
+                    {
+                        "company_display_names66095574",
+                    },
+                    CompensationFilter = new CompensationFilter
+                    {
+                        Type = CompensationFilter.Types.FilterType.Unspecified,
+                        Units =
+                        {
+                            CompensationInfo.Types.CompensationUnit.OtherCompensationUnit,
+                        },
+                        Range = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        IncludeJobsWithUnspecifiedCompensationRange = false,
+                    },
+                    CustomAttributeFilter = "custom_attribute_filter4b4e94a7",
+                    DisableSpellCheck = true,
+                    EmploymentTypes =
+                    {
+                        EmploymentType.OtherEmploymentType,
+                    },
+                    LanguageCodes =
+                    {
+                        "language_codes1de1a181",
+                    },
+                    PublishTimeRange = new TimestampRange
+                    {
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ExcludedJobs =
+                    {
+                        "excluded_jobs1a4cdb42",
+                    },
+                    QueryLanguageCode = "query_language_code819ce6b5",
+                },
                 EnableBroadening = false,
                 HistogramQueries =
                 {
-                    new HistogramQuery(),
+                    new HistogramQuery
+                    {
+                        HistogramQuery_ = "histogram_query515f7e5d",
+                    },
                 },
                 JobView = JobView.Small,
                 Offset = 1472300666,
@@ -1331,25 +6601,319 @@ namespace Google.Cloud.Talent.V4.Tests
                 PageToken = "page_tokenf09e5538",
                 OrderBy = "order_byb4d33ada",
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Disabled,
-                CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
+                CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo
+                {
+                    ImportanceLevel = SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel.Extreme,
+                    RankingExpression = "ranking_expression21d1daee",
+                },
                 DisableKeywordMatch = true,
             };
             SearchJobsResponse expectedResponse = new SearchJobsResponse
             {
                 MatchingJobs =
                 {
-                    new SearchJobsResponse.Types.MatchingJob(),
+                    new SearchJobsResponse.Types.MatchingJob
+                    {
+                        Job = new Job
+                        {
+                            JobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                            CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                            RequisitionId = "requisition_id21c2f0af",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Addresses =
+                            {
+                                "addresses2f3a3e96",
+                            },
+                            ApplicationInfo = new Job.Types.ApplicationInfo
+                            {
+                                Emails = { "emails2fca67af", },
+                                Instruction = "instructionfa6ecc39",
+                                Uris = { "uris9aee097b", },
+                            },
+                            JobBenefits = { JobBenefit.Dental, },
+                            CompensationInfo = new CompensationInfo
+                            {
+                                Entries =
+                                {
+                                    new CompensationInfo.Types.CompensationEntry
+                                    {
+                                        Type = CompensationInfo.Types.CompensationType.Unspecified,
+                                        Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                                        Amount = new gt::Money
+                                        {
+                                            CurrencyCode = "currency_code7f81e352",
+                                            Units = 1040752433522641849L,
+                                            Nanos = 985689544,
+                                        },
+                                        Range = new CompensationInfo.Types.CompensationRange
+                                        {
+                                            MinCompensation = new gt::Money
+                                            {
+                                                CurrencyCode = "currency_code7f81e352",
+                                                Units = 1040752433522641849L,
+                                                Nanos = 985689544,
+                                            },
+                                            MaxCompensation = new gt::Money
+                                            {
+                                                CurrencyCode = "currency_code7f81e352",
+                                                Units = 1040752433522641849L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        Description = "description2cf9da67",
+                                        ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                                    },
+                                },
+                                AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                            CustomAttributes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new CustomAttribute
+                                    {
+                                        StringValues =
+                                        {
+                                            "string_valuesc7b5c24c",
+                                        },
+                                        LongValues =
+                                        {
+                                            -5952618049634455831L,
+                                        },
+                                        Filterable = true,
+                                        KeywordSearchable = false,
+                                    }
+                                },
+                            },
+                            DegreeTypes =
+                            {
+                                DegreeType.PrimaryEducation,
+                            },
+                            Department = "departmentca9f9d45",
+                            EmploymentTypes =
+                            {
+                                EmploymentType.OtherEmploymentType,
+                            },
+                            Incentives = "incentives80814488",
+                            LanguageCode = "language_code2f6c7160",
+                            JobLevel = JobLevel.Director,
+                            PromotionValue = 899484920,
+                            Qualifications = "qualifications920abb76",
+                            Responsibilities = "responsibilities978e5c9b",
+                            PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                            Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
+                            JobStartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            JobEndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PostingPublishTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PostingExpireTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PostingCreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PostingUpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            CompanyDisplayName = "company_display_name07e5990f",
+                            DerivedInfo = new Job.Types.DerivedInfo
+                            {
+                                Locations =
+                                {
+                                    new Location
+                                    {
+                                        LocationType = Location.Types.LocationType.SubLocality2,
+                                        PostalAddress = new gt::PostalAddress
+                                        {
+                                            Revision = -1171785291,
+                                            RegionCode = "region_code72561d46",
+                                            LanguageCode = "language_code2f6c7160",
+                                            PostalCode = "postal_code51d301e6",
+                                            SortingCode = "sorting_codeab47cbcd",
+                                            AdministrativeArea = "administrative_area5d9f9eab",
+                                            Locality = "locality2082e309",
+                                            Sublocality = "sublocality1a785e24",
+                                            AddressLines =
+                                            {
+                                                "address_lines4ab5c702",
+                                            },
+                                            Recipients =
+                                            {
+                                                "recipients9bf62a97",
+                                            },
+                                            Organization = "organization8c94c1b4",
+                                        },
+                                        LatLng = new gt::LatLng
+                                        {
+                                            Latitude = 8.158369671878062E+17,
+                                            Longitude = 8.869183012043108E+17,
+                                        },
+                                        RadiusMiles = 77208654055655410,
+                                    },
+                                },
+                                JobCategories =
+                                {
+                                    JobCategory.ComputerAndIt,
+                                },
+                            },
+                            ProcessingOptions = new Job.Types.ProcessingOptions
+                            {
+                                DisableStreetAddressResolution = false,
+                                HtmlSanitization = HtmlSanitization.Unspecified,
+                            },
+                        },
+                        JobSummary = "job_summary28184b23",
+                        JobTitleSnippet = "job_title_snippet4f14afe7",
+                        SearchTextSnippet = "search_text_snippet84342ea2",
+                        CommuteInfo = new SearchJobsResponse.Types.CommuteInfo
+                        {
+                            JobLocation = new Location
+                            {
+                                LocationType = Location.Types.LocationType.SubLocality2,
+                                PostalAddress = new gt::PostalAddress
+                                {
+                                    Revision = -1171785291,
+                                    RegionCode = "region_code72561d46",
+                                    LanguageCode = "language_code2f6c7160",
+                                    PostalCode = "postal_code51d301e6",
+                                    SortingCode = "sorting_codeab47cbcd",
+                                    AdministrativeArea = "administrative_area5d9f9eab",
+                                    Locality = "locality2082e309",
+                                    Sublocality = "sublocality1a785e24",
+                                    AddressLines =
+                                    {
+                                        "address_lines4ab5c702",
+                                    },
+                                    Recipients =
+                                    {
+                                        "recipients9bf62a97",
+                                    },
+                                    Organization = "organization8c94c1b4",
+                                },
+                                LatLng = new gt::LatLng
+                                {
+                                    Latitude = 8.158369671878062E+17,
+                                    Longitude = 8.869183012043108E+17,
+                                },
+                                RadiusMiles = 77208654055655410,
+                            },
+                            TravelDuration = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
                 },
                 HistogramQueryResults =
                 {
-                    new HistogramQueryResult(),
+                    new HistogramQueryResult
+                    {
+                        HistogramQuery = "histogram_query515f7e5d",
+                        Histogram =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -5833447338835614944L
+                            },
+                        },
+                    },
                 },
                 NextPageToken = "next_page_tokendbee0940",
-                LocationFilters = { new Location(), },
+                LocationFilters =
+                {
+                    new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 TotalSize = 1202968108,
-                Metadata = new ResponseMetadata(),
+                Metadata = new ResponseMetadata
+                {
+                    RequestId = "request_id362c8df6",
+                },
                 BroadenedQueryJobsCount = 2131480093,
-                SpellCorrection = new SpellingCorrection(),
+                SpellCorrection = new SpellingCorrection
+                {
+                    Corrected = false,
+                    CorrectedText = "corrected_text126e3cb7",
+                    CorrectedHtml = "corrected_html5279788d",
+                },
             };
             mockGrpcClient.Setup(x => x.SearchJobsForAlert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
@@ -1367,12 +6931,131 @@ namespace Google.Cloud.Talent.V4.Tests
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 SearchMode = SearchJobsRequest.Types.SearchMode.FeaturedJobSearch,
-                RequestMetadata = new RequestMetadata(),
-                JobQuery = new JobQuery(),
+                RequestMetadata = new RequestMetadata
+                {
+                    Domain = "domaine8825fad",
+                    SessionId = "session_id54efc87f",
+                    UserId = "user_idd41a70e8",
+                    AllowMissingIds = true,
+                    DeviceInfo = new DeviceInfo
+                    {
+                        DeviceType = DeviceInfo.Types.DeviceType.Other,
+                        Id = "id74b70bb8",
+                    },
+                },
+                JobQuery = new JobQuery
+                {
+                    Query = "queryf0c71c1b",
+                    Companies =
+                    {
+                        "companies75166514",
+                    },
+                    LocationFilters =
+                    {
+                        new LocationFilter
+                        {
+                            Address = "address04984d88",
+                            RegionCode = "region_code72561d46",
+                            LatLng = new gt::LatLng
+                            {
+                                Latitude = 8.158369671878062E+17,
+                                Longitude = 8.869183012043108E+17,
+                            },
+                            DistanceInMiles = 6.393700656368388E+17,
+                            TelecommutePreference = LocationFilter.Types.TelecommutePreference.Unspecified,
+                        },
+                    },
+                    JobCategories =
+                    {
+                        JobCategory.ComputerAndIt,
+                    },
+                    CommuteFilter = new CommuteFilter
+                    {
+                        CommuteMethod = CommuteMethod.Transit,
+                        StartCoordinates = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        TravelDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        AllowImpreciseAddresses = true,
+                        RoadTraffic = CommuteFilter.Types.RoadTraffic.TrafficFree,
+                        DepartureTime = new gt::TimeOfDay
+                        {
+                            Hours = -673329805,
+                            Minutes = -858779804,
+                            Seconds = 697187960,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CompanyDisplayNames =
+                    {
+                        "company_display_names66095574",
+                    },
+                    CompensationFilter = new CompensationFilter
+                    {
+                        Type = CompensationFilter.Types.FilterType.Unspecified,
+                        Units =
+                        {
+                            CompensationInfo.Types.CompensationUnit.OtherCompensationUnit,
+                        },
+                        Range = new CompensationInfo.Types.CompensationRange
+                        {
+                            MinCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                            MaxCompensation = new gt::Money
+                            {
+                                CurrencyCode = "currency_code7f81e352",
+                                Units = 1040752433522641849L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        IncludeJobsWithUnspecifiedCompensationRange = false,
+                    },
+                    CustomAttributeFilter = "custom_attribute_filter4b4e94a7",
+                    DisableSpellCheck = true,
+                    EmploymentTypes =
+                    {
+                        EmploymentType.OtherEmploymentType,
+                    },
+                    LanguageCodes =
+                    {
+                        "language_codes1de1a181",
+                    },
+                    PublishTimeRange = new TimestampRange
+                    {
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ExcludedJobs =
+                    {
+                        "excluded_jobs1a4cdb42",
+                    },
+                    QueryLanguageCode = "query_language_code819ce6b5",
+                },
                 EnableBroadening = false,
                 HistogramQueries =
                 {
-                    new HistogramQuery(),
+                    new HistogramQuery
+                    {
+                        HistogramQuery_ = "histogram_query515f7e5d",
+                    },
                 },
                 JobView = JobView.Small,
                 Offset = 1472300666,
@@ -1380,25 +7063,319 @@ namespace Google.Cloud.Talent.V4.Tests
                 PageToken = "page_tokenf09e5538",
                 OrderBy = "order_byb4d33ada",
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Disabled,
-                CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
+                CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo
+                {
+                    ImportanceLevel = SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel.Extreme,
+                    RankingExpression = "ranking_expression21d1daee",
+                },
                 DisableKeywordMatch = true,
             };
             SearchJobsResponse expectedResponse = new SearchJobsResponse
             {
                 MatchingJobs =
                 {
-                    new SearchJobsResponse.Types.MatchingJob(),
+                    new SearchJobsResponse.Types.MatchingJob
+                    {
+                        Job = new Job
+                        {
+                            JobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                            CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                            RequisitionId = "requisition_id21c2f0af",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Addresses =
+                            {
+                                "addresses2f3a3e96",
+                            },
+                            ApplicationInfo = new Job.Types.ApplicationInfo
+                            {
+                                Emails = { "emails2fca67af", },
+                                Instruction = "instructionfa6ecc39",
+                                Uris = { "uris9aee097b", },
+                            },
+                            JobBenefits = { JobBenefit.Dental, },
+                            CompensationInfo = new CompensationInfo
+                            {
+                                Entries =
+                                {
+                                    new CompensationInfo.Types.CompensationEntry
+                                    {
+                                        Type = CompensationInfo.Types.CompensationType.Unspecified,
+                                        Unit = CompensationInfo.Types.CompensationUnit.Daily,
+                                        Amount = new gt::Money
+                                        {
+                                            CurrencyCode = "currency_code7f81e352",
+                                            Units = 1040752433522641849L,
+                                            Nanos = 985689544,
+                                        },
+                                        Range = new CompensationInfo.Types.CompensationRange
+                                        {
+                                            MinCompensation = new gt::Money
+                                            {
+                                                CurrencyCode = "currency_code7f81e352",
+                                                Units = 1040752433522641849L,
+                                                Nanos = 985689544,
+                                            },
+                                            MaxCompensation = new gt::Money
+                                            {
+                                                CurrencyCode = "currency_code7f81e352",
+                                                Units = 1040752433522641849L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        Description = "description2cf9da67",
+                                        ExpectedUnitsPerYear = 4.1649570948025856E+17,
+                                    },
+                                },
+                                AnnualizedBaseCompensationRange = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                AnnualizedTotalCompensationRange = new CompensationInfo.Types.CompensationRange
+                                {
+                                    MinCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                    MaxCompensation = new gt::Money
+                                    {
+                                        CurrencyCode = "currency_code7f81e352",
+                                        Units = 1040752433522641849L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                            CustomAttributes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new CustomAttribute
+                                    {
+                                        StringValues =
+                                        {
+                                            "string_valuesc7b5c24c",
+                                        },
+                                        LongValues =
+                                        {
+                                            -5952618049634455831L,
+                                        },
+                                        Filterable = true,
+                                        KeywordSearchable = false,
+                                    }
+                                },
+                            },
+                            DegreeTypes =
+                            {
+                                DegreeType.PrimaryEducation,
+                            },
+                            Department = "departmentca9f9d45",
+                            EmploymentTypes =
+                            {
+                                EmploymentType.OtherEmploymentType,
+                            },
+                            Incentives = "incentives80814488",
+                            LanguageCode = "language_code2f6c7160",
+                            JobLevel = JobLevel.Director,
+                            PromotionValue = 899484920,
+                            Qualifications = "qualifications920abb76",
+                            Responsibilities = "responsibilities978e5c9b",
+                            PostingRegion = PostingRegion.AdministrativeArea,
+#pragma warning disable CS0612
+                            Visibility = Visibility.SharedWithPublic,
+#pragma warning restore CS0612
+                            JobStartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            JobEndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PostingPublishTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PostingExpireTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PostingCreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PostingUpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            CompanyDisplayName = "company_display_name07e5990f",
+                            DerivedInfo = new Job.Types.DerivedInfo
+                            {
+                                Locations =
+                                {
+                                    new Location
+                                    {
+                                        LocationType = Location.Types.LocationType.SubLocality2,
+                                        PostalAddress = new gt::PostalAddress
+                                        {
+                                            Revision = -1171785291,
+                                            RegionCode = "region_code72561d46",
+                                            LanguageCode = "language_code2f6c7160",
+                                            PostalCode = "postal_code51d301e6",
+                                            SortingCode = "sorting_codeab47cbcd",
+                                            AdministrativeArea = "administrative_area5d9f9eab",
+                                            Locality = "locality2082e309",
+                                            Sublocality = "sublocality1a785e24",
+                                            AddressLines =
+                                            {
+                                                "address_lines4ab5c702",
+                                            },
+                                            Recipients =
+                                            {
+                                                "recipients9bf62a97",
+                                            },
+                                            Organization = "organization8c94c1b4",
+                                        },
+                                        LatLng = new gt::LatLng
+                                        {
+                                            Latitude = 8.158369671878062E+17,
+                                            Longitude = 8.869183012043108E+17,
+                                        },
+                                        RadiusMiles = 77208654055655410,
+                                    },
+                                },
+                                JobCategories =
+                                {
+                                    JobCategory.ComputerAndIt,
+                                },
+                            },
+                            ProcessingOptions = new Job.Types.ProcessingOptions
+                            {
+                                DisableStreetAddressResolution = false,
+                                HtmlSanitization = HtmlSanitization.Unspecified,
+                            },
+                        },
+                        JobSummary = "job_summary28184b23",
+                        JobTitleSnippet = "job_title_snippet4f14afe7",
+                        SearchTextSnippet = "search_text_snippet84342ea2",
+                        CommuteInfo = new SearchJobsResponse.Types.CommuteInfo
+                        {
+                            JobLocation = new Location
+                            {
+                                LocationType = Location.Types.LocationType.SubLocality2,
+                                PostalAddress = new gt::PostalAddress
+                                {
+                                    Revision = -1171785291,
+                                    RegionCode = "region_code72561d46",
+                                    LanguageCode = "language_code2f6c7160",
+                                    PostalCode = "postal_code51d301e6",
+                                    SortingCode = "sorting_codeab47cbcd",
+                                    AdministrativeArea = "administrative_area5d9f9eab",
+                                    Locality = "locality2082e309",
+                                    Sublocality = "sublocality1a785e24",
+                                    AddressLines =
+                                    {
+                                        "address_lines4ab5c702",
+                                    },
+                                    Recipients =
+                                    {
+                                        "recipients9bf62a97",
+                                    },
+                                    Organization = "organization8c94c1b4",
+                                },
+                                LatLng = new gt::LatLng
+                                {
+                                    Latitude = 8.158369671878062E+17,
+                                    Longitude = 8.869183012043108E+17,
+                                },
+                                RadiusMiles = 77208654055655410,
+                            },
+                            TravelDuration = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
                 },
                 HistogramQueryResults =
                 {
-                    new HistogramQueryResult(),
+                    new HistogramQueryResult
+                    {
+                        HistogramQuery = "histogram_query515f7e5d",
+                        Histogram =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -5833447338835614944L
+                            },
+                        },
+                    },
                 },
                 NextPageToken = "next_page_tokendbee0940",
-                LocationFilters = { new Location(), },
+                LocationFilters =
+                {
+                    new Location
+                    {
+                        LocationType = Location.Types.LocationType.SubLocality2,
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        LatLng = new gt::LatLng
+                        {
+                            Latitude = 8.158369671878062E+17,
+                            Longitude = 8.869183012043108E+17,
+                        },
+                        RadiusMiles = 77208654055655410,
+                    },
+                },
                 TotalSize = 1202968108,
-                Metadata = new ResponseMetadata(),
+                Metadata = new ResponseMetadata
+                {
+                    RequestId = "request_id362c8df6",
+                },
                 BroadenedQueryJobsCount = 2131480093,
-                SpellCorrection = new SpellingCorrection(),
+                SpellCorrection = new SpellingCorrection
+                {
+                    Corrected = false,
+                    CorrectedText = "corrected_text126e3cb7",
+                    CorrectedHtml = "corrected_html5279788d",
+                },
             };
             mockGrpcClient.Setup(x => x.SearchJobsForAlertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchJobsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);

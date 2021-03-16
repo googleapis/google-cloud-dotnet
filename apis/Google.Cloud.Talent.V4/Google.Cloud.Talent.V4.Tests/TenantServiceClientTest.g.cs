@@ -35,7 +35,11 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateTenantRequest request = new CreateTenantRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Tenant = new Tenant(),
+                Tenant = new Tenant
+                {
+                    TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                    ExternalId = "external_id9442680e",
+                },
             };
             Tenant expectedResponse = new Tenant
             {
@@ -56,7 +60,11 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateTenantRequest request = new CreateTenantRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Tenant = new Tenant(),
+                Tenant = new Tenant
+                {
+                    TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                    ExternalId = "external_id9442680e",
+                },
             };
             Tenant expectedResponse = new Tenant
             {
@@ -79,7 +87,11 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateTenantRequest request = new CreateTenantRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Tenant = new Tenant(),
+                Tenant = new Tenant
+                {
+                    TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                    ExternalId = "external_id9442680e",
+                },
             };
             Tenant expectedResponse = new Tenant
             {
@@ -100,7 +112,11 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateTenantRequest request = new CreateTenantRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Tenant = new Tenant(),
+                Tenant = new Tenant
+                {
+                    TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                    ExternalId = "external_id9442680e",
+                },
             };
             Tenant expectedResponse = new Tenant
             {
@@ -123,7 +139,11 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateTenantRequest request = new CreateTenantRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Tenant = new Tenant(),
+                Tenant = new Tenant
+                {
+                    TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                    ExternalId = "external_id9442680e",
+                },
             };
             Tenant expectedResponse = new Tenant
             {
@@ -144,7 +164,11 @@ namespace Google.Cloud.Talent.V4.Tests
             CreateTenantRequest request = new CreateTenantRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Tenant = new Tenant(),
+                Tenant = new Tenant
+                {
+                    TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                    ExternalId = "external_id9442680e",
+                },
             };
             Tenant expectedResponse = new Tenant
             {
@@ -292,8 +316,15 @@ namespace Google.Cloud.Talent.V4.Tests
             moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             UpdateTenantRequest request = new UpdateTenantRequest
             {
-                Tenant = new Tenant(),
-                UpdateMask = new wkt::FieldMask(),
+                Tenant = new Tenant
+                {
+                    TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                    ExternalId = "external_id9442680e",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Tenant expectedResponse = new Tenant
             {
@@ -313,8 +344,15 @@ namespace Google.Cloud.Talent.V4.Tests
             moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             UpdateTenantRequest request = new UpdateTenantRequest
             {
-                Tenant = new Tenant(),
-                UpdateMask = new wkt::FieldMask(),
+                Tenant = new Tenant
+                {
+                    TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                    ExternalId = "external_id9442680e",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Tenant expectedResponse = new Tenant
             {
@@ -336,8 +374,15 @@ namespace Google.Cloud.Talent.V4.Tests
             moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             UpdateTenantRequest request = new UpdateTenantRequest
             {
-                Tenant = new Tenant(),
-                UpdateMask = new wkt::FieldMask(),
+                Tenant = new Tenant
+                {
+                    TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                    ExternalId = "external_id9442680e",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Tenant expectedResponse = new Tenant
             {
@@ -357,8 +402,15 @@ namespace Google.Cloud.Talent.V4.Tests
             moq::Mock<TenantService.TenantServiceClient> mockGrpcClient = new moq::Mock<TenantService.TenantServiceClient>(moq::MockBehavior.Strict);
             UpdateTenantRequest request = new UpdateTenantRequest
             {
-                Tenant = new Tenant(),
-                UpdateMask = new wkt::FieldMask(),
+                Tenant = new Tenant
+                {
+                    TenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                    ExternalId = "external_id9442680e",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Tenant expectedResponse = new Tenant
             {
