@@ -21,6 +21,8 @@ using gcscv = Google.Cloud.Spanner.Common.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gr = Google.Rpc;
+using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -45,14 +47,60 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             {
                 DatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 State = Database.Types.State.Ready,
-                CreateTime = new wkt::Timestamp(),
-                RestoreInfo = new RestoreInfo(),
-                EncryptionConfig = new EncryptionConfig(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RestoreInfo = new RestoreInfo
+                {
+                    SourceType = RestoreSourceType.TypeUnspecified,
+                    BackupInfo = new BackupInfo
+                    {
+                        BackupAsBackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        SourceDatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                        VersionTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                EncryptionConfig = new EncryptionConfig
+                {
+                    KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                },
                 VersionRetentionPeriod = "version_retention_periodbbfc8bf7",
-                EarliestVersionTime = new wkt::Timestamp(),
+                EarliestVersionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EncryptionInfo =
                 {
-                    new EncryptionInfo(),
+                    new EncryptionInfo
+                    {
+                        KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                        EncryptionStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -75,14 +123,60 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             {
                 DatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 State = Database.Types.State.Ready,
-                CreateTime = new wkt::Timestamp(),
-                RestoreInfo = new RestoreInfo(),
-                EncryptionConfig = new EncryptionConfig(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RestoreInfo = new RestoreInfo
+                {
+                    SourceType = RestoreSourceType.TypeUnspecified,
+                    BackupInfo = new BackupInfo
+                    {
+                        BackupAsBackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        SourceDatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                        VersionTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                EncryptionConfig = new EncryptionConfig
+                {
+                    KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                },
                 VersionRetentionPeriod = "version_retention_periodbbfc8bf7",
-                EarliestVersionTime = new wkt::Timestamp(),
+                EarliestVersionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EncryptionInfo =
                 {
-                    new EncryptionInfo(),
+                    new EncryptionInfo
+                    {
+                        KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                        EncryptionStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -107,14 +201,60 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             {
                 DatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 State = Database.Types.State.Ready,
-                CreateTime = new wkt::Timestamp(),
-                RestoreInfo = new RestoreInfo(),
-                EncryptionConfig = new EncryptionConfig(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RestoreInfo = new RestoreInfo
+                {
+                    SourceType = RestoreSourceType.TypeUnspecified,
+                    BackupInfo = new BackupInfo
+                    {
+                        BackupAsBackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        SourceDatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                        VersionTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                EncryptionConfig = new EncryptionConfig
+                {
+                    KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                },
                 VersionRetentionPeriod = "version_retention_periodbbfc8bf7",
-                EarliestVersionTime = new wkt::Timestamp(),
+                EarliestVersionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EncryptionInfo =
                 {
-                    new EncryptionInfo(),
+                    new EncryptionInfo
+                    {
+                        KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                        EncryptionStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -137,14 +277,60 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             {
                 DatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 State = Database.Types.State.Ready,
-                CreateTime = new wkt::Timestamp(),
-                RestoreInfo = new RestoreInfo(),
-                EncryptionConfig = new EncryptionConfig(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RestoreInfo = new RestoreInfo
+                {
+                    SourceType = RestoreSourceType.TypeUnspecified,
+                    BackupInfo = new BackupInfo
+                    {
+                        BackupAsBackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        SourceDatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                        VersionTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                EncryptionConfig = new EncryptionConfig
+                {
+                    KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                },
                 VersionRetentionPeriod = "version_retention_periodbbfc8bf7",
-                EarliestVersionTime = new wkt::Timestamp(),
+                EarliestVersionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EncryptionInfo =
                 {
-                    new EncryptionInfo(),
+                    new EncryptionInfo
+                    {
+                        KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                        EncryptionStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -169,14 +355,60 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             {
                 DatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 State = Database.Types.State.Ready,
-                CreateTime = new wkt::Timestamp(),
-                RestoreInfo = new RestoreInfo(),
-                EncryptionConfig = new EncryptionConfig(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RestoreInfo = new RestoreInfo
+                {
+                    SourceType = RestoreSourceType.TypeUnspecified,
+                    BackupInfo = new BackupInfo
+                    {
+                        BackupAsBackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        SourceDatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                        VersionTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                EncryptionConfig = new EncryptionConfig
+                {
+                    KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                },
                 VersionRetentionPeriod = "version_retention_periodbbfc8bf7",
-                EarliestVersionTime = new wkt::Timestamp(),
+                EarliestVersionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EncryptionInfo =
                 {
-                    new EncryptionInfo(),
+                    new EncryptionInfo
+                    {
+                        KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                        EncryptionStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -199,14 +431,60 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             {
                 DatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 State = Database.Types.State.Ready,
-                CreateTime = new wkt::Timestamp(),
-                RestoreInfo = new RestoreInfo(),
-                EncryptionConfig = new EncryptionConfig(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RestoreInfo = new RestoreInfo
+                {
+                    SourceType = RestoreSourceType.TypeUnspecified,
+                    BackupInfo = new BackupInfo
+                    {
+                        BackupAsBackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        SourceDatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                        VersionTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                EncryptionConfig = new EncryptionConfig
+                {
+                    KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                },
                 VersionRetentionPeriod = "version_retention_periodbbfc8bf7",
-                EarliestVersionTime = new wkt::Timestamp(),
+                EarliestVersionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EncryptionInfo =
                 {
-                    new EncryptionInfo(),
+                    new EncryptionInfo
+                    {
+                        KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                        EncryptionStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -469,7 +747,26 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -477,7 +774,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -495,7 +803,26 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -503,7 +830,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -523,7 +861,26 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -531,7 +888,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -549,7 +917,26 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -557,7 +944,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -577,7 +975,26 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -585,7 +1002,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -603,7 +1031,26 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -611,7 +1058,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -631,7 +1089,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -639,7 +1100,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -657,7 +1129,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -665,7 +1140,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -692,7 +1178,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -717,7 +1214,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -744,7 +1252,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -769,7 +1288,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -962,16 +1492,45 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
                 DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                ExpireTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
                 ReferencingDatabasesAsDatabaseNames =
                 {
                     gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 },
-                EncryptionInfo = new EncryptionInfo(),
-                VersionTime = new wkt::Timestamp(),
+                EncryptionInfo = new EncryptionInfo
+                {
+                    KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                    EncryptionStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                VersionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -993,16 +1552,45 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
                 DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                ExpireTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
                 ReferencingDatabasesAsDatabaseNames =
                 {
                     gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 },
-                EncryptionInfo = new EncryptionInfo(),
-                VersionTime = new wkt::Timestamp(),
+                EncryptionInfo = new EncryptionInfo
+                {
+                    KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                    EncryptionStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                VersionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1026,16 +1614,45 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
                 DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                ExpireTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
                 ReferencingDatabasesAsDatabaseNames =
                 {
                     gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 },
-                EncryptionInfo = new EncryptionInfo(),
-                VersionTime = new wkt::Timestamp(),
+                EncryptionInfo = new EncryptionInfo
+                {
+                    KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                    EncryptionStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                VersionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1057,16 +1674,45 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
                 DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                ExpireTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
                 ReferencingDatabasesAsDatabaseNames =
                 {
                     gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 },
-                EncryptionInfo = new EncryptionInfo(),
-                VersionTime = new wkt::Timestamp(),
+                EncryptionInfo = new EncryptionInfo
+                {
+                    KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                    EncryptionStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                VersionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1090,16 +1736,45 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
                 DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                ExpireTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
                 ReferencingDatabasesAsDatabaseNames =
                 {
                     gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 },
-                EncryptionInfo = new EncryptionInfo(),
-                VersionTime = new wkt::Timestamp(),
+                EncryptionInfo = new EncryptionInfo
+                {
+                    KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                    EncryptionStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                VersionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1121,16 +1796,45 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
                 DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                ExpireTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
                 ReferencingDatabasesAsDatabaseNames =
                 {
                     gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 },
-                EncryptionInfo = new EncryptionInfo(),
-                VersionTime = new wkt::Timestamp(),
+                EncryptionInfo = new EncryptionInfo
+                {
+                    KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                    EncryptionStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                VersionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1148,23 +1852,98 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateBackupRequest request = new UpdateBackupRequest
             {
-                Backup = new Backup(),
-                UpdateMask = new wkt::FieldMask(),
+                Backup = new Backup
+                {
+                    BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                    DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    SizeBytes = 4628423819757039038L,
+                    State = Backup.Types.State.Unspecified,
+                    ReferencingDatabasesAsDatabaseNames =
+                    {
+                        gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                    },
+                    EncryptionInfo = new EncryptionInfo
+                    {
+                        KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                        EncryptionStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    VersionTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
                 DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                ExpireTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
                 ReferencingDatabasesAsDatabaseNames =
                 {
                     gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 },
-                EncryptionInfo = new EncryptionInfo(),
-                VersionTime = new wkt::Timestamp(),
+                EncryptionInfo = new EncryptionInfo
+                {
+                    KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                    EncryptionStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                VersionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1180,23 +1959,98 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateBackupRequest request = new UpdateBackupRequest
             {
-                Backup = new Backup(),
-                UpdateMask = new wkt::FieldMask(),
+                Backup = new Backup
+                {
+                    BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                    DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    SizeBytes = 4628423819757039038L,
+                    State = Backup.Types.State.Unspecified,
+                    ReferencingDatabasesAsDatabaseNames =
+                    {
+                        gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                    },
+                    EncryptionInfo = new EncryptionInfo
+                    {
+                        KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                        EncryptionStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    VersionTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
                 DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                ExpireTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
                 ReferencingDatabasesAsDatabaseNames =
                 {
                     gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 },
-                EncryptionInfo = new EncryptionInfo(),
-                VersionTime = new wkt::Timestamp(),
+                EncryptionInfo = new EncryptionInfo
+                {
+                    KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                    EncryptionStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                VersionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1214,23 +2068,98 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateBackupRequest request = new UpdateBackupRequest
             {
-                Backup = new Backup(),
-                UpdateMask = new wkt::FieldMask(),
+                Backup = new Backup
+                {
+                    BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                    DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    SizeBytes = 4628423819757039038L,
+                    State = Backup.Types.State.Unspecified,
+                    ReferencingDatabasesAsDatabaseNames =
+                    {
+                        gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                    },
+                    EncryptionInfo = new EncryptionInfo
+                    {
+                        KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                        EncryptionStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    VersionTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
                 DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                ExpireTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
                 ReferencingDatabasesAsDatabaseNames =
                 {
                     gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 },
-                EncryptionInfo = new EncryptionInfo(),
-                VersionTime = new wkt::Timestamp(),
+                EncryptionInfo = new EncryptionInfo
+                {
+                    KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                    EncryptionStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                VersionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1246,23 +2175,98 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateBackupRequest request = new UpdateBackupRequest
             {
-                Backup = new Backup(),
-                UpdateMask = new wkt::FieldMask(),
+                Backup = new Backup
+                {
+                    BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                    DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    SizeBytes = 4628423819757039038L,
+                    State = Backup.Types.State.Unspecified,
+                    ReferencingDatabasesAsDatabaseNames =
+                    {
+                        gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                    },
+                    EncryptionInfo = new EncryptionInfo
+                    {
+                        KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                        EncryptionStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    VersionTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
                 DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
-                ExpireTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
                 ReferencingDatabasesAsDatabaseNames =
                 {
                     gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 },
-                EncryptionInfo = new EncryptionInfo(),
-                VersionTime = new wkt::Timestamp(),
+                EncryptionInfo = new EncryptionInfo
+                {
+                    KmsKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    EncryptionType = EncryptionInfo.Types.Type.GoogleDefaultEncryption,
+                    EncryptionStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                VersionTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
