@@ -35,15 +35,80 @@ namespace Google.Cloud.Dataproc.V1.Tests
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Policy = new AutoscalingPolicy(),
+                Policy = new AutoscalingPolicy
+                {
+                    Id = "id74b70bb8",
+                    AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
+                    BasicAlgorithm = new BasicAutoscalingAlgorithm
+                    {
+                        YarnConfig = new BasicYarnAutoscalingConfig
+                        {
+                            ScaleUpFactor = -1.137315504829105E+18,
+                            ScaleDownFactor = 4.542767918078675E+17,
+                            ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                            ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                            GracefulDecommissionTimeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        CooldownPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                    SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                },
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -59,15 +124,80 @@ namespace Google.Cloud.Dataproc.V1.Tests
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Policy = new AutoscalingPolicy(),
+                Policy = new AutoscalingPolicy
+                {
+                    Id = "id74b70bb8",
+                    AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
+                    BasicAlgorithm = new BasicAutoscalingAlgorithm
+                    {
+                        YarnConfig = new BasicYarnAutoscalingConfig
+                        {
+                            ScaleUpFactor = -1.137315504829105E+18,
+                            ScaleDownFactor = 4.542767918078675E+17,
+                            ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                            ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                            GracefulDecommissionTimeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        CooldownPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                    SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                },
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -85,15 +215,80 @@ namespace Google.Cloud.Dataproc.V1.Tests
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Policy = new AutoscalingPolicy(),
+                Policy = new AutoscalingPolicy
+                {
+                    Id = "id74b70bb8",
+                    AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
+                    BasicAlgorithm = new BasicAutoscalingAlgorithm
+                    {
+                        YarnConfig = new BasicYarnAutoscalingConfig
+                        {
+                            ScaleUpFactor = -1.137315504829105E+18,
+                            ScaleDownFactor = 4.542767918078675E+17,
+                            ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                            ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                            GracefulDecommissionTimeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        CooldownPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                    SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                },
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -109,15 +304,80 @@ namespace Google.Cloud.Dataproc.V1.Tests
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Policy = new AutoscalingPolicy(),
+                Policy = new AutoscalingPolicy
+                {
+                    Id = "id74b70bb8",
+                    AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
+                    BasicAlgorithm = new BasicAutoscalingAlgorithm
+                    {
+                        YarnConfig = new BasicYarnAutoscalingConfig
+                        {
+                            ScaleUpFactor = -1.137315504829105E+18,
+                            ScaleDownFactor = 4.542767918078675E+17,
+                            ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                            ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                            GracefulDecommissionTimeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        CooldownPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                    SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                },
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -135,15 +395,80 @@ namespace Google.Cloud.Dataproc.V1.Tests
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Policy = new AutoscalingPolicy(),
+                Policy = new AutoscalingPolicy
+                {
+                    Id = "id74b70bb8",
+                    AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
+                    BasicAlgorithm = new BasicAutoscalingAlgorithm
+                    {
+                        YarnConfig = new BasicYarnAutoscalingConfig
+                        {
+                            ScaleUpFactor = -1.137315504829105E+18,
+                            ScaleDownFactor = 4.542767918078675E+17,
+                            ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                            ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                            GracefulDecommissionTimeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        CooldownPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                    SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                },
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -159,15 +484,80 @@ namespace Google.Cloud.Dataproc.V1.Tests
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Policy = new AutoscalingPolicy(),
+                Policy = new AutoscalingPolicy
+                {
+                    Id = "id74b70bb8",
+                    AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
+                    BasicAlgorithm = new BasicAutoscalingAlgorithm
+                    {
+                        YarnConfig = new BasicYarnAutoscalingConfig
+                        {
+                            ScaleUpFactor = -1.137315504829105E+18,
+                            ScaleDownFactor = 4.542767918078675E+17,
+                            ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                            ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                            GracefulDecommissionTimeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        CooldownPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                    SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                },
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -185,15 +575,80 @@ namespace Google.Cloud.Dataproc.V1.Tests
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Policy = new AutoscalingPolicy(),
+                Policy = new AutoscalingPolicy
+                {
+                    Id = "id74b70bb8",
+                    AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
+                    BasicAlgorithm = new BasicAutoscalingAlgorithm
+                    {
+                        YarnConfig = new BasicYarnAutoscalingConfig
+                        {
+                            ScaleUpFactor = -1.137315504829105E+18,
+                            ScaleDownFactor = 4.542767918078675E+17,
+                            ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                            ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                            GracefulDecommissionTimeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        CooldownPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                    SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                },
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -209,15 +664,80 @@ namespace Google.Cloud.Dataproc.V1.Tests
             CreateAutoscalingPolicyRequest request = new CreateAutoscalingPolicyRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Policy = new AutoscalingPolicy(),
+                Policy = new AutoscalingPolicy
+                {
+                    Id = "id74b70bb8",
+                    AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
+                    BasicAlgorithm = new BasicAutoscalingAlgorithm
+                    {
+                        YarnConfig = new BasicYarnAutoscalingConfig
+                        {
+                            ScaleUpFactor = -1.137315504829105E+18,
+                            ScaleDownFactor = 4.542767918078675E+17,
+                            ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                            ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                            GracefulDecommissionTimeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        CooldownPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                    SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                },
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -234,15 +754,80 @@ namespace Google.Cloud.Dataproc.V1.Tests
             moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient> mockGrpcClient = new moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient>(moq::MockBehavior.Strict);
             UpdateAutoscalingPolicyRequest request = new UpdateAutoscalingPolicyRequest
             {
-                Policy = new AutoscalingPolicy(),
+                Policy = new AutoscalingPolicy
+                {
+                    Id = "id74b70bb8",
+                    AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
+                    BasicAlgorithm = new BasicAutoscalingAlgorithm
+                    {
+                        YarnConfig = new BasicYarnAutoscalingConfig
+                        {
+                            ScaleUpFactor = -1.137315504829105E+18,
+                            ScaleDownFactor = 4.542767918078675E+17,
+                            ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                            ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                            GracefulDecommissionTimeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        CooldownPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                    SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                },
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -257,15 +842,80 @@ namespace Google.Cloud.Dataproc.V1.Tests
             moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient> mockGrpcClient = new moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient>(moq::MockBehavior.Strict);
             UpdateAutoscalingPolicyRequest request = new UpdateAutoscalingPolicyRequest
             {
-                Policy = new AutoscalingPolicy(),
+                Policy = new AutoscalingPolicy
+                {
+                    Id = "id74b70bb8",
+                    AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
+                    BasicAlgorithm = new BasicAutoscalingAlgorithm
+                    {
+                        YarnConfig = new BasicYarnAutoscalingConfig
+                        {
+                            ScaleUpFactor = -1.137315504829105E+18,
+                            ScaleDownFactor = 4.542767918078675E+17,
+                            ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                            ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                            GracefulDecommissionTimeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        CooldownPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                    SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                },
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -282,15 +932,80 @@ namespace Google.Cloud.Dataproc.V1.Tests
             moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient> mockGrpcClient = new moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient>(moq::MockBehavior.Strict);
             UpdateAutoscalingPolicyRequest request = new UpdateAutoscalingPolicyRequest
             {
-                Policy = new AutoscalingPolicy(),
+                Policy = new AutoscalingPolicy
+                {
+                    Id = "id74b70bb8",
+                    AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
+                    BasicAlgorithm = new BasicAutoscalingAlgorithm
+                    {
+                        YarnConfig = new BasicYarnAutoscalingConfig
+                        {
+                            ScaleUpFactor = -1.137315504829105E+18,
+                            ScaleDownFactor = 4.542767918078675E+17,
+                            ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                            ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                            GracefulDecommissionTimeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        CooldownPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                    SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                },
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -305,15 +1020,80 @@ namespace Google.Cloud.Dataproc.V1.Tests
             moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient> mockGrpcClient = new moq::Mock<AutoscalingPolicyService.AutoscalingPolicyServiceClient>(moq::MockBehavior.Strict);
             UpdateAutoscalingPolicyRequest request = new UpdateAutoscalingPolicyRequest
             {
-                Policy = new AutoscalingPolicy(),
+                Policy = new AutoscalingPolicy
+                {
+                    Id = "id74b70bb8",
+                    AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
+                    BasicAlgorithm = new BasicAutoscalingAlgorithm
+                    {
+                        YarnConfig = new BasicYarnAutoscalingConfig
+                        {
+                            ScaleUpFactor = -1.137315504829105E+18,
+                            ScaleDownFactor = 4.542767918078675E+17,
+                            ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                            ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                            GracefulDecommissionTimeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        CooldownPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                    SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                    {
+                        MinInstances = 445814344,
+                        MaxInstances = -1449803711,
+                        Weight = -1715479938,
+                    },
+                },
             };
             AutoscalingPolicy expectedResponse = new AutoscalingPolicy
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -336,9 +1116,38 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -359,9 +1168,38 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -384,9 +1222,38 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -407,9 +1274,38 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -432,9 +1328,38 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -455,9 +1380,38 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 Id = "id74b70bb8",
                 AutoscalingPolicyName = AutoscalingPolicyName.FromProjectLocationAutoscalingPolicy("[PROJECT]", "[LOCATION]", "[AUTOSCALING_POLICY]"),
-                BasicAlgorithm = new BasicAutoscalingAlgorithm(),
-                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
-                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                BasicAlgorithm = new BasicAutoscalingAlgorithm
+                {
+                    YarnConfig = new BasicYarnAutoscalingConfig
+                    {
+                        ScaleUpFactor = -1.137315504829105E+18,
+                        ScaleDownFactor = 4.542767918078675E+17,
+                        ScaleUpMinWorkerFraction = 9.130604621350574E+17,
+                        ScaleDownMinWorkerFraction = 7.269168306164337E+17,
+                        GracefulDecommissionTimeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    CooldownPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                WorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
+                SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig
+                {
+                    MinInstances = 445814344,
+                    MaxInstances = -1449803711,
+                    Weight = -1715479938,
+                },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);

@@ -36,26 +36,596 @@ namespace Google.Cloud.Dataproc.V1.Tests
             SubmitJobRequest request = new SubmitJobRequest
             {
                 ProjectId = "project_id43ad98b0",
-                Job = new Job(),
+                Job = new Job
+                {
+                    Reference = new JobReference
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        JobId = "job_id38ea97d6",
+                    },
+                    Placement = new JobPlacement
+                    {
+                        ClusterName = "cluster_name88432a5e",
+                        ClusterUuid = "cluster_uuid256bc378",
+                    },
+                    HadoopJob = new HadoopJob
+                    {
+                        MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                        MainClass = "main_classb0f4e864",
+                        Args = { "args09af56a9", },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    SparkJob = new SparkJob
+                    {
+                        MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                        MainClass = "main_classb0f4e864",
+                        Args = { "args09af56a9", },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    PysparkJob = new PySparkJob
+                    {
+                        MainPythonFileUri = "main_python_file_uri14aabff5",
+                        Args = { "args09af56a9", },
+                        PythonFileUris =
+                        {
+                            "python_file_uris30483b38",
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    HiveJob = new HiveJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                    },
+                    PigJob = new PigJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    Status = new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                    YarnApplications =
+                    {
+                        new YarnApplication
+                        {
+                            Name = "name1c9368b0",
+                            State = YarnApplication.Types.State.Submitted,
+                            Progress = -8.3331265E+17F,
+                            TrackingUrl = "tracking_url0600c504",
+                        },
+                    },
+                    SparkSqlJob = new SparkSqlJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                    },
+                    StatusHistory =
+                    {
+                        new JobStatus
+                        {
+                            State = JobStatus.Types.State.Error,
+                            Details = "details47297927",
+                            StateStartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Substate = JobStatus.Types.Substate.Submitted,
+                        },
+                    },
+                    DriverControlFilesUri = "driver_control_files_uribe41e88b",
+                    DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Scheduling = new JobScheduling
+                    {
+                        MaxFailuresPerHour = 238137428,
+                    },
+                    SparkRJob = new SparkRJob
+                    {
+                        MainRFileUri = "main_r_file_uri3c1a03d8",
+                        Args = { "args09af56a9", },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    JobUuid = "job_uuid7530ffdd",
+                    PrestoJob = new PrestoJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        OutputFormat = "output_format020eca50",
+                        ClientTags =
+                        {
+                            "client_tags74c9d57e",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    Done = true,
+                },
                 Region = "regionedb20d96",
                 RequestId = "request_id362c8df6",
             };
             Job expectedResponse = new Job
             {
-                Reference = new JobReference(),
-                Placement = new JobPlacement(),
-                HadoopJob = new HadoopJob(),
-                SparkJob = new SparkJob(),
-                PysparkJob = new PySparkJob(),
-                HiveJob = new HiveJob(),
-                PigJob = new PigJob(),
-                Status = new JobStatus(),
+                Reference = new JobReference
+                {
+                    ProjectId = "project_id43ad98b0",
+                    JobId = "job_id38ea97d6",
+                },
+                Placement = new JobPlacement
+                {
+                    ClusterName = "cluster_name88432a5e",
+                    ClusterUuid = "cluster_uuid256bc378",
+                },
+                HadoopJob = new HadoopJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                SparkJob = new SparkJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                PysparkJob = new PySparkJob
+                {
+                    MainPythonFileUri = "main_python_file_uri14aabff5",
+                    Args = { "args09af56a9", },
+                    PythonFileUris =
+                    {
+                        "python_file_uris30483b38",
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                HiveJob = new HiveJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                PigJob = new PigJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                Status = new JobStatus
+                {
+                    State = JobStatus.Types.State.Error,
+                    Details = "details47297927",
+                    StateStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Substate = JobStatus.Types.Substate.Submitted,
+                },
                 YarnApplications =
                 {
-                    new YarnApplication(),
+                    new YarnApplication
+                    {
+                        Name = "name1c9368b0",
+                        State = YarnApplication.Types.State.Submitted,
+                        Progress = -8.3331265E+17F,
+                        TrackingUrl = "tracking_url0600c504",
+                    },
                 },
-                SparkSqlJob = new SparkSqlJob(),
-                StatusHistory = { new JobStatus(), },
+                SparkSqlJob = new SparkSqlJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                StatusHistory =
+                {
+                    new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                },
                 DriverControlFilesUri = "driver_control_files_uribe41e88b",
                 DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
                 Labels =
@@ -65,10 +635,72 @@ namespace Google.Cloud.Dataproc.V1.Tests
                         "value60c16320"
                     },
                 },
-                Scheduling = new JobScheduling(),
-                SparkRJob = new SparkRJob(),
+                Scheduling = new JobScheduling
+                {
+                    MaxFailuresPerHour = 238137428,
+                },
+                SparkRJob = new SparkRJob
+                {
+                    MainRFileUri = "main_r_file_uri3c1a03d8",
+                    Args = { "args09af56a9", },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 JobUuid = "job_uuid7530ffdd",
-                PrestoJob = new PrestoJob(),
+                PrestoJob = new PrestoJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    OutputFormat = "output_format020eca50",
+                    ClientTags =
+                    {
+                        "client_tags74c9d57e",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 Done = true,
             };
             mockGrpcClient.Setup(x => x.SubmitJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -86,26 +718,596 @@ namespace Google.Cloud.Dataproc.V1.Tests
             SubmitJobRequest request = new SubmitJobRequest
             {
                 ProjectId = "project_id43ad98b0",
-                Job = new Job(),
+                Job = new Job
+                {
+                    Reference = new JobReference
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        JobId = "job_id38ea97d6",
+                    },
+                    Placement = new JobPlacement
+                    {
+                        ClusterName = "cluster_name88432a5e",
+                        ClusterUuid = "cluster_uuid256bc378",
+                    },
+                    HadoopJob = new HadoopJob
+                    {
+                        MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                        MainClass = "main_classb0f4e864",
+                        Args = { "args09af56a9", },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    SparkJob = new SparkJob
+                    {
+                        MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                        MainClass = "main_classb0f4e864",
+                        Args = { "args09af56a9", },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    PysparkJob = new PySparkJob
+                    {
+                        MainPythonFileUri = "main_python_file_uri14aabff5",
+                        Args = { "args09af56a9", },
+                        PythonFileUris =
+                        {
+                            "python_file_uris30483b38",
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    HiveJob = new HiveJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                    },
+                    PigJob = new PigJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    Status = new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                    YarnApplications =
+                    {
+                        new YarnApplication
+                        {
+                            Name = "name1c9368b0",
+                            State = YarnApplication.Types.State.Submitted,
+                            Progress = -8.3331265E+17F,
+                            TrackingUrl = "tracking_url0600c504",
+                        },
+                    },
+                    SparkSqlJob = new SparkSqlJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                    },
+                    StatusHistory =
+                    {
+                        new JobStatus
+                        {
+                            State = JobStatus.Types.State.Error,
+                            Details = "details47297927",
+                            StateStartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Substate = JobStatus.Types.Substate.Submitted,
+                        },
+                    },
+                    DriverControlFilesUri = "driver_control_files_uribe41e88b",
+                    DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Scheduling = new JobScheduling
+                    {
+                        MaxFailuresPerHour = 238137428,
+                    },
+                    SparkRJob = new SparkRJob
+                    {
+                        MainRFileUri = "main_r_file_uri3c1a03d8",
+                        Args = { "args09af56a9", },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    JobUuid = "job_uuid7530ffdd",
+                    PrestoJob = new PrestoJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        OutputFormat = "output_format020eca50",
+                        ClientTags =
+                        {
+                            "client_tags74c9d57e",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    Done = true,
+                },
                 Region = "regionedb20d96",
                 RequestId = "request_id362c8df6",
             };
             Job expectedResponse = new Job
             {
-                Reference = new JobReference(),
-                Placement = new JobPlacement(),
-                HadoopJob = new HadoopJob(),
-                SparkJob = new SparkJob(),
-                PysparkJob = new PySparkJob(),
-                HiveJob = new HiveJob(),
-                PigJob = new PigJob(),
-                Status = new JobStatus(),
+                Reference = new JobReference
+                {
+                    ProjectId = "project_id43ad98b0",
+                    JobId = "job_id38ea97d6",
+                },
+                Placement = new JobPlacement
+                {
+                    ClusterName = "cluster_name88432a5e",
+                    ClusterUuid = "cluster_uuid256bc378",
+                },
+                HadoopJob = new HadoopJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                SparkJob = new SparkJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                PysparkJob = new PySparkJob
+                {
+                    MainPythonFileUri = "main_python_file_uri14aabff5",
+                    Args = { "args09af56a9", },
+                    PythonFileUris =
+                    {
+                        "python_file_uris30483b38",
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                HiveJob = new HiveJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                PigJob = new PigJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                Status = new JobStatus
+                {
+                    State = JobStatus.Types.State.Error,
+                    Details = "details47297927",
+                    StateStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Substate = JobStatus.Types.Substate.Submitted,
+                },
                 YarnApplications =
                 {
-                    new YarnApplication(),
+                    new YarnApplication
+                    {
+                        Name = "name1c9368b0",
+                        State = YarnApplication.Types.State.Submitted,
+                        Progress = -8.3331265E+17F,
+                        TrackingUrl = "tracking_url0600c504",
+                    },
                 },
-                SparkSqlJob = new SparkSqlJob(),
-                StatusHistory = { new JobStatus(), },
+                SparkSqlJob = new SparkSqlJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                StatusHistory =
+                {
+                    new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                },
                 DriverControlFilesUri = "driver_control_files_uribe41e88b",
                 DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
                 Labels =
@@ -115,10 +1317,72 @@ namespace Google.Cloud.Dataproc.V1.Tests
                         "value60c16320"
                     },
                 },
-                Scheduling = new JobScheduling(),
-                SparkRJob = new SparkRJob(),
+                Scheduling = new JobScheduling
+                {
+                    MaxFailuresPerHour = 238137428,
+                },
+                SparkRJob = new SparkRJob
+                {
+                    MainRFileUri = "main_r_file_uri3c1a03d8",
+                    Args = { "args09af56a9", },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 JobUuid = "job_uuid7530ffdd",
-                PrestoJob = new PrestoJob(),
+                PrestoJob = new PrestoJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    OutputFormat = "output_format020eca50",
+                    ClientTags =
+                    {
+                        "client_tags74c9d57e",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 Done = true,
             };
             mockGrpcClient.Setup(x => x.SubmitJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -138,25 +1402,595 @@ namespace Google.Cloud.Dataproc.V1.Tests
             SubmitJobRequest request = new SubmitJobRequest
             {
                 ProjectId = "project_id43ad98b0",
-                Job = new Job(),
+                Job = new Job
+                {
+                    Reference = new JobReference
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        JobId = "job_id38ea97d6",
+                    },
+                    Placement = new JobPlacement
+                    {
+                        ClusterName = "cluster_name88432a5e",
+                        ClusterUuid = "cluster_uuid256bc378",
+                    },
+                    HadoopJob = new HadoopJob
+                    {
+                        MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                        MainClass = "main_classb0f4e864",
+                        Args = { "args09af56a9", },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    SparkJob = new SparkJob
+                    {
+                        MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                        MainClass = "main_classb0f4e864",
+                        Args = { "args09af56a9", },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    PysparkJob = new PySparkJob
+                    {
+                        MainPythonFileUri = "main_python_file_uri14aabff5",
+                        Args = { "args09af56a9", },
+                        PythonFileUris =
+                        {
+                            "python_file_uris30483b38",
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    HiveJob = new HiveJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                    },
+                    PigJob = new PigJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    Status = new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                    YarnApplications =
+                    {
+                        new YarnApplication
+                        {
+                            Name = "name1c9368b0",
+                            State = YarnApplication.Types.State.Submitted,
+                            Progress = -8.3331265E+17F,
+                            TrackingUrl = "tracking_url0600c504",
+                        },
+                    },
+                    SparkSqlJob = new SparkSqlJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                    },
+                    StatusHistory =
+                    {
+                        new JobStatus
+                        {
+                            State = JobStatus.Types.State.Error,
+                            Details = "details47297927",
+                            StateStartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Substate = JobStatus.Types.Substate.Submitted,
+                        },
+                    },
+                    DriverControlFilesUri = "driver_control_files_uribe41e88b",
+                    DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Scheduling = new JobScheduling
+                    {
+                        MaxFailuresPerHour = 238137428,
+                    },
+                    SparkRJob = new SparkRJob
+                    {
+                        MainRFileUri = "main_r_file_uri3c1a03d8",
+                        Args = { "args09af56a9", },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    JobUuid = "job_uuid7530ffdd",
+                    PrestoJob = new PrestoJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        OutputFormat = "output_format020eca50",
+                        ClientTags =
+                        {
+                            "client_tags74c9d57e",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    Done = true,
+                },
                 Region = "regionedb20d96",
             };
             Job expectedResponse = new Job
             {
-                Reference = new JobReference(),
-                Placement = new JobPlacement(),
-                HadoopJob = new HadoopJob(),
-                SparkJob = new SparkJob(),
-                PysparkJob = new PySparkJob(),
-                HiveJob = new HiveJob(),
-                PigJob = new PigJob(),
-                Status = new JobStatus(),
+                Reference = new JobReference
+                {
+                    ProjectId = "project_id43ad98b0",
+                    JobId = "job_id38ea97d6",
+                },
+                Placement = new JobPlacement
+                {
+                    ClusterName = "cluster_name88432a5e",
+                    ClusterUuid = "cluster_uuid256bc378",
+                },
+                HadoopJob = new HadoopJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                SparkJob = new SparkJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                PysparkJob = new PySparkJob
+                {
+                    MainPythonFileUri = "main_python_file_uri14aabff5",
+                    Args = { "args09af56a9", },
+                    PythonFileUris =
+                    {
+                        "python_file_uris30483b38",
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                HiveJob = new HiveJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                PigJob = new PigJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                Status = new JobStatus
+                {
+                    State = JobStatus.Types.State.Error,
+                    Details = "details47297927",
+                    StateStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Substate = JobStatus.Types.Substate.Submitted,
+                },
                 YarnApplications =
                 {
-                    new YarnApplication(),
+                    new YarnApplication
+                    {
+                        Name = "name1c9368b0",
+                        State = YarnApplication.Types.State.Submitted,
+                        Progress = -8.3331265E+17F,
+                        TrackingUrl = "tracking_url0600c504",
+                    },
                 },
-                SparkSqlJob = new SparkSqlJob(),
-                StatusHistory = { new JobStatus(), },
+                SparkSqlJob = new SparkSqlJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                StatusHistory =
+                {
+                    new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                },
                 DriverControlFilesUri = "driver_control_files_uribe41e88b",
                 DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
                 Labels =
@@ -166,10 +2000,72 @@ namespace Google.Cloud.Dataproc.V1.Tests
                         "value60c16320"
                     },
                 },
-                Scheduling = new JobScheduling(),
-                SparkRJob = new SparkRJob(),
+                Scheduling = new JobScheduling
+                {
+                    MaxFailuresPerHour = 238137428,
+                },
+                SparkRJob = new SparkRJob
+                {
+                    MainRFileUri = "main_r_file_uri3c1a03d8",
+                    Args = { "args09af56a9", },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 JobUuid = "job_uuid7530ffdd",
-                PrestoJob = new PrestoJob(),
+                PrestoJob = new PrestoJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    OutputFormat = "output_format020eca50",
+                    ClientTags =
+                    {
+                        "client_tags74c9d57e",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 Done = true,
             };
             mockGrpcClient.Setup(x => x.SubmitJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -187,25 +2083,595 @@ namespace Google.Cloud.Dataproc.V1.Tests
             SubmitJobRequest request = new SubmitJobRequest
             {
                 ProjectId = "project_id43ad98b0",
-                Job = new Job(),
+                Job = new Job
+                {
+                    Reference = new JobReference
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        JobId = "job_id38ea97d6",
+                    },
+                    Placement = new JobPlacement
+                    {
+                        ClusterName = "cluster_name88432a5e",
+                        ClusterUuid = "cluster_uuid256bc378",
+                    },
+                    HadoopJob = new HadoopJob
+                    {
+                        MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                        MainClass = "main_classb0f4e864",
+                        Args = { "args09af56a9", },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    SparkJob = new SparkJob
+                    {
+                        MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                        MainClass = "main_classb0f4e864",
+                        Args = { "args09af56a9", },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    PysparkJob = new PySparkJob
+                    {
+                        MainPythonFileUri = "main_python_file_uri14aabff5",
+                        Args = { "args09af56a9", },
+                        PythonFileUris =
+                        {
+                            "python_file_uris30483b38",
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    HiveJob = new HiveJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                    },
+                    PigJob = new PigJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    Status = new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                    YarnApplications =
+                    {
+                        new YarnApplication
+                        {
+                            Name = "name1c9368b0",
+                            State = YarnApplication.Types.State.Submitted,
+                            Progress = -8.3331265E+17F,
+                            TrackingUrl = "tracking_url0600c504",
+                        },
+                    },
+                    SparkSqlJob = new SparkSqlJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                    },
+                    StatusHistory =
+                    {
+                        new JobStatus
+                        {
+                            State = JobStatus.Types.State.Error,
+                            Details = "details47297927",
+                            StateStartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Substate = JobStatus.Types.Substate.Submitted,
+                        },
+                    },
+                    DriverControlFilesUri = "driver_control_files_uribe41e88b",
+                    DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Scheduling = new JobScheduling
+                    {
+                        MaxFailuresPerHour = 238137428,
+                    },
+                    SparkRJob = new SparkRJob
+                    {
+                        MainRFileUri = "main_r_file_uri3c1a03d8",
+                        Args = { "args09af56a9", },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    JobUuid = "job_uuid7530ffdd",
+                    PrestoJob = new PrestoJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        OutputFormat = "output_format020eca50",
+                        ClientTags =
+                        {
+                            "client_tags74c9d57e",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    Done = true,
+                },
                 Region = "regionedb20d96",
             };
             Job expectedResponse = new Job
             {
-                Reference = new JobReference(),
-                Placement = new JobPlacement(),
-                HadoopJob = new HadoopJob(),
-                SparkJob = new SparkJob(),
-                PysparkJob = new PySparkJob(),
-                HiveJob = new HiveJob(),
-                PigJob = new PigJob(),
-                Status = new JobStatus(),
+                Reference = new JobReference
+                {
+                    ProjectId = "project_id43ad98b0",
+                    JobId = "job_id38ea97d6",
+                },
+                Placement = new JobPlacement
+                {
+                    ClusterName = "cluster_name88432a5e",
+                    ClusterUuid = "cluster_uuid256bc378",
+                },
+                HadoopJob = new HadoopJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                SparkJob = new SparkJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                PysparkJob = new PySparkJob
+                {
+                    MainPythonFileUri = "main_python_file_uri14aabff5",
+                    Args = { "args09af56a9", },
+                    PythonFileUris =
+                    {
+                        "python_file_uris30483b38",
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                HiveJob = new HiveJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                PigJob = new PigJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                Status = new JobStatus
+                {
+                    State = JobStatus.Types.State.Error,
+                    Details = "details47297927",
+                    StateStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Substate = JobStatus.Types.Substate.Submitted,
+                },
                 YarnApplications =
                 {
-                    new YarnApplication(),
+                    new YarnApplication
+                    {
+                        Name = "name1c9368b0",
+                        State = YarnApplication.Types.State.Submitted,
+                        Progress = -8.3331265E+17F,
+                        TrackingUrl = "tracking_url0600c504",
+                    },
                 },
-                SparkSqlJob = new SparkSqlJob(),
-                StatusHistory = { new JobStatus(), },
+                SparkSqlJob = new SparkSqlJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                StatusHistory =
+                {
+                    new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                },
                 DriverControlFilesUri = "driver_control_files_uribe41e88b",
                 DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
                 Labels =
@@ -215,10 +2681,72 @@ namespace Google.Cloud.Dataproc.V1.Tests
                         "value60c16320"
                     },
                 },
-                Scheduling = new JobScheduling(),
-                SparkRJob = new SparkRJob(),
+                Scheduling = new JobScheduling
+                {
+                    MaxFailuresPerHour = 238137428,
+                },
+                SparkRJob = new SparkRJob
+                {
+                    MainRFileUri = "main_r_file_uri3c1a03d8",
+                    Args = { "args09af56a9", },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 JobUuid = "job_uuid7530ffdd",
-                PrestoJob = new PrestoJob(),
+                PrestoJob = new PrestoJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    OutputFormat = "output_format020eca50",
+                    ClientTags =
+                    {
+                        "client_tags74c9d57e",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 Done = true,
             };
             mockGrpcClient.Setup(x => x.SubmitJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -243,20 +2771,259 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             Job expectedResponse = new Job
             {
-                Reference = new JobReference(),
-                Placement = new JobPlacement(),
-                HadoopJob = new HadoopJob(),
-                SparkJob = new SparkJob(),
-                PysparkJob = new PySparkJob(),
-                HiveJob = new HiveJob(),
-                PigJob = new PigJob(),
-                Status = new JobStatus(),
+                Reference = new JobReference
+                {
+                    ProjectId = "project_id43ad98b0",
+                    JobId = "job_id38ea97d6",
+                },
+                Placement = new JobPlacement
+                {
+                    ClusterName = "cluster_name88432a5e",
+                    ClusterUuid = "cluster_uuid256bc378",
+                },
+                HadoopJob = new HadoopJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                SparkJob = new SparkJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                PysparkJob = new PySparkJob
+                {
+                    MainPythonFileUri = "main_python_file_uri14aabff5",
+                    Args = { "args09af56a9", },
+                    PythonFileUris =
+                    {
+                        "python_file_uris30483b38",
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                HiveJob = new HiveJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                PigJob = new PigJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                Status = new JobStatus
+                {
+                    State = JobStatus.Types.State.Error,
+                    Details = "details47297927",
+                    StateStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Substate = JobStatus.Types.Substate.Submitted,
+                },
                 YarnApplications =
                 {
-                    new YarnApplication(),
+                    new YarnApplication
+                    {
+                        Name = "name1c9368b0",
+                        State = YarnApplication.Types.State.Submitted,
+                        Progress = -8.3331265E+17F,
+                        TrackingUrl = "tracking_url0600c504",
+                    },
                 },
-                SparkSqlJob = new SparkSqlJob(),
-                StatusHistory = { new JobStatus(), },
+                SparkSqlJob = new SparkSqlJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                StatusHistory =
+                {
+                    new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                },
                 DriverControlFilesUri = "driver_control_files_uribe41e88b",
                 DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
                 Labels =
@@ -266,10 +3033,72 @@ namespace Google.Cloud.Dataproc.V1.Tests
                         "value60c16320"
                     },
                 },
-                Scheduling = new JobScheduling(),
-                SparkRJob = new SparkRJob(),
+                Scheduling = new JobScheduling
+                {
+                    MaxFailuresPerHour = 238137428,
+                },
+                SparkRJob = new SparkRJob
+                {
+                    MainRFileUri = "main_r_file_uri3c1a03d8",
+                    Args = { "args09af56a9", },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 JobUuid = "job_uuid7530ffdd",
-                PrestoJob = new PrestoJob(),
+                PrestoJob = new PrestoJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    OutputFormat = "output_format020eca50",
+                    ClientTags =
+                    {
+                        "client_tags74c9d57e",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 Done = true,
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -292,20 +3121,259 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             Job expectedResponse = new Job
             {
-                Reference = new JobReference(),
-                Placement = new JobPlacement(),
-                HadoopJob = new HadoopJob(),
-                SparkJob = new SparkJob(),
-                PysparkJob = new PySparkJob(),
-                HiveJob = new HiveJob(),
-                PigJob = new PigJob(),
-                Status = new JobStatus(),
+                Reference = new JobReference
+                {
+                    ProjectId = "project_id43ad98b0",
+                    JobId = "job_id38ea97d6",
+                },
+                Placement = new JobPlacement
+                {
+                    ClusterName = "cluster_name88432a5e",
+                    ClusterUuid = "cluster_uuid256bc378",
+                },
+                HadoopJob = new HadoopJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                SparkJob = new SparkJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                PysparkJob = new PySparkJob
+                {
+                    MainPythonFileUri = "main_python_file_uri14aabff5",
+                    Args = { "args09af56a9", },
+                    PythonFileUris =
+                    {
+                        "python_file_uris30483b38",
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                HiveJob = new HiveJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                PigJob = new PigJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                Status = new JobStatus
+                {
+                    State = JobStatus.Types.State.Error,
+                    Details = "details47297927",
+                    StateStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Substate = JobStatus.Types.Substate.Submitted,
+                },
                 YarnApplications =
                 {
-                    new YarnApplication(),
+                    new YarnApplication
+                    {
+                        Name = "name1c9368b0",
+                        State = YarnApplication.Types.State.Submitted,
+                        Progress = -8.3331265E+17F,
+                        TrackingUrl = "tracking_url0600c504",
+                    },
                 },
-                SparkSqlJob = new SparkSqlJob(),
-                StatusHistory = { new JobStatus(), },
+                SparkSqlJob = new SparkSqlJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                StatusHistory =
+                {
+                    new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                },
                 DriverControlFilesUri = "driver_control_files_uribe41e88b",
                 DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
                 Labels =
@@ -315,10 +3383,72 @@ namespace Google.Cloud.Dataproc.V1.Tests
                         "value60c16320"
                     },
                 },
-                Scheduling = new JobScheduling(),
-                SparkRJob = new SparkRJob(),
+                Scheduling = new JobScheduling
+                {
+                    MaxFailuresPerHour = 238137428,
+                },
+                SparkRJob = new SparkRJob
+                {
+                    MainRFileUri = "main_r_file_uri3c1a03d8",
+                    Args = { "args09af56a9", },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 JobUuid = "job_uuid7530ffdd",
-                PrestoJob = new PrestoJob(),
+                PrestoJob = new PrestoJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    OutputFormat = "output_format020eca50",
+                    ClientTags =
+                    {
+                        "client_tags74c9d57e",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 Done = true,
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -343,20 +3473,259 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             Job expectedResponse = new Job
             {
-                Reference = new JobReference(),
-                Placement = new JobPlacement(),
-                HadoopJob = new HadoopJob(),
-                SparkJob = new SparkJob(),
-                PysparkJob = new PySparkJob(),
-                HiveJob = new HiveJob(),
-                PigJob = new PigJob(),
-                Status = new JobStatus(),
+                Reference = new JobReference
+                {
+                    ProjectId = "project_id43ad98b0",
+                    JobId = "job_id38ea97d6",
+                },
+                Placement = new JobPlacement
+                {
+                    ClusterName = "cluster_name88432a5e",
+                    ClusterUuid = "cluster_uuid256bc378",
+                },
+                HadoopJob = new HadoopJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                SparkJob = new SparkJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                PysparkJob = new PySparkJob
+                {
+                    MainPythonFileUri = "main_python_file_uri14aabff5",
+                    Args = { "args09af56a9", },
+                    PythonFileUris =
+                    {
+                        "python_file_uris30483b38",
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                HiveJob = new HiveJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                PigJob = new PigJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                Status = new JobStatus
+                {
+                    State = JobStatus.Types.State.Error,
+                    Details = "details47297927",
+                    StateStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Substate = JobStatus.Types.Substate.Submitted,
+                },
                 YarnApplications =
                 {
-                    new YarnApplication(),
+                    new YarnApplication
+                    {
+                        Name = "name1c9368b0",
+                        State = YarnApplication.Types.State.Submitted,
+                        Progress = -8.3331265E+17F,
+                        TrackingUrl = "tracking_url0600c504",
+                    },
                 },
-                SparkSqlJob = new SparkSqlJob(),
-                StatusHistory = { new JobStatus(), },
+                SparkSqlJob = new SparkSqlJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                StatusHistory =
+                {
+                    new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                },
                 DriverControlFilesUri = "driver_control_files_uribe41e88b",
                 DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
                 Labels =
@@ -366,10 +3735,72 @@ namespace Google.Cloud.Dataproc.V1.Tests
                         "value60c16320"
                     },
                 },
-                Scheduling = new JobScheduling(),
-                SparkRJob = new SparkRJob(),
+                Scheduling = new JobScheduling
+                {
+                    MaxFailuresPerHour = 238137428,
+                },
+                SparkRJob = new SparkRJob
+                {
+                    MainRFileUri = "main_r_file_uri3c1a03d8",
+                    Args = { "args09af56a9", },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 JobUuid = "job_uuid7530ffdd",
-                PrestoJob = new PrestoJob(),
+                PrestoJob = new PrestoJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    OutputFormat = "output_format020eca50",
+                    ClientTags =
+                    {
+                        "client_tags74c9d57e",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 Done = true,
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -392,20 +3823,259 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             Job expectedResponse = new Job
             {
-                Reference = new JobReference(),
-                Placement = new JobPlacement(),
-                HadoopJob = new HadoopJob(),
-                SparkJob = new SparkJob(),
-                PysparkJob = new PySparkJob(),
-                HiveJob = new HiveJob(),
-                PigJob = new PigJob(),
-                Status = new JobStatus(),
+                Reference = new JobReference
+                {
+                    ProjectId = "project_id43ad98b0",
+                    JobId = "job_id38ea97d6",
+                },
+                Placement = new JobPlacement
+                {
+                    ClusterName = "cluster_name88432a5e",
+                    ClusterUuid = "cluster_uuid256bc378",
+                },
+                HadoopJob = new HadoopJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                SparkJob = new SparkJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                PysparkJob = new PySparkJob
+                {
+                    MainPythonFileUri = "main_python_file_uri14aabff5",
+                    Args = { "args09af56a9", },
+                    PythonFileUris =
+                    {
+                        "python_file_uris30483b38",
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                HiveJob = new HiveJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                PigJob = new PigJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                Status = new JobStatus
+                {
+                    State = JobStatus.Types.State.Error,
+                    Details = "details47297927",
+                    StateStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Substate = JobStatus.Types.Substate.Submitted,
+                },
                 YarnApplications =
                 {
-                    new YarnApplication(),
+                    new YarnApplication
+                    {
+                        Name = "name1c9368b0",
+                        State = YarnApplication.Types.State.Submitted,
+                        Progress = -8.3331265E+17F,
+                        TrackingUrl = "tracking_url0600c504",
+                    },
                 },
-                SparkSqlJob = new SparkSqlJob(),
-                StatusHistory = { new JobStatus(), },
+                SparkSqlJob = new SparkSqlJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                StatusHistory =
+                {
+                    new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                },
                 DriverControlFilesUri = "driver_control_files_uribe41e88b",
                 DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
                 Labels =
@@ -415,10 +4085,72 @@ namespace Google.Cloud.Dataproc.V1.Tests
                         "value60c16320"
                     },
                 },
-                Scheduling = new JobScheduling(),
-                SparkRJob = new SparkRJob(),
+                Scheduling = new JobScheduling
+                {
+                    MaxFailuresPerHour = 238137428,
+                },
+                SparkRJob = new SparkRJob
+                {
+                    MainRFileUri = "main_r_file_uri3c1a03d8",
+                    Args = { "args09af56a9", },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 JobUuid = "job_uuid7530ffdd",
-                PrestoJob = new PrestoJob(),
+                PrestoJob = new PrestoJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    OutputFormat = "output_format020eca50",
+                    ClientTags =
+                    {
+                        "client_tags74c9d57e",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 Done = true,
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -440,25 +4172,598 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 ProjectId = "project_id43ad98b0",
                 Region = "regionedb20d96",
                 JobId = "job_id38ea97d6",
-                Job = new Job(),
-                UpdateMask = new wkt::FieldMask(),
+                Job = new Job
+                {
+                    Reference = new JobReference
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        JobId = "job_id38ea97d6",
+                    },
+                    Placement = new JobPlacement
+                    {
+                        ClusterName = "cluster_name88432a5e",
+                        ClusterUuid = "cluster_uuid256bc378",
+                    },
+                    HadoopJob = new HadoopJob
+                    {
+                        MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                        MainClass = "main_classb0f4e864",
+                        Args = { "args09af56a9", },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    SparkJob = new SparkJob
+                    {
+                        MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                        MainClass = "main_classb0f4e864",
+                        Args = { "args09af56a9", },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    PysparkJob = new PySparkJob
+                    {
+                        MainPythonFileUri = "main_python_file_uri14aabff5",
+                        Args = { "args09af56a9", },
+                        PythonFileUris =
+                        {
+                            "python_file_uris30483b38",
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    HiveJob = new HiveJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                    },
+                    PigJob = new PigJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    Status = new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                    YarnApplications =
+                    {
+                        new YarnApplication
+                        {
+                            Name = "name1c9368b0",
+                            State = YarnApplication.Types.State.Submitted,
+                            Progress = -8.3331265E+17F,
+                            TrackingUrl = "tracking_url0600c504",
+                        },
+                    },
+                    SparkSqlJob = new SparkSqlJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                    },
+                    StatusHistory =
+                    {
+                        new JobStatus
+                        {
+                            State = JobStatus.Types.State.Error,
+                            Details = "details47297927",
+                            StateStartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Substate = JobStatus.Types.Substate.Submitted,
+                        },
+                    },
+                    DriverControlFilesUri = "driver_control_files_uribe41e88b",
+                    DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Scheduling = new JobScheduling
+                    {
+                        MaxFailuresPerHour = 238137428,
+                    },
+                    SparkRJob = new SparkRJob
+                    {
+                        MainRFileUri = "main_r_file_uri3c1a03d8",
+                        Args = { "args09af56a9", },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    JobUuid = "job_uuid7530ffdd",
+                    PrestoJob = new PrestoJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        OutputFormat = "output_format020eca50",
+                        ClientTags =
+                        {
+                            "client_tags74c9d57e",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    Done = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Job expectedResponse = new Job
             {
-                Reference = new JobReference(),
-                Placement = new JobPlacement(),
-                HadoopJob = new HadoopJob(),
-                SparkJob = new SparkJob(),
-                PysparkJob = new PySparkJob(),
-                HiveJob = new HiveJob(),
-                PigJob = new PigJob(),
-                Status = new JobStatus(),
+                Reference = new JobReference
+                {
+                    ProjectId = "project_id43ad98b0",
+                    JobId = "job_id38ea97d6",
+                },
+                Placement = new JobPlacement
+                {
+                    ClusterName = "cluster_name88432a5e",
+                    ClusterUuid = "cluster_uuid256bc378",
+                },
+                HadoopJob = new HadoopJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                SparkJob = new SparkJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                PysparkJob = new PySparkJob
+                {
+                    MainPythonFileUri = "main_python_file_uri14aabff5",
+                    Args = { "args09af56a9", },
+                    PythonFileUris =
+                    {
+                        "python_file_uris30483b38",
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                HiveJob = new HiveJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                PigJob = new PigJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                Status = new JobStatus
+                {
+                    State = JobStatus.Types.State.Error,
+                    Details = "details47297927",
+                    StateStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Substate = JobStatus.Types.Substate.Submitted,
+                },
                 YarnApplications =
                 {
-                    new YarnApplication(),
+                    new YarnApplication
+                    {
+                        Name = "name1c9368b0",
+                        State = YarnApplication.Types.State.Submitted,
+                        Progress = -8.3331265E+17F,
+                        TrackingUrl = "tracking_url0600c504",
+                    },
                 },
-                SparkSqlJob = new SparkSqlJob(),
-                StatusHistory = { new JobStatus(), },
+                SparkSqlJob = new SparkSqlJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                StatusHistory =
+                {
+                    new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                },
                 DriverControlFilesUri = "driver_control_files_uribe41e88b",
                 DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
                 Labels =
@@ -468,10 +4773,72 @@ namespace Google.Cloud.Dataproc.V1.Tests
                         "value60c16320"
                     },
                 },
-                Scheduling = new JobScheduling(),
-                SparkRJob = new SparkRJob(),
+                Scheduling = new JobScheduling
+                {
+                    MaxFailuresPerHour = 238137428,
+                },
+                SparkRJob = new SparkRJob
+                {
+                    MainRFileUri = "main_r_file_uri3c1a03d8",
+                    Args = { "args09af56a9", },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 JobUuid = "job_uuid7530ffdd",
-                PrestoJob = new PrestoJob(),
+                PrestoJob = new PrestoJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    OutputFormat = "output_format020eca50",
+                    ClientTags =
+                    {
+                        "client_tags74c9d57e",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 Done = true,
             };
             mockGrpcClient.Setup(x => x.UpdateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -491,25 +4858,598 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 ProjectId = "project_id43ad98b0",
                 Region = "regionedb20d96",
                 JobId = "job_id38ea97d6",
-                Job = new Job(),
-                UpdateMask = new wkt::FieldMask(),
+                Job = new Job
+                {
+                    Reference = new JobReference
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        JobId = "job_id38ea97d6",
+                    },
+                    Placement = new JobPlacement
+                    {
+                        ClusterName = "cluster_name88432a5e",
+                        ClusterUuid = "cluster_uuid256bc378",
+                    },
+                    HadoopJob = new HadoopJob
+                    {
+                        MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                        MainClass = "main_classb0f4e864",
+                        Args = { "args09af56a9", },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    SparkJob = new SparkJob
+                    {
+                        MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                        MainClass = "main_classb0f4e864",
+                        Args = { "args09af56a9", },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    PysparkJob = new PySparkJob
+                    {
+                        MainPythonFileUri = "main_python_file_uri14aabff5",
+                        Args = { "args09af56a9", },
+                        PythonFileUris =
+                        {
+                            "python_file_uris30483b38",
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    HiveJob = new HiveJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                    },
+                    PigJob = new PigJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    Status = new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                    YarnApplications =
+                    {
+                        new YarnApplication
+                        {
+                            Name = "name1c9368b0",
+                            State = YarnApplication.Types.State.Submitted,
+                            Progress = -8.3331265E+17F,
+                            TrackingUrl = "tracking_url0600c504",
+                        },
+                    },
+                    SparkSqlJob = new SparkSqlJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ScriptVariables =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                        JarFileUris =
+                        {
+                            "jar_file_urisfcd646b7",
+                        },
+                    },
+                    StatusHistory =
+                    {
+                        new JobStatus
+                        {
+                            State = JobStatus.Types.State.Error,
+                            Details = "details47297927",
+                            StateStartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Substate = JobStatus.Types.Substate.Submitted,
+                        },
+                    },
+                    DriverControlFilesUri = "driver_control_files_uribe41e88b",
+                    DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Scheduling = new JobScheduling
+                    {
+                        MaxFailuresPerHour = 238137428,
+                    },
+                    SparkRJob = new SparkRJob
+                    {
+                        MainRFileUri = "main_r_file_uri3c1a03d8",
+                        Args = { "args09af56a9", },
+                        FileUris =
+                        {
+                            "file_urisbcc83e18",
+                        },
+                        ArchiveUris =
+                        {
+                            "archive_uris5a747dda",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    JobUuid = "job_uuid7530ffdd",
+                    PrestoJob = new PrestoJob
+                    {
+                        QueryFileUri = "query_file_urid4d84faf",
+                        QueryList = new QueryList
+                        {
+                            Queries = { "queries42eba75d", },
+                        },
+                        ContinueOnFailure = false,
+                        OutputFormat = "output_format020eca50",
+                        ClientTags =
+                        {
+                            "client_tags74c9d57e",
+                        },
+                        Properties =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        LoggingConfig = new LoggingConfig
+                        {
+                            DriverLogLevels =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    LoggingConfig.Types.Level.Debug
+                                },
+                            },
+                        },
+                    },
+                    Done = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Job expectedResponse = new Job
             {
-                Reference = new JobReference(),
-                Placement = new JobPlacement(),
-                HadoopJob = new HadoopJob(),
-                SparkJob = new SparkJob(),
-                PysparkJob = new PySparkJob(),
-                HiveJob = new HiveJob(),
-                PigJob = new PigJob(),
-                Status = new JobStatus(),
+                Reference = new JobReference
+                {
+                    ProjectId = "project_id43ad98b0",
+                    JobId = "job_id38ea97d6",
+                },
+                Placement = new JobPlacement
+                {
+                    ClusterName = "cluster_name88432a5e",
+                    ClusterUuid = "cluster_uuid256bc378",
+                },
+                HadoopJob = new HadoopJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                SparkJob = new SparkJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                PysparkJob = new PySparkJob
+                {
+                    MainPythonFileUri = "main_python_file_uri14aabff5",
+                    Args = { "args09af56a9", },
+                    PythonFileUris =
+                    {
+                        "python_file_uris30483b38",
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                HiveJob = new HiveJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                PigJob = new PigJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                Status = new JobStatus
+                {
+                    State = JobStatus.Types.State.Error,
+                    Details = "details47297927",
+                    StateStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Substate = JobStatus.Types.Substate.Submitted,
+                },
                 YarnApplications =
                 {
-                    new YarnApplication(),
+                    new YarnApplication
+                    {
+                        Name = "name1c9368b0",
+                        State = YarnApplication.Types.State.Submitted,
+                        Progress = -8.3331265E+17F,
+                        TrackingUrl = "tracking_url0600c504",
+                    },
                 },
-                SparkSqlJob = new SparkSqlJob(),
-                StatusHistory = { new JobStatus(), },
+                SparkSqlJob = new SparkSqlJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                StatusHistory =
+                {
+                    new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                },
                 DriverControlFilesUri = "driver_control_files_uribe41e88b",
                 DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
                 Labels =
@@ -519,10 +5459,72 @@ namespace Google.Cloud.Dataproc.V1.Tests
                         "value60c16320"
                     },
                 },
-                Scheduling = new JobScheduling(),
-                SparkRJob = new SparkRJob(),
+                Scheduling = new JobScheduling
+                {
+                    MaxFailuresPerHour = 238137428,
+                },
+                SparkRJob = new SparkRJob
+                {
+                    MainRFileUri = "main_r_file_uri3c1a03d8",
+                    Args = { "args09af56a9", },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 JobUuid = "job_uuid7530ffdd",
-                PrestoJob = new PrestoJob(),
+                PrestoJob = new PrestoJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    OutputFormat = "output_format020eca50",
+                    ClientTags =
+                    {
+                        "client_tags74c9d57e",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 Done = true,
             };
             mockGrpcClient.Setup(x => x.UpdateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -547,20 +5549,259 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             Job expectedResponse = new Job
             {
-                Reference = new JobReference(),
-                Placement = new JobPlacement(),
-                HadoopJob = new HadoopJob(),
-                SparkJob = new SparkJob(),
-                PysparkJob = new PySparkJob(),
-                HiveJob = new HiveJob(),
-                PigJob = new PigJob(),
-                Status = new JobStatus(),
+                Reference = new JobReference
+                {
+                    ProjectId = "project_id43ad98b0",
+                    JobId = "job_id38ea97d6",
+                },
+                Placement = new JobPlacement
+                {
+                    ClusterName = "cluster_name88432a5e",
+                    ClusterUuid = "cluster_uuid256bc378",
+                },
+                HadoopJob = new HadoopJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                SparkJob = new SparkJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                PysparkJob = new PySparkJob
+                {
+                    MainPythonFileUri = "main_python_file_uri14aabff5",
+                    Args = { "args09af56a9", },
+                    PythonFileUris =
+                    {
+                        "python_file_uris30483b38",
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                HiveJob = new HiveJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                PigJob = new PigJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                Status = new JobStatus
+                {
+                    State = JobStatus.Types.State.Error,
+                    Details = "details47297927",
+                    StateStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Substate = JobStatus.Types.Substate.Submitted,
+                },
                 YarnApplications =
                 {
-                    new YarnApplication(),
+                    new YarnApplication
+                    {
+                        Name = "name1c9368b0",
+                        State = YarnApplication.Types.State.Submitted,
+                        Progress = -8.3331265E+17F,
+                        TrackingUrl = "tracking_url0600c504",
+                    },
                 },
-                SparkSqlJob = new SparkSqlJob(),
-                StatusHistory = { new JobStatus(), },
+                SparkSqlJob = new SparkSqlJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                StatusHistory =
+                {
+                    new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                },
                 DriverControlFilesUri = "driver_control_files_uribe41e88b",
                 DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
                 Labels =
@@ -570,10 +5811,72 @@ namespace Google.Cloud.Dataproc.V1.Tests
                         "value60c16320"
                     },
                 },
-                Scheduling = new JobScheduling(),
-                SparkRJob = new SparkRJob(),
+                Scheduling = new JobScheduling
+                {
+                    MaxFailuresPerHour = 238137428,
+                },
+                SparkRJob = new SparkRJob
+                {
+                    MainRFileUri = "main_r_file_uri3c1a03d8",
+                    Args = { "args09af56a9", },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 JobUuid = "job_uuid7530ffdd",
-                PrestoJob = new PrestoJob(),
+                PrestoJob = new PrestoJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    OutputFormat = "output_format020eca50",
+                    ClientTags =
+                    {
+                        "client_tags74c9d57e",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 Done = true,
             };
             mockGrpcClient.Setup(x => x.CancelJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -596,20 +5899,259 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             Job expectedResponse = new Job
             {
-                Reference = new JobReference(),
-                Placement = new JobPlacement(),
-                HadoopJob = new HadoopJob(),
-                SparkJob = new SparkJob(),
-                PysparkJob = new PySparkJob(),
-                HiveJob = new HiveJob(),
-                PigJob = new PigJob(),
-                Status = new JobStatus(),
+                Reference = new JobReference
+                {
+                    ProjectId = "project_id43ad98b0",
+                    JobId = "job_id38ea97d6",
+                },
+                Placement = new JobPlacement
+                {
+                    ClusterName = "cluster_name88432a5e",
+                    ClusterUuid = "cluster_uuid256bc378",
+                },
+                HadoopJob = new HadoopJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                SparkJob = new SparkJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                PysparkJob = new PySparkJob
+                {
+                    MainPythonFileUri = "main_python_file_uri14aabff5",
+                    Args = { "args09af56a9", },
+                    PythonFileUris =
+                    {
+                        "python_file_uris30483b38",
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                HiveJob = new HiveJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                PigJob = new PigJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                Status = new JobStatus
+                {
+                    State = JobStatus.Types.State.Error,
+                    Details = "details47297927",
+                    StateStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Substate = JobStatus.Types.Substate.Submitted,
+                },
                 YarnApplications =
                 {
-                    new YarnApplication(),
+                    new YarnApplication
+                    {
+                        Name = "name1c9368b0",
+                        State = YarnApplication.Types.State.Submitted,
+                        Progress = -8.3331265E+17F,
+                        TrackingUrl = "tracking_url0600c504",
+                    },
                 },
-                SparkSqlJob = new SparkSqlJob(),
-                StatusHistory = { new JobStatus(), },
+                SparkSqlJob = new SparkSqlJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                StatusHistory =
+                {
+                    new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                },
                 DriverControlFilesUri = "driver_control_files_uribe41e88b",
                 DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
                 Labels =
@@ -619,10 +6161,72 @@ namespace Google.Cloud.Dataproc.V1.Tests
                         "value60c16320"
                     },
                 },
-                Scheduling = new JobScheduling(),
-                SparkRJob = new SparkRJob(),
+                Scheduling = new JobScheduling
+                {
+                    MaxFailuresPerHour = 238137428,
+                },
+                SparkRJob = new SparkRJob
+                {
+                    MainRFileUri = "main_r_file_uri3c1a03d8",
+                    Args = { "args09af56a9", },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 JobUuid = "job_uuid7530ffdd",
-                PrestoJob = new PrestoJob(),
+                PrestoJob = new PrestoJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    OutputFormat = "output_format020eca50",
+                    ClientTags =
+                    {
+                        "client_tags74c9d57e",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 Done = true,
             };
             mockGrpcClient.Setup(x => x.CancelJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -647,20 +6251,259 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             Job expectedResponse = new Job
             {
-                Reference = new JobReference(),
-                Placement = new JobPlacement(),
-                HadoopJob = new HadoopJob(),
-                SparkJob = new SparkJob(),
-                PysparkJob = new PySparkJob(),
-                HiveJob = new HiveJob(),
-                PigJob = new PigJob(),
-                Status = new JobStatus(),
+                Reference = new JobReference
+                {
+                    ProjectId = "project_id43ad98b0",
+                    JobId = "job_id38ea97d6",
+                },
+                Placement = new JobPlacement
+                {
+                    ClusterName = "cluster_name88432a5e",
+                    ClusterUuid = "cluster_uuid256bc378",
+                },
+                HadoopJob = new HadoopJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                SparkJob = new SparkJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                PysparkJob = new PySparkJob
+                {
+                    MainPythonFileUri = "main_python_file_uri14aabff5",
+                    Args = { "args09af56a9", },
+                    PythonFileUris =
+                    {
+                        "python_file_uris30483b38",
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                HiveJob = new HiveJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                PigJob = new PigJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                Status = new JobStatus
+                {
+                    State = JobStatus.Types.State.Error,
+                    Details = "details47297927",
+                    StateStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Substate = JobStatus.Types.Substate.Submitted,
+                },
                 YarnApplications =
                 {
-                    new YarnApplication(),
+                    new YarnApplication
+                    {
+                        Name = "name1c9368b0",
+                        State = YarnApplication.Types.State.Submitted,
+                        Progress = -8.3331265E+17F,
+                        TrackingUrl = "tracking_url0600c504",
+                    },
                 },
-                SparkSqlJob = new SparkSqlJob(),
-                StatusHistory = { new JobStatus(), },
+                SparkSqlJob = new SparkSqlJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                StatusHistory =
+                {
+                    new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                },
                 DriverControlFilesUri = "driver_control_files_uribe41e88b",
                 DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
                 Labels =
@@ -670,10 +6513,72 @@ namespace Google.Cloud.Dataproc.V1.Tests
                         "value60c16320"
                     },
                 },
-                Scheduling = new JobScheduling(),
-                SparkRJob = new SparkRJob(),
+                Scheduling = new JobScheduling
+                {
+                    MaxFailuresPerHour = 238137428,
+                },
+                SparkRJob = new SparkRJob
+                {
+                    MainRFileUri = "main_r_file_uri3c1a03d8",
+                    Args = { "args09af56a9", },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 JobUuid = "job_uuid7530ffdd",
-                PrestoJob = new PrestoJob(),
+                PrestoJob = new PrestoJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    OutputFormat = "output_format020eca50",
+                    ClientTags =
+                    {
+                        "client_tags74c9d57e",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 Done = true,
             };
             mockGrpcClient.Setup(x => x.CancelJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -696,20 +6601,259 @@ namespace Google.Cloud.Dataproc.V1.Tests
             };
             Job expectedResponse = new Job
             {
-                Reference = new JobReference(),
-                Placement = new JobPlacement(),
-                HadoopJob = new HadoopJob(),
-                SparkJob = new SparkJob(),
-                PysparkJob = new PySparkJob(),
-                HiveJob = new HiveJob(),
-                PigJob = new PigJob(),
-                Status = new JobStatus(),
+                Reference = new JobReference
+                {
+                    ProjectId = "project_id43ad98b0",
+                    JobId = "job_id38ea97d6",
+                },
+                Placement = new JobPlacement
+                {
+                    ClusterName = "cluster_name88432a5e",
+                    ClusterUuid = "cluster_uuid256bc378",
+                },
+                HadoopJob = new HadoopJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                SparkJob = new SparkJob
+                {
+                    MainJarFileUri = "main_jar_file_uri46ea7aa7",
+                    MainClass = "main_classb0f4e864",
+                    Args = { "args09af56a9", },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                PysparkJob = new PySparkJob
+                {
+                    MainPythonFileUri = "main_python_file_uri14aabff5",
+                    Args = { "args09af56a9", },
+                    PythonFileUris =
+                    {
+                        "python_file_uris30483b38",
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                HiveJob = new HiveJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                PigJob = new PigJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
+                Status = new JobStatus
+                {
+                    State = JobStatus.Types.State.Error,
+                    Details = "details47297927",
+                    StateStartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Substate = JobStatus.Types.Substate.Submitted,
+                },
                 YarnApplications =
                 {
-                    new YarnApplication(),
+                    new YarnApplication
+                    {
+                        Name = "name1c9368b0",
+                        State = YarnApplication.Types.State.Submitted,
+                        Progress = -8.3331265E+17F,
+                        TrackingUrl = "tracking_url0600c504",
+                    },
                 },
-                SparkSqlJob = new SparkSqlJob(),
-                StatusHistory = { new JobStatus(), },
+                SparkSqlJob = new SparkSqlJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ScriptVariables =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                    JarFileUris =
+                    {
+                        "jar_file_urisfcd646b7",
+                    },
+                },
+                StatusHistory =
+                {
+                    new JobStatus
+                    {
+                        State = JobStatus.Types.State.Error,
+                        Details = "details47297927",
+                        StateStartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Substate = JobStatus.Types.Substate.Submitted,
+                    },
+                },
                 DriverControlFilesUri = "driver_control_files_uribe41e88b",
                 DriverOutputResourceUri = "driver_output_resource_urie2b470d7",
                 Labels =
@@ -719,10 +6863,72 @@ namespace Google.Cloud.Dataproc.V1.Tests
                         "value60c16320"
                     },
                 },
-                Scheduling = new JobScheduling(),
-                SparkRJob = new SparkRJob(),
+                Scheduling = new JobScheduling
+                {
+                    MaxFailuresPerHour = 238137428,
+                },
+                SparkRJob = new SparkRJob
+                {
+                    MainRFileUri = "main_r_file_uri3c1a03d8",
+                    Args = { "args09af56a9", },
+                    FileUris =
+                    {
+                        "file_urisbcc83e18",
+                    },
+                    ArchiveUris =
+                    {
+                        "archive_uris5a747dda",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 JobUuid = "job_uuid7530ffdd",
-                PrestoJob = new PrestoJob(),
+                PrestoJob = new PrestoJob
+                {
+                    QueryFileUri = "query_file_urid4d84faf",
+                    QueryList = new QueryList
+                    {
+                        Queries = { "queries42eba75d", },
+                    },
+                    ContinueOnFailure = false,
+                    OutputFormat = "output_format020eca50",
+                    ClientTags =
+                    {
+                        "client_tags74c9d57e",
+                    },
+                    Properties =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LoggingConfig = new LoggingConfig
+                    {
+                        DriverLogLevels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                LoggingConfig.Types.Level.Debug
+                            },
+                        },
+                    },
+                },
                 Done = true,
             };
             mockGrpcClient.Setup(x => x.CancelJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
