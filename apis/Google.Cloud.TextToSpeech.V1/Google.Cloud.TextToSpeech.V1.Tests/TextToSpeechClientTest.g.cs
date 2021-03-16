@@ -37,7 +37,19 @@ namespace Google.Cloud.TextToSpeech.V1.Tests
             };
             ListVoicesResponse expectedResponse = new ListVoicesResponse
             {
-                Voices = { new Voice(), },
+                Voices =
+                {
+                    new Voice
+                    {
+                        LanguageCodes =
+                        {
+                            "language_codes1de1a181",
+                        },
+                        Name = "name1c9368b0",
+                        SsmlGender = SsmlVoiceGender.Female,
+                        NaturalSampleRateHertz = 899781873,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListVoices(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
@@ -56,7 +68,19 @@ namespace Google.Cloud.TextToSpeech.V1.Tests
             };
             ListVoicesResponse expectedResponse = new ListVoicesResponse
             {
-                Voices = { new Voice(), },
+                Voices =
+                {
+                    new Voice
+                    {
+                        LanguageCodes =
+                        {
+                            "language_codes1de1a181",
+                        },
+                        Name = "name1c9368b0",
+                        SsmlGender = SsmlVoiceGender.Female,
+                        NaturalSampleRateHertz = 899781873,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListVoicesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListVoicesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
@@ -77,7 +101,19 @@ namespace Google.Cloud.TextToSpeech.V1.Tests
             };
             ListVoicesResponse expectedResponse = new ListVoicesResponse
             {
-                Voices = { new Voice(), },
+                Voices =
+                {
+                    new Voice
+                    {
+                        LanguageCodes =
+                        {
+                            "language_codes1de1a181",
+                        },
+                        Name = "name1c9368b0",
+                        SsmlGender = SsmlVoiceGender.Female,
+                        NaturalSampleRateHertz = 899781873,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListVoices(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
@@ -96,7 +132,19 @@ namespace Google.Cloud.TextToSpeech.V1.Tests
             };
             ListVoicesResponse expectedResponse = new ListVoicesResponse
             {
-                Voices = { new Voice(), },
+                Voices =
+                {
+                    new Voice
+                    {
+                        LanguageCodes =
+                        {
+                            "language_codes1de1a181",
+                        },
+                        Name = "name1c9368b0",
+                        SsmlGender = SsmlVoiceGender.Female,
+                        NaturalSampleRateHertz = 899781873,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListVoicesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListVoicesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TextToSpeechClient client = new TextToSpeechClientImpl(mockGrpcClient.Object, null);
@@ -113,9 +161,29 @@ namespace Google.Cloud.TextToSpeech.V1.Tests
             moq::Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new moq::Mock<TextToSpeech.TextToSpeechClient>(moq::MockBehavior.Strict);
             SynthesizeSpeechRequest request = new SynthesizeSpeechRequest
             {
-                Input = new SynthesisInput(),
-                Voice = new VoiceSelectionParams(),
-                AudioConfig = new AudioConfig(),
+                Input = new SynthesisInput
+                {
+                    Text = "textec51b21c",
+                    Ssml = "ssml29683002",
+                },
+                Voice = new VoiceSelectionParams
+                {
+                    LanguageCode = "language_code2f6c7160",
+                    Name = "name1c9368b0",
+                    SsmlGender = SsmlVoiceGender.Female,
+                },
+                AudioConfig = new AudioConfig
+                {
+                    AudioEncoding = AudioEncoding.Mp3,
+                    SpeakingRate = -3.7149018882614496E+17,
+                    Pitch = -17509213920625646,
+                    VolumeGainDb = 5.625833535406303E+17,
+                    SampleRateHertz = -1305662007,
+                    EffectsProfileId =
+                    {
+                        "effects_profile_id3c563bd1",
+                    },
+                },
             };
             SynthesizeSpeechResponse expectedResponse = new SynthesizeSpeechResponse
             {
@@ -134,9 +202,29 @@ namespace Google.Cloud.TextToSpeech.V1.Tests
             moq::Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new moq::Mock<TextToSpeech.TextToSpeechClient>(moq::MockBehavior.Strict);
             SynthesizeSpeechRequest request = new SynthesizeSpeechRequest
             {
-                Input = new SynthesisInput(),
-                Voice = new VoiceSelectionParams(),
-                AudioConfig = new AudioConfig(),
+                Input = new SynthesisInput
+                {
+                    Text = "textec51b21c",
+                    Ssml = "ssml29683002",
+                },
+                Voice = new VoiceSelectionParams
+                {
+                    LanguageCode = "language_code2f6c7160",
+                    Name = "name1c9368b0",
+                    SsmlGender = SsmlVoiceGender.Female,
+                },
+                AudioConfig = new AudioConfig
+                {
+                    AudioEncoding = AudioEncoding.Mp3,
+                    SpeakingRate = -3.7149018882614496E+17,
+                    Pitch = -17509213920625646,
+                    VolumeGainDb = 5.625833535406303E+17,
+                    SampleRateHertz = -1305662007,
+                    EffectsProfileId =
+                    {
+                        "effects_profile_id3c563bd1",
+                    },
+                },
             };
             SynthesizeSpeechResponse expectedResponse = new SynthesizeSpeechResponse
             {
@@ -157,9 +245,29 @@ namespace Google.Cloud.TextToSpeech.V1.Tests
             moq::Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new moq::Mock<TextToSpeech.TextToSpeechClient>(moq::MockBehavior.Strict);
             SynthesizeSpeechRequest request = new SynthesizeSpeechRequest
             {
-                Input = new SynthesisInput(),
-                Voice = new VoiceSelectionParams(),
-                AudioConfig = new AudioConfig(),
+                Input = new SynthesisInput
+                {
+                    Text = "textec51b21c",
+                    Ssml = "ssml29683002",
+                },
+                Voice = new VoiceSelectionParams
+                {
+                    LanguageCode = "language_code2f6c7160",
+                    Name = "name1c9368b0",
+                    SsmlGender = SsmlVoiceGender.Female,
+                },
+                AudioConfig = new AudioConfig
+                {
+                    AudioEncoding = AudioEncoding.Mp3,
+                    SpeakingRate = -3.7149018882614496E+17,
+                    Pitch = -17509213920625646,
+                    VolumeGainDb = 5.625833535406303E+17,
+                    SampleRateHertz = -1305662007,
+                    EffectsProfileId =
+                    {
+                        "effects_profile_id3c563bd1",
+                    },
+                },
             };
             SynthesizeSpeechResponse expectedResponse = new SynthesizeSpeechResponse
             {
@@ -178,9 +286,29 @@ namespace Google.Cloud.TextToSpeech.V1.Tests
             moq::Mock<TextToSpeech.TextToSpeechClient> mockGrpcClient = new moq::Mock<TextToSpeech.TextToSpeechClient>(moq::MockBehavior.Strict);
             SynthesizeSpeechRequest request = new SynthesizeSpeechRequest
             {
-                Input = new SynthesisInput(),
-                Voice = new VoiceSelectionParams(),
-                AudioConfig = new AudioConfig(),
+                Input = new SynthesisInput
+                {
+                    Text = "textec51b21c",
+                    Ssml = "ssml29683002",
+                },
+                Voice = new VoiceSelectionParams
+                {
+                    LanguageCode = "language_code2f6c7160",
+                    Name = "name1c9368b0",
+                    SsmlGender = SsmlVoiceGender.Female,
+                },
+                AudioConfig = new AudioConfig
+                {
+                    AudioEncoding = AudioEncoding.Mp3,
+                    SpeakingRate = -3.7149018882614496E+17,
+                    Pitch = -17509213920625646,
+                    VolumeGainDb = 5.625833535406303E+17,
+                    SampleRateHertz = -1305662007,
+                    EffectsProfileId =
+                    {
+                        "effects_profile_id3c563bd1",
+                    },
+                },
             };
             SynthesizeSpeechResponse expectedResponse = new SynthesizeSpeechResponse
             {
