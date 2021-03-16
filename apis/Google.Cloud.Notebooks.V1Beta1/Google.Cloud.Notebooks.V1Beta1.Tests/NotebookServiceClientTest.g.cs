@@ -40,8 +40,17 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
             Instance expectedResponse = new Instance
             {
                 InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
-                VmImage = new VmImage(),
-                ContainerImage = new ContainerImage(),
+                VmImage = new VmImage
+                {
+                    Project = "projectaa6ff846",
+                    ImageName = "image_nameb2c9c2fe",
+                    ImageFamily = "image_family9dd6fb58",
+                },
+                ContainerImage = new ContainerImage
+                {
+                    Repository = "repository5503f2b3",
+                    Tag = "tag843ed2e4",
+                },
                 PostStartupScript = "post_startup_script0d185c71",
                 ProxyUri = "proxy_uri73c5439d",
                 InstanceOwners =
@@ -50,7 +59,11 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
                 },
                 ServiceAccount = "service_accounta3c1b923",
                 MachineType = "machine_type68ce40fa",
-                AcceleratorConfig = new Instance.Types.AcceleratorConfig(),
+                AcceleratorConfig = new Instance.Types.AcceleratorConfig
+                {
+                    Type = Instance.Types.AcceleratorType.TpuV2,
+                    CoreCount = -6205811773686597508L,
+                },
                 State = Instance.Types.State.Initializing,
                 InstallGpuDriver = true,
                 CustomGpuDriverPath = "custom_gpu_driver_path24577c2a",
@@ -76,8 +89,16 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DataDiskType = Instance.Types.DiskType.Unspecified,
                 DataDiskSizeGb = 8597103336273737467L,
                 NoRemoveDataDisk = true,
@@ -101,8 +122,17 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
             Instance expectedResponse = new Instance
             {
                 InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
-                VmImage = new VmImage(),
-                ContainerImage = new ContainerImage(),
+                VmImage = new VmImage
+                {
+                    Project = "projectaa6ff846",
+                    ImageName = "image_nameb2c9c2fe",
+                    ImageFamily = "image_family9dd6fb58",
+                },
+                ContainerImage = new ContainerImage
+                {
+                    Repository = "repository5503f2b3",
+                    Tag = "tag843ed2e4",
+                },
                 PostStartupScript = "post_startup_script0d185c71",
                 ProxyUri = "proxy_uri73c5439d",
                 InstanceOwners =
@@ -111,7 +141,11 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
                 },
                 ServiceAccount = "service_accounta3c1b923",
                 MachineType = "machine_type68ce40fa",
-                AcceleratorConfig = new Instance.Types.AcceleratorConfig(),
+                AcceleratorConfig = new Instance.Types.AcceleratorConfig
+                {
+                    Type = Instance.Types.AcceleratorType.TpuV2,
+                    CoreCount = -6205811773686597508L,
+                },
                 State = Instance.Types.State.Initializing,
                 InstallGpuDriver = true,
                 CustomGpuDriverPath = "custom_gpu_driver_path24577c2a",
@@ -137,8 +171,16 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DataDiskType = Instance.Types.DiskType.Unspecified,
                 DataDiskSizeGb = 8597103336273737467L,
                 NoRemoveDataDisk = true,
@@ -212,10 +254,23 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
                 EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                VmImage = new VmImage(),
-                ContainerImage = new ContainerImage(),
+                VmImage = new VmImage
+                {
+                    Project = "projectaa6ff846",
+                    ImageName = "image_nameb2c9c2fe",
+                    ImageFamily = "image_family9dd6fb58",
+                },
+                ContainerImage = new ContainerImage
+                {
+                    Repository = "repository5503f2b3",
+                    Tag = "tag843ed2e4",
+                },
                 PostStartupScript = "post_startup_script0d185c71",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null);
@@ -238,10 +293,23 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
                 EnvironmentName = EnvironmentName.FromProjectEnvironment("[PROJECT]", "[ENVIRONMENT]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                VmImage = new VmImage(),
-                ContainerImage = new ContainerImage(),
+                VmImage = new VmImage
+                {
+                    Project = "projectaa6ff846",
+                    ImageName = "image_nameb2c9c2fe",
+                    ImageFamily = "image_family9dd6fb58",
+                },
+                ContainerImage = new ContainerImage
+                {
+                    Repository = "repository5503f2b3",
+                    Tag = "tag843ed2e4",
+                },
                 PostStartupScript = "post_startup_script0d185c71",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null);
