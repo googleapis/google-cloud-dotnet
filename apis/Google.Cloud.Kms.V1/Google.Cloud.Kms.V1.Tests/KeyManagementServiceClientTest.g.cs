@@ -41,7 +41,11 @@ namespace Google.Cloud.Kms.V1.Tests
             KeyRing expectedResponse = new KeyRing
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetKeyRing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -61,7 +65,11 @@ namespace Google.Cloud.Kms.V1.Tests
             KeyRing expectedResponse = new KeyRing
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetKeyRingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KeyRing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -83,7 +91,11 @@ namespace Google.Cloud.Kms.V1.Tests
             KeyRing expectedResponse = new KeyRing
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetKeyRing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -103,7 +115,11 @@ namespace Google.Cloud.Kms.V1.Tests
             KeyRing expectedResponse = new KeyRing
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetKeyRingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KeyRing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -125,7 +141,11 @@ namespace Google.Cloud.Kms.V1.Tests
             KeyRing expectedResponse = new KeyRing
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetKeyRing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -145,7 +165,11 @@ namespace Google.Cloud.Kms.V1.Tests
             KeyRing expectedResponse = new KeyRing
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetKeyRingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KeyRing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -167,11 +191,65 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -179,7 +257,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.GetCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -199,11 +281,65 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -211,7 +347,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -233,11 +373,65 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -245,7 +439,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.GetCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -265,11 +463,65 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -277,7 +529,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -299,11 +555,65 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -311,7 +621,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.GetCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -331,11 +645,65 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -343,7 +711,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -366,17 +738,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -397,17 +796,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -430,17 +856,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -461,17 +914,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -494,17 +974,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -525,17 +1032,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -696,14 +1230,34 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
                 ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                GenerateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = ImportJob.Types.ImportJobState.Active,
-                PublicKey = new ImportJob.Types.WrappingPublicKey(),
-                Attestation = new KeyOperationAttestation(),
+                PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                ExpireEventTime = new wkt::Timestamp(),
+                ExpireEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -724,14 +1278,34 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
                 ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                GenerateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = ImportJob.Types.ImportJobState.Active,
-                PublicKey = new ImportJob.Types.WrappingPublicKey(),
-                Attestation = new KeyOperationAttestation(),
+                PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                ExpireEventTime = new wkt::Timestamp(),
+                ExpireEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -754,14 +1328,34 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
                 ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                GenerateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = ImportJob.Types.ImportJobState.Active,
-                PublicKey = new ImportJob.Types.WrappingPublicKey(),
-                Attestation = new KeyOperationAttestation(),
+                PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                ExpireEventTime = new wkt::Timestamp(),
+                ExpireEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -782,14 +1376,34 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
                 ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                GenerateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = ImportJob.Types.ImportJobState.Active,
-                PublicKey = new ImportJob.Types.WrappingPublicKey(),
-                Attestation = new KeyOperationAttestation(),
+                PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                ExpireEventTime = new wkt::Timestamp(),
+                ExpireEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -812,14 +1426,34 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
                 ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                GenerateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = ImportJob.Types.ImportJobState.Active,
-                PublicKey = new ImportJob.Types.WrappingPublicKey(),
-                Attestation = new KeyOperationAttestation(),
+                PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                ExpireEventTime = new wkt::Timestamp(),
+                ExpireEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -840,14 +1474,34 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
                 ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                GenerateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = ImportJob.Types.ImportJobState.Active,
-                PublicKey = new ImportJob.Types.WrappingPublicKey(),
-                Attestation = new KeyOperationAttestation(),
+                PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                ExpireEventTime = new wkt::Timestamp(),
+                ExpireEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -866,12 +1520,24 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 KeyRingId = "key_ring_id56c9cb14",
-                KeyRing = new KeyRing(),
+                KeyRing = new KeyRing
+                {
+                    KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             KeyRing expectedResponse = new KeyRing
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateKeyRing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -888,12 +1554,24 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 KeyRingId = "key_ring_id56c9cb14",
-                KeyRing = new KeyRing(),
+                KeyRing = new KeyRing
+                {
+                    KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             KeyRing expectedResponse = new KeyRing
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateKeyRingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KeyRing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -912,12 +1590,24 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 KeyRingId = "key_ring_id56c9cb14",
-                KeyRing = new KeyRing(),
+                KeyRing = new KeyRing
+                {
+                    KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             KeyRing expectedResponse = new KeyRing
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateKeyRing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -934,12 +1624,24 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 KeyRingId = "key_ring_id56c9cb14",
-                KeyRing = new KeyRing(),
+                KeyRing = new KeyRing
+                {
+                    KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             KeyRing expectedResponse = new KeyRing
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateKeyRingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KeyRing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -958,12 +1660,24 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 KeyRingId = "key_ring_id56c9cb14",
-                KeyRing = new KeyRing(),
+                KeyRing = new KeyRing
+                {
+                    KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             KeyRing expectedResponse = new KeyRing
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateKeyRing(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -980,12 +1694,24 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 KeyRingId = "key_ring_id56c9cb14",
-                KeyRing = new KeyRing(),
+                KeyRing = new KeyRing
+                {
+                    KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             KeyRing expectedResponse = new KeyRing
             {
                 KeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateKeyRingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<KeyRing>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1004,17 +1730,145 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 CryptoKeyId = "crypto_key_ida49f0bf3",
-                CryptoKey = new CryptoKey(),
+                CryptoKey = new CryptoKey
+                {
+                    CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                    Primary = new CryptoKeyVersion
+                    {
+                        CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyEventTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Attestation = new KeyOperationAttestation
+                        {
+                            Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                            Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                        },
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                        GenerateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportJob = "import_job02c374ab",
+                        ImportTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportFailureReason = "import_failure_reason8924b287",
+                        ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                        {
+                            ExternalKeyUri = "external_key_uri8667ae50",
+                        },
+                    },
+                    Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    VersionTemplate = new CryptoKeyVersionTemplate
+                    {
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    },
+                },
                 SkipInitialVersionCreation = true,
             };
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1022,7 +1876,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1039,17 +1897,145 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 CryptoKeyId = "crypto_key_ida49f0bf3",
-                CryptoKey = new CryptoKey(),
+                CryptoKey = new CryptoKey
+                {
+                    CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                    Primary = new CryptoKeyVersion
+                    {
+                        CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyEventTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Attestation = new KeyOperationAttestation
+                        {
+                            Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                            Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                        },
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                        GenerateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportJob = "import_job02c374ab",
+                        ImportTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportFailureReason = "import_failure_reason8924b287",
+                        ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                        {
+                            ExternalKeyUri = "external_key_uri8667ae50",
+                        },
+                    },
+                    Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    VersionTemplate = new CryptoKeyVersionTemplate
+                    {
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    },
+                },
                 SkipInitialVersionCreation = true,
             };
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1057,7 +2043,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1076,16 +2066,144 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 CryptoKeyId = "crypto_key_ida49f0bf3",
-                CryptoKey = new CryptoKey(),
+                CryptoKey = new CryptoKey
+                {
+                    CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                    Primary = new CryptoKeyVersion
+                    {
+                        CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyEventTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Attestation = new KeyOperationAttestation
+                        {
+                            Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                            Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                        },
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                        GenerateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportJob = "import_job02c374ab",
+                        ImportTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportFailureReason = "import_failure_reason8924b287",
+                        ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                        {
+                            ExternalKeyUri = "external_key_uri8667ae50",
+                        },
+                    },
+                    Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    VersionTemplate = new CryptoKeyVersionTemplate
+                    {
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    },
+                },
             };
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1093,7 +2211,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1110,16 +2232,144 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 CryptoKeyId = "crypto_key_ida49f0bf3",
-                CryptoKey = new CryptoKey(),
+                CryptoKey = new CryptoKey
+                {
+                    CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                    Primary = new CryptoKeyVersion
+                    {
+                        CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyEventTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Attestation = new KeyOperationAttestation
+                        {
+                            Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                            Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                        },
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                        GenerateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportJob = "import_job02c374ab",
+                        ImportTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportFailureReason = "import_failure_reason8924b287",
+                        ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                        {
+                            ExternalKeyUri = "external_key_uri8667ae50",
+                        },
+                    },
+                    Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    VersionTemplate = new CryptoKeyVersionTemplate
+                    {
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    },
+                },
             };
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1127,7 +2377,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1146,16 +2400,144 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 CryptoKeyId = "crypto_key_ida49f0bf3",
-                CryptoKey = new CryptoKey(),
+                CryptoKey = new CryptoKey
+                {
+                    CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                    Primary = new CryptoKeyVersion
+                    {
+                        CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyEventTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Attestation = new KeyOperationAttestation
+                        {
+                            Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                            Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                        },
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                        GenerateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportJob = "import_job02c374ab",
+                        ImportTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportFailureReason = "import_failure_reason8924b287",
+                        ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                        {
+                            ExternalKeyUri = "external_key_uri8667ae50",
+                        },
+                    },
+                    Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    VersionTemplate = new CryptoKeyVersionTemplate
+                    {
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    },
+                },
             };
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1163,7 +2545,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1180,16 +2566,144 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 CryptoKeyId = "crypto_key_ida49f0bf3",
-                CryptoKey = new CryptoKey(),
+                CryptoKey = new CryptoKey
+                {
+                    CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                    Primary = new CryptoKeyVersion
+                    {
+                        CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyEventTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Attestation = new KeyOperationAttestation
+                        {
+                            Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                            Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                        },
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                        GenerateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportJob = "import_job02c374ab",
+                        ImportTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportFailureReason = "import_failure_reason8924b287",
+                        ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                        {
+                            ExternalKeyUri = "external_key_uri8667ae50",
+                        },
+                    },
+                    Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    VersionTemplate = new CryptoKeyVersionTemplate
+                    {
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    },
+                },
             };
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1197,7 +2711,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1215,23 +2733,92 @@ namespace Google.Cloud.Kms.V1.Tests
             CreateCryptoKeyVersionRequest request = new CreateCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                CryptoKeyVersion = new CryptoKeyVersion(),
+                CryptoKeyVersion = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
             };
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1247,23 +2834,92 @@ namespace Google.Cloud.Kms.V1.Tests
             CreateCryptoKeyVersionRequest request = new CreateCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                CryptoKeyVersion = new CryptoKeyVersion(),
+                CryptoKeyVersion = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
             };
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1281,23 +2937,92 @@ namespace Google.Cloud.Kms.V1.Tests
             CreateCryptoKeyVersionRequest request = new CreateCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                CryptoKeyVersion = new CryptoKeyVersion(),
+                CryptoKeyVersion = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
             };
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1313,23 +3038,92 @@ namespace Google.Cloud.Kms.V1.Tests
             CreateCryptoKeyVersionRequest request = new CreateCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                CryptoKeyVersion = new CryptoKeyVersion(),
+                CryptoKeyVersion = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
             };
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1347,23 +3141,92 @@ namespace Google.Cloud.Kms.V1.Tests
             CreateCryptoKeyVersionRequest request = new CreateCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                CryptoKeyVersion = new CryptoKeyVersion(),
+                CryptoKeyVersion = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
             };
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1379,23 +3242,92 @@ namespace Google.Cloud.Kms.V1.Tests
             CreateCryptoKeyVersionRequest request = new CreateCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                CryptoKeyVersion = new CryptoKeyVersion(),
+                CryptoKeyVersion = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
             };
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1421,17 +3353,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.ImportCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1455,17 +3414,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.ImportCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1484,20 +3470,72 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 ImportJobId = "import_job_idc41664a1",
-                ImportJob = new ImportJob(),
+                ImportJob = new ImportJob
+                {
+                    ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+                    ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = ImportJob.Types.ImportJobState.Active,
+                    PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    ExpireEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             ImportJob expectedResponse = new ImportJob
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
                 ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                GenerateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = ImportJob.Types.ImportJobState.Active,
-                PublicKey = new ImportJob.Types.WrappingPublicKey(),
-                Attestation = new KeyOperationAttestation(),
+                PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                ExpireEventTime = new wkt::Timestamp(),
+                ExpireEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1514,20 +3552,72 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 ImportJobId = "import_job_idc41664a1",
-                ImportJob = new ImportJob(),
+                ImportJob = new ImportJob
+                {
+                    ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+                    ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = ImportJob.Types.ImportJobState.Active,
+                    PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    ExpireEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             ImportJob expectedResponse = new ImportJob
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
                 ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                GenerateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = ImportJob.Types.ImportJobState.Active,
-                PublicKey = new ImportJob.Types.WrappingPublicKey(),
-                Attestation = new KeyOperationAttestation(),
+                PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                ExpireEventTime = new wkt::Timestamp(),
+                ExpireEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1546,20 +3636,72 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 ImportJobId = "import_job_idc41664a1",
-                ImportJob = new ImportJob(),
+                ImportJob = new ImportJob
+                {
+                    ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+                    ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = ImportJob.Types.ImportJobState.Active,
+                    PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    ExpireEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             ImportJob expectedResponse = new ImportJob
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
                 ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                GenerateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = ImportJob.Types.ImportJobState.Active,
-                PublicKey = new ImportJob.Types.WrappingPublicKey(),
-                Attestation = new KeyOperationAttestation(),
+                PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                ExpireEventTime = new wkt::Timestamp(),
+                ExpireEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1576,20 +3718,72 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 ImportJobId = "import_job_idc41664a1",
-                ImportJob = new ImportJob(),
+                ImportJob = new ImportJob
+                {
+                    ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+                    ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = ImportJob.Types.ImportJobState.Active,
+                    PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    ExpireEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             ImportJob expectedResponse = new ImportJob
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
                 ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                GenerateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = ImportJob.Types.ImportJobState.Active,
-                PublicKey = new ImportJob.Types.WrappingPublicKey(),
-                Attestation = new KeyOperationAttestation(),
+                PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                ExpireEventTime = new wkt::Timestamp(),
+                ExpireEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1608,20 +3802,72 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 ImportJobId = "import_job_idc41664a1",
-                ImportJob = new ImportJob(),
+                ImportJob = new ImportJob
+                {
+                    ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+                    ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = ImportJob.Types.ImportJobState.Active,
+                    PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    ExpireEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             ImportJob expectedResponse = new ImportJob
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
                 ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                GenerateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = ImportJob.Types.ImportJobState.Active,
-                PublicKey = new ImportJob.Types.WrappingPublicKey(),
-                Attestation = new KeyOperationAttestation(),
+                PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                ExpireEventTime = new wkt::Timestamp(),
+                ExpireEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1638,20 +3884,72 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 ParentAsKeyRingName = KeyRingName.FromProjectLocationKeyRing("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 ImportJobId = "import_job_idc41664a1",
-                ImportJob = new ImportJob(),
+                ImportJob = new ImportJob
+                {
+                    ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+                    ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = ImportJob.Types.ImportJobState.Active,
+                    PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    ExpireEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             ImportJob expectedResponse = new ImportJob
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
                 ImportMethod = ImportJob.Types.ImportMethod.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                GenerateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = ImportJob.Types.ImportJobState.Active,
-                PublicKey = new ImportJob.Types.WrappingPublicKey(),
-                Attestation = new KeyOperationAttestation(),
+                PublicKey = new ImportJob.Types.WrappingPublicKey { Pem = "pemd6ff2189", },
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                ExpireEventTime = new wkt::Timestamp(),
+                ExpireEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1668,17 +3966,148 @@ namespace Google.Cloud.Kms.V1.Tests
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             UpdateCryptoKeyRequest request = new UpdateCryptoKeyRequest
             {
-                CryptoKey = new CryptoKey(),
-                UpdateMask = new wkt::FieldMask(),
+                CryptoKey = new CryptoKey
+                {
+                    CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                    Primary = new CryptoKeyVersion
+                    {
+                        CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyEventTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Attestation = new KeyOperationAttestation
+                        {
+                            Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                            Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                        },
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                        GenerateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportJob = "import_job02c374ab",
+                        ImportTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportFailureReason = "import_failure_reason8924b287",
+                        ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                        {
+                            ExternalKeyUri = "external_key_uri8667ae50",
+                        },
+                    },
+                    Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    VersionTemplate = new CryptoKeyVersionTemplate
+                    {
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1686,7 +4115,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1701,17 +4134,148 @@ namespace Google.Cloud.Kms.V1.Tests
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             UpdateCryptoKeyRequest request = new UpdateCryptoKeyRequest
             {
-                CryptoKey = new CryptoKey(),
-                UpdateMask = new wkt::FieldMask(),
+                CryptoKey = new CryptoKey
+                {
+                    CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                    Primary = new CryptoKeyVersion
+                    {
+                        CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyEventTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Attestation = new KeyOperationAttestation
+                        {
+                            Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                            Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                        },
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                        GenerateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportJob = "import_job02c374ab",
+                        ImportTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportFailureReason = "import_failure_reason8924b287",
+                        ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                        {
+                            ExternalKeyUri = "external_key_uri8667ae50",
+                        },
+                    },
+                    Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    VersionTemplate = new CryptoKeyVersionTemplate
+                    {
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1719,7 +4283,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1736,17 +4304,148 @@ namespace Google.Cloud.Kms.V1.Tests
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             UpdateCryptoKeyRequest request = new UpdateCryptoKeyRequest
             {
-                CryptoKey = new CryptoKey(),
-                UpdateMask = new wkt::FieldMask(),
+                CryptoKey = new CryptoKey
+                {
+                    CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                    Primary = new CryptoKeyVersion
+                    {
+                        CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyEventTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Attestation = new KeyOperationAttestation
+                        {
+                            Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                            Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                        },
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                        GenerateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportJob = "import_job02c374ab",
+                        ImportTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportFailureReason = "import_failure_reason8924b287",
+                        ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                        {
+                            ExternalKeyUri = "external_key_uri8667ae50",
+                        },
+                    },
+                    Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    VersionTemplate = new CryptoKeyVersionTemplate
+                    {
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1754,7 +4453,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1769,17 +4472,148 @@ namespace Google.Cloud.Kms.V1.Tests
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             UpdateCryptoKeyRequest request = new UpdateCryptoKeyRequest
             {
-                CryptoKey = new CryptoKey(),
-                UpdateMask = new wkt::FieldMask(),
+                CryptoKey = new CryptoKey
+                {
+                    CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                    Primary = new CryptoKeyVersion
+                    {
+                        CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                        State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DestroyEventTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Attestation = new KeyOperationAttestation
+                        {
+                            Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                            Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                        },
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                        GenerateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportJob = "import_job02c374ab",
+                        ImportTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ImportFailureReason = "import_failure_reason8924b287",
+                        ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                        {
+                            ExternalKeyUri = "external_key_uri8667ae50",
+                        },
+                    },
+                    Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    VersionTemplate = new CryptoKeyVersionTemplate
+                    {
+                        ProtectionLevel = ProtectionLevel.Hsm,
+                        Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1787,7 +4621,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1804,24 +4642,96 @@ namespace Google.Cloud.Kms.V1.Tests
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             UpdateCryptoKeyVersionRequest request = new UpdateCryptoKeyVersionRequest
             {
-                CryptoKeyVersion = new CryptoKeyVersion(),
-                UpdateMask = new wkt::FieldMask(),
+                CryptoKeyVersion = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1836,24 +4746,96 @@ namespace Google.Cloud.Kms.V1.Tests
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             UpdateCryptoKeyVersionRequest request = new UpdateCryptoKeyVersionRequest
             {
-                CryptoKeyVersion = new CryptoKeyVersion(),
-                UpdateMask = new wkt::FieldMask(),
+                CryptoKeyVersion = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1870,24 +4852,96 @@ namespace Google.Cloud.Kms.V1.Tests
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             UpdateCryptoKeyVersionRequest request = new UpdateCryptoKeyVersionRequest
             {
-                CryptoKeyVersion = new CryptoKeyVersion(),
-                UpdateMask = new wkt::FieldMask(),
+                CryptoKeyVersion = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1902,24 +4956,96 @@ namespace Google.Cloud.Kms.V1.Tests
             moq::Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new moq::Mock<KeyManagementService.KeyManagementServiceClient>(moq::MockBehavior.Strict);
             UpdateCryptoKeyVersionRequest request = new UpdateCryptoKeyVersionRequest
             {
-                CryptoKeyVersion = new CryptoKeyVersion(),
-                UpdateMask = new wkt::FieldMask(),
+                CryptoKeyVersion = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2231,7 +5357,12 @@ namespace Google.Cloud.Kms.V1.Tests
             AsymmetricSignRequest request = new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
-                Digest = new Digest(),
+                Digest = new Digest
+                {
+                    Sha256 = proto::ByteString.CopyFromUtf8("sha256d2a6d8d8"),
+                    Sha384 = proto::ByteString.CopyFromUtf8("sha38434f2b123"),
+                    Sha512 = proto::ByteString.CopyFromUtf8("sha51251105279"),
+                },
                 DigestCrc32C = -5836273086403280409L,
             };
             AsymmetricSignResponse expectedResponse = new AsymmetricSignResponse
@@ -2255,7 +5386,12 @@ namespace Google.Cloud.Kms.V1.Tests
             AsymmetricSignRequest request = new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
-                Digest = new Digest(),
+                Digest = new Digest
+                {
+                    Sha256 = proto::ByteString.CopyFromUtf8("sha256d2a6d8d8"),
+                    Sha384 = proto::ByteString.CopyFromUtf8("sha38434f2b123"),
+                    Sha512 = proto::ByteString.CopyFromUtf8("sha51251105279"),
+                },
                 DigestCrc32C = -5836273086403280409L,
             };
             AsymmetricSignResponse expectedResponse = new AsymmetricSignResponse
@@ -2281,7 +5417,12 @@ namespace Google.Cloud.Kms.V1.Tests
             AsymmetricSignRequest request = new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
-                Digest = new Digest(),
+                Digest = new Digest
+                {
+                    Sha256 = proto::ByteString.CopyFromUtf8("sha256d2a6d8d8"),
+                    Sha384 = proto::ByteString.CopyFromUtf8("sha38434f2b123"),
+                    Sha512 = proto::ByteString.CopyFromUtf8("sha51251105279"),
+                },
             };
             AsymmetricSignResponse expectedResponse = new AsymmetricSignResponse
             {
@@ -2304,7 +5445,12 @@ namespace Google.Cloud.Kms.V1.Tests
             AsymmetricSignRequest request = new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
-                Digest = new Digest(),
+                Digest = new Digest
+                {
+                    Sha256 = proto::ByteString.CopyFromUtf8("sha256d2a6d8d8"),
+                    Sha384 = proto::ByteString.CopyFromUtf8("sha38434f2b123"),
+                    Sha512 = proto::ByteString.CopyFromUtf8("sha51251105279"),
+                },
             };
             AsymmetricSignResponse expectedResponse = new AsymmetricSignResponse
             {
@@ -2329,7 +5475,12 @@ namespace Google.Cloud.Kms.V1.Tests
             AsymmetricSignRequest request = new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
-                Digest = new Digest(),
+                Digest = new Digest
+                {
+                    Sha256 = proto::ByteString.CopyFromUtf8("sha256d2a6d8d8"),
+                    Sha384 = proto::ByteString.CopyFromUtf8("sha38434f2b123"),
+                    Sha512 = proto::ByteString.CopyFromUtf8("sha51251105279"),
+                },
             };
             AsymmetricSignResponse expectedResponse = new AsymmetricSignResponse
             {
@@ -2352,7 +5503,12 @@ namespace Google.Cloud.Kms.V1.Tests
             AsymmetricSignRequest request = new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
-                Digest = new Digest(),
+                Digest = new Digest
+                {
+                    Sha256 = proto::ByteString.CopyFromUtf8("sha256d2a6d8d8"),
+                    Sha384 = proto::ByteString.CopyFromUtf8("sha38434f2b123"),
+                    Sha512 = proto::ByteString.CopyFromUtf8("sha51251105279"),
+                },
             };
             AsymmetricSignResponse expectedResponse = new AsymmetricSignResponse
             {
@@ -2522,11 +5678,65 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -2534,7 +5744,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2555,11 +5769,65 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -2567,7 +5835,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2590,11 +5862,65 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -2602,7 +5928,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2623,11 +5953,65 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -2635,7 +6019,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2658,11 +6046,65 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -2670,7 +6112,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2691,11 +6137,65 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKey expectedResponse = new CryptoKey
             {
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Primary = new CryptoKeyVersion(),
+                Primary = new CryptoKeyVersion
+                {
+                    CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                    State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DestroyEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Attestation = new KeyOperationAttestation
+                    {
+                        Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                        Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                    },
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                    GenerateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportJob = "import_job02c374ab",
+                    ImportTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImportFailureReason = "import_failure_reason8924b287",
+                    ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                    {
+                        ExternalKeyUri = "external_key_uri8667ae50",
+                    },
+                },
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.AsymmetricDecrypt,
-                CreateTime = new wkt::Timestamp(),
-                NextRotationTime = new wkt::Timestamp(),
-                RotationPeriod = new wkt::Duration(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                NextRotationTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RotationPeriod = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -2703,7 +6203,11 @@ namespace Google.Cloud.Kms.V1.Tests
                         "value60c16320"
                     },
                 },
-                VersionTemplate = new CryptoKeyVersionTemplate(),
+                VersionTemplate = new CryptoKeyVersionTemplate
+                {
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                    Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2726,17 +6230,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2757,17 +6288,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2790,17 +6348,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2821,17 +6406,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2854,17 +6466,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2885,17 +6524,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2918,17 +6584,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2949,17 +6642,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2982,17 +6702,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3013,17 +6760,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3046,17 +6820,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3077,17 +6878,44 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 State = CryptoKeyVersion.Types.CryptoKeyVersionState.PendingImport,
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
-                DestroyEventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProtectionLevel = ProtectionLevel.Hsm,
-                Attestation = new KeyOperationAttestation(),
+                Attestation = new KeyOperationAttestation
+                {
+                    Format = KeyOperationAttestation.Types.AttestationFormat.CaviumV2Compressed,
+                    Content = proto::ByteString.CopyFromUtf8("contentb964039a"),
+                },
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
-                GenerateTime = new wkt::Timestamp(),
+                GenerateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportJob = "import_job02c374ab",
-                ImportTime = new wkt::Timestamp(),
+                ImportTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ImportFailureReason = "import_failure_reason8924b287",
-                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions
+                {
+                    ExternalKeyUri = "external_key_uri8667ae50",
+                },
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
