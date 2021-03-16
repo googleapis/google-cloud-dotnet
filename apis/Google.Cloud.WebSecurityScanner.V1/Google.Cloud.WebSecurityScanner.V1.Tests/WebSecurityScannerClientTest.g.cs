@@ -34,7 +34,55 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
             CreateScanConfigRequest request = new CreateScanConfigRequest
             {
                 Parent = "parent7858e4d0",
-                ScanConfig = new ScanConfig(),
+                ScanConfig = new ScanConfig
+                {
+                    Name = "name1c9368b0",
+                    DisplayName = "display_name137f65c2",
+                    MaxQps = -1198236314,
+                    StartingUrls =
+                    {
+                        "starting_urls75fa5e9e",
+                    },
+                    Authentication = new ScanConfig.Types.Authentication
+                    {
+                        GoogleAccount = new ScanConfig.Types.Authentication.Types.GoogleAccount
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                        },
+                        CustomAccount = new ScanConfig.Types.Authentication.Types.CustomAccount
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                            LoginUrl = "login_url3b962147",
+                        },
+                        IapCredential = new ScanConfig.Types.Authentication.Types.IapCredential
+                        {
+                            IapTestServiceAccountInfo = new ScanConfig.Types.Authentication.Types.IapCredential.Types.IapTestServiceAccountInfo
+                            {
+                                TargetAudienceClientId = "target_audience_client_id1130b4ce",
+                            },
+                        },
+                    },
+                    UserAgent = ScanConfig.Types.UserAgent.SafariIphone,
+                    BlacklistPatterns =
+                    {
+                        "blacklist_patterns7a899f15",
+                    },
+                    Schedule = new ScanConfig.Types.Schedule
+                    {
+                        ScheduleTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        IntervalDurationDays = 1184068676,
+                    },
+                    ExportToSecurityCommandCenter = ScanConfig.Types.ExportToSecurityCommandCenter.Unspecified,
+                    RiskLevel = ScanConfig.Types.RiskLevel.Unspecified,
+                    ManagedScan = true,
+                    StaticIpScan = false,
+                },
             };
             ScanConfig expectedResponse = new ScanConfig
             {
@@ -45,13 +93,41 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 {
                     "starting_urls75fa5e9e",
                 },
-                Authentication = new ScanConfig.Types.Authentication(),
+                Authentication = new ScanConfig.Types.Authentication
+                {
+                    GoogleAccount = new ScanConfig.Types.Authentication.Types.GoogleAccount
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                    CustomAccount = new ScanConfig.Types.Authentication.Types.CustomAccount
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                        LoginUrl = "login_url3b962147",
+                    },
+                    IapCredential = new ScanConfig.Types.Authentication.Types.IapCredential
+                    {
+                        IapTestServiceAccountInfo = new ScanConfig.Types.Authentication.Types.IapCredential.Types.IapTestServiceAccountInfo
+                        {
+                            TargetAudienceClientId = "target_audience_client_id1130b4ce",
+                        },
+                    },
+                },
                 UserAgent = ScanConfig.Types.UserAgent.SafariIphone,
                 BlacklistPatterns =
                 {
                     "blacklist_patterns7a899f15",
                 },
-                Schedule = new ScanConfig.Types.Schedule(),
+                Schedule = new ScanConfig.Types.Schedule
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    IntervalDurationDays = 1184068676,
+                },
                 ExportToSecurityCommandCenter = ScanConfig.Types.ExportToSecurityCommandCenter.Unspecified,
                 RiskLevel = ScanConfig.Types.RiskLevel.Unspecified,
                 ManagedScan = true,
@@ -71,7 +147,55 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
             CreateScanConfigRequest request = new CreateScanConfigRequest
             {
                 Parent = "parent7858e4d0",
-                ScanConfig = new ScanConfig(),
+                ScanConfig = new ScanConfig
+                {
+                    Name = "name1c9368b0",
+                    DisplayName = "display_name137f65c2",
+                    MaxQps = -1198236314,
+                    StartingUrls =
+                    {
+                        "starting_urls75fa5e9e",
+                    },
+                    Authentication = new ScanConfig.Types.Authentication
+                    {
+                        GoogleAccount = new ScanConfig.Types.Authentication.Types.GoogleAccount
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                        },
+                        CustomAccount = new ScanConfig.Types.Authentication.Types.CustomAccount
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                            LoginUrl = "login_url3b962147",
+                        },
+                        IapCredential = new ScanConfig.Types.Authentication.Types.IapCredential
+                        {
+                            IapTestServiceAccountInfo = new ScanConfig.Types.Authentication.Types.IapCredential.Types.IapTestServiceAccountInfo
+                            {
+                                TargetAudienceClientId = "target_audience_client_id1130b4ce",
+                            },
+                        },
+                    },
+                    UserAgent = ScanConfig.Types.UserAgent.SafariIphone,
+                    BlacklistPatterns =
+                    {
+                        "blacklist_patterns7a899f15",
+                    },
+                    Schedule = new ScanConfig.Types.Schedule
+                    {
+                        ScheduleTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        IntervalDurationDays = 1184068676,
+                    },
+                    ExportToSecurityCommandCenter = ScanConfig.Types.ExportToSecurityCommandCenter.Unspecified,
+                    RiskLevel = ScanConfig.Types.RiskLevel.Unspecified,
+                    ManagedScan = true,
+                    StaticIpScan = false,
+                },
             };
             ScanConfig expectedResponse = new ScanConfig
             {
@@ -82,13 +206,41 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 {
                     "starting_urls75fa5e9e",
                 },
-                Authentication = new ScanConfig.Types.Authentication(),
+                Authentication = new ScanConfig.Types.Authentication
+                {
+                    GoogleAccount = new ScanConfig.Types.Authentication.Types.GoogleAccount
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                    CustomAccount = new ScanConfig.Types.Authentication.Types.CustomAccount
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                        LoginUrl = "login_url3b962147",
+                    },
+                    IapCredential = new ScanConfig.Types.Authentication.Types.IapCredential
+                    {
+                        IapTestServiceAccountInfo = new ScanConfig.Types.Authentication.Types.IapCredential.Types.IapTestServiceAccountInfo
+                        {
+                            TargetAudienceClientId = "target_audience_client_id1130b4ce",
+                        },
+                    },
+                },
                 UserAgent = ScanConfig.Types.UserAgent.SafariIphone,
                 BlacklistPatterns =
                 {
                     "blacklist_patterns7a899f15",
                 },
-                Schedule = new ScanConfig.Types.Schedule(),
+                Schedule = new ScanConfig.Types.Schedule
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    IntervalDurationDays = 1184068676,
+                },
                 ExportToSecurityCommandCenter = ScanConfig.Types.ExportToSecurityCommandCenter.Unspecified,
                 RiskLevel = ScanConfig.Types.RiskLevel.Unspecified,
                 ManagedScan = true,
@@ -151,13 +303,41 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 {
                     "starting_urls75fa5e9e",
                 },
-                Authentication = new ScanConfig.Types.Authentication(),
+                Authentication = new ScanConfig.Types.Authentication
+                {
+                    GoogleAccount = new ScanConfig.Types.Authentication.Types.GoogleAccount
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                    CustomAccount = new ScanConfig.Types.Authentication.Types.CustomAccount
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                        LoginUrl = "login_url3b962147",
+                    },
+                    IapCredential = new ScanConfig.Types.Authentication.Types.IapCredential
+                    {
+                        IapTestServiceAccountInfo = new ScanConfig.Types.Authentication.Types.IapCredential.Types.IapTestServiceAccountInfo
+                        {
+                            TargetAudienceClientId = "target_audience_client_id1130b4ce",
+                        },
+                    },
+                },
                 UserAgent = ScanConfig.Types.UserAgent.SafariIphone,
                 BlacklistPatterns =
                 {
                     "blacklist_patterns7a899f15",
                 },
-                Schedule = new ScanConfig.Types.Schedule(),
+                Schedule = new ScanConfig.Types.Schedule
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    IntervalDurationDays = 1184068676,
+                },
                 ExportToSecurityCommandCenter = ScanConfig.Types.ExportToSecurityCommandCenter.Unspecified,
                 RiskLevel = ScanConfig.Types.RiskLevel.Unspecified,
                 ManagedScan = true,
@@ -187,13 +367,41 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 {
                     "starting_urls75fa5e9e",
                 },
-                Authentication = new ScanConfig.Types.Authentication(),
+                Authentication = new ScanConfig.Types.Authentication
+                {
+                    GoogleAccount = new ScanConfig.Types.Authentication.Types.GoogleAccount
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                    CustomAccount = new ScanConfig.Types.Authentication.Types.CustomAccount
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                        LoginUrl = "login_url3b962147",
+                    },
+                    IapCredential = new ScanConfig.Types.Authentication.Types.IapCredential
+                    {
+                        IapTestServiceAccountInfo = new ScanConfig.Types.Authentication.Types.IapCredential.Types.IapTestServiceAccountInfo
+                        {
+                            TargetAudienceClientId = "target_audience_client_id1130b4ce",
+                        },
+                    },
+                },
                 UserAgent = ScanConfig.Types.UserAgent.SafariIphone,
                 BlacklistPatterns =
                 {
                     "blacklist_patterns7a899f15",
                 },
-                Schedule = new ScanConfig.Types.Schedule(),
+                Schedule = new ScanConfig.Types.Schedule
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    IntervalDurationDays = 1184068676,
+                },
                 ExportToSecurityCommandCenter = ScanConfig.Types.ExportToSecurityCommandCenter.Unspecified,
                 RiskLevel = ScanConfig.Types.RiskLevel.Unspecified,
                 ManagedScan = true,
@@ -214,8 +422,59 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
             moq::Mock<WebSecurityScanner.WebSecurityScannerClient> mockGrpcClient = new moq::Mock<WebSecurityScanner.WebSecurityScannerClient>(moq::MockBehavior.Strict);
             UpdateScanConfigRequest request = new UpdateScanConfigRequest
             {
-                ScanConfig = new ScanConfig(),
-                UpdateMask = new wkt::FieldMask(),
+                ScanConfig = new ScanConfig
+                {
+                    Name = "name1c9368b0",
+                    DisplayName = "display_name137f65c2",
+                    MaxQps = -1198236314,
+                    StartingUrls =
+                    {
+                        "starting_urls75fa5e9e",
+                    },
+                    Authentication = new ScanConfig.Types.Authentication
+                    {
+                        GoogleAccount = new ScanConfig.Types.Authentication.Types.GoogleAccount
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                        },
+                        CustomAccount = new ScanConfig.Types.Authentication.Types.CustomAccount
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                            LoginUrl = "login_url3b962147",
+                        },
+                        IapCredential = new ScanConfig.Types.Authentication.Types.IapCredential
+                        {
+                            IapTestServiceAccountInfo = new ScanConfig.Types.Authentication.Types.IapCredential.Types.IapTestServiceAccountInfo
+                            {
+                                TargetAudienceClientId = "target_audience_client_id1130b4ce",
+                            },
+                        },
+                    },
+                    UserAgent = ScanConfig.Types.UserAgent.SafariIphone,
+                    BlacklistPatterns =
+                    {
+                        "blacklist_patterns7a899f15",
+                    },
+                    Schedule = new ScanConfig.Types.Schedule
+                    {
+                        ScheduleTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        IntervalDurationDays = 1184068676,
+                    },
+                    ExportToSecurityCommandCenter = ScanConfig.Types.ExportToSecurityCommandCenter.Unspecified,
+                    RiskLevel = ScanConfig.Types.RiskLevel.Unspecified,
+                    ManagedScan = true,
+                    StaticIpScan = false,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             ScanConfig expectedResponse = new ScanConfig
             {
@@ -226,13 +485,41 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 {
                     "starting_urls75fa5e9e",
                 },
-                Authentication = new ScanConfig.Types.Authentication(),
+                Authentication = new ScanConfig.Types.Authentication
+                {
+                    GoogleAccount = new ScanConfig.Types.Authentication.Types.GoogleAccount
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                    CustomAccount = new ScanConfig.Types.Authentication.Types.CustomAccount
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                        LoginUrl = "login_url3b962147",
+                    },
+                    IapCredential = new ScanConfig.Types.Authentication.Types.IapCredential
+                    {
+                        IapTestServiceAccountInfo = new ScanConfig.Types.Authentication.Types.IapCredential.Types.IapTestServiceAccountInfo
+                        {
+                            TargetAudienceClientId = "target_audience_client_id1130b4ce",
+                        },
+                    },
+                },
                 UserAgent = ScanConfig.Types.UserAgent.SafariIphone,
                 BlacklistPatterns =
                 {
                     "blacklist_patterns7a899f15",
                 },
-                Schedule = new ScanConfig.Types.Schedule(),
+                Schedule = new ScanConfig.Types.Schedule
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    IntervalDurationDays = 1184068676,
+                },
                 ExportToSecurityCommandCenter = ScanConfig.Types.ExportToSecurityCommandCenter.Unspecified,
                 RiskLevel = ScanConfig.Types.RiskLevel.Unspecified,
                 ManagedScan = true,
@@ -251,8 +538,59 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
             moq::Mock<WebSecurityScanner.WebSecurityScannerClient> mockGrpcClient = new moq::Mock<WebSecurityScanner.WebSecurityScannerClient>(moq::MockBehavior.Strict);
             UpdateScanConfigRequest request = new UpdateScanConfigRequest
             {
-                ScanConfig = new ScanConfig(),
-                UpdateMask = new wkt::FieldMask(),
+                ScanConfig = new ScanConfig
+                {
+                    Name = "name1c9368b0",
+                    DisplayName = "display_name137f65c2",
+                    MaxQps = -1198236314,
+                    StartingUrls =
+                    {
+                        "starting_urls75fa5e9e",
+                    },
+                    Authentication = new ScanConfig.Types.Authentication
+                    {
+                        GoogleAccount = new ScanConfig.Types.Authentication.Types.GoogleAccount
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                        },
+                        CustomAccount = new ScanConfig.Types.Authentication.Types.CustomAccount
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                            LoginUrl = "login_url3b962147",
+                        },
+                        IapCredential = new ScanConfig.Types.Authentication.Types.IapCredential
+                        {
+                            IapTestServiceAccountInfo = new ScanConfig.Types.Authentication.Types.IapCredential.Types.IapTestServiceAccountInfo
+                            {
+                                TargetAudienceClientId = "target_audience_client_id1130b4ce",
+                            },
+                        },
+                    },
+                    UserAgent = ScanConfig.Types.UserAgent.SafariIphone,
+                    BlacklistPatterns =
+                    {
+                        "blacklist_patterns7a899f15",
+                    },
+                    Schedule = new ScanConfig.Types.Schedule
+                    {
+                        ScheduleTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        IntervalDurationDays = 1184068676,
+                    },
+                    ExportToSecurityCommandCenter = ScanConfig.Types.ExportToSecurityCommandCenter.Unspecified,
+                    RiskLevel = ScanConfig.Types.RiskLevel.Unspecified,
+                    ManagedScan = true,
+                    StaticIpScan = false,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             ScanConfig expectedResponse = new ScanConfig
             {
@@ -263,13 +601,41 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 {
                     "starting_urls75fa5e9e",
                 },
-                Authentication = new ScanConfig.Types.Authentication(),
+                Authentication = new ScanConfig.Types.Authentication
+                {
+                    GoogleAccount = new ScanConfig.Types.Authentication.Types.GoogleAccount
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                    CustomAccount = new ScanConfig.Types.Authentication.Types.CustomAccount
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                        LoginUrl = "login_url3b962147",
+                    },
+                    IapCredential = new ScanConfig.Types.Authentication.Types.IapCredential
+                    {
+                        IapTestServiceAccountInfo = new ScanConfig.Types.Authentication.Types.IapCredential.Types.IapTestServiceAccountInfo
+                        {
+                            TargetAudienceClientId = "target_audience_client_id1130b4ce",
+                        },
+                    },
+                },
                 UserAgent = ScanConfig.Types.UserAgent.SafariIphone,
                 BlacklistPatterns =
                 {
                     "blacklist_patterns7a899f15",
                 },
-                Schedule = new ScanConfig.Types.Schedule(),
+                Schedule = new ScanConfig.Types.Schedule
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    IntervalDurationDays = 1184068676,
+                },
                 ExportToSecurityCommandCenter = ScanConfig.Types.ExportToSecurityCommandCenter.Unspecified,
                 RiskLevel = ScanConfig.Types.RiskLevel.Unspecified,
                 ManagedScan = true,
@@ -297,16 +663,36 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 Name = "name1c9368b0",
                 ExecutionState = ScanRun.Types.ExecutionState.Unspecified,
                 ResultState = ScanRun.Types.ResultState.Killed,
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UrlsCrawledCount = 2307837720024124869L,
                 UrlsTestedCount = -373604950692105735L,
                 HasVulnerabilities = true,
                 ProgressPercent = -412774427,
-                ErrorTrace = new ScanRunErrorTrace(),
+                ErrorTrace = new ScanRunErrorTrace
+                {
+                    Code = ScanRunErrorTrace.Types.Code.ScanConfigIssue,
+                    ScanConfigError = new ScanConfigError
+                    {
+                        Code = ScanConfigError.Types.Code.UnableToResolveProjectInfo,
+                        FieldName = "field_namef129f373",
+                    },
+                    MostCommonHttpErrorCode = -906569758,
+                },
                 WarningTraces =
                 {
-                    new ScanRunWarningTrace(),
+                    new ScanRunWarningTrace
+                    {
+                        Code = ScanRunWarningTrace.Types.Code.InsufficientCrawlResults,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.StartScanRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -329,16 +715,36 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 Name = "name1c9368b0",
                 ExecutionState = ScanRun.Types.ExecutionState.Unspecified,
                 ResultState = ScanRun.Types.ResultState.Killed,
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UrlsCrawledCount = 2307837720024124869L,
                 UrlsTestedCount = -373604950692105735L,
                 HasVulnerabilities = true,
                 ProgressPercent = -412774427,
-                ErrorTrace = new ScanRunErrorTrace(),
+                ErrorTrace = new ScanRunErrorTrace
+                {
+                    Code = ScanRunErrorTrace.Types.Code.ScanConfigIssue,
+                    ScanConfigError = new ScanConfigError
+                    {
+                        Code = ScanConfigError.Types.Code.UnableToResolveProjectInfo,
+                        FieldName = "field_namef129f373",
+                    },
+                    MostCommonHttpErrorCode = -906569758,
+                },
                 WarningTraces =
                 {
-                    new ScanRunWarningTrace(),
+                    new ScanRunWarningTrace
+                    {
+                        Code = ScanRunWarningTrace.Types.Code.InsufficientCrawlResults,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.StartScanRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScanRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -363,16 +769,36 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 Name = "name1c9368b0",
                 ExecutionState = ScanRun.Types.ExecutionState.Unspecified,
                 ResultState = ScanRun.Types.ResultState.Killed,
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UrlsCrawledCount = 2307837720024124869L,
                 UrlsTestedCount = -373604950692105735L,
                 HasVulnerabilities = true,
                 ProgressPercent = -412774427,
-                ErrorTrace = new ScanRunErrorTrace(),
+                ErrorTrace = new ScanRunErrorTrace
+                {
+                    Code = ScanRunErrorTrace.Types.Code.ScanConfigIssue,
+                    ScanConfigError = new ScanConfigError
+                    {
+                        Code = ScanConfigError.Types.Code.UnableToResolveProjectInfo,
+                        FieldName = "field_namef129f373",
+                    },
+                    MostCommonHttpErrorCode = -906569758,
+                },
                 WarningTraces =
                 {
-                    new ScanRunWarningTrace(),
+                    new ScanRunWarningTrace
+                    {
+                        Code = ScanRunWarningTrace.Types.Code.InsufficientCrawlResults,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetScanRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -395,16 +821,36 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 Name = "name1c9368b0",
                 ExecutionState = ScanRun.Types.ExecutionState.Unspecified,
                 ResultState = ScanRun.Types.ResultState.Killed,
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UrlsCrawledCount = 2307837720024124869L,
                 UrlsTestedCount = -373604950692105735L,
                 HasVulnerabilities = true,
                 ProgressPercent = -412774427,
-                ErrorTrace = new ScanRunErrorTrace(),
+                ErrorTrace = new ScanRunErrorTrace
+                {
+                    Code = ScanRunErrorTrace.Types.Code.ScanConfigIssue,
+                    ScanConfigError = new ScanConfigError
+                    {
+                        Code = ScanConfigError.Types.Code.UnableToResolveProjectInfo,
+                        FieldName = "field_namef129f373",
+                    },
+                    MostCommonHttpErrorCode = -906569758,
+                },
                 WarningTraces =
                 {
-                    new ScanRunWarningTrace(),
+                    new ScanRunWarningTrace
+                    {
+                        Code = ScanRunWarningTrace.Types.Code.InsufficientCrawlResults,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetScanRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScanRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -429,16 +875,36 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 Name = "name1c9368b0",
                 ExecutionState = ScanRun.Types.ExecutionState.Unspecified,
                 ResultState = ScanRun.Types.ResultState.Killed,
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UrlsCrawledCount = 2307837720024124869L,
                 UrlsTestedCount = -373604950692105735L,
                 HasVulnerabilities = true,
                 ProgressPercent = -412774427,
-                ErrorTrace = new ScanRunErrorTrace(),
+                ErrorTrace = new ScanRunErrorTrace
+                {
+                    Code = ScanRunErrorTrace.Types.Code.ScanConfigIssue,
+                    ScanConfigError = new ScanConfigError
+                    {
+                        Code = ScanConfigError.Types.Code.UnableToResolveProjectInfo,
+                        FieldName = "field_namef129f373",
+                    },
+                    MostCommonHttpErrorCode = -906569758,
+                },
                 WarningTraces =
                 {
-                    new ScanRunWarningTrace(),
+                    new ScanRunWarningTrace
+                    {
+                        Code = ScanRunWarningTrace.Types.Code.InsufficientCrawlResults,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.StopScanRun(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -461,16 +927,36 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 Name = "name1c9368b0",
                 ExecutionState = ScanRun.Types.ExecutionState.Unspecified,
                 ResultState = ScanRun.Types.ResultState.Killed,
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UrlsCrawledCount = 2307837720024124869L,
                 UrlsTestedCount = -373604950692105735L,
                 HasVulnerabilities = true,
                 ProgressPercent = -412774427,
-                ErrorTrace = new ScanRunErrorTrace(),
+                ErrorTrace = new ScanRunErrorTrace
+                {
+                    Code = ScanRunErrorTrace.Types.Code.ScanConfigIssue,
+                    ScanConfigError = new ScanConfigError
+                    {
+                        Code = ScanConfigError.Types.Code.UnableToResolveProjectInfo,
+                        FieldName = "field_namef129f373",
+                    },
+                    MostCommonHttpErrorCode = -906569758,
+                },
                 WarningTraces =
                 {
-                    new ScanRunWarningTrace(),
+                    new ScanRunWarningTrace
+                    {
+                        Code = ScanRunWarningTrace.Types.Code.InsufficientCrawlResults,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.StopScanRunAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ScanRun>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -502,12 +988,61 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 FrameUrl = "frame_urlbbc6a753",
                 FinalUrl = "final_url01c3df1e",
                 TrackingId = "tracking_idc631de68",
-                OutdatedLibrary = new OutdatedLibrary(),
-                ViolatingResource = new ViolatingResource(),
-                VulnerableParameters = new VulnerableParameters(),
-                Xss = new Xss(),
-                VulnerableHeaders = new VulnerableHeaders(),
-                Form = new Form(),
+                OutdatedLibrary = new OutdatedLibrary
+                {
+                    LibraryName = "library_name7c1d65f6",
+                    Version = "version102ff72a",
+                    LearnMoreUrls =
+                    {
+                        "learn_more_urls4e149e3f",
+                    },
+                },
+                ViolatingResource = new ViolatingResource
+                {
+                    ContentType = "content_type085be0ea",
+                    ResourceUrl = "resource_url0cc8a671",
+                },
+                VulnerableParameters = new VulnerableParameters
+                {
+                    ParameterNames =
+                    {
+                        "parameter_namesb9ac2dc2",
+                    },
+                },
+                Xss = new Xss
+                {
+                    StackTraces =
+                    {
+                        "stack_tracesf13efd78",
+                    },
+                    ErrorMessage = "error_messaged73952bd",
+                    AttackVector = Xss.Types.AttackVector.HtmlComment,
+                    StoredXssSeedingUrl = "stored_xss_seeding_url227115c7",
+                },
+                VulnerableHeaders = new VulnerableHeaders
+                {
+                    Headers =
+                    {
+                        new VulnerableHeaders.Types.Header
+                        {
+                            Name = "name1c9368b0",
+                            Value = "value60c16320",
+                        },
+                    },
+                    MissingHeaders =
+                    {
+                        new VulnerableHeaders.Types.Header
+                        {
+                            Name = "name1c9368b0",
+                            Value = "value60c16320",
+                        },
+                    },
+                },
+                Form = new Form
+                {
+                    ActionUri = "action_uridbb9284e",
+                    Fields = { "fieldsd76e5bd0", },
+                },
                 Severity = Finding.Types.Severity.Medium,
             };
             mockGrpcClient.Setup(x => x.GetFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -537,12 +1072,61 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
                 FrameUrl = "frame_urlbbc6a753",
                 FinalUrl = "final_url01c3df1e",
                 TrackingId = "tracking_idc631de68",
-                OutdatedLibrary = new OutdatedLibrary(),
-                ViolatingResource = new ViolatingResource(),
-                VulnerableParameters = new VulnerableParameters(),
-                Xss = new Xss(),
-                VulnerableHeaders = new VulnerableHeaders(),
-                Form = new Form(),
+                OutdatedLibrary = new OutdatedLibrary
+                {
+                    LibraryName = "library_name7c1d65f6",
+                    Version = "version102ff72a",
+                    LearnMoreUrls =
+                    {
+                        "learn_more_urls4e149e3f",
+                    },
+                },
+                ViolatingResource = new ViolatingResource
+                {
+                    ContentType = "content_type085be0ea",
+                    ResourceUrl = "resource_url0cc8a671",
+                },
+                VulnerableParameters = new VulnerableParameters
+                {
+                    ParameterNames =
+                    {
+                        "parameter_namesb9ac2dc2",
+                    },
+                },
+                Xss = new Xss
+                {
+                    StackTraces =
+                    {
+                        "stack_tracesf13efd78",
+                    },
+                    ErrorMessage = "error_messaged73952bd",
+                    AttackVector = Xss.Types.AttackVector.HtmlComment,
+                    StoredXssSeedingUrl = "stored_xss_seeding_url227115c7",
+                },
+                VulnerableHeaders = new VulnerableHeaders
+                {
+                    Headers =
+                    {
+                        new VulnerableHeaders.Types.Header
+                        {
+                            Name = "name1c9368b0",
+                            Value = "value60c16320",
+                        },
+                    },
+                    MissingHeaders =
+                    {
+                        new VulnerableHeaders.Types.Header
+                        {
+                            Name = "name1c9368b0",
+                            Value = "value60c16320",
+                        },
+                    },
+                },
+                Form = new Form
+                {
+                    ActionUri = "action_uridbb9284e",
+                    Fields = { "fieldsd76e5bd0", },
+                },
                 Severity = Finding.Types.Severity.Medium,
             };
             mockGrpcClient.Setup(x => x.GetFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -566,7 +1150,11 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
             {
                 FindingTypeStats =
                 {
-                    new FindingTypeStats(),
+                    new FindingTypeStats
+                    {
+                        FindingType = "finding_type0aa10781",
+                        FindingCount = 222042850,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.ListFindingTypeStats(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -588,7 +1176,11 @@ namespace Google.Cloud.WebSecurityScanner.V1.Tests
             {
                 FindingTypeStats =
                 {
-                    new FindingTypeStats(),
+                    new FindingTypeStats
+                    {
+                        FindingType = "finding_type0aa10781",
+                        FindingCount = 222042850,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.ListFindingTypeStatsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListFindingTypeStatsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
