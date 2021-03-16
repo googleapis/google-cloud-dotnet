@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -35,20 +36,91 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             CreateReadSessionRequest request = new CreateReadSessionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                ReadSession = new ReadSession(),
+                ReadSession = new ReadSession
+                {
+                    ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DataFormat = DataFormat.Arrow,
+                    AvroSchema = new AvroSchema
+                    {
+                        Schema = "schema5f0d55c9",
+                    },
+                    ArrowSchema = new ArrowSchema
+                    {
+                        SerializedSchema = proto::ByteString.CopyFromUtf8("serialized_schema70eab3c9"),
+                    },
+                    TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
+                    TableModifiers = new ReadSession.Types.TableModifiers
+                    {
+                        SnapshotTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ReadOptions = new ReadSession.Types.TableReadOptions
+                    {
+                        SelectedFields =
+                        {
+                            "selected_fieldseee5cfc0",
+                        },
+                        RowRestriction = "row_restrictionc8a53851",
+                    },
+                    Streams =
+                    {
+                        new ReadStream
+                        {
+                            ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                        },
+                    },
+                },
                 MaxStreamCount = 1813871107,
             };
             ReadSession expectedResponse = new ReadSession
             {
                 ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DataFormat = DataFormat.Arrow,
-                AvroSchema = new AvroSchema(),
-                ArrowSchema = new ArrowSchema(),
+                AvroSchema = new AvroSchema
+                {
+                    Schema = "schema5f0d55c9",
+                },
+                ArrowSchema = new ArrowSchema
+                {
+                    SerializedSchema = proto::ByteString.CopyFromUtf8("serialized_schema70eab3c9"),
+                },
                 TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
-                TableModifiers = new ReadSession.Types.TableModifiers(),
-                ReadOptions = new ReadSession.Types.TableReadOptions(),
-                Streams = { new ReadStream(), },
+                TableModifiers = new ReadSession.Types.TableModifiers
+                {
+                    SnapshotTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                ReadOptions = new ReadSession.Types.TableReadOptions
+                {
+                    SelectedFields =
+                    {
+                        "selected_fieldseee5cfc0",
+                    },
+                    RowRestriction = "row_restrictionc8a53851",
+                },
+                Streams =
+                {
+                    new ReadStream
+                    {
+                        ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateReadSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
@@ -64,20 +136,91 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             CreateReadSessionRequest request = new CreateReadSessionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                ReadSession = new ReadSession(),
+                ReadSession = new ReadSession
+                {
+                    ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DataFormat = DataFormat.Arrow,
+                    AvroSchema = new AvroSchema
+                    {
+                        Schema = "schema5f0d55c9",
+                    },
+                    ArrowSchema = new ArrowSchema
+                    {
+                        SerializedSchema = proto::ByteString.CopyFromUtf8("serialized_schema70eab3c9"),
+                    },
+                    TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
+                    TableModifiers = new ReadSession.Types.TableModifiers
+                    {
+                        SnapshotTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ReadOptions = new ReadSession.Types.TableReadOptions
+                    {
+                        SelectedFields =
+                        {
+                            "selected_fieldseee5cfc0",
+                        },
+                        RowRestriction = "row_restrictionc8a53851",
+                    },
+                    Streams =
+                    {
+                        new ReadStream
+                        {
+                            ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                        },
+                    },
+                },
                 MaxStreamCount = 1813871107,
             };
             ReadSession expectedResponse = new ReadSession
             {
                 ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DataFormat = DataFormat.Arrow,
-                AvroSchema = new AvroSchema(),
-                ArrowSchema = new ArrowSchema(),
+                AvroSchema = new AvroSchema
+                {
+                    Schema = "schema5f0d55c9",
+                },
+                ArrowSchema = new ArrowSchema
+                {
+                    SerializedSchema = proto::ByteString.CopyFromUtf8("serialized_schema70eab3c9"),
+                },
                 TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
-                TableModifiers = new ReadSession.Types.TableModifiers(),
-                ReadOptions = new ReadSession.Types.TableReadOptions(),
-                Streams = { new ReadStream(), },
+                TableModifiers = new ReadSession.Types.TableModifiers
+                {
+                    SnapshotTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                ReadOptions = new ReadSession.Types.TableReadOptions
+                {
+                    SelectedFields =
+                    {
+                        "selected_fieldseee5cfc0",
+                    },
+                    RowRestriction = "row_restrictionc8a53851",
+                },
+                Streams =
+                {
+                    new ReadStream
+                    {
+                        ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateReadSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
@@ -95,20 +238,91 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             CreateReadSessionRequest request = new CreateReadSessionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                ReadSession = new ReadSession(),
+                ReadSession = new ReadSession
+                {
+                    ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DataFormat = DataFormat.Arrow,
+                    AvroSchema = new AvroSchema
+                    {
+                        Schema = "schema5f0d55c9",
+                    },
+                    ArrowSchema = new ArrowSchema
+                    {
+                        SerializedSchema = proto::ByteString.CopyFromUtf8("serialized_schema70eab3c9"),
+                    },
+                    TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
+                    TableModifiers = new ReadSession.Types.TableModifiers
+                    {
+                        SnapshotTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ReadOptions = new ReadSession.Types.TableReadOptions
+                    {
+                        SelectedFields =
+                        {
+                            "selected_fieldseee5cfc0",
+                        },
+                        RowRestriction = "row_restrictionc8a53851",
+                    },
+                    Streams =
+                    {
+                        new ReadStream
+                        {
+                            ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                        },
+                    },
+                },
                 MaxStreamCount = 1813871107,
             };
             ReadSession expectedResponse = new ReadSession
             {
                 ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DataFormat = DataFormat.Arrow,
-                AvroSchema = new AvroSchema(),
-                ArrowSchema = new ArrowSchema(),
+                AvroSchema = new AvroSchema
+                {
+                    Schema = "schema5f0d55c9",
+                },
+                ArrowSchema = new ArrowSchema
+                {
+                    SerializedSchema = proto::ByteString.CopyFromUtf8("serialized_schema70eab3c9"),
+                },
                 TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
-                TableModifiers = new ReadSession.Types.TableModifiers(),
-                ReadOptions = new ReadSession.Types.TableReadOptions(),
-                Streams = { new ReadStream(), },
+                TableModifiers = new ReadSession.Types.TableModifiers
+                {
+                    SnapshotTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                ReadOptions = new ReadSession.Types.TableReadOptions
+                {
+                    SelectedFields =
+                    {
+                        "selected_fieldseee5cfc0",
+                    },
+                    RowRestriction = "row_restrictionc8a53851",
+                },
+                Streams =
+                {
+                    new ReadStream
+                    {
+                        ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateReadSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
@@ -124,20 +338,91 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             CreateReadSessionRequest request = new CreateReadSessionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                ReadSession = new ReadSession(),
+                ReadSession = new ReadSession
+                {
+                    ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DataFormat = DataFormat.Arrow,
+                    AvroSchema = new AvroSchema
+                    {
+                        Schema = "schema5f0d55c9",
+                    },
+                    ArrowSchema = new ArrowSchema
+                    {
+                        SerializedSchema = proto::ByteString.CopyFromUtf8("serialized_schema70eab3c9"),
+                    },
+                    TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
+                    TableModifiers = new ReadSession.Types.TableModifiers
+                    {
+                        SnapshotTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ReadOptions = new ReadSession.Types.TableReadOptions
+                    {
+                        SelectedFields =
+                        {
+                            "selected_fieldseee5cfc0",
+                        },
+                        RowRestriction = "row_restrictionc8a53851",
+                    },
+                    Streams =
+                    {
+                        new ReadStream
+                        {
+                            ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                        },
+                    },
+                },
                 MaxStreamCount = 1813871107,
             };
             ReadSession expectedResponse = new ReadSession
             {
                 ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DataFormat = DataFormat.Arrow,
-                AvroSchema = new AvroSchema(),
-                ArrowSchema = new ArrowSchema(),
+                AvroSchema = new AvroSchema
+                {
+                    Schema = "schema5f0d55c9",
+                },
+                ArrowSchema = new ArrowSchema
+                {
+                    SerializedSchema = proto::ByteString.CopyFromUtf8("serialized_schema70eab3c9"),
+                },
                 TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
-                TableModifiers = new ReadSession.Types.TableModifiers(),
-                ReadOptions = new ReadSession.Types.TableReadOptions(),
-                Streams = { new ReadStream(), },
+                TableModifiers = new ReadSession.Types.TableModifiers
+                {
+                    SnapshotTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                ReadOptions = new ReadSession.Types.TableReadOptions
+                {
+                    SelectedFields =
+                    {
+                        "selected_fieldseee5cfc0",
+                    },
+                    RowRestriction = "row_restrictionc8a53851",
+                },
+                Streams =
+                {
+                    new ReadStream
+                    {
+                        ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateReadSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
@@ -155,20 +440,91 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             CreateReadSessionRequest request = new CreateReadSessionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                ReadSession = new ReadSession(),
+                ReadSession = new ReadSession
+                {
+                    ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DataFormat = DataFormat.Arrow,
+                    AvroSchema = new AvroSchema
+                    {
+                        Schema = "schema5f0d55c9",
+                    },
+                    ArrowSchema = new ArrowSchema
+                    {
+                        SerializedSchema = proto::ByteString.CopyFromUtf8("serialized_schema70eab3c9"),
+                    },
+                    TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
+                    TableModifiers = new ReadSession.Types.TableModifiers
+                    {
+                        SnapshotTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ReadOptions = new ReadSession.Types.TableReadOptions
+                    {
+                        SelectedFields =
+                        {
+                            "selected_fieldseee5cfc0",
+                        },
+                        RowRestriction = "row_restrictionc8a53851",
+                    },
+                    Streams =
+                    {
+                        new ReadStream
+                        {
+                            ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                        },
+                    },
+                },
                 MaxStreamCount = 1813871107,
             };
             ReadSession expectedResponse = new ReadSession
             {
                 ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DataFormat = DataFormat.Arrow,
-                AvroSchema = new AvroSchema(),
-                ArrowSchema = new ArrowSchema(),
+                AvroSchema = new AvroSchema
+                {
+                    Schema = "schema5f0d55c9",
+                },
+                ArrowSchema = new ArrowSchema
+                {
+                    SerializedSchema = proto::ByteString.CopyFromUtf8("serialized_schema70eab3c9"),
+                },
                 TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
-                TableModifiers = new ReadSession.Types.TableModifiers(),
-                ReadOptions = new ReadSession.Types.TableReadOptions(),
-                Streams = { new ReadStream(), },
+                TableModifiers = new ReadSession.Types.TableModifiers
+                {
+                    SnapshotTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                ReadOptions = new ReadSession.Types.TableReadOptions
+                {
+                    SelectedFields =
+                    {
+                        "selected_fieldseee5cfc0",
+                    },
+                    RowRestriction = "row_restrictionc8a53851",
+                },
+                Streams =
+                {
+                    new ReadStream
+                    {
+                        ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateReadSession(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
@@ -184,20 +540,91 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             CreateReadSessionRequest request = new CreateReadSessionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                ReadSession = new ReadSession(),
+                ReadSession = new ReadSession
+                {
+                    ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DataFormat = DataFormat.Arrow,
+                    AvroSchema = new AvroSchema
+                    {
+                        Schema = "schema5f0d55c9",
+                    },
+                    ArrowSchema = new ArrowSchema
+                    {
+                        SerializedSchema = proto::ByteString.CopyFromUtf8("serialized_schema70eab3c9"),
+                    },
+                    TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
+                    TableModifiers = new ReadSession.Types.TableModifiers
+                    {
+                        SnapshotTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ReadOptions = new ReadSession.Types.TableReadOptions
+                    {
+                        SelectedFields =
+                        {
+                            "selected_fieldseee5cfc0",
+                        },
+                        RowRestriction = "row_restrictionc8a53851",
+                    },
+                    Streams =
+                    {
+                        new ReadStream
+                        {
+                            ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                        },
+                    },
+                },
                 MaxStreamCount = 1813871107,
             };
             ReadSession expectedResponse = new ReadSession
             {
                 ReadSessionName = ReadSessionName.FromProjectLocationSession("[PROJECT]", "[LOCATION]", "[SESSION]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DataFormat = DataFormat.Arrow,
-                AvroSchema = new AvroSchema(),
-                ArrowSchema = new ArrowSchema(),
+                AvroSchema = new AvroSchema
+                {
+                    Schema = "schema5f0d55c9",
+                },
+                ArrowSchema = new ArrowSchema
+                {
+                    SerializedSchema = proto::ByteString.CopyFromUtf8("serialized_schema70eab3c9"),
+                },
                 TableAsTableName = TableName.FromProjectDatasetTable("[PROJECT]", "[DATASET]", "[TABLE]"),
-                TableModifiers = new ReadSession.Types.TableModifiers(),
-                ReadOptions = new ReadSession.Types.TableReadOptions(),
-                Streams = { new ReadStream(), },
+                TableModifiers = new ReadSession.Types.TableModifiers
+                {
+                    SnapshotTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                ReadOptions = new ReadSession.Types.TableReadOptions
+                {
+                    SelectedFields =
+                    {
+                        "selected_fieldseee5cfc0",
+                    },
+                    RowRestriction = "row_restrictionc8a53851",
+                },
+                Streams =
+                {
+                    new ReadStream
+                    {
+                        ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateReadSessionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReadSession>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
@@ -219,8 +646,14 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             };
             SplitReadStreamResponse expectedResponse = new SplitReadStreamResponse
             {
-                PrimaryStream = new ReadStream(),
-                RemainderStream = new ReadStream(),
+                PrimaryStream = new ReadStream
+                {
+                    ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                },
+                RemainderStream = new ReadStream
+                {
+                    ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                },
             };
             mockGrpcClient.Setup(x => x.SplitReadStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
@@ -240,8 +673,14 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
             };
             SplitReadStreamResponse expectedResponse = new SplitReadStreamResponse
             {
-                PrimaryStream = new ReadStream(),
-                RemainderStream = new ReadStream(),
+                PrimaryStream = new ReadStream
+                {
+                    ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                },
+                RemainderStream = new ReadStream
+                {
+                    ReadStreamName = ReadStreamName.FromProjectLocationSessionStream("[PROJECT]", "[LOCATION]", "[SESSION]", "[STREAM]"),
+                },
             };
             mockGrpcClient.Setup(x => x.SplitReadStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SplitReadStreamResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigQueryReadClient client = new BigQueryReadClientImpl(mockGrpcClient.Object, null);
