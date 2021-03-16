@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -37,24 +38,610 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 ParentAsCertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCertificateAuthority("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]"),
                 CertificateId = "certificate_id007930d5",
-                Certificate = new Certificate(),
+                Certificate = new Certificate
+                {
+                    CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
+                    PemCsr = "pem_csr6e61aeb4",
+                    Config = new CertificateConfig
+                    {
+                        SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        ReusableConfig = new ReusableConfigWrapper
+                        {
+                            ReusableConfig = "reusable_configae98ae10",
+                            ReusableConfigValues = new ReusableConfigValues
+                            {
+                                KeyUsage = new KeyUsage
+                                {
+                                    BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                    {
+                                        DigitalSignature = false,
+                                        ContentCommitment = false,
+                                        KeyEncipherment = true,
+                                        DataEncipherment = false,
+                                        KeyAgreement = true,
+                                        CertSign = false,
+                                        CrlSign = false,
+                                        EncipherOnly = false,
+                                        DecipherOnly = false,
+                                    },
+                                    ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                    {
+                                        ServerAuth = false,
+                                        ClientAuth = false,
+                                        CodeSigning = false,
+                                        EmailProtection = true,
+                                        TimeStamping = true,
+                                        OcspSigning = false,
+                                    },
+                                    UnknownExtendedKeyUsages =
+                                    {
+                                        new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                    },
+                                },
+                                CaOptions = new ReusableConfigValues.Types.CaOptions
+                                {
+                                    IsCa = false,
+                                    MaxIssuerPathLength = 1013168332,
+                                },
+                                PolicyIds =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                                AiaOcspServers =
+                                {
+                                    "aia_ocsp_servers8af8fe42",
+                                },
+                                AdditionalExtensions =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                    },
+                    Lifetime = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RevocationDetails = new Certificate.Types.RevocationDetails
+                    {
+                        RevocationState = RevocationReason.CessationOfOperation,
+                        RevocationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    PemCertificate = "pem_certificate5c1b61ff",
+                    CertificateDescription = new CertificateDescription
+                    {
+                        SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            HexSerialNumber = "hex_serial_number8e6f08bd",
+                            Lifetime = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotBeforeTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotAfterTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        ConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                        SubjectKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        AuthorityKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        CrlDistributionPoints =
+                        {
+                            "crl_distribution_pointsb1c6ae8c",
+                        },
+                        AiaIssuingCertificateUrls =
+                        {
+                            "aia_issuing_certificate_urlsc1dac48a",
+                        },
+                        CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                        {
+                            Sha256Hash = "sha256_hashbc0df779",
+                        },
+                    },
+                    PemCertificateChain =
+                    {
+                        "pem_certificate_chain1eff25c5",
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 RequestId = "request_id362c8df6",
             };
             Certificate expectedResponse = new Certificate
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -79,24 +666,610 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 ParentAsCertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCertificateAuthority("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]"),
                 CertificateId = "certificate_id007930d5",
-                Certificate = new Certificate(),
+                Certificate = new Certificate
+                {
+                    CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
+                    PemCsr = "pem_csr6e61aeb4",
+                    Config = new CertificateConfig
+                    {
+                        SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        ReusableConfig = new ReusableConfigWrapper
+                        {
+                            ReusableConfig = "reusable_configae98ae10",
+                            ReusableConfigValues = new ReusableConfigValues
+                            {
+                                KeyUsage = new KeyUsage
+                                {
+                                    BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                    {
+                                        DigitalSignature = false,
+                                        ContentCommitment = false,
+                                        KeyEncipherment = true,
+                                        DataEncipherment = false,
+                                        KeyAgreement = true,
+                                        CertSign = false,
+                                        CrlSign = false,
+                                        EncipherOnly = false,
+                                        DecipherOnly = false,
+                                    },
+                                    ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                    {
+                                        ServerAuth = false,
+                                        ClientAuth = false,
+                                        CodeSigning = false,
+                                        EmailProtection = true,
+                                        TimeStamping = true,
+                                        OcspSigning = false,
+                                    },
+                                    UnknownExtendedKeyUsages =
+                                    {
+                                        new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                    },
+                                },
+                                CaOptions = new ReusableConfigValues.Types.CaOptions
+                                {
+                                    IsCa = false,
+                                    MaxIssuerPathLength = 1013168332,
+                                },
+                                PolicyIds =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                                AiaOcspServers =
+                                {
+                                    "aia_ocsp_servers8af8fe42",
+                                },
+                                AdditionalExtensions =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                    },
+                    Lifetime = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RevocationDetails = new Certificate.Types.RevocationDetails
+                    {
+                        RevocationState = RevocationReason.CessationOfOperation,
+                        RevocationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    PemCertificate = "pem_certificate5c1b61ff",
+                    CertificateDescription = new CertificateDescription
+                    {
+                        SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            HexSerialNumber = "hex_serial_number8e6f08bd",
+                            Lifetime = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotBeforeTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotAfterTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        ConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                        SubjectKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        AuthorityKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        CrlDistributionPoints =
+                        {
+                            "crl_distribution_pointsb1c6ae8c",
+                        },
+                        AiaIssuingCertificateUrls =
+                        {
+                            "aia_issuing_certificate_urlsc1dac48a",
+                        },
+                        CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                        {
+                            Sha256Hash = "sha256_hashbc0df779",
+                        },
+                    },
+                    PemCertificateChain =
+                    {
+                        "pem_certificate_chain1eff25c5",
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 RequestId = "request_id362c8df6",
             };
             Certificate expectedResponse = new Certificate
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -123,23 +1296,609 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 ParentAsCertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCertificateAuthority("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]"),
                 CertificateId = "certificate_id007930d5",
-                Certificate = new Certificate(),
+                Certificate = new Certificate
+                {
+                    CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
+                    PemCsr = "pem_csr6e61aeb4",
+                    Config = new CertificateConfig
+                    {
+                        SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        ReusableConfig = new ReusableConfigWrapper
+                        {
+                            ReusableConfig = "reusable_configae98ae10",
+                            ReusableConfigValues = new ReusableConfigValues
+                            {
+                                KeyUsage = new KeyUsage
+                                {
+                                    BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                    {
+                                        DigitalSignature = false,
+                                        ContentCommitment = false,
+                                        KeyEncipherment = true,
+                                        DataEncipherment = false,
+                                        KeyAgreement = true,
+                                        CertSign = false,
+                                        CrlSign = false,
+                                        EncipherOnly = false,
+                                        DecipherOnly = false,
+                                    },
+                                    ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                    {
+                                        ServerAuth = false,
+                                        ClientAuth = false,
+                                        CodeSigning = false,
+                                        EmailProtection = true,
+                                        TimeStamping = true,
+                                        OcspSigning = false,
+                                    },
+                                    UnknownExtendedKeyUsages =
+                                    {
+                                        new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                    },
+                                },
+                                CaOptions = new ReusableConfigValues.Types.CaOptions
+                                {
+                                    IsCa = false,
+                                    MaxIssuerPathLength = 1013168332,
+                                },
+                                PolicyIds =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                                AiaOcspServers =
+                                {
+                                    "aia_ocsp_servers8af8fe42",
+                                },
+                                AdditionalExtensions =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                    },
+                    Lifetime = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RevocationDetails = new Certificate.Types.RevocationDetails
+                    {
+                        RevocationState = RevocationReason.CessationOfOperation,
+                        RevocationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    PemCertificate = "pem_certificate5c1b61ff",
+                    CertificateDescription = new CertificateDescription
+                    {
+                        SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            HexSerialNumber = "hex_serial_number8e6f08bd",
+                            Lifetime = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotBeforeTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotAfterTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        ConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                        SubjectKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        AuthorityKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        CrlDistributionPoints =
+                        {
+                            "crl_distribution_pointsb1c6ae8c",
+                        },
+                        AiaIssuingCertificateUrls =
+                        {
+                            "aia_issuing_certificate_urlsc1dac48a",
+                        },
+                        CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                        {
+                            Sha256Hash = "sha256_hashbc0df779",
+                        },
+                    },
+                    PemCertificateChain =
+                    {
+                        "pem_certificate_chain1eff25c5",
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Certificate expectedResponse = new Certificate
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -164,23 +1923,609 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 ParentAsCertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCertificateAuthority("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]"),
                 CertificateId = "certificate_id007930d5",
-                Certificate = new Certificate(),
+                Certificate = new Certificate
+                {
+                    CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
+                    PemCsr = "pem_csr6e61aeb4",
+                    Config = new CertificateConfig
+                    {
+                        SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        ReusableConfig = new ReusableConfigWrapper
+                        {
+                            ReusableConfig = "reusable_configae98ae10",
+                            ReusableConfigValues = new ReusableConfigValues
+                            {
+                                KeyUsage = new KeyUsage
+                                {
+                                    BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                    {
+                                        DigitalSignature = false,
+                                        ContentCommitment = false,
+                                        KeyEncipherment = true,
+                                        DataEncipherment = false,
+                                        KeyAgreement = true,
+                                        CertSign = false,
+                                        CrlSign = false,
+                                        EncipherOnly = false,
+                                        DecipherOnly = false,
+                                    },
+                                    ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                    {
+                                        ServerAuth = false,
+                                        ClientAuth = false,
+                                        CodeSigning = false,
+                                        EmailProtection = true,
+                                        TimeStamping = true,
+                                        OcspSigning = false,
+                                    },
+                                    UnknownExtendedKeyUsages =
+                                    {
+                                        new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                    },
+                                },
+                                CaOptions = new ReusableConfigValues.Types.CaOptions
+                                {
+                                    IsCa = false,
+                                    MaxIssuerPathLength = 1013168332,
+                                },
+                                PolicyIds =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                                AiaOcspServers =
+                                {
+                                    "aia_ocsp_servers8af8fe42",
+                                },
+                                AdditionalExtensions =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                    },
+                    Lifetime = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RevocationDetails = new Certificate.Types.RevocationDetails
+                    {
+                        RevocationState = RevocationReason.CessationOfOperation,
+                        RevocationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    PemCertificate = "pem_certificate5c1b61ff",
+                    CertificateDescription = new CertificateDescription
+                    {
+                        SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            HexSerialNumber = "hex_serial_number8e6f08bd",
+                            Lifetime = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotBeforeTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotAfterTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        ConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                        SubjectKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        AuthorityKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        CrlDistributionPoints =
+                        {
+                            "crl_distribution_pointsb1c6ae8c",
+                        },
+                        AiaIssuingCertificateUrls =
+                        {
+                            "aia_issuing_certificate_urlsc1dac48a",
+                        },
+                        CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                        {
+                            Sha256Hash = "sha256_hashbc0df779",
+                        },
+                    },
+                    PemCertificateChain =
+                    {
+                        "pem_certificate_chain1eff25c5",
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Certificate expectedResponse = new Certificate
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -207,23 +2552,609 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 ParentAsCertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCertificateAuthority("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]"),
                 CertificateId = "certificate_id007930d5",
-                Certificate = new Certificate(),
+                Certificate = new Certificate
+                {
+                    CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
+                    PemCsr = "pem_csr6e61aeb4",
+                    Config = new CertificateConfig
+                    {
+                        SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        ReusableConfig = new ReusableConfigWrapper
+                        {
+                            ReusableConfig = "reusable_configae98ae10",
+                            ReusableConfigValues = new ReusableConfigValues
+                            {
+                                KeyUsage = new KeyUsage
+                                {
+                                    BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                    {
+                                        DigitalSignature = false,
+                                        ContentCommitment = false,
+                                        KeyEncipherment = true,
+                                        DataEncipherment = false,
+                                        KeyAgreement = true,
+                                        CertSign = false,
+                                        CrlSign = false,
+                                        EncipherOnly = false,
+                                        DecipherOnly = false,
+                                    },
+                                    ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                    {
+                                        ServerAuth = false,
+                                        ClientAuth = false,
+                                        CodeSigning = false,
+                                        EmailProtection = true,
+                                        TimeStamping = true,
+                                        OcspSigning = false,
+                                    },
+                                    UnknownExtendedKeyUsages =
+                                    {
+                                        new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                    },
+                                },
+                                CaOptions = new ReusableConfigValues.Types.CaOptions
+                                {
+                                    IsCa = false,
+                                    MaxIssuerPathLength = 1013168332,
+                                },
+                                PolicyIds =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                                AiaOcspServers =
+                                {
+                                    "aia_ocsp_servers8af8fe42",
+                                },
+                                AdditionalExtensions =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                    },
+                    Lifetime = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RevocationDetails = new Certificate.Types.RevocationDetails
+                    {
+                        RevocationState = RevocationReason.CessationOfOperation,
+                        RevocationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    PemCertificate = "pem_certificate5c1b61ff",
+                    CertificateDescription = new CertificateDescription
+                    {
+                        SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            HexSerialNumber = "hex_serial_number8e6f08bd",
+                            Lifetime = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotBeforeTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotAfterTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        ConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                        SubjectKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        AuthorityKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        CrlDistributionPoints =
+                        {
+                            "crl_distribution_pointsb1c6ae8c",
+                        },
+                        AiaIssuingCertificateUrls =
+                        {
+                            "aia_issuing_certificate_urlsc1dac48a",
+                        },
+                        CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                        {
+                            Sha256Hash = "sha256_hashbc0df779",
+                        },
+                    },
+                    PemCertificateChain =
+                    {
+                        "pem_certificate_chain1eff25c5",
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Certificate expectedResponse = new Certificate
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -248,23 +3179,609 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 ParentAsCertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCertificateAuthority("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]"),
                 CertificateId = "certificate_id007930d5",
-                Certificate = new Certificate(),
+                Certificate = new Certificate
+                {
+                    CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
+                    PemCsr = "pem_csr6e61aeb4",
+                    Config = new CertificateConfig
+                    {
+                        SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        ReusableConfig = new ReusableConfigWrapper
+                        {
+                            ReusableConfig = "reusable_configae98ae10",
+                            ReusableConfigValues = new ReusableConfigValues
+                            {
+                                KeyUsage = new KeyUsage
+                                {
+                                    BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                    {
+                                        DigitalSignature = false,
+                                        ContentCommitment = false,
+                                        KeyEncipherment = true,
+                                        DataEncipherment = false,
+                                        KeyAgreement = true,
+                                        CertSign = false,
+                                        CrlSign = false,
+                                        EncipherOnly = false,
+                                        DecipherOnly = false,
+                                    },
+                                    ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                    {
+                                        ServerAuth = false,
+                                        ClientAuth = false,
+                                        CodeSigning = false,
+                                        EmailProtection = true,
+                                        TimeStamping = true,
+                                        OcspSigning = false,
+                                    },
+                                    UnknownExtendedKeyUsages =
+                                    {
+                                        new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                    },
+                                },
+                                CaOptions = new ReusableConfigValues.Types.CaOptions
+                                {
+                                    IsCa = false,
+                                    MaxIssuerPathLength = 1013168332,
+                                },
+                                PolicyIds =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                                AiaOcspServers =
+                                {
+                                    "aia_ocsp_servers8af8fe42",
+                                },
+                                AdditionalExtensions =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                    },
+                    Lifetime = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RevocationDetails = new Certificate.Types.RevocationDetails
+                    {
+                        RevocationState = RevocationReason.CessationOfOperation,
+                        RevocationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    PemCertificate = "pem_certificate5c1b61ff",
+                    CertificateDescription = new CertificateDescription
+                    {
+                        SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            HexSerialNumber = "hex_serial_number8e6f08bd",
+                            Lifetime = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotBeforeTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotAfterTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        ConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                        SubjectKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        AuthorityKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        CrlDistributionPoints =
+                        {
+                            "crl_distribution_pointsb1c6ae8c",
+                        },
+                        AiaIssuingCertificateUrls =
+                        {
+                            "aia_issuing_certificate_urlsc1dac48a",
+                        },
+                        CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                        {
+                            Sha256Hash = "sha256_hashbc0df779",
+                        },
+                    },
+                    PemCertificateChain =
+                    {
+                        "pem_certificate_chain1eff25c5",
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Certificate expectedResponse = new Certificate
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -295,17 +3812,299 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -334,17 +4133,299 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -375,17 +4456,299 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -414,17 +4777,299 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -455,17 +5100,299 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -494,17 +5421,299 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -537,17 +5746,299 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -578,17 +6069,299 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -619,17 +6392,299 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -658,17 +6713,299 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -699,17 +7036,299 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -738,17 +7357,299 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -773,25 +7674,614 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateCertificateRequest request = new UpdateCertificateRequest
             {
-                Certificate = new Certificate(),
-                UpdateMask = new wkt::FieldMask(),
+                Certificate = new Certificate
+                {
+                    CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
+                    PemCsr = "pem_csr6e61aeb4",
+                    Config = new CertificateConfig
+                    {
+                        SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        ReusableConfig = new ReusableConfigWrapper
+                        {
+                            ReusableConfig = "reusable_configae98ae10",
+                            ReusableConfigValues = new ReusableConfigValues
+                            {
+                                KeyUsage = new KeyUsage
+                                {
+                                    BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                    {
+                                        DigitalSignature = false,
+                                        ContentCommitment = false,
+                                        KeyEncipherment = true,
+                                        DataEncipherment = false,
+                                        KeyAgreement = true,
+                                        CertSign = false,
+                                        CrlSign = false,
+                                        EncipherOnly = false,
+                                        DecipherOnly = false,
+                                    },
+                                    ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                    {
+                                        ServerAuth = false,
+                                        ClientAuth = false,
+                                        CodeSigning = false,
+                                        EmailProtection = true,
+                                        TimeStamping = true,
+                                        OcspSigning = false,
+                                    },
+                                    UnknownExtendedKeyUsages =
+                                    {
+                                        new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                    },
+                                },
+                                CaOptions = new ReusableConfigValues.Types.CaOptions
+                                {
+                                    IsCa = false,
+                                    MaxIssuerPathLength = 1013168332,
+                                },
+                                PolicyIds =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                                AiaOcspServers =
+                                {
+                                    "aia_ocsp_servers8af8fe42",
+                                },
+                                AdditionalExtensions =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                    },
+                    Lifetime = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RevocationDetails = new Certificate.Types.RevocationDetails
+                    {
+                        RevocationState = RevocationReason.CessationOfOperation,
+                        RevocationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    PemCertificate = "pem_certificate5c1b61ff",
+                    CertificateDescription = new CertificateDescription
+                    {
+                        SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            HexSerialNumber = "hex_serial_number8e6f08bd",
+                            Lifetime = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotBeforeTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotAfterTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        ConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                        SubjectKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        AuthorityKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        CrlDistributionPoints =
+                        {
+                            "crl_distribution_pointsb1c6ae8c",
+                        },
+                        AiaIssuingCertificateUrls =
+                        {
+                            "aia_issuing_certificate_urlsc1dac48a",
+                        },
+                        CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                        {
+                            Sha256Hash = "sha256_hashbc0df779",
+                        },
+                    },
+                    PemCertificateChain =
+                    {
+                        "pem_certificate_chain1eff25c5",
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
                 RequestId = "request_id362c8df6",
             };
             Certificate expectedResponse = new Certificate
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -814,25 +8304,614 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateCertificateRequest request = new UpdateCertificateRequest
             {
-                Certificate = new Certificate(),
-                UpdateMask = new wkt::FieldMask(),
+                Certificate = new Certificate
+                {
+                    CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
+                    PemCsr = "pem_csr6e61aeb4",
+                    Config = new CertificateConfig
+                    {
+                        SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        ReusableConfig = new ReusableConfigWrapper
+                        {
+                            ReusableConfig = "reusable_configae98ae10",
+                            ReusableConfigValues = new ReusableConfigValues
+                            {
+                                KeyUsage = new KeyUsage
+                                {
+                                    BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                    {
+                                        DigitalSignature = false,
+                                        ContentCommitment = false,
+                                        KeyEncipherment = true,
+                                        DataEncipherment = false,
+                                        KeyAgreement = true,
+                                        CertSign = false,
+                                        CrlSign = false,
+                                        EncipherOnly = false,
+                                        DecipherOnly = false,
+                                    },
+                                    ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                    {
+                                        ServerAuth = false,
+                                        ClientAuth = false,
+                                        CodeSigning = false,
+                                        EmailProtection = true,
+                                        TimeStamping = true,
+                                        OcspSigning = false,
+                                    },
+                                    UnknownExtendedKeyUsages =
+                                    {
+                                        new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                    },
+                                },
+                                CaOptions = new ReusableConfigValues.Types.CaOptions
+                                {
+                                    IsCa = false,
+                                    MaxIssuerPathLength = 1013168332,
+                                },
+                                PolicyIds =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                                AiaOcspServers =
+                                {
+                                    "aia_ocsp_servers8af8fe42",
+                                },
+                                AdditionalExtensions =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                    },
+                    Lifetime = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RevocationDetails = new Certificate.Types.RevocationDetails
+                    {
+                        RevocationState = RevocationReason.CessationOfOperation,
+                        RevocationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    PemCertificate = "pem_certificate5c1b61ff",
+                    CertificateDescription = new CertificateDescription
+                    {
+                        SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            HexSerialNumber = "hex_serial_number8e6f08bd",
+                            Lifetime = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotBeforeTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotAfterTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        ConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                        SubjectKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        AuthorityKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        CrlDistributionPoints =
+                        {
+                            "crl_distribution_pointsb1c6ae8c",
+                        },
+                        AiaIssuingCertificateUrls =
+                        {
+                            "aia_issuing_certificate_urlsc1dac48a",
+                        },
+                        CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                        {
+                            Sha256Hash = "sha256_hashbc0df779",
+                        },
+                    },
+                    PemCertificateChain =
+                    {
+                        "pem_certificate_chain1eff25c5",
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
                 RequestId = "request_id362c8df6",
             };
             Certificate expectedResponse = new Certificate
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -857,24 +8936,613 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateCertificateRequest request = new UpdateCertificateRequest
             {
-                Certificate = new Certificate(),
-                UpdateMask = new wkt::FieldMask(),
+                Certificate = new Certificate
+                {
+                    CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
+                    PemCsr = "pem_csr6e61aeb4",
+                    Config = new CertificateConfig
+                    {
+                        SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        ReusableConfig = new ReusableConfigWrapper
+                        {
+                            ReusableConfig = "reusable_configae98ae10",
+                            ReusableConfigValues = new ReusableConfigValues
+                            {
+                                KeyUsage = new KeyUsage
+                                {
+                                    BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                    {
+                                        DigitalSignature = false,
+                                        ContentCommitment = false,
+                                        KeyEncipherment = true,
+                                        DataEncipherment = false,
+                                        KeyAgreement = true,
+                                        CertSign = false,
+                                        CrlSign = false,
+                                        EncipherOnly = false,
+                                        DecipherOnly = false,
+                                    },
+                                    ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                    {
+                                        ServerAuth = false,
+                                        ClientAuth = false,
+                                        CodeSigning = false,
+                                        EmailProtection = true,
+                                        TimeStamping = true,
+                                        OcspSigning = false,
+                                    },
+                                    UnknownExtendedKeyUsages =
+                                    {
+                                        new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                    },
+                                },
+                                CaOptions = new ReusableConfigValues.Types.CaOptions
+                                {
+                                    IsCa = false,
+                                    MaxIssuerPathLength = 1013168332,
+                                },
+                                PolicyIds =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                                AiaOcspServers =
+                                {
+                                    "aia_ocsp_servers8af8fe42",
+                                },
+                                AdditionalExtensions =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                    },
+                    Lifetime = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RevocationDetails = new Certificate.Types.RevocationDetails
+                    {
+                        RevocationState = RevocationReason.CessationOfOperation,
+                        RevocationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    PemCertificate = "pem_certificate5c1b61ff",
+                    CertificateDescription = new CertificateDescription
+                    {
+                        SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            HexSerialNumber = "hex_serial_number8e6f08bd",
+                            Lifetime = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotBeforeTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotAfterTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        ConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                        SubjectKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        AuthorityKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        CrlDistributionPoints =
+                        {
+                            "crl_distribution_pointsb1c6ae8c",
+                        },
+                        AiaIssuingCertificateUrls =
+                        {
+                            "aia_issuing_certificate_urlsc1dac48a",
+                        },
+                        CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                        {
+                            Sha256Hash = "sha256_hashbc0df779",
+                        },
+                    },
+                    PemCertificateChain =
+                    {
+                        "pem_certificate_chain1eff25c5",
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Certificate expectedResponse = new Certificate
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -897,24 +9565,613 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateCertificateRequest request = new UpdateCertificateRequest
             {
-                Certificate = new Certificate(),
-                UpdateMask = new wkt::FieldMask(),
+                Certificate = new Certificate
+                {
+                    CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
+                    PemCsr = "pem_csr6e61aeb4",
+                    Config = new CertificateConfig
+                    {
+                        SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        ReusableConfig = new ReusableConfigWrapper
+                        {
+                            ReusableConfig = "reusable_configae98ae10",
+                            ReusableConfigValues = new ReusableConfigValues
+                            {
+                                KeyUsage = new KeyUsage
+                                {
+                                    BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                    {
+                                        DigitalSignature = false,
+                                        ContentCommitment = false,
+                                        KeyEncipherment = true,
+                                        DataEncipherment = false,
+                                        KeyAgreement = true,
+                                        CertSign = false,
+                                        CrlSign = false,
+                                        EncipherOnly = false,
+                                        DecipherOnly = false,
+                                    },
+                                    ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                    {
+                                        ServerAuth = false,
+                                        ClientAuth = false,
+                                        CodeSigning = false,
+                                        EmailProtection = true,
+                                        TimeStamping = true,
+                                        OcspSigning = false,
+                                    },
+                                    UnknownExtendedKeyUsages =
+                                    {
+                                        new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                    },
+                                },
+                                CaOptions = new ReusableConfigValues.Types.CaOptions
+                                {
+                                    IsCa = false,
+                                    MaxIssuerPathLength = 1013168332,
+                                },
+                                PolicyIds =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                                AiaOcspServers =
+                                {
+                                    "aia_ocsp_servers8af8fe42",
+                                },
+                                AdditionalExtensions =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                    },
+                    Lifetime = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RevocationDetails = new Certificate.Types.RevocationDetails
+                    {
+                        RevocationState = RevocationReason.CessationOfOperation,
+                        RevocationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    PemCertificate = "pem_certificate5c1b61ff",
+                    CertificateDescription = new CertificateDescription
+                    {
+                        SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            HexSerialNumber = "hex_serial_number8e6f08bd",
+                            Lifetime = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotBeforeTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotAfterTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        ConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                        SubjectKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        AuthorityKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        CrlDistributionPoints =
+                        {
+                            "crl_distribution_pointsb1c6ae8c",
+                        },
+                        AiaIssuingCertificateUrls =
+                        {
+                            "aia_issuing_certificate_urlsc1dac48a",
+                        },
+                        CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                        {
+                            Sha256Hash = "sha256_hashbc0df779",
+                        },
+                    },
+                    PemCertificateChain =
+                    {
+                        "pem_certificate_chain1eff25c5",
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Certificate expectedResponse = new Certificate
             {
                 CertificateName = CertificateName.FromProjectLocationCertificateAuthorityCertificate("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]", "[CERTIFICATE]"),
                 PemCsr = "pem_csr6e61aeb4",
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                RevocationDetails = new Certificate.Types.RevocationDetails(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RevocationDetails = new Certificate.Types.RevocationDetails
+                {
+                    RevocationState = RevocationReason.CessationOfOperation,
+                    RevocationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 PemCertificate = "pem_certificate5c1b61ff",
-                CertificateDescription = new CertificateDescription(),
+                CertificateDescription = new CertificateDescription
+                {
+                    SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        Lifetime = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotBeforeTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        NotAfterTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    ConfigValues = new ReusableConfigValues
+                    {
+                        KeyUsage = new KeyUsage
+                        {
+                            BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                            {
+                                DigitalSignature = false,
+                                ContentCommitment = false,
+                                KeyEncipherment = true,
+                                DataEncipherment = false,
+                                KeyAgreement = true,
+                                CertSign = false,
+                                CrlSign = false,
+                                EncipherOnly = false,
+                                DecipherOnly = false,
+                            },
+                            ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                            {
+                                ServerAuth = false,
+                                ClientAuth = false,
+                                CodeSigning = false,
+                                EmailProtection = true,
+                                TimeStamping = true,
+                                OcspSigning = false,
+                            },
+                            UnknownExtendedKeyUsages =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                        },
+                        CaOptions = new ReusableConfigValues.Types.CaOptions
+                        {
+                            IsCa = false,
+                            MaxIssuerPathLength = 1013168332,
+                        },
+                        PolicyIds =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                        AiaOcspServers =
+                        {
+                            "aia_ocsp_servers8af8fe42",
+                        },
+                        AdditionalExtensions =
+                        {
+                            new X509Extension
+                            {
+                                ObjectId = new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                                Critical = false,
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                    SubjectKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    AuthorityKeyId = new CertificateDescription.Types.KeyId
+                    {
+                        KeyId_ = "key_id2691f630",
+                    },
+                    CrlDistributionPoints =
+                    {
+                        "crl_distribution_pointsb1c6ae8c",
+                    },
+                    AiaIssuingCertificateUrls =
+                    {
+                        "aia_issuing_certificate_urlsc1dac48a",
+                    },
+                    CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                    {
+                        Sha256Hash = "sha256_hashbc0df779",
+                    },
+                },
                 PemCertificateChain =
                 {
                     "pem_certificate_chain1eff25c5",
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1072,11 +10329,326 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCertificateAuthority("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]"),
                 Type = CertificateAuthority.Types.Type.Unspecified,
                 Tier = CertificateAuthority.Types.Tier.Enterprise,
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                KeySpec = new CertificateAuthority.Types.KeyVersionSpec(),
-                CertificatePolicy = new CertificateAuthority.Types.CertificateAuthorityPolicy(),
-                IssuingOptions = new CertificateAuthority.Types.IssuingOptions(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                KeySpec = new CertificateAuthority.Types.KeyVersionSpec
+                {
+                    CloudKmsKeyVersion = "cloud_kms_key_versiona51c7572",
+                    Algorithm = CertificateAuthority.Types.SignHashAlgorithm.EcP256Sha256,
+                },
+                CertificatePolicy = new CertificateAuthority.Types.CertificateAuthorityPolicy
+                {
+                    AllowedConfigList = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.AllowedConfigList
+                    {
+                        AllowedConfigValues =
+                        {
+                            new ReusableConfigWrapper
+                            {
+                                ReusableConfig = "reusable_configae98ae10",
+                                ReusableConfigValues = new ReusableConfigValues
+                                {
+                                    KeyUsage = new KeyUsage
+                                    {
+                                        BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                        {
+                                            DigitalSignature = false,
+                                            ContentCommitment = false,
+                                            KeyEncipherment = true,
+                                            DataEncipherment = false,
+                                            KeyAgreement = true,
+                                            CertSign = false,
+                                            CrlSign = false,
+                                            EncipherOnly = false,
+                                            DecipherOnly = false,
+                                        },
+                                        ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                        {
+                                            ServerAuth = false,
+                                            ClientAuth = false,
+                                            CodeSigning = false,
+                                            EmailProtection = true,
+                                            TimeStamping = true,
+                                            OcspSigning = false,
+                                        },
+                                        UnknownExtendedKeyUsages =
+                                        {
+                                            new ObjectId
+                                            {
+                                                ObjectIdPath = { -506236152, },
+                                            },
+                                        },
+                                    },
+                                    CaOptions = new ReusableConfigValues.Types.CaOptions
+                                    {
+                                        IsCa = false,
+                                        MaxIssuerPathLength = 1013168332,
+                                    },
+                                    PolicyIds =
+                                    {
+                                        new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                    },
+                                    AiaOcspServers =
+                                    {
+                                        "aia_ocsp_servers8af8fe42",
+                                    },
+                                    AdditionalExtensions =
+                                    {
+                                        new X509Extension
+                                        {
+                                            ObjectId = new ObjectId
+                                            {
+                                                ObjectIdPath = { -506236152, },
+                                            },
+                                            Critical = false,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    OverwriteConfigValues = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    AllowedLocationsAndOrganizations =
+                    {
+                        new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                    },
+                    AllowedCommonNames =
+                    {
+                        "allowed_common_names20a07597",
+                    },
+                    AllowedSans = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.AllowedSubjectAltNames
+                    {
+                        AllowedDnsNames =
+                        {
+                            "allowed_dns_namesbd1651bf",
+                        },
+                        AllowedUris =
+                        {
+                            "allowed_uris55af3417",
+                        },
+                        AllowedEmailAddresses =
+                        {
+                            "allowed_email_addresses87a48b52",
+                        },
+                        AllowedIps =
+                        {
+                            "allowed_ips1f40f00a",
+                        },
+                        AllowGlobbingDnsWildcards = false,
+                        AllowCustomSans = false,
+                    },
+                    MaximumLifetime = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    AllowedIssuanceModes = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.IssuanceModes
+                    {
+                        AllowCsrBasedIssuance = false,
+                        AllowConfigBasedIssuance = false,
+                    },
+                },
+                IssuingOptions = new CertificateAuthority.Types.IssuingOptions
+                {
+                    IncludeCaCertUrl = false,
+                    IncludeCrlAccessUrl = false,
+                },
                 PemCaCertificates =
                 {
                     "pem_ca_certificatese5e19b71",
@@ -1084,13 +10656,176 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 State = CertificateAuthority.Types.State.PendingActivation,
                 CaCertificateDescriptions =
                 {
-                    new CertificateDescription(),
+                    new CertificateDescription
+                    {
+                        SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            HexSerialNumber = "hex_serial_number8e6f08bd",
+                            Lifetime = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotBeforeTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotAfterTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        ConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                        SubjectKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        AuthorityKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        CrlDistributionPoints =
+                        {
+                            "crl_distribution_pointsb1c6ae8c",
+                        },
+                        AiaIssuingCertificateUrls =
+                        {
+                            "aia_issuing_certificate_urlsc1dac48a",
+                        },
+                        CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                        {
+                            Sha256Hash = "sha256_hashbc0df779",
+                        },
+                    },
                 },
                 GcsBucket = "gcs_bucket69bbfa63",
-                AccessUrls = new CertificateAuthority.Types.AccessUrls(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
+                AccessUrls = new CertificateAuthority.Types.AccessUrls
+                {
+                    CaCertificateAccessUrl = "ca_certificate_access_url230b73f2",
+                    CrlAccessUrl = "crl_access_url9b3819c5",
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeleteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1098,7 +10833,17 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                SubordinateConfig = new SubordinateConfig(),
+                SubordinateConfig = new SubordinateConfig
+                {
+                    CertificateAuthority = "certificate_authority8dcf4a45",
+                    PemIssuerChain = new SubordinateConfig.Types.SubordinateConfigChain
+                    {
+                        PemCertificates =
+                        {
+                            "pem_certificatesca244b45",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetCertificateAuthority(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CertificateAuthorityServiceClient client = new CertificateAuthorityServiceClientImpl(mockGrpcClient.Object, null);
@@ -1121,11 +10866,326 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCertificateAuthority("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]"),
                 Type = CertificateAuthority.Types.Type.Unspecified,
                 Tier = CertificateAuthority.Types.Tier.Enterprise,
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                KeySpec = new CertificateAuthority.Types.KeyVersionSpec(),
-                CertificatePolicy = new CertificateAuthority.Types.CertificateAuthorityPolicy(),
-                IssuingOptions = new CertificateAuthority.Types.IssuingOptions(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                KeySpec = new CertificateAuthority.Types.KeyVersionSpec
+                {
+                    CloudKmsKeyVersion = "cloud_kms_key_versiona51c7572",
+                    Algorithm = CertificateAuthority.Types.SignHashAlgorithm.EcP256Sha256,
+                },
+                CertificatePolicy = new CertificateAuthority.Types.CertificateAuthorityPolicy
+                {
+                    AllowedConfigList = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.AllowedConfigList
+                    {
+                        AllowedConfigValues =
+                        {
+                            new ReusableConfigWrapper
+                            {
+                                ReusableConfig = "reusable_configae98ae10",
+                                ReusableConfigValues = new ReusableConfigValues
+                                {
+                                    KeyUsage = new KeyUsage
+                                    {
+                                        BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                        {
+                                            DigitalSignature = false,
+                                            ContentCommitment = false,
+                                            KeyEncipherment = true,
+                                            DataEncipherment = false,
+                                            KeyAgreement = true,
+                                            CertSign = false,
+                                            CrlSign = false,
+                                            EncipherOnly = false,
+                                            DecipherOnly = false,
+                                        },
+                                        ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                        {
+                                            ServerAuth = false,
+                                            ClientAuth = false,
+                                            CodeSigning = false,
+                                            EmailProtection = true,
+                                            TimeStamping = true,
+                                            OcspSigning = false,
+                                        },
+                                        UnknownExtendedKeyUsages =
+                                        {
+                                            new ObjectId
+                                            {
+                                                ObjectIdPath = { -506236152, },
+                                            },
+                                        },
+                                    },
+                                    CaOptions = new ReusableConfigValues.Types.CaOptions
+                                    {
+                                        IsCa = false,
+                                        MaxIssuerPathLength = 1013168332,
+                                    },
+                                    PolicyIds =
+                                    {
+                                        new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                    },
+                                    AiaOcspServers =
+                                    {
+                                        "aia_ocsp_servers8af8fe42",
+                                    },
+                                    AdditionalExtensions =
+                                    {
+                                        new X509Extension
+                                        {
+                                            ObjectId = new ObjectId
+                                            {
+                                                ObjectIdPath = { -506236152, },
+                                            },
+                                            Critical = false,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    OverwriteConfigValues = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    AllowedLocationsAndOrganizations =
+                    {
+                        new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                    },
+                    AllowedCommonNames =
+                    {
+                        "allowed_common_names20a07597",
+                    },
+                    AllowedSans = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.AllowedSubjectAltNames
+                    {
+                        AllowedDnsNames =
+                        {
+                            "allowed_dns_namesbd1651bf",
+                        },
+                        AllowedUris =
+                        {
+                            "allowed_uris55af3417",
+                        },
+                        AllowedEmailAddresses =
+                        {
+                            "allowed_email_addresses87a48b52",
+                        },
+                        AllowedIps =
+                        {
+                            "allowed_ips1f40f00a",
+                        },
+                        AllowGlobbingDnsWildcards = false,
+                        AllowCustomSans = false,
+                    },
+                    MaximumLifetime = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    AllowedIssuanceModes = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.IssuanceModes
+                    {
+                        AllowCsrBasedIssuance = false,
+                        AllowConfigBasedIssuance = false,
+                    },
+                },
+                IssuingOptions = new CertificateAuthority.Types.IssuingOptions
+                {
+                    IncludeCaCertUrl = false,
+                    IncludeCrlAccessUrl = false,
+                },
                 PemCaCertificates =
                 {
                     "pem_ca_certificatese5e19b71",
@@ -1133,13 +11193,176 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 State = CertificateAuthority.Types.State.PendingActivation,
                 CaCertificateDescriptions =
                 {
-                    new CertificateDescription(),
+                    new CertificateDescription
+                    {
+                        SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            HexSerialNumber = "hex_serial_number8e6f08bd",
+                            Lifetime = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotBeforeTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotAfterTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        ConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                        SubjectKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        AuthorityKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        CrlDistributionPoints =
+                        {
+                            "crl_distribution_pointsb1c6ae8c",
+                        },
+                        AiaIssuingCertificateUrls =
+                        {
+                            "aia_issuing_certificate_urlsc1dac48a",
+                        },
+                        CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                        {
+                            Sha256Hash = "sha256_hashbc0df779",
+                        },
+                    },
                 },
                 GcsBucket = "gcs_bucket69bbfa63",
-                AccessUrls = new CertificateAuthority.Types.AccessUrls(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
+                AccessUrls = new CertificateAuthority.Types.AccessUrls
+                {
+                    CaCertificateAccessUrl = "ca_certificate_access_url230b73f2",
+                    CrlAccessUrl = "crl_access_url9b3819c5",
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeleteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1147,7 +11370,17 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                SubordinateConfig = new SubordinateConfig(),
+                SubordinateConfig = new SubordinateConfig
+                {
+                    CertificateAuthority = "certificate_authority8dcf4a45",
+                    PemIssuerChain = new SubordinateConfig.Types.SubordinateConfigChain
+                    {
+                        PemCertificates =
+                        {
+                            "pem_certificatesca244b45",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetCertificateAuthorityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CertificateAuthority>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CertificateAuthorityServiceClient client = new CertificateAuthorityServiceClientImpl(mockGrpcClient.Object, null);
@@ -1172,11 +11405,326 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCertificateAuthority("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]"),
                 Type = CertificateAuthority.Types.Type.Unspecified,
                 Tier = CertificateAuthority.Types.Tier.Enterprise,
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                KeySpec = new CertificateAuthority.Types.KeyVersionSpec(),
-                CertificatePolicy = new CertificateAuthority.Types.CertificateAuthorityPolicy(),
-                IssuingOptions = new CertificateAuthority.Types.IssuingOptions(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                KeySpec = new CertificateAuthority.Types.KeyVersionSpec
+                {
+                    CloudKmsKeyVersion = "cloud_kms_key_versiona51c7572",
+                    Algorithm = CertificateAuthority.Types.SignHashAlgorithm.EcP256Sha256,
+                },
+                CertificatePolicy = new CertificateAuthority.Types.CertificateAuthorityPolicy
+                {
+                    AllowedConfigList = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.AllowedConfigList
+                    {
+                        AllowedConfigValues =
+                        {
+                            new ReusableConfigWrapper
+                            {
+                                ReusableConfig = "reusable_configae98ae10",
+                                ReusableConfigValues = new ReusableConfigValues
+                                {
+                                    KeyUsage = new KeyUsage
+                                    {
+                                        BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                        {
+                                            DigitalSignature = false,
+                                            ContentCommitment = false,
+                                            KeyEncipherment = true,
+                                            DataEncipherment = false,
+                                            KeyAgreement = true,
+                                            CertSign = false,
+                                            CrlSign = false,
+                                            EncipherOnly = false,
+                                            DecipherOnly = false,
+                                        },
+                                        ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                        {
+                                            ServerAuth = false,
+                                            ClientAuth = false,
+                                            CodeSigning = false,
+                                            EmailProtection = true,
+                                            TimeStamping = true,
+                                            OcspSigning = false,
+                                        },
+                                        UnknownExtendedKeyUsages =
+                                        {
+                                            new ObjectId
+                                            {
+                                                ObjectIdPath = { -506236152, },
+                                            },
+                                        },
+                                    },
+                                    CaOptions = new ReusableConfigValues.Types.CaOptions
+                                    {
+                                        IsCa = false,
+                                        MaxIssuerPathLength = 1013168332,
+                                    },
+                                    PolicyIds =
+                                    {
+                                        new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                    },
+                                    AiaOcspServers =
+                                    {
+                                        "aia_ocsp_servers8af8fe42",
+                                    },
+                                    AdditionalExtensions =
+                                    {
+                                        new X509Extension
+                                        {
+                                            ObjectId = new ObjectId
+                                            {
+                                                ObjectIdPath = { -506236152, },
+                                            },
+                                            Critical = false,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    OverwriteConfigValues = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    AllowedLocationsAndOrganizations =
+                    {
+                        new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                    },
+                    AllowedCommonNames =
+                    {
+                        "allowed_common_names20a07597",
+                    },
+                    AllowedSans = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.AllowedSubjectAltNames
+                    {
+                        AllowedDnsNames =
+                        {
+                            "allowed_dns_namesbd1651bf",
+                        },
+                        AllowedUris =
+                        {
+                            "allowed_uris55af3417",
+                        },
+                        AllowedEmailAddresses =
+                        {
+                            "allowed_email_addresses87a48b52",
+                        },
+                        AllowedIps =
+                        {
+                            "allowed_ips1f40f00a",
+                        },
+                        AllowGlobbingDnsWildcards = false,
+                        AllowCustomSans = false,
+                    },
+                    MaximumLifetime = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    AllowedIssuanceModes = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.IssuanceModes
+                    {
+                        AllowCsrBasedIssuance = false,
+                        AllowConfigBasedIssuance = false,
+                    },
+                },
+                IssuingOptions = new CertificateAuthority.Types.IssuingOptions
+                {
+                    IncludeCaCertUrl = false,
+                    IncludeCrlAccessUrl = false,
+                },
                 PemCaCertificates =
                 {
                     "pem_ca_certificatese5e19b71",
@@ -1184,13 +11732,176 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 State = CertificateAuthority.Types.State.PendingActivation,
                 CaCertificateDescriptions =
                 {
-                    new CertificateDescription(),
+                    new CertificateDescription
+                    {
+                        SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            HexSerialNumber = "hex_serial_number8e6f08bd",
+                            Lifetime = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotBeforeTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotAfterTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        ConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                        SubjectKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        AuthorityKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        CrlDistributionPoints =
+                        {
+                            "crl_distribution_pointsb1c6ae8c",
+                        },
+                        AiaIssuingCertificateUrls =
+                        {
+                            "aia_issuing_certificate_urlsc1dac48a",
+                        },
+                        CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                        {
+                            Sha256Hash = "sha256_hashbc0df779",
+                        },
+                    },
                 },
                 GcsBucket = "gcs_bucket69bbfa63",
-                AccessUrls = new CertificateAuthority.Types.AccessUrls(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
+                AccessUrls = new CertificateAuthority.Types.AccessUrls
+                {
+                    CaCertificateAccessUrl = "ca_certificate_access_url230b73f2",
+                    CrlAccessUrl = "crl_access_url9b3819c5",
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeleteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1198,7 +11909,17 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                SubordinateConfig = new SubordinateConfig(),
+                SubordinateConfig = new SubordinateConfig
+                {
+                    CertificateAuthority = "certificate_authority8dcf4a45",
+                    PemIssuerChain = new SubordinateConfig.Types.SubordinateConfigChain
+                    {
+                        PemCertificates =
+                        {
+                            "pem_certificatesca244b45",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetCertificateAuthority(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CertificateAuthorityServiceClient client = new CertificateAuthorityServiceClientImpl(mockGrpcClient.Object, null);
@@ -1221,11 +11942,326 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCertificateAuthority("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]"),
                 Type = CertificateAuthority.Types.Type.Unspecified,
                 Tier = CertificateAuthority.Types.Tier.Enterprise,
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                KeySpec = new CertificateAuthority.Types.KeyVersionSpec(),
-                CertificatePolicy = new CertificateAuthority.Types.CertificateAuthorityPolicy(),
-                IssuingOptions = new CertificateAuthority.Types.IssuingOptions(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                KeySpec = new CertificateAuthority.Types.KeyVersionSpec
+                {
+                    CloudKmsKeyVersion = "cloud_kms_key_versiona51c7572",
+                    Algorithm = CertificateAuthority.Types.SignHashAlgorithm.EcP256Sha256,
+                },
+                CertificatePolicy = new CertificateAuthority.Types.CertificateAuthorityPolicy
+                {
+                    AllowedConfigList = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.AllowedConfigList
+                    {
+                        AllowedConfigValues =
+                        {
+                            new ReusableConfigWrapper
+                            {
+                                ReusableConfig = "reusable_configae98ae10",
+                                ReusableConfigValues = new ReusableConfigValues
+                                {
+                                    KeyUsage = new KeyUsage
+                                    {
+                                        BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                        {
+                                            DigitalSignature = false,
+                                            ContentCommitment = false,
+                                            KeyEncipherment = true,
+                                            DataEncipherment = false,
+                                            KeyAgreement = true,
+                                            CertSign = false,
+                                            CrlSign = false,
+                                            EncipherOnly = false,
+                                            DecipherOnly = false,
+                                        },
+                                        ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                        {
+                                            ServerAuth = false,
+                                            ClientAuth = false,
+                                            CodeSigning = false,
+                                            EmailProtection = true,
+                                            TimeStamping = true,
+                                            OcspSigning = false,
+                                        },
+                                        UnknownExtendedKeyUsages =
+                                        {
+                                            new ObjectId
+                                            {
+                                                ObjectIdPath = { -506236152, },
+                                            },
+                                        },
+                                    },
+                                    CaOptions = new ReusableConfigValues.Types.CaOptions
+                                    {
+                                        IsCa = false,
+                                        MaxIssuerPathLength = 1013168332,
+                                    },
+                                    PolicyIds =
+                                    {
+                                        new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                    },
+                                    AiaOcspServers =
+                                    {
+                                        "aia_ocsp_servers8af8fe42",
+                                    },
+                                    AdditionalExtensions =
+                                    {
+                                        new X509Extension
+                                        {
+                                            ObjectId = new ObjectId
+                                            {
+                                                ObjectIdPath = { -506236152, },
+                                            },
+                                            Critical = false,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    OverwriteConfigValues = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    AllowedLocationsAndOrganizations =
+                    {
+                        new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                    },
+                    AllowedCommonNames =
+                    {
+                        "allowed_common_names20a07597",
+                    },
+                    AllowedSans = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.AllowedSubjectAltNames
+                    {
+                        AllowedDnsNames =
+                        {
+                            "allowed_dns_namesbd1651bf",
+                        },
+                        AllowedUris =
+                        {
+                            "allowed_uris55af3417",
+                        },
+                        AllowedEmailAddresses =
+                        {
+                            "allowed_email_addresses87a48b52",
+                        },
+                        AllowedIps =
+                        {
+                            "allowed_ips1f40f00a",
+                        },
+                        AllowGlobbingDnsWildcards = false,
+                        AllowCustomSans = false,
+                    },
+                    MaximumLifetime = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    AllowedIssuanceModes = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.IssuanceModes
+                    {
+                        AllowCsrBasedIssuance = false,
+                        AllowConfigBasedIssuance = false,
+                    },
+                },
+                IssuingOptions = new CertificateAuthority.Types.IssuingOptions
+                {
+                    IncludeCaCertUrl = false,
+                    IncludeCrlAccessUrl = false,
+                },
                 PemCaCertificates =
                 {
                     "pem_ca_certificatese5e19b71",
@@ -1233,13 +12269,176 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 State = CertificateAuthority.Types.State.PendingActivation,
                 CaCertificateDescriptions =
                 {
-                    new CertificateDescription(),
+                    new CertificateDescription
+                    {
+                        SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            HexSerialNumber = "hex_serial_number8e6f08bd",
+                            Lifetime = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotBeforeTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotAfterTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        ConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                        SubjectKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        AuthorityKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        CrlDistributionPoints =
+                        {
+                            "crl_distribution_pointsb1c6ae8c",
+                        },
+                        AiaIssuingCertificateUrls =
+                        {
+                            "aia_issuing_certificate_urlsc1dac48a",
+                        },
+                        CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                        {
+                            Sha256Hash = "sha256_hashbc0df779",
+                        },
+                    },
                 },
                 GcsBucket = "gcs_bucket69bbfa63",
-                AccessUrls = new CertificateAuthority.Types.AccessUrls(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
+                AccessUrls = new CertificateAuthority.Types.AccessUrls
+                {
+                    CaCertificateAccessUrl = "ca_certificate_access_url230b73f2",
+                    CrlAccessUrl = "crl_access_url9b3819c5",
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeleteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1247,7 +12446,17 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                SubordinateConfig = new SubordinateConfig(),
+                SubordinateConfig = new SubordinateConfig
+                {
+                    CertificateAuthority = "certificate_authority8dcf4a45",
+                    PemIssuerChain = new SubordinateConfig.Types.SubordinateConfigChain
+                    {
+                        PemCertificates =
+                        {
+                            "pem_certificatesca244b45",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetCertificateAuthorityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CertificateAuthority>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CertificateAuthorityServiceClient client = new CertificateAuthorityServiceClientImpl(mockGrpcClient.Object, null);
@@ -1272,11 +12481,326 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCertificateAuthority("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]"),
                 Type = CertificateAuthority.Types.Type.Unspecified,
                 Tier = CertificateAuthority.Types.Tier.Enterprise,
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                KeySpec = new CertificateAuthority.Types.KeyVersionSpec(),
-                CertificatePolicy = new CertificateAuthority.Types.CertificateAuthorityPolicy(),
-                IssuingOptions = new CertificateAuthority.Types.IssuingOptions(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                KeySpec = new CertificateAuthority.Types.KeyVersionSpec
+                {
+                    CloudKmsKeyVersion = "cloud_kms_key_versiona51c7572",
+                    Algorithm = CertificateAuthority.Types.SignHashAlgorithm.EcP256Sha256,
+                },
+                CertificatePolicy = new CertificateAuthority.Types.CertificateAuthorityPolicy
+                {
+                    AllowedConfigList = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.AllowedConfigList
+                    {
+                        AllowedConfigValues =
+                        {
+                            new ReusableConfigWrapper
+                            {
+                                ReusableConfig = "reusable_configae98ae10",
+                                ReusableConfigValues = new ReusableConfigValues
+                                {
+                                    KeyUsage = new KeyUsage
+                                    {
+                                        BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                        {
+                                            DigitalSignature = false,
+                                            ContentCommitment = false,
+                                            KeyEncipherment = true,
+                                            DataEncipherment = false,
+                                            KeyAgreement = true,
+                                            CertSign = false,
+                                            CrlSign = false,
+                                            EncipherOnly = false,
+                                            DecipherOnly = false,
+                                        },
+                                        ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                        {
+                                            ServerAuth = false,
+                                            ClientAuth = false,
+                                            CodeSigning = false,
+                                            EmailProtection = true,
+                                            TimeStamping = true,
+                                            OcspSigning = false,
+                                        },
+                                        UnknownExtendedKeyUsages =
+                                        {
+                                            new ObjectId
+                                            {
+                                                ObjectIdPath = { -506236152, },
+                                            },
+                                        },
+                                    },
+                                    CaOptions = new ReusableConfigValues.Types.CaOptions
+                                    {
+                                        IsCa = false,
+                                        MaxIssuerPathLength = 1013168332,
+                                    },
+                                    PolicyIds =
+                                    {
+                                        new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                    },
+                                    AiaOcspServers =
+                                    {
+                                        "aia_ocsp_servers8af8fe42",
+                                    },
+                                    AdditionalExtensions =
+                                    {
+                                        new X509Extension
+                                        {
+                                            ObjectId = new ObjectId
+                                            {
+                                                ObjectIdPath = { -506236152, },
+                                            },
+                                            Critical = false,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    OverwriteConfigValues = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    AllowedLocationsAndOrganizations =
+                    {
+                        new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                    },
+                    AllowedCommonNames =
+                    {
+                        "allowed_common_names20a07597",
+                    },
+                    AllowedSans = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.AllowedSubjectAltNames
+                    {
+                        AllowedDnsNames =
+                        {
+                            "allowed_dns_namesbd1651bf",
+                        },
+                        AllowedUris =
+                        {
+                            "allowed_uris55af3417",
+                        },
+                        AllowedEmailAddresses =
+                        {
+                            "allowed_email_addresses87a48b52",
+                        },
+                        AllowedIps =
+                        {
+                            "allowed_ips1f40f00a",
+                        },
+                        AllowGlobbingDnsWildcards = false,
+                        AllowCustomSans = false,
+                    },
+                    MaximumLifetime = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    AllowedIssuanceModes = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.IssuanceModes
+                    {
+                        AllowCsrBasedIssuance = false,
+                        AllowConfigBasedIssuance = false,
+                    },
+                },
+                IssuingOptions = new CertificateAuthority.Types.IssuingOptions
+                {
+                    IncludeCaCertUrl = false,
+                    IncludeCrlAccessUrl = false,
+                },
                 PemCaCertificates =
                 {
                     "pem_ca_certificatese5e19b71",
@@ -1284,13 +12808,176 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 State = CertificateAuthority.Types.State.PendingActivation,
                 CaCertificateDescriptions =
                 {
-                    new CertificateDescription(),
+                    new CertificateDescription
+                    {
+                        SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            HexSerialNumber = "hex_serial_number8e6f08bd",
+                            Lifetime = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotBeforeTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotAfterTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        ConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                        SubjectKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        AuthorityKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        CrlDistributionPoints =
+                        {
+                            "crl_distribution_pointsb1c6ae8c",
+                        },
+                        AiaIssuingCertificateUrls =
+                        {
+                            "aia_issuing_certificate_urlsc1dac48a",
+                        },
+                        CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                        {
+                            Sha256Hash = "sha256_hashbc0df779",
+                        },
+                    },
                 },
                 GcsBucket = "gcs_bucket69bbfa63",
-                AccessUrls = new CertificateAuthority.Types.AccessUrls(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
+                AccessUrls = new CertificateAuthority.Types.AccessUrls
+                {
+                    CaCertificateAccessUrl = "ca_certificate_access_url230b73f2",
+                    CrlAccessUrl = "crl_access_url9b3819c5",
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeleteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1298,7 +12985,17 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                SubordinateConfig = new SubordinateConfig(),
+                SubordinateConfig = new SubordinateConfig
+                {
+                    CertificateAuthority = "certificate_authority8dcf4a45",
+                    PemIssuerChain = new SubordinateConfig.Types.SubordinateConfigChain
+                    {
+                        PemCertificates =
+                        {
+                            "pem_certificatesca244b45",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetCertificateAuthority(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CertificateAuthorityServiceClient client = new CertificateAuthorityServiceClientImpl(mockGrpcClient.Object, null);
@@ -1321,11 +13018,326 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 CertificateAuthorityName = CertificateAuthorityName.FromProjectLocationCertificateAuthority("[PROJECT]", "[LOCATION]", "[CERTIFICATE_AUTHORITY]"),
                 Type = CertificateAuthority.Types.Type.Unspecified,
                 Tier = CertificateAuthority.Types.Tier.Enterprise,
-                Config = new CertificateConfig(),
-                Lifetime = new wkt::Duration(),
-                KeySpec = new CertificateAuthority.Types.KeyVersionSpec(),
-                CertificatePolicy = new CertificateAuthority.Types.CertificateAuthorityPolicy(),
-                IssuingOptions = new CertificateAuthority.Types.IssuingOptions(),
+                Config = new CertificateConfig
+                {
+                    SubjectConfig = new CertificateConfig.Types.SubjectConfig
+                    {
+                        Subject = new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                        CommonName = "common_name73a7a6f0",
+                        SubjectAltName = new SubjectAltNames
+                        {
+                            DnsNames =
+                            {
+                                "dns_namesf5a1fc4c",
+                            },
+                            Uris = { "uris9aee097b", },
+                            EmailAddresses =
+                            {
+                                "email_addressese25c4981",
+                            },
+                            IpAddresses =
+                            {
+                                "ip_addresses8ee2821f",
+                            },
+                            CustomSans =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    ReusableConfig = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    PublicKey = new PublicKey
+                    {
+                        Type = PublicKey.Types.KeyType.Unspecified,
+                        Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                    },
+                },
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                KeySpec = new CertificateAuthority.Types.KeyVersionSpec
+                {
+                    CloudKmsKeyVersion = "cloud_kms_key_versiona51c7572",
+                    Algorithm = CertificateAuthority.Types.SignHashAlgorithm.EcP256Sha256,
+                },
+                CertificatePolicy = new CertificateAuthority.Types.CertificateAuthorityPolicy
+                {
+                    AllowedConfigList = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.AllowedConfigList
+                    {
+                        AllowedConfigValues =
+                        {
+                            new ReusableConfigWrapper
+                            {
+                                ReusableConfig = "reusable_configae98ae10",
+                                ReusableConfigValues = new ReusableConfigValues
+                                {
+                                    KeyUsage = new KeyUsage
+                                    {
+                                        BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                        {
+                                            DigitalSignature = false,
+                                            ContentCommitment = false,
+                                            KeyEncipherment = true,
+                                            DataEncipherment = false,
+                                            KeyAgreement = true,
+                                            CertSign = false,
+                                            CrlSign = false,
+                                            EncipherOnly = false,
+                                            DecipherOnly = false,
+                                        },
+                                        ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                        {
+                                            ServerAuth = false,
+                                            ClientAuth = false,
+                                            CodeSigning = false,
+                                            EmailProtection = true,
+                                            TimeStamping = true,
+                                            OcspSigning = false,
+                                        },
+                                        UnknownExtendedKeyUsages =
+                                        {
+                                            new ObjectId
+                                            {
+                                                ObjectIdPath = { -506236152, },
+                                            },
+                                        },
+                                    },
+                                    CaOptions = new ReusableConfigValues.Types.CaOptions
+                                    {
+                                        IsCa = false,
+                                        MaxIssuerPathLength = 1013168332,
+                                    },
+                                    PolicyIds =
+                                    {
+                                        new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                    },
+                                    AiaOcspServers =
+                                    {
+                                        "aia_ocsp_servers8af8fe42",
+                                    },
+                                    AdditionalExtensions =
+                                    {
+                                        new X509Extension
+                                        {
+                                            ObjectId = new ObjectId
+                                            {
+                                                ObjectIdPath = { -506236152, },
+                                            },
+                                            Critical = false,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    OverwriteConfigValues = new ReusableConfigWrapper
+                    {
+                        ReusableConfig = "reusable_configae98ae10",
+                        ReusableConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    AllowedLocationsAndOrganizations =
+                    {
+                        new Subject
+                        {
+                            CountryCode = "country_code8debec55",
+                            Organization = "organization8c94c1b4",
+                            OrganizationalUnit = "organizational_unitb35babd4",
+                            Locality = "locality2082e309",
+                            Province = "province39d6aa53",
+                            StreetAddress = "street_address4a56078b",
+                            PostalCode = "postal_code51d301e6",
+                        },
+                    },
+                    AllowedCommonNames =
+                    {
+                        "allowed_common_names20a07597",
+                    },
+                    AllowedSans = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.AllowedSubjectAltNames
+                    {
+                        AllowedDnsNames =
+                        {
+                            "allowed_dns_namesbd1651bf",
+                        },
+                        AllowedUris =
+                        {
+                            "allowed_uris55af3417",
+                        },
+                        AllowedEmailAddresses =
+                        {
+                            "allowed_email_addresses87a48b52",
+                        },
+                        AllowedIps =
+                        {
+                            "allowed_ips1f40f00a",
+                        },
+                        AllowGlobbingDnsWildcards = false,
+                        AllowCustomSans = false,
+                    },
+                    MaximumLifetime = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    AllowedIssuanceModes = new CertificateAuthority.Types.CertificateAuthorityPolicy.Types.IssuanceModes
+                    {
+                        AllowCsrBasedIssuance = false,
+                        AllowConfigBasedIssuance = false,
+                    },
+                },
+                IssuingOptions = new CertificateAuthority.Types.IssuingOptions
+                {
+                    IncludeCaCertUrl = false,
+                    IncludeCrlAccessUrl = false,
+                },
                 PemCaCertificates =
                 {
                     "pem_ca_certificatese5e19b71",
@@ -1333,13 +13345,176 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 State = CertificateAuthority.Types.State.PendingActivation,
                 CaCertificateDescriptions =
                 {
-                    new CertificateDescription(),
+                    new CertificateDescription
+                    {
+                        SubjectDescription = new CertificateDescription.Types.SubjectDescription
+                        {
+                            Subject = new Subject
+                            {
+                                CountryCode = "country_code8debec55",
+                                Organization = "organization8c94c1b4",
+                                OrganizationalUnit = "organizational_unitb35babd4",
+                                Locality = "locality2082e309",
+                                Province = "province39d6aa53",
+                                StreetAddress = "street_address4a56078b",
+                                PostalCode = "postal_code51d301e6",
+                            },
+                            CommonName = "common_name73a7a6f0",
+                            SubjectAltName = new SubjectAltNames
+                            {
+                                DnsNames =
+                                {
+                                    "dns_namesf5a1fc4c",
+                                },
+                                Uris = { "uris9aee097b", },
+                                EmailAddresses =
+                                {
+                                    "email_addressese25c4981",
+                                },
+                                IpAddresses =
+                                {
+                                    "ip_addresses8ee2821f",
+                                },
+                                CustomSans =
+                                {
+                                    new X509Extension
+                                    {
+                                        ObjectId = new ObjectId
+                                        {
+                                            ObjectIdPath = { -506236152, },
+                                        },
+                                        Critical = false,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            HexSerialNumber = "hex_serial_number8e6f08bd",
+                            Lifetime = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotBeforeTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            NotAfterTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        ConfigValues = new ReusableConfigValues
+                        {
+                            KeyUsage = new KeyUsage
+                            {
+                                BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                                {
+                                    DigitalSignature = false,
+                                    ContentCommitment = false,
+                                    KeyEncipherment = true,
+                                    DataEncipherment = false,
+                                    KeyAgreement = true,
+                                    CertSign = false,
+                                    CrlSign = false,
+                                    EncipherOnly = false,
+                                    DecipherOnly = false,
+                                },
+                                ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                                {
+                                    ServerAuth = false,
+                                    ClientAuth = false,
+                                    CodeSigning = false,
+                                    EmailProtection = true,
+                                    TimeStamping = true,
+                                    OcspSigning = false,
+                                },
+                                UnknownExtendedKeyUsages =
+                                {
+                                    new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                },
+                            },
+                            CaOptions = new ReusableConfigValues.Types.CaOptions
+                            {
+                                IsCa = false,
+                                MaxIssuerPathLength = 1013168332,
+                            },
+                            PolicyIds =
+                            {
+                                new ObjectId
+                                {
+                                    ObjectIdPath = { -506236152, },
+                                },
+                            },
+                            AiaOcspServers =
+                            {
+                                "aia_ocsp_servers8af8fe42",
+                            },
+                            AdditionalExtensions =
+                            {
+                                new X509Extension
+                                {
+                                    ObjectId = new ObjectId
+                                    {
+                                        ObjectIdPath = { -506236152, },
+                                    },
+                                    Critical = false,
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        PublicKey = new PublicKey
+                        {
+                            Type = PublicKey.Types.KeyType.Unspecified,
+                            Key = proto::ByteString.CopyFromUtf8("key8a0b6e3c"),
+                        },
+                        SubjectKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        AuthorityKeyId = new CertificateDescription.Types.KeyId
+                        {
+                            KeyId_ = "key_id2691f630",
+                        },
+                        CrlDistributionPoints =
+                        {
+                            "crl_distribution_pointsb1c6ae8c",
+                        },
+                        AiaIssuingCertificateUrls =
+                        {
+                            "aia_issuing_certificate_urlsc1dac48a",
+                        },
+                        CertFingerprint = new CertificateDescription.Types.CertificateFingerprint
+                        {
+                            Sha256Hash = "sha256_hashbc0df779",
+                        },
+                    },
                 },
                 GcsBucket = "gcs_bucket69bbfa63",
-                AccessUrls = new CertificateAuthority.Types.AccessUrls(),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
+                AccessUrls = new CertificateAuthority.Types.AccessUrls
+                {
+                    CaCertificateAccessUrl = "ca_certificate_access_url230b73f2",
+                    CrlAccessUrl = "crl_access_url9b3819c5",
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeleteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1347,7 +13522,17 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                SubordinateConfig = new SubordinateConfig(),
+                SubordinateConfig = new SubordinateConfig
+                {
+                    CertificateAuthority = "certificate_authority8dcf4a45",
+                    PemIssuerChain = new SubordinateConfig.Types.SubordinateConfigChain
+                    {
+                        PemCertificates =
+                        {
+                            "pem_certificatesca244b45",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetCertificateAuthorityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CertificateAuthority>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CertificateAuthorityServiceClient client = new CertificateAuthorityServiceClientImpl(mockGrpcClient.Object, null);
@@ -1373,13 +13558,26 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 SequenceNumber = 785044825799214282L,
                 RevokedCertificates =
                 {
-                    new CertificateRevocationList.Types.RevokedCertificate(),
+                    new CertificateRevocationList.Types.RevokedCertificate
+                    {
+                        Certificate = "certificateef0cd3e0",
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        RevocationReason = RevocationReason.Unspecified,
+                    },
                 },
                 PemCrl = "pem_crle4a1db0f",
                 AccessUrl = "access_url8b12f83f",
                 State = CertificateRevocationList.Types.State.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1410,13 +13608,26 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 SequenceNumber = 785044825799214282L,
                 RevokedCertificates =
                 {
-                    new CertificateRevocationList.Types.RevokedCertificate(),
+                    new CertificateRevocationList.Types.RevokedCertificate
+                    {
+                        Certificate = "certificateef0cd3e0",
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        RevocationReason = RevocationReason.Unspecified,
+                    },
                 },
                 PemCrl = "pem_crle4a1db0f",
                 AccessUrl = "access_url8b12f83f",
                 State = CertificateRevocationList.Types.State.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1449,13 +13660,26 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 SequenceNumber = 785044825799214282L,
                 RevokedCertificates =
                 {
-                    new CertificateRevocationList.Types.RevokedCertificate(),
+                    new CertificateRevocationList.Types.RevokedCertificate
+                    {
+                        Certificate = "certificateef0cd3e0",
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        RevocationReason = RevocationReason.Unspecified,
+                    },
                 },
                 PemCrl = "pem_crle4a1db0f",
                 AccessUrl = "access_url8b12f83f",
                 State = CertificateRevocationList.Types.State.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1486,13 +13710,26 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 SequenceNumber = 785044825799214282L,
                 RevokedCertificates =
                 {
-                    new CertificateRevocationList.Types.RevokedCertificate(),
+                    new CertificateRevocationList.Types.RevokedCertificate
+                    {
+                        Certificate = "certificateef0cd3e0",
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        RevocationReason = RevocationReason.Unspecified,
+                    },
                 },
                 PemCrl = "pem_crle4a1db0f",
                 AccessUrl = "access_url8b12f83f",
                 State = CertificateRevocationList.Types.State.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1525,13 +13762,26 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 SequenceNumber = 785044825799214282L,
                 RevokedCertificates =
                 {
-                    new CertificateRevocationList.Types.RevokedCertificate(),
+                    new CertificateRevocationList.Types.RevokedCertificate
+                    {
+                        Certificate = "certificateef0cd3e0",
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        RevocationReason = RevocationReason.Unspecified,
+                    },
                 },
                 PemCrl = "pem_crle4a1db0f",
                 AccessUrl = "access_url8b12f83f",
                 State = CertificateRevocationList.Types.State.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1562,13 +13812,26 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
                 SequenceNumber = 785044825799214282L,
                 RevokedCertificates =
                 {
-                    new CertificateRevocationList.Types.RevokedCertificate(),
+                    new CertificateRevocationList.Types.RevokedCertificate
+                    {
+                        Certificate = "certificateef0cd3e0",
+                        HexSerialNumber = "hex_serial_number8e6f08bd",
+                        RevocationReason = RevocationReason.Unspecified,
+                    },
                 },
                 PemCrl = "pem_crle4a1db0f",
                 AccessUrl = "access_url8b12f83f",
                 State = CertificateRevocationList.Types.State.Unspecified,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1598,10 +13861,79 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             ReusableConfig expectedResponse = new ReusableConfig
             {
                 ReusableConfigName = ReusableConfigName.FromProjectLocationReusableConfig("[PROJECT]", "[LOCATION]", "[REUSABLE_CONFIG]"),
-                Values = new ReusableConfigValues(),
+                Values = new ReusableConfigValues
+                {
+                    KeyUsage = new KeyUsage
+                    {
+                        BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                        {
+                            DigitalSignature = false,
+                            ContentCommitment = false,
+                            KeyEncipherment = true,
+                            DataEncipherment = false,
+                            KeyAgreement = true,
+                            CertSign = false,
+                            CrlSign = false,
+                            EncipherOnly = false,
+                            DecipherOnly = false,
+                        },
+                        ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                        {
+                            ServerAuth = false,
+                            ClientAuth = false,
+                            CodeSigning = false,
+                            EmailProtection = true,
+                            TimeStamping = true,
+                            OcspSigning = false,
+                        },
+                        UnknownExtendedKeyUsages =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                    },
+                    CaOptions = new ReusableConfigValues.Types.CaOptions
+                    {
+                        IsCa = false,
+                        MaxIssuerPathLength = 1013168332,
+                    },
+                    PolicyIds =
+                    {
+                        new ObjectId
+                        {
+                            ObjectIdPath = { -506236152, },
+                        },
+                    },
+                    AiaOcspServers =
+                    {
+                        "aia_ocsp_servers8af8fe42",
+                    },
+                    AdditionalExtensions =
+                    {
+                        new X509Extension
+                        {
+                            ObjectId = new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                            Critical = false,
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1629,10 +13961,79 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             ReusableConfig expectedResponse = new ReusableConfig
             {
                 ReusableConfigName = ReusableConfigName.FromProjectLocationReusableConfig("[PROJECT]", "[LOCATION]", "[REUSABLE_CONFIG]"),
-                Values = new ReusableConfigValues(),
+                Values = new ReusableConfigValues
+                {
+                    KeyUsage = new KeyUsage
+                    {
+                        BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                        {
+                            DigitalSignature = false,
+                            ContentCommitment = false,
+                            KeyEncipherment = true,
+                            DataEncipherment = false,
+                            KeyAgreement = true,
+                            CertSign = false,
+                            CrlSign = false,
+                            EncipherOnly = false,
+                            DecipherOnly = false,
+                        },
+                        ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                        {
+                            ServerAuth = false,
+                            ClientAuth = false,
+                            CodeSigning = false,
+                            EmailProtection = true,
+                            TimeStamping = true,
+                            OcspSigning = false,
+                        },
+                        UnknownExtendedKeyUsages =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                    },
+                    CaOptions = new ReusableConfigValues.Types.CaOptions
+                    {
+                        IsCa = false,
+                        MaxIssuerPathLength = 1013168332,
+                    },
+                    PolicyIds =
+                    {
+                        new ObjectId
+                        {
+                            ObjectIdPath = { -506236152, },
+                        },
+                    },
+                    AiaOcspServers =
+                    {
+                        "aia_ocsp_servers8af8fe42",
+                    },
+                    AdditionalExtensions =
+                    {
+                        new X509Extension
+                        {
+                            ObjectId = new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                            Critical = false,
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1662,10 +14063,79 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             ReusableConfig expectedResponse = new ReusableConfig
             {
                 ReusableConfigName = ReusableConfigName.FromProjectLocationReusableConfig("[PROJECT]", "[LOCATION]", "[REUSABLE_CONFIG]"),
-                Values = new ReusableConfigValues(),
+                Values = new ReusableConfigValues
+                {
+                    KeyUsage = new KeyUsage
+                    {
+                        BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                        {
+                            DigitalSignature = false,
+                            ContentCommitment = false,
+                            KeyEncipherment = true,
+                            DataEncipherment = false,
+                            KeyAgreement = true,
+                            CertSign = false,
+                            CrlSign = false,
+                            EncipherOnly = false,
+                            DecipherOnly = false,
+                        },
+                        ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                        {
+                            ServerAuth = false,
+                            ClientAuth = false,
+                            CodeSigning = false,
+                            EmailProtection = true,
+                            TimeStamping = true,
+                            OcspSigning = false,
+                        },
+                        UnknownExtendedKeyUsages =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                    },
+                    CaOptions = new ReusableConfigValues.Types.CaOptions
+                    {
+                        IsCa = false,
+                        MaxIssuerPathLength = 1013168332,
+                    },
+                    PolicyIds =
+                    {
+                        new ObjectId
+                        {
+                            ObjectIdPath = { -506236152, },
+                        },
+                    },
+                    AiaOcspServers =
+                    {
+                        "aia_ocsp_servers8af8fe42",
+                    },
+                    AdditionalExtensions =
+                    {
+                        new X509Extension
+                        {
+                            ObjectId = new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                            Critical = false,
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1693,10 +14163,79 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             ReusableConfig expectedResponse = new ReusableConfig
             {
                 ReusableConfigName = ReusableConfigName.FromProjectLocationReusableConfig("[PROJECT]", "[LOCATION]", "[REUSABLE_CONFIG]"),
-                Values = new ReusableConfigValues(),
+                Values = new ReusableConfigValues
+                {
+                    KeyUsage = new KeyUsage
+                    {
+                        BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                        {
+                            DigitalSignature = false,
+                            ContentCommitment = false,
+                            KeyEncipherment = true,
+                            DataEncipherment = false,
+                            KeyAgreement = true,
+                            CertSign = false,
+                            CrlSign = false,
+                            EncipherOnly = false,
+                            DecipherOnly = false,
+                        },
+                        ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                        {
+                            ServerAuth = false,
+                            ClientAuth = false,
+                            CodeSigning = false,
+                            EmailProtection = true,
+                            TimeStamping = true,
+                            OcspSigning = false,
+                        },
+                        UnknownExtendedKeyUsages =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                    },
+                    CaOptions = new ReusableConfigValues.Types.CaOptions
+                    {
+                        IsCa = false,
+                        MaxIssuerPathLength = 1013168332,
+                    },
+                    PolicyIds =
+                    {
+                        new ObjectId
+                        {
+                            ObjectIdPath = { -506236152, },
+                        },
+                    },
+                    AiaOcspServers =
+                    {
+                        "aia_ocsp_servers8af8fe42",
+                    },
+                    AdditionalExtensions =
+                    {
+                        new X509Extension
+                        {
+                            ObjectId = new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                            Critical = false,
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1726,10 +14265,79 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             ReusableConfig expectedResponse = new ReusableConfig
             {
                 ReusableConfigName = ReusableConfigName.FromProjectLocationReusableConfig("[PROJECT]", "[LOCATION]", "[REUSABLE_CONFIG]"),
-                Values = new ReusableConfigValues(),
+                Values = new ReusableConfigValues
+                {
+                    KeyUsage = new KeyUsage
+                    {
+                        BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                        {
+                            DigitalSignature = false,
+                            ContentCommitment = false,
+                            KeyEncipherment = true,
+                            DataEncipherment = false,
+                            KeyAgreement = true,
+                            CertSign = false,
+                            CrlSign = false,
+                            EncipherOnly = false,
+                            DecipherOnly = false,
+                        },
+                        ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                        {
+                            ServerAuth = false,
+                            ClientAuth = false,
+                            CodeSigning = false,
+                            EmailProtection = true,
+                            TimeStamping = true,
+                            OcspSigning = false,
+                        },
+                        UnknownExtendedKeyUsages =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                    },
+                    CaOptions = new ReusableConfigValues.Types.CaOptions
+                    {
+                        IsCa = false,
+                        MaxIssuerPathLength = 1013168332,
+                    },
+                    PolicyIds =
+                    {
+                        new ObjectId
+                        {
+                            ObjectIdPath = { -506236152, },
+                        },
+                    },
+                    AiaOcspServers =
+                    {
+                        "aia_ocsp_servers8af8fe42",
+                    },
+                    AdditionalExtensions =
+                    {
+                        new X509Extension
+                        {
+                            ObjectId = new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                            Critical = false,
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1757,10 +14365,79 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Tests
             ReusableConfig expectedResponse = new ReusableConfig
             {
                 ReusableConfigName = ReusableConfigName.FromProjectLocationReusableConfig("[PROJECT]", "[LOCATION]", "[REUSABLE_CONFIG]"),
-                Values = new ReusableConfigValues(),
+                Values = new ReusableConfigValues
+                {
+                    KeyUsage = new KeyUsage
+                    {
+                        BaseKeyUsage = new KeyUsage.Types.KeyUsageOptions
+                        {
+                            DigitalSignature = false,
+                            ContentCommitment = false,
+                            KeyEncipherment = true,
+                            DataEncipherment = false,
+                            KeyAgreement = true,
+                            CertSign = false,
+                            CrlSign = false,
+                            EncipherOnly = false,
+                            DecipherOnly = false,
+                        },
+                        ExtendedKeyUsage = new KeyUsage.Types.ExtendedKeyUsageOptions
+                        {
+                            ServerAuth = false,
+                            ClientAuth = false,
+                            CodeSigning = false,
+                            EmailProtection = true,
+                            TimeStamping = true,
+                            OcspSigning = false,
+                        },
+                        UnknownExtendedKeyUsages =
+                        {
+                            new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                        },
+                    },
+                    CaOptions = new ReusableConfigValues.Types.CaOptions
+                    {
+                        IsCa = false,
+                        MaxIssuerPathLength = 1013168332,
+                    },
+                    PolicyIds =
+                    {
+                        new ObjectId
+                        {
+                            ObjectIdPath = { -506236152, },
+                        },
+                    },
+                    AiaOcspServers =
+                    {
+                        "aia_ocsp_servers8af8fe42",
+                    },
+                    AdditionalExtensions =
+                    {
+                        new X509Extension
+                        {
+                            ObjectId = new ObjectId
+                            {
+                                ObjectIdPath = { -506236152, },
+                            },
+                            Critical = false,
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
