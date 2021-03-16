@@ -38,8 +38,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             Account expectedResponse = new Account
             {
                 AccountName = AccountName.FromAccount("[ACCOUNT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 RegionCode = "region_code72561d46",
                 Deleted = true,
@@ -62,8 +70,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             Account expectedResponse = new Account
             {
                 AccountName = AccountName.FromAccount("[ACCOUNT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 RegionCode = "region_code72561d46",
                 Deleted = true,
@@ -88,8 +104,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             Account expectedResponse = new Account
             {
                 AccountName = AccountName.FromAccount("[ACCOUNT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 RegionCode = "region_code72561d46",
                 Deleted = true,
@@ -112,8 +136,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             Account expectedResponse = new Account
             {
                 AccountName = AccountName.FromAccount("[ACCOUNT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 RegionCode = "region_code72561d46",
                 Deleted = true,
@@ -138,8 +170,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             Account expectedResponse = new Account
             {
                 AccountName = AccountName.FromAccount("[ACCOUNT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 RegionCode = "region_code72561d46",
                 Deleted = true,
@@ -162,8 +202,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             Account expectedResponse = new Account
             {
                 AccountName = AccountName.FromAccount("[ACCOUNT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 RegionCode = "region_code72561d46",
                 Deleted = true,
@@ -276,14 +324,41 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateAccountRequest request = new UpdateAccountRequest
             {
-                Account = new Account(),
-                UpdateMask = new wkt::FieldMask(),
+                Account = new Account
+                {
+                    AccountName = AccountName.FromAccount("[ACCOUNT]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DisplayName = "display_name137f65c2",
+                    RegionCode = "region_code72561d46",
+                    Deleted = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Account expectedResponse = new Account
             {
                 AccountName = AccountName.FromAccount("[ACCOUNT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 RegionCode = "region_code72561d46",
                 Deleted = true,
@@ -301,14 +376,41 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateAccountRequest request = new UpdateAccountRequest
             {
-                Account = new Account(),
-                UpdateMask = new wkt::FieldMask(),
+                Account = new Account
+                {
+                    AccountName = AccountName.FromAccount("[ACCOUNT]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DisplayName = "display_name137f65c2",
+                    RegionCode = "region_code72561d46",
+                    Deleted = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Account expectedResponse = new Account
             {
                 AccountName = AccountName.FromAccount("[ACCOUNT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 RegionCode = "region_code72561d46",
                 Deleted = true,
@@ -328,14 +430,41 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateAccountRequest request = new UpdateAccountRequest
             {
-                Account = new Account(),
-                UpdateMask = new wkt::FieldMask(),
+                Account = new Account
+                {
+                    AccountName = AccountName.FromAccount("[ACCOUNT]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DisplayName = "display_name137f65c2",
+                    RegionCode = "region_code72561d46",
+                    Deleted = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Account expectedResponse = new Account
             {
                 AccountName = AccountName.FromAccount("[ACCOUNT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 RegionCode = "region_code72561d46",
                 Deleted = true,
@@ -353,14 +482,41 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateAccountRequest request = new UpdateAccountRequest
             {
-                Account = new Account(),
-                UpdateMask = new wkt::FieldMask(),
+                Account = new Account
+                {
+                    AccountName = AccountName.FromAccount("[ACCOUNT]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DisplayName = "display_name137f65c2",
+                    RegionCode = "region_code72561d46",
+                    Deleted = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Account expectedResponse = new Account
             {
                 AccountName = AccountName.FromAccount("[ACCOUNT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 RegionCode = "region_code72561d46",
                 Deleted = true,
@@ -380,7 +536,23 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ProvisionAccountTicketRequest request = new ProvisionAccountTicketRequest
             {
-                Account = new Account(),
+                Account = new Account
+                {
+                    AccountName = AccountName.FromAccount("[ACCOUNT]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DisplayName = "display_name137f65c2",
+                    RegionCode = "region_code72561d46",
+                    Deleted = true,
+                },
                 RedirectUri = "redirect_urif2cd5914",
             };
             ProvisionAccountTicketResponse expectedResponse = new ProvisionAccountTicketResponse
@@ -400,7 +572,23 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             ProvisionAccountTicketRequest request = new ProvisionAccountTicketRequest
             {
-                Account = new Account(),
+                Account = new Account
+                {
+                    AccountName = AccountName.FromAccount("[ACCOUNT]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DisplayName = "display_name137f65c2",
+                    RegionCode = "region_code72561d46",
+                    Deleted = true,
+                },
                 RedirectUri = "redirect_urif2cd5914",
             };
             ProvisionAccountTicketResponse expectedResponse = new ProvisionAccountTicketResponse
@@ -428,8 +616,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
                 Parent = "parent7858e4d0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
@@ -455,8 +651,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
                 Parent = "parent7858e4d0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
@@ -484,8 +688,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
                 Parent = "parent7858e4d0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
@@ -511,8 +723,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
                 Parent = "parent7858e4d0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
@@ -540,8 +760,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
                 Parent = "parent7858e4d0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
@@ -567,8 +795,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
                 Parent = "parent7858e4d0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
@@ -590,14 +826,41 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreatePropertyRequest request = new CreatePropertyRequest
             {
-                Property = new Property(),
+                Property = new Property
+                {
+                    PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                    Parent = "parent7858e4d0",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DisplayName = "display_name137f65c2",
+                    IndustryCategory = IndustryCategory.Reference,
+                    TimeZone = "time_zone73f23b20",
+                    CurrencyCode = "currency_code7f81e352",
+                    Deleted = true,
+                },
             };
             Property expectedResponse = new Property
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
                 Parent = "parent7858e4d0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
@@ -617,14 +880,41 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreatePropertyRequest request = new CreatePropertyRequest
             {
-                Property = new Property(),
+                Property = new Property
+                {
+                    PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                    Parent = "parent7858e4d0",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DisplayName = "display_name137f65c2",
+                    IndustryCategory = IndustryCategory.Reference,
+                    TimeZone = "time_zone73f23b20",
+                    CurrencyCode = "currency_code7f81e352",
+                    Deleted = true,
+                },
             };
             Property expectedResponse = new Property
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
                 Parent = "parent7858e4d0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
@@ -646,14 +936,41 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreatePropertyRequest request = new CreatePropertyRequest
             {
-                Property = new Property(),
+                Property = new Property
+                {
+                    PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                    Parent = "parent7858e4d0",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DisplayName = "display_name137f65c2",
+                    IndustryCategory = IndustryCategory.Reference,
+                    TimeZone = "time_zone73f23b20",
+                    CurrencyCode = "currency_code7f81e352",
+                    Deleted = true,
+                },
             };
             Property expectedResponse = new Property
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
                 Parent = "parent7858e4d0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
@@ -673,14 +990,41 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreatePropertyRequest request = new CreatePropertyRequest
             {
-                Property = new Property(),
+                Property = new Property
+                {
+                    PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                    Parent = "parent7858e4d0",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DisplayName = "display_name137f65c2",
+                    IndustryCategory = IndustryCategory.Reference,
+                    TimeZone = "time_zone73f23b20",
+                    CurrencyCode = "currency_code7f81e352",
+                    Deleted = true,
+                },
             };
             Property expectedResponse = new Property
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
                 Parent = "parent7858e4d0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
@@ -795,15 +1139,45 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdatePropertyRequest request = new UpdatePropertyRequest
             {
-                Property = new Property(),
-                UpdateMask = new wkt::FieldMask(),
+                Property = new Property
+                {
+                    PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                    Parent = "parent7858e4d0",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DisplayName = "display_name137f65c2",
+                    IndustryCategory = IndustryCategory.Reference,
+                    TimeZone = "time_zone73f23b20",
+                    CurrencyCode = "currency_code7f81e352",
+                    Deleted = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Property expectedResponse = new Property
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
                 Parent = "parent7858e4d0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
@@ -823,15 +1197,45 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdatePropertyRequest request = new UpdatePropertyRequest
             {
-                Property = new Property(),
-                UpdateMask = new wkt::FieldMask(),
+                Property = new Property
+                {
+                    PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                    Parent = "parent7858e4d0",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DisplayName = "display_name137f65c2",
+                    IndustryCategory = IndustryCategory.Reference,
+                    TimeZone = "time_zone73f23b20",
+                    CurrencyCode = "currency_code7f81e352",
+                    Deleted = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Property expectedResponse = new Property
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
                 Parent = "parent7858e4d0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
@@ -853,15 +1257,45 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdatePropertyRequest request = new UpdatePropertyRequest
             {
-                Property = new Property(),
-                UpdateMask = new wkt::FieldMask(),
+                Property = new Property
+                {
+                    PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                    Parent = "parent7858e4d0",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DisplayName = "display_name137f65c2",
+                    IndustryCategory = IndustryCategory.Reference,
+                    TimeZone = "time_zone73f23b20",
+                    CurrencyCode = "currency_code7f81e352",
+                    Deleted = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Property expectedResponse = new Property
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
                 Parent = "parent7858e4d0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
@@ -881,15 +1315,45 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdatePropertyRequest request = new UpdatePropertyRequest
             {
-                Property = new Property(),
-                UpdateMask = new wkt::FieldMask(),
+                Property = new Property
+                {
+                    PropertyName = PropertyName.FromProperty("[PROPERTY]"),
+                    Parent = "parent7858e4d0",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DisplayName = "display_name137f65c2",
+                    IndustryCategory = IndustryCategory.Reference,
+                    TimeZone = "time_zone73f23b20",
+                    CurrencyCode = "currency_code7f81e352",
+                    Deleted = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Property expectedResponse = new Property
             {
                 PropertyName = PropertyName.FromProperty("[PROPERTY]"),
                 Parent = "parent7858e4d0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DisplayName = "display_name137f65c2",
                 IndustryCategory = IndustryCategory.Reference,
                 TimeZone = "time_zone73f23b20",
@@ -1069,7 +1533,18 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             BatchGetUserLinksResponse expectedResponse = new BatchGetUserLinksResponse
             {
-                UserLinks = { new UserLink(), },
+                UserLinks =
+                {
+                    new UserLink
+                    {
+                        UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                        EmailAddress = "email_addressf3aae0b5",
+                        DirectRoles =
+                        {
+                            "direct_roles5488445c",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.BatchGetUserLinks(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -1092,7 +1567,18 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             BatchGetUserLinksResponse expectedResponse = new BatchGetUserLinksResponse
             {
-                UserLinks = { new UserLink(), },
+                UserLinks =
+                {
+                    new UserLink
+                    {
+                        UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                        EmailAddress = "email_addressf3aae0b5",
+                        DirectRoles =
+                        {
+                            "direct_roles5488445c",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.BatchGetUserLinksAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchGetUserLinksResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -1111,7 +1597,15 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 NotifyNewUser = true,
-                UserLink = new UserLink(),
+                UserLink = new UserLink
+                {
+                    UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                    EmailAddress = "email_addressf3aae0b5",
+                    DirectRoles =
+                    {
+                        "direct_roles5488445c",
+                    },
+                },
             };
             UserLink expectedResponse = new UserLink
             {
@@ -1137,7 +1631,15 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 NotifyNewUser = true,
-                UserLink = new UserLink(),
+                UserLink = new UserLink
+                {
+                    UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                    EmailAddress = "email_addressf3aae0b5",
+                    DirectRoles =
+                    {
+                        "direct_roles5488445c",
+                    },
+                },
             };
             UserLink expectedResponse = new UserLink
             {
@@ -1164,7 +1666,15 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateUserLinkRequest request = new CreateUserLinkRequest
             {
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                UserLink = new UserLink(),
+                UserLink = new UserLink
+                {
+                    UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                    EmailAddress = "email_addressf3aae0b5",
+                    DirectRoles =
+                    {
+                        "direct_roles5488445c",
+                    },
+                },
             };
             UserLink expectedResponse = new UserLink
             {
@@ -1189,7 +1699,15 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateUserLinkRequest request = new CreateUserLinkRequest
             {
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                UserLink = new UserLink(),
+                UserLink = new UserLink
+                {
+                    UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                    EmailAddress = "email_addressf3aae0b5",
+                    DirectRoles =
+                    {
+                        "direct_roles5488445c",
+                    },
+                },
             };
             UserLink expectedResponse = new UserLink
             {
@@ -1216,7 +1734,15 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateUserLinkRequest request = new CreateUserLinkRequest
             {
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                UserLink = new UserLink(),
+                UserLink = new UserLink
+                {
+                    UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                    EmailAddress = "email_addressf3aae0b5",
+                    DirectRoles =
+                    {
+                        "direct_roles5488445c",
+                    },
+                },
             };
             UserLink expectedResponse = new UserLink
             {
@@ -1241,7 +1767,15 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateUserLinkRequest request = new CreateUserLinkRequest
             {
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                UserLink = new UserLink(),
+                UserLink = new UserLink
+                {
+                    UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                    EmailAddress = "email_addressf3aae0b5",
+                    DirectRoles =
+                    {
+                        "direct_roles5488445c",
+                    },
+                },
             };
             UserLink expectedResponse = new UserLink
             {
@@ -1268,7 +1802,15 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateUserLinkRequest request = new CreateUserLinkRequest
             {
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                UserLink = new UserLink(),
+                UserLink = new UserLink
+                {
+                    UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                    EmailAddress = "email_addressf3aae0b5",
+                    DirectRoles =
+                    {
+                        "direct_roles5488445c",
+                    },
+                },
             };
             UserLink expectedResponse = new UserLink
             {
@@ -1293,7 +1835,15 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateUserLinkRequest request = new CreateUserLinkRequest
             {
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                UserLink = new UserLink(),
+                UserLink = new UserLink
+                {
+                    UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                    EmailAddress = "email_addressf3aae0b5",
+                    DirectRoles =
+                    {
+                        "direct_roles5488445c",
+                    },
+                },
             };
             UserLink expectedResponse = new UserLink
             {
@@ -1323,12 +1873,36 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 NotifyNewUsers = false,
                 Requests =
                 {
-                    new CreateUserLinkRequest(),
+                    new CreateUserLinkRequest
+                    {
+                        ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                        NotifyNewUser = true,
+                        UserLink = new UserLink
+                        {
+                            UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                            EmailAddress = "email_addressf3aae0b5",
+                            DirectRoles =
+                            {
+                                "direct_roles5488445c",
+                            },
+                        },
+                    },
                 },
             };
             BatchCreateUserLinksResponse expectedResponse = new BatchCreateUserLinksResponse
             {
-                UserLinks = { new UserLink(), },
+                UserLinks =
+                {
+                    new UserLink
+                    {
+                        UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                        EmailAddress = "email_addressf3aae0b5",
+                        DirectRoles =
+                        {
+                            "direct_roles5488445c",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.BatchCreateUserLinks(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -1347,12 +1921,36 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 NotifyNewUsers = false,
                 Requests =
                 {
-                    new CreateUserLinkRequest(),
+                    new CreateUserLinkRequest
+                    {
+                        ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
+                        NotifyNewUser = true,
+                        UserLink = new UserLink
+                        {
+                            UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                            EmailAddress = "email_addressf3aae0b5",
+                            DirectRoles =
+                            {
+                                "direct_roles5488445c",
+                            },
+                        },
+                    },
                 },
             };
             BatchCreateUserLinksResponse expectedResponse = new BatchCreateUserLinksResponse
             {
-                UserLinks = { new UserLink(), },
+                UserLinks =
+                {
+                    new UserLink
+                    {
+                        UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                        EmailAddress = "email_addressf3aae0b5",
+                        DirectRoles =
+                        {
+                            "direct_roles5488445c",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.BatchCreateUserLinksAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCreateUserLinksResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -1369,7 +1967,15 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateUserLinkRequest request = new UpdateUserLinkRequest
             {
-                UserLink = new UserLink(),
+                UserLink = new UserLink
+                {
+                    UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                    EmailAddress = "email_addressf3aae0b5",
+                    DirectRoles =
+                    {
+                        "direct_roles5488445c",
+                    },
+                },
             };
             UserLink expectedResponse = new UserLink
             {
@@ -1393,7 +1999,15 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateUserLinkRequest request = new UpdateUserLinkRequest
             {
-                UserLink = new UserLink(),
+                UserLink = new UserLink
+                {
+                    UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                    EmailAddress = "email_addressf3aae0b5",
+                    DirectRoles =
+                    {
+                        "direct_roles5488445c",
+                    },
+                },
             };
             UserLink expectedResponse = new UserLink
             {
@@ -1419,7 +2033,15 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateUserLinkRequest request = new UpdateUserLinkRequest
             {
-                UserLink = new UserLink(),
+                UserLink = new UserLink
+                {
+                    UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                    EmailAddress = "email_addressf3aae0b5",
+                    DirectRoles =
+                    {
+                        "direct_roles5488445c",
+                    },
+                },
             };
             UserLink expectedResponse = new UserLink
             {
@@ -1443,7 +2065,15 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateUserLinkRequest request = new UpdateUserLinkRequest
             {
-                UserLink = new UserLink(),
+                UserLink = new UserLink
+                {
+                    UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                    EmailAddress = "email_addressf3aae0b5",
+                    DirectRoles =
+                    {
+                        "direct_roles5488445c",
+                    },
+                },
             };
             UserLink expectedResponse = new UserLink
             {
@@ -1472,12 +2102,34 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 Requests =
                 {
-                    new UpdateUserLinkRequest(),
+                    new UpdateUserLinkRequest
+                    {
+                        UserLink = new UserLink
+                        {
+                            UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                            EmailAddress = "email_addressf3aae0b5",
+                            DirectRoles =
+                            {
+                                "direct_roles5488445c",
+                            },
+                        },
+                    },
                 },
             };
             BatchUpdateUserLinksResponse expectedResponse = new BatchUpdateUserLinksResponse
             {
-                UserLinks = { new UserLink(), },
+                UserLinks =
+                {
+                    new UserLink
+                    {
+                        UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                        EmailAddress = "email_addressf3aae0b5",
+                        DirectRoles =
+                        {
+                            "direct_roles5488445c",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.BatchUpdateUserLinks(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -1495,12 +2147,34 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 Requests =
                 {
-                    new UpdateUserLinkRequest(),
+                    new UpdateUserLinkRequest
+                    {
+                        UserLink = new UserLink
+                        {
+                            UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                            EmailAddress = "email_addressf3aae0b5",
+                            DirectRoles =
+                            {
+                                "direct_roles5488445c",
+                            },
+                        },
+                    },
                 },
             };
             BatchUpdateUserLinksResponse expectedResponse = new BatchUpdateUserLinksResponse
             {
-                UserLinks = { new UserLink(), },
+                UserLinks =
+                {
+                    new UserLink
+                    {
+                        UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                        EmailAddress = "email_addressf3aae0b5",
+                        DirectRoles =
+                        {
+                            "direct_roles5488445c",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.BatchUpdateUserLinksAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchUpdateUserLinksResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -1613,7 +2287,10 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 Requests =
                 {
-                    new DeleteUserLinkRequest(),
+                    new DeleteUserLinkRequest
+                    {
+                        UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                    },
                 },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
@@ -1632,7 +2309,10 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 Requests =
                 {
-                    new DeleteUserLinkRequest(),
+                    new DeleteUserLinkRequest
+                    {
+                        UserLinkName = UserLinkName.FromAccountUserLink("[ACCOUNT]", "[USER_LINK]"),
+                    },
                 },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
@@ -1656,8 +2336,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
                 MeasurementId = "measurement_id2d9d31df",
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultUri = "default_uri9ac940d5",
                 DisplayName = "display_name137f65c2",
             };
@@ -1681,8 +2369,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
                 MeasurementId = "measurement_id2d9d31df",
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultUri = "default_uri9ac940d5",
                 DisplayName = "display_name137f65c2",
             };
@@ -1708,8 +2404,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
                 MeasurementId = "measurement_id2d9d31df",
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultUri = "default_uri9ac940d5",
                 DisplayName = "display_name137f65c2",
             };
@@ -1733,8 +2437,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
                 MeasurementId = "measurement_id2d9d31df",
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultUri = "default_uri9ac940d5",
                 DisplayName = "display_name137f65c2",
             };
@@ -1760,8 +2472,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
                 MeasurementId = "measurement_id2d9d31df",
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultUri = "default_uri9ac940d5",
                 DisplayName = "display_name137f65c2",
             };
@@ -1785,8 +2505,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
                 MeasurementId = "measurement_id2d9d31df",
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultUri = "default_uri9ac940d5",
                 DisplayName = "display_name137f65c2",
             };
@@ -1898,16 +2626,44 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateWebDataStreamRequest request = new UpdateWebDataStreamRequest
             {
-                WebDataStream = new WebDataStream(),
-                UpdateMask = new wkt::FieldMask(),
+                WebDataStream = new WebDataStream
+                {
+                    WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                    MeasurementId = "measurement_id2d9d31df",
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DefaultUri = "default_uri9ac940d5",
+                    DisplayName = "display_name137f65c2",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             WebDataStream expectedResponse = new WebDataStream
             {
                 WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
                 MeasurementId = "measurement_id2d9d31df",
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultUri = "default_uri9ac940d5",
                 DisplayName = "display_name137f65c2",
             };
@@ -1924,16 +2680,44 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateWebDataStreamRequest request = new UpdateWebDataStreamRequest
             {
-                WebDataStream = new WebDataStream(),
-                UpdateMask = new wkt::FieldMask(),
+                WebDataStream = new WebDataStream
+                {
+                    WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                    MeasurementId = "measurement_id2d9d31df",
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DefaultUri = "default_uri9ac940d5",
+                    DisplayName = "display_name137f65c2",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             WebDataStream expectedResponse = new WebDataStream
             {
                 WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
                 MeasurementId = "measurement_id2d9d31df",
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultUri = "default_uri9ac940d5",
                 DisplayName = "display_name137f65c2",
             };
@@ -1952,16 +2736,44 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateWebDataStreamRequest request = new UpdateWebDataStreamRequest
             {
-                WebDataStream = new WebDataStream(),
-                UpdateMask = new wkt::FieldMask(),
+                WebDataStream = new WebDataStream
+                {
+                    WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                    MeasurementId = "measurement_id2d9d31df",
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DefaultUri = "default_uri9ac940d5",
+                    DisplayName = "display_name137f65c2",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             WebDataStream expectedResponse = new WebDataStream
             {
                 WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
                 MeasurementId = "measurement_id2d9d31df",
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultUri = "default_uri9ac940d5",
                 DisplayName = "display_name137f65c2",
             };
@@ -1978,16 +2790,44 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateWebDataStreamRequest request = new UpdateWebDataStreamRequest
             {
-                WebDataStream = new WebDataStream(),
-                UpdateMask = new wkt::FieldMask(),
+                WebDataStream = new WebDataStream
+                {
+                    WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                    MeasurementId = "measurement_id2d9d31df",
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DefaultUri = "default_uri9ac940d5",
+                    DisplayName = "display_name137f65c2",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             WebDataStream expectedResponse = new WebDataStream
             {
                 WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
                 MeasurementId = "measurement_id2d9d31df",
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultUri = "default_uri9ac940d5",
                 DisplayName = "display_name137f65c2",
             };
@@ -2006,7 +2846,24 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateWebDataStreamRequest request = new CreateWebDataStreamRequest
             {
-                WebDataStream = new WebDataStream(),
+                WebDataStream = new WebDataStream
+                {
+                    WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                    MeasurementId = "measurement_id2d9d31df",
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DefaultUri = "default_uri9ac940d5",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             WebDataStream expectedResponse = new WebDataStream
@@ -2014,8 +2871,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
                 MeasurementId = "measurement_id2d9d31df",
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultUri = "default_uri9ac940d5",
                 DisplayName = "display_name137f65c2",
             };
@@ -2032,7 +2897,24 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateWebDataStreamRequest request = new CreateWebDataStreamRequest
             {
-                WebDataStream = new WebDataStream(),
+                WebDataStream = new WebDataStream
+                {
+                    WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                    MeasurementId = "measurement_id2d9d31df",
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DefaultUri = "default_uri9ac940d5",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             WebDataStream expectedResponse = new WebDataStream
@@ -2040,8 +2922,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
                 MeasurementId = "measurement_id2d9d31df",
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultUri = "default_uri9ac940d5",
                 DisplayName = "display_name137f65c2",
             };
@@ -2060,7 +2950,24 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateWebDataStreamRequest request = new CreateWebDataStreamRequest
             {
-                WebDataStream = new WebDataStream(),
+                WebDataStream = new WebDataStream
+                {
+                    WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                    MeasurementId = "measurement_id2d9d31df",
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DefaultUri = "default_uri9ac940d5",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             WebDataStream expectedResponse = new WebDataStream
@@ -2068,8 +2975,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
                 MeasurementId = "measurement_id2d9d31df",
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultUri = "default_uri9ac940d5",
                 DisplayName = "display_name137f65c2",
             };
@@ -2086,7 +3001,24 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateWebDataStreamRequest request = new CreateWebDataStreamRequest
             {
-                WebDataStream = new WebDataStream(),
+                WebDataStream = new WebDataStream
+                {
+                    WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                    MeasurementId = "measurement_id2d9d31df",
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DefaultUri = "default_uri9ac940d5",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             WebDataStream expectedResponse = new WebDataStream
@@ -2094,8 +3026,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
                 MeasurementId = "measurement_id2d9d31df",
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultUri = "default_uri9ac940d5",
                 DisplayName = "display_name137f65c2",
             };
@@ -2114,7 +3054,24 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateWebDataStreamRequest request = new CreateWebDataStreamRequest
             {
-                WebDataStream = new WebDataStream(),
+                WebDataStream = new WebDataStream
+                {
+                    WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                    MeasurementId = "measurement_id2d9d31df",
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DefaultUri = "default_uri9ac940d5",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             WebDataStream expectedResponse = new WebDataStream
@@ -2122,8 +3079,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
                 MeasurementId = "measurement_id2d9d31df",
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultUri = "default_uri9ac940d5",
                 DisplayName = "display_name137f65c2",
             };
@@ -2140,7 +3105,24 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateWebDataStreamRequest request = new CreateWebDataStreamRequest
             {
-                WebDataStream = new WebDataStream(),
+                WebDataStream = new WebDataStream
+                {
+                    WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                    MeasurementId = "measurement_id2d9d31df",
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DefaultUri = "default_uri9ac940d5",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             WebDataStream expectedResponse = new WebDataStream
@@ -2148,8 +3130,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 WebDataStreamName = WebDataStreamName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
                 MeasurementId = "measurement_id2d9d31df",
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultUri = "default_uri9ac940d5",
                 DisplayName = "display_name137f65c2",
             };
@@ -2174,8 +3164,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BundleId = "bundle_id58a23305",
                 DisplayName = "display_name137f65c2",
             };
@@ -2198,8 +3196,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BundleId = "bundle_id58a23305",
                 DisplayName = "display_name137f65c2",
             };
@@ -2224,8 +3230,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BundleId = "bundle_id58a23305",
                 DisplayName = "display_name137f65c2",
             };
@@ -2248,8 +3262,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BundleId = "bundle_id58a23305",
                 DisplayName = "display_name137f65c2",
             };
@@ -2274,8 +3296,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BundleId = "bundle_id58a23305",
                 DisplayName = "display_name137f65c2",
             };
@@ -2298,8 +3328,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BundleId = "bundle_id58a23305",
                 DisplayName = "display_name137f65c2",
             };
@@ -2411,15 +3449,42 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateIosAppDataStreamRequest request = new UpdateIosAppDataStreamRequest
             {
-                IosAppDataStream = new IosAppDataStream(),
-                UpdateMask = new wkt::FieldMask(),
+                IosAppDataStream = new IosAppDataStream
+                {
+                    IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BundleId = "bundle_id58a23305",
+                    DisplayName = "display_name137f65c2",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             IosAppDataStream expectedResponse = new IosAppDataStream
             {
                 IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BundleId = "bundle_id58a23305",
                 DisplayName = "display_name137f65c2",
             };
@@ -2436,15 +3501,42 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateIosAppDataStreamRequest request = new UpdateIosAppDataStreamRequest
             {
-                IosAppDataStream = new IosAppDataStream(),
-                UpdateMask = new wkt::FieldMask(),
+                IosAppDataStream = new IosAppDataStream
+                {
+                    IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BundleId = "bundle_id58a23305",
+                    DisplayName = "display_name137f65c2",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             IosAppDataStream expectedResponse = new IosAppDataStream
             {
                 IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BundleId = "bundle_id58a23305",
                 DisplayName = "display_name137f65c2",
             };
@@ -2463,15 +3555,42 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateIosAppDataStreamRequest request = new UpdateIosAppDataStreamRequest
             {
-                IosAppDataStream = new IosAppDataStream(),
-                UpdateMask = new wkt::FieldMask(),
+                IosAppDataStream = new IosAppDataStream
+                {
+                    IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BundleId = "bundle_id58a23305",
+                    DisplayName = "display_name137f65c2",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             IosAppDataStream expectedResponse = new IosAppDataStream
             {
                 IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BundleId = "bundle_id58a23305",
                 DisplayName = "display_name137f65c2",
             };
@@ -2488,15 +3607,42 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateIosAppDataStreamRequest request = new UpdateIosAppDataStreamRequest
             {
-                IosAppDataStream = new IosAppDataStream(),
-                UpdateMask = new wkt::FieldMask(),
+                IosAppDataStream = new IosAppDataStream
+                {
+                    IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BundleId = "bundle_id58a23305",
+                    DisplayName = "display_name137f65c2",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             IosAppDataStream expectedResponse = new IosAppDataStream
             {
                 IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BundleId = "bundle_id58a23305",
                 DisplayName = "display_name137f65c2",
             };
@@ -2515,15 +3661,39 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateIosAppDataStreamRequest request = new CreateIosAppDataStreamRequest
             {
-                IosAppDataStream = new IosAppDataStream(),
+                IosAppDataStream = new IosAppDataStream
+                {
+                    IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BundleId = "bundle_id58a23305",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             IosAppDataStream expectedResponse = new IosAppDataStream
             {
                 IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BundleId = "bundle_id58a23305",
                 DisplayName = "display_name137f65c2",
             };
@@ -2540,15 +3710,39 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateIosAppDataStreamRequest request = new CreateIosAppDataStreamRequest
             {
-                IosAppDataStream = new IosAppDataStream(),
+                IosAppDataStream = new IosAppDataStream
+                {
+                    IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BundleId = "bundle_id58a23305",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             IosAppDataStream expectedResponse = new IosAppDataStream
             {
                 IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BundleId = "bundle_id58a23305",
                 DisplayName = "display_name137f65c2",
             };
@@ -2567,15 +3761,39 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateIosAppDataStreamRequest request = new CreateIosAppDataStreamRequest
             {
-                IosAppDataStream = new IosAppDataStream(),
+                IosAppDataStream = new IosAppDataStream
+                {
+                    IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BundleId = "bundle_id58a23305",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             IosAppDataStream expectedResponse = new IosAppDataStream
             {
                 IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BundleId = "bundle_id58a23305",
                 DisplayName = "display_name137f65c2",
             };
@@ -2592,15 +3810,39 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateIosAppDataStreamRequest request = new CreateIosAppDataStreamRequest
             {
-                IosAppDataStream = new IosAppDataStream(),
+                IosAppDataStream = new IosAppDataStream
+                {
+                    IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BundleId = "bundle_id58a23305",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             IosAppDataStream expectedResponse = new IosAppDataStream
             {
                 IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BundleId = "bundle_id58a23305",
                 DisplayName = "display_name137f65c2",
             };
@@ -2619,15 +3861,39 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateIosAppDataStreamRequest request = new CreateIosAppDataStreamRequest
             {
-                IosAppDataStream = new IosAppDataStream(),
+                IosAppDataStream = new IosAppDataStream
+                {
+                    IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BundleId = "bundle_id58a23305",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             IosAppDataStream expectedResponse = new IosAppDataStream
             {
                 IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BundleId = "bundle_id58a23305",
                 DisplayName = "display_name137f65c2",
             };
@@ -2644,15 +3910,39 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateIosAppDataStreamRequest request = new CreateIosAppDataStreamRequest
             {
-                IosAppDataStream = new IosAppDataStream(),
+                IosAppDataStream = new IosAppDataStream
+                {
+                    IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BundleId = "bundle_id58a23305",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             IosAppDataStream expectedResponse = new IosAppDataStream
             {
                 IosAppDataStreamName = IosAppDataStreamName.FromPropertyIosAppDataStream("[PROPERTY]", "[IOS_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BundleId = "bundle_id58a23305",
                 DisplayName = "display_name137f65c2",
             };
@@ -2677,8 +3967,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PackageName = "package_name9942c4d2",
                 DisplayName = "display_name137f65c2",
             };
@@ -2701,8 +3999,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PackageName = "package_name9942c4d2",
                 DisplayName = "display_name137f65c2",
             };
@@ -2727,8 +4033,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PackageName = "package_name9942c4d2",
                 DisplayName = "display_name137f65c2",
             };
@@ -2751,8 +4065,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PackageName = "package_name9942c4d2",
                 DisplayName = "display_name137f65c2",
             };
@@ -2777,8 +4099,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PackageName = "package_name9942c4d2",
                 DisplayName = "display_name137f65c2",
             };
@@ -2801,8 +4131,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             {
                 AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PackageName = "package_name9942c4d2",
                 DisplayName = "display_name137f65c2",
             };
@@ -2914,15 +4252,42 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateAndroidAppDataStreamRequest request = new UpdateAndroidAppDataStreamRequest
             {
-                AndroidAppDataStream = new AndroidAppDataStream(),
-                UpdateMask = new wkt::FieldMask(),
+                AndroidAppDataStream = new AndroidAppDataStream
+                {
+                    AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PackageName = "package_name9942c4d2",
+                    DisplayName = "display_name137f65c2",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             AndroidAppDataStream expectedResponse = new AndroidAppDataStream
             {
                 AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PackageName = "package_name9942c4d2",
                 DisplayName = "display_name137f65c2",
             };
@@ -2939,15 +4304,42 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateAndroidAppDataStreamRequest request = new UpdateAndroidAppDataStreamRequest
             {
-                AndroidAppDataStream = new AndroidAppDataStream(),
-                UpdateMask = new wkt::FieldMask(),
+                AndroidAppDataStream = new AndroidAppDataStream
+                {
+                    AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PackageName = "package_name9942c4d2",
+                    DisplayName = "display_name137f65c2",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             AndroidAppDataStream expectedResponse = new AndroidAppDataStream
             {
                 AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PackageName = "package_name9942c4d2",
                 DisplayName = "display_name137f65c2",
             };
@@ -2966,15 +4358,42 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateAndroidAppDataStreamRequest request = new UpdateAndroidAppDataStreamRequest
             {
-                AndroidAppDataStream = new AndroidAppDataStream(),
-                UpdateMask = new wkt::FieldMask(),
+                AndroidAppDataStream = new AndroidAppDataStream
+                {
+                    AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PackageName = "package_name9942c4d2",
+                    DisplayName = "display_name137f65c2",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             AndroidAppDataStream expectedResponse = new AndroidAppDataStream
             {
                 AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PackageName = "package_name9942c4d2",
                 DisplayName = "display_name137f65c2",
             };
@@ -2991,15 +4410,42 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateAndroidAppDataStreamRequest request = new UpdateAndroidAppDataStreamRequest
             {
-                AndroidAppDataStream = new AndroidAppDataStream(),
-                UpdateMask = new wkt::FieldMask(),
+                AndroidAppDataStream = new AndroidAppDataStream
+                {
+                    AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PackageName = "package_name9942c4d2",
+                    DisplayName = "display_name137f65c2",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             AndroidAppDataStream expectedResponse = new AndroidAppDataStream
             {
                 AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PackageName = "package_name9942c4d2",
                 DisplayName = "display_name137f65c2",
             };
@@ -3018,15 +4464,39 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateAndroidAppDataStreamRequest request = new CreateAndroidAppDataStreamRequest
             {
-                AndroidAppDataStream = new AndroidAppDataStream(),
+                AndroidAppDataStream = new AndroidAppDataStream
+                {
+                    AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PackageName = "package_name9942c4d2",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             AndroidAppDataStream expectedResponse = new AndroidAppDataStream
             {
                 AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PackageName = "package_name9942c4d2",
                 DisplayName = "display_name137f65c2",
             };
@@ -3043,15 +4513,39 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateAndroidAppDataStreamRequest request = new CreateAndroidAppDataStreamRequest
             {
-                AndroidAppDataStream = new AndroidAppDataStream(),
+                AndroidAppDataStream = new AndroidAppDataStream
+                {
+                    AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PackageName = "package_name9942c4d2",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             AndroidAppDataStream expectedResponse = new AndroidAppDataStream
             {
                 AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PackageName = "package_name9942c4d2",
                 DisplayName = "display_name137f65c2",
             };
@@ -3070,15 +4564,39 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateAndroidAppDataStreamRequest request = new CreateAndroidAppDataStreamRequest
             {
-                AndroidAppDataStream = new AndroidAppDataStream(),
+                AndroidAppDataStream = new AndroidAppDataStream
+                {
+                    AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PackageName = "package_name9942c4d2",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             AndroidAppDataStream expectedResponse = new AndroidAppDataStream
             {
                 AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PackageName = "package_name9942c4d2",
                 DisplayName = "display_name137f65c2",
             };
@@ -3095,15 +4613,39 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateAndroidAppDataStreamRequest request = new CreateAndroidAppDataStreamRequest
             {
-                AndroidAppDataStream = new AndroidAppDataStream(),
+                AndroidAppDataStream = new AndroidAppDataStream
+                {
+                    AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PackageName = "package_name9942c4d2",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             AndroidAppDataStream expectedResponse = new AndroidAppDataStream
             {
                 AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PackageName = "package_name9942c4d2",
                 DisplayName = "display_name137f65c2",
             };
@@ -3122,15 +4664,39 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateAndroidAppDataStreamRequest request = new CreateAndroidAppDataStreamRequest
             {
-                AndroidAppDataStream = new AndroidAppDataStream(),
+                AndroidAppDataStream = new AndroidAppDataStream
+                {
+                    AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PackageName = "package_name9942c4d2",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             AndroidAppDataStream expectedResponse = new AndroidAppDataStream
             {
                 AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PackageName = "package_name9942c4d2",
                 DisplayName = "display_name137f65c2",
             };
@@ -3147,15 +4713,39 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             CreateAndroidAppDataStreamRequest request = new CreateAndroidAppDataStreamRequest
             {
-                AndroidAppDataStream = new AndroidAppDataStream(),
+                AndroidAppDataStream = new AndroidAppDataStream
+                {
+                    AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
+                    FirebaseAppId = "firebase_app_id78213ad9",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PackageName = "package_name9942c4d2",
+                    DisplayName = "display_name137f65c2",
+                },
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             AndroidAppDataStream expectedResponse = new AndroidAppDataStream
             {
                 AndroidAppDataStreamName = AndroidAppDataStreamName.FromPropertyAndroidAppDataStream("[PROPERTY]", "[ANDROID_APP_DATA_STREAM]"),
                 FirebaseAppId = "firebase_app_id78213ad9",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PackageName = "package_name9942c4d2",
                 DisplayName = "display_name137f65c2",
             };
@@ -3360,8 +4950,25 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateEnhancedMeasurementSettingsRequest request = new UpdateEnhancedMeasurementSettingsRequest
             {
-                EnhancedMeasurementSettings = new EnhancedMeasurementSettings(),
-                UpdateMask = new wkt::FieldMask(),
+                EnhancedMeasurementSettings = new EnhancedMeasurementSettings
+                {
+                    EnhancedMeasurementSettingsName = EnhancedMeasurementSettingsName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                    StreamEnabled = true,
+                    PageViewsEnabled = true,
+                    ScrollsEnabled = true,
+                    OutboundClicksEnabled = false,
+                    SiteSearchEnabled = false,
+                    VideoEngagementEnabled = true,
+                    FileDownloadsEnabled = true,
+                    PageLoadsEnabled = false,
+                    PageChangesEnabled = false,
+                    SearchQueryParameter = "search_query_parameter3de0ea6b",
+                    UriQueryParameter = "uri_query_parameter55687bee",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             EnhancedMeasurementSettings expectedResponse = new EnhancedMeasurementSettings
             {
@@ -3391,8 +4998,25 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateEnhancedMeasurementSettingsRequest request = new UpdateEnhancedMeasurementSettingsRequest
             {
-                EnhancedMeasurementSettings = new EnhancedMeasurementSettings(),
-                UpdateMask = new wkt::FieldMask(),
+                EnhancedMeasurementSettings = new EnhancedMeasurementSettings
+                {
+                    EnhancedMeasurementSettingsName = EnhancedMeasurementSettingsName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                    StreamEnabled = true,
+                    PageViewsEnabled = true,
+                    ScrollsEnabled = true,
+                    OutboundClicksEnabled = false,
+                    SiteSearchEnabled = false,
+                    VideoEngagementEnabled = true,
+                    FileDownloadsEnabled = true,
+                    PageLoadsEnabled = false,
+                    PageChangesEnabled = false,
+                    SearchQueryParameter = "search_query_parameter3de0ea6b",
+                    UriQueryParameter = "uri_query_parameter55687bee",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             EnhancedMeasurementSettings expectedResponse = new EnhancedMeasurementSettings
             {
@@ -3424,8 +5048,25 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateEnhancedMeasurementSettingsRequest request = new UpdateEnhancedMeasurementSettingsRequest
             {
-                EnhancedMeasurementSettings = new EnhancedMeasurementSettings(),
-                UpdateMask = new wkt::FieldMask(),
+                EnhancedMeasurementSettings = new EnhancedMeasurementSettings
+                {
+                    EnhancedMeasurementSettingsName = EnhancedMeasurementSettingsName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                    StreamEnabled = true,
+                    PageViewsEnabled = true,
+                    ScrollsEnabled = true,
+                    OutboundClicksEnabled = false,
+                    SiteSearchEnabled = false,
+                    VideoEngagementEnabled = true,
+                    FileDownloadsEnabled = true,
+                    PageLoadsEnabled = false,
+                    PageChangesEnabled = false,
+                    SearchQueryParameter = "search_query_parameter3de0ea6b",
+                    UriQueryParameter = "uri_query_parameter55687bee",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             EnhancedMeasurementSettings expectedResponse = new EnhancedMeasurementSettings
             {
@@ -3455,8 +5096,25 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateEnhancedMeasurementSettingsRequest request = new UpdateEnhancedMeasurementSettingsRequest
             {
-                EnhancedMeasurementSettings = new EnhancedMeasurementSettings(),
-                UpdateMask = new wkt::FieldMask(),
+                EnhancedMeasurementSettings = new EnhancedMeasurementSettings
+                {
+                    EnhancedMeasurementSettingsName = EnhancedMeasurementSettingsName.FromPropertyWebDataStream("[PROPERTY]", "[WEB_DATA_STREAM]"),
+                    StreamEnabled = true,
+                    PageViewsEnabled = true,
+                    ScrollsEnabled = true,
+                    OutboundClicksEnabled = false,
+                    SiteSearchEnabled = false,
+                    VideoEngagementEnabled = true,
+                    FileDownloadsEnabled = true,
+                    PageLoadsEnabled = false,
+                    PageChangesEnabled = false,
+                    SearchQueryParameter = "search_query_parameter3de0ea6b",
+                    UriQueryParameter = "uri_query_parameter55687bee",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             EnhancedMeasurementSettings expectedResponse = new EnhancedMeasurementSettings
             {
@@ -3489,13 +5147,27 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateFirebaseLinkRequest request = new CreateFirebaseLinkRequest
             {
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-                FirebaseLink = new FirebaseLink(),
+                FirebaseLink = new FirebaseLink
+                {
+                    FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
+                    Project = "projectaa6ff846",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumUserAccess = MaximumUserAccess.NoAccess,
+                },
             };
             FirebaseLink expectedResponse = new FirebaseLink
             {
                 FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
                 Project = "projectaa6ff846",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 MaximumUserAccess = MaximumUserAccess.NoAccess,
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -3512,13 +5184,27 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateFirebaseLinkRequest request = new CreateFirebaseLinkRequest
             {
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-                FirebaseLink = new FirebaseLink(),
+                FirebaseLink = new FirebaseLink
+                {
+                    FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
+                    Project = "projectaa6ff846",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumUserAccess = MaximumUserAccess.NoAccess,
+                },
             };
             FirebaseLink expectedResponse = new FirebaseLink
             {
                 FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
                 Project = "projectaa6ff846",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 MaximumUserAccess = MaximumUserAccess.NoAccess,
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirebaseLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -3537,13 +5223,27 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateFirebaseLinkRequest request = new CreateFirebaseLinkRequest
             {
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-                FirebaseLink = new FirebaseLink(),
+                FirebaseLink = new FirebaseLink
+                {
+                    FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
+                    Project = "projectaa6ff846",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumUserAccess = MaximumUserAccess.NoAccess,
+                },
             };
             FirebaseLink expectedResponse = new FirebaseLink
             {
                 FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
                 Project = "projectaa6ff846",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 MaximumUserAccess = MaximumUserAccess.NoAccess,
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -3560,13 +5260,27 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateFirebaseLinkRequest request = new CreateFirebaseLinkRequest
             {
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-                FirebaseLink = new FirebaseLink(),
+                FirebaseLink = new FirebaseLink
+                {
+                    FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
+                    Project = "projectaa6ff846",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumUserAccess = MaximumUserAccess.NoAccess,
+                },
             };
             FirebaseLink expectedResponse = new FirebaseLink
             {
                 FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
                 Project = "projectaa6ff846",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 MaximumUserAccess = MaximumUserAccess.NoAccess,
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirebaseLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -3585,13 +5299,27 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateFirebaseLinkRequest request = new CreateFirebaseLinkRequest
             {
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-                FirebaseLink = new FirebaseLink(),
+                FirebaseLink = new FirebaseLink
+                {
+                    FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
+                    Project = "projectaa6ff846",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumUserAccess = MaximumUserAccess.NoAccess,
+                },
             };
             FirebaseLink expectedResponse = new FirebaseLink
             {
                 FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
                 Project = "projectaa6ff846",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 MaximumUserAccess = MaximumUserAccess.NoAccess,
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -3608,13 +5336,27 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateFirebaseLinkRequest request = new CreateFirebaseLinkRequest
             {
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-                FirebaseLink = new FirebaseLink(),
+                FirebaseLink = new FirebaseLink
+                {
+                    FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
+                    Project = "projectaa6ff846",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumUserAccess = MaximumUserAccess.NoAccess,
+                },
             };
             FirebaseLink expectedResponse = new FirebaseLink
             {
                 FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
                 Project = "projectaa6ff846",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 MaximumUserAccess = MaximumUserAccess.NoAccess,
             };
             mockGrpcClient.Setup(x => x.CreateFirebaseLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirebaseLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -3632,14 +5374,31 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateFirebaseLinkRequest request = new UpdateFirebaseLinkRequest
             {
-                FirebaseLink = new FirebaseLink(),
-                UpdateMask = new wkt::FieldMask(),
+                FirebaseLink = new FirebaseLink
+                {
+                    FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
+                    Project = "projectaa6ff846",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumUserAccess = MaximumUserAccess.NoAccess,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             FirebaseLink expectedResponse = new FirebaseLink
             {
                 FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
                 Project = "projectaa6ff846",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 MaximumUserAccess = MaximumUserAccess.NoAccess,
             };
             mockGrpcClient.Setup(x => x.UpdateFirebaseLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -3655,14 +5414,31 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateFirebaseLinkRequest request = new UpdateFirebaseLinkRequest
             {
-                FirebaseLink = new FirebaseLink(),
-                UpdateMask = new wkt::FieldMask(),
+                FirebaseLink = new FirebaseLink
+                {
+                    FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
+                    Project = "projectaa6ff846",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumUserAccess = MaximumUserAccess.NoAccess,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             FirebaseLink expectedResponse = new FirebaseLink
             {
                 FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
                 Project = "projectaa6ff846",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 MaximumUserAccess = MaximumUserAccess.NoAccess,
             };
             mockGrpcClient.Setup(x => x.UpdateFirebaseLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirebaseLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -3680,14 +5456,31 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateFirebaseLinkRequest request = new UpdateFirebaseLinkRequest
             {
-                FirebaseLink = new FirebaseLink(),
-                UpdateMask = new wkt::FieldMask(),
+                FirebaseLink = new FirebaseLink
+                {
+                    FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
+                    Project = "projectaa6ff846",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumUserAccess = MaximumUserAccess.NoAccess,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             FirebaseLink expectedResponse = new FirebaseLink
             {
                 FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
                 Project = "projectaa6ff846",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 MaximumUserAccess = MaximumUserAccess.NoAccess,
             };
             mockGrpcClient.Setup(x => x.UpdateFirebaseLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -3703,14 +5496,31 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateFirebaseLinkRequest request = new UpdateFirebaseLinkRequest
             {
-                FirebaseLink = new FirebaseLink(),
-                UpdateMask = new wkt::FieldMask(),
+                FirebaseLink = new FirebaseLink
+                {
+                    FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
+                    Project = "projectaa6ff846",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumUserAccess = MaximumUserAccess.NoAccess,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             FirebaseLink expectedResponse = new FirebaseLink
             {
                 FirebaseLinkName = FirebaseLinkName.FromPropertyFirebaseLink("[PROPERTY]", "[FIREBASE_LINK]"),
                 Project = "projectaa6ff846",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 MaximumUserAccess = MaximumUserAccess.NoAccess,
             };
             mockGrpcClient.Setup(x => x.UpdateFirebaseLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FirebaseLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -3948,7 +5758,24 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateGoogleAdsLinkRequest request = new CreateGoogleAdsLinkRequest
             {
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-                GoogleAdsLink = new GoogleAdsLink(),
+                GoogleAdsLink = new GoogleAdsLink
+                {
+                    GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
+                    CustomerId = "customer_id3b3724cb",
+                    CanManageClients = true,
+                    AdsPersonalizationEnabled = true,
+                    EmailAddress = "email_addressf3aae0b5",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
@@ -3957,8 +5784,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
                 EmailAddress = "email_addressf3aae0b5",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3974,7 +5809,24 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateGoogleAdsLinkRequest request = new CreateGoogleAdsLinkRequest
             {
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-                GoogleAdsLink = new GoogleAdsLink(),
+                GoogleAdsLink = new GoogleAdsLink
+                {
+                    GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
+                    CustomerId = "customer_id3b3724cb",
+                    CanManageClients = true,
+                    AdsPersonalizationEnabled = true,
+                    EmailAddress = "email_addressf3aae0b5",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
@@ -3983,8 +5835,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
                 EmailAddress = "email_addressf3aae0b5",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleAdsLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4002,7 +5862,24 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateGoogleAdsLinkRequest request = new CreateGoogleAdsLinkRequest
             {
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-                GoogleAdsLink = new GoogleAdsLink(),
+                GoogleAdsLink = new GoogleAdsLink
+                {
+                    GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
+                    CustomerId = "customer_id3b3724cb",
+                    CanManageClients = true,
+                    AdsPersonalizationEnabled = true,
+                    EmailAddress = "email_addressf3aae0b5",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
@@ -4011,8 +5888,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
                 EmailAddress = "email_addressf3aae0b5",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4028,7 +5913,24 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateGoogleAdsLinkRequest request = new CreateGoogleAdsLinkRequest
             {
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-                GoogleAdsLink = new GoogleAdsLink(),
+                GoogleAdsLink = new GoogleAdsLink
+                {
+                    GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
+                    CustomerId = "customer_id3b3724cb",
+                    CanManageClients = true,
+                    AdsPersonalizationEnabled = true,
+                    EmailAddress = "email_addressf3aae0b5",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
@@ -4037,8 +5939,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
                 EmailAddress = "email_addressf3aae0b5",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleAdsLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4056,7 +5966,24 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateGoogleAdsLinkRequest request = new CreateGoogleAdsLinkRequest
             {
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-                GoogleAdsLink = new GoogleAdsLink(),
+                GoogleAdsLink = new GoogleAdsLink
+                {
+                    GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
+                    CustomerId = "customer_id3b3724cb",
+                    CanManageClients = true,
+                    AdsPersonalizationEnabled = true,
+                    EmailAddress = "email_addressf3aae0b5",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
@@ -4065,8 +5992,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
                 EmailAddress = "email_addressf3aae0b5",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4082,7 +6017,24 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             CreateGoogleAdsLinkRequest request = new CreateGoogleAdsLinkRequest
             {
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-                GoogleAdsLink = new GoogleAdsLink(),
+                GoogleAdsLink = new GoogleAdsLink
+                {
+                    GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
+                    CustomerId = "customer_id3b3724cb",
+                    CanManageClients = true,
+                    AdsPersonalizationEnabled = true,
+                    EmailAddress = "email_addressf3aae0b5",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
@@ -4091,8 +6043,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
                 EmailAddress = "email_addressf3aae0b5",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleAdsLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4109,8 +6069,28 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateGoogleAdsLinkRequest request = new UpdateGoogleAdsLinkRequest
             {
-                GoogleAdsLink = new GoogleAdsLink(),
-                UpdateMask = new wkt::FieldMask(),
+                GoogleAdsLink = new GoogleAdsLink
+                {
+                    GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
+                    CustomerId = "customer_id3b3724cb",
+                    CanManageClients = true,
+                    AdsPersonalizationEnabled = true,
+                    EmailAddress = "email_addressf3aae0b5",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
@@ -4119,8 +6099,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
                 EmailAddress = "email_addressf3aae0b5",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4135,8 +6123,28 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateGoogleAdsLinkRequest request = new UpdateGoogleAdsLinkRequest
             {
-                GoogleAdsLink = new GoogleAdsLink(),
-                UpdateMask = new wkt::FieldMask(),
+                GoogleAdsLink = new GoogleAdsLink
+                {
+                    GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
+                    CustomerId = "customer_id3b3724cb",
+                    CanManageClients = true,
+                    AdsPersonalizationEnabled = true,
+                    EmailAddress = "email_addressf3aae0b5",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
@@ -4145,8 +6153,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
                 EmailAddress = "email_addressf3aae0b5",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleAdsLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4163,8 +6179,28 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateGoogleAdsLinkRequest request = new UpdateGoogleAdsLinkRequest
             {
-                GoogleAdsLink = new GoogleAdsLink(),
-                UpdateMask = new wkt::FieldMask(),
+                GoogleAdsLink = new GoogleAdsLink
+                {
+                    GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
+                    CustomerId = "customer_id3b3724cb",
+                    CanManageClients = true,
+                    AdsPersonalizationEnabled = true,
+                    EmailAddress = "email_addressf3aae0b5",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
@@ -4173,8 +6209,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
                 EmailAddress = "email_addressf3aae0b5",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateGoogleAdsLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4189,8 +6233,28 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             UpdateGoogleAdsLinkRequest request = new UpdateGoogleAdsLinkRequest
             {
-                GoogleAdsLink = new GoogleAdsLink(),
-                UpdateMask = new wkt::FieldMask(),
+                GoogleAdsLink = new GoogleAdsLink
+                {
+                    GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
+                    CustomerId = "customer_id3b3724cb",
+                    CanManageClients = true,
+                    AdsPersonalizationEnabled = true,
+                    EmailAddress = "email_addressf3aae0b5",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
@@ -4199,8 +6263,16 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
                 EmailAddress = "email_addressf3aae0b5",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateGoogleAdsLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GoogleAdsLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
