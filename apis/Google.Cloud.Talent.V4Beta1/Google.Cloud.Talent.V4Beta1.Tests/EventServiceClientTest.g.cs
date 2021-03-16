@@ -34,15 +34,57 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             CreateClientEventRequest request = new CreateClientEventRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                ClientEvent = new ClientEvent(),
+                ClientEvent = new ClientEvent
+                {
+                    RequestId = "request_id362c8df6",
+                    EventId = "event_idaccf3744",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEvent = new JobEvent
+                    {
+                        Type = JobEvent.Types.JobEventType.ApplicationRedirect,
+                        Jobs = { "jobs9e6aa027", },
+                        Profile = "profile1b48977d",
+                    },
+                    ProfileEvent = new ProfileEvent
+                    {
+                        Type = ProfileEvent.Types.ProfileEventType.Bookmark,
+                        Profiles =
+                        {
+                            "profiles837270d9",
+                        },
+                        Jobs = { "jobs9e6aa027", },
+                    },
+                    EventNotes = "event_notes102ba330",
+                },
             };
             ClientEvent expectedResponse = new ClientEvent
             {
                 RequestId = "request_id362c8df6",
                 EventId = "event_idaccf3744",
-                CreateTime = new wkt::Timestamp(),
-                JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEvent = new JobEvent
+                {
+                    Type = JobEvent.Types.JobEventType.ApplicationRedirect,
+                    Jobs = { "jobs9e6aa027", },
+                    Profile = "profile1b48977d",
+                },
+                ProfileEvent = new ProfileEvent
+                {
+                    Type = ProfileEvent.Types.ProfileEventType.Bookmark,
+                    Profiles =
+                    {
+                        "profiles837270d9",
+                    },
+                    Jobs = { "jobs9e6aa027", },
+                },
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -59,15 +101,57 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             CreateClientEventRequest request = new CreateClientEventRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                ClientEvent = new ClientEvent(),
+                ClientEvent = new ClientEvent
+                {
+                    RequestId = "request_id362c8df6",
+                    EventId = "event_idaccf3744",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEvent = new JobEvent
+                    {
+                        Type = JobEvent.Types.JobEventType.ApplicationRedirect,
+                        Jobs = { "jobs9e6aa027", },
+                        Profile = "profile1b48977d",
+                    },
+                    ProfileEvent = new ProfileEvent
+                    {
+                        Type = ProfileEvent.Types.ProfileEventType.Bookmark,
+                        Profiles =
+                        {
+                            "profiles837270d9",
+                        },
+                        Jobs = { "jobs9e6aa027", },
+                    },
+                    EventNotes = "event_notes102ba330",
+                },
             };
             ClientEvent expectedResponse = new ClientEvent
             {
                 RequestId = "request_id362c8df6",
                 EventId = "event_idaccf3744",
-                CreateTime = new wkt::Timestamp(),
-                JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEvent = new JobEvent
+                {
+                    Type = JobEvent.Types.JobEventType.ApplicationRedirect,
+                    Jobs = { "jobs9e6aa027", },
+                    Profile = "profile1b48977d",
+                },
+                ProfileEvent = new ProfileEvent
+                {
+                    Type = ProfileEvent.Types.ProfileEventType.Bookmark,
+                    Profiles =
+                    {
+                        "profiles837270d9",
+                    },
+                    Jobs = { "jobs9e6aa027", },
+                },
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -86,15 +170,57 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             CreateClientEventRequest request = new CreateClientEventRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                ClientEvent = new ClientEvent(),
+                ClientEvent = new ClientEvent
+                {
+                    RequestId = "request_id362c8df6",
+                    EventId = "event_idaccf3744",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEvent = new JobEvent
+                    {
+                        Type = JobEvent.Types.JobEventType.ApplicationRedirect,
+                        Jobs = { "jobs9e6aa027", },
+                        Profile = "profile1b48977d",
+                    },
+                    ProfileEvent = new ProfileEvent
+                    {
+                        Type = ProfileEvent.Types.ProfileEventType.Bookmark,
+                        Profiles =
+                        {
+                            "profiles837270d9",
+                        },
+                        Jobs = { "jobs9e6aa027", },
+                    },
+                    EventNotes = "event_notes102ba330",
+                },
             };
             ClientEvent expectedResponse = new ClientEvent
             {
                 RequestId = "request_id362c8df6",
                 EventId = "event_idaccf3744",
-                CreateTime = new wkt::Timestamp(),
-                JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEvent = new JobEvent
+                {
+                    Type = JobEvent.Types.JobEventType.ApplicationRedirect,
+                    Jobs = { "jobs9e6aa027", },
+                    Profile = "profile1b48977d",
+                },
+                ProfileEvent = new ProfileEvent
+                {
+                    Type = ProfileEvent.Types.ProfileEventType.Bookmark,
+                    Profiles =
+                    {
+                        "profiles837270d9",
+                    },
+                    Jobs = { "jobs9e6aa027", },
+                },
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -111,15 +237,57 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             CreateClientEventRequest request = new CreateClientEventRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                ClientEvent = new ClientEvent(),
+                ClientEvent = new ClientEvent
+                {
+                    RequestId = "request_id362c8df6",
+                    EventId = "event_idaccf3744",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEvent = new JobEvent
+                    {
+                        Type = JobEvent.Types.JobEventType.ApplicationRedirect,
+                        Jobs = { "jobs9e6aa027", },
+                        Profile = "profile1b48977d",
+                    },
+                    ProfileEvent = new ProfileEvent
+                    {
+                        Type = ProfileEvent.Types.ProfileEventType.Bookmark,
+                        Profiles =
+                        {
+                            "profiles837270d9",
+                        },
+                        Jobs = { "jobs9e6aa027", },
+                    },
+                    EventNotes = "event_notes102ba330",
+                },
             };
             ClientEvent expectedResponse = new ClientEvent
             {
                 RequestId = "request_id362c8df6",
                 EventId = "event_idaccf3744",
-                CreateTime = new wkt::Timestamp(),
-                JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEvent = new JobEvent
+                {
+                    Type = JobEvent.Types.JobEventType.ApplicationRedirect,
+                    Jobs = { "jobs9e6aa027", },
+                    Profile = "profile1b48977d",
+                },
+                ProfileEvent = new ProfileEvent
+                {
+                    Type = ProfileEvent.Types.ProfileEventType.Bookmark,
+                    Profiles =
+                    {
+                        "profiles837270d9",
+                    },
+                    Jobs = { "jobs9e6aa027", },
+                },
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -138,15 +306,57 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             CreateClientEventRequest request = new CreateClientEventRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                ClientEvent = new ClientEvent(),
+                ClientEvent = new ClientEvent
+                {
+                    RequestId = "request_id362c8df6",
+                    EventId = "event_idaccf3744",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEvent = new JobEvent
+                    {
+                        Type = JobEvent.Types.JobEventType.ApplicationRedirect,
+                        Jobs = { "jobs9e6aa027", },
+                        Profile = "profile1b48977d",
+                    },
+                    ProfileEvent = new ProfileEvent
+                    {
+                        Type = ProfileEvent.Types.ProfileEventType.Bookmark,
+                        Profiles =
+                        {
+                            "profiles837270d9",
+                        },
+                        Jobs = { "jobs9e6aa027", },
+                    },
+                    EventNotes = "event_notes102ba330",
+                },
             };
             ClientEvent expectedResponse = new ClientEvent
             {
                 RequestId = "request_id362c8df6",
                 EventId = "event_idaccf3744",
-                CreateTime = new wkt::Timestamp(),
-                JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEvent = new JobEvent
+                {
+                    Type = JobEvent.Types.JobEventType.ApplicationRedirect,
+                    Jobs = { "jobs9e6aa027", },
+                    Profile = "profile1b48977d",
+                },
+                ProfileEvent = new ProfileEvent
+                {
+                    Type = ProfileEvent.Types.ProfileEventType.Bookmark,
+                    Profiles =
+                    {
+                        "profiles837270d9",
+                    },
+                    Jobs = { "jobs9e6aa027", },
+                },
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -163,15 +373,57 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             CreateClientEventRequest request = new CreateClientEventRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                ClientEvent = new ClientEvent(),
+                ClientEvent = new ClientEvent
+                {
+                    RequestId = "request_id362c8df6",
+                    EventId = "event_idaccf3744",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEvent = new JobEvent
+                    {
+                        Type = JobEvent.Types.JobEventType.ApplicationRedirect,
+                        Jobs = { "jobs9e6aa027", },
+                        Profile = "profile1b48977d",
+                    },
+                    ProfileEvent = new ProfileEvent
+                    {
+                        Type = ProfileEvent.Types.ProfileEventType.Bookmark,
+                        Profiles =
+                        {
+                            "profiles837270d9",
+                        },
+                        Jobs = { "jobs9e6aa027", },
+                    },
+                    EventNotes = "event_notes102ba330",
+                },
             };
             ClientEvent expectedResponse = new ClientEvent
             {
                 RequestId = "request_id362c8df6",
                 EventId = "event_idaccf3744",
-                CreateTime = new wkt::Timestamp(),
-                JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEvent = new JobEvent
+                {
+                    Type = JobEvent.Types.JobEventType.ApplicationRedirect,
+                    Jobs = { "jobs9e6aa027", },
+                    Profile = "profile1b48977d",
+                },
+                ProfileEvent = new ProfileEvent
+                {
+                    Type = ProfileEvent.Types.ProfileEventType.Bookmark,
+                    Profiles =
+                    {
+                        "profiles837270d9",
+                    },
+                    Jobs = { "jobs9e6aa027", },
+                },
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -190,15 +442,57 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             CreateClientEventRequest request = new CreateClientEventRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                ClientEvent = new ClientEvent(),
+                ClientEvent = new ClientEvent
+                {
+                    RequestId = "request_id362c8df6",
+                    EventId = "event_idaccf3744",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEvent = new JobEvent
+                    {
+                        Type = JobEvent.Types.JobEventType.ApplicationRedirect,
+                        Jobs = { "jobs9e6aa027", },
+                        Profile = "profile1b48977d",
+                    },
+                    ProfileEvent = new ProfileEvent
+                    {
+                        Type = ProfileEvent.Types.ProfileEventType.Bookmark,
+                        Profiles =
+                        {
+                            "profiles837270d9",
+                        },
+                        Jobs = { "jobs9e6aa027", },
+                    },
+                    EventNotes = "event_notes102ba330",
+                },
             };
             ClientEvent expectedResponse = new ClientEvent
             {
                 RequestId = "request_id362c8df6",
                 EventId = "event_idaccf3744",
-                CreateTime = new wkt::Timestamp(),
-                JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEvent = new JobEvent
+                {
+                    Type = JobEvent.Types.JobEventType.ApplicationRedirect,
+                    Jobs = { "jobs9e6aa027", },
+                    Profile = "profile1b48977d",
+                },
+                ProfileEvent = new ProfileEvent
+                {
+                    Type = ProfileEvent.Types.ProfileEventType.Bookmark,
+                    Profiles =
+                    {
+                        "profiles837270d9",
+                    },
+                    Jobs = { "jobs9e6aa027", },
+                },
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -215,15 +509,57 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             CreateClientEventRequest request = new CreateClientEventRequest
             {
                 ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
-                ClientEvent = new ClientEvent(),
+                ClientEvent = new ClientEvent
+                {
+                    RequestId = "request_id362c8df6",
+                    EventId = "event_idaccf3744",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    JobEvent = new JobEvent
+                    {
+                        Type = JobEvent.Types.JobEventType.ApplicationRedirect,
+                        Jobs = { "jobs9e6aa027", },
+                        Profile = "profile1b48977d",
+                    },
+                    ProfileEvent = new ProfileEvent
+                    {
+                        Type = ProfileEvent.Types.ProfileEventType.Bookmark,
+                        Profiles =
+                        {
+                            "profiles837270d9",
+                        },
+                        Jobs = { "jobs9e6aa027", },
+                    },
+                    EventNotes = "event_notes102ba330",
+                },
             };
             ClientEvent expectedResponse = new ClientEvent
             {
                 RequestId = "request_id362c8df6",
                 EventId = "event_idaccf3744",
-                CreateTime = new wkt::Timestamp(),
-                JobEvent = new JobEvent(),
-                ProfileEvent = new ProfileEvent(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                JobEvent = new JobEvent
+                {
+                    Type = JobEvent.Types.JobEventType.ApplicationRedirect,
+                    Jobs = { "jobs9e6aa027", },
+                    Profile = "profile1b48977d",
+                },
+                ProfileEvent = new ProfileEvent
+                {
+                    Type = ProfileEvent.Types.ProfileEventType.Bookmark,
+                    Profiles =
+                    {
+                        "profiles837270d9",
+                    },
+                    Jobs = { "jobs9e6aa027", },
+                },
                 EventNotes = "event_notes102ba330",
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClientEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));

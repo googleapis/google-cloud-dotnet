@@ -47,9 +47,17 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             {
                 CompletionResults =
                 {
-                    new CompleteQueryResponse.Types.CompletionResult(),
+                    new CompleteQueryResponse.Types.CompletionResult
+                    {
+                        Suggestion = "suggestione23a9f61",
+                        Type = CompleteQueryRequest.Types.CompletionType.Combined,
+                        ImageUri = "image_urieba3b1bc",
+                    },
                 },
-                Metadata = new ResponseMetadata(),
+                Metadata = new ResponseMetadata
+                {
+                    RequestId = "request_id362c8df6",
+                },
             };
             mockGrpcClient.Setup(x => x.CompleteQuery(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CompletionClient client = new CompletionClientImpl(mockGrpcClient.Object, null);
@@ -79,9 +87,17 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             {
                 CompletionResults =
                 {
-                    new CompleteQueryResponse.Types.CompletionResult(),
+                    new CompleteQueryResponse.Types.CompletionResult
+                    {
+                        Suggestion = "suggestione23a9f61",
+                        Type = CompleteQueryRequest.Types.CompletionType.Combined,
+                        ImageUri = "image_urieba3b1bc",
+                    },
                 },
-                Metadata = new ResponseMetadata(),
+                Metadata = new ResponseMetadata
+                {
+                    RequestId = "request_id362c8df6",
+                },
             };
             mockGrpcClient.Setup(x => x.CompleteQueryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CompleteQueryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CompletionClient client = new CompletionClientImpl(mockGrpcClient.Object, null);

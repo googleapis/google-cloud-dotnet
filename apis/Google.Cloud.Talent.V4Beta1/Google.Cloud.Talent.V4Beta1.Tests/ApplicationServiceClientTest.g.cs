@@ -35,7 +35,51 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             CreateApplicationRequest request = new CreateApplicationRequest
             {
                 ParentAsProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                Application = new Application(),
+                Application = new Application
+                {
+                    ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                    Profile = "profile1b48977d",
+                    JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    ApplicationDate = new gt::Date
+                    {
+                        Year = 1825033604,
+                        Month = 1123628660,
+                        Day = -1333949598,
+                    },
+                    Stage = Application.Types.ApplicationStage.OfferAccepted,
+                    State = Application.Types.ApplicationState.Unspecified,
+                    Interviews =
+                    {
+                        new Interview
+                        {
+                            Rating = new Rating
+                            {
+                                Overall = 6.176982681295555E+17,
+                                Min = -3.861802214438196E+17,
+                                Max = 1.023244718003839E+18,
+                                Interval = 1.0392845690694359E+18,
+                            },
+                            Outcome = Outcome.Neutral,
+                        },
+                    },
+                    Referral = false,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    OutcomeNotes = "outcome_notes38ed921d",
+                    Outcome = Outcome.Neutral,
+                    IsMatch = false,
+                    JobTitleSnippet = "job_title_snippet4f14afe7",
+                    ExternalId = "external_id9442680e",
+                },
             };
             Application expectedResponse = new Application
             {
@@ -43,13 +87,39 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Profile = "profile1b48977d",
                 JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
                 CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
-                ApplicationDate = new gt::Date(),
+                ApplicationDate = new gt::Date
+                {
+                    Year = 1825033604,
+                    Month = 1123628660,
+                    Day = -1333949598,
+                },
                 Stage = Application.Types.ApplicationStage.OfferAccepted,
                 State = Application.Types.ApplicationState.Unspecified,
-                Interviews = { new Interview(), },
+                Interviews =
+                {
+                    new Interview
+                    {
+                        Rating = new Rating
+                        {
+                            Overall = 6.176982681295555E+17,
+                            Min = -3.861802214438196E+17,
+                            Max = 1.023244718003839E+18,
+                            Interval = 1.0392845690694359E+18,
+                        },
+                        Outcome = Outcome.Neutral,
+                    },
+                },
                 Referral = false,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OutcomeNotes = "outcome_notes38ed921d",
                 Outcome = Outcome.Neutral,
                 IsMatch = false,
@@ -70,7 +140,51 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             CreateApplicationRequest request = new CreateApplicationRequest
             {
                 ParentAsProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                Application = new Application(),
+                Application = new Application
+                {
+                    ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                    Profile = "profile1b48977d",
+                    JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    ApplicationDate = new gt::Date
+                    {
+                        Year = 1825033604,
+                        Month = 1123628660,
+                        Day = -1333949598,
+                    },
+                    Stage = Application.Types.ApplicationStage.OfferAccepted,
+                    State = Application.Types.ApplicationState.Unspecified,
+                    Interviews =
+                    {
+                        new Interview
+                        {
+                            Rating = new Rating
+                            {
+                                Overall = 6.176982681295555E+17,
+                                Min = -3.861802214438196E+17,
+                                Max = 1.023244718003839E+18,
+                                Interval = 1.0392845690694359E+18,
+                            },
+                            Outcome = Outcome.Neutral,
+                        },
+                    },
+                    Referral = false,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    OutcomeNotes = "outcome_notes38ed921d",
+                    Outcome = Outcome.Neutral,
+                    IsMatch = false,
+                    JobTitleSnippet = "job_title_snippet4f14afe7",
+                    ExternalId = "external_id9442680e",
+                },
             };
             Application expectedResponse = new Application
             {
@@ -78,13 +192,39 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Profile = "profile1b48977d",
                 JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
                 CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
-                ApplicationDate = new gt::Date(),
+                ApplicationDate = new gt::Date
+                {
+                    Year = 1825033604,
+                    Month = 1123628660,
+                    Day = -1333949598,
+                },
                 Stage = Application.Types.ApplicationStage.OfferAccepted,
                 State = Application.Types.ApplicationState.Unspecified,
-                Interviews = { new Interview(), },
+                Interviews =
+                {
+                    new Interview
+                    {
+                        Rating = new Rating
+                        {
+                            Overall = 6.176982681295555E+17,
+                            Min = -3.861802214438196E+17,
+                            Max = 1.023244718003839E+18,
+                            Interval = 1.0392845690694359E+18,
+                        },
+                        Outcome = Outcome.Neutral,
+                    },
+                },
                 Referral = false,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OutcomeNotes = "outcome_notes38ed921d",
                 Outcome = Outcome.Neutral,
                 IsMatch = false,
@@ -107,7 +247,51 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             CreateApplicationRequest request = new CreateApplicationRequest
             {
                 ParentAsProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                Application = new Application(),
+                Application = new Application
+                {
+                    ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                    Profile = "profile1b48977d",
+                    JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    ApplicationDate = new gt::Date
+                    {
+                        Year = 1825033604,
+                        Month = 1123628660,
+                        Day = -1333949598,
+                    },
+                    Stage = Application.Types.ApplicationStage.OfferAccepted,
+                    State = Application.Types.ApplicationState.Unspecified,
+                    Interviews =
+                    {
+                        new Interview
+                        {
+                            Rating = new Rating
+                            {
+                                Overall = 6.176982681295555E+17,
+                                Min = -3.861802214438196E+17,
+                                Max = 1.023244718003839E+18,
+                                Interval = 1.0392845690694359E+18,
+                            },
+                            Outcome = Outcome.Neutral,
+                        },
+                    },
+                    Referral = false,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    OutcomeNotes = "outcome_notes38ed921d",
+                    Outcome = Outcome.Neutral,
+                    IsMatch = false,
+                    JobTitleSnippet = "job_title_snippet4f14afe7",
+                    ExternalId = "external_id9442680e",
+                },
             };
             Application expectedResponse = new Application
             {
@@ -115,13 +299,39 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Profile = "profile1b48977d",
                 JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
                 CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
-                ApplicationDate = new gt::Date(),
+                ApplicationDate = new gt::Date
+                {
+                    Year = 1825033604,
+                    Month = 1123628660,
+                    Day = -1333949598,
+                },
                 Stage = Application.Types.ApplicationStage.OfferAccepted,
                 State = Application.Types.ApplicationState.Unspecified,
-                Interviews = { new Interview(), },
+                Interviews =
+                {
+                    new Interview
+                    {
+                        Rating = new Rating
+                        {
+                            Overall = 6.176982681295555E+17,
+                            Min = -3.861802214438196E+17,
+                            Max = 1.023244718003839E+18,
+                            Interval = 1.0392845690694359E+18,
+                        },
+                        Outcome = Outcome.Neutral,
+                    },
+                },
                 Referral = false,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OutcomeNotes = "outcome_notes38ed921d",
                 Outcome = Outcome.Neutral,
                 IsMatch = false,
@@ -142,7 +352,51 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             CreateApplicationRequest request = new CreateApplicationRequest
             {
                 ParentAsProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                Application = new Application(),
+                Application = new Application
+                {
+                    ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                    Profile = "profile1b48977d",
+                    JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    ApplicationDate = new gt::Date
+                    {
+                        Year = 1825033604,
+                        Month = 1123628660,
+                        Day = -1333949598,
+                    },
+                    Stage = Application.Types.ApplicationStage.OfferAccepted,
+                    State = Application.Types.ApplicationState.Unspecified,
+                    Interviews =
+                    {
+                        new Interview
+                        {
+                            Rating = new Rating
+                            {
+                                Overall = 6.176982681295555E+17,
+                                Min = -3.861802214438196E+17,
+                                Max = 1.023244718003839E+18,
+                                Interval = 1.0392845690694359E+18,
+                            },
+                            Outcome = Outcome.Neutral,
+                        },
+                    },
+                    Referral = false,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    OutcomeNotes = "outcome_notes38ed921d",
+                    Outcome = Outcome.Neutral,
+                    IsMatch = false,
+                    JobTitleSnippet = "job_title_snippet4f14afe7",
+                    ExternalId = "external_id9442680e",
+                },
             };
             Application expectedResponse = new Application
             {
@@ -150,13 +404,39 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Profile = "profile1b48977d",
                 JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
                 CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
-                ApplicationDate = new gt::Date(),
+                ApplicationDate = new gt::Date
+                {
+                    Year = 1825033604,
+                    Month = 1123628660,
+                    Day = -1333949598,
+                },
                 Stage = Application.Types.ApplicationStage.OfferAccepted,
                 State = Application.Types.ApplicationState.Unspecified,
-                Interviews = { new Interview(), },
+                Interviews =
+                {
+                    new Interview
+                    {
+                        Rating = new Rating
+                        {
+                            Overall = 6.176982681295555E+17,
+                            Min = -3.861802214438196E+17,
+                            Max = 1.023244718003839E+18,
+                            Interval = 1.0392845690694359E+18,
+                        },
+                        Outcome = Outcome.Neutral,
+                    },
+                },
                 Referral = false,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OutcomeNotes = "outcome_notes38ed921d",
                 Outcome = Outcome.Neutral,
                 IsMatch = false,
@@ -179,7 +459,51 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             CreateApplicationRequest request = new CreateApplicationRequest
             {
                 ParentAsProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                Application = new Application(),
+                Application = new Application
+                {
+                    ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                    Profile = "profile1b48977d",
+                    JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    ApplicationDate = new gt::Date
+                    {
+                        Year = 1825033604,
+                        Month = 1123628660,
+                        Day = -1333949598,
+                    },
+                    Stage = Application.Types.ApplicationStage.OfferAccepted,
+                    State = Application.Types.ApplicationState.Unspecified,
+                    Interviews =
+                    {
+                        new Interview
+                        {
+                            Rating = new Rating
+                            {
+                                Overall = 6.176982681295555E+17,
+                                Min = -3.861802214438196E+17,
+                                Max = 1.023244718003839E+18,
+                                Interval = 1.0392845690694359E+18,
+                            },
+                            Outcome = Outcome.Neutral,
+                        },
+                    },
+                    Referral = false,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    OutcomeNotes = "outcome_notes38ed921d",
+                    Outcome = Outcome.Neutral,
+                    IsMatch = false,
+                    JobTitleSnippet = "job_title_snippet4f14afe7",
+                    ExternalId = "external_id9442680e",
+                },
             };
             Application expectedResponse = new Application
             {
@@ -187,13 +511,39 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Profile = "profile1b48977d",
                 JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
                 CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
-                ApplicationDate = new gt::Date(),
+                ApplicationDate = new gt::Date
+                {
+                    Year = 1825033604,
+                    Month = 1123628660,
+                    Day = -1333949598,
+                },
                 Stage = Application.Types.ApplicationStage.OfferAccepted,
                 State = Application.Types.ApplicationState.Unspecified,
-                Interviews = { new Interview(), },
+                Interviews =
+                {
+                    new Interview
+                    {
+                        Rating = new Rating
+                        {
+                            Overall = 6.176982681295555E+17,
+                            Min = -3.861802214438196E+17,
+                            Max = 1.023244718003839E+18,
+                            Interval = 1.0392845690694359E+18,
+                        },
+                        Outcome = Outcome.Neutral,
+                    },
+                },
                 Referral = false,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OutcomeNotes = "outcome_notes38ed921d",
                 Outcome = Outcome.Neutral,
                 IsMatch = false,
@@ -214,7 +564,51 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             CreateApplicationRequest request = new CreateApplicationRequest
             {
                 ParentAsProfileName = ProfileName.FromProjectTenantProfile("[PROJECT]", "[TENANT]", "[PROFILE]"),
-                Application = new Application(),
+                Application = new Application
+                {
+                    ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                    Profile = "profile1b48977d",
+                    JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    ApplicationDate = new gt::Date
+                    {
+                        Year = 1825033604,
+                        Month = 1123628660,
+                        Day = -1333949598,
+                    },
+                    Stage = Application.Types.ApplicationStage.OfferAccepted,
+                    State = Application.Types.ApplicationState.Unspecified,
+                    Interviews =
+                    {
+                        new Interview
+                        {
+                            Rating = new Rating
+                            {
+                                Overall = 6.176982681295555E+17,
+                                Min = -3.861802214438196E+17,
+                                Max = 1.023244718003839E+18,
+                                Interval = 1.0392845690694359E+18,
+                            },
+                            Outcome = Outcome.Neutral,
+                        },
+                    },
+                    Referral = false,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    OutcomeNotes = "outcome_notes38ed921d",
+                    Outcome = Outcome.Neutral,
+                    IsMatch = false,
+                    JobTitleSnippet = "job_title_snippet4f14afe7",
+                    ExternalId = "external_id9442680e",
+                },
             };
             Application expectedResponse = new Application
             {
@@ -222,13 +616,39 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Profile = "profile1b48977d",
                 JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
                 CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
-                ApplicationDate = new gt::Date(),
+                ApplicationDate = new gt::Date
+                {
+                    Year = 1825033604,
+                    Month = 1123628660,
+                    Day = -1333949598,
+                },
                 Stage = Application.Types.ApplicationStage.OfferAccepted,
                 State = Application.Types.ApplicationState.Unspecified,
-                Interviews = { new Interview(), },
+                Interviews =
+                {
+                    new Interview
+                    {
+                        Rating = new Rating
+                        {
+                            Overall = 6.176982681295555E+17,
+                            Min = -3.861802214438196E+17,
+                            Max = 1.023244718003839E+18,
+                            Interval = 1.0392845690694359E+18,
+                        },
+                        Outcome = Outcome.Neutral,
+                    },
+                },
                 Referral = false,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OutcomeNotes = "outcome_notes38ed921d",
                 Outcome = Outcome.Neutral,
                 IsMatch = false,
@@ -258,13 +678,39 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Profile = "profile1b48977d",
                 JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
                 CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
-                ApplicationDate = new gt::Date(),
+                ApplicationDate = new gt::Date
+                {
+                    Year = 1825033604,
+                    Month = 1123628660,
+                    Day = -1333949598,
+                },
                 Stage = Application.Types.ApplicationStage.OfferAccepted,
                 State = Application.Types.ApplicationState.Unspecified,
-                Interviews = { new Interview(), },
+                Interviews =
+                {
+                    new Interview
+                    {
+                        Rating = new Rating
+                        {
+                            Overall = 6.176982681295555E+17,
+                            Min = -3.861802214438196E+17,
+                            Max = 1.023244718003839E+18,
+                            Interval = 1.0392845690694359E+18,
+                        },
+                        Outcome = Outcome.Neutral,
+                    },
+                },
                 Referral = false,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OutcomeNotes = "outcome_notes38ed921d",
                 Outcome = Outcome.Neutral,
                 IsMatch = false,
@@ -292,13 +738,39 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Profile = "profile1b48977d",
                 JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
                 CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
-                ApplicationDate = new gt::Date(),
+                ApplicationDate = new gt::Date
+                {
+                    Year = 1825033604,
+                    Month = 1123628660,
+                    Day = -1333949598,
+                },
                 Stage = Application.Types.ApplicationStage.OfferAccepted,
                 State = Application.Types.ApplicationState.Unspecified,
-                Interviews = { new Interview(), },
+                Interviews =
+                {
+                    new Interview
+                    {
+                        Rating = new Rating
+                        {
+                            Overall = 6.176982681295555E+17,
+                            Min = -3.861802214438196E+17,
+                            Max = 1.023244718003839E+18,
+                            Interval = 1.0392845690694359E+18,
+                        },
+                        Outcome = Outcome.Neutral,
+                    },
+                },
                 Referral = false,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OutcomeNotes = "outcome_notes38ed921d",
                 Outcome = Outcome.Neutral,
                 IsMatch = false,
@@ -328,13 +800,39 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Profile = "profile1b48977d",
                 JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
                 CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
-                ApplicationDate = new gt::Date(),
+                ApplicationDate = new gt::Date
+                {
+                    Year = 1825033604,
+                    Month = 1123628660,
+                    Day = -1333949598,
+                },
                 Stage = Application.Types.ApplicationStage.OfferAccepted,
                 State = Application.Types.ApplicationState.Unspecified,
-                Interviews = { new Interview(), },
+                Interviews =
+                {
+                    new Interview
+                    {
+                        Rating = new Rating
+                        {
+                            Overall = 6.176982681295555E+17,
+                            Min = -3.861802214438196E+17,
+                            Max = 1.023244718003839E+18,
+                            Interval = 1.0392845690694359E+18,
+                        },
+                        Outcome = Outcome.Neutral,
+                    },
+                },
                 Referral = false,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OutcomeNotes = "outcome_notes38ed921d",
                 Outcome = Outcome.Neutral,
                 IsMatch = false,
@@ -362,13 +860,39 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Profile = "profile1b48977d",
                 JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
                 CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
-                ApplicationDate = new gt::Date(),
+                ApplicationDate = new gt::Date
+                {
+                    Year = 1825033604,
+                    Month = 1123628660,
+                    Day = -1333949598,
+                },
                 Stage = Application.Types.ApplicationStage.OfferAccepted,
                 State = Application.Types.ApplicationState.Unspecified,
-                Interviews = { new Interview(), },
+                Interviews =
+                {
+                    new Interview
+                    {
+                        Rating = new Rating
+                        {
+                            Overall = 6.176982681295555E+17,
+                            Min = -3.861802214438196E+17,
+                            Max = 1.023244718003839E+18,
+                            Interval = 1.0392845690694359E+18,
+                        },
+                        Outcome = Outcome.Neutral,
+                    },
+                },
                 Referral = false,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OutcomeNotes = "outcome_notes38ed921d",
                 Outcome = Outcome.Neutral,
                 IsMatch = false,
@@ -398,13 +922,39 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Profile = "profile1b48977d",
                 JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
                 CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
-                ApplicationDate = new gt::Date(),
+                ApplicationDate = new gt::Date
+                {
+                    Year = 1825033604,
+                    Month = 1123628660,
+                    Day = -1333949598,
+                },
                 Stage = Application.Types.ApplicationStage.OfferAccepted,
                 State = Application.Types.ApplicationState.Unspecified,
-                Interviews = { new Interview(), },
+                Interviews =
+                {
+                    new Interview
+                    {
+                        Rating = new Rating
+                        {
+                            Overall = 6.176982681295555E+17,
+                            Min = -3.861802214438196E+17,
+                            Max = 1.023244718003839E+18,
+                            Interval = 1.0392845690694359E+18,
+                        },
+                        Outcome = Outcome.Neutral,
+                    },
+                },
                 Referral = false,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OutcomeNotes = "outcome_notes38ed921d",
                 Outcome = Outcome.Neutral,
                 IsMatch = false,
@@ -432,13 +982,39 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Profile = "profile1b48977d",
                 JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
                 CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
-                ApplicationDate = new gt::Date(),
+                ApplicationDate = new gt::Date
+                {
+                    Year = 1825033604,
+                    Month = 1123628660,
+                    Day = -1333949598,
+                },
                 Stage = Application.Types.ApplicationStage.OfferAccepted,
                 State = Application.Types.ApplicationState.Unspecified,
-                Interviews = { new Interview(), },
+                Interviews =
+                {
+                    new Interview
+                    {
+                        Rating = new Rating
+                        {
+                            Overall = 6.176982681295555E+17,
+                            Min = -3.861802214438196E+17,
+                            Max = 1.023244718003839E+18,
+                            Interval = 1.0392845690694359E+18,
+                        },
+                        Outcome = Outcome.Neutral,
+                    },
+                },
                 Referral = false,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OutcomeNotes = "outcome_notes38ed921d",
                 Outcome = Outcome.Neutral,
                 IsMatch = false,
@@ -460,8 +1036,55 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             UpdateApplicationRequest request = new UpdateApplicationRequest
             {
-                Application = new Application(),
-                UpdateMask = new wkt::FieldMask(),
+                Application = new Application
+                {
+                    ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                    Profile = "profile1b48977d",
+                    JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    ApplicationDate = new gt::Date
+                    {
+                        Year = 1825033604,
+                        Month = 1123628660,
+                        Day = -1333949598,
+                    },
+                    Stage = Application.Types.ApplicationStage.OfferAccepted,
+                    State = Application.Types.ApplicationState.Unspecified,
+                    Interviews =
+                    {
+                        new Interview
+                        {
+                            Rating = new Rating
+                            {
+                                Overall = 6.176982681295555E+17,
+                                Min = -3.861802214438196E+17,
+                                Max = 1.023244718003839E+18,
+                                Interval = 1.0392845690694359E+18,
+                            },
+                            Outcome = Outcome.Neutral,
+                        },
+                    },
+                    Referral = false,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    OutcomeNotes = "outcome_notes38ed921d",
+                    Outcome = Outcome.Neutral,
+                    IsMatch = false,
+                    JobTitleSnippet = "job_title_snippet4f14afe7",
+                    ExternalId = "external_id9442680e",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Application expectedResponse = new Application
             {
@@ -469,13 +1092,39 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Profile = "profile1b48977d",
                 JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
                 CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
-                ApplicationDate = new gt::Date(),
+                ApplicationDate = new gt::Date
+                {
+                    Year = 1825033604,
+                    Month = 1123628660,
+                    Day = -1333949598,
+                },
                 Stage = Application.Types.ApplicationStage.OfferAccepted,
                 State = Application.Types.ApplicationState.Unspecified,
-                Interviews = { new Interview(), },
+                Interviews =
+                {
+                    new Interview
+                    {
+                        Rating = new Rating
+                        {
+                            Overall = 6.176982681295555E+17,
+                            Min = -3.861802214438196E+17,
+                            Max = 1.023244718003839E+18,
+                            Interval = 1.0392845690694359E+18,
+                        },
+                        Outcome = Outcome.Neutral,
+                    },
+                },
                 Referral = false,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OutcomeNotes = "outcome_notes38ed921d",
                 Outcome = Outcome.Neutral,
                 IsMatch = false,
@@ -495,8 +1144,55 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             UpdateApplicationRequest request = new UpdateApplicationRequest
             {
-                Application = new Application(),
-                UpdateMask = new wkt::FieldMask(),
+                Application = new Application
+                {
+                    ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                    Profile = "profile1b48977d",
+                    JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    ApplicationDate = new gt::Date
+                    {
+                        Year = 1825033604,
+                        Month = 1123628660,
+                        Day = -1333949598,
+                    },
+                    Stage = Application.Types.ApplicationStage.OfferAccepted,
+                    State = Application.Types.ApplicationState.Unspecified,
+                    Interviews =
+                    {
+                        new Interview
+                        {
+                            Rating = new Rating
+                            {
+                                Overall = 6.176982681295555E+17,
+                                Min = -3.861802214438196E+17,
+                                Max = 1.023244718003839E+18,
+                                Interval = 1.0392845690694359E+18,
+                            },
+                            Outcome = Outcome.Neutral,
+                        },
+                    },
+                    Referral = false,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    OutcomeNotes = "outcome_notes38ed921d",
+                    Outcome = Outcome.Neutral,
+                    IsMatch = false,
+                    JobTitleSnippet = "job_title_snippet4f14afe7",
+                    ExternalId = "external_id9442680e",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Application expectedResponse = new Application
             {
@@ -504,13 +1200,39 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Profile = "profile1b48977d",
                 JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
                 CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
-                ApplicationDate = new gt::Date(),
+                ApplicationDate = new gt::Date
+                {
+                    Year = 1825033604,
+                    Month = 1123628660,
+                    Day = -1333949598,
+                },
                 Stage = Application.Types.ApplicationStage.OfferAccepted,
                 State = Application.Types.ApplicationState.Unspecified,
-                Interviews = { new Interview(), },
+                Interviews =
+                {
+                    new Interview
+                    {
+                        Rating = new Rating
+                        {
+                            Overall = 6.176982681295555E+17,
+                            Min = -3.861802214438196E+17,
+                            Max = 1.023244718003839E+18,
+                            Interval = 1.0392845690694359E+18,
+                        },
+                        Outcome = Outcome.Neutral,
+                    },
+                },
                 Referral = false,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OutcomeNotes = "outcome_notes38ed921d",
                 Outcome = Outcome.Neutral,
                 IsMatch = false,
@@ -532,7 +1254,51 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             UpdateApplicationRequest request = new UpdateApplicationRequest
             {
-                Application = new Application(),
+                Application = new Application
+                {
+                    ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                    Profile = "profile1b48977d",
+                    JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    ApplicationDate = new gt::Date
+                    {
+                        Year = 1825033604,
+                        Month = 1123628660,
+                        Day = -1333949598,
+                    },
+                    Stage = Application.Types.ApplicationStage.OfferAccepted,
+                    State = Application.Types.ApplicationState.Unspecified,
+                    Interviews =
+                    {
+                        new Interview
+                        {
+                            Rating = new Rating
+                            {
+                                Overall = 6.176982681295555E+17,
+                                Min = -3.861802214438196E+17,
+                                Max = 1.023244718003839E+18,
+                                Interval = 1.0392845690694359E+18,
+                            },
+                            Outcome = Outcome.Neutral,
+                        },
+                    },
+                    Referral = false,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    OutcomeNotes = "outcome_notes38ed921d",
+                    Outcome = Outcome.Neutral,
+                    IsMatch = false,
+                    JobTitleSnippet = "job_title_snippet4f14afe7",
+                    ExternalId = "external_id9442680e",
+                },
             };
             Application expectedResponse = new Application
             {
@@ -540,13 +1306,39 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Profile = "profile1b48977d",
                 JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
                 CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
-                ApplicationDate = new gt::Date(),
+                ApplicationDate = new gt::Date
+                {
+                    Year = 1825033604,
+                    Month = 1123628660,
+                    Day = -1333949598,
+                },
                 Stage = Application.Types.ApplicationStage.OfferAccepted,
                 State = Application.Types.ApplicationState.Unspecified,
-                Interviews = { new Interview(), },
+                Interviews =
+                {
+                    new Interview
+                    {
+                        Rating = new Rating
+                        {
+                            Overall = 6.176982681295555E+17,
+                            Min = -3.861802214438196E+17,
+                            Max = 1.023244718003839E+18,
+                            Interval = 1.0392845690694359E+18,
+                        },
+                        Outcome = Outcome.Neutral,
+                    },
+                },
                 Referral = false,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OutcomeNotes = "outcome_notes38ed921d",
                 Outcome = Outcome.Neutral,
                 IsMatch = false,
@@ -566,7 +1358,51 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<ApplicationService.ApplicationServiceClient> mockGrpcClient = new moq::Mock<ApplicationService.ApplicationServiceClient>(moq::MockBehavior.Strict);
             UpdateApplicationRequest request = new UpdateApplicationRequest
             {
-                Application = new Application(),
+                Application = new Application
+                {
+                    ApplicationName = ApplicationName.FromProjectTenantProfileApplication("[PROJECT]", "[TENANT]", "[PROFILE]", "[APPLICATION]"),
+                    Profile = "profile1b48977d",
+                    JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
+                    CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                    ApplicationDate = new gt::Date
+                    {
+                        Year = 1825033604,
+                        Month = 1123628660,
+                        Day = -1333949598,
+                    },
+                    Stage = Application.Types.ApplicationStage.OfferAccepted,
+                    State = Application.Types.ApplicationState.Unspecified,
+                    Interviews =
+                    {
+                        new Interview
+                        {
+                            Rating = new Rating
+                            {
+                                Overall = 6.176982681295555E+17,
+                                Min = -3.861802214438196E+17,
+                                Max = 1.023244718003839E+18,
+                                Interval = 1.0392845690694359E+18,
+                            },
+                            Outcome = Outcome.Neutral,
+                        },
+                    },
+                    Referral = false,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    OutcomeNotes = "outcome_notes38ed921d",
+                    Outcome = Outcome.Neutral,
+                    IsMatch = false,
+                    JobTitleSnippet = "job_title_snippet4f14afe7",
+                    ExternalId = "external_id9442680e",
+                },
             };
             Application expectedResponse = new Application
             {
@@ -574,13 +1410,39 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Profile = "profile1b48977d",
                 JobAsJobName = JobName.FromProjectTenantJob("[PROJECT]", "[TENANT]", "[JOB]"),
                 CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
-                ApplicationDate = new gt::Date(),
+                ApplicationDate = new gt::Date
+                {
+                    Year = 1825033604,
+                    Month = 1123628660,
+                    Day = -1333949598,
+                },
                 Stage = Application.Types.ApplicationStage.OfferAccepted,
                 State = Application.Types.ApplicationState.Unspecified,
-                Interviews = { new Interview(), },
+                Interviews =
+                {
+                    new Interview
+                    {
+                        Rating = new Rating
+                        {
+                            Overall = 6.176982681295555E+17,
+                            Min = -3.861802214438196E+17,
+                            Max = 1.023244718003839E+18,
+                            Interval = 1.0392845690694359E+18,
+                        },
+                        Outcome = Outcome.Neutral,
+                    },
+                },
                 Referral = false,
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OutcomeNotes = "outcome_notes38ed921d",
                 Outcome = Outcome.Neutral,
                 IsMatch = false,
