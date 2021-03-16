@@ -45,9 +45,25 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 {
                     "domain_names58aa2a78",
                 },
-                ExpireTime = new wkt::Timestamp(),
-                CertificateRawData = new CertificateRawData(),
-                ManagedCertificate = new ManagedCertificate(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CertificateRawData = new CertificateRawData
+                {
+                    PublicCertificate = "public_certificatece1434d7",
+                    PrivateKey = "private_key33176a15",
+                },
+                ManagedCertificate = new ManagedCertificate
+                {
+                    LastRenewalTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Status = ManagementStatus.FailedRetryingNotVisible,
+                },
                 VisibleDomainMappings =
                 {
                     "visible_domain_mappings231706d8",
@@ -79,9 +95,25 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 {
                     "domain_names58aa2a78",
                 },
-                ExpireTime = new wkt::Timestamp(),
-                CertificateRawData = new CertificateRawData(),
-                ManagedCertificate = new ManagedCertificate(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CertificateRawData = new CertificateRawData
+                {
+                    PublicCertificate = "public_certificatece1434d7",
+                    PrivateKey = "private_key33176a15",
+                },
+                ManagedCertificate = new ManagedCertificate
+                {
+                    LastRenewalTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Status = ManagementStatus.FailedRetryingNotVisible,
+                },
                 VisibleDomainMappings =
                 {
                     "visible_domain_mappings231706d8",
@@ -104,7 +136,40 @@ namespace Google.Cloud.AppEngine.V1.Tests
             CreateAuthorizedCertificateRequest request = new CreateAuthorizedCertificateRequest
             {
                 Parent = "parent7858e4d0",
-                Certificate = new AuthorizedCertificate(),
+                Certificate = new AuthorizedCertificate
+                {
+                    Name = "name1c9368b0",
+                    Id = "id74b70bb8",
+                    DisplayName = "display_name137f65c2",
+                    DomainNames =
+                    {
+                        "domain_names58aa2a78",
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CertificateRawData = new CertificateRawData
+                    {
+                        PublicCertificate = "public_certificatece1434d7",
+                        PrivateKey = "private_key33176a15",
+                    },
+                    ManagedCertificate = new ManagedCertificate
+                    {
+                        LastRenewalTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Status = ManagementStatus.FailedRetryingNotVisible,
+                    },
+                    VisibleDomainMappings =
+                    {
+                        "visible_domain_mappings231706d8",
+                    },
+                    DomainMappingsCount = 1489673528,
+                },
             };
             AuthorizedCertificate expectedResponse = new AuthorizedCertificate
             {
@@ -115,9 +180,25 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 {
                     "domain_names58aa2a78",
                 },
-                ExpireTime = new wkt::Timestamp(),
-                CertificateRawData = new CertificateRawData(),
-                ManagedCertificate = new ManagedCertificate(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CertificateRawData = new CertificateRawData
+                {
+                    PublicCertificate = "public_certificatece1434d7",
+                    PrivateKey = "private_key33176a15",
+                },
+                ManagedCertificate = new ManagedCertificate
+                {
+                    LastRenewalTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Status = ManagementStatus.FailedRetryingNotVisible,
+                },
                 VisibleDomainMappings =
                 {
                     "visible_domain_mappings231706d8",
@@ -138,7 +219,40 @@ namespace Google.Cloud.AppEngine.V1.Tests
             CreateAuthorizedCertificateRequest request = new CreateAuthorizedCertificateRequest
             {
                 Parent = "parent7858e4d0",
-                Certificate = new AuthorizedCertificate(),
+                Certificate = new AuthorizedCertificate
+                {
+                    Name = "name1c9368b0",
+                    Id = "id74b70bb8",
+                    DisplayName = "display_name137f65c2",
+                    DomainNames =
+                    {
+                        "domain_names58aa2a78",
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CertificateRawData = new CertificateRawData
+                    {
+                        PublicCertificate = "public_certificatece1434d7",
+                        PrivateKey = "private_key33176a15",
+                    },
+                    ManagedCertificate = new ManagedCertificate
+                    {
+                        LastRenewalTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Status = ManagementStatus.FailedRetryingNotVisible,
+                    },
+                    VisibleDomainMappings =
+                    {
+                        "visible_domain_mappings231706d8",
+                    },
+                    DomainMappingsCount = 1489673528,
+                },
             };
             AuthorizedCertificate expectedResponse = new AuthorizedCertificate
             {
@@ -149,9 +263,25 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 {
                     "domain_names58aa2a78",
                 },
-                ExpireTime = new wkt::Timestamp(),
-                CertificateRawData = new CertificateRawData(),
-                ManagedCertificate = new ManagedCertificate(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CertificateRawData = new CertificateRawData
+                {
+                    PublicCertificate = "public_certificatece1434d7",
+                    PrivateKey = "private_key33176a15",
+                },
+                ManagedCertificate = new ManagedCertificate
+                {
+                    LastRenewalTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Status = ManagementStatus.FailedRetryingNotVisible,
+                },
                 VisibleDomainMappings =
                 {
                     "visible_domain_mappings231706d8",
@@ -174,8 +304,44 @@ namespace Google.Cloud.AppEngine.V1.Tests
             UpdateAuthorizedCertificateRequest request = new UpdateAuthorizedCertificateRequest
             {
                 Name = "name1c9368b0",
-                Certificate = new AuthorizedCertificate(),
-                UpdateMask = new wkt::FieldMask(),
+                Certificate = new AuthorizedCertificate
+                {
+                    Name = "name1c9368b0",
+                    Id = "id74b70bb8",
+                    DisplayName = "display_name137f65c2",
+                    DomainNames =
+                    {
+                        "domain_names58aa2a78",
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CertificateRawData = new CertificateRawData
+                    {
+                        PublicCertificate = "public_certificatece1434d7",
+                        PrivateKey = "private_key33176a15",
+                    },
+                    ManagedCertificate = new ManagedCertificate
+                    {
+                        LastRenewalTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Status = ManagementStatus.FailedRetryingNotVisible,
+                    },
+                    VisibleDomainMappings =
+                    {
+                        "visible_domain_mappings231706d8",
+                    },
+                    DomainMappingsCount = 1489673528,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             AuthorizedCertificate expectedResponse = new AuthorizedCertificate
             {
@@ -186,9 +352,25 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 {
                     "domain_names58aa2a78",
                 },
-                ExpireTime = new wkt::Timestamp(),
-                CertificateRawData = new CertificateRawData(),
-                ManagedCertificate = new ManagedCertificate(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CertificateRawData = new CertificateRawData
+                {
+                    PublicCertificate = "public_certificatece1434d7",
+                    PrivateKey = "private_key33176a15",
+                },
+                ManagedCertificate = new ManagedCertificate
+                {
+                    LastRenewalTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Status = ManagementStatus.FailedRetryingNotVisible,
+                },
                 VisibleDomainMappings =
                 {
                     "visible_domain_mappings231706d8",
@@ -209,8 +391,44 @@ namespace Google.Cloud.AppEngine.V1.Tests
             UpdateAuthorizedCertificateRequest request = new UpdateAuthorizedCertificateRequest
             {
                 Name = "name1c9368b0",
-                Certificate = new AuthorizedCertificate(),
-                UpdateMask = new wkt::FieldMask(),
+                Certificate = new AuthorizedCertificate
+                {
+                    Name = "name1c9368b0",
+                    Id = "id74b70bb8",
+                    DisplayName = "display_name137f65c2",
+                    DomainNames =
+                    {
+                        "domain_names58aa2a78",
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CertificateRawData = new CertificateRawData
+                    {
+                        PublicCertificate = "public_certificatece1434d7",
+                        PrivateKey = "private_key33176a15",
+                    },
+                    ManagedCertificate = new ManagedCertificate
+                    {
+                        LastRenewalTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Status = ManagementStatus.FailedRetryingNotVisible,
+                    },
+                    VisibleDomainMappings =
+                    {
+                        "visible_domain_mappings231706d8",
+                    },
+                    DomainMappingsCount = 1489673528,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             AuthorizedCertificate expectedResponse = new AuthorizedCertificate
             {
@@ -221,9 +439,25 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 {
                     "domain_names58aa2a78",
                 },
-                ExpireTime = new wkt::Timestamp(),
-                CertificateRawData = new CertificateRawData(),
-                ManagedCertificate = new ManagedCertificate(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CertificateRawData = new CertificateRawData
+                {
+                    PublicCertificate = "public_certificatece1434d7",
+                    PrivateKey = "private_key33176a15",
+                },
+                ManagedCertificate = new ManagedCertificate
+                {
+                    LastRenewalTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Status = ManagementStatus.FailedRetryingNotVisible,
+                },
                 VisibleDomainMappings =
                 {
                     "visible_domain_mappings231706d8",

@@ -43,19 +43,38 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 Id = "id74b70bb8",
                 DispatchRules =
                 {
-                    new UrlDispatchRule(),
+                    new UrlDispatchRule
+                    {
+                        Domain = "domaine8825fad",
+                        Path = "path0b1dfed6",
+                        Service = "serviced3f0abaa",
+                    },
                 },
                 AuthDomain = "auth_domaine14f1cb8",
                 LocationId = "location_iddaa574e2",
                 CodeBucket = "code_bucket58835a33",
-                DefaultCookieExpiration = new wkt::Duration(),
+                DefaultCookieExpiration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ServingStatus = Application.Types.ServingStatus.UserDisabled,
                 DefaultHostname = "default_hostname0ebd0627",
                 DefaultBucket = "default_bucket8b7bc47d",
-                Iap = new Application.Types.IdentityAwareProxy(),
+                Iap = new Application.Types.IdentityAwareProxy
+                {
+                    Enabled = true,
+                    Oauth2ClientId = "oauth2_client_id0e8ea240",
+                    Oauth2ClientSecret = "oauth2_client_secret89e7eedb",
+                    Oauth2ClientSecretSha256 = "oauth2_client_secret_sha256250de271",
+                },
                 GcrDomain = "gcr_domain3f5bd835",
                 DatabaseType = Application.Types.DatabaseType.CloudDatastoreCompatibility,
-                FeatureSettings = new Application.Types.FeatureSettings(),
+                FeatureSettings = new Application.Types.FeatureSettings
+                {
+                    SplitHealthChecks = true,
+                    UseContainerOptimizedOs = false,
+                },
             };
             mockGrpcClient.Setup(x => x.GetApplication(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ApplicationsClient client = new ApplicationsClientImpl(mockGrpcClient.Object, null);
@@ -79,19 +98,38 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 Id = "id74b70bb8",
                 DispatchRules =
                 {
-                    new UrlDispatchRule(),
+                    new UrlDispatchRule
+                    {
+                        Domain = "domaine8825fad",
+                        Path = "path0b1dfed6",
+                        Service = "serviced3f0abaa",
+                    },
                 },
                 AuthDomain = "auth_domaine14f1cb8",
                 LocationId = "location_iddaa574e2",
                 CodeBucket = "code_bucket58835a33",
-                DefaultCookieExpiration = new wkt::Duration(),
+                DefaultCookieExpiration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ServingStatus = Application.Types.ServingStatus.UserDisabled,
                 DefaultHostname = "default_hostname0ebd0627",
                 DefaultBucket = "default_bucket8b7bc47d",
-                Iap = new Application.Types.IdentityAwareProxy(),
+                Iap = new Application.Types.IdentityAwareProxy
+                {
+                    Enabled = true,
+                    Oauth2ClientId = "oauth2_client_id0e8ea240",
+                    Oauth2ClientSecret = "oauth2_client_secret89e7eedb",
+                    Oauth2ClientSecretSha256 = "oauth2_client_secret_sha256250de271",
+                },
                 GcrDomain = "gcr_domain3f5bd835",
                 DatabaseType = Application.Types.DatabaseType.CloudDatastoreCompatibility,
-                FeatureSettings = new Application.Types.FeatureSettings(),
+                FeatureSettings = new Application.Types.FeatureSettings
+                {
+                    SplitHealthChecks = true,
+                    UseContainerOptimizedOs = false,
+                },
             };
             mockGrpcClient.Setup(x => x.GetApplicationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Application>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ApplicationsClient client = new ApplicationsClientImpl(mockGrpcClient.Object, null);

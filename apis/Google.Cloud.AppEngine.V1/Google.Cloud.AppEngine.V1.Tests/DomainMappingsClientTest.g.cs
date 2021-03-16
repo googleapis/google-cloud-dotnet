@@ -40,10 +40,20 @@ namespace Google.Cloud.AppEngine.V1.Tests
             {
                 Name = "name1c9368b0",
                 Id = "id74b70bb8",
-                SslSettings = new SslSettings(),
+                SslSettings = new SslSettings
+                {
+                    CertificateId = "certificate_id007930d5",
+                    SslManagementType = SslSettings.Types.SslManagementType.Manual,
+                    PendingManagedCertificateId = "pending_managed_certificate_id9f517eac",
+                },
                 ResourceRecords =
                 {
-                    new ResourceRecord(),
+                    new ResourceRecord
+                    {
+                        Name = "name1c9368b0",
+                        Rrdata = "rrdata533a7e1e",
+                        Type = ResourceRecord.Types.RecordType.Cname,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetDomainMapping(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -66,10 +76,20 @@ namespace Google.Cloud.AppEngine.V1.Tests
             {
                 Name = "name1c9368b0",
                 Id = "id74b70bb8",
-                SslSettings = new SslSettings(),
+                SslSettings = new SslSettings
+                {
+                    CertificateId = "certificate_id007930d5",
+                    SslManagementType = SslSettings.Types.SslManagementType.Manual,
+                    PendingManagedCertificateId = "pending_managed_certificate_id9f517eac",
+                },
                 ResourceRecords =
                 {
-                    new ResourceRecord(),
+                    new ResourceRecord
+                    {
+                        Name = "name1c9368b0",
+                        Rrdata = "rrdata533a7e1e",
+                        Type = ResourceRecord.Types.RecordType.Cname,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetDomainMappingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DomainMapping>(stt::Task.FromResult(expectedResponse), null, null, null, null));

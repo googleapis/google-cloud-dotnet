@@ -40,8 +40,21 @@ namespace Google.Cloud.AppEngine.V1.Tests
             {
                 Name = "name1c9368b0",
                 Id = "id74b70bb8",
-                Split = new TrafficSplit(),
-                NetworkSettings = new NetworkSettings(),
+                Split = new TrafficSplit
+                {
+                    ShardBy = TrafficSplit.Types.ShardBy.Random,
+                    Allocations =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809173544518E+17
+                        },
+                    },
+                },
+                NetworkSettings = new NetworkSettings
+                {
+                    IngressTrafficAllowed = NetworkSettings.Types.IngressTrafficAllowed.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServicesClient client = new ServicesClientImpl(mockGrpcClient.Object, null);
@@ -63,8 +76,21 @@ namespace Google.Cloud.AppEngine.V1.Tests
             {
                 Name = "name1c9368b0",
                 Id = "id74b70bb8",
-                Split = new TrafficSplit(),
-                NetworkSettings = new NetworkSettings(),
+                Split = new TrafficSplit
+                {
+                    ShardBy = TrafficSplit.Types.ShardBy.Random,
+                    Allocations =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809173544518E+17
+                        },
+                    },
+                },
+                NetworkSettings = new NetworkSettings
+                {
+                    IngressTrafficAllowed = NetworkSettings.Types.IngressTrafficAllowed.Unspecified,
+                },
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServicesClient client = new ServicesClientImpl(mockGrpcClient.Object, null);

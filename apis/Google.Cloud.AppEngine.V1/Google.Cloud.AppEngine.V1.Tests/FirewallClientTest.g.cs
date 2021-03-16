@@ -34,11 +34,29 @@ namespace Google.Cloud.AppEngine.V1.Tests
             BatchUpdateIngressRulesRequest request = new BatchUpdateIngressRulesRequest
             {
                 Name = "name1c9368b0",
-                IngressRules = { new FirewallRule(), },
+                IngressRules =
+                {
+                    new FirewallRule
+                    {
+                        Priority = 1546225849,
+                        Action = FirewallRule.Types.Action.Deny,
+                        SourceRange = "source_range8d355d94",
+                        Description = "description2cf9da67",
+                    },
+                },
             };
             BatchUpdateIngressRulesResponse expectedResponse = new BatchUpdateIngressRulesResponse
             {
-                IngressRules = { new FirewallRule(), },
+                IngressRules =
+                {
+                    new FirewallRule
+                    {
+                        Priority = 1546225849,
+                        Action = FirewallRule.Types.Action.Deny,
+                        SourceRange = "source_range8d355d94",
+                        Description = "description2cf9da67",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.BatchUpdateIngressRules(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null);
@@ -54,11 +72,29 @@ namespace Google.Cloud.AppEngine.V1.Tests
             BatchUpdateIngressRulesRequest request = new BatchUpdateIngressRulesRequest
             {
                 Name = "name1c9368b0",
-                IngressRules = { new FirewallRule(), },
+                IngressRules =
+                {
+                    new FirewallRule
+                    {
+                        Priority = 1546225849,
+                        Action = FirewallRule.Types.Action.Deny,
+                        SourceRange = "source_range8d355d94",
+                        Description = "description2cf9da67",
+                    },
+                },
             };
             BatchUpdateIngressRulesResponse expectedResponse = new BatchUpdateIngressRulesResponse
             {
-                IngressRules = { new FirewallRule(), },
+                IngressRules =
+                {
+                    new FirewallRule
+                    {
+                        Priority = 1546225849,
+                        Action = FirewallRule.Types.Action.Deny,
+                        SourceRange = "source_range8d355d94",
+                        Description = "description2cf9da67",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.BatchUpdateIngressRulesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchUpdateIngressRulesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirewallClient client = new FirewallClientImpl(mockGrpcClient.Object, null);
@@ -76,7 +112,13 @@ namespace Google.Cloud.AppEngine.V1.Tests
             CreateIngressRuleRequest request = new CreateIngressRuleRequest
             {
                 Parent = "parent7858e4d0",
-                Rule = new FirewallRule(),
+                Rule = new FirewallRule
+                {
+                    Priority = 1546225849,
+                    Action = FirewallRule.Types.Action.Deny,
+                    SourceRange = "source_range8d355d94",
+                    Description = "description2cf9da67",
+                },
             };
             FirewallRule expectedResponse = new FirewallRule
             {
@@ -99,7 +141,13 @@ namespace Google.Cloud.AppEngine.V1.Tests
             CreateIngressRuleRequest request = new CreateIngressRuleRequest
             {
                 Parent = "parent7858e4d0",
-                Rule = new FirewallRule(),
+                Rule = new FirewallRule
+                {
+                    Priority = 1546225849,
+                    Action = FirewallRule.Types.Action.Deny,
+                    SourceRange = "source_range8d355d94",
+                    Description = "description2cf9da67",
+                },
             };
             FirewallRule expectedResponse = new FirewallRule
             {
@@ -170,8 +218,17 @@ namespace Google.Cloud.AppEngine.V1.Tests
             UpdateIngressRuleRequest request = new UpdateIngressRuleRequest
             {
                 Name = "name1c9368b0",
-                Rule = new FirewallRule(),
-                UpdateMask = new wkt::FieldMask(),
+                Rule = new FirewallRule
+                {
+                    Priority = 1546225849,
+                    Action = FirewallRule.Types.Action.Deny,
+                    SourceRange = "source_range8d355d94",
+                    Description = "description2cf9da67",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             FirewallRule expectedResponse = new FirewallRule
             {
@@ -194,8 +251,17 @@ namespace Google.Cloud.AppEngine.V1.Tests
             UpdateIngressRuleRequest request = new UpdateIngressRuleRequest
             {
                 Name = "name1c9368b0",
-                Rule = new FirewallRule(),
-                UpdateMask = new wkt::FieldMask(),
+                Rule = new FirewallRule
+                {
+                    Priority = 1546225849,
+                    Action = FirewallRule.Types.Action.Deny,
+                    SourceRange = "source_range8d355d94",
+                    Description = "description2cf9da67",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             FirewallRule expectedResponse = new FirewallRule
             {

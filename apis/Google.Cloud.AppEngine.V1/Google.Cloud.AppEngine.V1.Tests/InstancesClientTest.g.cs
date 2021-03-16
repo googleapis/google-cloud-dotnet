@@ -46,7 +46,11 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 VmName = "vm_name2b89e867",
                 VmZoneName = "vm_zone_name0deb2195",
                 VmId = "vm_idb8ec0c0e",
-                StartTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Requests = 821139506,
                 Errors = 20586759,
                 Qps = 1.5122795E+17F,
@@ -82,7 +86,11 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 VmName = "vm_name2b89e867",
                 VmZoneName = "vm_zone_name0deb2195",
                 VmId = "vm_idb8ec0c0e",
-                StartTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Requests = 821139506,
                 Errors = 20586759,
                 Qps = 1.5122795E+17F,
