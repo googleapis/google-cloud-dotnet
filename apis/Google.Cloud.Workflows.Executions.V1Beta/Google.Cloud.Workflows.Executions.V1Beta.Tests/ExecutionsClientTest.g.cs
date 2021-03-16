@@ -35,17 +35,51 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             CreateExecutionRequest request = new CreateExecutionRequest
             {
                 ParentAsWorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
-                Execution = new Execution(),
+                Execution = new Execution
+                {
+                    ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = Execution.Types.State.Failed,
+                    Argument = "argument60e0cd03",
+                    Result = "result1784a8b4",
+                    Error = new Execution.Types.Error
+                    {
+                        Payload = "payloadf43c1c32",
+                        Context = "context72ef185c",
+                    },
+                    WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                },
             };
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CreateExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -62,17 +96,51 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             CreateExecutionRequest request = new CreateExecutionRequest
             {
                 ParentAsWorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
-                Execution = new Execution(),
+                Execution = new Execution
+                {
+                    ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = Execution.Types.State.Failed,
+                    Argument = "argument60e0cd03",
+                    Result = "result1784a8b4",
+                    Error = new Execution.Types.Error
+                    {
+                        Payload = "payloadf43c1c32",
+                        Context = "context72ef185c",
+                    },
+                    WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                },
             };
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CreateExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -91,17 +159,51 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             CreateExecutionRequest request = new CreateExecutionRequest
             {
                 ParentAsWorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
-                Execution = new Execution(),
+                Execution = new Execution
+                {
+                    ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = Execution.Types.State.Failed,
+                    Argument = "argument60e0cd03",
+                    Result = "result1784a8b4",
+                    Error = new Execution.Types.Error
+                    {
+                        Payload = "payloadf43c1c32",
+                        Context = "context72ef185c",
+                    },
+                    WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                },
             };
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CreateExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -118,17 +220,51 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             CreateExecutionRequest request = new CreateExecutionRequest
             {
                 ParentAsWorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
-                Execution = new Execution(),
+                Execution = new Execution
+                {
+                    ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = Execution.Types.State.Failed,
+                    Argument = "argument60e0cd03",
+                    Result = "result1784a8b4",
+                    Error = new Execution.Types.Error
+                    {
+                        Payload = "payloadf43c1c32",
+                        Context = "context72ef185c",
+                    },
+                    WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                },
             };
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CreateExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -147,17 +283,51 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             CreateExecutionRequest request = new CreateExecutionRequest
             {
                 ParentAsWorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
-                Execution = new Execution(),
+                Execution = new Execution
+                {
+                    ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = Execution.Types.State.Failed,
+                    Argument = "argument60e0cd03",
+                    Result = "result1784a8b4",
+                    Error = new Execution.Types.Error
+                    {
+                        Payload = "payloadf43c1c32",
+                        Context = "context72ef185c",
+                    },
+                    WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                },
             };
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CreateExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -174,17 +344,51 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             CreateExecutionRequest request = new CreateExecutionRequest
             {
                 ParentAsWorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
-                Execution = new Execution(),
+                Execution = new Execution
+                {
+                    ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = Execution.Types.State.Failed,
+                    Argument = "argument60e0cd03",
+                    Result = "result1784a8b4",
+                    Error = new Execution.Types.Error
+                    {
+                        Payload = "payloadf43c1c32",
+                        Context = "context72ef185c",
+                    },
+                    WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                },
             };
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CreateExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -208,12 +412,24 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.GetExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -235,12 +451,24 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.GetExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -263,12 +491,24 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.GetExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -289,12 +529,24 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.GetExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -317,12 +569,24 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.GetExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -343,12 +607,24 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.GetExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -371,12 +647,24 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CancelExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -397,12 +685,24 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CancelExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -425,12 +725,24 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CancelExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -451,12 +763,24 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CancelExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -479,12 +803,24 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CancelExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -505,12 +841,24 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             Execution expectedResponse = new Execution
             {
                 ExecutionName = ExecutionName.FromProjectLocationWorkflowExecution("[PROJECT]", "[LOCATION]", "[WORKFLOW]", "[EXECUTION]"),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Execution.Types.State.Failed,
                 Argument = "argument60e0cd03",
                 Result = "result1784a8b4",
-                Error = new Execution.Types.Error(),
+                Error = new Execution.Types.Error
+                {
+                    Payload = "payloadf43c1c32",
+                    Context = "context72ef185c",
+                },
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
             };
             mockGrpcClient.Setup(x => x.CancelExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
