@@ -40,7 +40,33 @@ namespace Google.Cloud.Trace.V1.Tests
             {
                 ProjectId = "project_id43ad98b0",
                 TraceId = "trace_id105c890f",
-                Spans = { new TraceSpan(), },
+                Spans =
+                {
+                    new TraceSpan
+                    {
+                        SpanId = 7815369608243851987UL,
+                        Kind = TraceSpan.Types.SpanKind.Unspecified,
+                        Name = "name1c9368b0",
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ParentSpanId = 11085505182626739874UL,
+                        Labels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetTrace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
@@ -62,7 +88,33 @@ namespace Google.Cloud.Trace.V1.Tests
             {
                 ProjectId = "project_id43ad98b0",
                 TraceId = "trace_id105c890f",
-                Spans = { new TraceSpan(), },
+                Spans =
+                {
+                    new TraceSpan
+                    {
+                        SpanId = 7815369608243851987UL,
+                        Kind = TraceSpan.Types.SpanKind.Unspecified,
+                        Name = "name1c9368b0",
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ParentSpanId = 11085505182626739874UL,
+                        Labels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetTraceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
@@ -86,7 +138,33 @@ namespace Google.Cloud.Trace.V1.Tests
             {
                 ProjectId = "project_id43ad98b0",
                 TraceId = "trace_id105c890f",
-                Spans = { new TraceSpan(), },
+                Spans =
+                {
+                    new TraceSpan
+                    {
+                        SpanId = 7815369608243851987UL,
+                        Kind = TraceSpan.Types.SpanKind.Unspecified,
+                        Name = "name1c9368b0",
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ParentSpanId = 11085505182626739874UL,
+                        Labels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetTrace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
@@ -108,7 +186,33 @@ namespace Google.Cloud.Trace.V1.Tests
             {
                 ProjectId = "project_id43ad98b0",
                 TraceId = "trace_id105c890f",
-                Spans = { new TraceSpan(), },
+                Spans =
+                {
+                    new TraceSpan
+                    {
+                        SpanId = 7815369608243851987UL,
+                        Kind = TraceSpan.Types.SpanKind.Unspecified,
+                        Name = "name1c9368b0",
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ParentSpanId = 11085505182626739874UL,
+                        Labels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetTraceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TraceServiceClient client = new TraceServiceClientImpl(mockGrpcClient.Object, null);
@@ -126,7 +230,44 @@ namespace Google.Cloud.Trace.V1.Tests
             PatchTracesRequest request = new PatchTracesRequest
             {
                 ProjectId = "project_id43ad98b0",
-                Traces = new Traces(),
+                Traces = new Traces
+                {
+                    Traces_ =
+                    {
+                        new Trace
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            TraceId = "trace_id105c890f",
+                            Spans =
+                            {
+                                new TraceSpan
+                                {
+                                    SpanId = 7815369608243851987UL,
+                                    Kind = TraceSpan.Types.SpanKind.Unspecified,
+                                    Name = "name1c9368b0",
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    ParentSpanId = 11085505182626739874UL,
+                                    Labels =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            "value60c16320"
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PatchTraces(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -142,7 +283,44 @@ namespace Google.Cloud.Trace.V1.Tests
             PatchTracesRequest request = new PatchTracesRequest
             {
                 ProjectId = "project_id43ad98b0",
-                Traces = new Traces(),
+                Traces = new Traces
+                {
+                    Traces_ =
+                    {
+                        new Trace
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            TraceId = "trace_id105c890f",
+                            Spans =
+                            {
+                                new TraceSpan
+                                {
+                                    SpanId = 7815369608243851987UL,
+                                    Kind = TraceSpan.Types.SpanKind.Unspecified,
+                                    Name = "name1c9368b0",
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    ParentSpanId = 11085505182626739874UL,
+                                    Labels =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            "value60c16320"
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PatchTracesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -159,7 +337,44 @@ namespace Google.Cloud.Trace.V1.Tests
             PatchTracesRequest request = new PatchTracesRequest
             {
                 ProjectId = "project_id43ad98b0",
-                Traces = new Traces(),
+                Traces = new Traces
+                {
+                    Traces_ =
+                    {
+                        new Trace
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            TraceId = "trace_id105c890f",
+                            Spans =
+                            {
+                                new TraceSpan
+                                {
+                                    SpanId = 7815369608243851987UL,
+                                    Kind = TraceSpan.Types.SpanKind.Unspecified,
+                                    Name = "name1c9368b0",
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    ParentSpanId = 11085505182626739874UL,
+                                    Labels =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            "value60c16320"
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PatchTraces(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -175,7 +390,44 @@ namespace Google.Cloud.Trace.V1.Tests
             PatchTracesRequest request = new PatchTracesRequest
             {
                 ProjectId = "project_id43ad98b0",
-                Traces = new Traces(),
+                Traces = new Traces
+                {
+                    Traces_ =
+                    {
+                        new Trace
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            TraceId = "trace_id105c890f",
+                            Spans =
+                            {
+                                new TraceSpan
+                                {
+                                    SpanId = 7815369608243851987UL,
+                                    Kind = TraceSpan.Types.SpanKind.Unspecified,
+                                    Name = "name1c9368b0",
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    ParentSpanId = 11085505182626739874UL,
+                                    Labels =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            "value60c16320"
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.PatchTracesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
