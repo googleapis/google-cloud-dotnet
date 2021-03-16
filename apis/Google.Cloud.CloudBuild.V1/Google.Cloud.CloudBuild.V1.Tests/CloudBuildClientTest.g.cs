@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -43,19 +44,234 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 Id = "id74b70bb8",
                 Status = Build.Types.Status.InternalError,
-                Source = new Source(),
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                FinishTime = new wkt::Timestamp(),
-                Results = new Results(),
-                Steps = { new BuildStep(), },
-                Timeout = new wkt::Duration(),
+                Source = new Source
+                {
+                    StorageSource = new StorageSource
+                    {
+                        Bucket = "bucket17d0bfc2",
+                        Object = "object63decfa8",
+                        Generation = -8788800127544411748L,
+                    },
+                    RepoSource = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FinishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Results = new Results
+                {
+                    Images =
+                    {
+                        new BuiltImage
+                        {
+                            Name = "name1c9368b0",
+                            Digest = "digest96770fc1",
+                            PushTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    BuildStepImages =
+                    {
+                        "build_step_imagesdaa7235b",
+                    },
+                    ArtifactManifest = "artifact_manifest14d2d7e3",
+                    NumArtifacts = 8832111714758501184L,
+                    BuildStepOutputs =
+                    {
+                        proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                    },
+                    ArtifactTiming = new TimeSpan
+                    {
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                Steps =
+                {
+                    new BuildStep
+                    {
+                        Name = "name1c9368b0",
+                        Env = { "env1d5a03ff", },
+                        Args = { "args09af56a9", },
+                        Dir = "dir83076073",
+                        Id = "id74b70bb8",
+                        WaitFor =
+                        {
+                            "wait_for8cc937b4",
+                        },
+                        Entrypoint = "entrypoint53bbadee",
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        Timing = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        Timeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Status = Build.Types.Status.InternalError,
+                        PullTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                },
+                Timeout = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Images = { "images1714b559", },
                 ProjectId = "project_id43ad98b0",
                 LogsBucket = "logs_bucket85d3caaa",
-                SourceProvenance = new SourceProvenance(),
+                SourceProvenance = new SourceProvenance
+                {
+                    ResolvedStorageSource = new StorageSource
+                    {
+                        Bucket = "bucket17d0bfc2",
+                        Object = "object63decfa8",
+                        Generation = -8788800127544411748L,
+                    },
+                    FileHashes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FileHashes
+                            {
+                                FileHash =
+                                {
+                                    new Hash
+                                    {
+                                        Type = Hash.Types.HashType.None,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            }
+                        },
+                    },
+                    ResolvedRepoSource = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
                 BuildTriggerId = "build_trigger_idbd29c2e8",
-                Options = new BuildOptions(),
+                Options = new BuildOptions
+                {
+                    SourceProvenanceHash =
+                    {
+                        Hash.Types.HashType.Md5,
+                    },
+                    RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                    MachineType = BuildOptions.Types.MachineType.Unspecified,
+                    SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                    LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                    DiskSizeGb = 7103353205508136450L,
+                    WorkerPool = "worker_pool53f9ab42",
+                    Logging = BuildOptions.Types.LoggingMode.None,
+                    Env = { "env1d5a03ff", },
+                    SecretEnv =
+                    {
+                        "secret_env6a25f329",
+                    },
+                    Volumes =
+                    {
+                        new Volume
+                        {
+                            Name = "name1c9368b0",
+                            Path = "path0b1dfed6",
+                        },
+                    },
+                    DynamicSubstitutions = true,
+                },
                 StatusDetail = "status_detail859ccc64",
                 LogUrl = "log_url5edf0128",
                 Substitutions =
@@ -66,16 +282,66 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                     },
                 },
                 Tags = { "tags52c47ad5", },
-                Secrets = { new Secret(), },
+                Secrets =
+                {
+                    new Secret
+                    {
+                        KmsKeyName = "kms_key_name06bd122b",
+                        SecretEnv =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                proto::ByteString.CopyFromUtf8("value60c16320")
+                            },
+                        },
+                    },
+                },
                 Timing =
                 {
                     {
                         "key8a0b6e3c",
-                        new TimeSpan()
+                        new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        }
                     },
                 },
-                Artifacts = new Artifacts(),
-                QueueTtl = new wkt::Duration(),
+                Artifacts = new Artifacts
+                {
+                    Images = { "images1714b559", },
+                    Objects = new Artifacts.Types.ArtifactObjects
+                    {
+                        Location = "locatione09d18d5",
+                        Paths = { "paths012c8713", },
+                        Timing = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                },
+                QueueTtl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
             };
@@ -101,19 +367,234 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 Id = "id74b70bb8",
                 Status = Build.Types.Status.InternalError,
-                Source = new Source(),
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                FinishTime = new wkt::Timestamp(),
-                Results = new Results(),
-                Steps = { new BuildStep(), },
-                Timeout = new wkt::Duration(),
+                Source = new Source
+                {
+                    StorageSource = new StorageSource
+                    {
+                        Bucket = "bucket17d0bfc2",
+                        Object = "object63decfa8",
+                        Generation = -8788800127544411748L,
+                    },
+                    RepoSource = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FinishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Results = new Results
+                {
+                    Images =
+                    {
+                        new BuiltImage
+                        {
+                            Name = "name1c9368b0",
+                            Digest = "digest96770fc1",
+                            PushTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    BuildStepImages =
+                    {
+                        "build_step_imagesdaa7235b",
+                    },
+                    ArtifactManifest = "artifact_manifest14d2d7e3",
+                    NumArtifacts = 8832111714758501184L,
+                    BuildStepOutputs =
+                    {
+                        proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                    },
+                    ArtifactTiming = new TimeSpan
+                    {
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                Steps =
+                {
+                    new BuildStep
+                    {
+                        Name = "name1c9368b0",
+                        Env = { "env1d5a03ff", },
+                        Args = { "args09af56a9", },
+                        Dir = "dir83076073",
+                        Id = "id74b70bb8",
+                        WaitFor =
+                        {
+                            "wait_for8cc937b4",
+                        },
+                        Entrypoint = "entrypoint53bbadee",
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        Timing = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        Timeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Status = Build.Types.Status.InternalError,
+                        PullTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                },
+                Timeout = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Images = { "images1714b559", },
                 ProjectId = "project_id43ad98b0",
                 LogsBucket = "logs_bucket85d3caaa",
-                SourceProvenance = new SourceProvenance(),
+                SourceProvenance = new SourceProvenance
+                {
+                    ResolvedStorageSource = new StorageSource
+                    {
+                        Bucket = "bucket17d0bfc2",
+                        Object = "object63decfa8",
+                        Generation = -8788800127544411748L,
+                    },
+                    FileHashes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FileHashes
+                            {
+                                FileHash =
+                                {
+                                    new Hash
+                                    {
+                                        Type = Hash.Types.HashType.None,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            }
+                        },
+                    },
+                    ResolvedRepoSource = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
                 BuildTriggerId = "build_trigger_idbd29c2e8",
-                Options = new BuildOptions(),
+                Options = new BuildOptions
+                {
+                    SourceProvenanceHash =
+                    {
+                        Hash.Types.HashType.Md5,
+                    },
+                    RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                    MachineType = BuildOptions.Types.MachineType.Unspecified,
+                    SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                    LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                    DiskSizeGb = 7103353205508136450L,
+                    WorkerPool = "worker_pool53f9ab42",
+                    Logging = BuildOptions.Types.LoggingMode.None,
+                    Env = { "env1d5a03ff", },
+                    SecretEnv =
+                    {
+                        "secret_env6a25f329",
+                    },
+                    Volumes =
+                    {
+                        new Volume
+                        {
+                            Name = "name1c9368b0",
+                            Path = "path0b1dfed6",
+                        },
+                    },
+                    DynamicSubstitutions = true,
+                },
                 StatusDetail = "status_detail859ccc64",
                 LogUrl = "log_url5edf0128",
                 Substitutions =
@@ -124,16 +605,66 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                     },
                 },
                 Tags = { "tags52c47ad5", },
-                Secrets = { new Secret(), },
+                Secrets =
+                {
+                    new Secret
+                    {
+                        KmsKeyName = "kms_key_name06bd122b",
+                        SecretEnv =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                proto::ByteString.CopyFromUtf8("value60c16320")
+                            },
+                        },
+                    },
+                },
                 Timing =
                 {
                     {
                         "key8a0b6e3c",
-                        new TimeSpan()
+                        new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        }
                     },
                 },
-                Artifacts = new Artifacts(),
-                QueueTtl = new wkt::Duration(),
+                Artifacts = new Artifacts
+                {
+                    Images = { "images1714b559", },
+                    Objects = new Artifacts.Types.ArtifactObjects
+                    {
+                        Location = "locatione09d18d5",
+                        Paths = { "paths012c8713", },
+                        Timing = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                },
+                QueueTtl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
             };
@@ -160,19 +691,234 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 Id = "id74b70bb8",
                 Status = Build.Types.Status.InternalError,
-                Source = new Source(),
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                FinishTime = new wkt::Timestamp(),
-                Results = new Results(),
-                Steps = { new BuildStep(), },
-                Timeout = new wkt::Duration(),
+                Source = new Source
+                {
+                    StorageSource = new StorageSource
+                    {
+                        Bucket = "bucket17d0bfc2",
+                        Object = "object63decfa8",
+                        Generation = -8788800127544411748L,
+                    },
+                    RepoSource = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FinishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Results = new Results
+                {
+                    Images =
+                    {
+                        new BuiltImage
+                        {
+                            Name = "name1c9368b0",
+                            Digest = "digest96770fc1",
+                            PushTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    BuildStepImages =
+                    {
+                        "build_step_imagesdaa7235b",
+                    },
+                    ArtifactManifest = "artifact_manifest14d2d7e3",
+                    NumArtifacts = 8832111714758501184L,
+                    BuildStepOutputs =
+                    {
+                        proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                    },
+                    ArtifactTiming = new TimeSpan
+                    {
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                Steps =
+                {
+                    new BuildStep
+                    {
+                        Name = "name1c9368b0",
+                        Env = { "env1d5a03ff", },
+                        Args = { "args09af56a9", },
+                        Dir = "dir83076073",
+                        Id = "id74b70bb8",
+                        WaitFor =
+                        {
+                            "wait_for8cc937b4",
+                        },
+                        Entrypoint = "entrypoint53bbadee",
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        Timing = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        Timeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Status = Build.Types.Status.InternalError,
+                        PullTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                },
+                Timeout = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Images = { "images1714b559", },
                 ProjectId = "project_id43ad98b0",
                 LogsBucket = "logs_bucket85d3caaa",
-                SourceProvenance = new SourceProvenance(),
+                SourceProvenance = new SourceProvenance
+                {
+                    ResolvedStorageSource = new StorageSource
+                    {
+                        Bucket = "bucket17d0bfc2",
+                        Object = "object63decfa8",
+                        Generation = -8788800127544411748L,
+                    },
+                    FileHashes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FileHashes
+                            {
+                                FileHash =
+                                {
+                                    new Hash
+                                    {
+                                        Type = Hash.Types.HashType.None,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            }
+                        },
+                    },
+                    ResolvedRepoSource = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
                 BuildTriggerId = "build_trigger_idbd29c2e8",
-                Options = new BuildOptions(),
+                Options = new BuildOptions
+                {
+                    SourceProvenanceHash =
+                    {
+                        Hash.Types.HashType.Md5,
+                    },
+                    RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                    MachineType = BuildOptions.Types.MachineType.Unspecified,
+                    SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                    LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                    DiskSizeGb = 7103353205508136450L,
+                    WorkerPool = "worker_pool53f9ab42",
+                    Logging = BuildOptions.Types.LoggingMode.None,
+                    Env = { "env1d5a03ff", },
+                    SecretEnv =
+                    {
+                        "secret_env6a25f329",
+                    },
+                    Volumes =
+                    {
+                        new Volume
+                        {
+                            Name = "name1c9368b0",
+                            Path = "path0b1dfed6",
+                        },
+                    },
+                    DynamicSubstitutions = true,
+                },
                 StatusDetail = "status_detail859ccc64",
                 LogUrl = "log_url5edf0128",
                 Substitutions =
@@ -183,16 +929,66 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                     },
                 },
                 Tags = { "tags52c47ad5", },
-                Secrets = { new Secret(), },
+                Secrets =
+                {
+                    new Secret
+                    {
+                        KmsKeyName = "kms_key_name06bd122b",
+                        SecretEnv =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                proto::ByteString.CopyFromUtf8("value60c16320")
+                            },
+                        },
+                    },
+                },
                 Timing =
                 {
                     {
                         "key8a0b6e3c",
-                        new TimeSpan()
+                        new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        }
                     },
                 },
-                Artifacts = new Artifacts(),
-                QueueTtl = new wkt::Duration(),
+                Artifacts = new Artifacts
+                {
+                    Images = { "images1714b559", },
+                    Objects = new Artifacts.Types.ArtifactObjects
+                    {
+                        Location = "locatione09d18d5",
+                        Paths = { "paths012c8713", },
+                        Timing = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                },
+                QueueTtl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
             };
@@ -217,19 +1013,234 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 Id = "id74b70bb8",
                 Status = Build.Types.Status.InternalError,
-                Source = new Source(),
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                FinishTime = new wkt::Timestamp(),
-                Results = new Results(),
-                Steps = { new BuildStep(), },
-                Timeout = new wkt::Duration(),
+                Source = new Source
+                {
+                    StorageSource = new StorageSource
+                    {
+                        Bucket = "bucket17d0bfc2",
+                        Object = "object63decfa8",
+                        Generation = -8788800127544411748L,
+                    },
+                    RepoSource = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FinishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Results = new Results
+                {
+                    Images =
+                    {
+                        new BuiltImage
+                        {
+                            Name = "name1c9368b0",
+                            Digest = "digest96770fc1",
+                            PushTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    BuildStepImages =
+                    {
+                        "build_step_imagesdaa7235b",
+                    },
+                    ArtifactManifest = "artifact_manifest14d2d7e3",
+                    NumArtifacts = 8832111714758501184L,
+                    BuildStepOutputs =
+                    {
+                        proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                    },
+                    ArtifactTiming = new TimeSpan
+                    {
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                Steps =
+                {
+                    new BuildStep
+                    {
+                        Name = "name1c9368b0",
+                        Env = { "env1d5a03ff", },
+                        Args = { "args09af56a9", },
+                        Dir = "dir83076073",
+                        Id = "id74b70bb8",
+                        WaitFor =
+                        {
+                            "wait_for8cc937b4",
+                        },
+                        Entrypoint = "entrypoint53bbadee",
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        Timing = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        Timeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Status = Build.Types.Status.InternalError,
+                        PullTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                },
+                Timeout = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Images = { "images1714b559", },
                 ProjectId = "project_id43ad98b0",
                 LogsBucket = "logs_bucket85d3caaa",
-                SourceProvenance = new SourceProvenance(),
+                SourceProvenance = new SourceProvenance
+                {
+                    ResolvedStorageSource = new StorageSource
+                    {
+                        Bucket = "bucket17d0bfc2",
+                        Object = "object63decfa8",
+                        Generation = -8788800127544411748L,
+                    },
+                    FileHashes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FileHashes
+                            {
+                                FileHash =
+                                {
+                                    new Hash
+                                    {
+                                        Type = Hash.Types.HashType.None,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            }
+                        },
+                    },
+                    ResolvedRepoSource = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
                 BuildTriggerId = "build_trigger_idbd29c2e8",
-                Options = new BuildOptions(),
+                Options = new BuildOptions
+                {
+                    SourceProvenanceHash =
+                    {
+                        Hash.Types.HashType.Md5,
+                    },
+                    RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                    MachineType = BuildOptions.Types.MachineType.Unspecified,
+                    SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                    LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                    DiskSizeGb = 7103353205508136450L,
+                    WorkerPool = "worker_pool53f9ab42",
+                    Logging = BuildOptions.Types.LoggingMode.None,
+                    Env = { "env1d5a03ff", },
+                    SecretEnv =
+                    {
+                        "secret_env6a25f329",
+                    },
+                    Volumes =
+                    {
+                        new Volume
+                        {
+                            Name = "name1c9368b0",
+                            Path = "path0b1dfed6",
+                        },
+                    },
+                    DynamicSubstitutions = true,
+                },
                 StatusDetail = "status_detail859ccc64",
                 LogUrl = "log_url5edf0128",
                 Substitutions =
@@ -240,16 +1251,66 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                     },
                 },
                 Tags = { "tags52c47ad5", },
-                Secrets = { new Secret(), },
+                Secrets =
+                {
+                    new Secret
+                    {
+                        KmsKeyName = "kms_key_name06bd122b",
+                        SecretEnv =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                proto::ByteString.CopyFromUtf8("value60c16320")
+                            },
+                        },
+                    },
+                },
                 Timing =
                 {
                     {
                         "key8a0b6e3c",
-                        new TimeSpan()
+                        new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        }
                     },
                 },
-                Artifacts = new Artifacts(),
-                QueueTtl = new wkt::Duration(),
+                Artifacts = new Artifacts
+                {
+                    Images = { "images1714b559", },
+                    Objects = new Artifacts.Types.ArtifactObjects
+                    {
+                        Location = "locatione09d18d5",
+                        Paths = { "paths012c8713", },
+                        Timing = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                },
+                QueueTtl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
             };
@@ -277,19 +1338,234 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 Id = "id74b70bb8",
                 Status = Build.Types.Status.InternalError,
-                Source = new Source(),
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                FinishTime = new wkt::Timestamp(),
-                Results = new Results(),
-                Steps = { new BuildStep(), },
-                Timeout = new wkt::Duration(),
+                Source = new Source
+                {
+                    StorageSource = new StorageSource
+                    {
+                        Bucket = "bucket17d0bfc2",
+                        Object = "object63decfa8",
+                        Generation = -8788800127544411748L,
+                    },
+                    RepoSource = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FinishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Results = new Results
+                {
+                    Images =
+                    {
+                        new BuiltImage
+                        {
+                            Name = "name1c9368b0",
+                            Digest = "digest96770fc1",
+                            PushTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    BuildStepImages =
+                    {
+                        "build_step_imagesdaa7235b",
+                    },
+                    ArtifactManifest = "artifact_manifest14d2d7e3",
+                    NumArtifacts = 8832111714758501184L,
+                    BuildStepOutputs =
+                    {
+                        proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                    },
+                    ArtifactTiming = new TimeSpan
+                    {
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                Steps =
+                {
+                    new BuildStep
+                    {
+                        Name = "name1c9368b0",
+                        Env = { "env1d5a03ff", },
+                        Args = { "args09af56a9", },
+                        Dir = "dir83076073",
+                        Id = "id74b70bb8",
+                        WaitFor =
+                        {
+                            "wait_for8cc937b4",
+                        },
+                        Entrypoint = "entrypoint53bbadee",
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        Timing = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        Timeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Status = Build.Types.Status.InternalError,
+                        PullTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                },
+                Timeout = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Images = { "images1714b559", },
                 ProjectId = "project_id43ad98b0",
                 LogsBucket = "logs_bucket85d3caaa",
-                SourceProvenance = new SourceProvenance(),
+                SourceProvenance = new SourceProvenance
+                {
+                    ResolvedStorageSource = new StorageSource
+                    {
+                        Bucket = "bucket17d0bfc2",
+                        Object = "object63decfa8",
+                        Generation = -8788800127544411748L,
+                    },
+                    FileHashes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FileHashes
+                            {
+                                FileHash =
+                                {
+                                    new Hash
+                                    {
+                                        Type = Hash.Types.HashType.None,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            }
+                        },
+                    },
+                    ResolvedRepoSource = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
                 BuildTriggerId = "build_trigger_idbd29c2e8",
-                Options = new BuildOptions(),
+                Options = new BuildOptions
+                {
+                    SourceProvenanceHash =
+                    {
+                        Hash.Types.HashType.Md5,
+                    },
+                    RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                    MachineType = BuildOptions.Types.MachineType.Unspecified,
+                    SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                    LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                    DiskSizeGb = 7103353205508136450L,
+                    WorkerPool = "worker_pool53f9ab42",
+                    Logging = BuildOptions.Types.LoggingMode.None,
+                    Env = { "env1d5a03ff", },
+                    SecretEnv =
+                    {
+                        "secret_env6a25f329",
+                    },
+                    Volumes =
+                    {
+                        new Volume
+                        {
+                            Name = "name1c9368b0",
+                            Path = "path0b1dfed6",
+                        },
+                    },
+                    DynamicSubstitutions = true,
+                },
                 StatusDetail = "status_detail859ccc64",
                 LogUrl = "log_url5edf0128",
                 Substitutions =
@@ -300,16 +1576,66 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                     },
                 },
                 Tags = { "tags52c47ad5", },
-                Secrets = { new Secret(), },
+                Secrets =
+                {
+                    new Secret
+                    {
+                        KmsKeyName = "kms_key_name06bd122b",
+                        SecretEnv =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                proto::ByteString.CopyFromUtf8("value60c16320")
+                            },
+                        },
+                    },
+                },
                 Timing =
                 {
                     {
                         "key8a0b6e3c",
-                        new TimeSpan()
+                        new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        }
                     },
                 },
-                Artifacts = new Artifacts(),
-                QueueTtl = new wkt::Duration(),
+                Artifacts = new Artifacts
+                {
+                    Images = { "images1714b559", },
+                    Objects = new Artifacts.Types.ArtifactObjects
+                    {
+                        Location = "locatione09d18d5",
+                        Paths = { "paths012c8713", },
+                        Timing = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                },
+                QueueTtl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
             };
@@ -335,19 +1661,234 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 Id = "id74b70bb8",
                 Status = Build.Types.Status.InternalError,
-                Source = new Source(),
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                FinishTime = new wkt::Timestamp(),
-                Results = new Results(),
-                Steps = { new BuildStep(), },
-                Timeout = new wkt::Duration(),
+                Source = new Source
+                {
+                    StorageSource = new StorageSource
+                    {
+                        Bucket = "bucket17d0bfc2",
+                        Object = "object63decfa8",
+                        Generation = -8788800127544411748L,
+                    },
+                    RepoSource = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FinishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Results = new Results
+                {
+                    Images =
+                    {
+                        new BuiltImage
+                        {
+                            Name = "name1c9368b0",
+                            Digest = "digest96770fc1",
+                            PushTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    BuildStepImages =
+                    {
+                        "build_step_imagesdaa7235b",
+                    },
+                    ArtifactManifest = "artifact_manifest14d2d7e3",
+                    NumArtifacts = 8832111714758501184L,
+                    BuildStepOutputs =
+                    {
+                        proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                    },
+                    ArtifactTiming = new TimeSpan
+                    {
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                Steps =
+                {
+                    new BuildStep
+                    {
+                        Name = "name1c9368b0",
+                        Env = { "env1d5a03ff", },
+                        Args = { "args09af56a9", },
+                        Dir = "dir83076073",
+                        Id = "id74b70bb8",
+                        WaitFor =
+                        {
+                            "wait_for8cc937b4",
+                        },
+                        Entrypoint = "entrypoint53bbadee",
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        Timing = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        Timeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Status = Build.Types.Status.InternalError,
+                        PullTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                },
+                Timeout = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Images = { "images1714b559", },
                 ProjectId = "project_id43ad98b0",
                 LogsBucket = "logs_bucket85d3caaa",
-                SourceProvenance = new SourceProvenance(),
+                SourceProvenance = new SourceProvenance
+                {
+                    ResolvedStorageSource = new StorageSource
+                    {
+                        Bucket = "bucket17d0bfc2",
+                        Object = "object63decfa8",
+                        Generation = -8788800127544411748L,
+                    },
+                    FileHashes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FileHashes
+                            {
+                                FileHash =
+                                {
+                                    new Hash
+                                    {
+                                        Type = Hash.Types.HashType.None,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            }
+                        },
+                    },
+                    ResolvedRepoSource = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
                 BuildTriggerId = "build_trigger_idbd29c2e8",
-                Options = new BuildOptions(),
+                Options = new BuildOptions
+                {
+                    SourceProvenanceHash =
+                    {
+                        Hash.Types.HashType.Md5,
+                    },
+                    RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                    MachineType = BuildOptions.Types.MachineType.Unspecified,
+                    SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                    LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                    DiskSizeGb = 7103353205508136450L,
+                    WorkerPool = "worker_pool53f9ab42",
+                    Logging = BuildOptions.Types.LoggingMode.None,
+                    Env = { "env1d5a03ff", },
+                    SecretEnv =
+                    {
+                        "secret_env6a25f329",
+                    },
+                    Volumes =
+                    {
+                        new Volume
+                        {
+                            Name = "name1c9368b0",
+                            Path = "path0b1dfed6",
+                        },
+                    },
+                    DynamicSubstitutions = true,
+                },
                 StatusDetail = "status_detail859ccc64",
                 LogUrl = "log_url5edf0128",
                 Substitutions =
@@ -358,16 +1899,66 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                     },
                 },
                 Tags = { "tags52c47ad5", },
-                Secrets = { new Secret(), },
+                Secrets =
+                {
+                    new Secret
+                    {
+                        KmsKeyName = "kms_key_name06bd122b",
+                        SecretEnv =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                proto::ByteString.CopyFromUtf8("value60c16320")
+                            },
+                        },
+                    },
+                },
                 Timing =
                 {
                     {
                         "key8a0b6e3c",
-                        new TimeSpan()
+                        new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        }
                     },
                 },
-                Artifacts = new Artifacts(),
-                QueueTtl = new wkt::Duration(),
+                Artifacts = new Artifacts
+                {
+                    Images = { "images1714b559", },
+                    Objects = new Artifacts.Types.ArtifactObjects
+                    {
+                        Location = "locatione09d18d5",
+                        Paths = { "paths012c8713", },
+                        Timing = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                },
+                QueueTtl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
             };
@@ -394,19 +1985,234 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 Id = "id74b70bb8",
                 Status = Build.Types.Status.InternalError,
-                Source = new Source(),
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                FinishTime = new wkt::Timestamp(),
-                Results = new Results(),
-                Steps = { new BuildStep(), },
-                Timeout = new wkt::Duration(),
+                Source = new Source
+                {
+                    StorageSource = new StorageSource
+                    {
+                        Bucket = "bucket17d0bfc2",
+                        Object = "object63decfa8",
+                        Generation = -8788800127544411748L,
+                    },
+                    RepoSource = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FinishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Results = new Results
+                {
+                    Images =
+                    {
+                        new BuiltImage
+                        {
+                            Name = "name1c9368b0",
+                            Digest = "digest96770fc1",
+                            PushTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    BuildStepImages =
+                    {
+                        "build_step_imagesdaa7235b",
+                    },
+                    ArtifactManifest = "artifact_manifest14d2d7e3",
+                    NumArtifacts = 8832111714758501184L,
+                    BuildStepOutputs =
+                    {
+                        proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                    },
+                    ArtifactTiming = new TimeSpan
+                    {
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                Steps =
+                {
+                    new BuildStep
+                    {
+                        Name = "name1c9368b0",
+                        Env = { "env1d5a03ff", },
+                        Args = { "args09af56a9", },
+                        Dir = "dir83076073",
+                        Id = "id74b70bb8",
+                        WaitFor =
+                        {
+                            "wait_for8cc937b4",
+                        },
+                        Entrypoint = "entrypoint53bbadee",
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        Timing = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        Timeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Status = Build.Types.Status.InternalError,
+                        PullTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                },
+                Timeout = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Images = { "images1714b559", },
                 ProjectId = "project_id43ad98b0",
                 LogsBucket = "logs_bucket85d3caaa",
-                SourceProvenance = new SourceProvenance(),
+                SourceProvenance = new SourceProvenance
+                {
+                    ResolvedStorageSource = new StorageSource
+                    {
+                        Bucket = "bucket17d0bfc2",
+                        Object = "object63decfa8",
+                        Generation = -8788800127544411748L,
+                    },
+                    FileHashes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FileHashes
+                            {
+                                FileHash =
+                                {
+                                    new Hash
+                                    {
+                                        Type = Hash.Types.HashType.None,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            }
+                        },
+                    },
+                    ResolvedRepoSource = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
                 BuildTriggerId = "build_trigger_idbd29c2e8",
-                Options = new BuildOptions(),
+                Options = new BuildOptions
+                {
+                    SourceProvenanceHash =
+                    {
+                        Hash.Types.HashType.Md5,
+                    },
+                    RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                    MachineType = BuildOptions.Types.MachineType.Unspecified,
+                    SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                    LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                    DiskSizeGb = 7103353205508136450L,
+                    WorkerPool = "worker_pool53f9ab42",
+                    Logging = BuildOptions.Types.LoggingMode.None,
+                    Env = { "env1d5a03ff", },
+                    SecretEnv =
+                    {
+                        "secret_env6a25f329",
+                    },
+                    Volumes =
+                    {
+                        new Volume
+                        {
+                            Name = "name1c9368b0",
+                            Path = "path0b1dfed6",
+                        },
+                    },
+                    DynamicSubstitutions = true,
+                },
                 StatusDetail = "status_detail859ccc64",
                 LogUrl = "log_url5edf0128",
                 Substitutions =
@@ -417,16 +2223,66 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                     },
                 },
                 Tags = { "tags52c47ad5", },
-                Secrets = { new Secret(), },
+                Secrets =
+                {
+                    new Secret
+                    {
+                        KmsKeyName = "kms_key_name06bd122b",
+                        SecretEnv =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                proto::ByteString.CopyFromUtf8("value60c16320")
+                            },
+                        },
+                    },
+                },
                 Timing =
                 {
                     {
                         "key8a0b6e3c",
-                        new TimeSpan()
+                        new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        }
                     },
                 },
-                Artifacts = new Artifacts(),
-                QueueTtl = new wkt::Duration(),
+                Artifacts = new Artifacts
+                {
+                    Images = { "images1714b559", },
+                    Objects = new Artifacts.Types.ArtifactObjects
+                    {
+                        Location = "locatione09d18d5",
+                        Paths = { "paths012c8713", },
+                        Timing = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                },
+                QueueTtl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
             };
@@ -451,19 +2307,234 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 Id = "id74b70bb8",
                 Status = Build.Types.Status.InternalError,
-                Source = new Source(),
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                FinishTime = new wkt::Timestamp(),
-                Results = new Results(),
-                Steps = { new BuildStep(), },
-                Timeout = new wkt::Duration(),
+                Source = new Source
+                {
+                    StorageSource = new StorageSource
+                    {
+                        Bucket = "bucket17d0bfc2",
+                        Object = "object63decfa8",
+                        Generation = -8788800127544411748L,
+                    },
+                    RepoSource = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FinishTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Results = new Results
+                {
+                    Images =
+                    {
+                        new BuiltImage
+                        {
+                            Name = "name1c9368b0",
+                            Digest = "digest96770fc1",
+                            PushTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    BuildStepImages =
+                    {
+                        "build_step_imagesdaa7235b",
+                    },
+                    ArtifactManifest = "artifact_manifest14d2d7e3",
+                    NumArtifacts = 8832111714758501184L,
+                    BuildStepOutputs =
+                    {
+                        proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                    },
+                    ArtifactTiming = new TimeSpan
+                    {
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                Steps =
+                {
+                    new BuildStep
+                    {
+                        Name = "name1c9368b0",
+                        Env = { "env1d5a03ff", },
+                        Args = { "args09af56a9", },
+                        Dir = "dir83076073",
+                        Id = "id74b70bb8",
+                        WaitFor =
+                        {
+                            "wait_for8cc937b4",
+                        },
+                        Entrypoint = "entrypoint53bbadee",
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        Timing = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        Timeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Status = Build.Types.Status.InternalError,
+                        PullTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                },
+                Timeout = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Images = { "images1714b559", },
                 ProjectId = "project_id43ad98b0",
                 LogsBucket = "logs_bucket85d3caaa",
-                SourceProvenance = new SourceProvenance(),
+                SourceProvenance = new SourceProvenance
+                {
+                    ResolvedStorageSource = new StorageSource
+                    {
+                        Bucket = "bucket17d0bfc2",
+                        Object = "object63decfa8",
+                        Generation = -8788800127544411748L,
+                    },
+                    FileHashes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FileHashes
+                            {
+                                FileHash =
+                                {
+                                    new Hash
+                                    {
+                                        Type = Hash.Types.HashType.None,
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            }
+                        },
+                    },
+                    ResolvedRepoSource = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
                 BuildTriggerId = "build_trigger_idbd29c2e8",
-                Options = new BuildOptions(),
+                Options = new BuildOptions
+                {
+                    SourceProvenanceHash =
+                    {
+                        Hash.Types.HashType.Md5,
+                    },
+                    RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                    MachineType = BuildOptions.Types.MachineType.Unspecified,
+                    SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                    LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                    DiskSizeGb = 7103353205508136450L,
+                    WorkerPool = "worker_pool53f9ab42",
+                    Logging = BuildOptions.Types.LoggingMode.None,
+                    Env = { "env1d5a03ff", },
+                    SecretEnv =
+                    {
+                        "secret_env6a25f329",
+                    },
+                    Volumes =
+                    {
+                        new Volume
+                        {
+                            Name = "name1c9368b0",
+                            Path = "path0b1dfed6",
+                        },
+                    },
+                    DynamicSubstitutions = true,
+                },
                 StatusDetail = "status_detail859ccc64",
                 LogUrl = "log_url5edf0128",
                 Substitutions =
@@ -474,16 +2545,66 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                     },
                 },
                 Tags = { "tags52c47ad5", },
-                Secrets = { new Secret(), },
+                Secrets =
+                {
+                    new Secret
+                    {
+                        KmsKeyName = "kms_key_name06bd122b",
+                        SecretEnv =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                proto::ByteString.CopyFromUtf8("value60c16320")
+                            },
+                        },
+                    },
+                },
                 Timing =
                 {
                     {
                         "key8a0b6e3c",
-                        new TimeSpan()
+                        new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        }
                     },
                 },
-                Artifacts = new Artifacts(),
-                QueueTtl = new wkt::Duration(),
+                Artifacts = new Artifacts
+                {
+                    Images = { "images1714b559", },
+                    Objects = new Artifacts.Types.ArtifactObjects
+                    {
+                        Location = "locatione09d18d5",
+                        Paths = { "paths012c8713", },
+                        Timing = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                },
+                QueueTtl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
             };
@@ -504,14 +2625,708 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             CreateBuildTriggerRequest request = new CreateBuildTriggerRequest
             {
                 ProjectId = "project_id43ad98b0",
-                Trigger = new BuildTrigger(),
+                Trigger = new BuildTrigger
+                {
+                    Id = "id74b70bb8",
+                    Build = new Build
+                    {
+                        Id = "id74b70bb8",
+                        Status = Build.Types.Status.InternalError,
+                        Source = new Source
+                        {
+                            StorageSource = new StorageSource
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                Generation = -8788800127544411748L,
+                            },
+                            RepoSource = new RepoSource
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                RepoName = "repo_name75c5b2a0",
+                                BranchName = "branch_nameff6f8529",
+                                TagName = "tag_name7ecac3c4",
+                                CommitSha = "commit_sha0207033b",
+                                Dir = "dir83076073",
+                                InvertRegex = false,
+                                Substitutions =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        FinishTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Results = new Results
+                        {
+                            Images =
+                            {
+                                new BuiltImage
+                                {
+                                    Name = "name1c9368b0",
+                                    Digest = "digest96770fc1",
+                                    PushTiming = new TimeSpan
+                                    {
+                                        StartTime = new wkt::Timestamp
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTime = new wkt::Timestamp
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                            BuildStepImages =
+                            {
+                                "build_step_imagesdaa7235b",
+                            },
+                            ArtifactManifest = "artifact_manifest14d2d7e3",
+                            NumArtifacts = 8832111714758501184L,
+                            BuildStepOutputs =
+                            {
+                                proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                            },
+                            ArtifactTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Steps =
+                        {
+                            new BuildStep
+                            {
+                                Name = "name1c9368b0",
+                                Env = { "env1d5a03ff", },
+                                Args = { "args09af56a9", },
+                                Dir = "dir83076073",
+                                Id = "id74b70bb8",
+                                WaitFor =
+                                {
+                                    "wait_for8cc937b4",
+                                },
+                                Entrypoint = "entrypoint53bbadee",
+                                SecretEnv =
+                                {
+                                    "secret_env6a25f329",
+                                },
+                                Volumes =
+                                {
+                                    new Volume
+                                    {
+                                        Name = "name1c9368b0",
+                                        Path = "path0b1dfed6",
+                                    },
+                                },
+                                Timing = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Timeout = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                Status = Build.Types.Status.InternalError,
+                                PullTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        Timeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Images = { "images1714b559", },
+                        ProjectId = "project_id43ad98b0",
+                        LogsBucket = "logs_bucket85d3caaa",
+                        SourceProvenance = new SourceProvenance
+                        {
+                            ResolvedStorageSource = new StorageSource
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                Generation = -8788800127544411748L,
+                            },
+                            FileHashes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FileHashes
+                                    {
+                                        FileHash =
+                                        {
+                                            new Hash
+                                            {
+                                                Type = Hash.Types.HashType.None,
+                                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                            },
+                                        },
+                                    }
+                                },
+                            },
+                            ResolvedRepoSource = new RepoSource
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                RepoName = "repo_name75c5b2a0",
+                                BranchName = "branch_nameff6f8529",
+                                TagName = "tag_name7ecac3c4",
+                                CommitSha = "commit_sha0207033b",
+                                Dir = "dir83076073",
+                                InvertRegex = false,
+                                Substitutions =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        BuildTriggerId = "build_trigger_idbd29c2e8",
+                        Options = new BuildOptions
+                        {
+                            SourceProvenanceHash =
+                            {
+                                Hash.Types.HashType.Md5,
+                            },
+                            RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                            MachineType = BuildOptions.Types.MachineType.Unspecified,
+                            SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                            LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                            DiskSizeGb = 7103353205508136450L,
+                            WorkerPool = "worker_pool53f9ab42",
+                            Logging = BuildOptions.Types.LoggingMode.None,
+                            Env = { "env1d5a03ff", },
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            DynamicSubstitutions = true,
+                        },
+                        StatusDetail = "status_detail859ccc64",
+                        LogUrl = "log_url5edf0128",
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Tags = { "tags52c47ad5", },
+                        Secrets =
+                        {
+                            new Secret
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                                SecretEnv =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        proto::ByteString.CopyFromUtf8("value60c16320")
+                                    },
+                                },
+                            },
+                        },
+                        Timing =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                }
+                            },
+                        },
+                        Artifacts = new Artifacts
+                        {
+                            Images = { "images1714b559", },
+                            Objects = new Artifacts.Types.ArtifactObjects
+                            {
+                                Location = "locatione09d18d5",
+                                Paths = { "paths012c8713", },
+                                Timing = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        QueueTtl = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                        BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TriggerTemplate = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    Filename = "filenamee9d75e43",
+                    Disabled = false,
+                    Description = "description2cf9da67",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Github = new GitHubEventsConfig
+                    {
+#pragma warning disable CS0612
+                        InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                        PullRequest = new PullRequestFilter
+                        {
+                            Branch = "branch24a20396",
+                            CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                            InvertRegex = false,
+                        },
+                        Push = new PushFilter
+                        {
+                            Branch = "branch24a20396",
+                            Tag = "tag843ed2e4",
+                            InvertRegex = false,
+                        },
+                        Owner = "ownere92c1272",
+                        Name = "name1c9368b0",
+                    },
+                    IgnoredFiles =
+                    {
+                        "ignored_filesf5916206",
+                    },
+                    IncludedFiles =
+                    {
+                        "included_files53b7943b",
+                    },
+                    Tags = { "tags52c47ad5", },
+                    BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                },
             };
             BuildTrigger expectedResponse = new BuildTrigger
             {
                 Id = "id74b70bb8",
-                Build = new Build(),
-                CreateTime = new wkt::Timestamp(),
-                TriggerTemplate = new RepoSource(),
+                Build = new Build
+                {
+                    Id = "id74b70bb8",
+                    Status = Build.Types.Status.InternalError,
+                    Source = new Source
+                    {
+                        StorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        RepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FinishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Results = new Results
+                    {
+                        Images =
+                        {
+                            new BuiltImage
+                            {
+                                Name = "name1c9368b0",
+                                Digest = "digest96770fc1",
+                                PushTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        BuildStepImages =
+                        {
+                            "build_step_imagesdaa7235b",
+                        },
+                        ArtifactManifest = "artifact_manifest14d2d7e3",
+                        NumArtifacts = 8832111714758501184L,
+                        BuildStepOutputs =
+                        {
+                            proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                        },
+                        ArtifactTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Steps =
+                    {
+                        new BuildStep
+                        {
+                            Name = "name1c9368b0",
+                            Env = { "env1d5a03ff", },
+                            Args = { "args09af56a9", },
+                            Dir = "dir83076073",
+                            Id = "id74b70bb8",
+                            WaitFor =
+                            {
+                                "wait_for8cc937b4",
+                            },
+                            Entrypoint = "entrypoint53bbadee",
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Timeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Status = Build.Types.Status.InternalError,
+                            PullTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    Timeout = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Images = { "images1714b559", },
+                    ProjectId = "project_id43ad98b0",
+                    LogsBucket = "logs_bucket85d3caaa",
+                    SourceProvenance = new SourceProvenance
+                    {
+                        ResolvedStorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        FileHashes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FileHashes
+                                {
+                                    FileHash =
+                                    {
+                                        new Hash
+                                        {
+                                            Type = Hash.Types.HashType.None,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                        ResolvedRepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    BuildTriggerId = "build_trigger_idbd29c2e8",
+                    Options = new BuildOptions
+                    {
+                        SourceProvenanceHash =
+                        {
+                            Hash.Types.HashType.Md5,
+                        },
+                        RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                        MachineType = BuildOptions.Types.MachineType.Unspecified,
+                        SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                        LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                        DiskSizeGb = 7103353205508136450L,
+                        WorkerPool = "worker_pool53f9ab42",
+                        Logging = BuildOptions.Types.LoggingMode.None,
+                        Env = { "env1d5a03ff", },
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        DynamicSubstitutions = true,
+                    },
+                    StatusDetail = "status_detail859ccc64",
+                    LogUrl = "log_url5edf0128",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Tags = { "tags52c47ad5", },
+                    Secrets =
+                    {
+                        new Secret
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                            SecretEnv =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    proto::ByteString.CopyFromUtf8("value60c16320")
+                                },
+                            },
+                        },
+                    },
+                    Timing =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            }
+                        },
+                    },
+                    Artifacts = new Artifacts
+                    {
+                        Images = { "images1714b559", },
+                        Objects = new Artifacts.Types.ArtifactObjects
+                        {
+                            Location = "locatione09d18d5",
+                            Paths = { "paths012c8713", },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    QueueTtl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                    BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                TriggerTemplate = new RepoSource
+                {
+                    ProjectId = "project_id43ad98b0",
+                    RepoName = "repo_name75c5b2a0",
+                    BranchName = "branch_nameff6f8529",
+                    TagName = "tag_name7ecac3c4",
+                    CommitSha = "commit_sha0207033b",
+                    Dir = "dir83076073",
+                    InvertRegex = false,
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 Filename = "filenamee9d75e43",
                 Disabled = false,
                 Description = "description2cf9da67",
@@ -522,7 +3337,26 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                         "value60c16320"
                     },
                 },
-                Github = new GitHubEventsConfig(),
+                Github = new GitHubEventsConfig
+                {
+#pragma warning disable CS0612
+                    InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                    PullRequest = new PullRequestFilter
+                    {
+                        Branch = "branch24a20396",
+                        CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                        InvertRegex = false,
+                    },
+                    Push = new PushFilter
+                    {
+                        Branch = "branch24a20396",
+                        Tag = "tag843ed2e4",
+                        InvertRegex = false,
+                    },
+                    Owner = "ownere92c1272",
+                    Name = "name1c9368b0",
+                },
                 IgnoredFiles =
                 {
                     "ignored_filesf5916206",
@@ -549,14 +3383,708 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             CreateBuildTriggerRequest request = new CreateBuildTriggerRequest
             {
                 ProjectId = "project_id43ad98b0",
-                Trigger = new BuildTrigger(),
+                Trigger = new BuildTrigger
+                {
+                    Id = "id74b70bb8",
+                    Build = new Build
+                    {
+                        Id = "id74b70bb8",
+                        Status = Build.Types.Status.InternalError,
+                        Source = new Source
+                        {
+                            StorageSource = new StorageSource
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                Generation = -8788800127544411748L,
+                            },
+                            RepoSource = new RepoSource
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                RepoName = "repo_name75c5b2a0",
+                                BranchName = "branch_nameff6f8529",
+                                TagName = "tag_name7ecac3c4",
+                                CommitSha = "commit_sha0207033b",
+                                Dir = "dir83076073",
+                                InvertRegex = false,
+                                Substitutions =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        FinishTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Results = new Results
+                        {
+                            Images =
+                            {
+                                new BuiltImage
+                                {
+                                    Name = "name1c9368b0",
+                                    Digest = "digest96770fc1",
+                                    PushTiming = new TimeSpan
+                                    {
+                                        StartTime = new wkt::Timestamp
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTime = new wkt::Timestamp
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                            BuildStepImages =
+                            {
+                                "build_step_imagesdaa7235b",
+                            },
+                            ArtifactManifest = "artifact_manifest14d2d7e3",
+                            NumArtifacts = 8832111714758501184L,
+                            BuildStepOutputs =
+                            {
+                                proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                            },
+                            ArtifactTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Steps =
+                        {
+                            new BuildStep
+                            {
+                                Name = "name1c9368b0",
+                                Env = { "env1d5a03ff", },
+                                Args = { "args09af56a9", },
+                                Dir = "dir83076073",
+                                Id = "id74b70bb8",
+                                WaitFor =
+                                {
+                                    "wait_for8cc937b4",
+                                },
+                                Entrypoint = "entrypoint53bbadee",
+                                SecretEnv =
+                                {
+                                    "secret_env6a25f329",
+                                },
+                                Volumes =
+                                {
+                                    new Volume
+                                    {
+                                        Name = "name1c9368b0",
+                                        Path = "path0b1dfed6",
+                                    },
+                                },
+                                Timing = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Timeout = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                Status = Build.Types.Status.InternalError,
+                                PullTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        Timeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Images = { "images1714b559", },
+                        ProjectId = "project_id43ad98b0",
+                        LogsBucket = "logs_bucket85d3caaa",
+                        SourceProvenance = new SourceProvenance
+                        {
+                            ResolvedStorageSource = new StorageSource
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                Generation = -8788800127544411748L,
+                            },
+                            FileHashes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FileHashes
+                                    {
+                                        FileHash =
+                                        {
+                                            new Hash
+                                            {
+                                                Type = Hash.Types.HashType.None,
+                                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                            },
+                                        },
+                                    }
+                                },
+                            },
+                            ResolvedRepoSource = new RepoSource
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                RepoName = "repo_name75c5b2a0",
+                                BranchName = "branch_nameff6f8529",
+                                TagName = "tag_name7ecac3c4",
+                                CommitSha = "commit_sha0207033b",
+                                Dir = "dir83076073",
+                                InvertRegex = false,
+                                Substitutions =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        BuildTriggerId = "build_trigger_idbd29c2e8",
+                        Options = new BuildOptions
+                        {
+                            SourceProvenanceHash =
+                            {
+                                Hash.Types.HashType.Md5,
+                            },
+                            RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                            MachineType = BuildOptions.Types.MachineType.Unspecified,
+                            SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                            LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                            DiskSizeGb = 7103353205508136450L,
+                            WorkerPool = "worker_pool53f9ab42",
+                            Logging = BuildOptions.Types.LoggingMode.None,
+                            Env = { "env1d5a03ff", },
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            DynamicSubstitutions = true,
+                        },
+                        StatusDetail = "status_detail859ccc64",
+                        LogUrl = "log_url5edf0128",
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Tags = { "tags52c47ad5", },
+                        Secrets =
+                        {
+                            new Secret
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                                SecretEnv =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        proto::ByteString.CopyFromUtf8("value60c16320")
+                                    },
+                                },
+                            },
+                        },
+                        Timing =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                }
+                            },
+                        },
+                        Artifacts = new Artifacts
+                        {
+                            Images = { "images1714b559", },
+                            Objects = new Artifacts.Types.ArtifactObjects
+                            {
+                                Location = "locatione09d18d5",
+                                Paths = { "paths012c8713", },
+                                Timing = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        QueueTtl = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                        BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TriggerTemplate = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    Filename = "filenamee9d75e43",
+                    Disabled = false,
+                    Description = "description2cf9da67",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Github = new GitHubEventsConfig
+                    {
+#pragma warning disable CS0612
+                        InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                        PullRequest = new PullRequestFilter
+                        {
+                            Branch = "branch24a20396",
+                            CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                            InvertRegex = false,
+                        },
+                        Push = new PushFilter
+                        {
+                            Branch = "branch24a20396",
+                            Tag = "tag843ed2e4",
+                            InvertRegex = false,
+                        },
+                        Owner = "ownere92c1272",
+                        Name = "name1c9368b0",
+                    },
+                    IgnoredFiles =
+                    {
+                        "ignored_filesf5916206",
+                    },
+                    IncludedFiles =
+                    {
+                        "included_files53b7943b",
+                    },
+                    Tags = { "tags52c47ad5", },
+                    BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                },
             };
             BuildTrigger expectedResponse = new BuildTrigger
             {
                 Id = "id74b70bb8",
-                Build = new Build(),
-                CreateTime = new wkt::Timestamp(),
-                TriggerTemplate = new RepoSource(),
+                Build = new Build
+                {
+                    Id = "id74b70bb8",
+                    Status = Build.Types.Status.InternalError,
+                    Source = new Source
+                    {
+                        StorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        RepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FinishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Results = new Results
+                    {
+                        Images =
+                        {
+                            new BuiltImage
+                            {
+                                Name = "name1c9368b0",
+                                Digest = "digest96770fc1",
+                                PushTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        BuildStepImages =
+                        {
+                            "build_step_imagesdaa7235b",
+                        },
+                        ArtifactManifest = "artifact_manifest14d2d7e3",
+                        NumArtifacts = 8832111714758501184L,
+                        BuildStepOutputs =
+                        {
+                            proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                        },
+                        ArtifactTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Steps =
+                    {
+                        new BuildStep
+                        {
+                            Name = "name1c9368b0",
+                            Env = { "env1d5a03ff", },
+                            Args = { "args09af56a9", },
+                            Dir = "dir83076073",
+                            Id = "id74b70bb8",
+                            WaitFor =
+                            {
+                                "wait_for8cc937b4",
+                            },
+                            Entrypoint = "entrypoint53bbadee",
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Timeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Status = Build.Types.Status.InternalError,
+                            PullTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    Timeout = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Images = { "images1714b559", },
+                    ProjectId = "project_id43ad98b0",
+                    LogsBucket = "logs_bucket85d3caaa",
+                    SourceProvenance = new SourceProvenance
+                    {
+                        ResolvedStorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        FileHashes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FileHashes
+                                {
+                                    FileHash =
+                                    {
+                                        new Hash
+                                        {
+                                            Type = Hash.Types.HashType.None,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                        ResolvedRepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    BuildTriggerId = "build_trigger_idbd29c2e8",
+                    Options = new BuildOptions
+                    {
+                        SourceProvenanceHash =
+                        {
+                            Hash.Types.HashType.Md5,
+                        },
+                        RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                        MachineType = BuildOptions.Types.MachineType.Unspecified,
+                        SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                        LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                        DiskSizeGb = 7103353205508136450L,
+                        WorkerPool = "worker_pool53f9ab42",
+                        Logging = BuildOptions.Types.LoggingMode.None,
+                        Env = { "env1d5a03ff", },
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        DynamicSubstitutions = true,
+                    },
+                    StatusDetail = "status_detail859ccc64",
+                    LogUrl = "log_url5edf0128",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Tags = { "tags52c47ad5", },
+                    Secrets =
+                    {
+                        new Secret
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                            SecretEnv =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    proto::ByteString.CopyFromUtf8("value60c16320")
+                                },
+                            },
+                        },
+                    },
+                    Timing =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            }
+                        },
+                    },
+                    Artifacts = new Artifacts
+                    {
+                        Images = { "images1714b559", },
+                        Objects = new Artifacts.Types.ArtifactObjects
+                        {
+                            Location = "locatione09d18d5",
+                            Paths = { "paths012c8713", },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    QueueTtl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                    BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                TriggerTemplate = new RepoSource
+                {
+                    ProjectId = "project_id43ad98b0",
+                    RepoName = "repo_name75c5b2a0",
+                    BranchName = "branch_nameff6f8529",
+                    TagName = "tag_name7ecac3c4",
+                    CommitSha = "commit_sha0207033b",
+                    Dir = "dir83076073",
+                    InvertRegex = false,
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 Filename = "filenamee9d75e43",
                 Disabled = false,
                 Description = "description2cf9da67",
@@ -567,7 +4095,26 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                         "value60c16320"
                     },
                 },
-                Github = new GitHubEventsConfig(),
+                Github = new GitHubEventsConfig
+                {
+#pragma warning disable CS0612
+                    InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                    PullRequest = new PullRequestFilter
+                    {
+                        Branch = "branch24a20396",
+                        CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                        InvertRegex = false,
+                    },
+                    Push = new PushFilter
+                    {
+                        Branch = "branch24a20396",
+                        Tag = "tag843ed2e4",
+                        InvertRegex = false,
+                    },
+                    Owner = "ownere92c1272",
+                    Name = "name1c9368b0",
+                },
                 IgnoredFiles =
                 {
                     "ignored_filesf5916206",
@@ -596,14 +4143,708 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             CreateBuildTriggerRequest request = new CreateBuildTriggerRequest
             {
                 ProjectId = "project_id43ad98b0",
-                Trigger = new BuildTrigger(),
+                Trigger = new BuildTrigger
+                {
+                    Id = "id74b70bb8",
+                    Build = new Build
+                    {
+                        Id = "id74b70bb8",
+                        Status = Build.Types.Status.InternalError,
+                        Source = new Source
+                        {
+                            StorageSource = new StorageSource
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                Generation = -8788800127544411748L,
+                            },
+                            RepoSource = new RepoSource
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                RepoName = "repo_name75c5b2a0",
+                                BranchName = "branch_nameff6f8529",
+                                TagName = "tag_name7ecac3c4",
+                                CommitSha = "commit_sha0207033b",
+                                Dir = "dir83076073",
+                                InvertRegex = false,
+                                Substitutions =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        FinishTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Results = new Results
+                        {
+                            Images =
+                            {
+                                new BuiltImage
+                                {
+                                    Name = "name1c9368b0",
+                                    Digest = "digest96770fc1",
+                                    PushTiming = new TimeSpan
+                                    {
+                                        StartTime = new wkt::Timestamp
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTime = new wkt::Timestamp
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                            BuildStepImages =
+                            {
+                                "build_step_imagesdaa7235b",
+                            },
+                            ArtifactManifest = "artifact_manifest14d2d7e3",
+                            NumArtifacts = 8832111714758501184L,
+                            BuildStepOutputs =
+                            {
+                                proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                            },
+                            ArtifactTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Steps =
+                        {
+                            new BuildStep
+                            {
+                                Name = "name1c9368b0",
+                                Env = { "env1d5a03ff", },
+                                Args = { "args09af56a9", },
+                                Dir = "dir83076073",
+                                Id = "id74b70bb8",
+                                WaitFor =
+                                {
+                                    "wait_for8cc937b4",
+                                },
+                                Entrypoint = "entrypoint53bbadee",
+                                SecretEnv =
+                                {
+                                    "secret_env6a25f329",
+                                },
+                                Volumes =
+                                {
+                                    new Volume
+                                    {
+                                        Name = "name1c9368b0",
+                                        Path = "path0b1dfed6",
+                                    },
+                                },
+                                Timing = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Timeout = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                Status = Build.Types.Status.InternalError,
+                                PullTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        Timeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Images = { "images1714b559", },
+                        ProjectId = "project_id43ad98b0",
+                        LogsBucket = "logs_bucket85d3caaa",
+                        SourceProvenance = new SourceProvenance
+                        {
+                            ResolvedStorageSource = new StorageSource
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                Generation = -8788800127544411748L,
+                            },
+                            FileHashes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FileHashes
+                                    {
+                                        FileHash =
+                                        {
+                                            new Hash
+                                            {
+                                                Type = Hash.Types.HashType.None,
+                                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                            },
+                                        },
+                                    }
+                                },
+                            },
+                            ResolvedRepoSource = new RepoSource
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                RepoName = "repo_name75c5b2a0",
+                                BranchName = "branch_nameff6f8529",
+                                TagName = "tag_name7ecac3c4",
+                                CommitSha = "commit_sha0207033b",
+                                Dir = "dir83076073",
+                                InvertRegex = false,
+                                Substitutions =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        BuildTriggerId = "build_trigger_idbd29c2e8",
+                        Options = new BuildOptions
+                        {
+                            SourceProvenanceHash =
+                            {
+                                Hash.Types.HashType.Md5,
+                            },
+                            RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                            MachineType = BuildOptions.Types.MachineType.Unspecified,
+                            SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                            LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                            DiskSizeGb = 7103353205508136450L,
+                            WorkerPool = "worker_pool53f9ab42",
+                            Logging = BuildOptions.Types.LoggingMode.None,
+                            Env = { "env1d5a03ff", },
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            DynamicSubstitutions = true,
+                        },
+                        StatusDetail = "status_detail859ccc64",
+                        LogUrl = "log_url5edf0128",
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Tags = { "tags52c47ad5", },
+                        Secrets =
+                        {
+                            new Secret
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                                SecretEnv =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        proto::ByteString.CopyFromUtf8("value60c16320")
+                                    },
+                                },
+                            },
+                        },
+                        Timing =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                }
+                            },
+                        },
+                        Artifacts = new Artifacts
+                        {
+                            Images = { "images1714b559", },
+                            Objects = new Artifacts.Types.ArtifactObjects
+                            {
+                                Location = "locatione09d18d5",
+                                Paths = { "paths012c8713", },
+                                Timing = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        QueueTtl = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                        BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TriggerTemplate = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    Filename = "filenamee9d75e43",
+                    Disabled = false,
+                    Description = "description2cf9da67",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Github = new GitHubEventsConfig
+                    {
+#pragma warning disable CS0612
+                        InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                        PullRequest = new PullRequestFilter
+                        {
+                            Branch = "branch24a20396",
+                            CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                            InvertRegex = false,
+                        },
+                        Push = new PushFilter
+                        {
+                            Branch = "branch24a20396",
+                            Tag = "tag843ed2e4",
+                            InvertRegex = false,
+                        },
+                        Owner = "ownere92c1272",
+                        Name = "name1c9368b0",
+                    },
+                    IgnoredFiles =
+                    {
+                        "ignored_filesf5916206",
+                    },
+                    IncludedFiles =
+                    {
+                        "included_files53b7943b",
+                    },
+                    Tags = { "tags52c47ad5", },
+                    BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                },
             };
             BuildTrigger expectedResponse = new BuildTrigger
             {
                 Id = "id74b70bb8",
-                Build = new Build(),
-                CreateTime = new wkt::Timestamp(),
-                TriggerTemplate = new RepoSource(),
+                Build = new Build
+                {
+                    Id = "id74b70bb8",
+                    Status = Build.Types.Status.InternalError,
+                    Source = new Source
+                    {
+                        StorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        RepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FinishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Results = new Results
+                    {
+                        Images =
+                        {
+                            new BuiltImage
+                            {
+                                Name = "name1c9368b0",
+                                Digest = "digest96770fc1",
+                                PushTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        BuildStepImages =
+                        {
+                            "build_step_imagesdaa7235b",
+                        },
+                        ArtifactManifest = "artifact_manifest14d2d7e3",
+                        NumArtifacts = 8832111714758501184L,
+                        BuildStepOutputs =
+                        {
+                            proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                        },
+                        ArtifactTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Steps =
+                    {
+                        new BuildStep
+                        {
+                            Name = "name1c9368b0",
+                            Env = { "env1d5a03ff", },
+                            Args = { "args09af56a9", },
+                            Dir = "dir83076073",
+                            Id = "id74b70bb8",
+                            WaitFor =
+                            {
+                                "wait_for8cc937b4",
+                            },
+                            Entrypoint = "entrypoint53bbadee",
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Timeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Status = Build.Types.Status.InternalError,
+                            PullTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    Timeout = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Images = { "images1714b559", },
+                    ProjectId = "project_id43ad98b0",
+                    LogsBucket = "logs_bucket85d3caaa",
+                    SourceProvenance = new SourceProvenance
+                    {
+                        ResolvedStorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        FileHashes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FileHashes
+                                {
+                                    FileHash =
+                                    {
+                                        new Hash
+                                        {
+                                            Type = Hash.Types.HashType.None,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                        ResolvedRepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    BuildTriggerId = "build_trigger_idbd29c2e8",
+                    Options = new BuildOptions
+                    {
+                        SourceProvenanceHash =
+                        {
+                            Hash.Types.HashType.Md5,
+                        },
+                        RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                        MachineType = BuildOptions.Types.MachineType.Unspecified,
+                        SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                        LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                        DiskSizeGb = 7103353205508136450L,
+                        WorkerPool = "worker_pool53f9ab42",
+                        Logging = BuildOptions.Types.LoggingMode.None,
+                        Env = { "env1d5a03ff", },
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        DynamicSubstitutions = true,
+                    },
+                    StatusDetail = "status_detail859ccc64",
+                    LogUrl = "log_url5edf0128",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Tags = { "tags52c47ad5", },
+                    Secrets =
+                    {
+                        new Secret
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                            SecretEnv =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    proto::ByteString.CopyFromUtf8("value60c16320")
+                                },
+                            },
+                        },
+                    },
+                    Timing =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            }
+                        },
+                    },
+                    Artifacts = new Artifacts
+                    {
+                        Images = { "images1714b559", },
+                        Objects = new Artifacts.Types.ArtifactObjects
+                        {
+                            Location = "locatione09d18d5",
+                            Paths = { "paths012c8713", },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    QueueTtl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                    BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                TriggerTemplate = new RepoSource
+                {
+                    ProjectId = "project_id43ad98b0",
+                    RepoName = "repo_name75c5b2a0",
+                    BranchName = "branch_nameff6f8529",
+                    TagName = "tag_name7ecac3c4",
+                    CommitSha = "commit_sha0207033b",
+                    Dir = "dir83076073",
+                    InvertRegex = false,
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 Filename = "filenamee9d75e43",
                 Disabled = false,
                 Description = "description2cf9da67",
@@ -614,7 +4855,26 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                         "value60c16320"
                     },
                 },
-                Github = new GitHubEventsConfig(),
+                Github = new GitHubEventsConfig
+                {
+#pragma warning disable CS0612
+                    InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                    PullRequest = new PullRequestFilter
+                    {
+                        Branch = "branch24a20396",
+                        CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                        InvertRegex = false,
+                    },
+                    Push = new PushFilter
+                    {
+                        Branch = "branch24a20396",
+                        Tag = "tag843ed2e4",
+                        InvertRegex = false,
+                    },
+                    Owner = "ownere92c1272",
+                    Name = "name1c9368b0",
+                },
                 IgnoredFiles =
                 {
                     "ignored_filesf5916206",
@@ -641,14 +4901,708 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             CreateBuildTriggerRequest request = new CreateBuildTriggerRequest
             {
                 ProjectId = "project_id43ad98b0",
-                Trigger = new BuildTrigger(),
+                Trigger = new BuildTrigger
+                {
+                    Id = "id74b70bb8",
+                    Build = new Build
+                    {
+                        Id = "id74b70bb8",
+                        Status = Build.Types.Status.InternalError,
+                        Source = new Source
+                        {
+                            StorageSource = new StorageSource
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                Generation = -8788800127544411748L,
+                            },
+                            RepoSource = new RepoSource
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                RepoName = "repo_name75c5b2a0",
+                                BranchName = "branch_nameff6f8529",
+                                TagName = "tag_name7ecac3c4",
+                                CommitSha = "commit_sha0207033b",
+                                Dir = "dir83076073",
+                                InvertRegex = false,
+                                Substitutions =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        FinishTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Results = new Results
+                        {
+                            Images =
+                            {
+                                new BuiltImage
+                                {
+                                    Name = "name1c9368b0",
+                                    Digest = "digest96770fc1",
+                                    PushTiming = new TimeSpan
+                                    {
+                                        StartTime = new wkt::Timestamp
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTime = new wkt::Timestamp
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                            BuildStepImages =
+                            {
+                                "build_step_imagesdaa7235b",
+                            },
+                            ArtifactManifest = "artifact_manifest14d2d7e3",
+                            NumArtifacts = 8832111714758501184L,
+                            BuildStepOutputs =
+                            {
+                                proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                            },
+                            ArtifactTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Steps =
+                        {
+                            new BuildStep
+                            {
+                                Name = "name1c9368b0",
+                                Env = { "env1d5a03ff", },
+                                Args = { "args09af56a9", },
+                                Dir = "dir83076073",
+                                Id = "id74b70bb8",
+                                WaitFor =
+                                {
+                                    "wait_for8cc937b4",
+                                },
+                                Entrypoint = "entrypoint53bbadee",
+                                SecretEnv =
+                                {
+                                    "secret_env6a25f329",
+                                },
+                                Volumes =
+                                {
+                                    new Volume
+                                    {
+                                        Name = "name1c9368b0",
+                                        Path = "path0b1dfed6",
+                                    },
+                                },
+                                Timing = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Timeout = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                Status = Build.Types.Status.InternalError,
+                                PullTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        Timeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Images = { "images1714b559", },
+                        ProjectId = "project_id43ad98b0",
+                        LogsBucket = "logs_bucket85d3caaa",
+                        SourceProvenance = new SourceProvenance
+                        {
+                            ResolvedStorageSource = new StorageSource
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                Generation = -8788800127544411748L,
+                            },
+                            FileHashes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FileHashes
+                                    {
+                                        FileHash =
+                                        {
+                                            new Hash
+                                            {
+                                                Type = Hash.Types.HashType.None,
+                                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                            },
+                                        },
+                                    }
+                                },
+                            },
+                            ResolvedRepoSource = new RepoSource
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                RepoName = "repo_name75c5b2a0",
+                                BranchName = "branch_nameff6f8529",
+                                TagName = "tag_name7ecac3c4",
+                                CommitSha = "commit_sha0207033b",
+                                Dir = "dir83076073",
+                                InvertRegex = false,
+                                Substitutions =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        BuildTriggerId = "build_trigger_idbd29c2e8",
+                        Options = new BuildOptions
+                        {
+                            SourceProvenanceHash =
+                            {
+                                Hash.Types.HashType.Md5,
+                            },
+                            RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                            MachineType = BuildOptions.Types.MachineType.Unspecified,
+                            SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                            LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                            DiskSizeGb = 7103353205508136450L,
+                            WorkerPool = "worker_pool53f9ab42",
+                            Logging = BuildOptions.Types.LoggingMode.None,
+                            Env = { "env1d5a03ff", },
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            DynamicSubstitutions = true,
+                        },
+                        StatusDetail = "status_detail859ccc64",
+                        LogUrl = "log_url5edf0128",
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Tags = { "tags52c47ad5", },
+                        Secrets =
+                        {
+                            new Secret
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                                SecretEnv =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        proto::ByteString.CopyFromUtf8("value60c16320")
+                                    },
+                                },
+                            },
+                        },
+                        Timing =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                }
+                            },
+                        },
+                        Artifacts = new Artifacts
+                        {
+                            Images = { "images1714b559", },
+                            Objects = new Artifacts.Types.ArtifactObjects
+                            {
+                                Location = "locatione09d18d5",
+                                Paths = { "paths012c8713", },
+                                Timing = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        QueueTtl = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                        BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TriggerTemplate = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    Filename = "filenamee9d75e43",
+                    Disabled = false,
+                    Description = "description2cf9da67",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Github = new GitHubEventsConfig
+                    {
+#pragma warning disable CS0612
+                        InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                        PullRequest = new PullRequestFilter
+                        {
+                            Branch = "branch24a20396",
+                            CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                            InvertRegex = false,
+                        },
+                        Push = new PushFilter
+                        {
+                            Branch = "branch24a20396",
+                            Tag = "tag843ed2e4",
+                            InvertRegex = false,
+                        },
+                        Owner = "ownere92c1272",
+                        Name = "name1c9368b0",
+                    },
+                    IgnoredFiles =
+                    {
+                        "ignored_filesf5916206",
+                    },
+                    IncludedFiles =
+                    {
+                        "included_files53b7943b",
+                    },
+                    Tags = { "tags52c47ad5", },
+                    BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                },
             };
             BuildTrigger expectedResponse = new BuildTrigger
             {
                 Id = "id74b70bb8",
-                Build = new Build(),
-                CreateTime = new wkt::Timestamp(),
-                TriggerTemplate = new RepoSource(),
+                Build = new Build
+                {
+                    Id = "id74b70bb8",
+                    Status = Build.Types.Status.InternalError,
+                    Source = new Source
+                    {
+                        StorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        RepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FinishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Results = new Results
+                    {
+                        Images =
+                        {
+                            new BuiltImage
+                            {
+                                Name = "name1c9368b0",
+                                Digest = "digest96770fc1",
+                                PushTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        BuildStepImages =
+                        {
+                            "build_step_imagesdaa7235b",
+                        },
+                        ArtifactManifest = "artifact_manifest14d2d7e3",
+                        NumArtifacts = 8832111714758501184L,
+                        BuildStepOutputs =
+                        {
+                            proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                        },
+                        ArtifactTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Steps =
+                    {
+                        new BuildStep
+                        {
+                            Name = "name1c9368b0",
+                            Env = { "env1d5a03ff", },
+                            Args = { "args09af56a9", },
+                            Dir = "dir83076073",
+                            Id = "id74b70bb8",
+                            WaitFor =
+                            {
+                                "wait_for8cc937b4",
+                            },
+                            Entrypoint = "entrypoint53bbadee",
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Timeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Status = Build.Types.Status.InternalError,
+                            PullTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    Timeout = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Images = { "images1714b559", },
+                    ProjectId = "project_id43ad98b0",
+                    LogsBucket = "logs_bucket85d3caaa",
+                    SourceProvenance = new SourceProvenance
+                    {
+                        ResolvedStorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        FileHashes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FileHashes
+                                {
+                                    FileHash =
+                                    {
+                                        new Hash
+                                        {
+                                            Type = Hash.Types.HashType.None,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                        ResolvedRepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    BuildTriggerId = "build_trigger_idbd29c2e8",
+                    Options = new BuildOptions
+                    {
+                        SourceProvenanceHash =
+                        {
+                            Hash.Types.HashType.Md5,
+                        },
+                        RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                        MachineType = BuildOptions.Types.MachineType.Unspecified,
+                        SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                        LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                        DiskSizeGb = 7103353205508136450L,
+                        WorkerPool = "worker_pool53f9ab42",
+                        Logging = BuildOptions.Types.LoggingMode.None,
+                        Env = { "env1d5a03ff", },
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        DynamicSubstitutions = true,
+                    },
+                    StatusDetail = "status_detail859ccc64",
+                    LogUrl = "log_url5edf0128",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Tags = { "tags52c47ad5", },
+                    Secrets =
+                    {
+                        new Secret
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                            SecretEnv =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    proto::ByteString.CopyFromUtf8("value60c16320")
+                                },
+                            },
+                        },
+                    },
+                    Timing =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            }
+                        },
+                    },
+                    Artifacts = new Artifacts
+                    {
+                        Images = { "images1714b559", },
+                        Objects = new Artifacts.Types.ArtifactObjects
+                        {
+                            Location = "locatione09d18d5",
+                            Paths = { "paths012c8713", },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    QueueTtl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                    BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                TriggerTemplate = new RepoSource
+                {
+                    ProjectId = "project_id43ad98b0",
+                    RepoName = "repo_name75c5b2a0",
+                    BranchName = "branch_nameff6f8529",
+                    TagName = "tag_name7ecac3c4",
+                    CommitSha = "commit_sha0207033b",
+                    Dir = "dir83076073",
+                    InvertRegex = false,
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 Filename = "filenamee9d75e43",
                 Disabled = false,
                 Description = "description2cf9da67",
@@ -659,7 +5613,26 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                         "value60c16320"
                     },
                 },
-                Github = new GitHubEventsConfig(),
+                Github = new GitHubEventsConfig
+                {
+#pragma warning disable CS0612
+                    InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                    PullRequest = new PullRequestFilter
+                    {
+                        Branch = "branch24a20396",
+                        CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                        InvertRegex = false,
+                    },
+                    Push = new PushFilter
+                    {
+                        Branch = "branch24a20396",
+                        Tag = "tag843ed2e4",
+                        InvertRegex = false,
+                    },
+                    Owner = "ownere92c1272",
+                    Name = "name1c9368b0",
+                },
                 IgnoredFiles =
                 {
                     "ignored_filesf5916206",
@@ -693,9 +5666,333 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             BuildTrigger expectedResponse = new BuildTrigger
             {
                 Id = "id74b70bb8",
-                Build = new Build(),
-                CreateTime = new wkt::Timestamp(),
-                TriggerTemplate = new RepoSource(),
+                Build = new Build
+                {
+                    Id = "id74b70bb8",
+                    Status = Build.Types.Status.InternalError,
+                    Source = new Source
+                    {
+                        StorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        RepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FinishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Results = new Results
+                    {
+                        Images =
+                        {
+                            new BuiltImage
+                            {
+                                Name = "name1c9368b0",
+                                Digest = "digest96770fc1",
+                                PushTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        BuildStepImages =
+                        {
+                            "build_step_imagesdaa7235b",
+                        },
+                        ArtifactManifest = "artifact_manifest14d2d7e3",
+                        NumArtifacts = 8832111714758501184L,
+                        BuildStepOutputs =
+                        {
+                            proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                        },
+                        ArtifactTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Steps =
+                    {
+                        new BuildStep
+                        {
+                            Name = "name1c9368b0",
+                            Env = { "env1d5a03ff", },
+                            Args = { "args09af56a9", },
+                            Dir = "dir83076073",
+                            Id = "id74b70bb8",
+                            WaitFor =
+                            {
+                                "wait_for8cc937b4",
+                            },
+                            Entrypoint = "entrypoint53bbadee",
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Timeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Status = Build.Types.Status.InternalError,
+                            PullTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    Timeout = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Images = { "images1714b559", },
+                    ProjectId = "project_id43ad98b0",
+                    LogsBucket = "logs_bucket85d3caaa",
+                    SourceProvenance = new SourceProvenance
+                    {
+                        ResolvedStorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        FileHashes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FileHashes
+                                {
+                                    FileHash =
+                                    {
+                                        new Hash
+                                        {
+                                            Type = Hash.Types.HashType.None,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                        ResolvedRepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    BuildTriggerId = "build_trigger_idbd29c2e8",
+                    Options = new BuildOptions
+                    {
+                        SourceProvenanceHash =
+                        {
+                            Hash.Types.HashType.Md5,
+                        },
+                        RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                        MachineType = BuildOptions.Types.MachineType.Unspecified,
+                        SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                        LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                        DiskSizeGb = 7103353205508136450L,
+                        WorkerPool = "worker_pool53f9ab42",
+                        Logging = BuildOptions.Types.LoggingMode.None,
+                        Env = { "env1d5a03ff", },
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        DynamicSubstitutions = true,
+                    },
+                    StatusDetail = "status_detail859ccc64",
+                    LogUrl = "log_url5edf0128",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Tags = { "tags52c47ad5", },
+                    Secrets =
+                    {
+                        new Secret
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                            SecretEnv =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    proto::ByteString.CopyFromUtf8("value60c16320")
+                                },
+                            },
+                        },
+                    },
+                    Timing =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            }
+                        },
+                    },
+                    Artifacts = new Artifacts
+                    {
+                        Images = { "images1714b559", },
+                        Objects = new Artifacts.Types.ArtifactObjects
+                        {
+                            Location = "locatione09d18d5",
+                            Paths = { "paths012c8713", },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    QueueTtl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                    BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                TriggerTemplate = new RepoSource
+                {
+                    ProjectId = "project_id43ad98b0",
+                    RepoName = "repo_name75c5b2a0",
+                    BranchName = "branch_nameff6f8529",
+                    TagName = "tag_name7ecac3c4",
+                    CommitSha = "commit_sha0207033b",
+                    Dir = "dir83076073",
+                    InvertRegex = false,
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 Filename = "filenamee9d75e43",
                 Disabled = false,
                 Description = "description2cf9da67",
@@ -706,7 +6003,26 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                         "value60c16320"
                     },
                 },
-                Github = new GitHubEventsConfig(),
+                Github = new GitHubEventsConfig
+                {
+#pragma warning disable CS0612
+                    InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                    PullRequest = new PullRequestFilter
+                    {
+                        Branch = "branch24a20396",
+                        CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                        InvertRegex = false,
+                    },
+                    Push = new PushFilter
+                    {
+                        Branch = "branch24a20396",
+                        Tag = "tag843ed2e4",
+                        InvertRegex = false,
+                    },
+                    Owner = "ownere92c1272",
+                    Name = "name1c9368b0",
+                },
                 IgnoredFiles =
                 {
                     "ignored_filesf5916206",
@@ -738,9 +6054,333 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             BuildTrigger expectedResponse = new BuildTrigger
             {
                 Id = "id74b70bb8",
-                Build = new Build(),
-                CreateTime = new wkt::Timestamp(),
-                TriggerTemplate = new RepoSource(),
+                Build = new Build
+                {
+                    Id = "id74b70bb8",
+                    Status = Build.Types.Status.InternalError,
+                    Source = new Source
+                    {
+                        StorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        RepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FinishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Results = new Results
+                    {
+                        Images =
+                        {
+                            new BuiltImage
+                            {
+                                Name = "name1c9368b0",
+                                Digest = "digest96770fc1",
+                                PushTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        BuildStepImages =
+                        {
+                            "build_step_imagesdaa7235b",
+                        },
+                        ArtifactManifest = "artifact_manifest14d2d7e3",
+                        NumArtifacts = 8832111714758501184L,
+                        BuildStepOutputs =
+                        {
+                            proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                        },
+                        ArtifactTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Steps =
+                    {
+                        new BuildStep
+                        {
+                            Name = "name1c9368b0",
+                            Env = { "env1d5a03ff", },
+                            Args = { "args09af56a9", },
+                            Dir = "dir83076073",
+                            Id = "id74b70bb8",
+                            WaitFor =
+                            {
+                                "wait_for8cc937b4",
+                            },
+                            Entrypoint = "entrypoint53bbadee",
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Timeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Status = Build.Types.Status.InternalError,
+                            PullTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    Timeout = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Images = { "images1714b559", },
+                    ProjectId = "project_id43ad98b0",
+                    LogsBucket = "logs_bucket85d3caaa",
+                    SourceProvenance = new SourceProvenance
+                    {
+                        ResolvedStorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        FileHashes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FileHashes
+                                {
+                                    FileHash =
+                                    {
+                                        new Hash
+                                        {
+                                            Type = Hash.Types.HashType.None,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                        ResolvedRepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    BuildTriggerId = "build_trigger_idbd29c2e8",
+                    Options = new BuildOptions
+                    {
+                        SourceProvenanceHash =
+                        {
+                            Hash.Types.HashType.Md5,
+                        },
+                        RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                        MachineType = BuildOptions.Types.MachineType.Unspecified,
+                        SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                        LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                        DiskSizeGb = 7103353205508136450L,
+                        WorkerPool = "worker_pool53f9ab42",
+                        Logging = BuildOptions.Types.LoggingMode.None,
+                        Env = { "env1d5a03ff", },
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        DynamicSubstitutions = true,
+                    },
+                    StatusDetail = "status_detail859ccc64",
+                    LogUrl = "log_url5edf0128",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Tags = { "tags52c47ad5", },
+                    Secrets =
+                    {
+                        new Secret
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                            SecretEnv =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    proto::ByteString.CopyFromUtf8("value60c16320")
+                                },
+                            },
+                        },
+                    },
+                    Timing =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            }
+                        },
+                    },
+                    Artifacts = new Artifacts
+                    {
+                        Images = { "images1714b559", },
+                        Objects = new Artifacts.Types.ArtifactObjects
+                        {
+                            Location = "locatione09d18d5",
+                            Paths = { "paths012c8713", },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    QueueTtl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                    BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                TriggerTemplate = new RepoSource
+                {
+                    ProjectId = "project_id43ad98b0",
+                    RepoName = "repo_name75c5b2a0",
+                    BranchName = "branch_nameff6f8529",
+                    TagName = "tag_name7ecac3c4",
+                    CommitSha = "commit_sha0207033b",
+                    Dir = "dir83076073",
+                    InvertRegex = false,
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 Filename = "filenamee9d75e43",
                 Disabled = false,
                 Description = "description2cf9da67",
@@ -751,7 +6391,26 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                         "value60c16320"
                     },
                 },
-                Github = new GitHubEventsConfig(),
+                Github = new GitHubEventsConfig
+                {
+#pragma warning disable CS0612
+                    InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                    PullRequest = new PullRequestFilter
+                    {
+                        Branch = "branch24a20396",
+                        CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                        InvertRegex = false,
+                    },
+                    Push = new PushFilter
+                    {
+                        Branch = "branch24a20396",
+                        Tag = "tag843ed2e4",
+                        InvertRegex = false,
+                    },
+                    Owner = "ownere92c1272",
+                    Name = "name1c9368b0",
+                },
                 IgnoredFiles =
                 {
                     "ignored_filesf5916206",
@@ -785,9 +6444,333 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             BuildTrigger expectedResponse = new BuildTrigger
             {
                 Id = "id74b70bb8",
-                Build = new Build(),
-                CreateTime = new wkt::Timestamp(),
-                TriggerTemplate = new RepoSource(),
+                Build = new Build
+                {
+                    Id = "id74b70bb8",
+                    Status = Build.Types.Status.InternalError,
+                    Source = new Source
+                    {
+                        StorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        RepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FinishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Results = new Results
+                    {
+                        Images =
+                        {
+                            new BuiltImage
+                            {
+                                Name = "name1c9368b0",
+                                Digest = "digest96770fc1",
+                                PushTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        BuildStepImages =
+                        {
+                            "build_step_imagesdaa7235b",
+                        },
+                        ArtifactManifest = "artifact_manifest14d2d7e3",
+                        NumArtifacts = 8832111714758501184L,
+                        BuildStepOutputs =
+                        {
+                            proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                        },
+                        ArtifactTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Steps =
+                    {
+                        new BuildStep
+                        {
+                            Name = "name1c9368b0",
+                            Env = { "env1d5a03ff", },
+                            Args = { "args09af56a9", },
+                            Dir = "dir83076073",
+                            Id = "id74b70bb8",
+                            WaitFor =
+                            {
+                                "wait_for8cc937b4",
+                            },
+                            Entrypoint = "entrypoint53bbadee",
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Timeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Status = Build.Types.Status.InternalError,
+                            PullTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    Timeout = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Images = { "images1714b559", },
+                    ProjectId = "project_id43ad98b0",
+                    LogsBucket = "logs_bucket85d3caaa",
+                    SourceProvenance = new SourceProvenance
+                    {
+                        ResolvedStorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        FileHashes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FileHashes
+                                {
+                                    FileHash =
+                                    {
+                                        new Hash
+                                        {
+                                            Type = Hash.Types.HashType.None,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                        ResolvedRepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    BuildTriggerId = "build_trigger_idbd29c2e8",
+                    Options = new BuildOptions
+                    {
+                        SourceProvenanceHash =
+                        {
+                            Hash.Types.HashType.Md5,
+                        },
+                        RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                        MachineType = BuildOptions.Types.MachineType.Unspecified,
+                        SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                        LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                        DiskSizeGb = 7103353205508136450L,
+                        WorkerPool = "worker_pool53f9ab42",
+                        Logging = BuildOptions.Types.LoggingMode.None,
+                        Env = { "env1d5a03ff", },
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        DynamicSubstitutions = true,
+                    },
+                    StatusDetail = "status_detail859ccc64",
+                    LogUrl = "log_url5edf0128",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Tags = { "tags52c47ad5", },
+                    Secrets =
+                    {
+                        new Secret
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                            SecretEnv =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    proto::ByteString.CopyFromUtf8("value60c16320")
+                                },
+                            },
+                        },
+                    },
+                    Timing =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            }
+                        },
+                    },
+                    Artifacts = new Artifacts
+                    {
+                        Images = { "images1714b559", },
+                        Objects = new Artifacts.Types.ArtifactObjects
+                        {
+                            Location = "locatione09d18d5",
+                            Paths = { "paths012c8713", },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    QueueTtl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                    BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                TriggerTemplate = new RepoSource
+                {
+                    ProjectId = "project_id43ad98b0",
+                    RepoName = "repo_name75c5b2a0",
+                    BranchName = "branch_nameff6f8529",
+                    TagName = "tag_name7ecac3c4",
+                    CommitSha = "commit_sha0207033b",
+                    Dir = "dir83076073",
+                    InvertRegex = false,
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 Filename = "filenamee9d75e43",
                 Disabled = false,
                 Description = "description2cf9da67",
@@ -798,7 +6781,26 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                         "value60c16320"
                     },
                 },
-                Github = new GitHubEventsConfig(),
+                Github = new GitHubEventsConfig
+                {
+#pragma warning disable CS0612
+                    InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                    PullRequest = new PullRequestFilter
+                    {
+                        Branch = "branch24a20396",
+                        CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                        InvertRegex = false,
+                    },
+                    Push = new PushFilter
+                    {
+                        Branch = "branch24a20396",
+                        Tag = "tag843ed2e4",
+                        InvertRegex = false,
+                    },
+                    Owner = "ownere92c1272",
+                    Name = "name1c9368b0",
+                },
                 IgnoredFiles =
                 {
                     "ignored_filesf5916206",
@@ -830,9 +6832,333 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             BuildTrigger expectedResponse = new BuildTrigger
             {
                 Id = "id74b70bb8",
-                Build = new Build(),
-                CreateTime = new wkt::Timestamp(),
-                TriggerTemplate = new RepoSource(),
+                Build = new Build
+                {
+                    Id = "id74b70bb8",
+                    Status = Build.Types.Status.InternalError,
+                    Source = new Source
+                    {
+                        StorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        RepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FinishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Results = new Results
+                    {
+                        Images =
+                        {
+                            new BuiltImage
+                            {
+                                Name = "name1c9368b0",
+                                Digest = "digest96770fc1",
+                                PushTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        BuildStepImages =
+                        {
+                            "build_step_imagesdaa7235b",
+                        },
+                        ArtifactManifest = "artifact_manifest14d2d7e3",
+                        NumArtifacts = 8832111714758501184L,
+                        BuildStepOutputs =
+                        {
+                            proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                        },
+                        ArtifactTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Steps =
+                    {
+                        new BuildStep
+                        {
+                            Name = "name1c9368b0",
+                            Env = { "env1d5a03ff", },
+                            Args = { "args09af56a9", },
+                            Dir = "dir83076073",
+                            Id = "id74b70bb8",
+                            WaitFor =
+                            {
+                                "wait_for8cc937b4",
+                            },
+                            Entrypoint = "entrypoint53bbadee",
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Timeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Status = Build.Types.Status.InternalError,
+                            PullTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    Timeout = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Images = { "images1714b559", },
+                    ProjectId = "project_id43ad98b0",
+                    LogsBucket = "logs_bucket85d3caaa",
+                    SourceProvenance = new SourceProvenance
+                    {
+                        ResolvedStorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        FileHashes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FileHashes
+                                {
+                                    FileHash =
+                                    {
+                                        new Hash
+                                        {
+                                            Type = Hash.Types.HashType.None,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                        ResolvedRepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    BuildTriggerId = "build_trigger_idbd29c2e8",
+                    Options = new BuildOptions
+                    {
+                        SourceProvenanceHash =
+                        {
+                            Hash.Types.HashType.Md5,
+                        },
+                        RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                        MachineType = BuildOptions.Types.MachineType.Unspecified,
+                        SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                        LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                        DiskSizeGb = 7103353205508136450L,
+                        WorkerPool = "worker_pool53f9ab42",
+                        Logging = BuildOptions.Types.LoggingMode.None,
+                        Env = { "env1d5a03ff", },
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        DynamicSubstitutions = true,
+                    },
+                    StatusDetail = "status_detail859ccc64",
+                    LogUrl = "log_url5edf0128",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Tags = { "tags52c47ad5", },
+                    Secrets =
+                    {
+                        new Secret
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                            SecretEnv =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    proto::ByteString.CopyFromUtf8("value60c16320")
+                                },
+                            },
+                        },
+                    },
+                    Timing =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            }
+                        },
+                    },
+                    Artifacts = new Artifacts
+                    {
+                        Images = { "images1714b559", },
+                        Objects = new Artifacts.Types.ArtifactObjects
+                        {
+                            Location = "locatione09d18d5",
+                            Paths = { "paths012c8713", },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    QueueTtl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                    BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                TriggerTemplate = new RepoSource
+                {
+                    ProjectId = "project_id43ad98b0",
+                    RepoName = "repo_name75c5b2a0",
+                    BranchName = "branch_nameff6f8529",
+                    TagName = "tag_name7ecac3c4",
+                    CommitSha = "commit_sha0207033b",
+                    Dir = "dir83076073",
+                    InvertRegex = false,
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 Filename = "filenamee9d75e43",
                 Disabled = false,
                 Description = "description2cf9da67",
@@ -843,7 +7169,26 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                         "value60c16320"
                     },
                 },
-                Github = new GitHubEventsConfig(),
+                Github = new GitHubEventsConfig
+                {
+#pragma warning disable CS0612
+                    InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                    PullRequest = new PullRequestFilter
+                    {
+                        Branch = "branch24a20396",
+                        CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                        InvertRegex = false,
+                    },
+                    Push = new PushFilter
+                    {
+                        Branch = "branch24a20396",
+                        Tag = "tag843ed2e4",
+                        InvertRegex = false,
+                    },
+                    Owner = "ownere92c1272",
+                    Name = "name1c9368b0",
+                },
                 IgnoredFiles =
                 {
                     "ignored_filesf5916206",
@@ -943,14 +7288,708 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 ProjectId = "project_id43ad98b0",
                 TriggerId = "trigger_id9f1f0bb1",
-                Trigger = new BuildTrigger(),
+                Trigger = new BuildTrigger
+                {
+                    Id = "id74b70bb8",
+                    Build = new Build
+                    {
+                        Id = "id74b70bb8",
+                        Status = Build.Types.Status.InternalError,
+                        Source = new Source
+                        {
+                            StorageSource = new StorageSource
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                Generation = -8788800127544411748L,
+                            },
+                            RepoSource = new RepoSource
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                RepoName = "repo_name75c5b2a0",
+                                BranchName = "branch_nameff6f8529",
+                                TagName = "tag_name7ecac3c4",
+                                CommitSha = "commit_sha0207033b",
+                                Dir = "dir83076073",
+                                InvertRegex = false,
+                                Substitutions =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        FinishTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Results = new Results
+                        {
+                            Images =
+                            {
+                                new BuiltImage
+                                {
+                                    Name = "name1c9368b0",
+                                    Digest = "digest96770fc1",
+                                    PushTiming = new TimeSpan
+                                    {
+                                        StartTime = new wkt::Timestamp
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTime = new wkt::Timestamp
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                            BuildStepImages =
+                            {
+                                "build_step_imagesdaa7235b",
+                            },
+                            ArtifactManifest = "artifact_manifest14d2d7e3",
+                            NumArtifacts = 8832111714758501184L,
+                            BuildStepOutputs =
+                            {
+                                proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                            },
+                            ArtifactTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Steps =
+                        {
+                            new BuildStep
+                            {
+                                Name = "name1c9368b0",
+                                Env = { "env1d5a03ff", },
+                                Args = { "args09af56a9", },
+                                Dir = "dir83076073",
+                                Id = "id74b70bb8",
+                                WaitFor =
+                                {
+                                    "wait_for8cc937b4",
+                                },
+                                Entrypoint = "entrypoint53bbadee",
+                                SecretEnv =
+                                {
+                                    "secret_env6a25f329",
+                                },
+                                Volumes =
+                                {
+                                    new Volume
+                                    {
+                                        Name = "name1c9368b0",
+                                        Path = "path0b1dfed6",
+                                    },
+                                },
+                                Timing = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Timeout = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                Status = Build.Types.Status.InternalError,
+                                PullTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        Timeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Images = { "images1714b559", },
+                        ProjectId = "project_id43ad98b0",
+                        LogsBucket = "logs_bucket85d3caaa",
+                        SourceProvenance = new SourceProvenance
+                        {
+                            ResolvedStorageSource = new StorageSource
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                Generation = -8788800127544411748L,
+                            },
+                            FileHashes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FileHashes
+                                    {
+                                        FileHash =
+                                        {
+                                            new Hash
+                                            {
+                                                Type = Hash.Types.HashType.None,
+                                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                            },
+                                        },
+                                    }
+                                },
+                            },
+                            ResolvedRepoSource = new RepoSource
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                RepoName = "repo_name75c5b2a0",
+                                BranchName = "branch_nameff6f8529",
+                                TagName = "tag_name7ecac3c4",
+                                CommitSha = "commit_sha0207033b",
+                                Dir = "dir83076073",
+                                InvertRegex = false,
+                                Substitutions =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        BuildTriggerId = "build_trigger_idbd29c2e8",
+                        Options = new BuildOptions
+                        {
+                            SourceProvenanceHash =
+                            {
+                                Hash.Types.HashType.Md5,
+                            },
+                            RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                            MachineType = BuildOptions.Types.MachineType.Unspecified,
+                            SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                            LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                            DiskSizeGb = 7103353205508136450L,
+                            WorkerPool = "worker_pool53f9ab42",
+                            Logging = BuildOptions.Types.LoggingMode.None,
+                            Env = { "env1d5a03ff", },
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            DynamicSubstitutions = true,
+                        },
+                        StatusDetail = "status_detail859ccc64",
+                        LogUrl = "log_url5edf0128",
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Tags = { "tags52c47ad5", },
+                        Secrets =
+                        {
+                            new Secret
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                                SecretEnv =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        proto::ByteString.CopyFromUtf8("value60c16320")
+                                    },
+                                },
+                            },
+                        },
+                        Timing =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                }
+                            },
+                        },
+                        Artifacts = new Artifacts
+                        {
+                            Images = { "images1714b559", },
+                            Objects = new Artifacts.Types.ArtifactObjects
+                            {
+                                Location = "locatione09d18d5",
+                                Paths = { "paths012c8713", },
+                                Timing = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        QueueTtl = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                        BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TriggerTemplate = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    Filename = "filenamee9d75e43",
+                    Disabled = false,
+                    Description = "description2cf9da67",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Github = new GitHubEventsConfig
+                    {
+#pragma warning disable CS0612
+                        InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                        PullRequest = new PullRequestFilter
+                        {
+                            Branch = "branch24a20396",
+                            CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                            InvertRegex = false,
+                        },
+                        Push = new PushFilter
+                        {
+                            Branch = "branch24a20396",
+                            Tag = "tag843ed2e4",
+                            InvertRegex = false,
+                        },
+                        Owner = "ownere92c1272",
+                        Name = "name1c9368b0",
+                    },
+                    IgnoredFiles =
+                    {
+                        "ignored_filesf5916206",
+                    },
+                    IncludedFiles =
+                    {
+                        "included_files53b7943b",
+                    },
+                    Tags = { "tags52c47ad5", },
+                    BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                },
             };
             BuildTrigger expectedResponse = new BuildTrigger
             {
                 Id = "id74b70bb8",
-                Build = new Build(),
-                CreateTime = new wkt::Timestamp(),
-                TriggerTemplate = new RepoSource(),
+                Build = new Build
+                {
+                    Id = "id74b70bb8",
+                    Status = Build.Types.Status.InternalError,
+                    Source = new Source
+                    {
+                        StorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        RepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FinishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Results = new Results
+                    {
+                        Images =
+                        {
+                            new BuiltImage
+                            {
+                                Name = "name1c9368b0",
+                                Digest = "digest96770fc1",
+                                PushTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        BuildStepImages =
+                        {
+                            "build_step_imagesdaa7235b",
+                        },
+                        ArtifactManifest = "artifact_manifest14d2d7e3",
+                        NumArtifacts = 8832111714758501184L,
+                        BuildStepOutputs =
+                        {
+                            proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                        },
+                        ArtifactTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Steps =
+                    {
+                        new BuildStep
+                        {
+                            Name = "name1c9368b0",
+                            Env = { "env1d5a03ff", },
+                            Args = { "args09af56a9", },
+                            Dir = "dir83076073",
+                            Id = "id74b70bb8",
+                            WaitFor =
+                            {
+                                "wait_for8cc937b4",
+                            },
+                            Entrypoint = "entrypoint53bbadee",
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Timeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Status = Build.Types.Status.InternalError,
+                            PullTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    Timeout = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Images = { "images1714b559", },
+                    ProjectId = "project_id43ad98b0",
+                    LogsBucket = "logs_bucket85d3caaa",
+                    SourceProvenance = new SourceProvenance
+                    {
+                        ResolvedStorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        FileHashes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FileHashes
+                                {
+                                    FileHash =
+                                    {
+                                        new Hash
+                                        {
+                                            Type = Hash.Types.HashType.None,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                        ResolvedRepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    BuildTriggerId = "build_trigger_idbd29c2e8",
+                    Options = new BuildOptions
+                    {
+                        SourceProvenanceHash =
+                        {
+                            Hash.Types.HashType.Md5,
+                        },
+                        RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                        MachineType = BuildOptions.Types.MachineType.Unspecified,
+                        SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                        LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                        DiskSizeGb = 7103353205508136450L,
+                        WorkerPool = "worker_pool53f9ab42",
+                        Logging = BuildOptions.Types.LoggingMode.None,
+                        Env = { "env1d5a03ff", },
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        DynamicSubstitutions = true,
+                    },
+                    StatusDetail = "status_detail859ccc64",
+                    LogUrl = "log_url5edf0128",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Tags = { "tags52c47ad5", },
+                    Secrets =
+                    {
+                        new Secret
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                            SecretEnv =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    proto::ByteString.CopyFromUtf8("value60c16320")
+                                },
+                            },
+                        },
+                    },
+                    Timing =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            }
+                        },
+                    },
+                    Artifacts = new Artifacts
+                    {
+                        Images = { "images1714b559", },
+                        Objects = new Artifacts.Types.ArtifactObjects
+                        {
+                            Location = "locatione09d18d5",
+                            Paths = { "paths012c8713", },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    QueueTtl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                    BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                TriggerTemplate = new RepoSource
+                {
+                    ProjectId = "project_id43ad98b0",
+                    RepoName = "repo_name75c5b2a0",
+                    BranchName = "branch_nameff6f8529",
+                    TagName = "tag_name7ecac3c4",
+                    CommitSha = "commit_sha0207033b",
+                    Dir = "dir83076073",
+                    InvertRegex = false,
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 Filename = "filenamee9d75e43",
                 Disabled = false,
                 Description = "description2cf9da67",
@@ -961,7 +8000,26 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                         "value60c16320"
                     },
                 },
-                Github = new GitHubEventsConfig(),
+                Github = new GitHubEventsConfig
+                {
+#pragma warning disable CS0612
+                    InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                    PullRequest = new PullRequestFilter
+                    {
+                        Branch = "branch24a20396",
+                        CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                        InvertRegex = false,
+                    },
+                    Push = new PushFilter
+                    {
+                        Branch = "branch24a20396",
+                        Tag = "tag843ed2e4",
+                        InvertRegex = false,
+                    },
+                    Owner = "ownere92c1272",
+                    Name = "name1c9368b0",
+                },
                 IgnoredFiles =
                 {
                     "ignored_filesf5916206",
@@ -989,14 +8047,708 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 ProjectId = "project_id43ad98b0",
                 TriggerId = "trigger_id9f1f0bb1",
-                Trigger = new BuildTrigger(),
+                Trigger = new BuildTrigger
+                {
+                    Id = "id74b70bb8",
+                    Build = new Build
+                    {
+                        Id = "id74b70bb8",
+                        Status = Build.Types.Status.InternalError,
+                        Source = new Source
+                        {
+                            StorageSource = new StorageSource
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                Generation = -8788800127544411748L,
+                            },
+                            RepoSource = new RepoSource
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                RepoName = "repo_name75c5b2a0",
+                                BranchName = "branch_nameff6f8529",
+                                TagName = "tag_name7ecac3c4",
+                                CommitSha = "commit_sha0207033b",
+                                Dir = "dir83076073",
+                                InvertRegex = false,
+                                Substitutions =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        FinishTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Results = new Results
+                        {
+                            Images =
+                            {
+                                new BuiltImage
+                                {
+                                    Name = "name1c9368b0",
+                                    Digest = "digest96770fc1",
+                                    PushTiming = new TimeSpan
+                                    {
+                                        StartTime = new wkt::Timestamp
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTime = new wkt::Timestamp
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                            BuildStepImages =
+                            {
+                                "build_step_imagesdaa7235b",
+                            },
+                            ArtifactManifest = "artifact_manifest14d2d7e3",
+                            NumArtifacts = 8832111714758501184L,
+                            BuildStepOutputs =
+                            {
+                                proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                            },
+                            ArtifactTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Steps =
+                        {
+                            new BuildStep
+                            {
+                                Name = "name1c9368b0",
+                                Env = { "env1d5a03ff", },
+                                Args = { "args09af56a9", },
+                                Dir = "dir83076073",
+                                Id = "id74b70bb8",
+                                WaitFor =
+                                {
+                                    "wait_for8cc937b4",
+                                },
+                                Entrypoint = "entrypoint53bbadee",
+                                SecretEnv =
+                                {
+                                    "secret_env6a25f329",
+                                },
+                                Volumes =
+                                {
+                                    new Volume
+                                    {
+                                        Name = "name1c9368b0",
+                                        Path = "path0b1dfed6",
+                                    },
+                                },
+                                Timing = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Timeout = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                Status = Build.Types.Status.InternalError,
+                                PullTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        Timeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Images = { "images1714b559", },
+                        ProjectId = "project_id43ad98b0",
+                        LogsBucket = "logs_bucket85d3caaa",
+                        SourceProvenance = new SourceProvenance
+                        {
+                            ResolvedStorageSource = new StorageSource
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                Generation = -8788800127544411748L,
+                            },
+                            FileHashes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FileHashes
+                                    {
+                                        FileHash =
+                                        {
+                                            new Hash
+                                            {
+                                                Type = Hash.Types.HashType.None,
+                                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                            },
+                                        },
+                                    }
+                                },
+                            },
+                            ResolvedRepoSource = new RepoSource
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                RepoName = "repo_name75c5b2a0",
+                                BranchName = "branch_nameff6f8529",
+                                TagName = "tag_name7ecac3c4",
+                                CommitSha = "commit_sha0207033b",
+                                Dir = "dir83076073",
+                                InvertRegex = false,
+                                Substitutions =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        BuildTriggerId = "build_trigger_idbd29c2e8",
+                        Options = new BuildOptions
+                        {
+                            SourceProvenanceHash =
+                            {
+                                Hash.Types.HashType.Md5,
+                            },
+                            RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                            MachineType = BuildOptions.Types.MachineType.Unspecified,
+                            SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                            LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                            DiskSizeGb = 7103353205508136450L,
+                            WorkerPool = "worker_pool53f9ab42",
+                            Logging = BuildOptions.Types.LoggingMode.None,
+                            Env = { "env1d5a03ff", },
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            DynamicSubstitutions = true,
+                        },
+                        StatusDetail = "status_detail859ccc64",
+                        LogUrl = "log_url5edf0128",
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Tags = { "tags52c47ad5", },
+                        Secrets =
+                        {
+                            new Secret
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                                SecretEnv =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        proto::ByteString.CopyFromUtf8("value60c16320")
+                                    },
+                                },
+                            },
+                        },
+                        Timing =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                }
+                            },
+                        },
+                        Artifacts = new Artifacts
+                        {
+                            Images = { "images1714b559", },
+                            Objects = new Artifacts.Types.ArtifactObjects
+                            {
+                                Location = "locatione09d18d5",
+                                Paths = { "paths012c8713", },
+                                Timing = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        QueueTtl = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                        BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TriggerTemplate = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    Filename = "filenamee9d75e43",
+                    Disabled = false,
+                    Description = "description2cf9da67",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Github = new GitHubEventsConfig
+                    {
+#pragma warning disable CS0612
+                        InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                        PullRequest = new PullRequestFilter
+                        {
+                            Branch = "branch24a20396",
+                            CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                            InvertRegex = false,
+                        },
+                        Push = new PushFilter
+                        {
+                            Branch = "branch24a20396",
+                            Tag = "tag843ed2e4",
+                            InvertRegex = false,
+                        },
+                        Owner = "ownere92c1272",
+                        Name = "name1c9368b0",
+                    },
+                    IgnoredFiles =
+                    {
+                        "ignored_filesf5916206",
+                    },
+                    IncludedFiles =
+                    {
+                        "included_files53b7943b",
+                    },
+                    Tags = { "tags52c47ad5", },
+                    BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                },
             };
             BuildTrigger expectedResponse = new BuildTrigger
             {
                 Id = "id74b70bb8",
-                Build = new Build(),
-                CreateTime = new wkt::Timestamp(),
-                TriggerTemplate = new RepoSource(),
+                Build = new Build
+                {
+                    Id = "id74b70bb8",
+                    Status = Build.Types.Status.InternalError,
+                    Source = new Source
+                    {
+                        StorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        RepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FinishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Results = new Results
+                    {
+                        Images =
+                        {
+                            new BuiltImage
+                            {
+                                Name = "name1c9368b0",
+                                Digest = "digest96770fc1",
+                                PushTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        BuildStepImages =
+                        {
+                            "build_step_imagesdaa7235b",
+                        },
+                        ArtifactManifest = "artifact_manifest14d2d7e3",
+                        NumArtifacts = 8832111714758501184L,
+                        BuildStepOutputs =
+                        {
+                            proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                        },
+                        ArtifactTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Steps =
+                    {
+                        new BuildStep
+                        {
+                            Name = "name1c9368b0",
+                            Env = { "env1d5a03ff", },
+                            Args = { "args09af56a9", },
+                            Dir = "dir83076073",
+                            Id = "id74b70bb8",
+                            WaitFor =
+                            {
+                                "wait_for8cc937b4",
+                            },
+                            Entrypoint = "entrypoint53bbadee",
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Timeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Status = Build.Types.Status.InternalError,
+                            PullTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    Timeout = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Images = { "images1714b559", },
+                    ProjectId = "project_id43ad98b0",
+                    LogsBucket = "logs_bucket85d3caaa",
+                    SourceProvenance = new SourceProvenance
+                    {
+                        ResolvedStorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        FileHashes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FileHashes
+                                {
+                                    FileHash =
+                                    {
+                                        new Hash
+                                        {
+                                            Type = Hash.Types.HashType.None,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                        ResolvedRepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    BuildTriggerId = "build_trigger_idbd29c2e8",
+                    Options = new BuildOptions
+                    {
+                        SourceProvenanceHash =
+                        {
+                            Hash.Types.HashType.Md5,
+                        },
+                        RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                        MachineType = BuildOptions.Types.MachineType.Unspecified,
+                        SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                        LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                        DiskSizeGb = 7103353205508136450L,
+                        WorkerPool = "worker_pool53f9ab42",
+                        Logging = BuildOptions.Types.LoggingMode.None,
+                        Env = { "env1d5a03ff", },
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        DynamicSubstitutions = true,
+                    },
+                    StatusDetail = "status_detail859ccc64",
+                    LogUrl = "log_url5edf0128",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Tags = { "tags52c47ad5", },
+                    Secrets =
+                    {
+                        new Secret
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                            SecretEnv =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    proto::ByteString.CopyFromUtf8("value60c16320")
+                                },
+                            },
+                        },
+                    },
+                    Timing =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            }
+                        },
+                    },
+                    Artifacts = new Artifacts
+                    {
+                        Images = { "images1714b559", },
+                        Objects = new Artifacts.Types.ArtifactObjects
+                        {
+                            Location = "locatione09d18d5",
+                            Paths = { "paths012c8713", },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    QueueTtl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                    BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                TriggerTemplate = new RepoSource
+                {
+                    ProjectId = "project_id43ad98b0",
+                    RepoName = "repo_name75c5b2a0",
+                    BranchName = "branch_nameff6f8529",
+                    TagName = "tag_name7ecac3c4",
+                    CommitSha = "commit_sha0207033b",
+                    Dir = "dir83076073",
+                    InvertRegex = false,
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 Filename = "filenamee9d75e43",
                 Disabled = false,
                 Description = "description2cf9da67",
@@ -1007,7 +8759,26 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                         "value60c16320"
                     },
                 },
-                Github = new GitHubEventsConfig(),
+                Github = new GitHubEventsConfig
+                {
+#pragma warning disable CS0612
+                    InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                    PullRequest = new PullRequestFilter
+                    {
+                        Branch = "branch24a20396",
+                        CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                        InvertRegex = false,
+                    },
+                    Push = new PushFilter
+                    {
+                        Branch = "branch24a20396",
+                        Tag = "tag843ed2e4",
+                        InvertRegex = false,
+                    },
+                    Owner = "ownere92c1272",
+                    Name = "name1c9368b0",
+                },
                 IgnoredFiles =
                 {
                     "ignored_filesf5916206",
@@ -1037,14 +8808,708 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 ProjectId = "project_id43ad98b0",
                 TriggerId = "trigger_id9f1f0bb1",
-                Trigger = new BuildTrigger(),
+                Trigger = new BuildTrigger
+                {
+                    Id = "id74b70bb8",
+                    Build = new Build
+                    {
+                        Id = "id74b70bb8",
+                        Status = Build.Types.Status.InternalError,
+                        Source = new Source
+                        {
+                            StorageSource = new StorageSource
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                Generation = -8788800127544411748L,
+                            },
+                            RepoSource = new RepoSource
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                RepoName = "repo_name75c5b2a0",
+                                BranchName = "branch_nameff6f8529",
+                                TagName = "tag_name7ecac3c4",
+                                CommitSha = "commit_sha0207033b",
+                                Dir = "dir83076073",
+                                InvertRegex = false,
+                                Substitutions =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        FinishTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Results = new Results
+                        {
+                            Images =
+                            {
+                                new BuiltImage
+                                {
+                                    Name = "name1c9368b0",
+                                    Digest = "digest96770fc1",
+                                    PushTiming = new TimeSpan
+                                    {
+                                        StartTime = new wkt::Timestamp
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTime = new wkt::Timestamp
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                            BuildStepImages =
+                            {
+                                "build_step_imagesdaa7235b",
+                            },
+                            ArtifactManifest = "artifact_manifest14d2d7e3",
+                            NumArtifacts = 8832111714758501184L,
+                            BuildStepOutputs =
+                            {
+                                proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                            },
+                            ArtifactTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Steps =
+                        {
+                            new BuildStep
+                            {
+                                Name = "name1c9368b0",
+                                Env = { "env1d5a03ff", },
+                                Args = { "args09af56a9", },
+                                Dir = "dir83076073",
+                                Id = "id74b70bb8",
+                                WaitFor =
+                                {
+                                    "wait_for8cc937b4",
+                                },
+                                Entrypoint = "entrypoint53bbadee",
+                                SecretEnv =
+                                {
+                                    "secret_env6a25f329",
+                                },
+                                Volumes =
+                                {
+                                    new Volume
+                                    {
+                                        Name = "name1c9368b0",
+                                        Path = "path0b1dfed6",
+                                    },
+                                },
+                                Timing = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Timeout = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                Status = Build.Types.Status.InternalError,
+                                PullTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        Timeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Images = { "images1714b559", },
+                        ProjectId = "project_id43ad98b0",
+                        LogsBucket = "logs_bucket85d3caaa",
+                        SourceProvenance = new SourceProvenance
+                        {
+                            ResolvedStorageSource = new StorageSource
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                Generation = -8788800127544411748L,
+                            },
+                            FileHashes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FileHashes
+                                    {
+                                        FileHash =
+                                        {
+                                            new Hash
+                                            {
+                                                Type = Hash.Types.HashType.None,
+                                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                            },
+                                        },
+                                    }
+                                },
+                            },
+                            ResolvedRepoSource = new RepoSource
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                RepoName = "repo_name75c5b2a0",
+                                BranchName = "branch_nameff6f8529",
+                                TagName = "tag_name7ecac3c4",
+                                CommitSha = "commit_sha0207033b",
+                                Dir = "dir83076073",
+                                InvertRegex = false,
+                                Substitutions =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        BuildTriggerId = "build_trigger_idbd29c2e8",
+                        Options = new BuildOptions
+                        {
+                            SourceProvenanceHash =
+                            {
+                                Hash.Types.HashType.Md5,
+                            },
+                            RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                            MachineType = BuildOptions.Types.MachineType.Unspecified,
+                            SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                            LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                            DiskSizeGb = 7103353205508136450L,
+                            WorkerPool = "worker_pool53f9ab42",
+                            Logging = BuildOptions.Types.LoggingMode.None,
+                            Env = { "env1d5a03ff", },
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            DynamicSubstitutions = true,
+                        },
+                        StatusDetail = "status_detail859ccc64",
+                        LogUrl = "log_url5edf0128",
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Tags = { "tags52c47ad5", },
+                        Secrets =
+                        {
+                            new Secret
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                                SecretEnv =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        proto::ByteString.CopyFromUtf8("value60c16320")
+                                    },
+                                },
+                            },
+                        },
+                        Timing =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                }
+                            },
+                        },
+                        Artifacts = new Artifacts
+                        {
+                            Images = { "images1714b559", },
+                            Objects = new Artifacts.Types.ArtifactObjects
+                            {
+                                Location = "locatione09d18d5",
+                                Paths = { "paths012c8713", },
+                                Timing = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        QueueTtl = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                        BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TriggerTemplate = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    Filename = "filenamee9d75e43",
+                    Disabled = false,
+                    Description = "description2cf9da67",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Github = new GitHubEventsConfig
+                    {
+#pragma warning disable CS0612
+                        InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                        PullRequest = new PullRequestFilter
+                        {
+                            Branch = "branch24a20396",
+                            CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                            InvertRegex = false,
+                        },
+                        Push = new PushFilter
+                        {
+                            Branch = "branch24a20396",
+                            Tag = "tag843ed2e4",
+                            InvertRegex = false,
+                        },
+                        Owner = "ownere92c1272",
+                        Name = "name1c9368b0",
+                    },
+                    IgnoredFiles =
+                    {
+                        "ignored_filesf5916206",
+                    },
+                    IncludedFiles =
+                    {
+                        "included_files53b7943b",
+                    },
+                    Tags = { "tags52c47ad5", },
+                    BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                },
             };
             BuildTrigger expectedResponse = new BuildTrigger
             {
                 Id = "id74b70bb8",
-                Build = new Build(),
-                CreateTime = new wkt::Timestamp(),
-                TriggerTemplate = new RepoSource(),
+                Build = new Build
+                {
+                    Id = "id74b70bb8",
+                    Status = Build.Types.Status.InternalError,
+                    Source = new Source
+                    {
+                        StorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        RepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FinishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Results = new Results
+                    {
+                        Images =
+                        {
+                            new BuiltImage
+                            {
+                                Name = "name1c9368b0",
+                                Digest = "digest96770fc1",
+                                PushTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        BuildStepImages =
+                        {
+                            "build_step_imagesdaa7235b",
+                        },
+                        ArtifactManifest = "artifact_manifest14d2d7e3",
+                        NumArtifacts = 8832111714758501184L,
+                        BuildStepOutputs =
+                        {
+                            proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                        },
+                        ArtifactTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Steps =
+                    {
+                        new BuildStep
+                        {
+                            Name = "name1c9368b0",
+                            Env = { "env1d5a03ff", },
+                            Args = { "args09af56a9", },
+                            Dir = "dir83076073",
+                            Id = "id74b70bb8",
+                            WaitFor =
+                            {
+                                "wait_for8cc937b4",
+                            },
+                            Entrypoint = "entrypoint53bbadee",
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Timeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Status = Build.Types.Status.InternalError,
+                            PullTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    Timeout = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Images = { "images1714b559", },
+                    ProjectId = "project_id43ad98b0",
+                    LogsBucket = "logs_bucket85d3caaa",
+                    SourceProvenance = new SourceProvenance
+                    {
+                        ResolvedStorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        FileHashes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FileHashes
+                                {
+                                    FileHash =
+                                    {
+                                        new Hash
+                                        {
+                                            Type = Hash.Types.HashType.None,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                        ResolvedRepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    BuildTriggerId = "build_trigger_idbd29c2e8",
+                    Options = new BuildOptions
+                    {
+                        SourceProvenanceHash =
+                        {
+                            Hash.Types.HashType.Md5,
+                        },
+                        RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                        MachineType = BuildOptions.Types.MachineType.Unspecified,
+                        SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                        LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                        DiskSizeGb = 7103353205508136450L,
+                        WorkerPool = "worker_pool53f9ab42",
+                        Logging = BuildOptions.Types.LoggingMode.None,
+                        Env = { "env1d5a03ff", },
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        DynamicSubstitutions = true,
+                    },
+                    StatusDetail = "status_detail859ccc64",
+                    LogUrl = "log_url5edf0128",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Tags = { "tags52c47ad5", },
+                    Secrets =
+                    {
+                        new Secret
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                            SecretEnv =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    proto::ByteString.CopyFromUtf8("value60c16320")
+                                },
+                            },
+                        },
+                    },
+                    Timing =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            }
+                        },
+                    },
+                    Artifacts = new Artifacts
+                    {
+                        Images = { "images1714b559", },
+                        Objects = new Artifacts.Types.ArtifactObjects
+                        {
+                            Location = "locatione09d18d5",
+                            Paths = { "paths012c8713", },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    QueueTtl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                    BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                TriggerTemplate = new RepoSource
+                {
+                    ProjectId = "project_id43ad98b0",
+                    RepoName = "repo_name75c5b2a0",
+                    BranchName = "branch_nameff6f8529",
+                    TagName = "tag_name7ecac3c4",
+                    CommitSha = "commit_sha0207033b",
+                    Dir = "dir83076073",
+                    InvertRegex = false,
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 Filename = "filenamee9d75e43",
                 Disabled = false,
                 Description = "description2cf9da67",
@@ -1055,7 +9520,26 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                         "value60c16320"
                     },
                 },
-                Github = new GitHubEventsConfig(),
+                Github = new GitHubEventsConfig
+                {
+#pragma warning disable CS0612
+                    InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                    PullRequest = new PullRequestFilter
+                    {
+                        Branch = "branch24a20396",
+                        CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                        InvertRegex = false,
+                    },
+                    Push = new PushFilter
+                    {
+                        Branch = "branch24a20396",
+                        Tag = "tag843ed2e4",
+                        InvertRegex = false,
+                    },
+                    Owner = "ownere92c1272",
+                    Name = "name1c9368b0",
+                },
                 IgnoredFiles =
                 {
                     "ignored_filesf5916206",
@@ -1083,14 +9567,708 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             {
                 ProjectId = "project_id43ad98b0",
                 TriggerId = "trigger_id9f1f0bb1",
-                Trigger = new BuildTrigger(),
+                Trigger = new BuildTrigger
+                {
+                    Id = "id74b70bb8",
+                    Build = new Build
+                    {
+                        Id = "id74b70bb8",
+                        Status = Build.Types.Status.InternalError,
+                        Source = new Source
+                        {
+                            StorageSource = new StorageSource
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                Generation = -8788800127544411748L,
+                            },
+                            RepoSource = new RepoSource
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                RepoName = "repo_name75c5b2a0",
+                                BranchName = "branch_nameff6f8529",
+                                TagName = "tag_name7ecac3c4",
+                                CommitSha = "commit_sha0207033b",
+                                Dir = "dir83076073",
+                                InvertRegex = false,
+                                Substitutions =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        FinishTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Results = new Results
+                        {
+                            Images =
+                            {
+                                new BuiltImage
+                                {
+                                    Name = "name1c9368b0",
+                                    Digest = "digest96770fc1",
+                                    PushTiming = new TimeSpan
+                                    {
+                                        StartTime = new wkt::Timestamp
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTime = new wkt::Timestamp
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                            BuildStepImages =
+                            {
+                                "build_step_imagesdaa7235b",
+                            },
+                            ArtifactManifest = "artifact_manifest14d2d7e3",
+                            NumArtifacts = 8832111714758501184L,
+                            BuildStepOutputs =
+                            {
+                                proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                            },
+                            ArtifactTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Steps =
+                        {
+                            new BuildStep
+                            {
+                                Name = "name1c9368b0",
+                                Env = { "env1d5a03ff", },
+                                Args = { "args09af56a9", },
+                                Dir = "dir83076073",
+                                Id = "id74b70bb8",
+                                WaitFor =
+                                {
+                                    "wait_for8cc937b4",
+                                },
+                                Entrypoint = "entrypoint53bbadee",
+                                SecretEnv =
+                                {
+                                    "secret_env6a25f329",
+                                },
+                                Volumes =
+                                {
+                                    new Volume
+                                    {
+                                        Name = "name1c9368b0",
+                                        Path = "path0b1dfed6",
+                                    },
+                                },
+                                Timing = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                Timeout = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                Status = Build.Types.Status.InternalError,
+                                PullTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        Timeout = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Images = { "images1714b559", },
+                        ProjectId = "project_id43ad98b0",
+                        LogsBucket = "logs_bucket85d3caaa",
+                        SourceProvenance = new SourceProvenance
+                        {
+                            ResolvedStorageSource = new StorageSource
+                            {
+                                Bucket = "bucket17d0bfc2",
+                                Object = "object63decfa8",
+                                Generation = -8788800127544411748L,
+                            },
+                            FileHashes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FileHashes
+                                    {
+                                        FileHash =
+                                        {
+                                            new Hash
+                                            {
+                                                Type = Hash.Types.HashType.None,
+                                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                            },
+                                        },
+                                    }
+                                },
+                            },
+                            ResolvedRepoSource = new RepoSource
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                RepoName = "repo_name75c5b2a0",
+                                BranchName = "branch_nameff6f8529",
+                                TagName = "tag_name7ecac3c4",
+                                CommitSha = "commit_sha0207033b",
+                                Dir = "dir83076073",
+                                InvertRegex = false,
+                                Substitutions =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        BuildTriggerId = "build_trigger_idbd29c2e8",
+                        Options = new BuildOptions
+                        {
+                            SourceProvenanceHash =
+                            {
+                                Hash.Types.HashType.Md5,
+                            },
+                            RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                            MachineType = BuildOptions.Types.MachineType.Unspecified,
+                            SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                            LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                            DiskSizeGb = 7103353205508136450L,
+                            WorkerPool = "worker_pool53f9ab42",
+                            Logging = BuildOptions.Types.LoggingMode.None,
+                            Env = { "env1d5a03ff", },
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            DynamicSubstitutions = true,
+                        },
+                        StatusDetail = "status_detail859ccc64",
+                        LogUrl = "log_url5edf0128",
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Tags = { "tags52c47ad5", },
+                        Secrets =
+                        {
+                            new Secret
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                                SecretEnv =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        proto::ByteString.CopyFromUtf8("value60c16320")
+                                    },
+                                },
+                            },
+                        },
+                        Timing =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                }
+                            },
+                        },
+                        Artifacts = new Artifacts
+                        {
+                            Images = { "images1714b559", },
+                            Objects = new Artifacts.Types.ArtifactObjects
+                            {
+                                Location = "locatione09d18d5",
+                                Paths = { "paths012c8713", },
+                                Timing = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        QueueTtl = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                        BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    TriggerTemplate = new RepoSource
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        RepoName = "repo_name75c5b2a0",
+                        BranchName = "branch_nameff6f8529",
+                        TagName = "tag_name7ecac3c4",
+                        CommitSha = "commit_sha0207033b",
+                        Dir = "dir83076073",
+                        InvertRegex = false,
+                        Substitutions =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    Filename = "filenamee9d75e43",
+                    Disabled = false,
+                    Description = "description2cf9da67",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Github = new GitHubEventsConfig
+                    {
+#pragma warning disable CS0612
+                        InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                        PullRequest = new PullRequestFilter
+                        {
+                            Branch = "branch24a20396",
+                            CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                            InvertRegex = false,
+                        },
+                        Push = new PushFilter
+                        {
+                            Branch = "branch24a20396",
+                            Tag = "tag843ed2e4",
+                            InvertRegex = false,
+                        },
+                        Owner = "ownere92c1272",
+                        Name = "name1c9368b0",
+                    },
+                    IgnoredFiles =
+                    {
+                        "ignored_filesf5916206",
+                    },
+                    IncludedFiles =
+                    {
+                        "included_files53b7943b",
+                    },
+                    Tags = { "tags52c47ad5", },
+                    BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                },
             };
             BuildTrigger expectedResponse = new BuildTrigger
             {
                 Id = "id74b70bb8",
-                Build = new Build(),
-                CreateTime = new wkt::Timestamp(),
-                TriggerTemplate = new RepoSource(),
+                Build = new Build
+                {
+                    Id = "id74b70bb8",
+                    Status = Build.Types.Status.InternalError,
+                    Source = new Source
+                    {
+                        StorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        RepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FinishTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Results = new Results
+                    {
+                        Images =
+                        {
+                            new BuiltImage
+                            {
+                                Name = "name1c9368b0",
+                                Digest = "digest96770fc1",
+                                PushTiming = new TimeSpan
+                                {
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                        },
+                        BuildStepImages =
+                        {
+                            "build_step_imagesdaa7235b",
+                        },
+                        ArtifactManifest = "artifact_manifest14d2d7e3",
+                        NumArtifacts = 8832111714758501184L,
+                        BuildStepOutputs =
+                        {
+                            proto::ByteString.CopyFromUtf8("build_step_outputs958b58dd"),
+                        },
+                        ArtifactTiming = new TimeSpan
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Steps =
+                    {
+                        new BuildStep
+                        {
+                            Name = "name1c9368b0",
+                            Env = { "env1d5a03ff", },
+                            Args = { "args09af56a9", },
+                            Dir = "dir83076073",
+                            Id = "id74b70bb8",
+                            WaitFor =
+                            {
+                                "wait_for8cc937b4",
+                            },
+                            Entrypoint = "entrypoint53bbadee",
+                            SecretEnv =
+                            {
+                                "secret_env6a25f329",
+                            },
+                            Volumes =
+                            {
+                                new Volume
+                                {
+                                    Name = "name1c9368b0",
+                                    Path = "path0b1dfed6",
+                                },
+                            },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                            Timeout = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Status = Build.Types.Status.InternalError,
+                            PullTiming = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    Timeout = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Images = { "images1714b559", },
+                    ProjectId = "project_id43ad98b0",
+                    LogsBucket = "logs_bucket85d3caaa",
+                    SourceProvenance = new SourceProvenance
+                    {
+                        ResolvedStorageSource = new StorageSource
+                        {
+                            Bucket = "bucket17d0bfc2",
+                            Object = "object63decfa8",
+                            Generation = -8788800127544411748L,
+                        },
+                        FileHashes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FileHashes
+                                {
+                                    FileHash =
+                                    {
+                                        new Hash
+                                        {
+                                            Type = Hash.Types.HashType.None,
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                        ResolvedRepoSource = new RepoSource
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            RepoName = "repo_name75c5b2a0",
+                            BranchName = "branch_nameff6f8529",
+                            TagName = "tag_name7ecac3c4",
+                            CommitSha = "commit_sha0207033b",
+                            Dir = "dir83076073",
+                            InvertRegex = false,
+                            Substitutions =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                    BuildTriggerId = "build_trigger_idbd29c2e8",
+                    Options = new BuildOptions
+                    {
+                        SourceProvenanceHash =
+                        {
+                            Hash.Types.HashType.Md5,
+                        },
+                        RequestedVerifyOption = BuildOptions.Types.VerifyOption.Verified,
+                        MachineType = BuildOptions.Types.MachineType.Unspecified,
+                        SubstitutionOption = BuildOptions.Types.SubstitutionOption.AllowLoose,
+                        LogStreamingOption = BuildOptions.Types.LogStreamingOption.StreamOn,
+                        DiskSizeGb = 7103353205508136450L,
+                        WorkerPool = "worker_pool53f9ab42",
+                        Logging = BuildOptions.Types.LoggingMode.None,
+                        Env = { "env1d5a03ff", },
+                        SecretEnv =
+                        {
+                            "secret_env6a25f329",
+                        },
+                        Volumes =
+                        {
+                            new Volume
+                            {
+                                Name = "name1c9368b0",
+                                Path = "path0b1dfed6",
+                            },
+                        },
+                        DynamicSubstitutions = true,
+                    },
+                    StatusDetail = "status_detail859ccc64",
+                    LogUrl = "log_url5edf0128",
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Tags = { "tags52c47ad5", },
+                    Secrets =
+                    {
+                        new Secret
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                            SecretEnv =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    proto::ByteString.CopyFromUtf8("value60c16320")
+                                },
+                            },
+                        },
+                    },
+                    Timing =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            }
+                        },
+                    },
+                    Artifacts = new Artifacts
+                    {
+                        Images = { "images1714b559", },
+                        Objects = new Artifacts.Types.ArtifactObjects
+                        {
+                            Location = "locatione09d18d5",
+                            Paths = { "paths012c8713", },
+                            Timing = new TimeSpan
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                    },
+                    QueueTtl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                    BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                TriggerTemplate = new RepoSource
+                {
+                    ProjectId = "project_id43ad98b0",
+                    RepoName = "repo_name75c5b2a0",
+                    BranchName = "branch_nameff6f8529",
+                    TagName = "tag_name7ecac3c4",
+                    CommitSha = "commit_sha0207033b",
+                    Dir = "dir83076073",
+                    InvertRegex = false,
+                    Substitutions =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 Filename = "filenamee9d75e43",
                 Disabled = false,
                 Description = "description2cf9da67",
@@ -1101,7 +10279,26 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                         "value60c16320"
                     },
                 },
-                Github = new GitHubEventsConfig(),
+                Github = new GitHubEventsConfig
+                {
+#pragma warning disable CS0612
+                    InstallationId = -9159788701425147870L,
+#pragma warning restore CS0612
+                    PullRequest = new PullRequestFilter
+                    {
+                        Branch = "branch24a20396",
+                        CommentControl = PullRequestFilter.Types.CommentControl.CommentsEnabled,
+                        InvertRegex = false,
+                    },
+                    Push = new PushFilter
+                    {
+                        Branch = "branch24a20396",
+                        Tag = "tag843ed2e4",
+                        InvertRegex = false,
+                    },
+                    Owner = "ownere92c1272",
+                    Name = "name1c9368b0",
+                },
                 IgnoredFiles =
                 {
                     "ignored_filesf5916206",
@@ -1130,7 +10327,45 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             CreateWorkerPoolRequest request = new CreateWorkerPoolRequest
             {
                 Parent = "parent7858e4d0",
-                WorkerPool = new WorkerPool(),
+                WorkerPool = new WorkerPool
+                {
+                    ProjectId = "project_id43ad98b0",
+                    ServiceAccountEmail = "service_account_emailb0c3703d",
+                    WorkerCount = -1903495562118123823L,
+                    Regions =
+                    {
+                        WorkerPool.Types.Region.UsEast1,
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeleteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Status = WorkerPool.Types.Status.Deleted,
+                    Name = "name1c9368b0",
+                    WorkerConfig = new WorkerConfig
+                    {
+                        MachineType = "machine_type68ce40fa",
+                        DiskSizeGb = 7103353205508136450L,
+                        Network = new Network
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            Network_ = "networkd22ce091",
+                            Subnetwork = "subnetworkf55bf572",
+                        },
+                        Tag = "tag843ed2e4",
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             WorkerPool expectedResponse = new WorkerPool
             {
@@ -1141,12 +10376,35 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     WorkerPool.Types.Region.UsEast1,
                 },
-                CreateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeleteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Status = WorkerPool.Types.Status.Deleted,
                 Name = "name1c9368b0",
-                WorkerConfig = new WorkerConfig(),
-                UpdateTime = new wkt::Timestamp(),
+                WorkerConfig = new WorkerConfig
+                {
+                    MachineType = "machine_type68ce40fa",
+                    DiskSizeGb = 7103353205508136450L,
+                    Network = new Network
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        Network_ = "networkd22ce091",
+                        Subnetwork = "subnetworkf55bf572",
+                    },
+                    Tag = "tag843ed2e4",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateWorkerPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1163,7 +10421,45 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             CreateWorkerPoolRequest request = new CreateWorkerPoolRequest
             {
                 Parent = "parent7858e4d0",
-                WorkerPool = new WorkerPool(),
+                WorkerPool = new WorkerPool
+                {
+                    ProjectId = "project_id43ad98b0",
+                    ServiceAccountEmail = "service_account_emailb0c3703d",
+                    WorkerCount = -1903495562118123823L,
+                    Regions =
+                    {
+                        WorkerPool.Types.Region.UsEast1,
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeleteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Status = WorkerPool.Types.Status.Deleted,
+                    Name = "name1c9368b0",
+                    WorkerConfig = new WorkerConfig
+                    {
+                        MachineType = "machine_type68ce40fa",
+                        DiskSizeGb = 7103353205508136450L,
+                        Network = new Network
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            Network_ = "networkd22ce091",
+                            Subnetwork = "subnetworkf55bf572",
+                        },
+                        Tag = "tag843ed2e4",
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             WorkerPool expectedResponse = new WorkerPool
             {
@@ -1174,12 +10470,35 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     WorkerPool.Types.Region.UsEast1,
                 },
-                CreateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeleteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Status = WorkerPool.Types.Status.Deleted,
                 Name = "name1c9368b0",
-                WorkerConfig = new WorkerConfig(),
-                UpdateTime = new wkt::Timestamp(),
+                WorkerConfig = new WorkerConfig
+                {
+                    MachineType = "machine_type68ce40fa",
+                    DiskSizeGb = 7103353205508136450L,
+                    Network = new Network
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        Network_ = "networkd22ce091",
+                        Subnetwork = "subnetworkf55bf572",
+                    },
+                    Tag = "tag843ed2e4",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateWorkerPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkerPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1208,12 +10527,35 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     WorkerPool.Types.Region.UsEast1,
                 },
-                CreateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeleteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Status = WorkerPool.Types.Status.Deleted,
                 Name = "name1c9368b0",
-                WorkerConfig = new WorkerConfig(),
-                UpdateTime = new wkt::Timestamp(),
+                WorkerConfig = new WorkerConfig
+                {
+                    MachineType = "machine_type68ce40fa",
+                    DiskSizeGb = 7103353205508136450L,
+                    Network = new Network
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        Network_ = "networkd22ce091",
+                        Subnetwork = "subnetworkf55bf572",
+                    },
+                    Tag = "tag843ed2e4",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetWorkerPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1240,12 +10582,35 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     WorkerPool.Types.Region.UsEast1,
                 },
-                CreateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeleteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Status = WorkerPool.Types.Status.Deleted,
                 Name = "name1c9368b0",
-                WorkerConfig = new WorkerConfig(),
-                UpdateTime = new wkt::Timestamp(),
+                WorkerConfig = new WorkerConfig
+                {
+                    MachineType = "machine_type68ce40fa",
+                    DiskSizeGb = 7103353205508136450L,
+                    Network = new Network
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        Network_ = "networkd22ce091",
+                        Subnetwork = "subnetworkf55bf572",
+                    },
+                    Tag = "tag843ed2e4",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetWorkerPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkerPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1297,7 +10662,45 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             UpdateWorkerPoolRequest request = new UpdateWorkerPoolRequest
             {
                 Name = "name1c9368b0",
-                WorkerPool = new WorkerPool(),
+                WorkerPool = new WorkerPool
+                {
+                    ProjectId = "project_id43ad98b0",
+                    ServiceAccountEmail = "service_account_emailb0c3703d",
+                    WorkerCount = -1903495562118123823L,
+                    Regions =
+                    {
+                        WorkerPool.Types.Region.UsEast1,
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeleteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Status = WorkerPool.Types.Status.Deleted,
+                    Name = "name1c9368b0",
+                    WorkerConfig = new WorkerConfig
+                    {
+                        MachineType = "machine_type68ce40fa",
+                        DiskSizeGb = 7103353205508136450L,
+                        Network = new Network
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            Network_ = "networkd22ce091",
+                            Subnetwork = "subnetworkf55bf572",
+                        },
+                        Tag = "tag843ed2e4",
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             WorkerPool expectedResponse = new WorkerPool
             {
@@ -1308,12 +10711,35 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     WorkerPool.Types.Region.UsEast1,
                 },
-                CreateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeleteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Status = WorkerPool.Types.Status.Deleted,
                 Name = "name1c9368b0",
-                WorkerConfig = new WorkerConfig(),
-                UpdateTime = new wkt::Timestamp(),
+                WorkerConfig = new WorkerConfig
+                {
+                    MachineType = "machine_type68ce40fa",
+                    DiskSizeGb = 7103353205508136450L,
+                    Network = new Network
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        Network_ = "networkd22ce091",
+                        Subnetwork = "subnetworkf55bf572",
+                    },
+                    Tag = "tag843ed2e4",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateWorkerPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1330,7 +10756,45 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             UpdateWorkerPoolRequest request = new UpdateWorkerPoolRequest
             {
                 Name = "name1c9368b0",
-                WorkerPool = new WorkerPool(),
+                WorkerPool = new WorkerPool
+                {
+                    ProjectId = "project_id43ad98b0",
+                    ServiceAccountEmail = "service_account_emailb0c3703d",
+                    WorkerCount = -1903495562118123823L,
+                    Regions =
+                    {
+                        WorkerPool.Types.Region.UsEast1,
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeleteTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Status = WorkerPool.Types.Status.Deleted,
+                    Name = "name1c9368b0",
+                    WorkerConfig = new WorkerConfig
+                    {
+                        MachineType = "machine_type68ce40fa",
+                        DiskSizeGb = 7103353205508136450L,
+                        Network = new Network
+                        {
+                            ProjectId = "project_id43ad98b0",
+                            Network_ = "networkd22ce091",
+                            Subnetwork = "subnetworkf55bf572",
+                        },
+                        Tag = "tag843ed2e4",
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             WorkerPool expectedResponse = new WorkerPool
             {
@@ -1341,12 +10805,35 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 {
                     WorkerPool.Types.Region.UsEast1,
                 },
-                CreateTime = new wkt::Timestamp(),
-                DeleteTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeleteTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Status = WorkerPool.Types.Status.Deleted,
                 Name = "name1c9368b0",
-                WorkerConfig = new WorkerConfig(),
-                UpdateTime = new wkt::Timestamp(),
+                WorkerConfig = new WorkerConfig
+                {
+                    MachineType = "machine_type68ce40fa",
+                    DiskSizeGb = 7103353205508136450L,
+                    Network = new Network
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        Network_ = "networkd22ce091",
+                        Subnetwork = "subnetworkf55bf572",
+                    },
+                    Tag = "tag843ed2e4",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateWorkerPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkerPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1368,7 +10855,48 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             };
             ListWorkerPoolsResponse expectedResponse = new ListWorkerPoolsResponse
             {
-                WorkerPools = { new WorkerPool(), },
+                WorkerPools =
+                {
+                    new WorkerPool
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        WorkerCount = -1903495562118123823L,
+                        Regions =
+                        {
+                            WorkerPool.Types.Region.UsEast1,
+                        },
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeleteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Status = WorkerPool.Types.Status.Deleted,
+                        Name = "name1c9368b0",
+                        WorkerConfig = new WorkerConfig
+                        {
+                            MachineType = "machine_type68ce40fa",
+                            DiskSizeGb = 7103353205508136450L,
+                            Network = new Network
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                Network_ = "networkd22ce091",
+                                Subnetwork = "subnetworkf55bf572",
+                            },
+                            Tag = "tag843ed2e4",
+                        },
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListWorkerPools(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1388,7 +10916,48 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             };
             ListWorkerPoolsResponse expectedResponse = new ListWorkerPoolsResponse
             {
-                WorkerPools = { new WorkerPool(), },
+                WorkerPools =
+                {
+                    new WorkerPool
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        WorkerCount = -1903495562118123823L,
+                        Regions =
+                        {
+                            WorkerPool.Types.Region.UsEast1,
+                        },
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeleteTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Status = WorkerPool.Types.Status.Deleted,
+                        Name = "name1c9368b0",
+                        WorkerConfig = new WorkerConfig
+                        {
+                            MachineType = "machine_type68ce40fa",
+                            DiskSizeGb = 7103353205508136450L,
+                            Network = new Network
+                            {
+                                ProjectId = "project_id43ad98b0",
+                                Network_ = "networkd22ce091",
+                                Subnetwork = "subnetworkf55bf572",
+                            },
+                            Tag = "tag843ed2e4",
+                        },
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListWorkerPoolsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListWorkerPoolsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
