@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using gr = Google.Rpc;
 using grpccore = Grpc.Core;
@@ -37,7 +38,12 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ReservationId = "reservation_id4ff109fe",
-                Reservation = new Reservation(),
+                Reservation = new Reservation
+                {
+                    ReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
+                    SlotCapacity = 6702076284109415515L,
+                    IgnoreIdleSlots = true,
+                },
             };
             Reservation expectedResponse = new Reservation
             {
@@ -60,7 +66,12 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ReservationId = "reservation_id4ff109fe",
-                Reservation = new Reservation(),
+                Reservation = new Reservation
+                {
+                    ReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
+                    SlotCapacity = 6702076284109415515L,
+                    IgnoreIdleSlots = true,
+                },
             };
             Reservation expectedResponse = new Reservation
             {
@@ -85,7 +96,12 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ReservationId = "reservation_id4ff109fe",
-                Reservation = new Reservation(),
+                Reservation = new Reservation
+                {
+                    ReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
+                    SlotCapacity = 6702076284109415515L,
+                    IgnoreIdleSlots = true,
+                },
             };
             Reservation expectedResponse = new Reservation
             {
@@ -108,7 +124,12 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ReservationId = "reservation_id4ff109fe",
-                Reservation = new Reservation(),
+                Reservation = new Reservation
+                {
+                    ReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
+                    SlotCapacity = 6702076284109415515L,
+                    IgnoreIdleSlots = true,
+                },
             };
             Reservation expectedResponse = new Reservation
             {
@@ -133,7 +154,12 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ReservationId = "reservation_id4ff109fe",
-                Reservation = new Reservation(),
+                Reservation = new Reservation
+                {
+                    ReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
+                    SlotCapacity = 6702076284109415515L,
+                    IgnoreIdleSlots = true,
+                },
             };
             Reservation expectedResponse = new Reservation
             {
@@ -156,7 +182,12 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ReservationId = "reservation_id4ff109fe",
-                Reservation = new Reservation(),
+                Reservation = new Reservation
+                {
+                    ReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
+                    SlotCapacity = 6702076284109415515L,
+                    IgnoreIdleSlots = true,
+                },
             };
             Reservation expectedResponse = new Reservation
             {
@@ -404,8 +435,16 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
             UpdateReservationRequest request = new UpdateReservationRequest
             {
-                Reservation = new Reservation(),
-                UpdateMask = new wkt::FieldMask(),
+                Reservation = new Reservation
+                {
+                    ReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
+                    SlotCapacity = 6702076284109415515L,
+                    IgnoreIdleSlots = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Reservation expectedResponse = new Reservation
             {
@@ -426,8 +465,16 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
             UpdateReservationRequest request = new UpdateReservationRequest
             {
-                Reservation = new Reservation(),
-                UpdateMask = new wkt::FieldMask(),
+                Reservation = new Reservation
+                {
+                    ReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
+                    SlotCapacity = 6702076284109415515L,
+                    IgnoreIdleSlots = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Reservation expectedResponse = new Reservation
             {
@@ -450,8 +497,16 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
             UpdateReservationRequest request = new UpdateReservationRequest
             {
-                Reservation = new Reservation(),
-                UpdateMask = new wkt::FieldMask(),
+                Reservation = new Reservation
+                {
+                    ReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
+                    SlotCapacity = 6702076284109415515L,
+                    IgnoreIdleSlots = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Reservation expectedResponse = new Reservation
             {
@@ -472,8 +527,16 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
             UpdateReservationRequest request = new UpdateReservationRequest
             {
-                Reservation = new Reservation(),
-                UpdateMask = new wkt::FieldMask(),
+                Reservation = new Reservation
+                {
+                    ReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
+                    SlotCapacity = 6702076284109415515L,
+                    IgnoreIdleSlots = true,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Reservation expectedResponse = new Reservation
             {
@@ -497,7 +560,32 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             CreateCapacityCommitmentRequest request = new CreateCapacityCommitmentRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                CapacityCommitment = new CapacityCommitment(),
+                CapacityCommitment = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
                 EnforceSingleAdminProjectPerOrg = false,
             };
             CapacityCommitment expectedResponse = new CapacityCommitment
@@ -506,8 +594,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.CreateCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -524,7 +628,32 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             CreateCapacityCommitmentRequest request = new CreateCapacityCommitmentRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                CapacityCommitment = new CapacityCommitment(),
+                CapacityCommitment = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
                 EnforceSingleAdminProjectPerOrg = false,
             };
             CapacityCommitment expectedResponse = new CapacityCommitment
@@ -533,8 +662,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.CreateCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -553,7 +698,32 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             CreateCapacityCommitmentRequest request = new CreateCapacityCommitmentRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                CapacityCommitment = new CapacityCommitment(),
+                CapacityCommitment = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
             };
             CapacityCommitment expectedResponse = new CapacityCommitment
             {
@@ -561,8 +731,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.CreateCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -579,7 +765,32 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             CreateCapacityCommitmentRequest request = new CreateCapacityCommitmentRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                CapacityCommitment = new CapacityCommitment(),
+                CapacityCommitment = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
             };
             CapacityCommitment expectedResponse = new CapacityCommitment
             {
@@ -587,8 +798,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.CreateCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -607,7 +834,32 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             CreateCapacityCommitmentRequest request = new CreateCapacityCommitmentRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                CapacityCommitment = new CapacityCommitment(),
+                CapacityCommitment = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
             };
             CapacityCommitment expectedResponse = new CapacityCommitment
             {
@@ -615,8 +867,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.CreateCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -633,7 +901,32 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             CreateCapacityCommitmentRequest request = new CreateCapacityCommitmentRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                CapacityCommitment = new CapacityCommitment(),
+                CapacityCommitment = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
             };
             CapacityCommitment expectedResponse = new CapacityCommitment
             {
@@ -641,8 +934,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.CreateCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -668,8 +977,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.GetCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -693,8 +1018,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.GetCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -720,8 +1061,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.GetCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -745,8 +1102,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.GetCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -772,8 +1145,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.GetCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -797,8 +1186,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.GetCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -909,8 +1314,36 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
             UpdateCapacityCommitmentRequest request = new UpdateCapacityCommitmentRequest
             {
-                CapacityCommitment = new CapacityCommitment(),
-                UpdateMask = new wkt::FieldMask(),
+                CapacityCommitment = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CapacityCommitment expectedResponse = new CapacityCommitment
             {
@@ -918,8 +1351,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.UpdateCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -935,8 +1384,36 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
             UpdateCapacityCommitmentRequest request = new UpdateCapacityCommitmentRequest
             {
-                CapacityCommitment = new CapacityCommitment(),
-                UpdateMask = new wkt::FieldMask(),
+                CapacityCommitment = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CapacityCommitment expectedResponse = new CapacityCommitment
             {
@@ -944,8 +1421,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.UpdateCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -963,8 +1456,36 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
             UpdateCapacityCommitmentRequest request = new UpdateCapacityCommitmentRequest
             {
-                CapacityCommitment = new CapacityCommitment(),
-                UpdateMask = new wkt::FieldMask(),
+                CapacityCommitment = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CapacityCommitment expectedResponse = new CapacityCommitment
             {
@@ -972,8 +1493,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.UpdateCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -989,8 +1526,36 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
             UpdateCapacityCommitmentRequest request = new UpdateCapacityCommitmentRequest
             {
-                CapacityCommitment = new CapacityCommitment(),
-                UpdateMask = new wkt::FieldMask(),
+                CapacityCommitment = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CapacityCommitment expectedResponse = new CapacityCommitment
             {
@@ -998,8 +1563,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.UpdateCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1022,8 +1603,58 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             };
             SplitCapacityCommitmentResponse expectedResponse = new SplitCapacityCommitmentResponse
             {
-                First = new CapacityCommitment(),
-                Second = new CapacityCommitment(),
+                First = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
+                Second = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
             };
             mockGrpcClient.Setup(x => x.SplitCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1043,8 +1674,58 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             };
             SplitCapacityCommitmentResponse expectedResponse = new SplitCapacityCommitmentResponse
             {
-                First = new CapacityCommitment(),
-                Second = new CapacityCommitment(),
+                First = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
+                Second = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
             };
             mockGrpcClient.Setup(x => x.SplitCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SplitCapacityCommitmentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1066,8 +1747,58 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             };
             SplitCapacityCommitmentResponse expectedResponse = new SplitCapacityCommitmentResponse
             {
-                First = new CapacityCommitment(),
-                Second = new CapacityCommitment(),
+                First = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
+                Second = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
             };
             mockGrpcClient.Setup(x => x.SplitCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1087,8 +1818,58 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             };
             SplitCapacityCommitmentResponse expectedResponse = new SplitCapacityCommitmentResponse
             {
-                First = new CapacityCommitment(),
-                Second = new CapacityCommitment(),
+                First = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
+                Second = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
             };
             mockGrpcClient.Setup(x => x.SplitCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SplitCapacityCommitmentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1110,8 +1891,58 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             };
             SplitCapacityCommitmentResponse expectedResponse = new SplitCapacityCommitmentResponse
             {
-                First = new CapacityCommitment(),
-                Second = new CapacityCommitment(),
+                First = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
+                Second = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
             };
             mockGrpcClient.Setup(x => x.SplitCapacityCommitment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1131,8 +1962,58 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             };
             SplitCapacityCommitmentResponse expectedResponse = new SplitCapacityCommitmentResponse
             {
-                First = new CapacityCommitment(),
-                Second = new CapacityCommitment(),
+                First = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
+                Second = new CapacityCommitment
+                {
+                    CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                    SlotCount = -8848908602751739335L,
+                    Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                    State = CapacityCommitment.Types.State.Active,
+                    CommitmentEndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    FailureStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
+                },
             };
             mockGrpcClient.Setup(x => x.SplitCapacityCommitmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SplitCapacityCommitmentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ReservationServiceClient client = new ReservationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1161,8 +2042,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.MergeCapacityCommitments(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1190,8 +2087,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.MergeCapacityCommitmentsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1221,8 +2134,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.MergeCapacityCommitments(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1250,8 +2179,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.MergeCapacityCommitmentsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1281,8 +2226,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.MergeCapacityCommitments(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1310,8 +2271,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
                 SlotCount = -8848908602751739335L,
                 Plan = CapacityCommitment.Types.CommitmentPlan.Trial,
                 State = CapacityCommitment.Types.State.Active,
-                CommitmentEndTime = new wkt::Timestamp(),
-                FailureStatus = new gr::Status(),
+                CommitmentEndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                FailureStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 RenewalPlan = CapacityCommitment.Types.CommitmentPlan.Trial,
             };
             mockGrpcClient.Setup(x => x.MergeCapacityCommitmentsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CapacityCommitment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1330,7 +2307,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             CreateAssignmentRequest request = new CreateAssignmentRequest
             {
                 ParentAsReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
-                Assignment = new Assignment(),
+                Assignment = new Assignment
+                {
+                    AssignmentName = AssignmentName.FromProjectLocationReservationAssignment("[PROJECT]", "[LOCATION]", "[RESERVATION]", "[ASSIGNMENT]"),
+                    JobType = Assignment.Types.JobType.Pipeline,
+                    Assignee = "assignee3de7fd68",
+                    State = Assignment.Types.State.Unspecified,
+                },
             };
             Assignment expectedResponse = new Assignment
             {
@@ -1353,7 +2336,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             CreateAssignmentRequest request = new CreateAssignmentRequest
             {
                 ParentAsReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
-                Assignment = new Assignment(),
+                Assignment = new Assignment
+                {
+                    AssignmentName = AssignmentName.FromProjectLocationReservationAssignment("[PROJECT]", "[LOCATION]", "[RESERVATION]", "[ASSIGNMENT]"),
+                    JobType = Assignment.Types.JobType.Pipeline,
+                    Assignee = "assignee3de7fd68",
+                    State = Assignment.Types.State.Unspecified,
+                },
             };
             Assignment expectedResponse = new Assignment
             {
@@ -1378,7 +2367,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             CreateAssignmentRequest request = new CreateAssignmentRequest
             {
                 ParentAsReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
-                Assignment = new Assignment(),
+                Assignment = new Assignment
+                {
+                    AssignmentName = AssignmentName.FromProjectLocationReservationAssignment("[PROJECT]", "[LOCATION]", "[RESERVATION]", "[ASSIGNMENT]"),
+                    JobType = Assignment.Types.JobType.Pipeline,
+                    Assignee = "assignee3de7fd68",
+                    State = Assignment.Types.State.Unspecified,
+                },
             };
             Assignment expectedResponse = new Assignment
             {
@@ -1401,7 +2396,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             CreateAssignmentRequest request = new CreateAssignmentRequest
             {
                 ParentAsReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
-                Assignment = new Assignment(),
+                Assignment = new Assignment
+                {
+                    AssignmentName = AssignmentName.FromProjectLocationReservationAssignment("[PROJECT]", "[LOCATION]", "[RESERVATION]", "[ASSIGNMENT]"),
+                    JobType = Assignment.Types.JobType.Pipeline,
+                    Assignee = "assignee3de7fd68",
+                    State = Assignment.Types.State.Unspecified,
+                },
             };
             Assignment expectedResponse = new Assignment
             {
@@ -1426,7 +2427,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             CreateAssignmentRequest request = new CreateAssignmentRequest
             {
                 ParentAsReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
-                Assignment = new Assignment(),
+                Assignment = new Assignment
+                {
+                    AssignmentName = AssignmentName.FromProjectLocationReservationAssignment("[PROJECT]", "[LOCATION]", "[RESERVATION]", "[ASSIGNMENT]"),
+                    JobType = Assignment.Types.JobType.Pipeline,
+                    Assignee = "assignee3de7fd68",
+                    State = Assignment.Types.State.Unspecified,
+                },
             };
             Assignment expectedResponse = new Assignment
             {
@@ -1449,7 +2456,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             CreateAssignmentRequest request = new CreateAssignmentRequest
             {
                 ParentAsReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
-                Assignment = new Assignment(),
+                Assignment = new Assignment
+                {
+                    AssignmentName = AssignmentName.FromProjectLocationReservationAssignment("[PROJECT]", "[LOCATION]", "[RESERVATION]", "[ASSIGNMENT]"),
+                    JobType = Assignment.Types.JobType.Pipeline,
+                    Assignee = "assignee3de7fd68",
+                    State = Assignment.Types.State.Unspecified,
+                },
             };
             Assignment expectedResponse = new Assignment
             {
@@ -1715,7 +2728,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             BiReservation expectedResponse = new BiReservation
             {
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Size = -7217254403942597129L,
             };
             mockGrpcClient.Setup(x => x.GetBiReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1736,7 +2753,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             BiReservation expectedResponse = new BiReservation
             {
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Size = -7217254403942597129L,
             };
             mockGrpcClient.Setup(x => x.GetBiReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BiReservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1759,7 +2780,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             BiReservation expectedResponse = new BiReservation
             {
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Size = -7217254403942597129L,
             };
             mockGrpcClient.Setup(x => x.GetBiReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1780,7 +2805,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             BiReservation expectedResponse = new BiReservation
             {
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Size = -7217254403942597129L,
             };
             mockGrpcClient.Setup(x => x.GetBiReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BiReservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1803,7 +2832,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             BiReservation expectedResponse = new BiReservation
             {
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Size = -7217254403942597129L,
             };
             mockGrpcClient.Setup(x => x.GetBiReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1824,7 +2857,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             BiReservation expectedResponse = new BiReservation
             {
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Size = -7217254403942597129L,
             };
             mockGrpcClient.Setup(x => x.GetBiReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BiReservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1842,13 +2879,29 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
             UpdateBiReservationRequest request = new UpdateBiReservationRequest
             {
-                BiReservation = new BiReservation(),
-                UpdateMask = new wkt::FieldMask(),
+                BiReservation = new BiReservation
+                {
+                    BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Size = -7217254403942597129L,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             BiReservation expectedResponse = new BiReservation
             {
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Size = -7217254403942597129L,
             };
             mockGrpcClient.Setup(x => x.UpdateBiReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1864,13 +2917,29 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
             UpdateBiReservationRequest request = new UpdateBiReservationRequest
             {
-                BiReservation = new BiReservation(),
-                UpdateMask = new wkt::FieldMask(),
+                BiReservation = new BiReservation
+                {
+                    BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Size = -7217254403942597129L,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             BiReservation expectedResponse = new BiReservation
             {
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Size = -7217254403942597129L,
             };
             mockGrpcClient.Setup(x => x.UpdateBiReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BiReservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1888,13 +2957,29 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
             UpdateBiReservationRequest request = new UpdateBiReservationRequest
             {
-                BiReservation = new BiReservation(),
-                UpdateMask = new wkt::FieldMask(),
+                BiReservation = new BiReservation
+                {
+                    BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Size = -7217254403942597129L,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             BiReservation expectedResponse = new BiReservation
             {
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Size = -7217254403942597129L,
             };
             mockGrpcClient.Setup(x => x.UpdateBiReservation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1910,13 +2995,29 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Tests
             moq::Mock<ReservationService.ReservationServiceClient> mockGrpcClient = new moq::Mock<ReservationService.ReservationServiceClient>(moq::MockBehavior.Strict);
             UpdateBiReservationRequest request = new UpdateBiReservationRequest
             {
-                BiReservation = new BiReservation(),
-                UpdateMask = new wkt::FieldMask(),
+                BiReservation = new BiReservation
+                {
+                    BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Size = -7217254403942597129L,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             BiReservation expectedResponse = new BiReservation
             {
                 BiReservationName = BiReservationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Size = -7217254403942597129L,
             };
             mockGrpcClient.Setup(x => x.UpdateBiReservationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BiReservation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
