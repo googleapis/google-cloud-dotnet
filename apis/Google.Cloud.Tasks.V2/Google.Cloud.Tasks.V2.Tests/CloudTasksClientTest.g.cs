@@ -20,6 +20,8 @@ using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gr = Google.Rpc;
+using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -42,12 +44,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.GetQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -67,12 +106,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.GetQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -94,12 +170,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.GetQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -119,12 +232,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.GetQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -146,12 +296,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.GetQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -171,12 +358,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.GetQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -194,17 +418,100 @@ namespace Google.Cloud.Tasks.V2.Tests
             CreateQueueRequest request = new CreateQueueRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Queue = new Queue(),
+                Queue = new Queue
+                {
+                    QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                    AppEngineRoutingOverride = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RateLimits = new RateLimits
+                    {
+                        MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                        MaxBurstSize = -392517653,
+                        MaxConcurrentDispatches = 1055474748,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        MaxAttempts = 773154519,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    State = Queue.Types.State.Paused,
+                    PurgeTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StackdriverLoggingConfig = new StackdriverLoggingConfig
+                    {
+                        SamplingRatio = -4.970885912593337E+17,
+                    },
+                },
             };
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -220,17 +527,100 @@ namespace Google.Cloud.Tasks.V2.Tests
             CreateQueueRequest request = new CreateQueueRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Queue = new Queue(),
+                Queue = new Queue
+                {
+                    QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                    AppEngineRoutingOverride = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RateLimits = new RateLimits
+                    {
+                        MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                        MaxBurstSize = -392517653,
+                        MaxConcurrentDispatches = 1055474748,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        MaxAttempts = 773154519,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    State = Queue.Types.State.Paused,
+                    PurgeTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StackdriverLoggingConfig = new StackdriverLoggingConfig
+                    {
+                        SamplingRatio = -4.970885912593337E+17,
+                    },
+                },
             };
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -248,17 +638,100 @@ namespace Google.Cloud.Tasks.V2.Tests
             CreateQueueRequest request = new CreateQueueRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Queue = new Queue(),
+                Queue = new Queue
+                {
+                    QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                    AppEngineRoutingOverride = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RateLimits = new RateLimits
+                    {
+                        MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                        MaxBurstSize = -392517653,
+                        MaxConcurrentDispatches = 1055474748,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        MaxAttempts = 773154519,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    State = Queue.Types.State.Paused,
+                    PurgeTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StackdriverLoggingConfig = new StackdriverLoggingConfig
+                    {
+                        SamplingRatio = -4.970885912593337E+17,
+                    },
+                },
             };
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -274,17 +747,100 @@ namespace Google.Cloud.Tasks.V2.Tests
             CreateQueueRequest request = new CreateQueueRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Queue = new Queue(),
+                Queue = new Queue
+                {
+                    QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                    AppEngineRoutingOverride = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RateLimits = new RateLimits
+                    {
+                        MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                        MaxBurstSize = -392517653,
+                        MaxConcurrentDispatches = 1055474748,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        MaxAttempts = 773154519,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    State = Queue.Types.State.Paused,
+                    PurgeTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StackdriverLoggingConfig = new StackdriverLoggingConfig
+                    {
+                        SamplingRatio = -4.970885912593337E+17,
+                    },
+                },
             };
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -302,17 +858,100 @@ namespace Google.Cloud.Tasks.V2.Tests
             CreateQueueRequest request = new CreateQueueRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Queue = new Queue(),
+                Queue = new Queue
+                {
+                    QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                    AppEngineRoutingOverride = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RateLimits = new RateLimits
+                    {
+                        MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                        MaxBurstSize = -392517653,
+                        MaxConcurrentDispatches = 1055474748,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        MaxAttempts = 773154519,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    State = Queue.Types.State.Paused,
+                    PurgeTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StackdriverLoggingConfig = new StackdriverLoggingConfig
+                    {
+                        SamplingRatio = -4.970885912593337E+17,
+                    },
+                },
             };
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -328,17 +967,100 @@ namespace Google.Cloud.Tasks.V2.Tests
             CreateQueueRequest request = new CreateQueueRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Queue = new Queue(),
+                Queue = new Queue
+                {
+                    QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                    AppEngineRoutingOverride = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RateLimits = new RateLimits
+                    {
+                        MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                        MaxBurstSize = -392517653,
+                        MaxConcurrentDispatches = 1055474748,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        MaxAttempts = 773154519,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    State = Queue.Types.State.Paused,
+                    PurgeTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StackdriverLoggingConfig = new StackdriverLoggingConfig
+                    {
+                        SamplingRatio = -4.970885912593337E+17,
+                    },
+                },
             };
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -355,18 +1077,104 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             UpdateQueueRequest request = new UpdateQueueRequest
             {
-                Queue = new Queue(),
-                UpdateMask = new wkt::FieldMask(),
+                Queue = new Queue
+                {
+                    QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                    AppEngineRoutingOverride = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RateLimits = new RateLimits
+                    {
+                        MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                        MaxBurstSize = -392517653,
+                        MaxConcurrentDispatches = 1055474748,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        MaxAttempts = 773154519,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    State = Queue.Types.State.Paused,
+                    PurgeTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StackdriverLoggingConfig = new StackdriverLoggingConfig
+                    {
+                        SamplingRatio = -4.970885912593337E+17,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -381,18 +1189,104 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             UpdateQueueRequest request = new UpdateQueueRequest
             {
-                Queue = new Queue(),
-                UpdateMask = new wkt::FieldMask(),
+                Queue = new Queue
+                {
+                    QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                    AppEngineRoutingOverride = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RateLimits = new RateLimits
+                    {
+                        MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                        MaxBurstSize = -392517653,
+                        MaxConcurrentDispatches = 1055474748,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        MaxAttempts = 773154519,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    State = Queue.Types.State.Paused,
+                    PurgeTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StackdriverLoggingConfig = new StackdriverLoggingConfig
+                    {
+                        SamplingRatio = -4.970885912593337E+17,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -409,18 +1303,104 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             UpdateQueueRequest request = new UpdateQueueRequest
             {
-                Queue = new Queue(),
-                UpdateMask = new wkt::FieldMask(),
+                Queue = new Queue
+                {
+                    QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                    AppEngineRoutingOverride = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RateLimits = new RateLimits
+                    {
+                        MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                        MaxBurstSize = -392517653,
+                        MaxConcurrentDispatches = 1055474748,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        MaxAttempts = 773154519,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    State = Queue.Types.State.Paused,
+                    PurgeTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StackdriverLoggingConfig = new StackdriverLoggingConfig
+                    {
+                        SamplingRatio = -4.970885912593337E+17,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -435,18 +1415,104 @@ namespace Google.Cloud.Tasks.V2.Tests
             moq::Mock<CloudTasks.CloudTasksClient> mockGrpcClient = new moq::Mock<CloudTasks.CloudTasksClient>(moq::MockBehavior.Strict);
             UpdateQueueRequest request = new UpdateQueueRequest
             {
-                Queue = new Queue(),
-                UpdateMask = new wkt::FieldMask(),
+                Queue = new Queue
+                {
+                    QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                    AppEngineRoutingOverride = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RateLimits = new RateLimits
+                    {
+                        MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                        MaxBurstSize = -392517653,
+                        MaxConcurrentDispatches = 1055474748,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        MaxAttempts = 773154519,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    State = Queue.Types.State.Paused,
+                    PurgeTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StackdriverLoggingConfig = new StackdriverLoggingConfig
+                    {
+                        SamplingRatio = -4.970885912593337E+17,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -561,12 +1627,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.PurgeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -586,12 +1689,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.PurgeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -613,12 +1753,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.PurgeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -638,12 +1815,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.PurgeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -665,12 +1879,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.PurgeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -690,12 +1941,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.PurgeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -717,12 +2005,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.PauseQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -742,12 +2067,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.PauseQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -769,12 +2131,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.PauseQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -794,12 +2193,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.PauseQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -821,12 +2257,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.PauseQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -846,12 +2319,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.PauseQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -873,12 +2383,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.ResumeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -898,12 +2445,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.ResumeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -925,12 +2509,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.ResumeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -950,12 +2571,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.ResumeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -977,12 +2635,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.ResumeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -1002,12 +2697,49 @@ namespace Google.Cloud.Tasks.V2.Tests
             Queue expectedResponse = new Queue
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                AppEngineRoutingOverride = new AppEngineRouting(),
-                RateLimits = new RateLimits(),
-                RetryConfig = new RetryConfig(),
+                AppEngineRoutingOverride = new AppEngineRouting
+                {
+                    Service = "serviced3f0abaa",
+                    Version = "version102ff72a",
+                    Instance = "instance99a62371",
+                    Host = "hosta8dbb367",
+                },
+                RateLimits = new RateLimits
+                {
+                    MaxDispatchesPerSecond = -1.3413182376911498E+17,
+                    MaxBurstSize = -392517653,
+                    MaxConcurrentDispatches = 1055474748,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    MaxAttempts = 773154519,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 State = Queue.Types.State.Paused,
-                PurgeTime = new wkt::Timestamp(),
-                StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                PurgeTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StackdriverLoggingConfig = new StackdriverLoggingConfig
+                {
+                    SamplingRatio = -4.970885912593337E+17,
+                },
             };
             mockGrpcClient.Setup(x => x.ResumeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -1025,7 +2757,10 @@ namespace Google.Cloud.Tasks.V2.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1033,7 +2768,18 @@ namespace Google.Cloud.Tasks.V2.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1050,7 +2796,10 @@ namespace Google.Cloud.Tasks.V2.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1058,7 +2807,18 @@ namespace Google.Cloud.Tasks.V2.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1084,7 +2844,18 @@ namespace Google.Cloud.Tasks.V2.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1108,7 +2879,18 @@ namespace Google.Cloud.Tasks.V2.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1134,7 +2916,18 @@ namespace Google.Cloud.Tasks.V2.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1158,7 +2951,18 @@ namespace Google.Cloud.Tasks.V2.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1177,7 +2981,26 @@ namespace Google.Cloud.Tasks.V2.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1185,7 +3008,18 @@ namespace Google.Cloud.Tasks.V2.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1202,7 +3036,26 @@ namespace Google.Cloud.Tasks.V2.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1210,7 +3063,18 @@ namespace Google.Cloud.Tasks.V2.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1229,7 +3093,26 @@ namespace Google.Cloud.Tasks.V2.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1237,7 +3120,18 @@ namespace Google.Cloud.Tasks.V2.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1254,7 +3148,26 @@ namespace Google.Cloud.Tasks.V2.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1262,7 +3175,18 @@ namespace Google.Cloud.Tasks.V2.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1281,7 +3205,26 @@ namespace Google.Cloud.Tasks.V2.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1289,7 +3232,18 @@ namespace Google.Cloud.Tasks.V2.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1306,7 +3260,26 @@ namespace Google.Cloud.Tasks.V2.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1314,7 +3287,18 @@ namespace Google.Cloud.Tasks.V2.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1500,15 +3484,128 @@ namespace Google.Cloud.Tasks.V2.Tests
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1530,15 +3627,128 @@ namespace Google.Cloud.Tasks.V2.Tests
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1561,15 +3771,128 @@ namespace Google.Cloud.Tasks.V2.Tests
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1590,15 +3913,128 @@ namespace Google.Cloud.Tasks.V2.Tests
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1621,15 +4057,128 @@ namespace Google.Cloud.Tasks.V2.Tests
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.GetTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1650,15 +4199,128 @@ namespace Google.Cloud.Tasks.V2.Tests
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.GetTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1677,21 +4339,260 @@ namespace Google.Cloud.Tasks.V2.Tests
             CreateTaskRequest request = new CreateTaskRequest
             {
                 ParentAsQueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Task = new Task(),
+                Task = new Task
+                {
+                    TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                    AppEngineHttpRequest = new AppEngineHttpRequest
+                    {
+                        HttpMethod = HttpMethod.Put,
+                        AppEngineRouting = new AppEngineRouting
+                        {
+                            Service = "serviced3f0abaa",
+                            Version = "version102ff72a",
+                            Instance = "instance99a62371",
+                            Host = "hosta8dbb367",
+                        },
+                        RelativeUri = "relative_uri4e468832",
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    },
+                    HttpRequest = new HttpRequest
+                    {
+                        Url = "url424e2d57",
+                        HttpMethod = HttpMethod.Put,
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                        OauthToken = new OAuthToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Scope = "scope14fda131",
+                        },
+                        OidcToken = new OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchDeadline = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchCount = 341017545,
+                    ResponseCount = -1236920575,
+                    FirstAttempt = new Attempt
+                    {
+                        ScheduleTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DispatchTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    LastAttempt = new Attempt
+                    {
+                        ScheduleTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DispatchTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    View = Task.Types.View.Basic,
+                },
                 ResponseView = Task.Types.View.Basic,
             };
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.CreateTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1708,21 +4609,260 @@ namespace Google.Cloud.Tasks.V2.Tests
             CreateTaskRequest request = new CreateTaskRequest
             {
                 ParentAsQueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Task = new Task(),
+                Task = new Task
+                {
+                    TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                    AppEngineHttpRequest = new AppEngineHttpRequest
+                    {
+                        HttpMethod = HttpMethod.Put,
+                        AppEngineRouting = new AppEngineRouting
+                        {
+                            Service = "serviced3f0abaa",
+                            Version = "version102ff72a",
+                            Instance = "instance99a62371",
+                            Host = "hosta8dbb367",
+                        },
+                        RelativeUri = "relative_uri4e468832",
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    },
+                    HttpRequest = new HttpRequest
+                    {
+                        Url = "url424e2d57",
+                        HttpMethod = HttpMethod.Put,
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                        OauthToken = new OAuthToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Scope = "scope14fda131",
+                        },
+                        OidcToken = new OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchDeadline = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchCount = 341017545,
+                    ResponseCount = -1236920575,
+                    FirstAttempt = new Attempt
+                    {
+                        ScheduleTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DispatchTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    LastAttempt = new Attempt
+                    {
+                        ScheduleTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DispatchTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    View = Task.Types.View.Basic,
+                },
                 ResponseView = Task.Types.View.Basic,
             };
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.CreateTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1741,20 +4881,259 @@ namespace Google.Cloud.Tasks.V2.Tests
             CreateTaskRequest request = new CreateTaskRequest
             {
                 ParentAsQueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Task = new Task(),
+                Task = new Task
+                {
+                    TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                    AppEngineHttpRequest = new AppEngineHttpRequest
+                    {
+                        HttpMethod = HttpMethod.Put,
+                        AppEngineRouting = new AppEngineRouting
+                        {
+                            Service = "serviced3f0abaa",
+                            Version = "version102ff72a",
+                            Instance = "instance99a62371",
+                            Host = "hosta8dbb367",
+                        },
+                        RelativeUri = "relative_uri4e468832",
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    },
+                    HttpRequest = new HttpRequest
+                    {
+                        Url = "url424e2d57",
+                        HttpMethod = HttpMethod.Put,
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                        OauthToken = new OAuthToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Scope = "scope14fda131",
+                        },
+                        OidcToken = new OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchDeadline = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchCount = 341017545,
+                    ResponseCount = -1236920575,
+                    FirstAttempt = new Attempt
+                    {
+                        ScheduleTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DispatchTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    LastAttempt = new Attempt
+                    {
+                        ScheduleTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DispatchTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    View = Task.Types.View.Basic,
+                },
             };
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.CreateTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1771,20 +5150,259 @@ namespace Google.Cloud.Tasks.V2.Tests
             CreateTaskRequest request = new CreateTaskRequest
             {
                 ParentAsQueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Task = new Task(),
+                Task = new Task
+                {
+                    TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                    AppEngineHttpRequest = new AppEngineHttpRequest
+                    {
+                        HttpMethod = HttpMethod.Put,
+                        AppEngineRouting = new AppEngineRouting
+                        {
+                            Service = "serviced3f0abaa",
+                            Version = "version102ff72a",
+                            Instance = "instance99a62371",
+                            Host = "hosta8dbb367",
+                        },
+                        RelativeUri = "relative_uri4e468832",
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    },
+                    HttpRequest = new HttpRequest
+                    {
+                        Url = "url424e2d57",
+                        HttpMethod = HttpMethod.Put,
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                        OauthToken = new OAuthToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Scope = "scope14fda131",
+                        },
+                        OidcToken = new OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchDeadline = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchCount = 341017545,
+                    ResponseCount = -1236920575,
+                    FirstAttempt = new Attempt
+                    {
+                        ScheduleTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DispatchTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    LastAttempt = new Attempt
+                    {
+                        ScheduleTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DispatchTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    View = Task.Types.View.Basic,
+                },
             };
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.CreateTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1803,20 +5421,259 @@ namespace Google.Cloud.Tasks.V2.Tests
             CreateTaskRequest request = new CreateTaskRequest
             {
                 ParentAsQueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Task = new Task(),
+                Task = new Task
+                {
+                    TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                    AppEngineHttpRequest = new AppEngineHttpRequest
+                    {
+                        HttpMethod = HttpMethod.Put,
+                        AppEngineRouting = new AppEngineRouting
+                        {
+                            Service = "serviced3f0abaa",
+                            Version = "version102ff72a",
+                            Instance = "instance99a62371",
+                            Host = "hosta8dbb367",
+                        },
+                        RelativeUri = "relative_uri4e468832",
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    },
+                    HttpRequest = new HttpRequest
+                    {
+                        Url = "url424e2d57",
+                        HttpMethod = HttpMethod.Put,
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                        OauthToken = new OAuthToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Scope = "scope14fda131",
+                        },
+                        OidcToken = new OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchDeadline = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchCount = 341017545,
+                    ResponseCount = -1236920575,
+                    FirstAttempt = new Attempt
+                    {
+                        ScheduleTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DispatchTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    LastAttempt = new Attempt
+                    {
+                        ScheduleTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DispatchTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    View = Task.Types.View.Basic,
+                },
             };
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.CreateTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1833,20 +5690,259 @@ namespace Google.Cloud.Tasks.V2.Tests
             CreateTaskRequest request = new CreateTaskRequest
             {
                 ParentAsQueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
-                Task = new Task(),
+                Task = new Task
+                {
+                    TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
+                    AppEngineHttpRequest = new AppEngineHttpRequest
+                    {
+                        HttpMethod = HttpMethod.Put,
+                        AppEngineRouting = new AppEngineRouting
+                        {
+                            Service = "serviced3f0abaa",
+                            Version = "version102ff72a",
+                            Instance = "instance99a62371",
+                            Host = "hosta8dbb367",
+                        },
+                        RelativeUri = "relative_uri4e468832",
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    },
+                    HttpRequest = new HttpRequest
+                    {
+                        Url = "url424e2d57",
+                        HttpMethod = HttpMethod.Put,
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                        OauthToken = new OAuthToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Scope = "scope14fda131",
+                        },
+                        OidcToken = new OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchDeadline = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchCount = 341017545,
+                    ResponseCount = -1236920575,
+                    FirstAttempt = new Attempt
+                    {
+                        ScheduleTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DispatchTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    LastAttempt = new Attempt
+                    {
+                        ScheduleTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DispatchTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ResponseStatus = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                    },
+                    View = Task.Types.View.Basic,
+                },
             };
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.CreateTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1963,15 +6059,128 @@ namespace Google.Cloud.Tasks.V2.Tests
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.RunTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1993,15 +6202,128 @@ namespace Google.Cloud.Tasks.V2.Tests
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.RunTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -2024,15 +6346,128 @@ namespace Google.Cloud.Tasks.V2.Tests
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.RunTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -2053,15 +6488,128 @@ namespace Google.Cloud.Tasks.V2.Tests
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.RunTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -2084,15 +6632,128 @@ namespace Google.Cloud.Tasks.V2.Tests
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.RunTask(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -2113,15 +6774,128 @@ namespace Google.Cloud.Tasks.V2.Tests
             Task expectedResponse = new Task
             {
                 TaskName = TaskName.FromProjectLocationQueueTask("[PROJECT]", "[LOCATION]", "[QUEUE]", "[TASK]"),
-                AppEngineHttpRequest = new AppEngineHttpRequest(),
-                HttpRequest = new HttpRequest(),
-                ScheduleTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                DispatchDeadline = new wkt::Duration(),
+                AppEngineHttpRequest = new AppEngineHttpRequest
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpRequest = new HttpRequest
+                {
+                    Url = "url424e2d57",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DispatchDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DispatchCount = 341017545,
                 ResponseCount = -1236920575,
-                FirstAttempt = new Attempt(),
-                LastAttempt = new Attempt(),
+                FirstAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                LastAttempt = new Attempt
+                {
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DispatchTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ResponseStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 View = Task.Types.View.Basic,
             };
             mockGrpcClient.Setup(x => x.RunTaskAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Task>(stt::Task.FromResult(expectedResponse), null, null, null, null));
