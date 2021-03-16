@@ -20,6 +20,7 @@ using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -45,15 +46,36 @@ namespace Google.Cloud.Functions.V1.Tests
                 CloudFunctionName = CloudFunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
                 Description = "description2cf9da67",
                 SourceArchiveUrl = "source_archive_url88af9b91",
-                SourceRepository = new SourceRepository(),
-                HttpsTrigger = new HttpsTrigger(),
-                EventTrigger = new EventTrigger(),
+                SourceRepository = new SourceRepository
+                {
+                    Url = "url424e2d57",
+                    DeployedUrl = "deployed_url9894f95c",
+                },
+                HttpsTrigger = new HttpsTrigger { Url = "url424e2d57", },
+                EventTrigger = new EventTrigger
+                {
+                    EventType = "event_type1436d01c",
+                    Resource = "resource164eab96",
+                    Service = "serviced3f0abaa",
+                    FailurePolicy = new FailurePolicy
+                    {
+                        Retry = new FailurePolicy.Types.Retry { },
+                    },
+                },
                 Status = CloudFunctionStatus.Offline,
                 EntryPoint = "entry_pointb3d450a5",
-                Timeout = new wkt::Duration(),
+                Timeout = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 AvailableMemoryMb = 1905057947,
                 ServiceAccountEmail = "service_account_emailb0c3703d",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 VersionId = 8696643459580522033L,
                 Labels =
                 {
@@ -99,15 +121,36 @@ namespace Google.Cloud.Functions.V1.Tests
                 CloudFunctionName = CloudFunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
                 Description = "description2cf9da67",
                 SourceArchiveUrl = "source_archive_url88af9b91",
-                SourceRepository = new SourceRepository(),
-                HttpsTrigger = new HttpsTrigger(),
-                EventTrigger = new EventTrigger(),
+                SourceRepository = new SourceRepository
+                {
+                    Url = "url424e2d57",
+                    DeployedUrl = "deployed_url9894f95c",
+                },
+                HttpsTrigger = new HttpsTrigger { Url = "url424e2d57", },
+                EventTrigger = new EventTrigger
+                {
+                    EventType = "event_type1436d01c",
+                    Resource = "resource164eab96",
+                    Service = "serviced3f0abaa",
+                    FailurePolicy = new FailurePolicy
+                    {
+                        Retry = new FailurePolicy.Types.Retry { },
+                    },
+                },
                 Status = CloudFunctionStatus.Offline,
                 EntryPoint = "entry_pointb3d450a5",
-                Timeout = new wkt::Duration(),
+                Timeout = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 AvailableMemoryMb = 1905057947,
                 ServiceAccountEmail = "service_account_emailb0c3703d",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 VersionId = 8696643459580522033L,
                 Labels =
                 {
@@ -155,15 +198,36 @@ namespace Google.Cloud.Functions.V1.Tests
                 CloudFunctionName = CloudFunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
                 Description = "description2cf9da67",
                 SourceArchiveUrl = "source_archive_url88af9b91",
-                SourceRepository = new SourceRepository(),
-                HttpsTrigger = new HttpsTrigger(),
-                EventTrigger = new EventTrigger(),
+                SourceRepository = new SourceRepository
+                {
+                    Url = "url424e2d57",
+                    DeployedUrl = "deployed_url9894f95c",
+                },
+                HttpsTrigger = new HttpsTrigger { Url = "url424e2d57", },
+                EventTrigger = new EventTrigger
+                {
+                    EventType = "event_type1436d01c",
+                    Resource = "resource164eab96",
+                    Service = "serviced3f0abaa",
+                    FailurePolicy = new FailurePolicy
+                    {
+                        Retry = new FailurePolicy.Types.Retry { },
+                    },
+                },
                 Status = CloudFunctionStatus.Offline,
                 EntryPoint = "entry_pointb3d450a5",
-                Timeout = new wkt::Duration(),
+                Timeout = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 AvailableMemoryMb = 1905057947,
                 ServiceAccountEmail = "service_account_emailb0c3703d",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 VersionId = 8696643459580522033L,
                 Labels =
                 {
@@ -209,15 +273,36 @@ namespace Google.Cloud.Functions.V1.Tests
                 CloudFunctionName = CloudFunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
                 Description = "description2cf9da67",
                 SourceArchiveUrl = "source_archive_url88af9b91",
-                SourceRepository = new SourceRepository(),
-                HttpsTrigger = new HttpsTrigger(),
-                EventTrigger = new EventTrigger(),
+                SourceRepository = new SourceRepository
+                {
+                    Url = "url424e2d57",
+                    DeployedUrl = "deployed_url9894f95c",
+                },
+                HttpsTrigger = new HttpsTrigger { Url = "url424e2d57", },
+                EventTrigger = new EventTrigger
+                {
+                    EventType = "event_type1436d01c",
+                    Resource = "resource164eab96",
+                    Service = "serviced3f0abaa",
+                    FailurePolicy = new FailurePolicy
+                    {
+                        Retry = new FailurePolicy.Types.Retry { },
+                    },
+                },
                 Status = CloudFunctionStatus.Offline,
                 EntryPoint = "entry_pointb3d450a5",
-                Timeout = new wkt::Duration(),
+                Timeout = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 AvailableMemoryMb = 1905057947,
                 ServiceAccountEmail = "service_account_emailb0c3703d",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 VersionId = 8696643459580522033L,
                 Labels =
                 {
@@ -265,15 +350,36 @@ namespace Google.Cloud.Functions.V1.Tests
                 CloudFunctionName = CloudFunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
                 Description = "description2cf9da67",
                 SourceArchiveUrl = "source_archive_url88af9b91",
-                SourceRepository = new SourceRepository(),
-                HttpsTrigger = new HttpsTrigger(),
-                EventTrigger = new EventTrigger(),
+                SourceRepository = new SourceRepository
+                {
+                    Url = "url424e2d57",
+                    DeployedUrl = "deployed_url9894f95c",
+                },
+                HttpsTrigger = new HttpsTrigger { Url = "url424e2d57", },
+                EventTrigger = new EventTrigger
+                {
+                    EventType = "event_type1436d01c",
+                    Resource = "resource164eab96",
+                    Service = "serviced3f0abaa",
+                    FailurePolicy = new FailurePolicy
+                    {
+                        Retry = new FailurePolicy.Types.Retry { },
+                    },
+                },
                 Status = CloudFunctionStatus.Offline,
                 EntryPoint = "entry_pointb3d450a5",
-                Timeout = new wkt::Duration(),
+                Timeout = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 AvailableMemoryMb = 1905057947,
                 ServiceAccountEmail = "service_account_emailb0c3703d",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 VersionId = 8696643459580522033L,
                 Labels =
                 {
@@ -319,15 +425,36 @@ namespace Google.Cloud.Functions.V1.Tests
                 CloudFunctionName = CloudFunctionName.FromProjectLocationFunction("[PROJECT]", "[LOCATION]", "[FUNCTION]"),
                 Description = "description2cf9da67",
                 SourceArchiveUrl = "source_archive_url88af9b91",
-                SourceRepository = new SourceRepository(),
-                HttpsTrigger = new HttpsTrigger(),
-                EventTrigger = new EventTrigger(),
+                SourceRepository = new SourceRepository
+                {
+                    Url = "url424e2d57",
+                    DeployedUrl = "deployed_url9894f95c",
+                },
+                HttpsTrigger = new HttpsTrigger { Url = "url424e2d57", },
+                EventTrigger = new EventTrigger
+                {
+                    EventType = "event_type1436d01c",
+                    Resource = "resource164eab96",
+                    Service = "serviced3f0abaa",
+                    FailurePolicy = new FailurePolicy
+                    {
+                        Retry = new FailurePolicy.Types.Retry { },
+                    },
+                },
                 Status = CloudFunctionStatus.Offline,
                 EntryPoint = "entry_pointb3d450a5",
-                Timeout = new wkt::Duration(),
+                Timeout = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 AvailableMemoryMb = 1905057947,
                 ServiceAccountEmail = "service_account_emailb0c3703d",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 VersionId = 8696643459580522033L,
                 Labels =
                 {
@@ -599,7 +726,26 @@ namespace Google.Cloud.Functions.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -607,7 +753,18 @@ namespace Google.Cloud.Functions.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -625,7 +782,26 @@ namespace Google.Cloud.Functions.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -633,7 +809,18 @@ namespace Google.Cloud.Functions.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -653,7 +840,10 @@ namespace Google.Cloud.Functions.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -661,7 +851,18 @@ namespace Google.Cloud.Functions.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -679,7 +880,10 @@ namespace Google.Cloud.Functions.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -687,7 +891,18 @@ namespace Google.Cloud.Functions.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
