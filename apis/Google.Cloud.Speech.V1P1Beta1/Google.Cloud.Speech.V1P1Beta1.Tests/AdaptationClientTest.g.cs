@@ -36,14 +36,30 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 PhraseSetId = "phrase_set_ide6971137",
-                PhraseSet = new PhraseSet(),
+                PhraseSet = new PhraseSet
+                {
+                    PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
+                    Phrases =
+                    {
+                        new PhraseSet.Types.Phrase
+                        {
+                            Value = "value60c16320",
+                            Boost = 7.584708E+17F,
+                        },
+                    },
+                    Boost = 7.584708E+17F,
+                },
             };
             PhraseSet expectedResponse = new PhraseSet
             {
                 PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
                 Phrases =
                 {
-                    new PhraseSet.Types.Phrase(),
+                    new PhraseSet.Types.Phrase
+                    {
+                        Value = "value60c16320",
+                        Boost = 7.584708E+17F,
+                    },
                 },
                 Boost = 7.584708E+17F,
             };
@@ -62,14 +78,30 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 PhraseSetId = "phrase_set_ide6971137",
-                PhraseSet = new PhraseSet(),
+                PhraseSet = new PhraseSet
+                {
+                    PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
+                    Phrases =
+                    {
+                        new PhraseSet.Types.Phrase
+                        {
+                            Value = "value60c16320",
+                            Boost = 7.584708E+17F,
+                        },
+                    },
+                    Boost = 7.584708E+17F,
+                },
             };
             PhraseSet expectedResponse = new PhraseSet
             {
                 PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
                 Phrases =
                 {
-                    new PhraseSet.Types.Phrase(),
+                    new PhraseSet.Types.Phrase
+                    {
+                        Value = "value60c16320",
+                        Boost = 7.584708E+17F,
+                    },
                 },
                 Boost = 7.584708E+17F,
             };
@@ -90,14 +122,30 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 PhraseSetId = "phrase_set_ide6971137",
-                PhraseSet = new PhraseSet(),
+                PhraseSet = new PhraseSet
+                {
+                    PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
+                    Phrases =
+                    {
+                        new PhraseSet.Types.Phrase
+                        {
+                            Value = "value60c16320",
+                            Boost = 7.584708E+17F,
+                        },
+                    },
+                    Boost = 7.584708E+17F,
+                },
             };
             PhraseSet expectedResponse = new PhraseSet
             {
                 PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
                 Phrases =
                 {
-                    new PhraseSet.Types.Phrase(),
+                    new PhraseSet.Types.Phrase
+                    {
+                        Value = "value60c16320",
+                        Boost = 7.584708E+17F,
+                    },
                 },
                 Boost = 7.584708E+17F,
             };
@@ -116,14 +164,30 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 PhraseSetId = "phrase_set_ide6971137",
-                PhraseSet = new PhraseSet(),
+                PhraseSet = new PhraseSet
+                {
+                    PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
+                    Phrases =
+                    {
+                        new PhraseSet.Types.Phrase
+                        {
+                            Value = "value60c16320",
+                            Boost = 7.584708E+17F,
+                        },
+                    },
+                    Boost = 7.584708E+17F,
+                },
             };
             PhraseSet expectedResponse = new PhraseSet
             {
                 PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
                 Phrases =
                 {
-                    new PhraseSet.Types.Phrase(),
+                    new PhraseSet.Types.Phrase
+                    {
+                        Value = "value60c16320",
+                        Boost = 7.584708E+17F,
+                    },
                 },
                 Boost = 7.584708E+17F,
             };
@@ -144,14 +208,30 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 PhraseSetId = "phrase_set_ide6971137",
-                PhraseSet = new PhraseSet(),
+                PhraseSet = new PhraseSet
+                {
+                    PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
+                    Phrases =
+                    {
+                        new PhraseSet.Types.Phrase
+                        {
+                            Value = "value60c16320",
+                            Boost = 7.584708E+17F,
+                        },
+                    },
+                    Boost = 7.584708E+17F,
+                },
             };
             PhraseSet expectedResponse = new PhraseSet
             {
                 PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
                 Phrases =
                 {
-                    new PhraseSet.Types.Phrase(),
+                    new PhraseSet.Types.Phrase
+                    {
+                        Value = "value60c16320",
+                        Boost = 7.584708E+17F,
+                    },
                 },
                 Boost = 7.584708E+17F,
             };
@@ -170,14 +250,30 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 PhraseSetId = "phrase_set_ide6971137",
-                PhraseSet = new PhraseSet(),
+                PhraseSet = new PhraseSet
+                {
+                    PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
+                    Phrases =
+                    {
+                        new PhraseSet.Types.Phrase
+                        {
+                            Value = "value60c16320",
+                            Boost = 7.584708E+17F,
+                        },
+                    },
+                    Boost = 7.584708E+17F,
+                },
             };
             PhraseSet expectedResponse = new PhraseSet
             {
                 PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
                 Phrases =
                 {
-                    new PhraseSet.Types.Phrase(),
+                    new PhraseSet.Types.Phrase
+                    {
+                        Value = "value60c16320",
+                        Boost = 7.584708E+17F,
+                    },
                 },
                 Boost = 7.584708E+17F,
             };
@@ -203,7 +299,11 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
                 Phrases =
                 {
-                    new PhraseSet.Types.Phrase(),
+                    new PhraseSet.Types.Phrase
+                    {
+                        Value = "value60c16320",
+                        Boost = 7.584708E+17F,
+                    },
                 },
                 Boost = 7.584708E+17F,
             };
@@ -227,7 +327,11 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
                 Phrases =
                 {
-                    new PhraseSet.Types.Phrase(),
+                    new PhraseSet.Types.Phrase
+                    {
+                        Value = "value60c16320",
+                        Boost = 7.584708E+17F,
+                    },
                 },
                 Boost = 7.584708E+17F,
             };
@@ -253,7 +357,11 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
                 Phrases =
                 {
-                    new PhraseSet.Types.Phrase(),
+                    new PhraseSet.Types.Phrase
+                    {
+                        Value = "value60c16320",
+                        Boost = 7.584708E+17F,
+                    },
                 },
                 Boost = 7.584708E+17F,
             };
@@ -277,7 +385,11 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
                 Phrases =
                 {
-                    new PhraseSet.Types.Phrase(),
+                    new PhraseSet.Types.Phrase
+                    {
+                        Value = "value60c16320",
+                        Boost = 7.584708E+17F,
+                    },
                 },
                 Boost = 7.584708E+17F,
             };
@@ -303,7 +415,11 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
                 Phrases =
                 {
-                    new PhraseSet.Types.Phrase(),
+                    new PhraseSet.Types.Phrase
+                    {
+                        Value = "value60c16320",
+                        Boost = 7.584708E+17F,
+                    },
                 },
                 Boost = 7.584708E+17F,
             };
@@ -327,7 +443,11 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
                 Phrases =
                 {
-                    new PhraseSet.Types.Phrase(),
+                    new PhraseSet.Types.Phrase
+                    {
+                        Value = "value60c16320",
+                        Boost = 7.584708E+17F,
+                    },
                 },
                 Boost = 7.584708E+17F,
             };
@@ -346,15 +466,34 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             moq::Mock<Adaptation.AdaptationClient> mockGrpcClient = new moq::Mock<Adaptation.AdaptationClient>(moq::MockBehavior.Strict);
             UpdatePhraseSetRequest request = new UpdatePhraseSetRequest
             {
-                PhraseSet = new PhraseSet(),
-                UpdateMask = new wkt::FieldMask(),
+                PhraseSet = new PhraseSet
+                {
+                    PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
+                    Phrases =
+                    {
+                        new PhraseSet.Types.Phrase
+                        {
+                            Value = "value60c16320",
+                            Boost = 7.584708E+17F,
+                        },
+                    },
+                    Boost = 7.584708E+17F,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             PhraseSet expectedResponse = new PhraseSet
             {
                 PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
                 Phrases =
                 {
-                    new PhraseSet.Types.Phrase(),
+                    new PhraseSet.Types.Phrase
+                    {
+                        Value = "value60c16320",
+                        Boost = 7.584708E+17F,
+                    },
                 },
                 Boost = 7.584708E+17F,
             };
@@ -371,15 +510,34 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             moq::Mock<Adaptation.AdaptationClient> mockGrpcClient = new moq::Mock<Adaptation.AdaptationClient>(moq::MockBehavior.Strict);
             UpdatePhraseSetRequest request = new UpdatePhraseSetRequest
             {
-                PhraseSet = new PhraseSet(),
-                UpdateMask = new wkt::FieldMask(),
+                PhraseSet = new PhraseSet
+                {
+                    PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
+                    Phrases =
+                    {
+                        new PhraseSet.Types.Phrase
+                        {
+                            Value = "value60c16320",
+                            Boost = 7.584708E+17F,
+                        },
+                    },
+                    Boost = 7.584708E+17F,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             PhraseSet expectedResponse = new PhraseSet
             {
                 PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
                 Phrases =
                 {
-                    new PhraseSet.Types.Phrase(),
+                    new PhraseSet.Types.Phrase
+                    {
+                        Value = "value60c16320",
+                        Boost = 7.584708E+17F,
+                    },
                 },
                 Boost = 7.584708E+17F,
             };
@@ -398,15 +556,34 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             moq::Mock<Adaptation.AdaptationClient> mockGrpcClient = new moq::Mock<Adaptation.AdaptationClient>(moq::MockBehavior.Strict);
             UpdatePhraseSetRequest request = new UpdatePhraseSetRequest
             {
-                PhraseSet = new PhraseSet(),
-                UpdateMask = new wkt::FieldMask(),
+                PhraseSet = new PhraseSet
+                {
+                    PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
+                    Phrases =
+                    {
+                        new PhraseSet.Types.Phrase
+                        {
+                            Value = "value60c16320",
+                            Boost = 7.584708E+17F,
+                        },
+                    },
+                    Boost = 7.584708E+17F,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             PhraseSet expectedResponse = new PhraseSet
             {
                 PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
                 Phrases =
                 {
-                    new PhraseSet.Types.Phrase(),
+                    new PhraseSet.Types.Phrase
+                    {
+                        Value = "value60c16320",
+                        Boost = 7.584708E+17F,
+                    },
                 },
                 Boost = 7.584708E+17F,
             };
@@ -423,15 +600,34 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             moq::Mock<Adaptation.AdaptationClient> mockGrpcClient = new moq::Mock<Adaptation.AdaptationClient>(moq::MockBehavior.Strict);
             UpdatePhraseSetRequest request = new UpdatePhraseSetRequest
             {
-                PhraseSet = new PhraseSet(),
-                UpdateMask = new wkt::FieldMask(),
+                PhraseSet = new PhraseSet
+                {
+                    PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
+                    Phrases =
+                    {
+                        new PhraseSet.Types.Phrase
+                        {
+                            Value = "value60c16320",
+                            Boost = 7.584708E+17F,
+                        },
+                    },
+                    Boost = 7.584708E+17F,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             PhraseSet expectedResponse = new PhraseSet
             {
                 PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
                 Phrases =
                 {
-                    new PhraseSet.Types.Phrase(),
+                    new PhraseSet.Types.Phrase
+                    {
+                        Value = "value60c16320",
+                        Boost = 7.584708E+17F,
+                    },
                 },
                 Boost = 7.584708E+17F,
             };
@@ -545,7 +741,18 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 CustomClassId = "custom_class_idb1fbae50",
-                CustomClass = new CustomClass(),
+                CustomClass = new CustomClass
+                {
+                    CustomClassName = CustomClassName.FromProjectLocationCustomClass("[PROJECT]", "[LOCATION]", "[CUSTOM_CLASS]"),
+                    CustomClassId = "custom_class_idb1fbae50",
+                    Items =
+                    {
+                        new CustomClass.Types.ClassItem
+                        {
+                            Value = "value60c16320",
+                        },
+                    },
+                },
             };
             CustomClass expectedResponse = new CustomClass
             {
@@ -553,7 +760,10 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 CustomClassId = "custom_class_idb1fbae50",
                 Items =
                 {
-                    new CustomClass.Types.ClassItem(),
+                    new CustomClass.Types.ClassItem
+                    {
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -571,7 +781,18 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 CustomClassId = "custom_class_idb1fbae50",
-                CustomClass = new CustomClass(),
+                CustomClass = new CustomClass
+                {
+                    CustomClassName = CustomClassName.FromProjectLocationCustomClass("[PROJECT]", "[LOCATION]", "[CUSTOM_CLASS]"),
+                    CustomClassId = "custom_class_idb1fbae50",
+                    Items =
+                    {
+                        new CustomClass.Types.ClassItem
+                        {
+                            Value = "value60c16320",
+                        },
+                    },
+                },
             };
             CustomClass expectedResponse = new CustomClass
             {
@@ -579,7 +800,10 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 CustomClassId = "custom_class_idb1fbae50",
                 Items =
                 {
-                    new CustomClass.Types.ClassItem(),
+                    new CustomClass.Types.ClassItem
+                    {
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -599,7 +823,18 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 CustomClassId = "custom_class_idb1fbae50",
-                CustomClass = new CustomClass(),
+                CustomClass = new CustomClass
+                {
+                    CustomClassName = CustomClassName.FromProjectLocationCustomClass("[PROJECT]", "[LOCATION]", "[CUSTOM_CLASS]"),
+                    CustomClassId = "custom_class_idb1fbae50",
+                    Items =
+                    {
+                        new CustomClass.Types.ClassItem
+                        {
+                            Value = "value60c16320",
+                        },
+                    },
+                },
             };
             CustomClass expectedResponse = new CustomClass
             {
@@ -607,7 +842,10 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 CustomClassId = "custom_class_idb1fbae50",
                 Items =
                 {
-                    new CustomClass.Types.ClassItem(),
+                    new CustomClass.Types.ClassItem
+                    {
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -625,7 +863,18 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 CustomClassId = "custom_class_idb1fbae50",
-                CustomClass = new CustomClass(),
+                CustomClass = new CustomClass
+                {
+                    CustomClassName = CustomClassName.FromProjectLocationCustomClass("[PROJECT]", "[LOCATION]", "[CUSTOM_CLASS]"),
+                    CustomClassId = "custom_class_idb1fbae50",
+                    Items =
+                    {
+                        new CustomClass.Types.ClassItem
+                        {
+                            Value = "value60c16320",
+                        },
+                    },
+                },
             };
             CustomClass expectedResponse = new CustomClass
             {
@@ -633,7 +882,10 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 CustomClassId = "custom_class_idb1fbae50",
                 Items =
                 {
-                    new CustomClass.Types.ClassItem(),
+                    new CustomClass.Types.ClassItem
+                    {
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -653,7 +905,18 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 CustomClassId = "custom_class_idb1fbae50",
-                CustomClass = new CustomClass(),
+                CustomClass = new CustomClass
+                {
+                    CustomClassName = CustomClassName.FromProjectLocationCustomClass("[PROJECT]", "[LOCATION]", "[CUSTOM_CLASS]"),
+                    CustomClassId = "custom_class_idb1fbae50",
+                    Items =
+                    {
+                        new CustomClass.Types.ClassItem
+                        {
+                            Value = "value60c16320",
+                        },
+                    },
+                },
             };
             CustomClass expectedResponse = new CustomClass
             {
@@ -661,7 +924,10 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 CustomClassId = "custom_class_idb1fbae50",
                 Items =
                 {
-                    new CustomClass.Types.ClassItem(),
+                    new CustomClass.Types.ClassItem
+                    {
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -679,7 +945,18 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 CustomClassId = "custom_class_idb1fbae50",
-                CustomClass = new CustomClass(),
+                CustomClass = new CustomClass
+                {
+                    CustomClassName = CustomClassName.FromProjectLocationCustomClass("[PROJECT]", "[LOCATION]", "[CUSTOM_CLASS]"),
+                    CustomClassId = "custom_class_idb1fbae50",
+                    Items =
+                    {
+                        new CustomClass.Types.ClassItem
+                        {
+                            Value = "value60c16320",
+                        },
+                    },
+                },
             };
             CustomClass expectedResponse = new CustomClass
             {
@@ -687,7 +964,10 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 CustomClassId = "custom_class_idb1fbae50",
                 Items =
                 {
-                    new CustomClass.Types.ClassItem(),
+                    new CustomClass.Types.ClassItem
+                    {
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.CreateCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -713,7 +993,10 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 CustomClassId = "custom_class_idb1fbae50",
                 Items =
                 {
-                    new CustomClass.Types.ClassItem(),
+                    new CustomClass.Types.ClassItem
+                    {
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -737,7 +1020,10 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 CustomClassId = "custom_class_idb1fbae50",
                 Items =
                 {
-                    new CustomClass.Types.ClassItem(),
+                    new CustomClass.Types.ClassItem
+                    {
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -763,7 +1049,10 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 CustomClassId = "custom_class_idb1fbae50",
                 Items =
                 {
-                    new CustomClass.Types.ClassItem(),
+                    new CustomClass.Types.ClassItem
+                    {
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -787,7 +1076,10 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 CustomClassId = "custom_class_idb1fbae50",
                 Items =
                 {
-                    new CustomClass.Types.ClassItem(),
+                    new CustomClass.Types.ClassItem
+                    {
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -813,7 +1105,10 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 CustomClassId = "custom_class_idb1fbae50",
                 Items =
                 {
-                    new CustomClass.Types.ClassItem(),
+                    new CustomClass.Types.ClassItem
+                    {
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -837,7 +1132,10 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 CustomClassId = "custom_class_idb1fbae50",
                 Items =
                 {
-                    new CustomClass.Types.ClassItem(),
+                    new CustomClass.Types.ClassItem
+                    {
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -855,8 +1153,22 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             moq::Mock<Adaptation.AdaptationClient> mockGrpcClient = new moq::Mock<Adaptation.AdaptationClient>(moq::MockBehavior.Strict);
             UpdateCustomClassRequest request = new UpdateCustomClassRequest
             {
-                CustomClass = new CustomClass(),
-                UpdateMask = new wkt::FieldMask(),
+                CustomClass = new CustomClass
+                {
+                    CustomClassName = CustomClassName.FromProjectLocationCustomClass("[PROJECT]", "[LOCATION]", "[CUSTOM_CLASS]"),
+                    CustomClassId = "custom_class_idb1fbae50",
+                    Items =
+                    {
+                        new CustomClass.Types.ClassItem
+                        {
+                            Value = "value60c16320",
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CustomClass expectedResponse = new CustomClass
             {
@@ -864,7 +1176,10 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 CustomClassId = "custom_class_idb1fbae50",
                 Items =
                 {
-                    new CustomClass.Types.ClassItem(),
+                    new CustomClass.Types.ClassItem
+                    {
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -880,8 +1195,22 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             moq::Mock<Adaptation.AdaptationClient> mockGrpcClient = new moq::Mock<Adaptation.AdaptationClient>(moq::MockBehavior.Strict);
             UpdateCustomClassRequest request = new UpdateCustomClassRequest
             {
-                CustomClass = new CustomClass(),
-                UpdateMask = new wkt::FieldMask(),
+                CustomClass = new CustomClass
+                {
+                    CustomClassName = CustomClassName.FromProjectLocationCustomClass("[PROJECT]", "[LOCATION]", "[CUSTOM_CLASS]"),
+                    CustomClassId = "custom_class_idb1fbae50",
+                    Items =
+                    {
+                        new CustomClass.Types.ClassItem
+                        {
+                            Value = "value60c16320",
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CustomClass expectedResponse = new CustomClass
             {
@@ -889,7 +1218,10 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 CustomClassId = "custom_class_idb1fbae50",
                 Items =
                 {
-                    new CustomClass.Types.ClassItem(),
+                    new CustomClass.Types.ClassItem
+                    {
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -907,8 +1239,22 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             moq::Mock<Adaptation.AdaptationClient> mockGrpcClient = new moq::Mock<Adaptation.AdaptationClient>(moq::MockBehavior.Strict);
             UpdateCustomClassRequest request = new UpdateCustomClassRequest
             {
-                CustomClass = new CustomClass(),
-                UpdateMask = new wkt::FieldMask(),
+                CustomClass = new CustomClass
+                {
+                    CustomClassName = CustomClassName.FromProjectLocationCustomClass("[PROJECT]", "[LOCATION]", "[CUSTOM_CLASS]"),
+                    CustomClassId = "custom_class_idb1fbae50",
+                    Items =
+                    {
+                        new CustomClass.Types.ClassItem
+                        {
+                            Value = "value60c16320",
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CustomClass expectedResponse = new CustomClass
             {
@@ -916,7 +1262,10 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 CustomClassId = "custom_class_idb1fbae50",
                 Items =
                 {
-                    new CustomClass.Types.ClassItem(),
+                    new CustomClass.Types.ClassItem
+                    {
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -932,8 +1281,22 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             moq::Mock<Adaptation.AdaptationClient> mockGrpcClient = new moq::Mock<Adaptation.AdaptationClient>(moq::MockBehavior.Strict);
             UpdateCustomClassRequest request = new UpdateCustomClassRequest
             {
-                CustomClass = new CustomClass(),
-                UpdateMask = new wkt::FieldMask(),
+                CustomClass = new CustomClass
+                {
+                    CustomClassName = CustomClassName.FromProjectLocationCustomClass("[PROJECT]", "[LOCATION]", "[CUSTOM_CLASS]"),
+                    CustomClassId = "custom_class_idb1fbae50",
+                    Items =
+                    {
+                        new CustomClass.Types.ClassItem
+                        {
+                            Value = "value60c16320",
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CustomClass expectedResponse = new CustomClass
             {
@@ -941,7 +1304,10 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
                 CustomClassId = "custom_class_idb1fbae50",
                 Items =
                 {
-                    new CustomClass.Types.ClassItem(),
+                    new CustomClass.Types.ClassItem
+                    {
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
