@@ -20,6 +20,7 @@ using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -52,8 +53,16 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
                         "value60c16320"
                     },
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 KmsKeyName = "kms_key_name06bd122b",
             };
             mockGrpcClient.Setup(x => x.GetRepository(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -84,8 +93,16 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
                         "value60c16320"
                     },
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 KmsKeyName = "kms_key_name06bd122b",
             };
             mockGrpcClient.Setup(x => x.GetRepositoryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Repository>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -118,8 +135,16 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
                         "value60c16320"
                     },
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 KmsKeyName = "kms_key_name06bd122b",
             };
             mockGrpcClient.Setup(x => x.GetRepository(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -150,8 +175,16 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
                         "value60c16320"
                     },
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 KmsKeyName = "kms_key_name06bd122b",
             };
             mockGrpcClient.Setup(x => x.GetRepositoryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Repository>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -170,8 +203,34 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateRepositoryRequest request = new UpdateRepositoryRequest
             {
-                Repository = new Repository(),
-                UpdateMask = new wkt::FieldMask(),
+                Repository = new Repository
+                {
+                    RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                    Format = Repository.Types.Format.Docker,
+                    Description = "description2cf9da67",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    KmsKeyName = "kms_key_name06bd122b",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Repository expectedResponse = new Repository
             {
@@ -185,8 +244,16 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
                         "value60c16320"
                     },
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 KmsKeyName = "kms_key_name06bd122b",
             };
             mockGrpcClient.Setup(x => x.UpdateRepository(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -203,8 +270,34 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateRepositoryRequest request = new UpdateRepositoryRequest
             {
-                Repository = new Repository(),
-                UpdateMask = new wkt::FieldMask(),
+                Repository = new Repository
+                {
+                    RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                    Format = Repository.Types.Format.Docker,
+                    Description = "description2cf9da67",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    KmsKeyName = "kms_key_name06bd122b",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Repository expectedResponse = new Repository
             {
@@ -218,8 +311,16 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
                         "value60c16320"
                     },
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 KmsKeyName = "kms_key_name06bd122b",
             };
             mockGrpcClient.Setup(x => x.UpdateRepositoryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Repository>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -238,8 +339,34 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateRepositoryRequest request = new UpdateRepositoryRequest
             {
-                Repository = new Repository(),
-                UpdateMask = new wkt::FieldMask(),
+                Repository = new Repository
+                {
+                    RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                    Format = Repository.Types.Format.Docker,
+                    Description = "description2cf9da67",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    KmsKeyName = "kms_key_name06bd122b",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Repository expectedResponse = new Repository
             {
@@ -253,8 +380,16 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
                         "value60c16320"
                     },
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 KmsKeyName = "kms_key_name06bd122b",
             };
             mockGrpcClient.Setup(x => x.UpdateRepository(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -271,8 +406,34 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateRepositoryRequest request = new UpdateRepositoryRequest
             {
-                Repository = new Repository(),
-                UpdateMask = new wkt::FieldMask(),
+                Repository = new Repository
+                {
+                    RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                    Format = Repository.Types.Format.Docker,
+                    Description = "description2cf9da67",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    KmsKeyName = "kms_key_name06bd122b",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Repository expectedResponse = new Repository
             {
@@ -286,8 +447,16 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
                         "value60c16320"
                     },
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 KmsKeyName = "kms_key_name06bd122b",
             };
             mockGrpcClient.Setup(x => x.UpdateRepositoryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Repository>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -312,8 +481,16 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             {
                 Name = "name1c9368b0",
                 DisplayName = "display_name137f65c2",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetPackage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
@@ -335,8 +512,16 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             {
                 Name = "name1c9368b0",
                 DisplayName = "display_name137f65c2",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetPackageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Package>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
@@ -360,8 +545,16 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             {
                 Name = "name1c9368b0",
                 DisplayName = "display_name137f65c2",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetPackage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
@@ -383,8 +576,16 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             {
                 Name = "name1c9368b0",
                 DisplayName = "display_name137f65c2",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetPackageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Package>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
@@ -409,9 +610,24 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             {
                 Name = "name1c9368b0",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                RelatedTags = { new Tag(), },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RelatedTags =
+                {
+                    new Tag
+                    {
+                        Name = "name1c9368b0",
+                        Version = "version102ff72a",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
@@ -434,9 +650,24 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             {
                 Name = "name1c9368b0",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                RelatedTags = { new Tag(), },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RelatedTags =
+                {
+                    new Tag
+                    {
+                        Name = "name1c9368b0",
+                        Version = "version102ff72a",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Version>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
@@ -460,9 +691,24 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             {
                 Name = "name1c9368b0",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                RelatedTags = { new Tag(), },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RelatedTags =
+                {
+                    new Tag
+                    {
+                        Name = "name1c9368b0",
+                        Version = "version102ff72a",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
@@ -484,9 +730,24 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             {
                 Name = "name1c9368b0",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                RelatedTags = { new Tag(), },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RelatedTags =
+                {
+                    new Tag
+                    {
+                        Name = "name1c9368b0",
+                        Version = "version102ff72a",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Version>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ArtifactRegistryClient client = new ArtifactRegistryClientImpl(mockGrpcClient.Object, null);
@@ -510,9 +771,24 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             {
                 FileName = FileName.FromProjectLocationRepoFile("[PROJECT]", "[LOCATION]", "[REPO]", "[FILE]"),
                 SizeBytes = 4628423819757039038L,
-                Hashes = { new Hash(), },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                Hashes =
+                {
+                    new Hash
+                    {
+                        Type = Hash.Types.HashType.Sha256,
+                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Owner = "ownere92c1272",
             };
             mockGrpcClient.Setup(x => x.GetFile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -535,9 +811,24 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             {
                 FileName = FileName.FromProjectLocationRepoFile("[PROJECT]", "[LOCATION]", "[REPO]", "[FILE]"),
                 SizeBytes = 4628423819757039038L,
-                Hashes = { new Hash(), },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                Hashes =
+                {
+                    new Hash
+                    {
+                        Type = Hash.Types.HashType.Sha256,
+                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Owner = "ownere92c1272",
             };
             mockGrpcClient.Setup(x => x.GetFileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<File>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -562,9 +853,24 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             {
                 FileName = FileName.FromProjectLocationRepoFile("[PROJECT]", "[LOCATION]", "[REPO]", "[FILE]"),
                 SizeBytes = 4628423819757039038L,
-                Hashes = { new Hash(), },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                Hashes =
+                {
+                    new Hash
+                    {
+                        Type = Hash.Types.HashType.Sha256,
+                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Owner = "ownere92c1272",
             };
             mockGrpcClient.Setup(x => x.GetFile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -587,9 +893,24 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             {
                 FileName = FileName.FromProjectLocationRepoFile("[PROJECT]", "[LOCATION]", "[REPO]", "[FILE]"),
                 SizeBytes = 4628423819757039038L,
-                Hashes = { new Hash(), },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                Hashes =
+                {
+                    new Hash
+                    {
+                        Type = Hash.Types.HashType.Sha256,
+                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Owner = "ownere92c1272",
             };
             mockGrpcClient.Setup(x => x.GetFileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<File>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -698,7 +1019,11 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             {
                 Parent = "parent7858e4d0",
                 TagId = "tag_idbc94f076",
-                Tag = new Tag(),
+                Tag = new Tag
+                {
+                    Name = "name1c9368b0",
+                    Version = "version102ff72a",
+                },
             };
             Tag expectedResponse = new Tag
             {
@@ -721,7 +1046,11 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             {
                 Parent = "parent7858e4d0",
                 TagId = "tag_idbc94f076",
-                Tag = new Tag(),
+                Tag = new Tag
+                {
+                    Name = "name1c9368b0",
+                    Version = "version102ff72a",
+                },
             };
             Tag expectedResponse = new Tag
             {
@@ -746,7 +1075,11 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             {
                 Parent = "parent7858e4d0",
                 TagId = "tag_idbc94f076",
-                Tag = new Tag(),
+                Tag = new Tag
+                {
+                    Name = "name1c9368b0",
+                    Version = "version102ff72a",
+                },
             };
             Tag expectedResponse = new Tag
             {
@@ -769,7 +1102,11 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             {
                 Parent = "parent7858e4d0",
                 TagId = "tag_idbc94f076",
-                Tag = new Tag(),
+                Tag = new Tag
+                {
+                    Name = "name1c9368b0",
+                    Version = "version102ff72a",
+                },
             };
             Tag expectedResponse = new Tag
             {
@@ -792,8 +1129,15 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateTagRequest request = new UpdateTagRequest
             {
-                Tag = new Tag(),
-                UpdateMask = new wkt::FieldMask(),
+                Tag = new Tag
+                {
+                    Name = "name1c9368b0",
+                    Version = "version102ff72a",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Tag expectedResponse = new Tag
             {
@@ -814,8 +1158,15 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateTagRequest request = new UpdateTagRequest
             {
-                Tag = new Tag(),
-                UpdateMask = new wkt::FieldMask(),
+                Tag = new Tag
+                {
+                    Name = "name1c9368b0",
+                    Version = "version102ff72a",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Tag expectedResponse = new Tag
             {
@@ -838,8 +1189,15 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateTagRequest request = new UpdateTagRequest
             {
-                Tag = new Tag(),
-                UpdateMask = new wkt::FieldMask(),
+                Tag = new Tag
+                {
+                    Name = "name1c9368b0",
+                    Version = "version102ff72a",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Tag expectedResponse = new Tag
             {
@@ -860,8 +1218,15 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateTagRequest request = new UpdateTagRequest
             {
-                Tag = new Tag(),
-                UpdateMask = new wkt::FieldMask(),
+                Tag = new Tag
+                {
+                    Name = "name1c9368b0",
+                    Version = "version102ff72a",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Tag expectedResponse = new Tag
             {
@@ -951,7 +1316,26 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -959,7 +1343,18 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -977,7 +1372,26 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -985,7 +1399,18 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1005,7 +1430,10 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1013,7 +1441,18 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1031,7 +1470,10 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1039,7 +1481,18 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
