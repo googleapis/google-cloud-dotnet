@@ -165,26 +165,91 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
-                BillingSettings = new BillingSettings(),
+                BillingSettings = new BillingSettings
+                {
+                    BillingTier = BillingTier.Unspecified,
+                    BillingType = BillingType.TrialSubscription,
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
                 OrgServiceAccount = "org_service_accounte301d413",
-                SinkSettings = new SinkSettings(),
+                SinkSettings = new SinkSettings
+                {
+                    LoggingSinkProject = "logging_sink_projectc631d2c5",
+                },
                 ComponentSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings()
+                        new ComponentSettings
+                        {
+                            ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                            State = ComponentEnablementState.Enable,
+                            ProjectServiceAccount = "project_service_account52bf6805",
+                            DetectorSettings =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new ComponentSettings.Types.DetectorSettings
+                                    {
+                                        State = ComponentEnablementState.Enable,
+                                    }
+                                },
+                            },
+                            Etag = "etage8ad7218",
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            WebSecurityScannerSettings = new WebSecurityScanner { },
+                            ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                            EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                            SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                            {
+                                NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                                AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                            },
+                        }
                     },
                 },
                 DetectorGroupSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new Settings.Types.DetectorGroupSettings()
+                        new Settings.Types.DetectorGroupSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -204,26 +269,91 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
-                BillingSettings = new BillingSettings(),
+                BillingSettings = new BillingSettings
+                {
+                    BillingTier = BillingTier.Unspecified,
+                    BillingType = BillingType.TrialSubscription,
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
                 OrgServiceAccount = "org_service_accounte301d413",
-                SinkSettings = new SinkSettings(),
+                SinkSettings = new SinkSettings
+                {
+                    LoggingSinkProject = "logging_sink_projectc631d2c5",
+                },
                 ComponentSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings()
+                        new ComponentSettings
+                        {
+                            ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                            State = ComponentEnablementState.Enable,
+                            ProjectServiceAccount = "project_service_account52bf6805",
+                            DetectorSettings =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new ComponentSettings.Types.DetectorSettings
+                                    {
+                                        State = ComponentEnablementState.Enable,
+                                    }
+                                },
+                            },
+                            Etag = "etage8ad7218",
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            WebSecurityScannerSettings = new WebSecurityScanner { },
+                            ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                            EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                            SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                            {
+                                NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                                AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                            },
+                        }
                     },
                 },
                 DetectorGroupSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new Settings.Types.DetectorGroupSettings()
+                        new Settings.Types.DetectorGroupSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -245,26 +375,91 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
-                BillingSettings = new BillingSettings(),
+                BillingSettings = new BillingSettings
+                {
+                    BillingTier = BillingTier.Unspecified,
+                    BillingType = BillingType.TrialSubscription,
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
                 OrgServiceAccount = "org_service_accounte301d413",
-                SinkSettings = new SinkSettings(),
+                SinkSettings = new SinkSettings
+                {
+                    LoggingSinkProject = "logging_sink_projectc631d2c5",
+                },
                 ComponentSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings()
+                        new ComponentSettings
+                        {
+                            ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                            State = ComponentEnablementState.Enable,
+                            ProjectServiceAccount = "project_service_account52bf6805",
+                            DetectorSettings =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new ComponentSettings.Types.DetectorSettings
+                                    {
+                                        State = ComponentEnablementState.Enable,
+                                    }
+                                },
+                            },
+                            Etag = "etage8ad7218",
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            WebSecurityScannerSettings = new WebSecurityScanner { },
+                            ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                            EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                            SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                            {
+                                NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                                AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                            },
+                        }
                     },
                 },
                 DetectorGroupSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new Settings.Types.DetectorGroupSettings()
+                        new Settings.Types.DetectorGroupSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -284,26 +479,91 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
-                BillingSettings = new BillingSettings(),
+                BillingSettings = new BillingSettings
+                {
+                    BillingTier = BillingTier.Unspecified,
+                    BillingType = BillingType.TrialSubscription,
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
                 OrgServiceAccount = "org_service_accounte301d413",
-                SinkSettings = new SinkSettings(),
+                SinkSettings = new SinkSettings
+                {
+                    LoggingSinkProject = "logging_sink_projectc631d2c5",
+                },
                 ComponentSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings()
+                        new ComponentSettings
+                        {
+                            ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                            State = ComponentEnablementState.Enable,
+                            ProjectServiceAccount = "project_service_account52bf6805",
+                            DetectorSettings =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new ComponentSettings.Types.DetectorSettings
+                                    {
+                                        State = ComponentEnablementState.Enable,
+                                    }
+                                },
+                            },
+                            Etag = "etage8ad7218",
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            WebSecurityScannerSettings = new WebSecurityScanner { },
+                            ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                            EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                            SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                            {
+                                NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                                AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                            },
+                        }
                     },
                 },
                 DetectorGroupSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new Settings.Types.DetectorGroupSettings()
+                        new Settings.Types.DetectorGroupSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -325,26 +585,91 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
-                BillingSettings = new BillingSettings(),
+                BillingSettings = new BillingSettings
+                {
+                    BillingTier = BillingTier.Unspecified,
+                    BillingType = BillingType.TrialSubscription,
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
                 OrgServiceAccount = "org_service_accounte301d413",
-                SinkSettings = new SinkSettings(),
+                SinkSettings = new SinkSettings
+                {
+                    LoggingSinkProject = "logging_sink_projectc631d2c5",
+                },
                 ComponentSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings()
+                        new ComponentSettings
+                        {
+                            ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                            State = ComponentEnablementState.Enable,
+                            ProjectServiceAccount = "project_service_account52bf6805",
+                            DetectorSettings =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new ComponentSettings.Types.DetectorSettings
+                                    {
+                                        State = ComponentEnablementState.Enable,
+                                    }
+                                },
+                            },
+                            Etag = "etage8ad7218",
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            WebSecurityScannerSettings = new WebSecurityScanner { },
+                            ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                            EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                            SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                            {
+                                NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                                AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                            },
+                        }
                     },
                 },
                 DetectorGroupSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new Settings.Types.DetectorGroupSettings()
+                        new Settings.Types.DetectorGroupSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -364,26 +689,91 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
-                BillingSettings = new BillingSettings(),
+                BillingSettings = new BillingSettings
+                {
+                    BillingTier = BillingTier.Unspecified,
+                    BillingType = BillingType.TrialSubscription,
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
                 OrgServiceAccount = "org_service_accounte301d413",
-                SinkSettings = new SinkSettings(),
+                SinkSettings = new SinkSettings
+                {
+                    LoggingSinkProject = "logging_sink_projectc631d2c5",
+                },
                 ComponentSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings()
+                        new ComponentSettings
+                        {
+                            ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                            State = ComponentEnablementState.Enable,
+                            ProjectServiceAccount = "project_service_account52bf6805",
+                            DetectorSettings =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new ComponentSettings.Types.DetectorSettings
+                                    {
+                                        State = ComponentEnablementState.Enable,
+                                    }
+                                },
+                            },
+                            Etag = "etage8ad7218",
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            WebSecurityScannerSettings = new WebSecurityScanner { },
+                            ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                            EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                            SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                            {
+                                NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                                AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                            },
+                        }
                     },
                 },
                 DetectorGroupSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new Settings.Types.DetectorGroupSettings()
+                        new Settings.Types.DetectorGroupSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -400,32 +790,188 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             moq::Mock<SecurityCenterSettingsService.SecurityCenterSettingsServiceClient> mockGrpcClient = new moq::Mock<SecurityCenterSettingsService.SecurityCenterSettingsServiceClient>(moq::MockBehavior.Strict);
             UpdateSettingsRequest request = new UpdateSettingsRequest
             {
-                Settings = new Settings(),
-                UpdateMask = new wkt::FieldMask(),
+                Settings = new Settings
+                {
+                    SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
+                    BillingSettings = new BillingSettings
+                    {
+                        BillingTier = BillingTier.Unspecified,
+                        BillingType = BillingType.TrialSubscription,
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ExpireTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
+                    OrgServiceAccount = "org_service_accounte301d413",
+                    SinkSettings = new SinkSettings
+                    {
+                        LoggingSinkProject = "logging_sink_projectc631d2c5",
+                    },
+                    ComponentSettings =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new ComponentSettings
+                            {
+                                ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                                State = ComponentEnablementState.Enable,
+                                ProjectServiceAccount = "project_service_account52bf6805",
+                                DetectorSettings =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new ComponentSettings.Types.DetectorSettings
+                                        {
+                                            State = ComponentEnablementState.Enable,
+                                        }
+                                    },
+                                },
+                                Etag = "etage8ad7218",
+                                UpdateTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                WebSecurityScannerSettings = new WebSecurityScanner { },
+                                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                                {
+                                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                    {
+                                        ApprovedIdentities =
+                                        {
+                                            "approved_identitiese4f2c445",
+                                        },
+                                    },
+                                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                    {
+                                        ApprovedIdentities =
+                                        {
+                                            "approved_identitiese4f2c445",
+                                        },
+                                    },
+                                },
+                            }
+                        },
+                    },
+                    DetectorGroupSettings =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new Settings.Types.DetectorGroupSettings
+                            {
+                                State = ComponentEnablementState.Enable,
+                            }
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
-                BillingSettings = new BillingSettings(),
+                BillingSettings = new BillingSettings
+                {
+                    BillingTier = BillingTier.Unspecified,
+                    BillingType = BillingType.TrialSubscription,
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
                 OrgServiceAccount = "org_service_accounte301d413",
-                SinkSettings = new SinkSettings(),
+                SinkSettings = new SinkSettings
+                {
+                    LoggingSinkProject = "logging_sink_projectc631d2c5",
+                },
                 ComponentSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings()
+                        new ComponentSettings
+                        {
+                            ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                            State = ComponentEnablementState.Enable,
+                            ProjectServiceAccount = "project_service_account52bf6805",
+                            DetectorSettings =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new ComponentSettings.Types.DetectorSettings
+                                    {
+                                        State = ComponentEnablementState.Enable,
+                                    }
+                                },
+                            },
+                            Etag = "etage8ad7218",
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            WebSecurityScannerSettings = new WebSecurityScanner { },
+                            ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                            EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                            SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                            {
+                                NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                                AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                            },
+                        }
                     },
                 },
                 DetectorGroupSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new Settings.Types.DetectorGroupSettings()
+                        new Settings.Types.DetectorGroupSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -440,32 +986,188 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             moq::Mock<SecurityCenterSettingsService.SecurityCenterSettingsServiceClient> mockGrpcClient = new moq::Mock<SecurityCenterSettingsService.SecurityCenterSettingsServiceClient>(moq::MockBehavior.Strict);
             UpdateSettingsRequest request = new UpdateSettingsRequest
             {
-                Settings = new Settings(),
-                UpdateMask = new wkt::FieldMask(),
+                Settings = new Settings
+                {
+                    SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
+                    BillingSettings = new BillingSettings
+                    {
+                        BillingTier = BillingTier.Unspecified,
+                        BillingType = BillingType.TrialSubscription,
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ExpireTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
+                    OrgServiceAccount = "org_service_accounte301d413",
+                    SinkSettings = new SinkSettings
+                    {
+                        LoggingSinkProject = "logging_sink_projectc631d2c5",
+                    },
+                    ComponentSettings =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new ComponentSettings
+                            {
+                                ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                                State = ComponentEnablementState.Enable,
+                                ProjectServiceAccount = "project_service_account52bf6805",
+                                DetectorSettings =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new ComponentSettings.Types.DetectorSettings
+                                        {
+                                            State = ComponentEnablementState.Enable,
+                                        }
+                                    },
+                                },
+                                Etag = "etage8ad7218",
+                                UpdateTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                WebSecurityScannerSettings = new WebSecurityScanner { },
+                                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                                {
+                                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                    {
+                                        ApprovedIdentities =
+                                        {
+                                            "approved_identitiese4f2c445",
+                                        },
+                                    },
+                                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                    {
+                                        ApprovedIdentities =
+                                        {
+                                            "approved_identitiese4f2c445",
+                                        },
+                                    },
+                                },
+                            }
+                        },
+                    },
+                    DetectorGroupSettings =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new Settings.Types.DetectorGroupSettings
+                            {
+                                State = ComponentEnablementState.Enable,
+                            }
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
-                BillingSettings = new BillingSettings(),
+                BillingSettings = new BillingSettings
+                {
+                    BillingTier = BillingTier.Unspecified,
+                    BillingType = BillingType.TrialSubscription,
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
                 OrgServiceAccount = "org_service_accounte301d413",
-                SinkSettings = new SinkSettings(),
+                SinkSettings = new SinkSettings
+                {
+                    LoggingSinkProject = "logging_sink_projectc631d2c5",
+                },
                 ComponentSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings()
+                        new ComponentSettings
+                        {
+                            ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                            State = ComponentEnablementState.Enable,
+                            ProjectServiceAccount = "project_service_account52bf6805",
+                            DetectorSettings =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new ComponentSettings.Types.DetectorSettings
+                                    {
+                                        State = ComponentEnablementState.Enable,
+                                    }
+                                },
+                            },
+                            Etag = "etage8ad7218",
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            WebSecurityScannerSettings = new WebSecurityScanner { },
+                            ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                            EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                            SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                            {
+                                NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                                AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                            },
+                        }
                     },
                 },
                 DetectorGroupSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new Settings.Types.DetectorGroupSettings()
+                        new Settings.Types.DetectorGroupSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -482,32 +1184,188 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             moq::Mock<SecurityCenterSettingsService.SecurityCenterSettingsServiceClient> mockGrpcClient = new moq::Mock<SecurityCenterSettingsService.SecurityCenterSettingsServiceClient>(moq::MockBehavior.Strict);
             UpdateSettingsRequest request = new UpdateSettingsRequest
             {
-                Settings = new Settings(),
-                UpdateMask = new wkt::FieldMask(),
+                Settings = new Settings
+                {
+                    SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
+                    BillingSettings = new BillingSettings
+                    {
+                        BillingTier = BillingTier.Unspecified,
+                        BillingType = BillingType.TrialSubscription,
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ExpireTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
+                    OrgServiceAccount = "org_service_accounte301d413",
+                    SinkSettings = new SinkSettings
+                    {
+                        LoggingSinkProject = "logging_sink_projectc631d2c5",
+                    },
+                    ComponentSettings =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new ComponentSettings
+                            {
+                                ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                                State = ComponentEnablementState.Enable,
+                                ProjectServiceAccount = "project_service_account52bf6805",
+                                DetectorSettings =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new ComponentSettings.Types.DetectorSettings
+                                        {
+                                            State = ComponentEnablementState.Enable,
+                                        }
+                                    },
+                                },
+                                Etag = "etage8ad7218",
+                                UpdateTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                WebSecurityScannerSettings = new WebSecurityScanner { },
+                                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                                {
+                                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                    {
+                                        ApprovedIdentities =
+                                        {
+                                            "approved_identitiese4f2c445",
+                                        },
+                                    },
+                                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                    {
+                                        ApprovedIdentities =
+                                        {
+                                            "approved_identitiese4f2c445",
+                                        },
+                                    },
+                                },
+                            }
+                        },
+                    },
+                    DetectorGroupSettings =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new Settings.Types.DetectorGroupSettings
+                            {
+                                State = ComponentEnablementState.Enable,
+                            }
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
-                BillingSettings = new BillingSettings(),
+                BillingSettings = new BillingSettings
+                {
+                    BillingTier = BillingTier.Unspecified,
+                    BillingType = BillingType.TrialSubscription,
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
                 OrgServiceAccount = "org_service_accounte301d413",
-                SinkSettings = new SinkSettings(),
+                SinkSettings = new SinkSettings
+                {
+                    LoggingSinkProject = "logging_sink_projectc631d2c5",
+                },
                 ComponentSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings()
+                        new ComponentSettings
+                        {
+                            ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                            State = ComponentEnablementState.Enable,
+                            ProjectServiceAccount = "project_service_account52bf6805",
+                            DetectorSettings =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new ComponentSettings.Types.DetectorSettings
+                                    {
+                                        State = ComponentEnablementState.Enable,
+                                    }
+                                },
+                            },
+                            Etag = "etage8ad7218",
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            WebSecurityScannerSettings = new WebSecurityScanner { },
+                            ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                            EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                            SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                            {
+                                NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                                AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                            },
+                        }
                     },
                 },
                 DetectorGroupSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new Settings.Types.DetectorGroupSettings()
+                        new Settings.Types.DetectorGroupSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -522,32 +1380,188 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             moq::Mock<SecurityCenterSettingsService.SecurityCenterSettingsServiceClient> mockGrpcClient = new moq::Mock<SecurityCenterSettingsService.SecurityCenterSettingsServiceClient>(moq::MockBehavior.Strict);
             UpdateSettingsRequest request = new UpdateSettingsRequest
             {
-                Settings = new Settings(),
-                UpdateMask = new wkt::FieldMask(),
+                Settings = new Settings
+                {
+                    SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
+                    BillingSettings = new BillingSettings
+                    {
+                        BillingTier = BillingTier.Unspecified,
+                        BillingType = BillingType.TrialSubscription,
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ExpireTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
+                    OrgServiceAccount = "org_service_accounte301d413",
+                    SinkSettings = new SinkSettings
+                    {
+                        LoggingSinkProject = "logging_sink_projectc631d2c5",
+                    },
+                    ComponentSettings =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new ComponentSettings
+                            {
+                                ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                                State = ComponentEnablementState.Enable,
+                                ProjectServiceAccount = "project_service_account52bf6805",
+                                DetectorSettings =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new ComponentSettings.Types.DetectorSettings
+                                        {
+                                            State = ComponentEnablementState.Enable,
+                                        }
+                                    },
+                                },
+                                Etag = "etage8ad7218",
+                                UpdateTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                WebSecurityScannerSettings = new WebSecurityScanner { },
+                                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                                {
+                                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                    {
+                                        ApprovedIdentities =
+                                        {
+                                            "approved_identitiese4f2c445",
+                                        },
+                                    },
+                                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                    {
+                                        ApprovedIdentities =
+                                        {
+                                            "approved_identitiese4f2c445",
+                                        },
+                                    },
+                                },
+                            }
+                        },
+                    },
+                    DetectorGroupSettings =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new Settings.Types.DetectorGroupSettings
+                            {
+                                State = ComponentEnablementState.Enable,
+                            }
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
-                BillingSettings = new BillingSettings(),
+                BillingSettings = new BillingSettings
+                {
+                    BillingTier = BillingTier.Unspecified,
+                    BillingType = BillingType.TrialSubscription,
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
                 OrgServiceAccount = "org_service_accounte301d413",
-                SinkSettings = new SinkSettings(),
+                SinkSettings = new SinkSettings
+                {
+                    LoggingSinkProject = "logging_sink_projectc631d2c5",
+                },
                 ComponentSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings()
+                        new ComponentSettings
+                        {
+                            ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                            State = ComponentEnablementState.Enable,
+                            ProjectServiceAccount = "project_service_account52bf6805",
+                            DetectorSettings =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new ComponentSettings.Types.DetectorSettings
+                                    {
+                                        State = ComponentEnablementState.Enable,
+                                    }
+                                },
+                            },
+                            Etag = "etage8ad7218",
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            WebSecurityScannerSettings = new WebSecurityScanner { },
+                            ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                            EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                            SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                            {
+                                NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                                AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                            },
+                        }
                     },
                 },
                 DetectorGroupSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new Settings.Types.DetectorGroupSettings()
+                        new Settings.Types.DetectorGroupSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -602,7 +1616,98 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             };
             BatchGetSettingsResponse expectedResponse = new BatchGetSettingsResponse
             {
-                Settings = { new Settings(), },
+                Settings =
+                {
+                    new Settings
+                    {
+                        SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
+                        BillingSettings = new BillingSettings
+                        {
+                            BillingTier = BillingTier.Unspecified,
+                            BillingType = BillingType.TrialSubscription,
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            ExpireTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
+                        OrgServiceAccount = "org_service_accounte301d413",
+                        SinkSettings = new SinkSettings
+                        {
+                            LoggingSinkProject = "logging_sink_projectc631d2c5",
+                        },
+                        ComponentSettings =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new ComponentSettings
+                                {
+                                    ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                                    State = ComponentEnablementState.Enable,
+                                    ProjectServiceAccount = "project_service_account52bf6805",
+                                    DetectorSettings =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new ComponentSettings.Types.DetectorSettings
+                                            {
+                                                State = ComponentEnablementState.Enable,
+                                            }
+                                        },
+                                    },
+                                    Etag = "etage8ad7218",
+                                    UpdateTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    WebSecurityScannerSettings = new WebSecurityScanner { },
+                                    ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                                    EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                                    SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                                    {
+                                        NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                        {
+                                            ApprovedIdentities =
+                                            {
+                                                "approved_identitiese4f2c445",
+                                            },
+                                        },
+                                        AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                        {
+                                            ApprovedIdentities =
+                                            {
+                                                "approved_identitiese4f2c445",
+                                            },
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                        DetectorGroupSettings =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new Settings.Types.DetectorGroupSettings
+                                {
+                                    State = ComponentEnablementState.Enable,
+                                }
+                            },
+                        },
+                        Etag = "etage8ad7218",
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.BatchGetSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -622,7 +1727,98 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             };
             BatchGetSettingsResponse expectedResponse = new BatchGetSettingsResponse
             {
-                Settings = { new Settings(), },
+                Settings =
+                {
+                    new Settings
+                    {
+                        SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
+                        BillingSettings = new BillingSettings
+                        {
+                            BillingTier = BillingTier.Unspecified,
+                            BillingType = BillingType.TrialSubscription,
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            ExpireTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
+                        OrgServiceAccount = "org_service_accounte301d413",
+                        SinkSettings = new SinkSettings
+                        {
+                            LoggingSinkProject = "logging_sink_projectc631d2c5",
+                        },
+                        ComponentSettings =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new ComponentSettings
+                                {
+                                    ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                                    State = ComponentEnablementState.Enable,
+                                    ProjectServiceAccount = "project_service_account52bf6805",
+                                    DetectorSettings =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new ComponentSettings.Types.DetectorSettings
+                                            {
+                                                State = ComponentEnablementState.Enable,
+                                            }
+                                        },
+                                    },
+                                    Etag = "etage8ad7218",
+                                    UpdateTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    WebSecurityScannerSettings = new WebSecurityScanner { },
+                                    ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                                    EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                                    SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                                    {
+                                        NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                        {
+                                            ApprovedIdentities =
+                                            {
+                                                "approved_identitiese4f2c445",
+                                            },
+                                        },
+                                        AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                        {
+                                            ApprovedIdentities =
+                                            {
+                                                "approved_identitiese4f2c445",
+                                            },
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                        DetectorGroupSettings =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new Settings.Types.DetectorGroupSettings
+                                {
+                                    State = ComponentEnablementState.Enable,
+                                }
+                            },
+                        },
+                        Etag = "etage8ad7218",
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.BatchGetSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchGetSettingsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -644,26 +1840,91 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
-                BillingSettings = new BillingSettings(),
+                BillingSettings = new BillingSettings
+                {
+                    BillingTier = BillingTier.Unspecified,
+                    BillingType = BillingType.TrialSubscription,
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
                 OrgServiceAccount = "org_service_accounte301d413",
-                SinkSettings = new SinkSettings(),
+                SinkSettings = new SinkSettings
+                {
+                    LoggingSinkProject = "logging_sink_projectc631d2c5",
+                },
                 ComponentSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings()
+                        new ComponentSettings
+                        {
+                            ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                            State = ComponentEnablementState.Enable,
+                            ProjectServiceAccount = "project_service_account52bf6805",
+                            DetectorSettings =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new ComponentSettings.Types.DetectorSettings
+                                    {
+                                        State = ComponentEnablementState.Enable,
+                                    }
+                                },
+                            },
+                            Etag = "etage8ad7218",
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            WebSecurityScannerSettings = new WebSecurityScanner { },
+                            ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                            EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                            SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                            {
+                                NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                                AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                            },
+                        }
                     },
                 },
                 DetectorGroupSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new Settings.Types.DetectorGroupSettings()
+                        new Settings.Types.DetectorGroupSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -683,26 +1944,91 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
-                BillingSettings = new BillingSettings(),
+                BillingSettings = new BillingSettings
+                {
+                    BillingTier = BillingTier.Unspecified,
+                    BillingType = BillingType.TrialSubscription,
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
                 OrgServiceAccount = "org_service_accounte301d413",
-                SinkSettings = new SinkSettings(),
+                SinkSettings = new SinkSettings
+                {
+                    LoggingSinkProject = "logging_sink_projectc631d2c5",
+                },
                 ComponentSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings()
+                        new ComponentSettings
+                        {
+                            ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                            State = ComponentEnablementState.Enable,
+                            ProjectServiceAccount = "project_service_account52bf6805",
+                            DetectorSettings =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new ComponentSettings.Types.DetectorSettings
+                                    {
+                                        State = ComponentEnablementState.Enable,
+                                    }
+                                },
+                            },
+                            Etag = "etage8ad7218",
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            WebSecurityScannerSettings = new WebSecurityScanner { },
+                            ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                            EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                            SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                            {
+                                NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                                AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                            },
+                        }
                     },
                 },
                 DetectorGroupSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new Settings.Types.DetectorGroupSettings()
+                        new Settings.Types.DetectorGroupSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -724,26 +2050,91 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
-                BillingSettings = new BillingSettings(),
+                BillingSettings = new BillingSettings
+                {
+                    BillingTier = BillingTier.Unspecified,
+                    BillingType = BillingType.TrialSubscription,
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
                 OrgServiceAccount = "org_service_accounte301d413",
-                SinkSettings = new SinkSettings(),
+                SinkSettings = new SinkSettings
+                {
+                    LoggingSinkProject = "logging_sink_projectc631d2c5",
+                },
                 ComponentSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings()
+                        new ComponentSettings
+                        {
+                            ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                            State = ComponentEnablementState.Enable,
+                            ProjectServiceAccount = "project_service_account52bf6805",
+                            DetectorSettings =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new ComponentSettings.Types.DetectorSettings
+                                    {
+                                        State = ComponentEnablementState.Enable,
+                                    }
+                                },
+                            },
+                            Etag = "etage8ad7218",
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            WebSecurityScannerSettings = new WebSecurityScanner { },
+                            ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                            EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                            SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                            {
+                                NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                                AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                            },
+                        }
                     },
                 },
                 DetectorGroupSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new Settings.Types.DetectorGroupSettings()
+                        new Settings.Types.DetectorGroupSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -763,26 +2154,91 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
-                BillingSettings = new BillingSettings(),
+                BillingSettings = new BillingSettings
+                {
+                    BillingTier = BillingTier.Unspecified,
+                    BillingType = BillingType.TrialSubscription,
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
                 OrgServiceAccount = "org_service_accounte301d413",
-                SinkSettings = new SinkSettings(),
+                SinkSettings = new SinkSettings
+                {
+                    LoggingSinkProject = "logging_sink_projectc631d2c5",
+                },
                 ComponentSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings()
+                        new ComponentSettings
+                        {
+                            ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                            State = ComponentEnablementState.Enable,
+                            ProjectServiceAccount = "project_service_account52bf6805",
+                            DetectorSettings =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new ComponentSettings.Types.DetectorSettings
+                                    {
+                                        State = ComponentEnablementState.Enable,
+                                    }
+                                },
+                            },
+                            Etag = "etage8ad7218",
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            WebSecurityScannerSettings = new WebSecurityScanner { },
+                            ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                            EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                            SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                            {
+                                NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                                AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                            },
+                        }
                     },
                 },
                 DetectorGroupSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new Settings.Types.DetectorGroupSettings()
+                        new Settings.Types.DetectorGroupSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -804,26 +2260,91 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
-                BillingSettings = new BillingSettings(),
+                BillingSettings = new BillingSettings
+                {
+                    BillingTier = BillingTier.Unspecified,
+                    BillingType = BillingType.TrialSubscription,
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
                 OrgServiceAccount = "org_service_accounte301d413",
-                SinkSettings = new SinkSettings(),
+                SinkSettings = new SinkSettings
+                {
+                    LoggingSinkProject = "logging_sink_projectc631d2c5",
+                },
                 ComponentSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings()
+                        new ComponentSettings
+                        {
+                            ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                            State = ComponentEnablementState.Enable,
+                            ProjectServiceAccount = "project_service_account52bf6805",
+                            DetectorSettings =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new ComponentSettings.Types.DetectorSettings
+                                    {
+                                        State = ComponentEnablementState.Enable,
+                                    }
+                                },
+                            },
+                            Etag = "etage8ad7218",
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            WebSecurityScannerSettings = new WebSecurityScanner { },
+                            ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                            EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                            SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                            {
+                                NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                                AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                            },
+                        }
                     },
                 },
                 DetectorGroupSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new Settings.Types.DetectorGroupSettings()
+                        new Settings.Types.DetectorGroupSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -843,26 +2364,91 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             Settings expectedResponse = new Settings
             {
                 SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
-                BillingSettings = new BillingSettings(),
+                BillingSettings = new BillingSettings
+                {
+                    BillingTier = BillingTier.Unspecified,
+                    BillingType = BillingType.TrialSubscription,
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
                 OrgServiceAccount = "org_service_accounte301d413",
-                SinkSettings = new SinkSettings(),
+                SinkSettings = new SinkSettings
+                {
+                    LoggingSinkProject = "logging_sink_projectc631d2c5",
+                },
                 ComponentSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings()
+                        new ComponentSettings
+                        {
+                            ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                            State = ComponentEnablementState.Enable,
+                            ProjectServiceAccount = "project_service_account52bf6805",
+                            DetectorSettings =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new ComponentSettings.Types.DetectorSettings
+                                    {
+                                        State = ComponentEnablementState.Enable,
+                                    }
+                                },
+                            },
+                            Etag = "etage8ad7218",
+                            UpdateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            WebSecurityScannerSettings = new WebSecurityScanner { },
+                            ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                            EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                            SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                            {
+                                NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                                AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                {
+                                    ApprovedIdentities =
+                                    {
+                                        "approved_identitiese4f2c445",
+                                    },
+                                },
+                            },
+                        }
                     },
                 },
                 DetectorGroupSettings =
                 {
                     {
                         "key8a0b6e3c",
-                        new Settings.Types.DetectorGroupSettings()
+                        new Settings.Types.DetectorGroupSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Settings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -882,12 +2468,106 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 Requests =
                 {
-                    new CalculateEffectiveSettingsRequest(),
+                    new CalculateEffectiveSettingsRequest
+                    {
+                        SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
+                    },
                 },
             };
             BatchCalculateEffectiveSettingsResponse expectedResponse = new BatchCalculateEffectiveSettingsResponse
             {
-                Settings = { new Settings(), },
+                Settings =
+                {
+                    new Settings
+                    {
+                        SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
+                        BillingSettings = new BillingSettings
+                        {
+                            BillingTier = BillingTier.Unspecified,
+                            BillingType = BillingType.TrialSubscription,
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            ExpireTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
+                        OrgServiceAccount = "org_service_accounte301d413",
+                        SinkSettings = new SinkSettings
+                        {
+                            LoggingSinkProject = "logging_sink_projectc631d2c5",
+                        },
+                        ComponentSettings =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new ComponentSettings
+                                {
+                                    ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                                    State = ComponentEnablementState.Enable,
+                                    ProjectServiceAccount = "project_service_account52bf6805",
+                                    DetectorSettings =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new ComponentSettings.Types.DetectorSettings
+                                            {
+                                                State = ComponentEnablementState.Enable,
+                                            }
+                                        },
+                                    },
+                                    Etag = "etage8ad7218",
+                                    UpdateTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    WebSecurityScannerSettings = new WebSecurityScanner { },
+                                    ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                                    EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                                    SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                                    {
+                                        NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                        {
+                                            ApprovedIdentities =
+                                            {
+                                                "approved_identitiese4f2c445",
+                                            },
+                                        },
+                                        AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                        {
+                                            ApprovedIdentities =
+                                            {
+                                                "approved_identitiese4f2c445",
+                                            },
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                        DetectorGroupSettings =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new Settings.Types.DetectorGroupSettings
+                                {
+                                    State = ComponentEnablementState.Enable,
+                                }
+                            },
+                        },
+                        Etag = "etage8ad7218",
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.BatchCalculateEffectiveSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -905,12 +2585,106 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
                 Requests =
                 {
-                    new CalculateEffectiveSettingsRequest(),
+                    new CalculateEffectiveSettingsRequest
+                    {
+                        SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
+                    },
                 },
             };
             BatchCalculateEffectiveSettingsResponse expectedResponse = new BatchCalculateEffectiveSettingsResponse
             {
-                Settings = { new Settings(), },
+                Settings =
+                {
+                    new Settings
+                    {
+                        SettingsName = SettingsName.FromOrganization("[ORGANIZATION]"),
+                        BillingSettings = new BillingSettings
+                        {
+                            BillingTier = BillingTier.Unspecified,
+                            BillingType = BillingType.TrialSubscription,
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            ExpireTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                        State = Settings.Types.OnboardingState.OrgServiceAccountCreated,
+                        OrgServiceAccount = "org_service_accounte301d413",
+                        SinkSettings = new SinkSettings
+                        {
+                            LoggingSinkProject = "logging_sink_projectc631d2c5",
+                        },
+                        ComponentSettings =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new ComponentSettings
+                                {
+                                    ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                                    State = ComponentEnablementState.Enable,
+                                    ProjectServiceAccount = "project_service_account52bf6805",
+                                    DetectorSettings =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new ComponentSettings.Types.DetectorSettings
+                                            {
+                                                State = ComponentEnablementState.Enable,
+                                            }
+                                        },
+                                    },
+                                    Etag = "etage8ad7218",
+                                    UpdateTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    WebSecurityScannerSettings = new WebSecurityScanner { },
+                                    ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                                    EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                                    SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                                    {
+                                        NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                                        {
+                                            ApprovedIdentities =
+                                            {
+                                                "approved_identitiese4f2c445",
+                                            },
+                                        },
+                                        AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                                        {
+                                            ApprovedIdentities =
+                                            {
+                                                "approved_identitiese4f2c445",
+                                            },
+                                        },
+                                    },
+                                }
+                            },
+                        },
+                        DetectorGroupSettings =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new Settings.Types.DetectorGroupSettings
+                                {
+                                    State = ComponentEnablementState.Enable,
+                                }
+                            },
+                        },
+                        Etag = "etage8ad7218",
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.BatchCalculateEffectiveSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchCalculateEffectiveSettingsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -938,15 +2712,38 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings.Types.DetectorSettings()
+                        new ComponentSettings.Types.DetectorSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                WebSecurityScannerSettings = new WebSecurityScanner(),
-                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings(),
-                EventThreatDetectionSettings = new EventThreatDetectionSettings(),
-                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                WebSecurityScannerSettings = new WebSecurityScanner { },
+                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                {
+                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -972,15 +2769,38 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings.Types.DetectorSettings()
+                        new ComponentSettings.Types.DetectorSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                WebSecurityScannerSettings = new WebSecurityScanner(),
-                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings(),
-                EventThreatDetectionSettings = new EventThreatDetectionSettings(),
-                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                WebSecurityScannerSettings = new WebSecurityScanner { },
+                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                {
+                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComponentSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -1008,15 +2828,38 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings.Types.DetectorSettings()
+                        new ComponentSettings.Types.DetectorSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                WebSecurityScannerSettings = new WebSecurityScanner(),
-                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings(),
-                EventThreatDetectionSettings = new EventThreatDetectionSettings(),
-                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                WebSecurityScannerSettings = new WebSecurityScanner { },
+                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                {
+                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -1042,15 +2885,38 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings.Types.DetectorSettings()
+                        new ComponentSettings.Types.DetectorSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                WebSecurityScannerSettings = new WebSecurityScanner(),
-                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings(),
-                EventThreatDetectionSettings = new EventThreatDetectionSettings(),
-                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                WebSecurityScannerSettings = new WebSecurityScanner { },
+                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                {
+                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComponentSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -1078,15 +2944,38 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings.Types.DetectorSettings()
+                        new ComponentSettings.Types.DetectorSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                WebSecurityScannerSettings = new WebSecurityScanner(),
-                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings(),
-                EventThreatDetectionSettings = new EventThreatDetectionSettings(),
-                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                WebSecurityScannerSettings = new WebSecurityScanner { },
+                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                {
+                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -1112,15 +3001,38 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings.Types.DetectorSettings()
+                        new ComponentSettings.Types.DetectorSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                WebSecurityScannerSettings = new WebSecurityScanner(),
-                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings(),
-                EventThreatDetectionSettings = new EventThreatDetectionSettings(),
-                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                WebSecurityScannerSettings = new WebSecurityScanner { },
+                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                {
+                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComponentSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -1137,8 +3049,52 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             moq::Mock<SecurityCenterSettingsService.SecurityCenterSettingsServiceClient> mockGrpcClient = new moq::Mock<SecurityCenterSettingsService.SecurityCenterSettingsServiceClient>(moq::MockBehavior.Strict);
             UpdateComponentSettingsRequest request = new UpdateComponentSettingsRequest
             {
-                ComponentSettings = new ComponentSettings(),
-                UpdateMask = new wkt::FieldMask(),
+                ComponentSettings = new ComponentSettings
+                {
+                    ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                    State = ComponentEnablementState.Enable,
+                    ProjectServiceAccount = "project_service_account52bf6805",
+                    DetectorSettings =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new ComponentSettings.Types.DetectorSettings
+                            {
+                                State = ComponentEnablementState.Enable,
+                            }
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    WebSecurityScannerSettings = new WebSecurityScanner { },
+                    ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                    EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                    SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                    {
+                        NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                        {
+                            ApprovedIdentities =
+                            {
+                                "approved_identitiese4f2c445",
+                            },
+                        },
+                        AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                        {
+                            ApprovedIdentities =
+                            {
+                                "approved_identitiese4f2c445",
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             ComponentSettings expectedResponse = new ComponentSettings
             {
@@ -1149,15 +3105,38 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings.Types.DetectorSettings()
+                        new ComponentSettings.Types.DetectorSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                WebSecurityScannerSettings = new WebSecurityScanner(),
-                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings(),
-                EventThreatDetectionSettings = new EventThreatDetectionSettings(),
-                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                WebSecurityScannerSettings = new WebSecurityScanner { },
+                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                {
+                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -1172,8 +3151,52 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             moq::Mock<SecurityCenterSettingsService.SecurityCenterSettingsServiceClient> mockGrpcClient = new moq::Mock<SecurityCenterSettingsService.SecurityCenterSettingsServiceClient>(moq::MockBehavior.Strict);
             UpdateComponentSettingsRequest request = new UpdateComponentSettingsRequest
             {
-                ComponentSettings = new ComponentSettings(),
-                UpdateMask = new wkt::FieldMask(),
+                ComponentSettings = new ComponentSettings
+                {
+                    ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                    State = ComponentEnablementState.Enable,
+                    ProjectServiceAccount = "project_service_account52bf6805",
+                    DetectorSettings =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new ComponentSettings.Types.DetectorSettings
+                            {
+                                State = ComponentEnablementState.Enable,
+                            }
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    WebSecurityScannerSettings = new WebSecurityScanner { },
+                    ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                    EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                    SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                    {
+                        NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                        {
+                            ApprovedIdentities =
+                            {
+                                "approved_identitiese4f2c445",
+                            },
+                        },
+                        AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                        {
+                            ApprovedIdentities =
+                            {
+                                "approved_identitiese4f2c445",
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             ComponentSettings expectedResponse = new ComponentSettings
             {
@@ -1184,15 +3207,38 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings.Types.DetectorSettings()
+                        new ComponentSettings.Types.DetectorSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                WebSecurityScannerSettings = new WebSecurityScanner(),
-                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings(),
-                EventThreatDetectionSettings = new EventThreatDetectionSettings(),
-                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                WebSecurityScannerSettings = new WebSecurityScanner { },
+                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                {
+                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComponentSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -1209,8 +3255,52 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             moq::Mock<SecurityCenterSettingsService.SecurityCenterSettingsServiceClient> mockGrpcClient = new moq::Mock<SecurityCenterSettingsService.SecurityCenterSettingsServiceClient>(moq::MockBehavior.Strict);
             UpdateComponentSettingsRequest request = new UpdateComponentSettingsRequest
             {
-                ComponentSettings = new ComponentSettings(),
-                UpdateMask = new wkt::FieldMask(),
+                ComponentSettings = new ComponentSettings
+                {
+                    ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                    State = ComponentEnablementState.Enable,
+                    ProjectServiceAccount = "project_service_account52bf6805",
+                    DetectorSettings =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new ComponentSettings.Types.DetectorSettings
+                            {
+                                State = ComponentEnablementState.Enable,
+                            }
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    WebSecurityScannerSettings = new WebSecurityScanner { },
+                    ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                    EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                    SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                    {
+                        NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                        {
+                            ApprovedIdentities =
+                            {
+                                "approved_identitiese4f2c445",
+                            },
+                        },
+                        AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                        {
+                            ApprovedIdentities =
+                            {
+                                "approved_identitiese4f2c445",
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             ComponentSettings expectedResponse = new ComponentSettings
             {
@@ -1221,15 +3311,38 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings.Types.DetectorSettings()
+                        new ComponentSettings.Types.DetectorSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                WebSecurityScannerSettings = new WebSecurityScanner(),
-                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings(),
-                EventThreatDetectionSettings = new EventThreatDetectionSettings(),
-                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                WebSecurityScannerSettings = new WebSecurityScanner { },
+                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                {
+                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -1244,8 +3357,52 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
             moq::Mock<SecurityCenterSettingsService.SecurityCenterSettingsServiceClient> mockGrpcClient = new moq::Mock<SecurityCenterSettingsService.SecurityCenterSettingsServiceClient>(moq::MockBehavior.Strict);
             UpdateComponentSettingsRequest request = new UpdateComponentSettingsRequest
             {
-                ComponentSettings = new ComponentSettings(),
-                UpdateMask = new wkt::FieldMask(),
+                ComponentSettings = new ComponentSettings
+                {
+                    ComponentSettingsName = ComponentSettingsName.FromOrganizationComponent("[ORGANIZATION]", "[COMPONENT]"),
+                    State = ComponentEnablementState.Enable,
+                    ProjectServiceAccount = "project_service_account52bf6805",
+                    DetectorSettings =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new ComponentSettings.Types.DetectorSettings
+                            {
+                                State = ComponentEnablementState.Enable,
+                            }
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    WebSecurityScannerSettings = new WebSecurityScanner { },
+                    ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                    EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                    SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                    {
+                        NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                        {
+                            ApprovedIdentities =
+                            {
+                                "approved_identitiese4f2c445",
+                            },
+                        },
+                        AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                        {
+                            ApprovedIdentities =
+                            {
+                                "approved_identitiese4f2c445",
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             ComponentSettings expectedResponse = new ComponentSettings
             {
@@ -1256,15 +3413,38 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings.Types.DetectorSettings()
+                        new ComponentSettings.Types.DetectorSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                WebSecurityScannerSettings = new WebSecurityScanner(),
-                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings(),
-                EventThreatDetectionSettings = new EventThreatDetectionSettings(),
-                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                WebSecurityScannerSettings = new WebSecurityScanner { },
+                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                {
+                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComponentSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -1325,15 +3505,38 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings.Types.DetectorSettings()
+                        new ComponentSettings.Types.DetectorSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                WebSecurityScannerSettings = new WebSecurityScanner(),
-                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings(),
-                EventThreatDetectionSettings = new EventThreatDetectionSettings(),
-                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                WebSecurityScannerSettings = new WebSecurityScanner { },
+                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                {
+                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -1359,15 +3562,38 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings.Types.DetectorSettings()
+                        new ComponentSettings.Types.DetectorSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                WebSecurityScannerSettings = new WebSecurityScanner(),
-                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings(),
-                EventThreatDetectionSettings = new EventThreatDetectionSettings(),
-                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                WebSecurityScannerSettings = new WebSecurityScanner { },
+                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                {
+                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComponentSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -1395,15 +3621,38 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings.Types.DetectorSettings()
+                        new ComponentSettings.Types.DetectorSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                WebSecurityScannerSettings = new WebSecurityScanner(),
-                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings(),
-                EventThreatDetectionSettings = new EventThreatDetectionSettings(),
-                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                WebSecurityScannerSettings = new WebSecurityScanner { },
+                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                {
+                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -1429,15 +3678,38 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings.Types.DetectorSettings()
+                        new ComponentSettings.Types.DetectorSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                WebSecurityScannerSettings = new WebSecurityScanner(),
-                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings(),
-                EventThreatDetectionSettings = new EventThreatDetectionSettings(),
-                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                WebSecurityScannerSettings = new WebSecurityScanner { },
+                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                {
+                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComponentSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -1465,15 +3737,38 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings.Types.DetectorSettings()
+                        new ComponentSettings.Types.DetectorSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                WebSecurityScannerSettings = new WebSecurityScanner(),
-                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings(),
-                EventThreatDetectionSettings = new EventThreatDetectionSettings(),
-                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                WebSecurityScannerSettings = new WebSecurityScanner { },
+                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                {
+                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveComponentSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
@@ -1499,15 +3794,38 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Tests
                 {
                     {
                         "key8a0b6e3c",
-                        new ComponentSettings.Types.DetectorSettings()
+                        new ComponentSettings.Types.DetectorSettings
+                        {
+                            State = ComponentEnablementState.Enable,
+                        }
                     },
                 },
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                WebSecurityScannerSettings = new WebSecurityScanner(),
-                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings(),
-                EventThreatDetectionSettings = new EventThreatDetectionSettings(),
-                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                WebSecurityScannerSettings = new WebSecurityScanner { },
+                ContainerThreatDetectionSettings = new ContainerThreatDetectionSettings { },
+                EventThreatDetectionSettings = new EventThreatDetectionSettings { },
+                SecurityHealthAnalyticsSettings = new SecurityHealthAnalyticsSettings
+                {
+                    NonOrgIamMemberSettings = new SecurityHealthAnalyticsSettings.Types.NonOrgIamMemberSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                    AdminServiceAccountSettings = new SecurityHealthAnalyticsSettings.Types.AdminServiceAccountSettings
+                    {
+                        ApprovedIdentities =
+                        {
+                            "approved_identitiese4f2c445",
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateEffectiveComponentSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComponentSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterSettingsServiceClient client = new SecurityCenterSettingsServiceClientImpl(mockGrpcClient.Object, null);
