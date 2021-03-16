@@ -43,7 +43,39 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
             };
             SuggestQueriesResponse expectedResponse = new SuggestQueriesResponse
             {
-                Suggestions = { new Suggestion(), },
+                Suggestions =
+                {
+                    new Suggestion
+                    {
+                        SuggestionInfo = new SuggestionInfo
+                        {
+                            AnnotatedSuggestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            QueryMatches =
+                            {
+                                new SuggestionInfo.Types.MatchInfo
+                                {
+                                    StartCharIndex = 1743095493,
+                                    Length = 2088739887,
+                                },
+                            },
+                        },
+                        RankingScore = -5.764684707908099E+17,
+                        SuggestionType = SuggestionType.Template,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.SuggestQueries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoSuggestionServiceClient client = new AutoSuggestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -68,7 +100,39 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
             };
             SuggestQueriesResponse expectedResponse = new SuggestQueriesResponse
             {
-                Suggestions = { new Suggestion(), },
+                Suggestions =
+                {
+                    new Suggestion
+                    {
+                        SuggestionInfo = new SuggestionInfo
+                        {
+                            AnnotatedSuggestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            QueryMatches =
+                            {
+                                new SuggestionInfo.Types.MatchInfo
+                                {
+                                    StartCharIndex = 1743095493,
+                                    Length = 2088739887,
+                                },
+                            },
+                        },
+                        RankingScore = -5.764684707908099E+17,
+                        SuggestionType = SuggestionType.Template,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.SuggestQueriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestQueriesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoSuggestionServiceClient client = new AutoSuggestionServiceClientImpl(mockGrpcClient.Object, null);

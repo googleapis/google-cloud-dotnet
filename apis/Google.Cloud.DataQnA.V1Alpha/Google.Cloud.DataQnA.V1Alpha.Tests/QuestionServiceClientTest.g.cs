@@ -16,7 +16,9 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gr = Google.Rpc;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -35,7 +37,10 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
             GetQuestionRequest request = new GetQuestionRequest
             {
                 QuestionName = QuestionName.FromProjectLocationQuestion("[PROJECT]", "[LOCATION]", "[QUESTION]"),
-                ReadMask = new wkt::FieldMask(),
+                ReadMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Question expectedResponse = new Question
             {
@@ -46,15 +51,146 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 {
                     "data_source_annotationscbcadb22",
                 },
-                InterpretError = new InterpretError(),
+                InterpretError = new InterpretError
+                {
+                    Message = "message0231e778",
+                    Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                    Details = new InterpretError.Types.InterpretErrorDetails
+                    {
+                        UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                        {
+                            Operators =
+                            {
+                                "operators35fb9709",
+                            },
+                            Intent = { "intentd5c748fa", },
+                        },
+                        IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                        {
+                            Entities =
+                            {
+                                InterpretEntity.Unspecified,
+                            },
+                        },
+                        AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                    },
+                },
                 Interpretations =
                 {
-                    new Interpretation(),
+                    new Interpretation
+                    {
+                        DataSources =
+                        {
+                            "data_sources8e896846",
+                        },
+                        Confidence = 8.101505773561116E+17,
+                        UnusedPhrases =
+                        {
+                            "unused_phrases25e82b64",
+                        },
+                        HumanReadable = new HumanReadable
+                        {
+                            GeneratedInterpretation = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            OriginalQuestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                        },
+                        InterpretationStructure = new InterpretationStructure
+                        {
+                            VisualizationTypes =
+                            {
+                                InterpretationStructure.Types.VisualizationType.BarChart,
+                            },
+                            ColumnInfo =
+                            {
+                                new InterpretationStructure.Types.ColumnInfo
+                                {
+                                    OutputAlias = "output_aliascf122cc6",
+                                    DisplayName = "display_name137f65c2",
+                                },
+                            },
+                        },
+                        DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                        ExecutionInfo = new ExecutionInfo
+                        {
+                            JobCreationStatus = new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            BigqueryJob = new BigQueryJob
+                            {
+                                JobId = "job_id38ea97d6",
+                                ProjectId = "project_id43ad98b0",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UserEmail = "user_emaildc7bc240",
-                DebugFlags = new DebugFlags(),
-                DebugInfo = new wkt::Any(),
+                DebugFlags = new DebugFlags
+                {
+                    IncludeVaQuery = true,
+                    IncludeNestedVaQuery = false,
+                    IncludeHumanInterpretation = false,
+                    IncludeAquaDebugResponse = false,
+                    TimeOverride = -865841396904032937L,
+                    IsInternalGoogleUser = false,
+                    IgnoreCache = true,
+                    IncludeSearchEntitiesRpc = false,
+                    IncludeListColumnAnnotationsRpc = true,
+                    IncludeVirtualAnalystEntities = true,
+                    IncludeTableList = false,
+                    IncludeDomainList = true,
+                },
+                DebugInfo = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.GetQuestion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -70,7 +206,10 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
             GetQuestionRequest request = new GetQuestionRequest
             {
                 QuestionName = QuestionName.FromProjectLocationQuestion("[PROJECT]", "[LOCATION]", "[QUESTION]"),
-                ReadMask = new wkt::FieldMask(),
+                ReadMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Question expectedResponse = new Question
             {
@@ -81,15 +220,146 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 {
                     "data_source_annotationscbcadb22",
                 },
-                InterpretError = new InterpretError(),
+                InterpretError = new InterpretError
+                {
+                    Message = "message0231e778",
+                    Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                    Details = new InterpretError.Types.InterpretErrorDetails
+                    {
+                        UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                        {
+                            Operators =
+                            {
+                                "operators35fb9709",
+                            },
+                            Intent = { "intentd5c748fa", },
+                        },
+                        IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                        {
+                            Entities =
+                            {
+                                InterpretEntity.Unspecified,
+                            },
+                        },
+                        AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                    },
+                },
                 Interpretations =
                 {
-                    new Interpretation(),
+                    new Interpretation
+                    {
+                        DataSources =
+                        {
+                            "data_sources8e896846",
+                        },
+                        Confidence = 8.101505773561116E+17,
+                        UnusedPhrases =
+                        {
+                            "unused_phrases25e82b64",
+                        },
+                        HumanReadable = new HumanReadable
+                        {
+                            GeneratedInterpretation = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            OriginalQuestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                        },
+                        InterpretationStructure = new InterpretationStructure
+                        {
+                            VisualizationTypes =
+                            {
+                                InterpretationStructure.Types.VisualizationType.BarChart,
+                            },
+                            ColumnInfo =
+                            {
+                                new InterpretationStructure.Types.ColumnInfo
+                                {
+                                    OutputAlias = "output_aliascf122cc6",
+                                    DisplayName = "display_name137f65c2",
+                                },
+                            },
+                        },
+                        DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                        ExecutionInfo = new ExecutionInfo
+                        {
+                            JobCreationStatus = new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            BigqueryJob = new BigQueryJob
+                            {
+                                JobId = "job_id38ea97d6",
+                                ProjectId = "project_id43ad98b0",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UserEmail = "user_emaildc7bc240",
-                DebugFlags = new DebugFlags(),
-                DebugInfo = new wkt::Any(),
+                DebugFlags = new DebugFlags
+                {
+                    IncludeVaQuery = true,
+                    IncludeNestedVaQuery = false,
+                    IncludeHumanInterpretation = false,
+                    IncludeAquaDebugResponse = false,
+                    TimeOverride = -865841396904032937L,
+                    IsInternalGoogleUser = false,
+                    IgnoreCache = true,
+                    IncludeSearchEntitiesRpc = false,
+                    IncludeListColumnAnnotationsRpc = true,
+                    IncludeVirtualAnalystEntities = true,
+                    IncludeTableList = false,
+                    IncludeDomainList = true,
+                },
+                DebugInfo = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.GetQuestionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Question>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -117,15 +387,146 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 {
                     "data_source_annotationscbcadb22",
                 },
-                InterpretError = new InterpretError(),
+                InterpretError = new InterpretError
+                {
+                    Message = "message0231e778",
+                    Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                    Details = new InterpretError.Types.InterpretErrorDetails
+                    {
+                        UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                        {
+                            Operators =
+                            {
+                                "operators35fb9709",
+                            },
+                            Intent = { "intentd5c748fa", },
+                        },
+                        IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                        {
+                            Entities =
+                            {
+                                InterpretEntity.Unspecified,
+                            },
+                        },
+                        AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                    },
+                },
                 Interpretations =
                 {
-                    new Interpretation(),
+                    new Interpretation
+                    {
+                        DataSources =
+                        {
+                            "data_sources8e896846",
+                        },
+                        Confidence = 8.101505773561116E+17,
+                        UnusedPhrases =
+                        {
+                            "unused_phrases25e82b64",
+                        },
+                        HumanReadable = new HumanReadable
+                        {
+                            GeneratedInterpretation = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            OriginalQuestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                        },
+                        InterpretationStructure = new InterpretationStructure
+                        {
+                            VisualizationTypes =
+                            {
+                                InterpretationStructure.Types.VisualizationType.BarChart,
+                            },
+                            ColumnInfo =
+                            {
+                                new InterpretationStructure.Types.ColumnInfo
+                                {
+                                    OutputAlias = "output_aliascf122cc6",
+                                    DisplayName = "display_name137f65c2",
+                                },
+                            },
+                        },
+                        DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                        ExecutionInfo = new ExecutionInfo
+                        {
+                            JobCreationStatus = new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            BigqueryJob = new BigQueryJob
+                            {
+                                JobId = "job_id38ea97d6",
+                                ProjectId = "project_id43ad98b0",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UserEmail = "user_emaildc7bc240",
-                DebugFlags = new DebugFlags(),
-                DebugInfo = new wkt::Any(),
+                DebugFlags = new DebugFlags
+                {
+                    IncludeVaQuery = true,
+                    IncludeNestedVaQuery = false,
+                    IncludeHumanInterpretation = false,
+                    IncludeAquaDebugResponse = false,
+                    TimeOverride = -865841396904032937L,
+                    IsInternalGoogleUser = false,
+                    IgnoreCache = true,
+                    IncludeSearchEntitiesRpc = false,
+                    IncludeListColumnAnnotationsRpc = true,
+                    IncludeVirtualAnalystEntities = true,
+                    IncludeTableList = false,
+                    IncludeDomainList = true,
+                },
+                DebugInfo = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.GetQuestion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -151,15 +552,146 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 {
                     "data_source_annotationscbcadb22",
                 },
-                InterpretError = new InterpretError(),
+                InterpretError = new InterpretError
+                {
+                    Message = "message0231e778",
+                    Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                    Details = new InterpretError.Types.InterpretErrorDetails
+                    {
+                        UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                        {
+                            Operators =
+                            {
+                                "operators35fb9709",
+                            },
+                            Intent = { "intentd5c748fa", },
+                        },
+                        IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                        {
+                            Entities =
+                            {
+                                InterpretEntity.Unspecified,
+                            },
+                        },
+                        AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                    },
+                },
                 Interpretations =
                 {
-                    new Interpretation(),
+                    new Interpretation
+                    {
+                        DataSources =
+                        {
+                            "data_sources8e896846",
+                        },
+                        Confidence = 8.101505773561116E+17,
+                        UnusedPhrases =
+                        {
+                            "unused_phrases25e82b64",
+                        },
+                        HumanReadable = new HumanReadable
+                        {
+                            GeneratedInterpretation = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            OriginalQuestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                        },
+                        InterpretationStructure = new InterpretationStructure
+                        {
+                            VisualizationTypes =
+                            {
+                                InterpretationStructure.Types.VisualizationType.BarChart,
+                            },
+                            ColumnInfo =
+                            {
+                                new InterpretationStructure.Types.ColumnInfo
+                                {
+                                    OutputAlias = "output_aliascf122cc6",
+                                    DisplayName = "display_name137f65c2",
+                                },
+                            },
+                        },
+                        DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                        ExecutionInfo = new ExecutionInfo
+                        {
+                            JobCreationStatus = new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            BigqueryJob = new BigQueryJob
+                            {
+                                JobId = "job_id38ea97d6",
+                                ProjectId = "project_id43ad98b0",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UserEmail = "user_emaildc7bc240",
-                DebugFlags = new DebugFlags(),
-                DebugInfo = new wkt::Any(),
+                DebugFlags = new DebugFlags
+                {
+                    IncludeVaQuery = true,
+                    IncludeNestedVaQuery = false,
+                    IncludeHumanInterpretation = false,
+                    IncludeAquaDebugResponse = false,
+                    TimeOverride = -865841396904032937L,
+                    IsInternalGoogleUser = false,
+                    IgnoreCache = true,
+                    IncludeSearchEntitiesRpc = false,
+                    IncludeListColumnAnnotationsRpc = true,
+                    IncludeVirtualAnalystEntities = true,
+                    IncludeTableList = false,
+                    IncludeDomainList = true,
+                },
+                DebugInfo = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.GetQuestionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Question>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -187,15 +719,146 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 {
                     "data_source_annotationscbcadb22",
                 },
-                InterpretError = new InterpretError(),
+                InterpretError = new InterpretError
+                {
+                    Message = "message0231e778",
+                    Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                    Details = new InterpretError.Types.InterpretErrorDetails
+                    {
+                        UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                        {
+                            Operators =
+                            {
+                                "operators35fb9709",
+                            },
+                            Intent = { "intentd5c748fa", },
+                        },
+                        IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                        {
+                            Entities =
+                            {
+                                InterpretEntity.Unspecified,
+                            },
+                        },
+                        AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                    },
+                },
                 Interpretations =
                 {
-                    new Interpretation(),
+                    new Interpretation
+                    {
+                        DataSources =
+                        {
+                            "data_sources8e896846",
+                        },
+                        Confidence = 8.101505773561116E+17,
+                        UnusedPhrases =
+                        {
+                            "unused_phrases25e82b64",
+                        },
+                        HumanReadable = new HumanReadable
+                        {
+                            GeneratedInterpretation = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            OriginalQuestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                        },
+                        InterpretationStructure = new InterpretationStructure
+                        {
+                            VisualizationTypes =
+                            {
+                                InterpretationStructure.Types.VisualizationType.BarChart,
+                            },
+                            ColumnInfo =
+                            {
+                                new InterpretationStructure.Types.ColumnInfo
+                                {
+                                    OutputAlias = "output_aliascf122cc6",
+                                    DisplayName = "display_name137f65c2",
+                                },
+                            },
+                        },
+                        DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                        ExecutionInfo = new ExecutionInfo
+                        {
+                            JobCreationStatus = new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            BigqueryJob = new BigQueryJob
+                            {
+                                JobId = "job_id38ea97d6",
+                                ProjectId = "project_id43ad98b0",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UserEmail = "user_emaildc7bc240",
-                DebugFlags = new DebugFlags(),
-                DebugInfo = new wkt::Any(),
+                DebugFlags = new DebugFlags
+                {
+                    IncludeVaQuery = true,
+                    IncludeNestedVaQuery = false,
+                    IncludeHumanInterpretation = false,
+                    IncludeAquaDebugResponse = false,
+                    TimeOverride = -865841396904032937L,
+                    IsInternalGoogleUser = false,
+                    IgnoreCache = true,
+                    IncludeSearchEntitiesRpc = false,
+                    IncludeListColumnAnnotationsRpc = true,
+                    IncludeVirtualAnalystEntities = true,
+                    IncludeTableList = false,
+                    IncludeDomainList = true,
+                },
+                DebugInfo = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.GetQuestion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -221,15 +884,146 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 {
                     "data_source_annotationscbcadb22",
                 },
-                InterpretError = new InterpretError(),
+                InterpretError = new InterpretError
+                {
+                    Message = "message0231e778",
+                    Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                    Details = new InterpretError.Types.InterpretErrorDetails
+                    {
+                        UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                        {
+                            Operators =
+                            {
+                                "operators35fb9709",
+                            },
+                            Intent = { "intentd5c748fa", },
+                        },
+                        IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                        {
+                            Entities =
+                            {
+                                InterpretEntity.Unspecified,
+                            },
+                        },
+                        AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                    },
+                },
                 Interpretations =
                 {
-                    new Interpretation(),
+                    new Interpretation
+                    {
+                        DataSources =
+                        {
+                            "data_sources8e896846",
+                        },
+                        Confidence = 8.101505773561116E+17,
+                        UnusedPhrases =
+                        {
+                            "unused_phrases25e82b64",
+                        },
+                        HumanReadable = new HumanReadable
+                        {
+                            GeneratedInterpretation = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            OriginalQuestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                        },
+                        InterpretationStructure = new InterpretationStructure
+                        {
+                            VisualizationTypes =
+                            {
+                                InterpretationStructure.Types.VisualizationType.BarChart,
+                            },
+                            ColumnInfo =
+                            {
+                                new InterpretationStructure.Types.ColumnInfo
+                                {
+                                    OutputAlias = "output_aliascf122cc6",
+                                    DisplayName = "display_name137f65c2",
+                                },
+                            },
+                        },
+                        DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                        ExecutionInfo = new ExecutionInfo
+                        {
+                            JobCreationStatus = new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            BigqueryJob = new BigQueryJob
+                            {
+                                JobId = "job_id38ea97d6",
+                                ProjectId = "project_id43ad98b0",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UserEmail = "user_emaildc7bc240",
-                DebugFlags = new DebugFlags(),
-                DebugInfo = new wkt::Any(),
+                DebugFlags = new DebugFlags
+                {
+                    IncludeVaQuery = true,
+                    IncludeNestedVaQuery = false,
+                    IncludeHumanInterpretation = false,
+                    IncludeAquaDebugResponse = false,
+                    TimeOverride = -865841396904032937L,
+                    IsInternalGoogleUser = false,
+                    IgnoreCache = true,
+                    IncludeSearchEntitiesRpc = false,
+                    IncludeListColumnAnnotationsRpc = true,
+                    IncludeVirtualAnalystEntities = true,
+                    IncludeTableList = false,
+                    IncludeDomainList = true,
+                },
+                DebugInfo = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.GetQuestionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Question>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -247,7 +1041,156 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
             CreateQuestionRequest request = new CreateQuestionRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Question = new Question(),
+                Question = new Question
+                {
+                    QuestionName = QuestionName.FromProjectLocationQuestion("[PROJECT]", "[LOCATION]", "[QUESTION]"),
+                    Scopes = { "scopes35c99a1e", },
+                    Query = "queryf0c71c1b",
+                    DataSourceAnnotations =
+                    {
+                        "data_source_annotationscbcadb22",
+                    },
+                    InterpretError = new InterpretError
+                    {
+                        Message = "message0231e778",
+                        Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                        Details = new InterpretError.Types.InterpretErrorDetails
+                        {
+                            UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                            {
+                                Operators =
+                                {
+                                    "operators35fb9709",
+                                },
+                                Intent = { "intentd5c748fa", },
+                            },
+                            IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                            {
+                                Entities =
+                                {
+                                    InterpretEntity.Unspecified,
+                                },
+                            },
+                            AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                        },
+                    },
+                    Interpretations =
+                    {
+                        new Interpretation
+                        {
+                            DataSources =
+                            {
+                                "data_sources8e896846",
+                            },
+                            Confidence = 8.101505773561116E+17,
+                            UnusedPhrases =
+                            {
+                                "unused_phrases25e82b64",
+                            },
+                            HumanReadable = new HumanReadable
+                            {
+                                GeneratedInterpretation = new AnnotatedString
+                                {
+                                    TextFormatted = "text_formatted3ddf454d",
+                                    HtmlFormatted = "html_formatted77f18285",
+                                    Markups =
+                                    {
+                                        new AnnotatedString.Types.SemanticMarkup
+                                        {
+                                            Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                            StartCharIndex = 1743095493,
+                                            Length = 2088739887,
+                                        },
+                                    },
+                                },
+                                OriginalQuestion = new AnnotatedString
+                                {
+                                    TextFormatted = "text_formatted3ddf454d",
+                                    HtmlFormatted = "html_formatted77f18285",
+                                    Markups =
+                                    {
+                                        new AnnotatedString.Types.SemanticMarkup
+                                        {
+                                            Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                            StartCharIndex = 1743095493,
+                                            Length = 2088739887,
+                                        },
+                                    },
+                                },
+                            },
+                            InterpretationStructure = new InterpretationStructure
+                            {
+                                VisualizationTypes =
+                                {
+                                    InterpretationStructure.Types.VisualizationType.BarChart,
+                                },
+                                ColumnInfo =
+                                {
+                                    new InterpretationStructure.Types.ColumnInfo
+                                    {
+                                        OutputAlias = "output_aliascf122cc6",
+                                        DisplayName = "display_name137f65c2",
+                                    },
+                                },
+                            },
+                            DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                            ExecutionInfo = new ExecutionInfo
+                            {
+                                JobCreationStatus = new gr::Status
+                                {
+                                    Code = -1805175871,
+                                    Message = "message0231e778",
+                                    Details =
+                                    {
+                                        new wkt::Any
+                                        {
+                                            TypeUrl = "type_urlfde5623b",
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                                JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                                CreateTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                BigqueryJob = new BigQueryJob
+                                {
+                                    JobId = "job_id38ea97d6",
+                                    ProjectId = "project_id43ad98b0",
+                                    Location = "locatione09d18d5",
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UserEmail = "user_emaildc7bc240",
+                    DebugFlags = new DebugFlags
+                    {
+                        IncludeVaQuery = true,
+                        IncludeNestedVaQuery = false,
+                        IncludeHumanInterpretation = false,
+                        IncludeAquaDebugResponse = false,
+                        TimeOverride = -865841396904032937L,
+                        IsInternalGoogleUser = false,
+                        IgnoreCache = true,
+                        IncludeSearchEntitiesRpc = false,
+                        IncludeListColumnAnnotationsRpc = true,
+                        IncludeVirtualAnalystEntities = true,
+                        IncludeTableList = false,
+                        IncludeDomainList = true,
+                    },
+                    DebugInfo = new wkt::Any
+                    {
+                        TypeUrl = "type_urlfde5623b",
+                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                    },
+                },
             };
             Question expectedResponse = new Question
             {
@@ -258,15 +1201,146 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 {
                     "data_source_annotationscbcadb22",
                 },
-                InterpretError = new InterpretError(),
+                InterpretError = new InterpretError
+                {
+                    Message = "message0231e778",
+                    Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                    Details = new InterpretError.Types.InterpretErrorDetails
+                    {
+                        UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                        {
+                            Operators =
+                            {
+                                "operators35fb9709",
+                            },
+                            Intent = { "intentd5c748fa", },
+                        },
+                        IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                        {
+                            Entities =
+                            {
+                                InterpretEntity.Unspecified,
+                            },
+                        },
+                        AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                    },
+                },
                 Interpretations =
                 {
-                    new Interpretation(),
+                    new Interpretation
+                    {
+                        DataSources =
+                        {
+                            "data_sources8e896846",
+                        },
+                        Confidence = 8.101505773561116E+17,
+                        UnusedPhrases =
+                        {
+                            "unused_phrases25e82b64",
+                        },
+                        HumanReadable = new HumanReadable
+                        {
+                            GeneratedInterpretation = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            OriginalQuestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                        },
+                        InterpretationStructure = new InterpretationStructure
+                        {
+                            VisualizationTypes =
+                            {
+                                InterpretationStructure.Types.VisualizationType.BarChart,
+                            },
+                            ColumnInfo =
+                            {
+                                new InterpretationStructure.Types.ColumnInfo
+                                {
+                                    OutputAlias = "output_aliascf122cc6",
+                                    DisplayName = "display_name137f65c2",
+                                },
+                            },
+                        },
+                        DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                        ExecutionInfo = new ExecutionInfo
+                        {
+                            JobCreationStatus = new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            BigqueryJob = new BigQueryJob
+                            {
+                                JobId = "job_id38ea97d6",
+                                ProjectId = "project_id43ad98b0",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UserEmail = "user_emaildc7bc240",
-                DebugFlags = new DebugFlags(),
-                DebugInfo = new wkt::Any(),
+                DebugFlags = new DebugFlags
+                {
+                    IncludeVaQuery = true,
+                    IncludeNestedVaQuery = false,
+                    IncludeHumanInterpretation = false,
+                    IncludeAquaDebugResponse = false,
+                    TimeOverride = -865841396904032937L,
+                    IsInternalGoogleUser = false,
+                    IgnoreCache = true,
+                    IncludeSearchEntitiesRpc = false,
+                    IncludeListColumnAnnotationsRpc = true,
+                    IncludeVirtualAnalystEntities = true,
+                    IncludeTableList = false,
+                    IncludeDomainList = true,
+                },
+                DebugInfo = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.CreateQuestion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -282,7 +1356,156 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
             CreateQuestionRequest request = new CreateQuestionRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Question = new Question(),
+                Question = new Question
+                {
+                    QuestionName = QuestionName.FromProjectLocationQuestion("[PROJECT]", "[LOCATION]", "[QUESTION]"),
+                    Scopes = { "scopes35c99a1e", },
+                    Query = "queryf0c71c1b",
+                    DataSourceAnnotations =
+                    {
+                        "data_source_annotationscbcadb22",
+                    },
+                    InterpretError = new InterpretError
+                    {
+                        Message = "message0231e778",
+                        Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                        Details = new InterpretError.Types.InterpretErrorDetails
+                        {
+                            UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                            {
+                                Operators =
+                                {
+                                    "operators35fb9709",
+                                },
+                                Intent = { "intentd5c748fa", },
+                            },
+                            IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                            {
+                                Entities =
+                                {
+                                    InterpretEntity.Unspecified,
+                                },
+                            },
+                            AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                        },
+                    },
+                    Interpretations =
+                    {
+                        new Interpretation
+                        {
+                            DataSources =
+                            {
+                                "data_sources8e896846",
+                            },
+                            Confidence = 8.101505773561116E+17,
+                            UnusedPhrases =
+                            {
+                                "unused_phrases25e82b64",
+                            },
+                            HumanReadable = new HumanReadable
+                            {
+                                GeneratedInterpretation = new AnnotatedString
+                                {
+                                    TextFormatted = "text_formatted3ddf454d",
+                                    HtmlFormatted = "html_formatted77f18285",
+                                    Markups =
+                                    {
+                                        new AnnotatedString.Types.SemanticMarkup
+                                        {
+                                            Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                            StartCharIndex = 1743095493,
+                                            Length = 2088739887,
+                                        },
+                                    },
+                                },
+                                OriginalQuestion = new AnnotatedString
+                                {
+                                    TextFormatted = "text_formatted3ddf454d",
+                                    HtmlFormatted = "html_formatted77f18285",
+                                    Markups =
+                                    {
+                                        new AnnotatedString.Types.SemanticMarkup
+                                        {
+                                            Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                            StartCharIndex = 1743095493,
+                                            Length = 2088739887,
+                                        },
+                                    },
+                                },
+                            },
+                            InterpretationStructure = new InterpretationStructure
+                            {
+                                VisualizationTypes =
+                                {
+                                    InterpretationStructure.Types.VisualizationType.BarChart,
+                                },
+                                ColumnInfo =
+                                {
+                                    new InterpretationStructure.Types.ColumnInfo
+                                    {
+                                        OutputAlias = "output_aliascf122cc6",
+                                        DisplayName = "display_name137f65c2",
+                                    },
+                                },
+                            },
+                            DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                            ExecutionInfo = new ExecutionInfo
+                            {
+                                JobCreationStatus = new gr::Status
+                                {
+                                    Code = -1805175871,
+                                    Message = "message0231e778",
+                                    Details =
+                                    {
+                                        new wkt::Any
+                                        {
+                                            TypeUrl = "type_urlfde5623b",
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                                JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                                CreateTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                BigqueryJob = new BigQueryJob
+                                {
+                                    JobId = "job_id38ea97d6",
+                                    ProjectId = "project_id43ad98b0",
+                                    Location = "locatione09d18d5",
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UserEmail = "user_emaildc7bc240",
+                    DebugFlags = new DebugFlags
+                    {
+                        IncludeVaQuery = true,
+                        IncludeNestedVaQuery = false,
+                        IncludeHumanInterpretation = false,
+                        IncludeAquaDebugResponse = false,
+                        TimeOverride = -865841396904032937L,
+                        IsInternalGoogleUser = false,
+                        IgnoreCache = true,
+                        IncludeSearchEntitiesRpc = false,
+                        IncludeListColumnAnnotationsRpc = true,
+                        IncludeVirtualAnalystEntities = true,
+                        IncludeTableList = false,
+                        IncludeDomainList = true,
+                    },
+                    DebugInfo = new wkt::Any
+                    {
+                        TypeUrl = "type_urlfde5623b",
+                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                    },
+                },
             };
             Question expectedResponse = new Question
             {
@@ -293,15 +1516,146 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 {
                     "data_source_annotationscbcadb22",
                 },
-                InterpretError = new InterpretError(),
+                InterpretError = new InterpretError
+                {
+                    Message = "message0231e778",
+                    Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                    Details = new InterpretError.Types.InterpretErrorDetails
+                    {
+                        UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                        {
+                            Operators =
+                            {
+                                "operators35fb9709",
+                            },
+                            Intent = { "intentd5c748fa", },
+                        },
+                        IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                        {
+                            Entities =
+                            {
+                                InterpretEntity.Unspecified,
+                            },
+                        },
+                        AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                    },
+                },
                 Interpretations =
                 {
-                    new Interpretation(),
+                    new Interpretation
+                    {
+                        DataSources =
+                        {
+                            "data_sources8e896846",
+                        },
+                        Confidence = 8.101505773561116E+17,
+                        UnusedPhrases =
+                        {
+                            "unused_phrases25e82b64",
+                        },
+                        HumanReadable = new HumanReadable
+                        {
+                            GeneratedInterpretation = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            OriginalQuestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                        },
+                        InterpretationStructure = new InterpretationStructure
+                        {
+                            VisualizationTypes =
+                            {
+                                InterpretationStructure.Types.VisualizationType.BarChart,
+                            },
+                            ColumnInfo =
+                            {
+                                new InterpretationStructure.Types.ColumnInfo
+                                {
+                                    OutputAlias = "output_aliascf122cc6",
+                                    DisplayName = "display_name137f65c2",
+                                },
+                            },
+                        },
+                        DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                        ExecutionInfo = new ExecutionInfo
+                        {
+                            JobCreationStatus = new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            BigqueryJob = new BigQueryJob
+                            {
+                                JobId = "job_id38ea97d6",
+                                ProjectId = "project_id43ad98b0",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UserEmail = "user_emaildc7bc240",
-                DebugFlags = new DebugFlags(),
-                DebugInfo = new wkt::Any(),
+                DebugFlags = new DebugFlags
+                {
+                    IncludeVaQuery = true,
+                    IncludeNestedVaQuery = false,
+                    IncludeHumanInterpretation = false,
+                    IncludeAquaDebugResponse = false,
+                    TimeOverride = -865841396904032937L,
+                    IsInternalGoogleUser = false,
+                    IgnoreCache = true,
+                    IncludeSearchEntitiesRpc = false,
+                    IncludeListColumnAnnotationsRpc = true,
+                    IncludeVirtualAnalystEntities = true,
+                    IncludeTableList = false,
+                    IncludeDomainList = true,
+                },
+                DebugInfo = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.CreateQuestionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Question>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -319,7 +1673,156 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
             CreateQuestionRequest request = new CreateQuestionRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Question = new Question(),
+                Question = new Question
+                {
+                    QuestionName = QuestionName.FromProjectLocationQuestion("[PROJECT]", "[LOCATION]", "[QUESTION]"),
+                    Scopes = { "scopes35c99a1e", },
+                    Query = "queryf0c71c1b",
+                    DataSourceAnnotations =
+                    {
+                        "data_source_annotationscbcadb22",
+                    },
+                    InterpretError = new InterpretError
+                    {
+                        Message = "message0231e778",
+                        Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                        Details = new InterpretError.Types.InterpretErrorDetails
+                        {
+                            UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                            {
+                                Operators =
+                                {
+                                    "operators35fb9709",
+                                },
+                                Intent = { "intentd5c748fa", },
+                            },
+                            IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                            {
+                                Entities =
+                                {
+                                    InterpretEntity.Unspecified,
+                                },
+                            },
+                            AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                        },
+                    },
+                    Interpretations =
+                    {
+                        new Interpretation
+                        {
+                            DataSources =
+                            {
+                                "data_sources8e896846",
+                            },
+                            Confidence = 8.101505773561116E+17,
+                            UnusedPhrases =
+                            {
+                                "unused_phrases25e82b64",
+                            },
+                            HumanReadable = new HumanReadable
+                            {
+                                GeneratedInterpretation = new AnnotatedString
+                                {
+                                    TextFormatted = "text_formatted3ddf454d",
+                                    HtmlFormatted = "html_formatted77f18285",
+                                    Markups =
+                                    {
+                                        new AnnotatedString.Types.SemanticMarkup
+                                        {
+                                            Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                            StartCharIndex = 1743095493,
+                                            Length = 2088739887,
+                                        },
+                                    },
+                                },
+                                OriginalQuestion = new AnnotatedString
+                                {
+                                    TextFormatted = "text_formatted3ddf454d",
+                                    HtmlFormatted = "html_formatted77f18285",
+                                    Markups =
+                                    {
+                                        new AnnotatedString.Types.SemanticMarkup
+                                        {
+                                            Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                            StartCharIndex = 1743095493,
+                                            Length = 2088739887,
+                                        },
+                                    },
+                                },
+                            },
+                            InterpretationStructure = new InterpretationStructure
+                            {
+                                VisualizationTypes =
+                                {
+                                    InterpretationStructure.Types.VisualizationType.BarChart,
+                                },
+                                ColumnInfo =
+                                {
+                                    new InterpretationStructure.Types.ColumnInfo
+                                    {
+                                        OutputAlias = "output_aliascf122cc6",
+                                        DisplayName = "display_name137f65c2",
+                                    },
+                                },
+                            },
+                            DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                            ExecutionInfo = new ExecutionInfo
+                            {
+                                JobCreationStatus = new gr::Status
+                                {
+                                    Code = -1805175871,
+                                    Message = "message0231e778",
+                                    Details =
+                                    {
+                                        new wkt::Any
+                                        {
+                                            TypeUrl = "type_urlfde5623b",
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                                JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                                CreateTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                BigqueryJob = new BigQueryJob
+                                {
+                                    JobId = "job_id38ea97d6",
+                                    ProjectId = "project_id43ad98b0",
+                                    Location = "locatione09d18d5",
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UserEmail = "user_emaildc7bc240",
+                    DebugFlags = new DebugFlags
+                    {
+                        IncludeVaQuery = true,
+                        IncludeNestedVaQuery = false,
+                        IncludeHumanInterpretation = false,
+                        IncludeAquaDebugResponse = false,
+                        TimeOverride = -865841396904032937L,
+                        IsInternalGoogleUser = false,
+                        IgnoreCache = true,
+                        IncludeSearchEntitiesRpc = false,
+                        IncludeListColumnAnnotationsRpc = true,
+                        IncludeVirtualAnalystEntities = true,
+                        IncludeTableList = false,
+                        IncludeDomainList = true,
+                    },
+                    DebugInfo = new wkt::Any
+                    {
+                        TypeUrl = "type_urlfde5623b",
+                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                    },
+                },
             };
             Question expectedResponse = new Question
             {
@@ -330,15 +1833,146 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 {
                     "data_source_annotationscbcadb22",
                 },
-                InterpretError = new InterpretError(),
+                InterpretError = new InterpretError
+                {
+                    Message = "message0231e778",
+                    Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                    Details = new InterpretError.Types.InterpretErrorDetails
+                    {
+                        UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                        {
+                            Operators =
+                            {
+                                "operators35fb9709",
+                            },
+                            Intent = { "intentd5c748fa", },
+                        },
+                        IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                        {
+                            Entities =
+                            {
+                                InterpretEntity.Unspecified,
+                            },
+                        },
+                        AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                    },
+                },
                 Interpretations =
                 {
-                    new Interpretation(),
+                    new Interpretation
+                    {
+                        DataSources =
+                        {
+                            "data_sources8e896846",
+                        },
+                        Confidence = 8.101505773561116E+17,
+                        UnusedPhrases =
+                        {
+                            "unused_phrases25e82b64",
+                        },
+                        HumanReadable = new HumanReadable
+                        {
+                            GeneratedInterpretation = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            OriginalQuestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                        },
+                        InterpretationStructure = new InterpretationStructure
+                        {
+                            VisualizationTypes =
+                            {
+                                InterpretationStructure.Types.VisualizationType.BarChart,
+                            },
+                            ColumnInfo =
+                            {
+                                new InterpretationStructure.Types.ColumnInfo
+                                {
+                                    OutputAlias = "output_aliascf122cc6",
+                                    DisplayName = "display_name137f65c2",
+                                },
+                            },
+                        },
+                        DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                        ExecutionInfo = new ExecutionInfo
+                        {
+                            JobCreationStatus = new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            BigqueryJob = new BigQueryJob
+                            {
+                                JobId = "job_id38ea97d6",
+                                ProjectId = "project_id43ad98b0",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UserEmail = "user_emaildc7bc240",
-                DebugFlags = new DebugFlags(),
-                DebugInfo = new wkt::Any(),
+                DebugFlags = new DebugFlags
+                {
+                    IncludeVaQuery = true,
+                    IncludeNestedVaQuery = false,
+                    IncludeHumanInterpretation = false,
+                    IncludeAquaDebugResponse = false,
+                    TimeOverride = -865841396904032937L,
+                    IsInternalGoogleUser = false,
+                    IgnoreCache = true,
+                    IncludeSearchEntitiesRpc = false,
+                    IncludeListColumnAnnotationsRpc = true,
+                    IncludeVirtualAnalystEntities = true,
+                    IncludeTableList = false,
+                    IncludeDomainList = true,
+                },
+                DebugInfo = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.CreateQuestion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -354,7 +1988,156 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
             CreateQuestionRequest request = new CreateQuestionRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Question = new Question(),
+                Question = new Question
+                {
+                    QuestionName = QuestionName.FromProjectLocationQuestion("[PROJECT]", "[LOCATION]", "[QUESTION]"),
+                    Scopes = { "scopes35c99a1e", },
+                    Query = "queryf0c71c1b",
+                    DataSourceAnnotations =
+                    {
+                        "data_source_annotationscbcadb22",
+                    },
+                    InterpretError = new InterpretError
+                    {
+                        Message = "message0231e778",
+                        Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                        Details = new InterpretError.Types.InterpretErrorDetails
+                        {
+                            UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                            {
+                                Operators =
+                                {
+                                    "operators35fb9709",
+                                },
+                                Intent = { "intentd5c748fa", },
+                            },
+                            IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                            {
+                                Entities =
+                                {
+                                    InterpretEntity.Unspecified,
+                                },
+                            },
+                            AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                        },
+                    },
+                    Interpretations =
+                    {
+                        new Interpretation
+                        {
+                            DataSources =
+                            {
+                                "data_sources8e896846",
+                            },
+                            Confidence = 8.101505773561116E+17,
+                            UnusedPhrases =
+                            {
+                                "unused_phrases25e82b64",
+                            },
+                            HumanReadable = new HumanReadable
+                            {
+                                GeneratedInterpretation = new AnnotatedString
+                                {
+                                    TextFormatted = "text_formatted3ddf454d",
+                                    HtmlFormatted = "html_formatted77f18285",
+                                    Markups =
+                                    {
+                                        new AnnotatedString.Types.SemanticMarkup
+                                        {
+                                            Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                            StartCharIndex = 1743095493,
+                                            Length = 2088739887,
+                                        },
+                                    },
+                                },
+                                OriginalQuestion = new AnnotatedString
+                                {
+                                    TextFormatted = "text_formatted3ddf454d",
+                                    HtmlFormatted = "html_formatted77f18285",
+                                    Markups =
+                                    {
+                                        new AnnotatedString.Types.SemanticMarkup
+                                        {
+                                            Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                            StartCharIndex = 1743095493,
+                                            Length = 2088739887,
+                                        },
+                                    },
+                                },
+                            },
+                            InterpretationStructure = new InterpretationStructure
+                            {
+                                VisualizationTypes =
+                                {
+                                    InterpretationStructure.Types.VisualizationType.BarChart,
+                                },
+                                ColumnInfo =
+                                {
+                                    new InterpretationStructure.Types.ColumnInfo
+                                    {
+                                        OutputAlias = "output_aliascf122cc6",
+                                        DisplayName = "display_name137f65c2",
+                                    },
+                                },
+                            },
+                            DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                            ExecutionInfo = new ExecutionInfo
+                            {
+                                JobCreationStatus = new gr::Status
+                                {
+                                    Code = -1805175871,
+                                    Message = "message0231e778",
+                                    Details =
+                                    {
+                                        new wkt::Any
+                                        {
+                                            TypeUrl = "type_urlfde5623b",
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                                JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                                CreateTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                BigqueryJob = new BigQueryJob
+                                {
+                                    JobId = "job_id38ea97d6",
+                                    ProjectId = "project_id43ad98b0",
+                                    Location = "locatione09d18d5",
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UserEmail = "user_emaildc7bc240",
+                    DebugFlags = new DebugFlags
+                    {
+                        IncludeVaQuery = true,
+                        IncludeNestedVaQuery = false,
+                        IncludeHumanInterpretation = false,
+                        IncludeAquaDebugResponse = false,
+                        TimeOverride = -865841396904032937L,
+                        IsInternalGoogleUser = false,
+                        IgnoreCache = true,
+                        IncludeSearchEntitiesRpc = false,
+                        IncludeListColumnAnnotationsRpc = true,
+                        IncludeVirtualAnalystEntities = true,
+                        IncludeTableList = false,
+                        IncludeDomainList = true,
+                    },
+                    DebugInfo = new wkt::Any
+                    {
+                        TypeUrl = "type_urlfde5623b",
+                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                    },
+                },
             };
             Question expectedResponse = new Question
             {
@@ -365,15 +2148,146 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 {
                     "data_source_annotationscbcadb22",
                 },
-                InterpretError = new InterpretError(),
+                InterpretError = new InterpretError
+                {
+                    Message = "message0231e778",
+                    Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                    Details = new InterpretError.Types.InterpretErrorDetails
+                    {
+                        UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                        {
+                            Operators =
+                            {
+                                "operators35fb9709",
+                            },
+                            Intent = { "intentd5c748fa", },
+                        },
+                        IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                        {
+                            Entities =
+                            {
+                                InterpretEntity.Unspecified,
+                            },
+                        },
+                        AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                    },
+                },
                 Interpretations =
                 {
-                    new Interpretation(),
+                    new Interpretation
+                    {
+                        DataSources =
+                        {
+                            "data_sources8e896846",
+                        },
+                        Confidence = 8.101505773561116E+17,
+                        UnusedPhrases =
+                        {
+                            "unused_phrases25e82b64",
+                        },
+                        HumanReadable = new HumanReadable
+                        {
+                            GeneratedInterpretation = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            OriginalQuestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                        },
+                        InterpretationStructure = new InterpretationStructure
+                        {
+                            VisualizationTypes =
+                            {
+                                InterpretationStructure.Types.VisualizationType.BarChart,
+                            },
+                            ColumnInfo =
+                            {
+                                new InterpretationStructure.Types.ColumnInfo
+                                {
+                                    OutputAlias = "output_aliascf122cc6",
+                                    DisplayName = "display_name137f65c2",
+                                },
+                            },
+                        },
+                        DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                        ExecutionInfo = new ExecutionInfo
+                        {
+                            JobCreationStatus = new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            BigqueryJob = new BigQueryJob
+                            {
+                                JobId = "job_id38ea97d6",
+                                ProjectId = "project_id43ad98b0",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UserEmail = "user_emaildc7bc240",
-                DebugFlags = new DebugFlags(),
-                DebugInfo = new wkt::Any(),
+                DebugFlags = new DebugFlags
+                {
+                    IncludeVaQuery = true,
+                    IncludeNestedVaQuery = false,
+                    IncludeHumanInterpretation = false,
+                    IncludeAquaDebugResponse = false,
+                    TimeOverride = -865841396904032937L,
+                    IsInternalGoogleUser = false,
+                    IgnoreCache = true,
+                    IncludeSearchEntitiesRpc = false,
+                    IncludeListColumnAnnotationsRpc = true,
+                    IncludeVirtualAnalystEntities = true,
+                    IncludeTableList = false,
+                    IncludeDomainList = true,
+                },
+                DebugInfo = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.CreateQuestionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Question>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -391,7 +2305,156 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
             CreateQuestionRequest request = new CreateQuestionRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Question = new Question(),
+                Question = new Question
+                {
+                    QuestionName = QuestionName.FromProjectLocationQuestion("[PROJECT]", "[LOCATION]", "[QUESTION]"),
+                    Scopes = { "scopes35c99a1e", },
+                    Query = "queryf0c71c1b",
+                    DataSourceAnnotations =
+                    {
+                        "data_source_annotationscbcadb22",
+                    },
+                    InterpretError = new InterpretError
+                    {
+                        Message = "message0231e778",
+                        Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                        Details = new InterpretError.Types.InterpretErrorDetails
+                        {
+                            UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                            {
+                                Operators =
+                                {
+                                    "operators35fb9709",
+                                },
+                                Intent = { "intentd5c748fa", },
+                            },
+                            IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                            {
+                                Entities =
+                                {
+                                    InterpretEntity.Unspecified,
+                                },
+                            },
+                            AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                        },
+                    },
+                    Interpretations =
+                    {
+                        new Interpretation
+                        {
+                            DataSources =
+                            {
+                                "data_sources8e896846",
+                            },
+                            Confidence = 8.101505773561116E+17,
+                            UnusedPhrases =
+                            {
+                                "unused_phrases25e82b64",
+                            },
+                            HumanReadable = new HumanReadable
+                            {
+                                GeneratedInterpretation = new AnnotatedString
+                                {
+                                    TextFormatted = "text_formatted3ddf454d",
+                                    HtmlFormatted = "html_formatted77f18285",
+                                    Markups =
+                                    {
+                                        new AnnotatedString.Types.SemanticMarkup
+                                        {
+                                            Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                            StartCharIndex = 1743095493,
+                                            Length = 2088739887,
+                                        },
+                                    },
+                                },
+                                OriginalQuestion = new AnnotatedString
+                                {
+                                    TextFormatted = "text_formatted3ddf454d",
+                                    HtmlFormatted = "html_formatted77f18285",
+                                    Markups =
+                                    {
+                                        new AnnotatedString.Types.SemanticMarkup
+                                        {
+                                            Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                            StartCharIndex = 1743095493,
+                                            Length = 2088739887,
+                                        },
+                                    },
+                                },
+                            },
+                            InterpretationStructure = new InterpretationStructure
+                            {
+                                VisualizationTypes =
+                                {
+                                    InterpretationStructure.Types.VisualizationType.BarChart,
+                                },
+                                ColumnInfo =
+                                {
+                                    new InterpretationStructure.Types.ColumnInfo
+                                    {
+                                        OutputAlias = "output_aliascf122cc6",
+                                        DisplayName = "display_name137f65c2",
+                                    },
+                                },
+                            },
+                            DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                            ExecutionInfo = new ExecutionInfo
+                            {
+                                JobCreationStatus = new gr::Status
+                                {
+                                    Code = -1805175871,
+                                    Message = "message0231e778",
+                                    Details =
+                                    {
+                                        new wkt::Any
+                                        {
+                                            TypeUrl = "type_urlfde5623b",
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                                JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                                CreateTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                BigqueryJob = new BigQueryJob
+                                {
+                                    JobId = "job_id38ea97d6",
+                                    ProjectId = "project_id43ad98b0",
+                                    Location = "locatione09d18d5",
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UserEmail = "user_emaildc7bc240",
+                    DebugFlags = new DebugFlags
+                    {
+                        IncludeVaQuery = true,
+                        IncludeNestedVaQuery = false,
+                        IncludeHumanInterpretation = false,
+                        IncludeAquaDebugResponse = false,
+                        TimeOverride = -865841396904032937L,
+                        IsInternalGoogleUser = false,
+                        IgnoreCache = true,
+                        IncludeSearchEntitiesRpc = false,
+                        IncludeListColumnAnnotationsRpc = true,
+                        IncludeVirtualAnalystEntities = true,
+                        IncludeTableList = false,
+                        IncludeDomainList = true,
+                    },
+                    DebugInfo = new wkt::Any
+                    {
+                        TypeUrl = "type_urlfde5623b",
+                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                    },
+                },
             };
             Question expectedResponse = new Question
             {
@@ -402,15 +2465,146 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 {
                     "data_source_annotationscbcadb22",
                 },
-                InterpretError = new InterpretError(),
+                InterpretError = new InterpretError
+                {
+                    Message = "message0231e778",
+                    Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                    Details = new InterpretError.Types.InterpretErrorDetails
+                    {
+                        UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                        {
+                            Operators =
+                            {
+                                "operators35fb9709",
+                            },
+                            Intent = { "intentd5c748fa", },
+                        },
+                        IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                        {
+                            Entities =
+                            {
+                                InterpretEntity.Unspecified,
+                            },
+                        },
+                        AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                    },
+                },
                 Interpretations =
                 {
-                    new Interpretation(),
+                    new Interpretation
+                    {
+                        DataSources =
+                        {
+                            "data_sources8e896846",
+                        },
+                        Confidence = 8.101505773561116E+17,
+                        UnusedPhrases =
+                        {
+                            "unused_phrases25e82b64",
+                        },
+                        HumanReadable = new HumanReadable
+                        {
+                            GeneratedInterpretation = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            OriginalQuestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                        },
+                        InterpretationStructure = new InterpretationStructure
+                        {
+                            VisualizationTypes =
+                            {
+                                InterpretationStructure.Types.VisualizationType.BarChart,
+                            },
+                            ColumnInfo =
+                            {
+                                new InterpretationStructure.Types.ColumnInfo
+                                {
+                                    OutputAlias = "output_aliascf122cc6",
+                                    DisplayName = "display_name137f65c2",
+                                },
+                            },
+                        },
+                        DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                        ExecutionInfo = new ExecutionInfo
+                        {
+                            JobCreationStatus = new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            BigqueryJob = new BigQueryJob
+                            {
+                                JobId = "job_id38ea97d6",
+                                ProjectId = "project_id43ad98b0",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UserEmail = "user_emaildc7bc240",
-                DebugFlags = new DebugFlags(),
-                DebugInfo = new wkt::Any(),
+                DebugFlags = new DebugFlags
+                {
+                    IncludeVaQuery = true,
+                    IncludeNestedVaQuery = false,
+                    IncludeHumanInterpretation = false,
+                    IncludeAquaDebugResponse = false,
+                    TimeOverride = -865841396904032937L,
+                    IsInternalGoogleUser = false,
+                    IgnoreCache = true,
+                    IncludeSearchEntitiesRpc = false,
+                    IncludeListColumnAnnotationsRpc = true,
+                    IncludeVirtualAnalystEntities = true,
+                    IncludeTableList = false,
+                    IncludeDomainList = true,
+                },
+                DebugInfo = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.CreateQuestion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -426,7 +2620,156 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
             CreateQuestionRequest request = new CreateQuestionRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Question = new Question(),
+                Question = new Question
+                {
+                    QuestionName = QuestionName.FromProjectLocationQuestion("[PROJECT]", "[LOCATION]", "[QUESTION]"),
+                    Scopes = { "scopes35c99a1e", },
+                    Query = "queryf0c71c1b",
+                    DataSourceAnnotations =
+                    {
+                        "data_source_annotationscbcadb22",
+                    },
+                    InterpretError = new InterpretError
+                    {
+                        Message = "message0231e778",
+                        Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                        Details = new InterpretError.Types.InterpretErrorDetails
+                        {
+                            UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                            {
+                                Operators =
+                                {
+                                    "operators35fb9709",
+                                },
+                                Intent = { "intentd5c748fa", },
+                            },
+                            IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                            {
+                                Entities =
+                                {
+                                    InterpretEntity.Unspecified,
+                                },
+                            },
+                            AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                        },
+                    },
+                    Interpretations =
+                    {
+                        new Interpretation
+                        {
+                            DataSources =
+                            {
+                                "data_sources8e896846",
+                            },
+                            Confidence = 8.101505773561116E+17,
+                            UnusedPhrases =
+                            {
+                                "unused_phrases25e82b64",
+                            },
+                            HumanReadable = new HumanReadable
+                            {
+                                GeneratedInterpretation = new AnnotatedString
+                                {
+                                    TextFormatted = "text_formatted3ddf454d",
+                                    HtmlFormatted = "html_formatted77f18285",
+                                    Markups =
+                                    {
+                                        new AnnotatedString.Types.SemanticMarkup
+                                        {
+                                            Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                            StartCharIndex = 1743095493,
+                                            Length = 2088739887,
+                                        },
+                                    },
+                                },
+                                OriginalQuestion = new AnnotatedString
+                                {
+                                    TextFormatted = "text_formatted3ddf454d",
+                                    HtmlFormatted = "html_formatted77f18285",
+                                    Markups =
+                                    {
+                                        new AnnotatedString.Types.SemanticMarkup
+                                        {
+                                            Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                            StartCharIndex = 1743095493,
+                                            Length = 2088739887,
+                                        },
+                                    },
+                                },
+                            },
+                            InterpretationStructure = new InterpretationStructure
+                            {
+                                VisualizationTypes =
+                                {
+                                    InterpretationStructure.Types.VisualizationType.BarChart,
+                                },
+                                ColumnInfo =
+                                {
+                                    new InterpretationStructure.Types.ColumnInfo
+                                    {
+                                        OutputAlias = "output_aliascf122cc6",
+                                        DisplayName = "display_name137f65c2",
+                                    },
+                                },
+                            },
+                            DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                            ExecutionInfo = new ExecutionInfo
+                            {
+                                JobCreationStatus = new gr::Status
+                                {
+                                    Code = -1805175871,
+                                    Message = "message0231e778",
+                                    Details =
+                                    {
+                                        new wkt::Any
+                                        {
+                                            TypeUrl = "type_urlfde5623b",
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                                JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                                CreateTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                BigqueryJob = new BigQueryJob
+                                {
+                                    JobId = "job_id38ea97d6",
+                                    ProjectId = "project_id43ad98b0",
+                                    Location = "locatione09d18d5",
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UserEmail = "user_emaildc7bc240",
+                    DebugFlags = new DebugFlags
+                    {
+                        IncludeVaQuery = true,
+                        IncludeNestedVaQuery = false,
+                        IncludeHumanInterpretation = false,
+                        IncludeAquaDebugResponse = false,
+                        TimeOverride = -865841396904032937L,
+                        IsInternalGoogleUser = false,
+                        IgnoreCache = true,
+                        IncludeSearchEntitiesRpc = false,
+                        IncludeListColumnAnnotationsRpc = true,
+                        IncludeVirtualAnalystEntities = true,
+                        IncludeTableList = false,
+                        IncludeDomainList = true,
+                    },
+                    DebugInfo = new wkt::Any
+                    {
+                        TypeUrl = "type_urlfde5623b",
+                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                    },
+                },
             };
             Question expectedResponse = new Question
             {
@@ -437,15 +2780,146 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 {
                     "data_source_annotationscbcadb22",
                 },
-                InterpretError = new InterpretError(),
+                InterpretError = new InterpretError
+                {
+                    Message = "message0231e778",
+                    Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                    Details = new InterpretError.Types.InterpretErrorDetails
+                    {
+                        UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                        {
+                            Operators =
+                            {
+                                "operators35fb9709",
+                            },
+                            Intent = { "intentd5c748fa", },
+                        },
+                        IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                        {
+                            Entities =
+                            {
+                                InterpretEntity.Unspecified,
+                            },
+                        },
+                        AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                    },
+                },
                 Interpretations =
                 {
-                    new Interpretation(),
+                    new Interpretation
+                    {
+                        DataSources =
+                        {
+                            "data_sources8e896846",
+                        },
+                        Confidence = 8.101505773561116E+17,
+                        UnusedPhrases =
+                        {
+                            "unused_phrases25e82b64",
+                        },
+                        HumanReadable = new HumanReadable
+                        {
+                            GeneratedInterpretation = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            OriginalQuestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                        },
+                        InterpretationStructure = new InterpretationStructure
+                        {
+                            VisualizationTypes =
+                            {
+                                InterpretationStructure.Types.VisualizationType.BarChart,
+                            },
+                            ColumnInfo =
+                            {
+                                new InterpretationStructure.Types.ColumnInfo
+                                {
+                                    OutputAlias = "output_aliascf122cc6",
+                                    DisplayName = "display_name137f65c2",
+                                },
+                            },
+                        },
+                        DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                        ExecutionInfo = new ExecutionInfo
+                        {
+                            JobCreationStatus = new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            BigqueryJob = new BigQueryJob
+                            {
+                                JobId = "job_id38ea97d6",
+                                ProjectId = "project_id43ad98b0",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UserEmail = "user_emaildc7bc240",
-                DebugFlags = new DebugFlags(),
-                DebugInfo = new wkt::Any(),
+                DebugFlags = new DebugFlags
+                {
+                    IncludeVaQuery = true,
+                    IncludeNestedVaQuery = false,
+                    IncludeHumanInterpretation = false,
+                    IncludeAquaDebugResponse = false,
+                    TimeOverride = -865841396904032937L,
+                    IsInternalGoogleUser = false,
+                    IgnoreCache = true,
+                    IncludeSearchEntitiesRpc = false,
+                    IncludeListColumnAnnotationsRpc = true,
+                    IncludeVirtualAnalystEntities = true,
+                    IncludeTableList = false,
+                    IncludeDomainList = true,
+                },
+                DebugInfo = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.CreateQuestionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Question>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -474,15 +2948,146 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 {
                     "data_source_annotationscbcadb22",
                 },
-                InterpretError = new InterpretError(),
+                InterpretError = new InterpretError
+                {
+                    Message = "message0231e778",
+                    Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                    Details = new InterpretError.Types.InterpretErrorDetails
+                    {
+                        UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                        {
+                            Operators =
+                            {
+                                "operators35fb9709",
+                            },
+                            Intent = { "intentd5c748fa", },
+                        },
+                        IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                        {
+                            Entities =
+                            {
+                                InterpretEntity.Unspecified,
+                            },
+                        },
+                        AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                    },
+                },
                 Interpretations =
                 {
-                    new Interpretation(),
+                    new Interpretation
+                    {
+                        DataSources =
+                        {
+                            "data_sources8e896846",
+                        },
+                        Confidence = 8.101505773561116E+17,
+                        UnusedPhrases =
+                        {
+                            "unused_phrases25e82b64",
+                        },
+                        HumanReadable = new HumanReadable
+                        {
+                            GeneratedInterpretation = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            OriginalQuestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                        },
+                        InterpretationStructure = new InterpretationStructure
+                        {
+                            VisualizationTypes =
+                            {
+                                InterpretationStructure.Types.VisualizationType.BarChart,
+                            },
+                            ColumnInfo =
+                            {
+                                new InterpretationStructure.Types.ColumnInfo
+                                {
+                                    OutputAlias = "output_aliascf122cc6",
+                                    DisplayName = "display_name137f65c2",
+                                },
+                            },
+                        },
+                        DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                        ExecutionInfo = new ExecutionInfo
+                        {
+                            JobCreationStatus = new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            BigqueryJob = new BigQueryJob
+                            {
+                                JobId = "job_id38ea97d6",
+                                ProjectId = "project_id43ad98b0",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UserEmail = "user_emaildc7bc240",
-                DebugFlags = new DebugFlags(),
-                DebugInfo = new wkt::Any(),
+                DebugFlags = new DebugFlags
+                {
+                    IncludeVaQuery = true,
+                    IncludeNestedVaQuery = false,
+                    IncludeHumanInterpretation = false,
+                    IncludeAquaDebugResponse = false,
+                    TimeOverride = -865841396904032937L,
+                    IsInternalGoogleUser = false,
+                    IgnoreCache = true,
+                    IncludeSearchEntitiesRpc = false,
+                    IncludeListColumnAnnotationsRpc = true,
+                    IncludeVirtualAnalystEntities = true,
+                    IncludeTableList = false,
+                    IncludeDomainList = true,
+                },
+                DebugInfo = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.ExecuteQuestion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -509,15 +3114,146 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 {
                     "data_source_annotationscbcadb22",
                 },
-                InterpretError = new InterpretError(),
+                InterpretError = new InterpretError
+                {
+                    Message = "message0231e778",
+                    Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                    Details = new InterpretError.Types.InterpretErrorDetails
+                    {
+                        UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                        {
+                            Operators =
+                            {
+                                "operators35fb9709",
+                            },
+                            Intent = { "intentd5c748fa", },
+                        },
+                        IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                        {
+                            Entities =
+                            {
+                                InterpretEntity.Unspecified,
+                            },
+                        },
+                        AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                    },
+                },
                 Interpretations =
                 {
-                    new Interpretation(),
+                    new Interpretation
+                    {
+                        DataSources =
+                        {
+                            "data_sources8e896846",
+                        },
+                        Confidence = 8.101505773561116E+17,
+                        UnusedPhrases =
+                        {
+                            "unused_phrases25e82b64",
+                        },
+                        HumanReadable = new HumanReadable
+                        {
+                            GeneratedInterpretation = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            OriginalQuestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                        },
+                        InterpretationStructure = new InterpretationStructure
+                        {
+                            VisualizationTypes =
+                            {
+                                InterpretationStructure.Types.VisualizationType.BarChart,
+                            },
+                            ColumnInfo =
+                            {
+                                new InterpretationStructure.Types.ColumnInfo
+                                {
+                                    OutputAlias = "output_aliascf122cc6",
+                                    DisplayName = "display_name137f65c2",
+                                },
+                            },
+                        },
+                        DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                        ExecutionInfo = new ExecutionInfo
+                        {
+                            JobCreationStatus = new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            BigqueryJob = new BigQueryJob
+                            {
+                                JobId = "job_id38ea97d6",
+                                ProjectId = "project_id43ad98b0",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UserEmail = "user_emaildc7bc240",
-                DebugFlags = new DebugFlags(),
-                DebugInfo = new wkt::Any(),
+                DebugFlags = new DebugFlags
+                {
+                    IncludeVaQuery = true,
+                    IncludeNestedVaQuery = false,
+                    IncludeHumanInterpretation = false,
+                    IncludeAquaDebugResponse = false,
+                    TimeOverride = -865841396904032937L,
+                    IsInternalGoogleUser = false,
+                    IgnoreCache = true,
+                    IncludeSearchEntitiesRpc = false,
+                    IncludeListColumnAnnotationsRpc = true,
+                    IncludeVirtualAnalystEntities = true,
+                    IncludeTableList = false,
+                    IncludeDomainList = true,
+                },
+                DebugInfo = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.ExecuteQuestionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Question>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -546,15 +3282,146 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 {
                     "data_source_annotationscbcadb22",
                 },
-                InterpretError = new InterpretError(),
+                InterpretError = new InterpretError
+                {
+                    Message = "message0231e778",
+                    Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                    Details = new InterpretError.Types.InterpretErrorDetails
+                    {
+                        UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                        {
+                            Operators =
+                            {
+                                "operators35fb9709",
+                            },
+                            Intent = { "intentd5c748fa", },
+                        },
+                        IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                        {
+                            Entities =
+                            {
+                                InterpretEntity.Unspecified,
+                            },
+                        },
+                        AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                    },
+                },
                 Interpretations =
                 {
-                    new Interpretation(),
+                    new Interpretation
+                    {
+                        DataSources =
+                        {
+                            "data_sources8e896846",
+                        },
+                        Confidence = 8.101505773561116E+17,
+                        UnusedPhrases =
+                        {
+                            "unused_phrases25e82b64",
+                        },
+                        HumanReadable = new HumanReadable
+                        {
+                            GeneratedInterpretation = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            OriginalQuestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                        },
+                        InterpretationStructure = new InterpretationStructure
+                        {
+                            VisualizationTypes =
+                            {
+                                InterpretationStructure.Types.VisualizationType.BarChart,
+                            },
+                            ColumnInfo =
+                            {
+                                new InterpretationStructure.Types.ColumnInfo
+                                {
+                                    OutputAlias = "output_aliascf122cc6",
+                                    DisplayName = "display_name137f65c2",
+                                },
+                            },
+                        },
+                        DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                        ExecutionInfo = new ExecutionInfo
+                        {
+                            JobCreationStatus = new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            BigqueryJob = new BigQueryJob
+                            {
+                                JobId = "job_id38ea97d6",
+                                ProjectId = "project_id43ad98b0",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UserEmail = "user_emaildc7bc240",
-                DebugFlags = new DebugFlags(),
-                DebugInfo = new wkt::Any(),
+                DebugFlags = new DebugFlags
+                {
+                    IncludeVaQuery = true,
+                    IncludeNestedVaQuery = false,
+                    IncludeHumanInterpretation = false,
+                    IncludeAquaDebugResponse = false,
+                    TimeOverride = -865841396904032937L,
+                    IsInternalGoogleUser = false,
+                    IgnoreCache = true,
+                    IncludeSearchEntitiesRpc = false,
+                    IncludeListColumnAnnotationsRpc = true,
+                    IncludeVirtualAnalystEntities = true,
+                    IncludeTableList = false,
+                    IncludeDomainList = true,
+                },
+                DebugInfo = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.ExecuteQuestion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -581,15 +3448,146 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
                 {
                     "data_source_annotationscbcadb22",
                 },
-                InterpretError = new InterpretError(),
+                InterpretError = new InterpretError
+                {
+                    Message = "message0231e778",
+                    Code = InterpretError.Types.InterpretErrorCode.FailedToAnswer,
+                    Details = new InterpretError.Types.InterpretErrorDetails
+                    {
+                        UnsupportedDetails = new InterpretError.Types.InterpretUnsupportedDetails
+                        {
+                            Operators =
+                            {
+                                "operators35fb9709",
+                            },
+                            Intent = { "intentd5c748fa", },
+                        },
+                        IncompleteQueryDetails = new InterpretError.Types.InterpretIncompleteQueryDetails
+                        {
+                            Entities =
+                            {
+                                InterpretEntity.Unspecified,
+                            },
+                        },
+                        AmbiguityDetails = new InterpretError.Types.InterpretAmbiguityDetails { },
+                    },
+                },
                 Interpretations =
                 {
-                    new Interpretation(),
+                    new Interpretation
+                    {
+                        DataSources =
+                        {
+                            "data_sources8e896846",
+                        },
+                        Confidence = 8.101505773561116E+17,
+                        UnusedPhrases =
+                        {
+                            "unused_phrases25e82b64",
+                        },
+                        HumanReadable = new HumanReadable
+                        {
+                            GeneratedInterpretation = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                            OriginalQuestion = new AnnotatedString
+                            {
+                                TextFormatted = "text_formatted3ddf454d",
+                                HtmlFormatted = "html_formatted77f18285",
+                                Markups =
+                                {
+                                    new AnnotatedString.Types.SemanticMarkup
+                                    {
+                                        Type = AnnotatedString.Types.SemanticMarkupType.Unused,
+                                        StartCharIndex = 1743095493,
+                                        Length = 2088739887,
+                                    },
+                                },
+                            },
+                        },
+                        InterpretationStructure = new InterpretationStructure
+                        {
+                            VisualizationTypes =
+                            {
+                                InterpretationStructure.Types.VisualizationType.BarChart,
+                            },
+                            ColumnInfo =
+                            {
+                                new InterpretationStructure.Types.ColumnInfo
+                                {
+                                    OutputAlias = "output_aliascf122cc6",
+                                    DisplayName = "display_name137f65c2",
+                                },
+                            },
+                        },
+                        DataQuery = new DataQuery { Sql = "sqlb6745cac", },
+                        ExecutionInfo = new ExecutionInfo
+                        {
+                            JobCreationStatus = new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                            JobExecutionState = ExecutionInfo.Types.JobExecutionState.NotExecuted,
+                            CreateTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            BigqueryJob = new BigQueryJob
+                            {
+                                JobId = "job_id38ea97d6",
+                                ProjectId = "project_id43ad98b0",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 UserEmail = "user_emaildc7bc240",
-                DebugFlags = new DebugFlags(),
-                DebugInfo = new wkt::Any(),
+                DebugFlags = new DebugFlags
+                {
+                    IncludeVaQuery = true,
+                    IncludeNestedVaQuery = false,
+                    IncludeHumanInterpretation = false,
+                    IncludeAquaDebugResponse = false,
+                    TimeOverride = -865841396904032937L,
+                    IsInternalGoogleUser = false,
+                    IgnoreCache = true,
+                    IncludeSearchEntitiesRpc = false,
+                    IncludeListColumnAnnotationsRpc = true,
+                    IncludeVirtualAnalystEntities = true,
+                    IncludeTableList = false,
+                    IncludeDomainList = true,
+                },
+                DebugInfo = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.ExecuteQuestionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Question>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             QuestionServiceClient client = new QuestionServiceClientImpl(mockGrpcClient.Object, null);
@@ -738,8 +3736,16 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
             moq::Mock<QuestionService.QuestionServiceClient> mockGrpcClient = new moq::Mock<QuestionService.QuestionServiceClient>(moq::MockBehavior.Strict);
             UpdateUserFeedbackRequest request = new UpdateUserFeedbackRequest
             {
-                UserFeedback = new UserFeedback(),
-                UpdateMask = new wkt::FieldMask(),
+                UserFeedback = new UserFeedback
+                {
+                    UserFeedbackName = UserFeedbackName.FromProjectLocationQuestion("[PROJECT]", "[LOCATION]", "[QUESTION]"),
+                    FreeFormFeedback = "free_form_feedbackab42f4bb",
+                    Rating = UserFeedback.Types.UserFeedbackRating.Unspecified,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             UserFeedback expectedResponse = new UserFeedback
             {
@@ -760,8 +3766,16 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
             moq::Mock<QuestionService.QuestionServiceClient> mockGrpcClient = new moq::Mock<QuestionService.QuestionServiceClient>(moq::MockBehavior.Strict);
             UpdateUserFeedbackRequest request = new UpdateUserFeedbackRequest
             {
-                UserFeedback = new UserFeedback(),
-                UpdateMask = new wkt::FieldMask(),
+                UserFeedback = new UserFeedback
+                {
+                    UserFeedbackName = UserFeedbackName.FromProjectLocationQuestion("[PROJECT]", "[LOCATION]", "[QUESTION]"),
+                    FreeFormFeedback = "free_form_feedbackab42f4bb",
+                    Rating = UserFeedback.Types.UserFeedbackRating.Unspecified,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             UserFeedback expectedResponse = new UserFeedback
             {
@@ -784,8 +3798,16 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
             moq::Mock<QuestionService.QuestionServiceClient> mockGrpcClient = new moq::Mock<QuestionService.QuestionServiceClient>(moq::MockBehavior.Strict);
             UpdateUserFeedbackRequest request = new UpdateUserFeedbackRequest
             {
-                UserFeedback = new UserFeedback(),
-                UpdateMask = new wkt::FieldMask(),
+                UserFeedback = new UserFeedback
+                {
+                    UserFeedbackName = UserFeedbackName.FromProjectLocationQuestion("[PROJECT]", "[LOCATION]", "[QUESTION]"),
+                    FreeFormFeedback = "free_form_feedbackab42f4bb",
+                    Rating = UserFeedback.Types.UserFeedbackRating.Unspecified,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             UserFeedback expectedResponse = new UserFeedback
             {
@@ -806,8 +3828,16 @@ namespace Google.Cloud.DataQnA.V1Alpha.Tests
             moq::Mock<QuestionService.QuestionServiceClient> mockGrpcClient = new moq::Mock<QuestionService.QuestionServiceClient>(moq::MockBehavior.Strict);
             UpdateUserFeedbackRequest request = new UpdateUserFeedbackRequest
             {
-                UserFeedback = new UserFeedback(),
-                UpdateMask = new wkt::FieldMask(),
+                UserFeedback = new UserFeedback
+                {
+                    UserFeedbackName = UserFeedbackName.FromProjectLocationQuestion("[PROJECT]", "[LOCATION]", "[QUESTION]"),
+                    FreeFormFeedback = "free_form_feedbackab42f4bb",
+                    Rating = UserFeedback.Types.UserFeedbackRating.Unspecified,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             UserFeedback expectedResponse = new UserFeedback
             {
