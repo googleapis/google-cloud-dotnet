@@ -20,6 +20,7 @@ using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -39,18 +40,64 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ConnectionId = "connection_id78489b28",
-                Connection = new Connection(),
+                Connection = new Connection
+                {
+                    ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
+                    FriendlyName = "friendly_name6171e36b",
+                    Description = "description2cf9da67",
+                    CloudSql = new CloudSqlProperties
+                    {
+                        InstanceId = "instance_id4fccaf51",
+                        Database = "databased8eee011",
+                        Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                        Credential = new CloudSqlCredential
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                        },
+                    },
+                    CreationTime = -5025413042314785256L,
+                    LastModifiedTime = 1315234198627015670L,
+                    HasCredential = true,
+                    Aws = new AwsProperties
+                    {
+                        CrossAccountRole = new AwsCrossAccountRole
+                        {
+                            IamRoleId = "iam_role_id08177202",
+                            IamUserId = "iam_user_id7f84d86b",
+                            ExternalId = "external_id9442680e",
+                        },
+                    },
+                },
             };
             Connection expectedResponse = new Connection
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -67,18 +114,64 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ConnectionId = "connection_id78489b28",
-                Connection = new Connection(),
+                Connection = new Connection
+                {
+                    ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
+                    FriendlyName = "friendly_name6171e36b",
+                    Description = "description2cf9da67",
+                    CloudSql = new CloudSqlProperties
+                    {
+                        InstanceId = "instance_id4fccaf51",
+                        Database = "databased8eee011",
+                        Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                        Credential = new CloudSqlCredential
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                        },
+                    },
+                    CreationTime = -5025413042314785256L,
+                    LastModifiedTime = 1315234198627015670L,
+                    HasCredential = true,
+                    Aws = new AwsProperties
+                    {
+                        CrossAccountRole = new AwsCrossAccountRole
+                        {
+                            IamRoleId = "iam_role_id08177202",
+                            IamUserId = "iam_user_id7f84d86b",
+                            ExternalId = "external_id9442680e",
+                        },
+                    },
+                },
             };
             Connection expectedResponse = new Connection
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -97,18 +190,64 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ConnectionId = "connection_id78489b28",
-                Connection = new Connection(),
+                Connection = new Connection
+                {
+                    ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
+                    FriendlyName = "friendly_name6171e36b",
+                    Description = "description2cf9da67",
+                    CloudSql = new CloudSqlProperties
+                    {
+                        InstanceId = "instance_id4fccaf51",
+                        Database = "databased8eee011",
+                        Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                        Credential = new CloudSqlCredential
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                        },
+                    },
+                    CreationTime = -5025413042314785256L,
+                    LastModifiedTime = 1315234198627015670L,
+                    HasCredential = true,
+                    Aws = new AwsProperties
+                    {
+                        CrossAccountRole = new AwsCrossAccountRole
+                        {
+                            IamRoleId = "iam_role_id08177202",
+                            IamUserId = "iam_user_id7f84d86b",
+                            ExternalId = "external_id9442680e",
+                        },
+                    },
+                },
             };
             Connection expectedResponse = new Connection
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -125,18 +264,64 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ConnectionId = "connection_id78489b28",
-                Connection = new Connection(),
+                Connection = new Connection
+                {
+                    ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
+                    FriendlyName = "friendly_name6171e36b",
+                    Description = "description2cf9da67",
+                    CloudSql = new CloudSqlProperties
+                    {
+                        InstanceId = "instance_id4fccaf51",
+                        Database = "databased8eee011",
+                        Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                        Credential = new CloudSqlCredential
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                        },
+                    },
+                    CreationTime = -5025413042314785256L,
+                    LastModifiedTime = 1315234198627015670L,
+                    HasCredential = true,
+                    Aws = new AwsProperties
+                    {
+                        CrossAccountRole = new AwsCrossAccountRole
+                        {
+                            IamRoleId = "iam_role_id08177202",
+                            IamUserId = "iam_user_id7f84d86b",
+                            ExternalId = "external_id9442680e",
+                        },
+                    },
+                },
             };
             Connection expectedResponse = new Connection
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -155,18 +340,64 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ConnectionId = "connection_id78489b28",
-                Connection = new Connection(),
+                Connection = new Connection
+                {
+                    ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
+                    FriendlyName = "friendly_name6171e36b",
+                    Description = "description2cf9da67",
+                    CloudSql = new CloudSqlProperties
+                    {
+                        InstanceId = "instance_id4fccaf51",
+                        Database = "databased8eee011",
+                        Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                        Credential = new CloudSqlCredential
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                        },
+                    },
+                    CreationTime = -5025413042314785256L,
+                    LastModifiedTime = 1315234198627015670L,
+                    HasCredential = true,
+                    Aws = new AwsProperties
+                    {
+                        CrossAccountRole = new AwsCrossAccountRole
+                        {
+                            IamRoleId = "iam_role_id08177202",
+                            IamUserId = "iam_user_id7f84d86b",
+                            ExternalId = "external_id9442680e",
+                        },
+                    },
+                },
             };
             Connection expectedResponse = new Connection
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -183,18 +414,64 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ConnectionId = "connection_id78489b28",
-                Connection = new Connection(),
+                Connection = new Connection
+                {
+                    ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
+                    FriendlyName = "friendly_name6171e36b",
+                    Description = "description2cf9da67",
+                    CloudSql = new CloudSqlProperties
+                    {
+                        InstanceId = "instance_id4fccaf51",
+                        Database = "databased8eee011",
+                        Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                        Credential = new CloudSqlCredential
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                        },
+                    },
+                    CreationTime = -5025413042314785256L,
+                    LastModifiedTime = 1315234198627015670L,
+                    HasCredential = true,
+                    Aws = new AwsProperties
+                    {
+                        CrossAccountRole = new AwsCrossAccountRole
+                        {
+                            IamRoleId = "iam_role_id08177202",
+                            IamUserId = "iam_user_id7f84d86b",
+                            ExternalId = "external_id9442680e",
+                        },
+                    },
+                },
             };
             Connection expectedResponse = new Connection
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -218,11 +495,29 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -244,11 +539,29 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -272,11 +585,29 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -298,11 +629,29 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -326,11 +675,29 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -352,11 +719,29 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -374,19 +759,68 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             UpdateConnectionRequest request = new UpdateConnectionRequest
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
-                Connection = new Connection(),
-                UpdateMask = new wkt::FieldMask(),
+                Connection = new Connection
+                {
+                    ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
+                    FriendlyName = "friendly_name6171e36b",
+                    Description = "description2cf9da67",
+                    CloudSql = new CloudSqlProperties
+                    {
+                        InstanceId = "instance_id4fccaf51",
+                        Database = "databased8eee011",
+                        Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                        Credential = new CloudSqlCredential
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                        },
+                    },
+                    CreationTime = -5025413042314785256L,
+                    LastModifiedTime = 1315234198627015670L,
+                    HasCredential = true,
+                    Aws = new AwsProperties
+                    {
+                        CrossAccountRole = new AwsCrossAccountRole
+                        {
+                            IamRoleId = "iam_role_id08177202",
+                            IamUserId = "iam_user_id7f84d86b",
+                            ExternalId = "external_id9442680e",
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Connection expectedResponse = new Connection
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -402,19 +836,68 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             UpdateConnectionRequest request = new UpdateConnectionRequest
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
-                Connection = new Connection(),
-                UpdateMask = new wkt::FieldMask(),
+                Connection = new Connection
+                {
+                    ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
+                    FriendlyName = "friendly_name6171e36b",
+                    Description = "description2cf9da67",
+                    CloudSql = new CloudSqlProperties
+                    {
+                        InstanceId = "instance_id4fccaf51",
+                        Database = "databased8eee011",
+                        Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                        Credential = new CloudSqlCredential
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                        },
+                    },
+                    CreationTime = -5025413042314785256L,
+                    LastModifiedTime = 1315234198627015670L,
+                    HasCredential = true,
+                    Aws = new AwsProperties
+                    {
+                        CrossAccountRole = new AwsCrossAccountRole
+                        {
+                            IamRoleId = "iam_role_id08177202",
+                            IamUserId = "iam_user_id7f84d86b",
+                            ExternalId = "external_id9442680e",
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Connection expectedResponse = new Connection
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -432,19 +915,68 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             UpdateConnectionRequest request = new UpdateConnectionRequest
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
-                Connection = new Connection(),
-                UpdateMask = new wkt::FieldMask(),
+                Connection = new Connection
+                {
+                    ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
+                    FriendlyName = "friendly_name6171e36b",
+                    Description = "description2cf9da67",
+                    CloudSql = new CloudSqlProperties
+                    {
+                        InstanceId = "instance_id4fccaf51",
+                        Database = "databased8eee011",
+                        Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                        Credential = new CloudSqlCredential
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                        },
+                    },
+                    CreationTime = -5025413042314785256L,
+                    LastModifiedTime = 1315234198627015670L,
+                    HasCredential = true,
+                    Aws = new AwsProperties
+                    {
+                        CrossAccountRole = new AwsCrossAccountRole
+                        {
+                            IamRoleId = "iam_role_id08177202",
+                            IamUserId = "iam_user_id7f84d86b",
+                            ExternalId = "external_id9442680e",
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Connection expectedResponse = new Connection
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -460,19 +992,68 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             UpdateConnectionRequest request = new UpdateConnectionRequest
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
-                Connection = new Connection(),
-                UpdateMask = new wkt::FieldMask(),
+                Connection = new Connection
+                {
+                    ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
+                    FriendlyName = "friendly_name6171e36b",
+                    Description = "description2cf9da67",
+                    CloudSql = new CloudSqlProperties
+                    {
+                        InstanceId = "instance_id4fccaf51",
+                        Database = "databased8eee011",
+                        Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                        Credential = new CloudSqlCredential
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                        },
+                    },
+                    CreationTime = -5025413042314785256L,
+                    LastModifiedTime = 1315234198627015670L,
+                    HasCredential = true,
+                    Aws = new AwsProperties
+                    {
+                        CrossAccountRole = new AwsCrossAccountRole
+                        {
+                            IamRoleId = "iam_role_id08177202",
+                            IamUserId = "iam_user_id7f84d86b",
+                            ExternalId = "external_id9442680e",
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Connection expectedResponse = new Connection
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -490,19 +1071,68 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             UpdateConnectionRequest request = new UpdateConnectionRequest
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
-                Connection = new Connection(),
-                UpdateMask = new wkt::FieldMask(),
+                Connection = new Connection
+                {
+                    ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
+                    FriendlyName = "friendly_name6171e36b",
+                    Description = "description2cf9da67",
+                    CloudSql = new CloudSqlProperties
+                    {
+                        InstanceId = "instance_id4fccaf51",
+                        Database = "databased8eee011",
+                        Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                        Credential = new CloudSqlCredential
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                        },
+                    },
+                    CreationTime = -5025413042314785256L,
+                    LastModifiedTime = 1315234198627015670L,
+                    HasCredential = true,
+                    Aws = new AwsProperties
+                    {
+                        CrossAccountRole = new AwsCrossAccountRole
+                        {
+                            IamRoleId = "iam_role_id08177202",
+                            IamUserId = "iam_user_id7f84d86b",
+                            ExternalId = "external_id9442680e",
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Connection expectedResponse = new Connection
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -518,19 +1148,68 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             UpdateConnectionRequest request = new UpdateConnectionRequest
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
-                Connection = new Connection(),
-                UpdateMask = new wkt::FieldMask(),
+                Connection = new Connection
+                {
+                    ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
+                    FriendlyName = "friendly_name6171e36b",
+                    Description = "description2cf9da67",
+                    CloudSql = new CloudSqlProperties
+                    {
+                        InstanceId = "instance_id4fccaf51",
+                        Database = "databased8eee011",
+                        Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                        Credential = new CloudSqlCredential
+                        {
+                            Username = "username6bb0c414",
+                            Password = "password3bcc4d5f",
+                        },
+                    },
+                    CreationTime = -5025413042314785256L,
+                    LastModifiedTime = 1315234198627015670L,
+                    HasCredential = true,
+                    Aws = new AwsProperties
+                    {
+                        CrossAccountRole = new AwsCrossAccountRole
+                        {
+                            IamRoleId = "iam_role_id08177202",
+                            IamUserId = "iam_user_id7f84d86b",
+                            ExternalId = "external_id9442680e",
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Connection expectedResponse = new Connection
             {
                 ConnectionName = ConnectionName.FromProjectLocationConnection("[PROJECT]", "[LOCATION]", "[CONNECTION]"),
                 FriendlyName = "friendly_name6171e36b",
                 Description = "description2cf9da67",
-                CloudSql = new CloudSqlProperties(),
+                CloudSql = new CloudSqlProperties
+                {
+                    InstanceId = "instance_id4fccaf51",
+                    Database = "databased8eee011",
+                    Type = CloudSqlProperties.Types.DatabaseType.Unspecified,
+                    Credential = new CloudSqlCredential
+                    {
+                        Username = "username6bb0c414",
+                        Password = "password3bcc4d5f",
+                    },
+                },
                 CreationTime = -5025413042314785256L,
                 LastModifiedTime = 1315234198627015670L,
                 HasCredential = true,
-                Aws = new AwsProperties(),
+                Aws = new AwsProperties
+                {
+                    CrossAccountRole = new AwsCrossAccountRole
+                    {
+                        IamRoleId = "iam_role_id08177202",
+                        IamUserId = "iam_user_id7f84d86b",
+                        ExternalId = "external_id9442680e",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConnectionServiceClient client = new ConnectionServiceClientImpl(mockGrpcClient.Object, null);
@@ -641,7 +1320,10 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -649,7 +1331,18 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -666,7 +1359,10 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -674,7 +1370,18 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -693,7 +1400,10 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -701,7 +1411,18 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -718,7 +1439,10 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -726,7 +1450,18 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -745,7 +1480,10 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -753,7 +1491,18 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -770,7 +1519,10 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -778,7 +1530,18 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -797,7 +1560,26 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -805,7 +1587,18 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -822,7 +1615,26 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -830,7 +1642,18 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -849,7 +1672,26 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -857,7 +1699,18 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -874,7 +1727,26 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -882,7 +1754,18 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -901,7 +1784,26 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -909,7 +1811,18 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -926,7 +1839,26 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -934,7 +1866,18 @@ namespace Google.Cloud.BigQuery.Connection.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
