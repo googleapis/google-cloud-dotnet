@@ -37,16 +37,61 @@ namespace Google.Cloud.WebRisk.V1.Tests
             {
                 ThreatType = ThreatType.Malware,
                 VersionToken = proto::ByteString.CopyFromUtf8("version_token1850f275"),
-                Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
+                Constraints = new ComputeThreatListDiffRequest.Types.Constraints
+                {
+                    MaxDiffEntries = 1169784517,
+                    MaxDatabaseEntries = -1385865129,
+                    SupportedCompressions =
+                    {
+                        CompressionType.Rice,
+                    },
+                },
             };
             ComputeThreatListDiffResponse expectedResponse = new ComputeThreatListDiffResponse
             {
-                RecommendedNextDiff = new wkt::Timestamp(),
+                RecommendedNextDiff = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ResponseType = ComputeThreatListDiffResponse.Types.ResponseType.Diff,
-                Additions = new ThreatEntryAdditions(),
-                Removals = new ThreatEntryRemovals(),
+                Additions = new ThreatEntryAdditions
+                {
+                    RawHashes =
+                    {
+                        new RawHashes
+                        {
+                            PrefixSize = 1835837013,
+                            RawHashes_ = proto::ByteString.CopyFromUtf8("raw_hashesa00a8324"),
+                        },
+                    },
+                    RiceHashes = new RiceDeltaEncoding
+                    {
+                        FirstValue = -5869981180714689278L,
+                        RiceParameter = -1115116549,
+                        EntryCount = -1925390589,
+                        EncodedData = proto::ByteString.CopyFromUtf8("encoded_dataf3d7404f"),
+                    },
+                },
+                Removals = new ThreatEntryRemovals
+                {
+                    RawIndices = new RawIndices
+                    {
+                        Indices = { -1890444635, },
+                    },
+                    RiceIndices = new RiceDeltaEncoding
+                    {
+                        FirstValue = -5869981180714689278L,
+                        RiceParameter = -1115116549,
+                        EntryCount = -1925390589,
+                        EncodedData = proto::ByteString.CopyFromUtf8("encoded_dataf3d7404f"),
+                    },
+                },
                 NewVersionToken = proto::ByteString.CopyFromUtf8("new_version_tokenc8bdd85d"),
-                Checksum = new ComputeThreatListDiffResponse.Types.Checksum(),
+                Checksum = new ComputeThreatListDiffResponse.Types.Checksum
+                {
+                    Sha256 = proto::ByteString.CopyFromUtf8("sha256d2a6d8d8"),
+                },
             };
             mockGrpcClient.Setup(x => x.ComputeThreatListDiff(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
@@ -63,16 +108,61 @@ namespace Google.Cloud.WebRisk.V1.Tests
             {
                 ThreatType = ThreatType.Malware,
                 VersionToken = proto::ByteString.CopyFromUtf8("version_token1850f275"),
-                Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
+                Constraints = new ComputeThreatListDiffRequest.Types.Constraints
+                {
+                    MaxDiffEntries = 1169784517,
+                    MaxDatabaseEntries = -1385865129,
+                    SupportedCompressions =
+                    {
+                        CompressionType.Rice,
+                    },
+                },
             };
             ComputeThreatListDiffResponse expectedResponse = new ComputeThreatListDiffResponse
             {
-                RecommendedNextDiff = new wkt::Timestamp(),
+                RecommendedNextDiff = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ResponseType = ComputeThreatListDiffResponse.Types.ResponseType.Diff,
-                Additions = new ThreatEntryAdditions(),
-                Removals = new ThreatEntryRemovals(),
+                Additions = new ThreatEntryAdditions
+                {
+                    RawHashes =
+                    {
+                        new RawHashes
+                        {
+                            PrefixSize = 1835837013,
+                            RawHashes_ = proto::ByteString.CopyFromUtf8("raw_hashesa00a8324"),
+                        },
+                    },
+                    RiceHashes = new RiceDeltaEncoding
+                    {
+                        FirstValue = -5869981180714689278L,
+                        RiceParameter = -1115116549,
+                        EntryCount = -1925390589,
+                        EncodedData = proto::ByteString.CopyFromUtf8("encoded_dataf3d7404f"),
+                    },
+                },
+                Removals = new ThreatEntryRemovals
+                {
+                    RawIndices = new RawIndices
+                    {
+                        Indices = { -1890444635, },
+                    },
+                    RiceIndices = new RiceDeltaEncoding
+                    {
+                        FirstValue = -5869981180714689278L,
+                        RiceParameter = -1115116549,
+                        EntryCount = -1925390589,
+                        EncodedData = proto::ByteString.CopyFromUtf8("encoded_dataf3d7404f"),
+                    },
+                },
                 NewVersionToken = proto::ByteString.CopyFromUtf8("new_version_tokenc8bdd85d"),
-                Checksum = new ComputeThreatListDiffResponse.Types.Checksum(),
+                Checksum = new ComputeThreatListDiffResponse.Types.Checksum
+                {
+                    Sha256 = proto::ByteString.CopyFromUtf8("sha256d2a6d8d8"),
+                },
             };
             mockGrpcClient.Setup(x => x.ComputeThreatListDiffAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComputeThreatListDiffResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
@@ -91,16 +181,61 @@ namespace Google.Cloud.WebRisk.V1.Tests
             {
                 ThreatType = ThreatType.Malware,
                 VersionToken = proto::ByteString.CopyFromUtf8("version_token1850f275"),
-                Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
+                Constraints = new ComputeThreatListDiffRequest.Types.Constraints
+                {
+                    MaxDiffEntries = 1169784517,
+                    MaxDatabaseEntries = -1385865129,
+                    SupportedCompressions =
+                    {
+                        CompressionType.Rice,
+                    },
+                },
             };
             ComputeThreatListDiffResponse expectedResponse = new ComputeThreatListDiffResponse
             {
-                RecommendedNextDiff = new wkt::Timestamp(),
+                RecommendedNextDiff = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ResponseType = ComputeThreatListDiffResponse.Types.ResponseType.Diff,
-                Additions = new ThreatEntryAdditions(),
-                Removals = new ThreatEntryRemovals(),
+                Additions = new ThreatEntryAdditions
+                {
+                    RawHashes =
+                    {
+                        new RawHashes
+                        {
+                            PrefixSize = 1835837013,
+                            RawHashes_ = proto::ByteString.CopyFromUtf8("raw_hashesa00a8324"),
+                        },
+                    },
+                    RiceHashes = new RiceDeltaEncoding
+                    {
+                        FirstValue = -5869981180714689278L,
+                        RiceParameter = -1115116549,
+                        EntryCount = -1925390589,
+                        EncodedData = proto::ByteString.CopyFromUtf8("encoded_dataf3d7404f"),
+                    },
+                },
+                Removals = new ThreatEntryRemovals
+                {
+                    RawIndices = new RawIndices
+                    {
+                        Indices = { -1890444635, },
+                    },
+                    RiceIndices = new RiceDeltaEncoding
+                    {
+                        FirstValue = -5869981180714689278L,
+                        RiceParameter = -1115116549,
+                        EntryCount = -1925390589,
+                        EncodedData = proto::ByteString.CopyFromUtf8("encoded_dataf3d7404f"),
+                    },
+                },
                 NewVersionToken = proto::ByteString.CopyFromUtf8("new_version_tokenc8bdd85d"),
-                Checksum = new ComputeThreatListDiffResponse.Types.Checksum(),
+                Checksum = new ComputeThreatListDiffResponse.Types.Checksum
+                {
+                    Sha256 = proto::ByteString.CopyFromUtf8("sha256d2a6d8d8"),
+                },
             };
             mockGrpcClient.Setup(x => x.ComputeThreatListDiff(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
@@ -117,16 +252,61 @@ namespace Google.Cloud.WebRisk.V1.Tests
             {
                 ThreatType = ThreatType.Malware,
                 VersionToken = proto::ByteString.CopyFromUtf8("version_token1850f275"),
-                Constraints = new ComputeThreatListDiffRequest.Types.Constraints(),
+                Constraints = new ComputeThreatListDiffRequest.Types.Constraints
+                {
+                    MaxDiffEntries = 1169784517,
+                    MaxDatabaseEntries = -1385865129,
+                    SupportedCompressions =
+                    {
+                        CompressionType.Rice,
+                    },
+                },
             };
             ComputeThreatListDiffResponse expectedResponse = new ComputeThreatListDiffResponse
             {
-                RecommendedNextDiff = new wkt::Timestamp(),
+                RecommendedNextDiff = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ResponseType = ComputeThreatListDiffResponse.Types.ResponseType.Diff,
-                Additions = new ThreatEntryAdditions(),
-                Removals = new ThreatEntryRemovals(),
+                Additions = new ThreatEntryAdditions
+                {
+                    RawHashes =
+                    {
+                        new RawHashes
+                        {
+                            PrefixSize = 1835837013,
+                            RawHashes_ = proto::ByteString.CopyFromUtf8("raw_hashesa00a8324"),
+                        },
+                    },
+                    RiceHashes = new RiceDeltaEncoding
+                    {
+                        FirstValue = -5869981180714689278L,
+                        RiceParameter = -1115116549,
+                        EntryCount = -1925390589,
+                        EncodedData = proto::ByteString.CopyFromUtf8("encoded_dataf3d7404f"),
+                    },
+                },
+                Removals = new ThreatEntryRemovals
+                {
+                    RawIndices = new RawIndices
+                    {
+                        Indices = { -1890444635, },
+                    },
+                    RiceIndices = new RiceDeltaEncoding
+                    {
+                        FirstValue = -5869981180714689278L,
+                        RiceParameter = -1115116549,
+                        EntryCount = -1925390589,
+                        EncodedData = proto::ByteString.CopyFromUtf8("encoded_dataf3d7404f"),
+                    },
+                },
                 NewVersionToken = proto::ByteString.CopyFromUtf8("new_version_tokenc8bdd85d"),
-                Checksum = new ComputeThreatListDiffResponse.Types.Checksum(),
+                Checksum = new ComputeThreatListDiffResponse.Types.Checksum
+                {
+                    Sha256 = proto::ByteString.CopyFromUtf8("sha256d2a6d8d8"),
+                },
             };
             mockGrpcClient.Setup(x => x.ComputeThreatListDiffAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ComputeThreatListDiffResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
@@ -151,7 +331,18 @@ namespace Google.Cloud.WebRisk.V1.Tests
             };
             SearchUrisResponse expectedResponse = new SearchUrisResponse
             {
-                Threat = new SearchUrisResponse.Types.ThreatUri(),
+                Threat = new SearchUrisResponse.Types.ThreatUri
+                {
+                    ThreatTypes =
+                    {
+                        ThreatType.SocialEngineering,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.SearchUris(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
@@ -174,7 +365,18 @@ namespace Google.Cloud.WebRisk.V1.Tests
             };
             SearchUrisResponse expectedResponse = new SearchUrisResponse
             {
-                Threat = new SearchUrisResponse.Types.ThreatUri(),
+                Threat = new SearchUrisResponse.Types.ThreatUri
+                {
+                    ThreatTypes =
+                    {
+                        ThreatType.SocialEngineering,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.SearchUrisAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchUrisResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
@@ -199,7 +401,18 @@ namespace Google.Cloud.WebRisk.V1.Tests
             };
             SearchUrisResponse expectedResponse = new SearchUrisResponse
             {
-                Threat = new SearchUrisResponse.Types.ThreatUri(),
+                Threat = new SearchUrisResponse.Types.ThreatUri
+                {
+                    ThreatTypes =
+                    {
+                        ThreatType.SocialEngineering,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.SearchUris(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
@@ -222,7 +435,18 @@ namespace Google.Cloud.WebRisk.V1.Tests
             };
             SearchUrisResponse expectedResponse = new SearchUrisResponse
             {
-                Threat = new SearchUrisResponse.Types.ThreatUri(),
+                Threat = new SearchUrisResponse.Types.ThreatUri
+                {
+                    ThreatTypes =
+                    {
+                        ThreatType.SocialEngineering,
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.SearchUrisAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchUrisResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
@@ -249,9 +473,25 @@ namespace Google.Cloud.WebRisk.V1.Tests
             {
                 Threats =
                 {
-                    new SearchHashesResponse.Types.ThreatHash(),
+                    new SearchHashesResponse.Types.ThreatHash
+                    {
+                        ThreatTypes =
+                        {
+                            ThreatType.SocialEngineering,
+                        },
+                        Hash = proto::ByteString.CopyFromUtf8("hash57fc0008"),
+                        ExpireTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                NegativeExpireTime = new wkt::Timestamp(),
+                NegativeExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.SearchHashes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
@@ -276,9 +516,25 @@ namespace Google.Cloud.WebRisk.V1.Tests
             {
                 Threats =
                 {
-                    new SearchHashesResponse.Types.ThreatHash(),
+                    new SearchHashesResponse.Types.ThreatHash
+                    {
+                        ThreatTypes =
+                        {
+                            ThreatType.SocialEngineering,
+                        },
+                        Hash = proto::ByteString.CopyFromUtf8("hash57fc0008"),
+                        ExpireTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                NegativeExpireTime = new wkt::Timestamp(),
+                NegativeExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.SearchHashesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchHashesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
@@ -305,9 +561,25 @@ namespace Google.Cloud.WebRisk.V1.Tests
             {
                 Threats =
                 {
-                    new SearchHashesResponse.Types.ThreatHash(),
+                    new SearchHashesResponse.Types.ThreatHash
+                    {
+                        ThreatTypes =
+                        {
+                            ThreatType.SocialEngineering,
+                        },
+                        Hash = proto::ByteString.CopyFromUtf8("hash57fc0008"),
+                        ExpireTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                NegativeExpireTime = new wkt::Timestamp(),
+                NegativeExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.SearchHashes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
@@ -332,9 +604,25 @@ namespace Google.Cloud.WebRisk.V1.Tests
             {
                 Threats =
                 {
-                    new SearchHashesResponse.Types.ThreatHash(),
+                    new SearchHashesResponse.Types.ThreatHash
+                    {
+                        ThreatTypes =
+                        {
+                            ThreatType.SocialEngineering,
+                        },
+                        Hash = proto::ByteString.CopyFromUtf8("hash57fc0008"),
+                        ExpireTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                NegativeExpireTime = new wkt::Timestamp(),
+                NegativeExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.SearchHashesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchHashesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WebRiskServiceClient client = new WebRiskServiceClientImpl(mockGrpcClient.Object, null);
@@ -352,7 +640,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
             CreateSubmissionRequest request = new CreateSubmissionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Submission = new Submission(),
+                Submission = new Submission { Uri = "uri3db70593", },
             };
             Submission expectedResponse = new Submission { Uri = "uri3db70593", };
             mockGrpcClient.Setup(x => x.CreateSubmission(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -369,7 +657,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
             CreateSubmissionRequest request = new CreateSubmissionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Submission = new Submission(),
+                Submission = new Submission { Uri = "uri3db70593", },
             };
             Submission expectedResponse = new Submission { Uri = "uri3db70593", };
             mockGrpcClient.Setup(x => x.CreateSubmissionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Submission>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -388,7 +676,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
             CreateSubmissionRequest request = new CreateSubmissionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Submission = new Submission(),
+                Submission = new Submission { Uri = "uri3db70593", },
             };
             Submission expectedResponse = new Submission { Uri = "uri3db70593", };
             mockGrpcClient.Setup(x => x.CreateSubmission(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -405,7 +693,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
             CreateSubmissionRequest request = new CreateSubmissionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Submission = new Submission(),
+                Submission = new Submission { Uri = "uri3db70593", },
             };
             Submission expectedResponse = new Submission { Uri = "uri3db70593", };
             mockGrpcClient.Setup(x => x.CreateSubmissionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Submission>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -424,7 +712,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
             CreateSubmissionRequest request = new CreateSubmissionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Submission = new Submission(),
+                Submission = new Submission { Uri = "uri3db70593", },
             };
             Submission expectedResponse = new Submission { Uri = "uri3db70593", };
             mockGrpcClient.Setup(x => x.CreateSubmission(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -441,7 +729,7 @@ namespace Google.Cloud.WebRisk.V1.Tests
             CreateSubmissionRequest request = new CreateSubmissionRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Submission = new Submission(),
+                Submission = new Submission { Uri = "uri3db70593", },
             };
             Submission expectedResponse = new Submission { Uri = "uri3db70593", };
             mockGrpcClient.Setup(x => x.CreateSubmissionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Submission>(stt::Task.FromResult(expectedResponse), null, null, null, null));
