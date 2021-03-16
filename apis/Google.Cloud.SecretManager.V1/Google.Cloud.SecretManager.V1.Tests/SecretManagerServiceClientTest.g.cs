@@ -20,6 +20,7 @@ using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -39,13 +40,96 @@ namespace Google.Cloud.SecretManager.V1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 SecretId = "secret_id0fe6a1e4",
-                Secret = new Secret(),
+                Secret = new Secret
+                {
+                    SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                    Replication = new Replication
+                    {
+                        Automatic = new Replication.Types.Automatic
+                        {
+                            CustomerManagedEncryption = new CustomerManagedEncryption
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                            },
+                        },
+                        UserManaged = new Replication.Types.UserManaged
+                        {
+                            Replicas =
+                            {
+                                new Replication.Types.UserManaged.Types.Replica
+                                {
+                                    Location = "locatione09d18d5",
+                                    CustomerManagedEncryption = new CustomerManagedEncryption
+                                    {
+                                        KmsKeyName = "kms_key_name06bd122b",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Topics =
+                    {
+                        new Topic
+                        {
+                            TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        },
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Secret expectedResponse = new Secret
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Replication = new Replication(),
-                CreateTime = new wkt::Timestamp(),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                        },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryption
+                                {
+                                    KmsKeyName = "kms_key_name06bd122b",
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -53,9 +137,23 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
-                Topics = { new Topic(), },
-                ExpireTime = new wkt::Timestamp(),
-                Ttl = new wkt::Duration(),
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Ttl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -72,13 +170,96 @@ namespace Google.Cloud.SecretManager.V1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 SecretId = "secret_id0fe6a1e4",
-                Secret = new Secret(),
+                Secret = new Secret
+                {
+                    SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                    Replication = new Replication
+                    {
+                        Automatic = new Replication.Types.Automatic
+                        {
+                            CustomerManagedEncryption = new CustomerManagedEncryption
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                            },
+                        },
+                        UserManaged = new Replication.Types.UserManaged
+                        {
+                            Replicas =
+                            {
+                                new Replication.Types.UserManaged.Types.Replica
+                                {
+                                    Location = "locatione09d18d5",
+                                    CustomerManagedEncryption = new CustomerManagedEncryption
+                                    {
+                                        KmsKeyName = "kms_key_name06bd122b",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Topics =
+                    {
+                        new Topic
+                        {
+                            TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        },
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Secret expectedResponse = new Secret
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Replication = new Replication(),
-                CreateTime = new wkt::Timestamp(),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                        },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryption
+                                {
+                                    KmsKeyName = "kms_key_name06bd122b",
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -86,9 +267,23 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
-                Topics = { new Topic(), },
-                ExpireTime = new wkt::Timestamp(),
-                Ttl = new wkt::Duration(),
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Ttl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -107,13 +302,96 @@ namespace Google.Cloud.SecretManager.V1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 SecretId = "secret_id0fe6a1e4",
-                Secret = new Secret(),
+                Secret = new Secret
+                {
+                    SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                    Replication = new Replication
+                    {
+                        Automatic = new Replication.Types.Automatic
+                        {
+                            CustomerManagedEncryption = new CustomerManagedEncryption
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                            },
+                        },
+                        UserManaged = new Replication.Types.UserManaged
+                        {
+                            Replicas =
+                            {
+                                new Replication.Types.UserManaged.Types.Replica
+                                {
+                                    Location = "locatione09d18d5",
+                                    CustomerManagedEncryption = new CustomerManagedEncryption
+                                    {
+                                        KmsKeyName = "kms_key_name06bd122b",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Topics =
+                    {
+                        new Topic
+                        {
+                            TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        },
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Secret expectedResponse = new Secret
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Replication = new Replication(),
-                CreateTime = new wkt::Timestamp(),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                        },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryption
+                                {
+                                    KmsKeyName = "kms_key_name06bd122b",
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -121,9 +399,23 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
-                Topics = { new Topic(), },
-                ExpireTime = new wkt::Timestamp(),
-                Ttl = new wkt::Duration(),
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Ttl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -140,13 +432,96 @@ namespace Google.Cloud.SecretManager.V1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 SecretId = "secret_id0fe6a1e4",
-                Secret = new Secret(),
+                Secret = new Secret
+                {
+                    SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                    Replication = new Replication
+                    {
+                        Automatic = new Replication.Types.Automatic
+                        {
+                            CustomerManagedEncryption = new CustomerManagedEncryption
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                            },
+                        },
+                        UserManaged = new Replication.Types.UserManaged
+                        {
+                            Replicas =
+                            {
+                                new Replication.Types.UserManaged.Types.Replica
+                                {
+                                    Location = "locatione09d18d5",
+                                    CustomerManagedEncryption = new CustomerManagedEncryption
+                                    {
+                                        KmsKeyName = "kms_key_name06bd122b",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Topics =
+                    {
+                        new Topic
+                        {
+                            TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        },
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Secret expectedResponse = new Secret
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Replication = new Replication(),
-                CreateTime = new wkt::Timestamp(),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                        },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryption
+                                {
+                                    KmsKeyName = "kms_key_name06bd122b",
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -154,9 +529,23 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
-                Topics = { new Topic(), },
-                ExpireTime = new wkt::Timestamp(),
-                Ttl = new wkt::Duration(),
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Ttl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -175,13 +564,96 @@ namespace Google.Cloud.SecretManager.V1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 SecretId = "secret_id0fe6a1e4",
-                Secret = new Secret(),
+                Secret = new Secret
+                {
+                    SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                    Replication = new Replication
+                    {
+                        Automatic = new Replication.Types.Automatic
+                        {
+                            CustomerManagedEncryption = new CustomerManagedEncryption
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                            },
+                        },
+                        UserManaged = new Replication.Types.UserManaged
+                        {
+                            Replicas =
+                            {
+                                new Replication.Types.UserManaged.Types.Replica
+                                {
+                                    Location = "locatione09d18d5",
+                                    CustomerManagedEncryption = new CustomerManagedEncryption
+                                    {
+                                        KmsKeyName = "kms_key_name06bd122b",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Topics =
+                    {
+                        new Topic
+                        {
+                            TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        },
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Secret expectedResponse = new Secret
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Replication = new Replication(),
-                CreateTime = new wkt::Timestamp(),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                        },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryption
+                                {
+                                    KmsKeyName = "kms_key_name06bd122b",
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -189,9 +661,23 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
-                Topics = { new Topic(), },
-                ExpireTime = new wkt::Timestamp(),
-                Ttl = new wkt::Duration(),
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Ttl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -208,13 +694,96 @@ namespace Google.Cloud.SecretManager.V1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 SecretId = "secret_id0fe6a1e4",
-                Secret = new Secret(),
+                Secret = new Secret
+                {
+                    SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                    Replication = new Replication
+                    {
+                        Automatic = new Replication.Types.Automatic
+                        {
+                            CustomerManagedEncryption = new CustomerManagedEncryption
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                            },
+                        },
+                        UserManaged = new Replication.Types.UserManaged
+                        {
+                            Replicas =
+                            {
+                                new Replication.Types.UserManaged.Types.Replica
+                                {
+                                    Location = "locatione09d18d5",
+                                    CustomerManagedEncryption = new CustomerManagedEncryption
+                                    {
+                                        KmsKeyName = "kms_key_name06bd122b",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Topics =
+                    {
+                        new Topic
+                        {
+                            TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        },
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Secret expectedResponse = new Secret
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Replication = new Replication(),
-                CreateTime = new wkt::Timestamp(),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                        },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryption
+                                {
+                                    KmsKeyName = "kms_key_name06bd122b",
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -222,9 +791,23 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
-                Topics = { new Topic(), },
-                ExpireTime = new wkt::Timestamp(),
-                Ttl = new wkt::Duration(),
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Ttl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -242,15 +825,49 @@ namespace Google.Cloud.SecretManager.V1.Tests
             AddSecretVersionRequest request = new AddSecretVersionRequest
             {
                 ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Payload = new SecretPayload(),
+                Payload = new SecretPayload
+                {
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                },
             };
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.AddSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -266,15 +883,49 @@ namespace Google.Cloud.SecretManager.V1.Tests
             AddSecretVersionRequest request = new AddSecretVersionRequest
             {
                 ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Payload = new SecretPayload(),
+                Payload = new SecretPayload
+                {
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                },
             };
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.AddSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -292,15 +943,49 @@ namespace Google.Cloud.SecretManager.V1.Tests
             AddSecretVersionRequest request = new AddSecretVersionRequest
             {
                 ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Payload = new SecretPayload(),
+                Payload = new SecretPayload
+                {
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                },
             };
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.AddSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -316,15 +1001,49 @@ namespace Google.Cloud.SecretManager.V1.Tests
             AddSecretVersionRequest request = new AddSecretVersionRequest
             {
                 ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Payload = new SecretPayload(),
+                Payload = new SecretPayload
+                {
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                },
             };
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.AddSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -342,15 +1061,49 @@ namespace Google.Cloud.SecretManager.V1.Tests
             AddSecretVersionRequest request = new AddSecretVersionRequest
             {
                 ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Payload = new SecretPayload(),
+                Payload = new SecretPayload
+                {
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                },
             };
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.AddSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -366,15 +1119,49 @@ namespace Google.Cloud.SecretManager.V1.Tests
             AddSecretVersionRequest request = new AddSecretVersionRequest
             {
                 ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Payload = new SecretPayload(),
+                Payload = new SecretPayload
+                {
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                },
             };
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.AddSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -396,8 +1183,35 @@ namespace Google.Cloud.SecretManager.V1.Tests
             Secret expectedResponse = new Secret
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Replication = new Replication(),
-                CreateTime = new wkt::Timestamp(),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                        },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryption
+                                {
+                                    KmsKeyName = "kms_key_name06bd122b",
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -405,9 +1219,23 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
-                Topics = { new Topic(), },
-                ExpireTime = new wkt::Timestamp(),
-                Ttl = new wkt::Duration(),
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Ttl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -427,8 +1255,35 @@ namespace Google.Cloud.SecretManager.V1.Tests
             Secret expectedResponse = new Secret
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Replication = new Replication(),
-                CreateTime = new wkt::Timestamp(),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                        },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryption
+                                {
+                                    KmsKeyName = "kms_key_name06bd122b",
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -436,9 +1291,23 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
-                Topics = { new Topic(), },
-                ExpireTime = new wkt::Timestamp(),
-                Ttl = new wkt::Duration(),
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Ttl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -460,8 +1329,35 @@ namespace Google.Cloud.SecretManager.V1.Tests
             Secret expectedResponse = new Secret
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Replication = new Replication(),
-                CreateTime = new wkt::Timestamp(),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                        },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryption
+                                {
+                                    KmsKeyName = "kms_key_name06bd122b",
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -469,9 +1365,23 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
-                Topics = { new Topic(), },
-                ExpireTime = new wkt::Timestamp(),
-                Ttl = new wkt::Duration(),
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Ttl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -491,8 +1401,35 @@ namespace Google.Cloud.SecretManager.V1.Tests
             Secret expectedResponse = new Secret
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Replication = new Replication(),
-                CreateTime = new wkt::Timestamp(),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                        },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryption
+                                {
+                                    KmsKeyName = "kms_key_name06bd122b",
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -500,9 +1437,23 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
-                Topics = { new Topic(), },
-                ExpireTime = new wkt::Timestamp(),
-                Ttl = new wkt::Duration(),
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Ttl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -524,8 +1475,35 @@ namespace Google.Cloud.SecretManager.V1.Tests
             Secret expectedResponse = new Secret
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Replication = new Replication(),
-                CreateTime = new wkt::Timestamp(),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                        },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryption
+                                {
+                                    KmsKeyName = "kms_key_name06bd122b",
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -533,9 +1511,23 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
-                Topics = { new Topic(), },
-                ExpireTime = new wkt::Timestamp(),
-                Ttl = new wkt::Duration(),
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Ttl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -555,8 +1547,35 @@ namespace Google.Cloud.SecretManager.V1.Tests
             Secret expectedResponse = new Secret
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Replication = new Replication(),
-                CreateTime = new wkt::Timestamp(),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                        },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryption
+                                {
+                                    KmsKeyName = "kms_key_name06bd122b",
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -564,9 +1583,23 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
-                Topics = { new Topic(), },
-                ExpireTime = new wkt::Timestamp(),
-                Ttl = new wkt::Duration(),
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Ttl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -583,14 +1616,100 @@ namespace Google.Cloud.SecretManager.V1.Tests
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             UpdateSecretRequest request = new UpdateSecretRequest
             {
-                Secret = new Secret(),
-                UpdateMask = new wkt::FieldMask(),
+                Secret = new Secret
+                {
+                    SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                    Replication = new Replication
+                    {
+                        Automatic = new Replication.Types.Automatic
+                        {
+                            CustomerManagedEncryption = new CustomerManagedEncryption
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                            },
+                        },
+                        UserManaged = new Replication.Types.UserManaged
+                        {
+                            Replicas =
+                            {
+                                new Replication.Types.UserManaged.Types.Replica
+                                {
+                                    Location = "locatione09d18d5",
+                                    CustomerManagedEncryption = new CustomerManagedEncryption
+                                    {
+                                        KmsKeyName = "kms_key_name06bd122b",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Topics =
+                    {
+                        new Topic
+                        {
+                            TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        },
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Secret expectedResponse = new Secret
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Replication = new Replication(),
-                CreateTime = new wkt::Timestamp(),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                        },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryption
+                                {
+                                    KmsKeyName = "kms_key_name06bd122b",
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -598,9 +1717,23 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
-                Topics = { new Topic(), },
-                ExpireTime = new wkt::Timestamp(),
-                Ttl = new wkt::Duration(),
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Ttl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -615,14 +1748,100 @@ namespace Google.Cloud.SecretManager.V1.Tests
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             UpdateSecretRequest request = new UpdateSecretRequest
             {
-                Secret = new Secret(),
-                UpdateMask = new wkt::FieldMask(),
+                Secret = new Secret
+                {
+                    SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                    Replication = new Replication
+                    {
+                        Automatic = new Replication.Types.Automatic
+                        {
+                            CustomerManagedEncryption = new CustomerManagedEncryption
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                            },
+                        },
+                        UserManaged = new Replication.Types.UserManaged
+                        {
+                            Replicas =
+                            {
+                                new Replication.Types.UserManaged.Types.Replica
+                                {
+                                    Location = "locatione09d18d5",
+                                    CustomerManagedEncryption = new CustomerManagedEncryption
+                                    {
+                                        KmsKeyName = "kms_key_name06bd122b",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Topics =
+                    {
+                        new Topic
+                        {
+                            TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        },
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Secret expectedResponse = new Secret
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Replication = new Replication(),
-                CreateTime = new wkt::Timestamp(),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                        },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryption
+                                {
+                                    KmsKeyName = "kms_key_name06bd122b",
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -630,9 +1849,23 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
-                Topics = { new Topic(), },
-                ExpireTime = new wkt::Timestamp(),
-                Ttl = new wkt::Duration(),
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Ttl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -649,14 +1882,100 @@ namespace Google.Cloud.SecretManager.V1.Tests
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             UpdateSecretRequest request = new UpdateSecretRequest
             {
-                Secret = new Secret(),
-                UpdateMask = new wkt::FieldMask(),
+                Secret = new Secret
+                {
+                    SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                    Replication = new Replication
+                    {
+                        Automatic = new Replication.Types.Automatic
+                        {
+                            CustomerManagedEncryption = new CustomerManagedEncryption
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                            },
+                        },
+                        UserManaged = new Replication.Types.UserManaged
+                        {
+                            Replicas =
+                            {
+                                new Replication.Types.UserManaged.Types.Replica
+                                {
+                                    Location = "locatione09d18d5",
+                                    CustomerManagedEncryption = new CustomerManagedEncryption
+                                    {
+                                        KmsKeyName = "kms_key_name06bd122b",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Topics =
+                    {
+                        new Topic
+                        {
+                            TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        },
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Secret expectedResponse = new Secret
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Replication = new Replication(),
-                CreateTime = new wkt::Timestamp(),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                        },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryption
+                                {
+                                    KmsKeyName = "kms_key_name06bd122b",
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -664,9 +1983,23 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
-                Topics = { new Topic(), },
-                ExpireTime = new wkt::Timestamp(),
-                Ttl = new wkt::Duration(),
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Ttl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateSecret(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -681,14 +2014,100 @@ namespace Google.Cloud.SecretManager.V1.Tests
             moq::Mock<SecretManagerService.SecretManagerServiceClient> mockGrpcClient = new moq::Mock<SecretManagerService.SecretManagerServiceClient>(moq::MockBehavior.Strict);
             UpdateSecretRequest request = new UpdateSecretRequest
             {
-                Secret = new Secret(),
-                UpdateMask = new wkt::FieldMask(),
+                Secret = new Secret
+                {
+                    SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                    Replication = new Replication
+                    {
+                        Automatic = new Replication.Types.Automatic
+                        {
+                            CustomerManagedEncryption = new CustomerManagedEncryption
+                            {
+                                KmsKeyName = "kms_key_name06bd122b",
+                            },
+                        },
+                        UserManaged = new Replication.Types.UserManaged
+                        {
+                            Replicas =
+                            {
+                                new Replication.Types.UserManaged.Types.Replica
+                                {
+                                    Location = "locatione09d18d5",
+                                    CustomerManagedEncryption = new CustomerManagedEncryption
+                                    {
+                                        KmsKeyName = "kms_key_name06bd122b",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Topics =
+                    {
+                        new Topic
+                        {
+                            TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        },
+                    },
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Secret expectedResponse = new Secret
             {
                 SecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
-                Replication = new Replication(),
-                CreateTime = new wkt::Timestamp(),
+                Replication = new Replication
+                {
+                    Automatic = new Replication.Types.Automatic
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryption
+                        {
+                            KmsKeyName = "kms_key_name06bd122b",
+                        },
+                    },
+                    UserManaged = new Replication.Types.UserManaged
+                    {
+                        Replicas =
+                        {
+                            new Replication.Types.UserManaged.Types.Replica
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryption
+                                {
+                                    KmsKeyName = "kms_key_name06bd122b",
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -696,9 +2115,23 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
-                Topics = { new Topic(), },
-                ExpireTime = new wkt::Timestamp(),
-                Ttl = new wkt::Duration(),
+                Topics =
+                {
+                    new Topic
+                    {
+                        TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    },
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Ttl = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateSecretAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Secret>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -813,10 +2246,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -836,10 +2300,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -861,10 +2356,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -884,10 +2410,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -909,10 +2466,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -932,10 +2520,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -957,7 +2576,10 @@ namespace Google.Cloud.SecretManager.V1.Tests
             AccessSecretVersionResponse expectedResponse = new AccessSecretVersionResponse
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                Payload = new SecretPayload(),
+                Payload = new SecretPayload
+                {
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                },
             };
             mockGrpcClient.Setup(x => x.AccessSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -977,7 +2599,10 @@ namespace Google.Cloud.SecretManager.V1.Tests
             AccessSecretVersionResponse expectedResponse = new AccessSecretVersionResponse
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                Payload = new SecretPayload(),
+                Payload = new SecretPayload
+                {
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                },
             };
             mockGrpcClient.Setup(x => x.AccessSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessSecretVersionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -999,7 +2624,10 @@ namespace Google.Cloud.SecretManager.V1.Tests
             AccessSecretVersionResponse expectedResponse = new AccessSecretVersionResponse
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                Payload = new SecretPayload(),
+                Payload = new SecretPayload
+                {
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                },
             };
             mockGrpcClient.Setup(x => x.AccessSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1019,7 +2647,10 @@ namespace Google.Cloud.SecretManager.V1.Tests
             AccessSecretVersionResponse expectedResponse = new AccessSecretVersionResponse
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                Payload = new SecretPayload(),
+                Payload = new SecretPayload
+                {
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                },
             };
             mockGrpcClient.Setup(x => x.AccessSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessSecretVersionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1041,7 +2672,10 @@ namespace Google.Cloud.SecretManager.V1.Tests
             AccessSecretVersionResponse expectedResponse = new AccessSecretVersionResponse
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                Payload = new SecretPayload(),
+                Payload = new SecretPayload
+                {
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                },
             };
             mockGrpcClient.Setup(x => x.AccessSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1061,7 +2695,10 @@ namespace Google.Cloud.SecretManager.V1.Tests
             AccessSecretVersionResponse expectedResponse = new AccessSecretVersionResponse
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                Payload = new SecretPayload(),
+                Payload = new SecretPayload
+                {
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                },
             };
             mockGrpcClient.Setup(x => x.AccessSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AccessSecretVersionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1083,10 +2720,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.DisableSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1106,10 +2774,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.DisableSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1131,10 +2830,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.DisableSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1154,10 +2884,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.DisableSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1179,10 +2940,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.DisableSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1202,10 +2994,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.DisableSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1227,10 +3050,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.EnableSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1250,10 +3104,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.EnableSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1275,10 +3160,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.EnableSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1298,10 +3214,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.EnableSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1323,10 +3270,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.EnableSecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1346,10 +3324,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.EnableSecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1371,10 +3380,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.DestroySecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1394,10 +3434,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.DestroySecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1419,10 +3490,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.DestroySecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1442,10 +3544,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.DestroySecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1467,10 +3600,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.DestroySecretVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1490,10 +3654,41 @@ namespace Google.Cloud.SecretManager.V1.Tests
             SecretVersion expectedResponse = new SecretVersion
             {
                 SecretVersionName = SecretVersionName.FromProjectSecretSecretVersion("[PROJECT]", "[SECRET]", "[SECRET_VERSION]"),
-                CreateTime = new wkt::Timestamp(),
-                DestroyTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DestroyTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = SecretVersion.Types.State.Disabled,
-                ReplicationStatus = new ReplicationStatus(),
+                ReplicationStatus = new ReplicationStatus
+                {
+                    Automatic = new ReplicationStatus.Types.AutomaticStatus
+                    {
+                        CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                        {
+                            KmsKeyVersionName = "kms_key_version_name2851eba8",
+                        },
+                    },
+                    UserManaged = new ReplicationStatus.Types.UserManagedStatus
+                    {
+                        Replicas =
+                        {
+                            new ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus
+                            {
+                                Location = "locatione09d18d5",
+                                CustomerManagedEncryption = new CustomerManagedEncryptionStatus
+                                {
+                                    KmsKeyVersionName = "kms_key_version_name2851eba8",
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.DestroySecretVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecretVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecretManagerServiceClient client = new SecretManagerServiceClientImpl(mockGrpcClient.Object, null);
@@ -1511,7 +3706,26 @@ namespace Google.Cloud.SecretManager.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1519,7 +3733,18 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1536,7 +3761,26 @@ namespace Google.Cloud.SecretManager.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1544,7 +3788,18 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1563,7 +3818,10 @@ namespace Google.Cloud.SecretManager.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1571,7 +3829,18 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1588,7 +3857,10 @@ namespace Google.Cloud.SecretManager.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1596,7 +3868,18 @@ namespace Google.Cloud.SecretManager.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
