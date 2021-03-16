@@ -17,7 +17,9 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gr = Google.Rpc;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -37,15 +39,83 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateDatasetRequest request = new CreateDatasetRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Dataset = new Dataset(),
+                Dataset = new Dataset
+                {
+                    DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    InputConfigs =
+                    {
+                        new InputConfig
+                        {
+                            DataType = DataType.Video,
+                            GcsSource = new GcsSource
+                            {
+                                InputUri = "input_uriec9462a7",
+                                MimeType = "mime_type606a0ffc",
+                            },
+                            AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                            ClassificationMetadata = new ClassificationMetadata
+                            {
+                                IsMultiLabel = false,
+                            },
+                            BigquerySource = new BigQuerySource
+                            {
+                                InputUri = "input_uriec9462a7",
+                            },
+                            TextMetadata = new TextMetadata
+                            {
+                                LanguageCode = "language_code2f6c7160",
+                            },
+                        },
+                    },
+                    BlockingResources =
+                    {
+                        "blocking_resourcesa21d409d",
+                    },
+                    DataItemCount = -1298706410089620484L,
+                },
             };
             Dataset expectedResponse = new Dataset
             {
                 DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                InputConfigs = { new InputConfig(), },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InputConfigs =
+                {
+                    new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -67,15 +137,83 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateDatasetRequest request = new CreateDatasetRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Dataset = new Dataset(),
+                Dataset = new Dataset
+                {
+                    DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    InputConfigs =
+                    {
+                        new InputConfig
+                        {
+                            DataType = DataType.Video,
+                            GcsSource = new GcsSource
+                            {
+                                InputUri = "input_uriec9462a7",
+                                MimeType = "mime_type606a0ffc",
+                            },
+                            AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                            ClassificationMetadata = new ClassificationMetadata
+                            {
+                                IsMultiLabel = false,
+                            },
+                            BigquerySource = new BigQuerySource
+                            {
+                                InputUri = "input_uriec9462a7",
+                            },
+                            TextMetadata = new TextMetadata
+                            {
+                                LanguageCode = "language_code2f6c7160",
+                            },
+                        },
+                    },
+                    BlockingResources =
+                    {
+                        "blocking_resourcesa21d409d",
+                    },
+                    DataItemCount = -1298706410089620484L,
+                },
             };
             Dataset expectedResponse = new Dataset
             {
                 DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                InputConfigs = { new InputConfig(), },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InputConfigs =
+                {
+                    new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -99,15 +237,83 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateDatasetRequest request = new CreateDatasetRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Dataset = new Dataset(),
+                Dataset = new Dataset
+                {
+                    DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    InputConfigs =
+                    {
+                        new InputConfig
+                        {
+                            DataType = DataType.Video,
+                            GcsSource = new GcsSource
+                            {
+                                InputUri = "input_uriec9462a7",
+                                MimeType = "mime_type606a0ffc",
+                            },
+                            AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                            ClassificationMetadata = new ClassificationMetadata
+                            {
+                                IsMultiLabel = false,
+                            },
+                            BigquerySource = new BigQuerySource
+                            {
+                                InputUri = "input_uriec9462a7",
+                            },
+                            TextMetadata = new TextMetadata
+                            {
+                                LanguageCode = "language_code2f6c7160",
+                            },
+                        },
+                    },
+                    BlockingResources =
+                    {
+                        "blocking_resourcesa21d409d",
+                    },
+                    DataItemCount = -1298706410089620484L,
+                },
             };
             Dataset expectedResponse = new Dataset
             {
                 DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                InputConfigs = { new InputConfig(), },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InputConfigs =
+                {
+                    new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -129,15 +335,83 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateDatasetRequest request = new CreateDatasetRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Dataset = new Dataset(),
+                Dataset = new Dataset
+                {
+                    DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    InputConfigs =
+                    {
+                        new InputConfig
+                        {
+                            DataType = DataType.Video,
+                            GcsSource = new GcsSource
+                            {
+                                InputUri = "input_uriec9462a7",
+                                MimeType = "mime_type606a0ffc",
+                            },
+                            AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                            ClassificationMetadata = new ClassificationMetadata
+                            {
+                                IsMultiLabel = false,
+                            },
+                            BigquerySource = new BigQuerySource
+                            {
+                                InputUri = "input_uriec9462a7",
+                            },
+                            TextMetadata = new TextMetadata
+                            {
+                                LanguageCode = "language_code2f6c7160",
+                            },
+                        },
+                    },
+                    BlockingResources =
+                    {
+                        "blocking_resourcesa21d409d",
+                    },
+                    DataItemCount = -1298706410089620484L,
+                },
             };
             Dataset expectedResponse = new Dataset
             {
                 DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                InputConfigs = { new InputConfig(), },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InputConfigs =
+                {
+                    new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -161,15 +435,83 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateDatasetRequest request = new CreateDatasetRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Dataset = new Dataset(),
+                Dataset = new Dataset
+                {
+                    DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    InputConfigs =
+                    {
+                        new InputConfig
+                        {
+                            DataType = DataType.Video,
+                            GcsSource = new GcsSource
+                            {
+                                InputUri = "input_uriec9462a7",
+                                MimeType = "mime_type606a0ffc",
+                            },
+                            AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                            ClassificationMetadata = new ClassificationMetadata
+                            {
+                                IsMultiLabel = false,
+                            },
+                            BigquerySource = new BigQuerySource
+                            {
+                                InputUri = "input_uriec9462a7",
+                            },
+                            TextMetadata = new TextMetadata
+                            {
+                                LanguageCode = "language_code2f6c7160",
+                            },
+                        },
+                    },
+                    BlockingResources =
+                    {
+                        "blocking_resourcesa21d409d",
+                    },
+                    DataItemCount = -1298706410089620484L,
+                },
             };
             Dataset expectedResponse = new Dataset
             {
                 DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                InputConfigs = { new InputConfig(), },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InputConfigs =
+                {
+                    new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -191,15 +533,83 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateDatasetRequest request = new CreateDatasetRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Dataset = new Dataset(),
+                Dataset = new Dataset
+                {
+                    DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    InputConfigs =
+                    {
+                        new InputConfig
+                        {
+                            DataType = DataType.Video,
+                            GcsSource = new GcsSource
+                            {
+                                InputUri = "input_uriec9462a7",
+                                MimeType = "mime_type606a0ffc",
+                            },
+                            AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                            ClassificationMetadata = new ClassificationMetadata
+                            {
+                                IsMultiLabel = false,
+                            },
+                            BigquerySource = new BigQuerySource
+                            {
+                                InputUri = "input_uriec9462a7",
+                            },
+                            TextMetadata = new TextMetadata
+                            {
+                                LanguageCode = "language_code2f6c7160",
+                            },
+                        },
+                    },
+                    BlockingResources =
+                    {
+                        "blocking_resourcesa21d409d",
+                    },
+                    DataItemCount = -1298706410089620484L,
+                },
             };
             Dataset expectedResponse = new Dataset
             {
                 DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                InputConfigs = { new InputConfig(), },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InputConfigs =
+                {
+                    new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -229,8 +639,36 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                InputConfigs = { new InputConfig(), },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InputConfigs =
+                {
+                    new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -258,8 +696,36 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                InputConfigs = { new InputConfig(), },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InputConfigs =
+                {
+                    new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -289,8 +755,36 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                InputConfigs = { new InputConfig(), },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InputConfigs =
+                {
+                    new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -318,8 +812,36 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                InputConfigs = { new InputConfig(), },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InputConfigs =
+                {
+                    new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -349,8 +871,36 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                InputConfigs = { new InputConfig(), },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InputConfigs =
+                {
+                    new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -378,8 +928,36 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 DatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                InputConfigs = { new InputConfig(), },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                InputConfigs =
+                {
+                    new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -506,9 +1084,36 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             DataItem expectedResponse = new DataItem
             {
                 DataItemName = DataItemName.FromProjectDatasetDataItem("[PROJECT]", "[DATASET]", "[DATA_ITEM]"),
-                ImagePayload = new ImagePayload(),
-                TextPayload = new TextPayload(),
-                VideoPayload = new VideoPayload(),
+                ImagePayload = new ImagePayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    ImageThumbnail = proto::ByteString.CopyFromUtf8("image_thumbnail69b7b0f7"),
+                    ImageUri = "image_urieba3b1bc",
+                    SignedUri = "signed_urib553b9cf",
+                },
+                TextPayload = new TextPayload
+                {
+                    TextContent = "text_content5b2f6d06",
+                },
+                VideoPayload = new VideoPayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    VideoUri = "video_urif4ec0988",
+                    VideoThumbnails =
+                    {
+                        new VideoThumbnail
+                        {
+                            Thumbnail = proto::ByteString.CopyFromUtf8("thumbnailff4d1d95"),
+                            TimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    FrameRate = 2.5591685E+17F,
+                    SignedUri = "signed_urib553b9cf",
+                },
             };
             mockGrpcClient.Setup(x => x.GetDataItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -529,9 +1134,36 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             DataItem expectedResponse = new DataItem
             {
                 DataItemName = DataItemName.FromProjectDatasetDataItem("[PROJECT]", "[DATASET]", "[DATA_ITEM]"),
-                ImagePayload = new ImagePayload(),
-                TextPayload = new TextPayload(),
-                VideoPayload = new VideoPayload(),
+                ImagePayload = new ImagePayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    ImageThumbnail = proto::ByteString.CopyFromUtf8("image_thumbnail69b7b0f7"),
+                    ImageUri = "image_urieba3b1bc",
+                    SignedUri = "signed_urib553b9cf",
+                },
+                TextPayload = new TextPayload
+                {
+                    TextContent = "text_content5b2f6d06",
+                },
+                VideoPayload = new VideoPayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    VideoUri = "video_urif4ec0988",
+                    VideoThumbnails =
+                    {
+                        new VideoThumbnail
+                        {
+                            Thumbnail = proto::ByteString.CopyFromUtf8("thumbnailff4d1d95"),
+                            TimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    FrameRate = 2.5591685E+17F,
+                    SignedUri = "signed_urib553b9cf",
+                },
             };
             mockGrpcClient.Setup(x => x.GetDataItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -554,9 +1186,36 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             DataItem expectedResponse = new DataItem
             {
                 DataItemName = DataItemName.FromProjectDatasetDataItem("[PROJECT]", "[DATASET]", "[DATA_ITEM]"),
-                ImagePayload = new ImagePayload(),
-                TextPayload = new TextPayload(),
-                VideoPayload = new VideoPayload(),
+                ImagePayload = new ImagePayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    ImageThumbnail = proto::ByteString.CopyFromUtf8("image_thumbnail69b7b0f7"),
+                    ImageUri = "image_urieba3b1bc",
+                    SignedUri = "signed_urib553b9cf",
+                },
+                TextPayload = new TextPayload
+                {
+                    TextContent = "text_content5b2f6d06",
+                },
+                VideoPayload = new VideoPayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    VideoUri = "video_urif4ec0988",
+                    VideoThumbnails =
+                    {
+                        new VideoThumbnail
+                        {
+                            Thumbnail = proto::ByteString.CopyFromUtf8("thumbnailff4d1d95"),
+                            TimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    FrameRate = 2.5591685E+17F,
+                    SignedUri = "signed_urib553b9cf",
+                },
             };
             mockGrpcClient.Setup(x => x.GetDataItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -577,9 +1236,36 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             DataItem expectedResponse = new DataItem
             {
                 DataItemName = DataItemName.FromProjectDatasetDataItem("[PROJECT]", "[DATASET]", "[DATA_ITEM]"),
-                ImagePayload = new ImagePayload(),
-                TextPayload = new TextPayload(),
-                VideoPayload = new VideoPayload(),
+                ImagePayload = new ImagePayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    ImageThumbnail = proto::ByteString.CopyFromUtf8("image_thumbnail69b7b0f7"),
+                    ImageUri = "image_urieba3b1bc",
+                    SignedUri = "signed_urib553b9cf",
+                },
+                TextPayload = new TextPayload
+                {
+                    TextContent = "text_content5b2f6d06",
+                },
+                VideoPayload = new VideoPayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    VideoUri = "video_urif4ec0988",
+                    VideoThumbnails =
+                    {
+                        new VideoThumbnail
+                        {
+                            Thumbnail = proto::ByteString.CopyFromUtf8("thumbnailff4d1d95"),
+                            TimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    FrameRate = 2.5591685E+17F,
+                    SignedUri = "signed_urib553b9cf",
+                },
             };
             mockGrpcClient.Setup(x => x.GetDataItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -602,9 +1288,36 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             DataItem expectedResponse = new DataItem
             {
                 DataItemName = DataItemName.FromProjectDatasetDataItem("[PROJECT]", "[DATASET]", "[DATA_ITEM]"),
-                ImagePayload = new ImagePayload(),
-                TextPayload = new TextPayload(),
-                VideoPayload = new VideoPayload(),
+                ImagePayload = new ImagePayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    ImageThumbnail = proto::ByteString.CopyFromUtf8("image_thumbnail69b7b0f7"),
+                    ImageUri = "image_urieba3b1bc",
+                    SignedUri = "signed_urib553b9cf",
+                },
+                TextPayload = new TextPayload
+                {
+                    TextContent = "text_content5b2f6d06",
+                },
+                VideoPayload = new VideoPayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    VideoUri = "video_urif4ec0988",
+                    VideoThumbnails =
+                    {
+                        new VideoThumbnail
+                        {
+                            Thumbnail = proto::ByteString.CopyFromUtf8("thumbnailff4d1d95"),
+                            TimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    FrameRate = 2.5591685E+17F,
+                    SignedUri = "signed_urib553b9cf",
+                },
             };
             mockGrpcClient.Setup(x => x.GetDataItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -625,9 +1338,36 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             DataItem expectedResponse = new DataItem
             {
                 DataItemName = DataItemName.FromProjectDatasetDataItem("[PROJECT]", "[DATASET]", "[DATA_ITEM]"),
-                ImagePayload = new ImagePayload(),
-                TextPayload = new TextPayload(),
-                VideoPayload = new VideoPayload(),
+                ImagePayload = new ImagePayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    ImageThumbnail = proto::ByteString.CopyFromUtf8("image_thumbnail69b7b0f7"),
+                    ImageUri = "image_urieba3b1bc",
+                    SignedUri = "signed_urib553b9cf",
+                },
+                TextPayload = new TextPayload
+                {
+                    TextContent = "text_content5b2f6d06",
+                },
+                VideoPayload = new VideoPayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    VideoUri = "video_urif4ec0988",
+                    VideoThumbnails =
+                    {
+                        new VideoThumbnail
+                        {
+                            Thumbnail = proto::ByteString.CopyFromUtf8("thumbnailff4d1d95"),
+                            TimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    FrameRate = 2.5591685E+17F,
+                    SignedUri = "signed_urib553b9cf",
+                },
             };
             mockGrpcClient.Setup(x => x.GetDataItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DataItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -654,11 +1394,107 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 AnnotationSource = AnnotationSource.Operator,
                 ExampleCount = -5473761259576080533L,
                 CompletedExampleCount = 4983637739211990991L,
-                LabelStats = new LabelStats(),
-                CreateTime = new wkt::Timestamp(),
+                LabelStats = new LabelStats
+                {
+                    ExampleCount =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -5833447338835614944L
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
                 Description = "description2cf9da67",
-                Metadata = new AnnotatedDatasetMetadata(),
+                Metadata = new AnnotatedDatasetMetadata
+                {
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    PolylineConfig = new PolylineConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    SegmentationConfig = new SegmentationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    VideoClassificationConfig = new VideoClassificationConfig
+                    {
+                        AnnotationSpecSetConfigs =
+                        {
+                            new VideoClassificationConfig.Types.AnnotationSpecSetConfig
+                            {
+                                AnnotationSpecSet = "annotation_spec_set5137ce89",
+                                AllowMultiLabel = true,
+                            },
+                        },
+                        ApplyShotDetection = true,
+                    },
+                    ObjectDetectionConfig = new ObjectDetectionConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        ExtractionFrameRate = 1.1203052147209875E+18,
+                    },
+                    ObjectTrackingConfig = new ObjectTrackingConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    },
+                    EventConfig = new EventConfig
+                    {
+                        AnnotationSpecSets =
+                        {
+                            "annotation_spec_sets13a5ed0c",
+                        },
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    TextEntityExtractionConfig = new TextEntityExtractionConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -687,11 +1523,107 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 AnnotationSource = AnnotationSource.Operator,
                 ExampleCount = -5473761259576080533L,
                 CompletedExampleCount = 4983637739211990991L,
-                LabelStats = new LabelStats(),
-                CreateTime = new wkt::Timestamp(),
+                LabelStats = new LabelStats
+                {
+                    ExampleCount =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -5833447338835614944L
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
                 Description = "description2cf9da67",
-                Metadata = new AnnotatedDatasetMetadata(),
+                Metadata = new AnnotatedDatasetMetadata
+                {
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    PolylineConfig = new PolylineConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    SegmentationConfig = new SegmentationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    VideoClassificationConfig = new VideoClassificationConfig
+                    {
+                        AnnotationSpecSetConfigs =
+                        {
+                            new VideoClassificationConfig.Types.AnnotationSpecSetConfig
+                            {
+                                AnnotationSpecSet = "annotation_spec_set5137ce89",
+                                AllowMultiLabel = true,
+                            },
+                        },
+                        ApplyShotDetection = true,
+                    },
+                    ObjectDetectionConfig = new ObjectDetectionConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        ExtractionFrameRate = 1.1203052147209875E+18,
+                    },
+                    ObjectTrackingConfig = new ObjectTrackingConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    },
+                    EventConfig = new EventConfig
+                    {
+                        AnnotationSpecSets =
+                        {
+                            "annotation_spec_sets13a5ed0c",
+                        },
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    TextEntityExtractionConfig = new TextEntityExtractionConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -722,11 +1654,107 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 AnnotationSource = AnnotationSource.Operator,
                 ExampleCount = -5473761259576080533L,
                 CompletedExampleCount = 4983637739211990991L,
-                LabelStats = new LabelStats(),
-                CreateTime = new wkt::Timestamp(),
+                LabelStats = new LabelStats
+                {
+                    ExampleCount =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -5833447338835614944L
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
                 Description = "description2cf9da67",
-                Metadata = new AnnotatedDatasetMetadata(),
+                Metadata = new AnnotatedDatasetMetadata
+                {
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    PolylineConfig = new PolylineConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    SegmentationConfig = new SegmentationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    VideoClassificationConfig = new VideoClassificationConfig
+                    {
+                        AnnotationSpecSetConfigs =
+                        {
+                            new VideoClassificationConfig.Types.AnnotationSpecSetConfig
+                            {
+                                AnnotationSpecSet = "annotation_spec_set5137ce89",
+                                AllowMultiLabel = true,
+                            },
+                        },
+                        ApplyShotDetection = true,
+                    },
+                    ObjectDetectionConfig = new ObjectDetectionConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        ExtractionFrameRate = 1.1203052147209875E+18,
+                    },
+                    ObjectTrackingConfig = new ObjectTrackingConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    },
+                    EventConfig = new EventConfig
+                    {
+                        AnnotationSpecSets =
+                        {
+                            "annotation_spec_sets13a5ed0c",
+                        },
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    TextEntityExtractionConfig = new TextEntityExtractionConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -755,11 +1783,107 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 AnnotationSource = AnnotationSource.Operator,
                 ExampleCount = -5473761259576080533L,
                 CompletedExampleCount = 4983637739211990991L,
-                LabelStats = new LabelStats(),
-                CreateTime = new wkt::Timestamp(),
+                LabelStats = new LabelStats
+                {
+                    ExampleCount =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -5833447338835614944L
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
                 Description = "description2cf9da67",
-                Metadata = new AnnotatedDatasetMetadata(),
+                Metadata = new AnnotatedDatasetMetadata
+                {
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    PolylineConfig = new PolylineConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    SegmentationConfig = new SegmentationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    VideoClassificationConfig = new VideoClassificationConfig
+                    {
+                        AnnotationSpecSetConfigs =
+                        {
+                            new VideoClassificationConfig.Types.AnnotationSpecSetConfig
+                            {
+                                AnnotationSpecSet = "annotation_spec_set5137ce89",
+                                AllowMultiLabel = true,
+                            },
+                        },
+                        ApplyShotDetection = true,
+                    },
+                    ObjectDetectionConfig = new ObjectDetectionConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        ExtractionFrameRate = 1.1203052147209875E+18,
+                    },
+                    ObjectTrackingConfig = new ObjectTrackingConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    },
+                    EventConfig = new EventConfig
+                    {
+                        AnnotationSpecSets =
+                        {
+                            "annotation_spec_sets13a5ed0c",
+                        },
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    TextEntityExtractionConfig = new TextEntityExtractionConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -790,11 +1914,107 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 AnnotationSource = AnnotationSource.Operator,
                 ExampleCount = -5473761259576080533L,
                 CompletedExampleCount = 4983637739211990991L,
-                LabelStats = new LabelStats(),
-                CreateTime = new wkt::Timestamp(),
+                LabelStats = new LabelStats
+                {
+                    ExampleCount =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -5833447338835614944L
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
                 Description = "description2cf9da67",
-                Metadata = new AnnotatedDatasetMetadata(),
+                Metadata = new AnnotatedDatasetMetadata
+                {
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    PolylineConfig = new PolylineConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    SegmentationConfig = new SegmentationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    VideoClassificationConfig = new VideoClassificationConfig
+                    {
+                        AnnotationSpecSetConfigs =
+                        {
+                            new VideoClassificationConfig.Types.AnnotationSpecSetConfig
+                            {
+                                AnnotationSpecSet = "annotation_spec_set5137ce89",
+                                AllowMultiLabel = true,
+                            },
+                        },
+                        ApplyShotDetection = true,
+                    },
+                    ObjectDetectionConfig = new ObjectDetectionConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        ExtractionFrameRate = 1.1203052147209875E+18,
+                    },
+                    ObjectTrackingConfig = new ObjectTrackingConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    },
+                    EventConfig = new EventConfig
+                    {
+                        AnnotationSpecSets =
+                        {
+                            "annotation_spec_sets13a5ed0c",
+                        },
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    TextEntityExtractionConfig = new TextEntityExtractionConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -823,11 +2043,107 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 AnnotationSource = AnnotationSource.Operator,
                 ExampleCount = -5473761259576080533L,
                 CompletedExampleCount = 4983637739211990991L,
-                LabelStats = new LabelStats(),
-                CreateTime = new wkt::Timestamp(),
+                LabelStats = new LabelStats
+                {
+                    ExampleCount =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -5833447338835614944L
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
                 Description = "description2cf9da67",
-                Metadata = new AnnotatedDatasetMetadata(),
+                Metadata = new AnnotatedDatasetMetadata
+                {
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    PolylineConfig = new PolylineConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    SegmentationConfig = new SegmentationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    VideoClassificationConfig = new VideoClassificationConfig
+                    {
+                        AnnotationSpecSetConfigs =
+                        {
+                            new VideoClassificationConfig.Types.AnnotationSpecSetConfig
+                            {
+                                AnnotationSpecSet = "annotation_spec_set5137ce89",
+                                AllowMultiLabel = true,
+                            },
+                        },
+                        ApplyShotDetection = true,
+                    },
+                    ObjectDetectionConfig = new ObjectDetectionConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        ExtractionFrameRate = 1.1203052147209875E+18,
+                    },
+                    ObjectTrackingConfig = new ObjectTrackingConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    },
+                    EventConfig = new EventConfig
+                    {
+                        AnnotationSpecSets =
+                        {
+                            "annotation_spec_sets13a5ed0c",
+                        },
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    TextEntityExtractionConfig = new TextEntityExtractionConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    },
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -888,10 +2204,262 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             Example expectedResponse = new Example
             {
                 ExampleName = ExampleName.FromProjectDatasetAnnotatedDatasetExample("[PROJECT]", "[DATASET]", "[ANNOTATED_DATASET]", "[EXAMPLE]"),
-                ImagePayload = new ImagePayload(),
-                Annotations = { new Annotation(), },
-                TextPayload = new TextPayload(),
-                VideoPayload = new VideoPayload(),
+                ImagePayload = new ImagePayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    ImageThumbnail = proto::ByteString.CopyFromUtf8("image_thumbnail69b7b0f7"),
+                    ImageUri = "image_urieba3b1bc",
+                    SignedUri = "signed_urib553b9cf",
+                },
+                Annotations =
+                {
+                    new Annotation
+                    {
+                        Name = "name1c9368b0",
+                        AnnotationSource = AnnotationSource.Operator,
+                        AnnotationValue = new AnnotationValue
+                        {
+                            ImageClassificationAnnotation = new ImageClassificationAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            ImageBoundingPolyAnnotation = new ImageBoundingPolyAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    Vertices =
+                                    {
+                                        new Vertex
+                                        {
+                                            X = 1642386589,
+                                            Y = 1989169729,
+                                        },
+                                    },
+                                },
+                                NormalizedBoundingPoly = new NormalizedBoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                            },
+                            TextClassificationAnnotation = new TextClassificationAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            VideoClassificationAnnotation = new VideoClassificationAnnotation
+                            {
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            VideoObjectTrackingAnnotation = new VideoObjectTrackingAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                ObjectTrackingFrames =
+                                {
+                                    new ObjectTrackingFrame
+                                    {
+                                        BoundingPoly = new BoundingPoly
+                                        {
+                                            Vertices =
+                                            {
+                                                new Vertex
+                                                {
+                                                    X = 1642386589,
+                                                    Y = 1989169729,
+                                                },
+                                            },
+                                        },
+                                        NormalizedBoundingPoly = new NormalizedBoundingPoly
+                                        {
+                                            NormalizedVertices =
+                                            {
+                                                new NormalizedVertex
+                                                {
+                                                    X = 4.7289724E+17F,
+                                                    Y = 1.2858411E+17F,
+                                                },
+                                            },
+                                        },
+                                        TimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                            VideoEventAnnotation = new VideoEventAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                            ImagePolylineAnnotation = new ImagePolylineAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                Polyline = new Polyline
+                                {
+                                    Vertices =
+                                    {
+                                        new Vertex
+                                        {
+                                            X = 1642386589,
+                                            Y = 1989169729,
+                                        },
+                                    },
+                                },
+                                NormalizedPolyline = new NormalizedPolyline
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                            },
+                            ImageSegmentationAnnotation = new ImageSegmentationAnnotation
+                            {
+                                AnnotationColors =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new AnnotationSpec
+                                        {
+                                            DisplayName = "display_name137f65c2",
+                                            Description = "description2cf9da67",
+                                        }
+                                    },
+                                },
+                                MimeType = "mime_type606a0ffc",
+                                ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                            },
+                            TextEntityExtractionAnnotation = new TextEntityExtractionAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                SequentialSegment = new SequentialSegment
+                                {
+                                    Start = 1982213098,
+                                    End = 337248895,
+                                },
+                            },
+                        },
+                        AnnotationMetadata = new AnnotationMetadata
+                        {
+                            OperatorMetadata = new OperatorMetadata
+                            {
+                                Score = -5.80354E+17F,
+                                TotalVotes = 1079038140,
+                                LabelVotes = 778908618,
+                                Comments =
+                                {
+                                    "comments0691d4a5",
+                                },
+                            },
+                        },
+                        AnnotationSentiment = AnnotationSentiment.Negative,
+                    },
+                },
+                TextPayload = new TextPayload
+                {
+                    TextContent = "text_content5b2f6d06",
+                },
+                VideoPayload = new VideoPayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    VideoUri = "video_urif4ec0988",
+                    VideoThumbnails =
+                    {
+                        new VideoThumbnail
+                        {
+                            Thumbnail = proto::ByteString.CopyFromUtf8("thumbnailff4d1d95"),
+                            TimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    FrameRate = 2.5591685E+17F,
+                    SignedUri = "signed_urib553b9cf",
+                },
             };
             mockGrpcClient.Setup(x => x.GetExample(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -913,10 +2481,262 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             Example expectedResponse = new Example
             {
                 ExampleName = ExampleName.FromProjectDatasetAnnotatedDatasetExample("[PROJECT]", "[DATASET]", "[ANNOTATED_DATASET]", "[EXAMPLE]"),
-                ImagePayload = new ImagePayload(),
-                Annotations = { new Annotation(), },
-                TextPayload = new TextPayload(),
-                VideoPayload = new VideoPayload(),
+                ImagePayload = new ImagePayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    ImageThumbnail = proto::ByteString.CopyFromUtf8("image_thumbnail69b7b0f7"),
+                    ImageUri = "image_urieba3b1bc",
+                    SignedUri = "signed_urib553b9cf",
+                },
+                Annotations =
+                {
+                    new Annotation
+                    {
+                        Name = "name1c9368b0",
+                        AnnotationSource = AnnotationSource.Operator,
+                        AnnotationValue = new AnnotationValue
+                        {
+                            ImageClassificationAnnotation = new ImageClassificationAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            ImageBoundingPolyAnnotation = new ImageBoundingPolyAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    Vertices =
+                                    {
+                                        new Vertex
+                                        {
+                                            X = 1642386589,
+                                            Y = 1989169729,
+                                        },
+                                    },
+                                },
+                                NormalizedBoundingPoly = new NormalizedBoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                            },
+                            TextClassificationAnnotation = new TextClassificationAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            VideoClassificationAnnotation = new VideoClassificationAnnotation
+                            {
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            VideoObjectTrackingAnnotation = new VideoObjectTrackingAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                ObjectTrackingFrames =
+                                {
+                                    new ObjectTrackingFrame
+                                    {
+                                        BoundingPoly = new BoundingPoly
+                                        {
+                                            Vertices =
+                                            {
+                                                new Vertex
+                                                {
+                                                    X = 1642386589,
+                                                    Y = 1989169729,
+                                                },
+                                            },
+                                        },
+                                        NormalizedBoundingPoly = new NormalizedBoundingPoly
+                                        {
+                                            NormalizedVertices =
+                                            {
+                                                new NormalizedVertex
+                                                {
+                                                    X = 4.7289724E+17F,
+                                                    Y = 1.2858411E+17F,
+                                                },
+                                            },
+                                        },
+                                        TimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                            VideoEventAnnotation = new VideoEventAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                            ImagePolylineAnnotation = new ImagePolylineAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                Polyline = new Polyline
+                                {
+                                    Vertices =
+                                    {
+                                        new Vertex
+                                        {
+                                            X = 1642386589,
+                                            Y = 1989169729,
+                                        },
+                                    },
+                                },
+                                NormalizedPolyline = new NormalizedPolyline
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                            },
+                            ImageSegmentationAnnotation = new ImageSegmentationAnnotation
+                            {
+                                AnnotationColors =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new AnnotationSpec
+                                        {
+                                            DisplayName = "display_name137f65c2",
+                                            Description = "description2cf9da67",
+                                        }
+                                    },
+                                },
+                                MimeType = "mime_type606a0ffc",
+                                ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                            },
+                            TextEntityExtractionAnnotation = new TextEntityExtractionAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                SequentialSegment = new SequentialSegment
+                                {
+                                    Start = 1982213098,
+                                    End = 337248895,
+                                },
+                            },
+                        },
+                        AnnotationMetadata = new AnnotationMetadata
+                        {
+                            OperatorMetadata = new OperatorMetadata
+                            {
+                                Score = -5.80354E+17F,
+                                TotalVotes = 1079038140,
+                                LabelVotes = 778908618,
+                                Comments =
+                                {
+                                    "comments0691d4a5",
+                                },
+                            },
+                        },
+                        AnnotationSentiment = AnnotationSentiment.Negative,
+                    },
+                },
+                TextPayload = new TextPayload
+                {
+                    TextContent = "text_content5b2f6d06",
+                },
+                VideoPayload = new VideoPayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    VideoUri = "video_urif4ec0988",
+                    VideoThumbnails =
+                    {
+                        new VideoThumbnail
+                        {
+                            Thumbnail = proto::ByteString.CopyFromUtf8("thumbnailff4d1d95"),
+                            TimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    FrameRate = 2.5591685E+17F,
+                    SignedUri = "signed_urib553b9cf",
+                },
             };
             mockGrpcClient.Setup(x => x.GetExampleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Example>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -940,10 +2760,262 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             Example expectedResponse = new Example
             {
                 ExampleName = ExampleName.FromProjectDatasetAnnotatedDatasetExample("[PROJECT]", "[DATASET]", "[ANNOTATED_DATASET]", "[EXAMPLE]"),
-                ImagePayload = new ImagePayload(),
-                Annotations = { new Annotation(), },
-                TextPayload = new TextPayload(),
-                VideoPayload = new VideoPayload(),
+                ImagePayload = new ImagePayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    ImageThumbnail = proto::ByteString.CopyFromUtf8("image_thumbnail69b7b0f7"),
+                    ImageUri = "image_urieba3b1bc",
+                    SignedUri = "signed_urib553b9cf",
+                },
+                Annotations =
+                {
+                    new Annotation
+                    {
+                        Name = "name1c9368b0",
+                        AnnotationSource = AnnotationSource.Operator,
+                        AnnotationValue = new AnnotationValue
+                        {
+                            ImageClassificationAnnotation = new ImageClassificationAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            ImageBoundingPolyAnnotation = new ImageBoundingPolyAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    Vertices =
+                                    {
+                                        new Vertex
+                                        {
+                                            X = 1642386589,
+                                            Y = 1989169729,
+                                        },
+                                    },
+                                },
+                                NormalizedBoundingPoly = new NormalizedBoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                            },
+                            TextClassificationAnnotation = new TextClassificationAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            VideoClassificationAnnotation = new VideoClassificationAnnotation
+                            {
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            VideoObjectTrackingAnnotation = new VideoObjectTrackingAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                ObjectTrackingFrames =
+                                {
+                                    new ObjectTrackingFrame
+                                    {
+                                        BoundingPoly = new BoundingPoly
+                                        {
+                                            Vertices =
+                                            {
+                                                new Vertex
+                                                {
+                                                    X = 1642386589,
+                                                    Y = 1989169729,
+                                                },
+                                            },
+                                        },
+                                        NormalizedBoundingPoly = new NormalizedBoundingPoly
+                                        {
+                                            NormalizedVertices =
+                                            {
+                                                new NormalizedVertex
+                                                {
+                                                    X = 4.7289724E+17F,
+                                                    Y = 1.2858411E+17F,
+                                                },
+                                            },
+                                        },
+                                        TimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                            VideoEventAnnotation = new VideoEventAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                            ImagePolylineAnnotation = new ImagePolylineAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                Polyline = new Polyline
+                                {
+                                    Vertices =
+                                    {
+                                        new Vertex
+                                        {
+                                            X = 1642386589,
+                                            Y = 1989169729,
+                                        },
+                                    },
+                                },
+                                NormalizedPolyline = new NormalizedPolyline
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                            },
+                            ImageSegmentationAnnotation = new ImageSegmentationAnnotation
+                            {
+                                AnnotationColors =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new AnnotationSpec
+                                        {
+                                            DisplayName = "display_name137f65c2",
+                                            Description = "description2cf9da67",
+                                        }
+                                    },
+                                },
+                                MimeType = "mime_type606a0ffc",
+                                ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                            },
+                            TextEntityExtractionAnnotation = new TextEntityExtractionAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                SequentialSegment = new SequentialSegment
+                                {
+                                    Start = 1982213098,
+                                    End = 337248895,
+                                },
+                            },
+                        },
+                        AnnotationMetadata = new AnnotationMetadata
+                        {
+                            OperatorMetadata = new OperatorMetadata
+                            {
+                                Score = -5.80354E+17F,
+                                TotalVotes = 1079038140,
+                                LabelVotes = 778908618,
+                                Comments =
+                                {
+                                    "comments0691d4a5",
+                                },
+                            },
+                        },
+                        AnnotationSentiment = AnnotationSentiment.Negative,
+                    },
+                },
+                TextPayload = new TextPayload
+                {
+                    TextContent = "text_content5b2f6d06",
+                },
+                VideoPayload = new VideoPayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    VideoUri = "video_urif4ec0988",
+                    VideoThumbnails =
+                    {
+                        new VideoThumbnail
+                        {
+                            Thumbnail = proto::ByteString.CopyFromUtf8("thumbnailff4d1d95"),
+                            TimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    FrameRate = 2.5591685E+17F,
+                    SignedUri = "signed_urib553b9cf",
+                },
             };
             mockGrpcClient.Setup(x => x.GetExample(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -965,10 +3037,262 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             Example expectedResponse = new Example
             {
                 ExampleName = ExampleName.FromProjectDatasetAnnotatedDatasetExample("[PROJECT]", "[DATASET]", "[ANNOTATED_DATASET]", "[EXAMPLE]"),
-                ImagePayload = new ImagePayload(),
-                Annotations = { new Annotation(), },
-                TextPayload = new TextPayload(),
-                VideoPayload = new VideoPayload(),
+                ImagePayload = new ImagePayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    ImageThumbnail = proto::ByteString.CopyFromUtf8("image_thumbnail69b7b0f7"),
+                    ImageUri = "image_urieba3b1bc",
+                    SignedUri = "signed_urib553b9cf",
+                },
+                Annotations =
+                {
+                    new Annotation
+                    {
+                        Name = "name1c9368b0",
+                        AnnotationSource = AnnotationSource.Operator,
+                        AnnotationValue = new AnnotationValue
+                        {
+                            ImageClassificationAnnotation = new ImageClassificationAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            ImageBoundingPolyAnnotation = new ImageBoundingPolyAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    Vertices =
+                                    {
+                                        new Vertex
+                                        {
+                                            X = 1642386589,
+                                            Y = 1989169729,
+                                        },
+                                    },
+                                },
+                                NormalizedBoundingPoly = new NormalizedBoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                            },
+                            TextClassificationAnnotation = new TextClassificationAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            VideoClassificationAnnotation = new VideoClassificationAnnotation
+                            {
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            VideoObjectTrackingAnnotation = new VideoObjectTrackingAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                ObjectTrackingFrames =
+                                {
+                                    new ObjectTrackingFrame
+                                    {
+                                        BoundingPoly = new BoundingPoly
+                                        {
+                                            Vertices =
+                                            {
+                                                new Vertex
+                                                {
+                                                    X = 1642386589,
+                                                    Y = 1989169729,
+                                                },
+                                            },
+                                        },
+                                        NormalizedBoundingPoly = new NormalizedBoundingPoly
+                                        {
+                                            NormalizedVertices =
+                                            {
+                                                new NormalizedVertex
+                                                {
+                                                    X = 4.7289724E+17F,
+                                                    Y = 1.2858411E+17F,
+                                                },
+                                            },
+                                        },
+                                        TimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                            VideoEventAnnotation = new VideoEventAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                            ImagePolylineAnnotation = new ImagePolylineAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                Polyline = new Polyline
+                                {
+                                    Vertices =
+                                    {
+                                        new Vertex
+                                        {
+                                            X = 1642386589,
+                                            Y = 1989169729,
+                                        },
+                                    },
+                                },
+                                NormalizedPolyline = new NormalizedPolyline
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                            },
+                            ImageSegmentationAnnotation = new ImageSegmentationAnnotation
+                            {
+                                AnnotationColors =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new AnnotationSpec
+                                        {
+                                            DisplayName = "display_name137f65c2",
+                                            Description = "description2cf9da67",
+                                        }
+                                    },
+                                },
+                                MimeType = "mime_type606a0ffc",
+                                ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                            },
+                            TextEntityExtractionAnnotation = new TextEntityExtractionAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                SequentialSegment = new SequentialSegment
+                                {
+                                    Start = 1982213098,
+                                    End = 337248895,
+                                },
+                            },
+                        },
+                        AnnotationMetadata = new AnnotationMetadata
+                        {
+                            OperatorMetadata = new OperatorMetadata
+                            {
+                                Score = -5.80354E+17F,
+                                TotalVotes = 1079038140,
+                                LabelVotes = 778908618,
+                                Comments =
+                                {
+                                    "comments0691d4a5",
+                                },
+                            },
+                        },
+                        AnnotationSentiment = AnnotationSentiment.Negative,
+                    },
+                },
+                TextPayload = new TextPayload
+                {
+                    TextContent = "text_content5b2f6d06",
+                },
+                VideoPayload = new VideoPayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    VideoUri = "video_urif4ec0988",
+                    VideoThumbnails =
+                    {
+                        new VideoThumbnail
+                        {
+                            Thumbnail = proto::ByteString.CopyFromUtf8("thumbnailff4d1d95"),
+                            TimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    FrameRate = 2.5591685E+17F,
+                    SignedUri = "signed_urib553b9cf",
+                },
             };
             mockGrpcClient.Setup(x => x.GetExampleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Example>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -992,10 +3316,262 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             Example expectedResponse = new Example
             {
                 ExampleName = ExampleName.FromProjectDatasetAnnotatedDatasetExample("[PROJECT]", "[DATASET]", "[ANNOTATED_DATASET]", "[EXAMPLE]"),
-                ImagePayload = new ImagePayload(),
-                Annotations = { new Annotation(), },
-                TextPayload = new TextPayload(),
-                VideoPayload = new VideoPayload(),
+                ImagePayload = new ImagePayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    ImageThumbnail = proto::ByteString.CopyFromUtf8("image_thumbnail69b7b0f7"),
+                    ImageUri = "image_urieba3b1bc",
+                    SignedUri = "signed_urib553b9cf",
+                },
+                Annotations =
+                {
+                    new Annotation
+                    {
+                        Name = "name1c9368b0",
+                        AnnotationSource = AnnotationSource.Operator,
+                        AnnotationValue = new AnnotationValue
+                        {
+                            ImageClassificationAnnotation = new ImageClassificationAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            ImageBoundingPolyAnnotation = new ImageBoundingPolyAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    Vertices =
+                                    {
+                                        new Vertex
+                                        {
+                                            X = 1642386589,
+                                            Y = 1989169729,
+                                        },
+                                    },
+                                },
+                                NormalizedBoundingPoly = new NormalizedBoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                            },
+                            TextClassificationAnnotation = new TextClassificationAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            VideoClassificationAnnotation = new VideoClassificationAnnotation
+                            {
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            VideoObjectTrackingAnnotation = new VideoObjectTrackingAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                ObjectTrackingFrames =
+                                {
+                                    new ObjectTrackingFrame
+                                    {
+                                        BoundingPoly = new BoundingPoly
+                                        {
+                                            Vertices =
+                                            {
+                                                new Vertex
+                                                {
+                                                    X = 1642386589,
+                                                    Y = 1989169729,
+                                                },
+                                            },
+                                        },
+                                        NormalizedBoundingPoly = new NormalizedBoundingPoly
+                                        {
+                                            NormalizedVertices =
+                                            {
+                                                new NormalizedVertex
+                                                {
+                                                    X = 4.7289724E+17F,
+                                                    Y = 1.2858411E+17F,
+                                                },
+                                            },
+                                        },
+                                        TimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                            VideoEventAnnotation = new VideoEventAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                            ImagePolylineAnnotation = new ImagePolylineAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                Polyline = new Polyline
+                                {
+                                    Vertices =
+                                    {
+                                        new Vertex
+                                        {
+                                            X = 1642386589,
+                                            Y = 1989169729,
+                                        },
+                                    },
+                                },
+                                NormalizedPolyline = new NormalizedPolyline
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                            },
+                            ImageSegmentationAnnotation = new ImageSegmentationAnnotation
+                            {
+                                AnnotationColors =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new AnnotationSpec
+                                        {
+                                            DisplayName = "display_name137f65c2",
+                                            Description = "description2cf9da67",
+                                        }
+                                    },
+                                },
+                                MimeType = "mime_type606a0ffc",
+                                ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                            },
+                            TextEntityExtractionAnnotation = new TextEntityExtractionAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                SequentialSegment = new SequentialSegment
+                                {
+                                    Start = 1982213098,
+                                    End = 337248895,
+                                },
+                            },
+                        },
+                        AnnotationMetadata = new AnnotationMetadata
+                        {
+                            OperatorMetadata = new OperatorMetadata
+                            {
+                                Score = -5.80354E+17F,
+                                TotalVotes = 1079038140,
+                                LabelVotes = 778908618,
+                                Comments =
+                                {
+                                    "comments0691d4a5",
+                                },
+                            },
+                        },
+                        AnnotationSentiment = AnnotationSentiment.Negative,
+                    },
+                },
+                TextPayload = new TextPayload
+                {
+                    TextContent = "text_content5b2f6d06",
+                },
+                VideoPayload = new VideoPayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    VideoUri = "video_urif4ec0988",
+                    VideoThumbnails =
+                    {
+                        new VideoThumbnail
+                        {
+                            Thumbnail = proto::ByteString.CopyFromUtf8("thumbnailff4d1d95"),
+                            TimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    FrameRate = 2.5591685E+17F,
+                    SignedUri = "signed_urib553b9cf",
+                },
             };
             mockGrpcClient.Setup(x => x.GetExample(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -1017,10 +3593,262 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             Example expectedResponse = new Example
             {
                 ExampleName = ExampleName.FromProjectDatasetAnnotatedDatasetExample("[PROJECT]", "[DATASET]", "[ANNOTATED_DATASET]", "[EXAMPLE]"),
-                ImagePayload = new ImagePayload(),
-                Annotations = { new Annotation(), },
-                TextPayload = new TextPayload(),
-                VideoPayload = new VideoPayload(),
+                ImagePayload = new ImagePayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    ImageThumbnail = proto::ByteString.CopyFromUtf8("image_thumbnail69b7b0f7"),
+                    ImageUri = "image_urieba3b1bc",
+                    SignedUri = "signed_urib553b9cf",
+                },
+                Annotations =
+                {
+                    new Annotation
+                    {
+                        Name = "name1c9368b0",
+                        AnnotationSource = AnnotationSource.Operator,
+                        AnnotationValue = new AnnotationValue
+                        {
+                            ImageClassificationAnnotation = new ImageClassificationAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            ImageBoundingPolyAnnotation = new ImageBoundingPolyAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    Vertices =
+                                    {
+                                        new Vertex
+                                        {
+                                            X = 1642386589,
+                                            Y = 1989169729,
+                                        },
+                                    },
+                                },
+                                NormalizedBoundingPoly = new NormalizedBoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                            },
+                            TextClassificationAnnotation = new TextClassificationAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            VideoClassificationAnnotation = new VideoClassificationAnnotation
+                            {
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                            },
+                            VideoObjectTrackingAnnotation = new VideoObjectTrackingAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                                ObjectTrackingFrames =
+                                {
+                                    new ObjectTrackingFrame
+                                    {
+                                        BoundingPoly = new BoundingPoly
+                                        {
+                                            Vertices =
+                                            {
+                                                new Vertex
+                                                {
+                                                    X = 1642386589,
+                                                    Y = 1989169729,
+                                                },
+                                            },
+                                        },
+                                        NormalizedBoundingPoly = new NormalizedBoundingPoly
+                                        {
+                                            NormalizedVertices =
+                                            {
+                                                new NormalizedVertex
+                                                {
+                                                    X = 4.7289724E+17F,
+                                                    Y = 1.2858411E+17F,
+                                                },
+                                            },
+                                        },
+                                        TimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                            VideoEventAnnotation = new VideoEventAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                TimeSegment = new TimeSegment
+                                {
+                                    StartTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EndTimeOffset = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                },
+                            },
+                            ImagePolylineAnnotation = new ImagePolylineAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                Polyline = new Polyline
+                                {
+                                    Vertices =
+                                    {
+                                        new Vertex
+                                        {
+                                            X = 1642386589,
+                                            Y = 1989169729,
+                                        },
+                                    },
+                                },
+                                NormalizedPolyline = new NormalizedPolyline
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                            },
+                            ImageSegmentationAnnotation = new ImageSegmentationAnnotation
+                            {
+                                AnnotationColors =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new AnnotationSpec
+                                        {
+                                            DisplayName = "display_name137f65c2",
+                                            Description = "description2cf9da67",
+                                        }
+                                    },
+                                },
+                                MimeType = "mime_type606a0ffc",
+                                ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                            },
+                            TextEntityExtractionAnnotation = new TextEntityExtractionAnnotation
+                            {
+                                AnnotationSpec = new AnnotationSpec
+                                {
+                                    DisplayName = "display_name137f65c2",
+                                    Description = "description2cf9da67",
+                                },
+                                SequentialSegment = new SequentialSegment
+                                {
+                                    Start = 1982213098,
+                                    End = 337248895,
+                                },
+                            },
+                        },
+                        AnnotationMetadata = new AnnotationMetadata
+                        {
+                            OperatorMetadata = new OperatorMetadata
+                            {
+                                Score = -5.80354E+17F,
+                                TotalVotes = 1079038140,
+                                LabelVotes = 778908618,
+                                Comments =
+                                {
+                                    "comments0691d4a5",
+                                },
+                            },
+                        },
+                        AnnotationSentiment = AnnotationSentiment.Negative,
+                    },
+                },
+                TextPayload = new TextPayload
+                {
+                    TextContent = "text_content5b2f6d06",
+                },
+                VideoPayload = new VideoPayload
+                {
+                    MimeType = "mime_type606a0ffc",
+                    VideoUri = "video_urif4ec0988",
+                    VideoThumbnails =
+                    {
+                        new VideoThumbnail
+                        {
+                            Thumbnail = proto::ByteString.CopyFromUtf8("thumbnailff4d1d95"),
+                            TimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    FrameRate = 2.5591685E+17F,
+                    SignedUri = "signed_urib553b9cf",
+                },
             };
             mockGrpcClient.Setup(x => x.GetExampleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Example>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -1039,7 +3867,24 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateAnnotationSpecSetRequest request = new CreateAnnotationSpecSetRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                AnnotationSpecSet = new AnnotationSpecSet(),
+                AnnotationSpecSet = new AnnotationSpecSet
+                {
+                    AnnotationSpecSetName = AnnotationSpecSetName.FromProjectAnnotationSpecSet("[PROJECT]", "[ANNOTATION_SPEC_SET]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    AnnotationSpecs =
+                    {
+                        new AnnotationSpec
+                        {
+                            DisplayName = "display_name137f65c2",
+                            Description = "description2cf9da67",
+                        },
+                    },
+                    BlockingResources =
+                    {
+                        "blocking_resourcesa21d409d",
+                    },
+                },
             };
             AnnotationSpecSet expectedResponse = new AnnotationSpecSet
             {
@@ -1048,7 +3893,11 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 Description = "description2cf9da67",
                 AnnotationSpecs =
                 {
-                    new AnnotationSpec(),
+                    new AnnotationSpec
+                    {
+                        DisplayName = "display_name137f65c2",
+                        Description = "description2cf9da67",
+                    },
                 },
                 BlockingResources =
                 {
@@ -1070,7 +3919,24 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateAnnotationSpecSetRequest request = new CreateAnnotationSpecSetRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                AnnotationSpecSet = new AnnotationSpecSet(),
+                AnnotationSpecSet = new AnnotationSpecSet
+                {
+                    AnnotationSpecSetName = AnnotationSpecSetName.FromProjectAnnotationSpecSet("[PROJECT]", "[ANNOTATION_SPEC_SET]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    AnnotationSpecs =
+                    {
+                        new AnnotationSpec
+                        {
+                            DisplayName = "display_name137f65c2",
+                            Description = "description2cf9da67",
+                        },
+                    },
+                    BlockingResources =
+                    {
+                        "blocking_resourcesa21d409d",
+                    },
+                },
             };
             AnnotationSpecSet expectedResponse = new AnnotationSpecSet
             {
@@ -1079,7 +3945,11 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 Description = "description2cf9da67",
                 AnnotationSpecs =
                 {
-                    new AnnotationSpec(),
+                    new AnnotationSpec
+                    {
+                        DisplayName = "display_name137f65c2",
+                        Description = "description2cf9da67",
+                    },
                 },
                 BlockingResources =
                 {
@@ -1103,7 +3973,24 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateAnnotationSpecSetRequest request = new CreateAnnotationSpecSetRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                AnnotationSpecSet = new AnnotationSpecSet(),
+                AnnotationSpecSet = new AnnotationSpecSet
+                {
+                    AnnotationSpecSetName = AnnotationSpecSetName.FromProjectAnnotationSpecSet("[PROJECT]", "[ANNOTATION_SPEC_SET]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    AnnotationSpecs =
+                    {
+                        new AnnotationSpec
+                        {
+                            DisplayName = "display_name137f65c2",
+                            Description = "description2cf9da67",
+                        },
+                    },
+                    BlockingResources =
+                    {
+                        "blocking_resourcesa21d409d",
+                    },
+                },
             };
             AnnotationSpecSet expectedResponse = new AnnotationSpecSet
             {
@@ -1112,7 +3999,11 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 Description = "description2cf9da67",
                 AnnotationSpecs =
                 {
-                    new AnnotationSpec(),
+                    new AnnotationSpec
+                    {
+                        DisplayName = "display_name137f65c2",
+                        Description = "description2cf9da67",
+                    },
                 },
                 BlockingResources =
                 {
@@ -1134,7 +4025,24 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateAnnotationSpecSetRequest request = new CreateAnnotationSpecSetRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                AnnotationSpecSet = new AnnotationSpecSet(),
+                AnnotationSpecSet = new AnnotationSpecSet
+                {
+                    AnnotationSpecSetName = AnnotationSpecSetName.FromProjectAnnotationSpecSet("[PROJECT]", "[ANNOTATION_SPEC_SET]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    AnnotationSpecs =
+                    {
+                        new AnnotationSpec
+                        {
+                            DisplayName = "display_name137f65c2",
+                            Description = "description2cf9da67",
+                        },
+                    },
+                    BlockingResources =
+                    {
+                        "blocking_resourcesa21d409d",
+                    },
+                },
             };
             AnnotationSpecSet expectedResponse = new AnnotationSpecSet
             {
@@ -1143,7 +4051,11 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 Description = "description2cf9da67",
                 AnnotationSpecs =
                 {
-                    new AnnotationSpec(),
+                    new AnnotationSpec
+                    {
+                        DisplayName = "display_name137f65c2",
+                        Description = "description2cf9da67",
+                    },
                 },
                 BlockingResources =
                 {
@@ -1167,7 +4079,24 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateAnnotationSpecSetRequest request = new CreateAnnotationSpecSetRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                AnnotationSpecSet = new AnnotationSpecSet(),
+                AnnotationSpecSet = new AnnotationSpecSet
+                {
+                    AnnotationSpecSetName = AnnotationSpecSetName.FromProjectAnnotationSpecSet("[PROJECT]", "[ANNOTATION_SPEC_SET]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    AnnotationSpecs =
+                    {
+                        new AnnotationSpec
+                        {
+                            DisplayName = "display_name137f65c2",
+                            Description = "description2cf9da67",
+                        },
+                    },
+                    BlockingResources =
+                    {
+                        "blocking_resourcesa21d409d",
+                    },
+                },
             };
             AnnotationSpecSet expectedResponse = new AnnotationSpecSet
             {
@@ -1176,7 +4105,11 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 Description = "description2cf9da67",
                 AnnotationSpecs =
                 {
-                    new AnnotationSpec(),
+                    new AnnotationSpec
+                    {
+                        DisplayName = "display_name137f65c2",
+                        Description = "description2cf9da67",
+                    },
                 },
                 BlockingResources =
                 {
@@ -1198,7 +4131,24 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateAnnotationSpecSetRequest request = new CreateAnnotationSpecSetRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                AnnotationSpecSet = new AnnotationSpecSet(),
+                AnnotationSpecSet = new AnnotationSpecSet
+                {
+                    AnnotationSpecSetName = AnnotationSpecSetName.FromProjectAnnotationSpecSet("[PROJECT]", "[ANNOTATION_SPEC_SET]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    AnnotationSpecs =
+                    {
+                        new AnnotationSpec
+                        {
+                            DisplayName = "display_name137f65c2",
+                            Description = "description2cf9da67",
+                        },
+                    },
+                    BlockingResources =
+                    {
+                        "blocking_resourcesa21d409d",
+                    },
+                },
             };
             AnnotationSpecSet expectedResponse = new AnnotationSpecSet
             {
@@ -1207,7 +4157,11 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 Description = "description2cf9da67",
                 AnnotationSpecs =
                 {
-                    new AnnotationSpec(),
+                    new AnnotationSpec
+                    {
+                        DisplayName = "display_name137f65c2",
+                        Description = "description2cf9da67",
+                    },
                 },
                 BlockingResources =
                 {
@@ -1239,7 +4193,11 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 Description = "description2cf9da67",
                 AnnotationSpecs =
                 {
-                    new AnnotationSpec(),
+                    new AnnotationSpec
+                    {
+                        DisplayName = "display_name137f65c2",
+                        Description = "description2cf9da67",
+                    },
                 },
                 BlockingResources =
                 {
@@ -1269,7 +4227,11 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 Description = "description2cf9da67",
                 AnnotationSpecs =
                 {
-                    new AnnotationSpec(),
+                    new AnnotationSpec
+                    {
+                        DisplayName = "display_name137f65c2",
+                        Description = "description2cf9da67",
+                    },
                 },
                 BlockingResources =
                 {
@@ -1301,7 +4263,11 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 Description = "description2cf9da67",
                 AnnotationSpecs =
                 {
-                    new AnnotationSpec(),
+                    new AnnotationSpec
+                    {
+                        DisplayName = "display_name137f65c2",
+                        Description = "description2cf9da67",
+                    },
                 },
                 BlockingResources =
                 {
@@ -1331,7 +4297,11 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 Description = "description2cf9da67",
                 AnnotationSpecs =
                 {
-                    new AnnotationSpec(),
+                    new AnnotationSpec
+                    {
+                        DisplayName = "display_name137f65c2",
+                        Description = "description2cf9da67",
+                    },
                 },
                 BlockingResources =
                 {
@@ -1363,7 +4333,11 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 Description = "description2cf9da67",
                 AnnotationSpecs =
                 {
-                    new AnnotationSpec(),
+                    new AnnotationSpec
+                    {
+                        DisplayName = "display_name137f65c2",
+                        Description = "description2cf9da67",
+                    },
                 },
                 BlockingResources =
                 {
@@ -1393,7 +4367,11 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 Description = "description2cf9da67",
                 AnnotationSpecs =
                 {
-                    new AnnotationSpec(),
+                    new AnnotationSpec
+                    {
+                        DisplayName = "display_name137f65c2",
+                        Description = "description2cf9da67",
+                    },
                 },
                 BlockingResources =
                 {
@@ -1522,13 +4500,27 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 InstructionName = InstructionName.FromProjectInstruction("[PROJECT]", "[INSTRUCTION]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DataType = DataType.Video,
 #pragma warning disable CS0612
-                CsvInstruction = new CsvInstruction(),
+                CsvInstruction = new CsvInstruction
 #pragma warning restore CS0612
-                PdfInstruction = new PdfInstruction(),
+                {
+                    GcsFileUri = "gcs_file_uri08cbc4a1",
+                },
+                PdfInstruction = new PdfInstruction
+                {
+                    GcsFileUri = "gcs_file_uri08cbc4a1",
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -1555,13 +4547,27 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 InstructionName = InstructionName.FromProjectInstruction("[PROJECT]", "[INSTRUCTION]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DataType = DataType.Video,
 #pragma warning disable CS0612
-                CsvInstruction = new CsvInstruction(),
+                CsvInstruction = new CsvInstruction
 #pragma warning restore CS0612
-                PdfInstruction = new PdfInstruction(),
+                {
+                    GcsFileUri = "gcs_file_uri08cbc4a1",
+                },
+                PdfInstruction = new PdfInstruction
+                {
+                    GcsFileUri = "gcs_file_uri08cbc4a1",
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -1590,13 +4596,27 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 InstructionName = InstructionName.FromProjectInstruction("[PROJECT]", "[INSTRUCTION]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DataType = DataType.Video,
 #pragma warning disable CS0612
-                CsvInstruction = new CsvInstruction(),
+                CsvInstruction = new CsvInstruction
 #pragma warning restore CS0612
-                PdfInstruction = new PdfInstruction(),
+                {
+                    GcsFileUri = "gcs_file_uri08cbc4a1",
+                },
+                PdfInstruction = new PdfInstruction
+                {
+                    GcsFileUri = "gcs_file_uri08cbc4a1",
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -1623,13 +4643,27 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 InstructionName = InstructionName.FromProjectInstruction("[PROJECT]", "[INSTRUCTION]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DataType = DataType.Video,
 #pragma warning disable CS0612
-                CsvInstruction = new CsvInstruction(),
+                CsvInstruction = new CsvInstruction
 #pragma warning restore CS0612
-                PdfInstruction = new PdfInstruction(),
+                {
+                    GcsFileUri = "gcs_file_uri08cbc4a1",
+                },
+                PdfInstruction = new PdfInstruction
+                {
+                    GcsFileUri = "gcs_file_uri08cbc4a1",
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -1658,13 +4692,27 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 InstructionName = InstructionName.FromProjectInstruction("[PROJECT]", "[INSTRUCTION]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DataType = DataType.Video,
 #pragma warning disable CS0612
-                CsvInstruction = new CsvInstruction(),
+                CsvInstruction = new CsvInstruction
 #pragma warning restore CS0612
-                PdfInstruction = new PdfInstruction(),
+                {
+                    GcsFileUri = "gcs_file_uri08cbc4a1",
+                },
+                PdfInstruction = new PdfInstruction
+                {
+                    GcsFileUri = "gcs_file_uri08cbc4a1",
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -1691,13 +4739,27 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 InstructionName = InstructionName.FromProjectInstruction("[PROJECT]", "[INSTRUCTION]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DataType = DataType.Video,
 #pragma warning disable CS0612
-                CsvInstruction = new CsvInstruction(),
+                CsvInstruction = new CsvInstruction
 #pragma warning restore CS0612
-                PdfInstruction = new PdfInstruction(),
+                {
+                    GcsFileUri = "gcs_file_uri08cbc4a1",
+                },
+                PdfInstruction = new PdfInstruction
+                {
+                    GcsFileUri = "gcs_file_uri08cbc4a1",
+                },
                 BlockingResources =
                 {
                     "blocking_resourcesa21d409d",
@@ -1823,10 +4885,110 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             Evaluation expectedResponse = new Evaluation
             {
                 EvaluationName = EvaluationName.FromProjectDatasetEvaluation("[PROJECT]", "[DATASET]", "[EVALUATION]"),
-                Config = new EvaluationConfig(),
-                EvaluationJobRunTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                EvaluationMetrics = new EvaluationMetrics(),
+                Config = new EvaluationConfig
+                {
+                    BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                    {
+                        IouThreshold = -2.1410331E+17F,
+                    },
+                },
+                EvaluationJobRunTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EvaluationMetrics = new EvaluationMetrics
+                {
+                    ClassificationMetrics = new ClassificationMetrics
+                    {
+                        PrCurve = new PrCurve
+                        {
+                            AnnotationSpec = new AnnotationSpec
+                            {
+                                DisplayName = "display_name137f65c2",
+                                Description = "description2cf9da67",
+                            },
+                            AreaUnderCurve = -4.7771348E+17F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new PrCurve.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                    RecallAt1 = 1.8027053E+17F,
+                                    PrecisionAt1 = 1.0815272E+18F,
+                                    F1ScoreAt1 = -6.61423E+17F,
+                                    RecallAt5 = -3.2754008E+17F,
+                                    PrecisionAt5 = -1.1509507E+17F,
+                                    F1ScoreAt5 = -5.155E+17F,
+                                },
+                            },
+                            MeanAveragePrecision = 3.3292076E+16F,
+                        },
+                        ConfusionMatrix = new ConfusionMatrix
+                        {
+                            Row =
+                            {
+                                new ConfusionMatrix.Types.Row
+                                {
+                                    AnnotationSpec = new AnnotationSpec
+                                    {
+                                        DisplayName = "display_name137f65c2",
+                                        Description = "description2cf9da67",
+                                    },
+                                    Entries =
+                                    {
+                                        new ConfusionMatrix.Types.ConfusionMatrixEntry
+                                        {
+                                            AnnotationSpec = new AnnotationSpec
+                                            {
+                                                DisplayName = "display_name137f65c2",
+                                                Description = "description2cf9da67",
+                                            },
+                                            ItemCount = -1255094419,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    ObjectDetectionMetrics = new ObjectDetectionMetrics
+                    {
+                        PrCurve = new PrCurve
+                        {
+                            AnnotationSpec = new AnnotationSpec
+                            {
+                                DisplayName = "display_name137f65c2",
+                                Description = "description2cf9da67",
+                            },
+                            AreaUnderCurve = -4.7771348E+17F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new PrCurve.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                    RecallAt1 = 1.8027053E+17F,
+                                    PrecisionAt1 = 1.0815272E+18F,
+                                    F1ScoreAt1 = -6.61423E+17F,
+                                    RecallAt5 = -3.2754008E+17F,
+                                    PrecisionAt5 = -1.1509507E+17F,
+                                    F1ScoreAt5 = -5.155E+17F,
+                                },
+                            },
+                            MeanAveragePrecision = 3.3292076E+16F,
+                        },
+                    },
+                },
                 AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
                 EvaluatedItemCount = -6593700645137490122L,
             };
@@ -1849,10 +5011,110 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             Evaluation expectedResponse = new Evaluation
             {
                 EvaluationName = EvaluationName.FromProjectDatasetEvaluation("[PROJECT]", "[DATASET]", "[EVALUATION]"),
-                Config = new EvaluationConfig(),
-                EvaluationJobRunTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                EvaluationMetrics = new EvaluationMetrics(),
+                Config = new EvaluationConfig
+                {
+                    BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                    {
+                        IouThreshold = -2.1410331E+17F,
+                    },
+                },
+                EvaluationJobRunTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EvaluationMetrics = new EvaluationMetrics
+                {
+                    ClassificationMetrics = new ClassificationMetrics
+                    {
+                        PrCurve = new PrCurve
+                        {
+                            AnnotationSpec = new AnnotationSpec
+                            {
+                                DisplayName = "display_name137f65c2",
+                                Description = "description2cf9da67",
+                            },
+                            AreaUnderCurve = -4.7771348E+17F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new PrCurve.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                    RecallAt1 = 1.8027053E+17F,
+                                    PrecisionAt1 = 1.0815272E+18F,
+                                    F1ScoreAt1 = -6.61423E+17F,
+                                    RecallAt5 = -3.2754008E+17F,
+                                    PrecisionAt5 = -1.1509507E+17F,
+                                    F1ScoreAt5 = -5.155E+17F,
+                                },
+                            },
+                            MeanAveragePrecision = 3.3292076E+16F,
+                        },
+                        ConfusionMatrix = new ConfusionMatrix
+                        {
+                            Row =
+                            {
+                                new ConfusionMatrix.Types.Row
+                                {
+                                    AnnotationSpec = new AnnotationSpec
+                                    {
+                                        DisplayName = "display_name137f65c2",
+                                        Description = "description2cf9da67",
+                                    },
+                                    Entries =
+                                    {
+                                        new ConfusionMatrix.Types.ConfusionMatrixEntry
+                                        {
+                                            AnnotationSpec = new AnnotationSpec
+                                            {
+                                                DisplayName = "display_name137f65c2",
+                                                Description = "description2cf9da67",
+                                            },
+                                            ItemCount = -1255094419,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    ObjectDetectionMetrics = new ObjectDetectionMetrics
+                    {
+                        PrCurve = new PrCurve
+                        {
+                            AnnotationSpec = new AnnotationSpec
+                            {
+                                DisplayName = "display_name137f65c2",
+                                Description = "description2cf9da67",
+                            },
+                            AreaUnderCurve = -4.7771348E+17F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new PrCurve.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                    RecallAt1 = 1.8027053E+17F,
+                                    PrecisionAt1 = 1.0815272E+18F,
+                                    F1ScoreAt1 = -6.61423E+17F,
+                                    RecallAt5 = -3.2754008E+17F,
+                                    PrecisionAt5 = -1.1509507E+17F,
+                                    F1ScoreAt5 = -5.155E+17F,
+                                },
+                            },
+                            MeanAveragePrecision = 3.3292076E+16F,
+                        },
+                    },
+                },
                 AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
                 EvaluatedItemCount = -6593700645137490122L,
             };
@@ -1877,10 +5139,110 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             Evaluation expectedResponse = new Evaluation
             {
                 EvaluationName = EvaluationName.FromProjectDatasetEvaluation("[PROJECT]", "[DATASET]", "[EVALUATION]"),
-                Config = new EvaluationConfig(),
-                EvaluationJobRunTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                EvaluationMetrics = new EvaluationMetrics(),
+                Config = new EvaluationConfig
+                {
+                    BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                    {
+                        IouThreshold = -2.1410331E+17F,
+                    },
+                },
+                EvaluationJobRunTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EvaluationMetrics = new EvaluationMetrics
+                {
+                    ClassificationMetrics = new ClassificationMetrics
+                    {
+                        PrCurve = new PrCurve
+                        {
+                            AnnotationSpec = new AnnotationSpec
+                            {
+                                DisplayName = "display_name137f65c2",
+                                Description = "description2cf9da67",
+                            },
+                            AreaUnderCurve = -4.7771348E+17F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new PrCurve.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                    RecallAt1 = 1.8027053E+17F,
+                                    PrecisionAt1 = 1.0815272E+18F,
+                                    F1ScoreAt1 = -6.61423E+17F,
+                                    RecallAt5 = -3.2754008E+17F,
+                                    PrecisionAt5 = -1.1509507E+17F,
+                                    F1ScoreAt5 = -5.155E+17F,
+                                },
+                            },
+                            MeanAveragePrecision = 3.3292076E+16F,
+                        },
+                        ConfusionMatrix = new ConfusionMatrix
+                        {
+                            Row =
+                            {
+                                new ConfusionMatrix.Types.Row
+                                {
+                                    AnnotationSpec = new AnnotationSpec
+                                    {
+                                        DisplayName = "display_name137f65c2",
+                                        Description = "description2cf9da67",
+                                    },
+                                    Entries =
+                                    {
+                                        new ConfusionMatrix.Types.ConfusionMatrixEntry
+                                        {
+                                            AnnotationSpec = new AnnotationSpec
+                                            {
+                                                DisplayName = "display_name137f65c2",
+                                                Description = "description2cf9da67",
+                                            },
+                                            ItemCount = -1255094419,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    ObjectDetectionMetrics = new ObjectDetectionMetrics
+                    {
+                        PrCurve = new PrCurve
+                        {
+                            AnnotationSpec = new AnnotationSpec
+                            {
+                                DisplayName = "display_name137f65c2",
+                                Description = "description2cf9da67",
+                            },
+                            AreaUnderCurve = -4.7771348E+17F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new PrCurve.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                    RecallAt1 = 1.8027053E+17F,
+                                    PrecisionAt1 = 1.0815272E+18F,
+                                    F1ScoreAt1 = -6.61423E+17F,
+                                    RecallAt5 = -3.2754008E+17F,
+                                    PrecisionAt5 = -1.1509507E+17F,
+                                    F1ScoreAt5 = -5.155E+17F,
+                                },
+                            },
+                            MeanAveragePrecision = 3.3292076E+16F,
+                        },
+                    },
+                },
                 AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
                 EvaluatedItemCount = -6593700645137490122L,
             };
@@ -1903,10 +5265,110 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             Evaluation expectedResponse = new Evaluation
             {
                 EvaluationName = EvaluationName.FromProjectDatasetEvaluation("[PROJECT]", "[DATASET]", "[EVALUATION]"),
-                Config = new EvaluationConfig(),
-                EvaluationJobRunTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                EvaluationMetrics = new EvaluationMetrics(),
+                Config = new EvaluationConfig
+                {
+                    BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                    {
+                        IouThreshold = -2.1410331E+17F,
+                    },
+                },
+                EvaluationJobRunTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EvaluationMetrics = new EvaluationMetrics
+                {
+                    ClassificationMetrics = new ClassificationMetrics
+                    {
+                        PrCurve = new PrCurve
+                        {
+                            AnnotationSpec = new AnnotationSpec
+                            {
+                                DisplayName = "display_name137f65c2",
+                                Description = "description2cf9da67",
+                            },
+                            AreaUnderCurve = -4.7771348E+17F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new PrCurve.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                    RecallAt1 = 1.8027053E+17F,
+                                    PrecisionAt1 = 1.0815272E+18F,
+                                    F1ScoreAt1 = -6.61423E+17F,
+                                    RecallAt5 = -3.2754008E+17F,
+                                    PrecisionAt5 = -1.1509507E+17F,
+                                    F1ScoreAt5 = -5.155E+17F,
+                                },
+                            },
+                            MeanAveragePrecision = 3.3292076E+16F,
+                        },
+                        ConfusionMatrix = new ConfusionMatrix
+                        {
+                            Row =
+                            {
+                                new ConfusionMatrix.Types.Row
+                                {
+                                    AnnotationSpec = new AnnotationSpec
+                                    {
+                                        DisplayName = "display_name137f65c2",
+                                        Description = "description2cf9da67",
+                                    },
+                                    Entries =
+                                    {
+                                        new ConfusionMatrix.Types.ConfusionMatrixEntry
+                                        {
+                                            AnnotationSpec = new AnnotationSpec
+                                            {
+                                                DisplayName = "display_name137f65c2",
+                                                Description = "description2cf9da67",
+                                            },
+                                            ItemCount = -1255094419,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    ObjectDetectionMetrics = new ObjectDetectionMetrics
+                    {
+                        PrCurve = new PrCurve
+                        {
+                            AnnotationSpec = new AnnotationSpec
+                            {
+                                DisplayName = "display_name137f65c2",
+                                Description = "description2cf9da67",
+                            },
+                            AreaUnderCurve = -4.7771348E+17F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new PrCurve.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                    RecallAt1 = 1.8027053E+17F,
+                                    PrecisionAt1 = 1.0815272E+18F,
+                                    F1ScoreAt1 = -6.61423E+17F,
+                                    RecallAt5 = -3.2754008E+17F,
+                                    PrecisionAt5 = -1.1509507E+17F,
+                                    F1ScoreAt5 = -5.155E+17F,
+                                },
+                            },
+                            MeanAveragePrecision = 3.3292076E+16F,
+                        },
+                    },
+                },
                 AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
                 EvaluatedItemCount = -6593700645137490122L,
             };
@@ -1931,10 +5393,110 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             Evaluation expectedResponse = new Evaluation
             {
                 EvaluationName = EvaluationName.FromProjectDatasetEvaluation("[PROJECT]", "[DATASET]", "[EVALUATION]"),
-                Config = new EvaluationConfig(),
-                EvaluationJobRunTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                EvaluationMetrics = new EvaluationMetrics(),
+                Config = new EvaluationConfig
+                {
+                    BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                    {
+                        IouThreshold = -2.1410331E+17F,
+                    },
+                },
+                EvaluationJobRunTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EvaluationMetrics = new EvaluationMetrics
+                {
+                    ClassificationMetrics = new ClassificationMetrics
+                    {
+                        PrCurve = new PrCurve
+                        {
+                            AnnotationSpec = new AnnotationSpec
+                            {
+                                DisplayName = "display_name137f65c2",
+                                Description = "description2cf9da67",
+                            },
+                            AreaUnderCurve = -4.7771348E+17F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new PrCurve.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                    RecallAt1 = 1.8027053E+17F,
+                                    PrecisionAt1 = 1.0815272E+18F,
+                                    F1ScoreAt1 = -6.61423E+17F,
+                                    RecallAt5 = -3.2754008E+17F,
+                                    PrecisionAt5 = -1.1509507E+17F,
+                                    F1ScoreAt5 = -5.155E+17F,
+                                },
+                            },
+                            MeanAveragePrecision = 3.3292076E+16F,
+                        },
+                        ConfusionMatrix = new ConfusionMatrix
+                        {
+                            Row =
+                            {
+                                new ConfusionMatrix.Types.Row
+                                {
+                                    AnnotationSpec = new AnnotationSpec
+                                    {
+                                        DisplayName = "display_name137f65c2",
+                                        Description = "description2cf9da67",
+                                    },
+                                    Entries =
+                                    {
+                                        new ConfusionMatrix.Types.ConfusionMatrixEntry
+                                        {
+                                            AnnotationSpec = new AnnotationSpec
+                                            {
+                                                DisplayName = "display_name137f65c2",
+                                                Description = "description2cf9da67",
+                                            },
+                                            ItemCount = -1255094419,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    ObjectDetectionMetrics = new ObjectDetectionMetrics
+                    {
+                        PrCurve = new PrCurve
+                        {
+                            AnnotationSpec = new AnnotationSpec
+                            {
+                                DisplayName = "display_name137f65c2",
+                                Description = "description2cf9da67",
+                            },
+                            AreaUnderCurve = -4.7771348E+17F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new PrCurve.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                    RecallAt1 = 1.8027053E+17F,
+                                    PrecisionAt1 = 1.0815272E+18F,
+                                    F1ScoreAt1 = -6.61423E+17F,
+                                    RecallAt5 = -3.2754008E+17F,
+                                    PrecisionAt5 = -1.1509507E+17F,
+                                    F1ScoreAt5 = -5.155E+17F,
+                                },
+                            },
+                            MeanAveragePrecision = 3.3292076E+16F,
+                        },
+                    },
+                },
                 AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
                 EvaluatedItemCount = -6593700645137490122L,
             };
@@ -1957,10 +5519,110 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             Evaluation expectedResponse = new Evaluation
             {
                 EvaluationName = EvaluationName.FromProjectDatasetEvaluation("[PROJECT]", "[DATASET]", "[EVALUATION]"),
-                Config = new EvaluationConfig(),
-                EvaluationJobRunTime = new wkt::Timestamp(),
-                CreateTime = new wkt::Timestamp(),
-                EvaluationMetrics = new EvaluationMetrics(),
+                Config = new EvaluationConfig
+                {
+                    BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                    {
+                        IouThreshold = -2.1410331E+17F,
+                    },
+                },
+                EvaluationJobRunTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EvaluationMetrics = new EvaluationMetrics
+                {
+                    ClassificationMetrics = new ClassificationMetrics
+                    {
+                        PrCurve = new PrCurve
+                        {
+                            AnnotationSpec = new AnnotationSpec
+                            {
+                                DisplayName = "display_name137f65c2",
+                                Description = "description2cf9da67",
+                            },
+                            AreaUnderCurve = -4.7771348E+17F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new PrCurve.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                    RecallAt1 = 1.8027053E+17F,
+                                    PrecisionAt1 = 1.0815272E+18F,
+                                    F1ScoreAt1 = -6.61423E+17F,
+                                    RecallAt5 = -3.2754008E+17F,
+                                    PrecisionAt5 = -1.1509507E+17F,
+                                    F1ScoreAt5 = -5.155E+17F,
+                                },
+                            },
+                            MeanAveragePrecision = 3.3292076E+16F,
+                        },
+                        ConfusionMatrix = new ConfusionMatrix
+                        {
+                            Row =
+                            {
+                                new ConfusionMatrix.Types.Row
+                                {
+                                    AnnotationSpec = new AnnotationSpec
+                                    {
+                                        DisplayName = "display_name137f65c2",
+                                        Description = "description2cf9da67",
+                                    },
+                                    Entries =
+                                    {
+                                        new ConfusionMatrix.Types.ConfusionMatrixEntry
+                                        {
+                                            AnnotationSpec = new AnnotationSpec
+                                            {
+                                                DisplayName = "display_name137f65c2",
+                                                Description = "description2cf9da67",
+                                            },
+                                            ItemCount = -1255094419,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    ObjectDetectionMetrics = new ObjectDetectionMetrics
+                    {
+                        PrCurve = new PrCurve
+                        {
+                            AnnotationSpec = new AnnotationSpec
+                            {
+                                DisplayName = "display_name137f65c2",
+                                Description = "description2cf9da67",
+                            },
+                            AreaUnderCurve = -4.7771348E+17F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new PrCurve.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                    RecallAt1 = 1.8027053E+17F,
+                                    PrecisionAt1 = 1.0815272E+18F,
+                                    F1ScoreAt1 = -6.61423E+17F,
+                                    RecallAt5 = -3.2754008E+17F,
+                                    PrecisionAt5 = -1.1509507E+17F,
+                                    F1ScoreAt5 = -5.155E+17F,
+                                },
+                            },
+                            MeanAveragePrecision = 3.3292076E+16F,
+                        },
+                    },
+                },
                 AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
                 EvaluatedItemCount = -6593700645137490122L,
             };
@@ -1981,7 +5643,133 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateEvaluationJobRequest request = new CreateEvaluationJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Job = new EvaluationJob(),
+                Job = new EvaluationJob
+                {
+                    EvaluationJobName = EvaluationJobName.FromProjectEvaluationJob("[PROJECT]", "[EVALUATION_JOB]"),
+                    Description = "description2cf9da67",
+                    State = EvaluationJob.Types.State.Paused,
+                    Schedule = "schedule59559879",
+                    ModelVersion = "model_versionc74dd723",
+                    EvaluationJobConfig = new EvaluationJobConfig
+                    {
+                        InputConfig = new InputConfig
+                        {
+                            DataType = DataType.Video,
+                            GcsSource = new GcsSource
+                            {
+                                InputUri = "input_uriec9462a7",
+                                MimeType = "mime_type606a0ffc",
+                            },
+                            AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                            ClassificationMetadata = new ClassificationMetadata
+                            {
+                                IsMultiLabel = false,
+                            },
+                            BigquerySource = new BigQuerySource
+                            {
+                                InputUri = "input_uriec9462a7",
+                            },
+                            TextMetadata = new TextMetadata
+                            {
+                                LanguageCode = "language_code2f6c7160",
+                            },
+                        },
+                        EvaluationConfig = new EvaluationConfig
+                        {
+                            BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                            {
+                                IouThreshold = -2.1410331E+17F,
+                            },
+                        },
+                        HumanAnnotationConfig = new HumanAnnotationConfig
+                        {
+                            Instruction = "instructionfa6ecc39",
+                            AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                            AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                            LabelGroup = "label_groupef150cd3",
+                            LanguageCode = "language_code2f6c7160",
+                            ReplicaCount = -2132170114,
+                            QuestionDuration = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            ContributorEmails =
+                            {
+                                "contributor_emailsa64beb83",
+                            },
+                            UserEmailAddress = "user_email_address36240c4e",
+                        },
+                        ImageClassificationConfig = new ImageClassificationConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            AllowMultiLabel = true,
+                            AnswerAggregationType = StringAggregationType.NoAggregation,
+                        },
+                        BoundingPolyConfig = new BoundingPolyConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            InstructionMessage = "instruction_messagea30fe952",
+                        },
+                        TextClassificationConfig = new TextClassificationConfig
+                        {
+                            AllowMultiLabel = true,
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            SentimentConfig = new SentimentConfig
+                            {
+                                EnableLabelSentimentSelection = false,
+                            },
+                        },
+                        BigqueryImportKeys =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        ExampleCount = -1179891861,
+                        ExampleSamplePercentage = -4.868342680869164E+17,
+                        EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                        {
+                            Email = "email7cf5830c",
+                            MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                        },
+                    },
+                    AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    LabelMissingGroundTruth = true,
+                    Attempts =
+                    {
+                        new Attempt
+                        {
+                            AttemptTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PartialFailures =
+                            {
+                                new gr::Status
+                                {
+                                    Code = -1805175871,
+                                    Message = "message0231e778",
+                                    Details =
+                                    {
+                                        new wkt::Any
+                                        {
+                                            TypeUrl = "type_urlfde5623b",
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             EvaluationJob expectedResponse = new EvaluationJob
             {
@@ -1990,11 +5778,125 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 State = EvaluationJob.Types.State.Paused,
                 Schedule = "schedule59559879",
                 ModelVersion = "model_versionc74dd723",
-                EvaluationJobConfig = new EvaluationJobConfig(),
+                EvaluationJobConfig = new EvaluationJobConfig
+                {
+                    InputConfig = new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                    EvaluationConfig = new EvaluationConfig
+                    {
+                        BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                        },
+                    },
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    BigqueryImportKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ExampleCount = -1179891861,
+                    ExampleSamplePercentage = -4.868342680869164E+17,
+                    EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                    {
+                        Email = "email7cf5830c",
+                        MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                    },
+                },
                 AnnotationSpecSet = "annotation_spec_set5137ce89",
                 LabelMissingGroundTruth = true,
-                Attempts = { new Attempt(), },
-                CreateTime = new wkt::Timestamp(),
+                Attempts =
+                {
+                    new Attempt
+                    {
+                        AttemptTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        PartialFailures =
+                        {
+                            new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -2011,7 +5913,133 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateEvaluationJobRequest request = new CreateEvaluationJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Job = new EvaluationJob(),
+                Job = new EvaluationJob
+                {
+                    EvaluationJobName = EvaluationJobName.FromProjectEvaluationJob("[PROJECT]", "[EVALUATION_JOB]"),
+                    Description = "description2cf9da67",
+                    State = EvaluationJob.Types.State.Paused,
+                    Schedule = "schedule59559879",
+                    ModelVersion = "model_versionc74dd723",
+                    EvaluationJobConfig = new EvaluationJobConfig
+                    {
+                        InputConfig = new InputConfig
+                        {
+                            DataType = DataType.Video,
+                            GcsSource = new GcsSource
+                            {
+                                InputUri = "input_uriec9462a7",
+                                MimeType = "mime_type606a0ffc",
+                            },
+                            AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                            ClassificationMetadata = new ClassificationMetadata
+                            {
+                                IsMultiLabel = false,
+                            },
+                            BigquerySource = new BigQuerySource
+                            {
+                                InputUri = "input_uriec9462a7",
+                            },
+                            TextMetadata = new TextMetadata
+                            {
+                                LanguageCode = "language_code2f6c7160",
+                            },
+                        },
+                        EvaluationConfig = new EvaluationConfig
+                        {
+                            BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                            {
+                                IouThreshold = -2.1410331E+17F,
+                            },
+                        },
+                        HumanAnnotationConfig = new HumanAnnotationConfig
+                        {
+                            Instruction = "instructionfa6ecc39",
+                            AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                            AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                            LabelGroup = "label_groupef150cd3",
+                            LanguageCode = "language_code2f6c7160",
+                            ReplicaCount = -2132170114,
+                            QuestionDuration = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            ContributorEmails =
+                            {
+                                "contributor_emailsa64beb83",
+                            },
+                            UserEmailAddress = "user_email_address36240c4e",
+                        },
+                        ImageClassificationConfig = new ImageClassificationConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            AllowMultiLabel = true,
+                            AnswerAggregationType = StringAggregationType.NoAggregation,
+                        },
+                        BoundingPolyConfig = new BoundingPolyConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            InstructionMessage = "instruction_messagea30fe952",
+                        },
+                        TextClassificationConfig = new TextClassificationConfig
+                        {
+                            AllowMultiLabel = true,
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            SentimentConfig = new SentimentConfig
+                            {
+                                EnableLabelSentimentSelection = false,
+                            },
+                        },
+                        BigqueryImportKeys =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        ExampleCount = -1179891861,
+                        ExampleSamplePercentage = -4.868342680869164E+17,
+                        EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                        {
+                            Email = "email7cf5830c",
+                            MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                        },
+                    },
+                    AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    LabelMissingGroundTruth = true,
+                    Attempts =
+                    {
+                        new Attempt
+                        {
+                            AttemptTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PartialFailures =
+                            {
+                                new gr::Status
+                                {
+                                    Code = -1805175871,
+                                    Message = "message0231e778",
+                                    Details =
+                                    {
+                                        new wkt::Any
+                                        {
+                                            TypeUrl = "type_urlfde5623b",
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             EvaluationJob expectedResponse = new EvaluationJob
             {
@@ -2020,11 +6048,125 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 State = EvaluationJob.Types.State.Paused,
                 Schedule = "schedule59559879",
                 ModelVersion = "model_versionc74dd723",
-                EvaluationJobConfig = new EvaluationJobConfig(),
+                EvaluationJobConfig = new EvaluationJobConfig
+                {
+                    InputConfig = new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                    EvaluationConfig = new EvaluationConfig
+                    {
+                        BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                        },
+                    },
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    BigqueryImportKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ExampleCount = -1179891861,
+                    ExampleSamplePercentage = -4.868342680869164E+17,
+                    EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                    {
+                        Email = "email7cf5830c",
+                        MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                    },
+                },
                 AnnotationSpecSet = "annotation_spec_set5137ce89",
                 LabelMissingGroundTruth = true,
-                Attempts = { new Attempt(), },
-                CreateTime = new wkt::Timestamp(),
+                Attempts =
+                {
+                    new Attempt
+                    {
+                        AttemptTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        PartialFailures =
+                        {
+                            new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EvaluationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -2043,7 +6185,133 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateEvaluationJobRequest request = new CreateEvaluationJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Job = new EvaluationJob(),
+                Job = new EvaluationJob
+                {
+                    EvaluationJobName = EvaluationJobName.FromProjectEvaluationJob("[PROJECT]", "[EVALUATION_JOB]"),
+                    Description = "description2cf9da67",
+                    State = EvaluationJob.Types.State.Paused,
+                    Schedule = "schedule59559879",
+                    ModelVersion = "model_versionc74dd723",
+                    EvaluationJobConfig = new EvaluationJobConfig
+                    {
+                        InputConfig = new InputConfig
+                        {
+                            DataType = DataType.Video,
+                            GcsSource = new GcsSource
+                            {
+                                InputUri = "input_uriec9462a7",
+                                MimeType = "mime_type606a0ffc",
+                            },
+                            AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                            ClassificationMetadata = new ClassificationMetadata
+                            {
+                                IsMultiLabel = false,
+                            },
+                            BigquerySource = new BigQuerySource
+                            {
+                                InputUri = "input_uriec9462a7",
+                            },
+                            TextMetadata = new TextMetadata
+                            {
+                                LanguageCode = "language_code2f6c7160",
+                            },
+                        },
+                        EvaluationConfig = new EvaluationConfig
+                        {
+                            BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                            {
+                                IouThreshold = -2.1410331E+17F,
+                            },
+                        },
+                        HumanAnnotationConfig = new HumanAnnotationConfig
+                        {
+                            Instruction = "instructionfa6ecc39",
+                            AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                            AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                            LabelGroup = "label_groupef150cd3",
+                            LanguageCode = "language_code2f6c7160",
+                            ReplicaCount = -2132170114,
+                            QuestionDuration = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            ContributorEmails =
+                            {
+                                "contributor_emailsa64beb83",
+                            },
+                            UserEmailAddress = "user_email_address36240c4e",
+                        },
+                        ImageClassificationConfig = new ImageClassificationConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            AllowMultiLabel = true,
+                            AnswerAggregationType = StringAggregationType.NoAggregation,
+                        },
+                        BoundingPolyConfig = new BoundingPolyConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            InstructionMessage = "instruction_messagea30fe952",
+                        },
+                        TextClassificationConfig = new TextClassificationConfig
+                        {
+                            AllowMultiLabel = true,
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            SentimentConfig = new SentimentConfig
+                            {
+                                EnableLabelSentimentSelection = false,
+                            },
+                        },
+                        BigqueryImportKeys =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        ExampleCount = -1179891861,
+                        ExampleSamplePercentage = -4.868342680869164E+17,
+                        EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                        {
+                            Email = "email7cf5830c",
+                            MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                        },
+                    },
+                    AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    LabelMissingGroundTruth = true,
+                    Attempts =
+                    {
+                        new Attempt
+                        {
+                            AttemptTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PartialFailures =
+                            {
+                                new gr::Status
+                                {
+                                    Code = -1805175871,
+                                    Message = "message0231e778",
+                                    Details =
+                                    {
+                                        new wkt::Any
+                                        {
+                                            TypeUrl = "type_urlfde5623b",
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             EvaluationJob expectedResponse = new EvaluationJob
             {
@@ -2052,11 +6320,125 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 State = EvaluationJob.Types.State.Paused,
                 Schedule = "schedule59559879",
                 ModelVersion = "model_versionc74dd723",
-                EvaluationJobConfig = new EvaluationJobConfig(),
+                EvaluationJobConfig = new EvaluationJobConfig
+                {
+                    InputConfig = new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                    EvaluationConfig = new EvaluationConfig
+                    {
+                        BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                        },
+                    },
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    BigqueryImportKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ExampleCount = -1179891861,
+                    ExampleSamplePercentage = -4.868342680869164E+17,
+                    EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                    {
+                        Email = "email7cf5830c",
+                        MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                    },
+                },
                 AnnotationSpecSet = "annotation_spec_set5137ce89",
                 LabelMissingGroundTruth = true,
-                Attempts = { new Attempt(), },
-                CreateTime = new wkt::Timestamp(),
+                Attempts =
+                {
+                    new Attempt
+                    {
+                        AttemptTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        PartialFailures =
+                        {
+                            new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -2073,7 +6455,133 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateEvaluationJobRequest request = new CreateEvaluationJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Job = new EvaluationJob(),
+                Job = new EvaluationJob
+                {
+                    EvaluationJobName = EvaluationJobName.FromProjectEvaluationJob("[PROJECT]", "[EVALUATION_JOB]"),
+                    Description = "description2cf9da67",
+                    State = EvaluationJob.Types.State.Paused,
+                    Schedule = "schedule59559879",
+                    ModelVersion = "model_versionc74dd723",
+                    EvaluationJobConfig = new EvaluationJobConfig
+                    {
+                        InputConfig = new InputConfig
+                        {
+                            DataType = DataType.Video,
+                            GcsSource = new GcsSource
+                            {
+                                InputUri = "input_uriec9462a7",
+                                MimeType = "mime_type606a0ffc",
+                            },
+                            AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                            ClassificationMetadata = new ClassificationMetadata
+                            {
+                                IsMultiLabel = false,
+                            },
+                            BigquerySource = new BigQuerySource
+                            {
+                                InputUri = "input_uriec9462a7",
+                            },
+                            TextMetadata = new TextMetadata
+                            {
+                                LanguageCode = "language_code2f6c7160",
+                            },
+                        },
+                        EvaluationConfig = new EvaluationConfig
+                        {
+                            BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                            {
+                                IouThreshold = -2.1410331E+17F,
+                            },
+                        },
+                        HumanAnnotationConfig = new HumanAnnotationConfig
+                        {
+                            Instruction = "instructionfa6ecc39",
+                            AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                            AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                            LabelGroup = "label_groupef150cd3",
+                            LanguageCode = "language_code2f6c7160",
+                            ReplicaCount = -2132170114,
+                            QuestionDuration = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            ContributorEmails =
+                            {
+                                "contributor_emailsa64beb83",
+                            },
+                            UserEmailAddress = "user_email_address36240c4e",
+                        },
+                        ImageClassificationConfig = new ImageClassificationConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            AllowMultiLabel = true,
+                            AnswerAggregationType = StringAggregationType.NoAggregation,
+                        },
+                        BoundingPolyConfig = new BoundingPolyConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            InstructionMessage = "instruction_messagea30fe952",
+                        },
+                        TextClassificationConfig = new TextClassificationConfig
+                        {
+                            AllowMultiLabel = true,
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            SentimentConfig = new SentimentConfig
+                            {
+                                EnableLabelSentimentSelection = false,
+                            },
+                        },
+                        BigqueryImportKeys =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        ExampleCount = -1179891861,
+                        ExampleSamplePercentage = -4.868342680869164E+17,
+                        EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                        {
+                            Email = "email7cf5830c",
+                            MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                        },
+                    },
+                    AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    LabelMissingGroundTruth = true,
+                    Attempts =
+                    {
+                        new Attempt
+                        {
+                            AttemptTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PartialFailures =
+                            {
+                                new gr::Status
+                                {
+                                    Code = -1805175871,
+                                    Message = "message0231e778",
+                                    Details =
+                                    {
+                                        new wkt::Any
+                                        {
+                                            TypeUrl = "type_urlfde5623b",
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             EvaluationJob expectedResponse = new EvaluationJob
             {
@@ -2082,11 +6590,125 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 State = EvaluationJob.Types.State.Paused,
                 Schedule = "schedule59559879",
                 ModelVersion = "model_versionc74dd723",
-                EvaluationJobConfig = new EvaluationJobConfig(),
+                EvaluationJobConfig = new EvaluationJobConfig
+                {
+                    InputConfig = new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                    EvaluationConfig = new EvaluationConfig
+                    {
+                        BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                        },
+                    },
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    BigqueryImportKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ExampleCount = -1179891861,
+                    ExampleSamplePercentage = -4.868342680869164E+17,
+                    EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                    {
+                        Email = "email7cf5830c",
+                        MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                    },
+                },
                 AnnotationSpecSet = "annotation_spec_set5137ce89",
                 LabelMissingGroundTruth = true,
-                Attempts = { new Attempt(), },
-                CreateTime = new wkt::Timestamp(),
+                Attempts =
+                {
+                    new Attempt
+                    {
+                        AttemptTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        PartialFailures =
+                        {
+                            new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EvaluationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -2105,7 +6727,133 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateEvaluationJobRequest request = new CreateEvaluationJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Job = new EvaluationJob(),
+                Job = new EvaluationJob
+                {
+                    EvaluationJobName = EvaluationJobName.FromProjectEvaluationJob("[PROJECT]", "[EVALUATION_JOB]"),
+                    Description = "description2cf9da67",
+                    State = EvaluationJob.Types.State.Paused,
+                    Schedule = "schedule59559879",
+                    ModelVersion = "model_versionc74dd723",
+                    EvaluationJobConfig = new EvaluationJobConfig
+                    {
+                        InputConfig = new InputConfig
+                        {
+                            DataType = DataType.Video,
+                            GcsSource = new GcsSource
+                            {
+                                InputUri = "input_uriec9462a7",
+                                MimeType = "mime_type606a0ffc",
+                            },
+                            AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                            ClassificationMetadata = new ClassificationMetadata
+                            {
+                                IsMultiLabel = false,
+                            },
+                            BigquerySource = new BigQuerySource
+                            {
+                                InputUri = "input_uriec9462a7",
+                            },
+                            TextMetadata = new TextMetadata
+                            {
+                                LanguageCode = "language_code2f6c7160",
+                            },
+                        },
+                        EvaluationConfig = new EvaluationConfig
+                        {
+                            BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                            {
+                                IouThreshold = -2.1410331E+17F,
+                            },
+                        },
+                        HumanAnnotationConfig = new HumanAnnotationConfig
+                        {
+                            Instruction = "instructionfa6ecc39",
+                            AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                            AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                            LabelGroup = "label_groupef150cd3",
+                            LanguageCode = "language_code2f6c7160",
+                            ReplicaCount = -2132170114,
+                            QuestionDuration = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            ContributorEmails =
+                            {
+                                "contributor_emailsa64beb83",
+                            },
+                            UserEmailAddress = "user_email_address36240c4e",
+                        },
+                        ImageClassificationConfig = new ImageClassificationConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            AllowMultiLabel = true,
+                            AnswerAggregationType = StringAggregationType.NoAggregation,
+                        },
+                        BoundingPolyConfig = new BoundingPolyConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            InstructionMessage = "instruction_messagea30fe952",
+                        },
+                        TextClassificationConfig = new TextClassificationConfig
+                        {
+                            AllowMultiLabel = true,
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            SentimentConfig = new SentimentConfig
+                            {
+                                EnableLabelSentimentSelection = false,
+                            },
+                        },
+                        BigqueryImportKeys =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        ExampleCount = -1179891861,
+                        ExampleSamplePercentage = -4.868342680869164E+17,
+                        EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                        {
+                            Email = "email7cf5830c",
+                            MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                        },
+                    },
+                    AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    LabelMissingGroundTruth = true,
+                    Attempts =
+                    {
+                        new Attempt
+                        {
+                            AttemptTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PartialFailures =
+                            {
+                                new gr::Status
+                                {
+                                    Code = -1805175871,
+                                    Message = "message0231e778",
+                                    Details =
+                                    {
+                                        new wkt::Any
+                                        {
+                                            TypeUrl = "type_urlfde5623b",
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             EvaluationJob expectedResponse = new EvaluationJob
             {
@@ -2114,11 +6862,125 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 State = EvaluationJob.Types.State.Paused,
                 Schedule = "schedule59559879",
                 ModelVersion = "model_versionc74dd723",
-                EvaluationJobConfig = new EvaluationJobConfig(),
+                EvaluationJobConfig = new EvaluationJobConfig
+                {
+                    InputConfig = new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                    EvaluationConfig = new EvaluationConfig
+                    {
+                        BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                        },
+                    },
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    BigqueryImportKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ExampleCount = -1179891861,
+                    ExampleSamplePercentage = -4.868342680869164E+17,
+                    EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                    {
+                        Email = "email7cf5830c",
+                        MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                    },
+                },
                 AnnotationSpecSet = "annotation_spec_set5137ce89",
                 LabelMissingGroundTruth = true,
-                Attempts = { new Attempt(), },
-                CreateTime = new wkt::Timestamp(),
+                Attempts =
+                {
+                    new Attempt
+                    {
+                        AttemptTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        PartialFailures =
+                        {
+                            new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -2135,7 +6997,133 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             CreateEvaluationJobRequest request = new CreateEvaluationJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Job = new EvaluationJob(),
+                Job = new EvaluationJob
+                {
+                    EvaluationJobName = EvaluationJobName.FromProjectEvaluationJob("[PROJECT]", "[EVALUATION_JOB]"),
+                    Description = "description2cf9da67",
+                    State = EvaluationJob.Types.State.Paused,
+                    Schedule = "schedule59559879",
+                    ModelVersion = "model_versionc74dd723",
+                    EvaluationJobConfig = new EvaluationJobConfig
+                    {
+                        InputConfig = new InputConfig
+                        {
+                            DataType = DataType.Video,
+                            GcsSource = new GcsSource
+                            {
+                                InputUri = "input_uriec9462a7",
+                                MimeType = "mime_type606a0ffc",
+                            },
+                            AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                            ClassificationMetadata = new ClassificationMetadata
+                            {
+                                IsMultiLabel = false,
+                            },
+                            BigquerySource = new BigQuerySource
+                            {
+                                InputUri = "input_uriec9462a7",
+                            },
+                            TextMetadata = new TextMetadata
+                            {
+                                LanguageCode = "language_code2f6c7160",
+                            },
+                        },
+                        EvaluationConfig = new EvaluationConfig
+                        {
+                            BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                            {
+                                IouThreshold = -2.1410331E+17F,
+                            },
+                        },
+                        HumanAnnotationConfig = new HumanAnnotationConfig
+                        {
+                            Instruction = "instructionfa6ecc39",
+                            AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                            AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                            LabelGroup = "label_groupef150cd3",
+                            LanguageCode = "language_code2f6c7160",
+                            ReplicaCount = -2132170114,
+                            QuestionDuration = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            ContributorEmails =
+                            {
+                                "contributor_emailsa64beb83",
+                            },
+                            UserEmailAddress = "user_email_address36240c4e",
+                        },
+                        ImageClassificationConfig = new ImageClassificationConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            AllowMultiLabel = true,
+                            AnswerAggregationType = StringAggregationType.NoAggregation,
+                        },
+                        BoundingPolyConfig = new BoundingPolyConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            InstructionMessage = "instruction_messagea30fe952",
+                        },
+                        TextClassificationConfig = new TextClassificationConfig
+                        {
+                            AllowMultiLabel = true,
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            SentimentConfig = new SentimentConfig
+                            {
+                                EnableLabelSentimentSelection = false,
+                            },
+                        },
+                        BigqueryImportKeys =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        ExampleCount = -1179891861,
+                        ExampleSamplePercentage = -4.868342680869164E+17,
+                        EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                        {
+                            Email = "email7cf5830c",
+                            MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                        },
+                    },
+                    AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    LabelMissingGroundTruth = true,
+                    Attempts =
+                    {
+                        new Attempt
+                        {
+                            AttemptTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PartialFailures =
+                            {
+                                new gr::Status
+                                {
+                                    Code = -1805175871,
+                                    Message = "message0231e778",
+                                    Details =
+                                    {
+                                        new wkt::Any
+                                        {
+                                            TypeUrl = "type_urlfde5623b",
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             EvaluationJob expectedResponse = new EvaluationJob
             {
@@ -2144,11 +7132,125 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 State = EvaluationJob.Types.State.Paused,
                 Schedule = "schedule59559879",
                 ModelVersion = "model_versionc74dd723",
-                EvaluationJobConfig = new EvaluationJobConfig(),
+                EvaluationJobConfig = new EvaluationJobConfig
+                {
+                    InputConfig = new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                    EvaluationConfig = new EvaluationConfig
+                    {
+                        BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                        },
+                    },
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    BigqueryImportKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ExampleCount = -1179891861,
+                    ExampleSamplePercentage = -4.868342680869164E+17,
+                    EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                    {
+                        Email = "email7cf5830c",
+                        MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                    },
+                },
                 AnnotationSpecSet = "annotation_spec_set5137ce89",
                 LabelMissingGroundTruth = true,
-                Attempts = { new Attempt(), },
-                CreateTime = new wkt::Timestamp(),
+                Attempts =
+                {
+                    new Attempt
+                    {
+                        AttemptTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        PartialFailures =
+                        {
+                            new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EvaluationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -2166,8 +7268,137 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateEvaluationJobRequest request = new UpdateEvaluationJobRequest
             {
-                EvaluationJob = new EvaluationJob(),
-                UpdateMask = new wkt::FieldMask(),
+                EvaluationJob = new EvaluationJob
+                {
+                    EvaluationJobName = EvaluationJobName.FromProjectEvaluationJob("[PROJECT]", "[EVALUATION_JOB]"),
+                    Description = "description2cf9da67",
+                    State = EvaluationJob.Types.State.Paused,
+                    Schedule = "schedule59559879",
+                    ModelVersion = "model_versionc74dd723",
+                    EvaluationJobConfig = new EvaluationJobConfig
+                    {
+                        InputConfig = new InputConfig
+                        {
+                            DataType = DataType.Video,
+                            GcsSource = new GcsSource
+                            {
+                                InputUri = "input_uriec9462a7",
+                                MimeType = "mime_type606a0ffc",
+                            },
+                            AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                            ClassificationMetadata = new ClassificationMetadata
+                            {
+                                IsMultiLabel = false,
+                            },
+                            BigquerySource = new BigQuerySource
+                            {
+                                InputUri = "input_uriec9462a7",
+                            },
+                            TextMetadata = new TextMetadata
+                            {
+                                LanguageCode = "language_code2f6c7160",
+                            },
+                        },
+                        EvaluationConfig = new EvaluationConfig
+                        {
+                            BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                            {
+                                IouThreshold = -2.1410331E+17F,
+                            },
+                        },
+                        HumanAnnotationConfig = new HumanAnnotationConfig
+                        {
+                            Instruction = "instructionfa6ecc39",
+                            AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                            AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                            LabelGroup = "label_groupef150cd3",
+                            LanguageCode = "language_code2f6c7160",
+                            ReplicaCount = -2132170114,
+                            QuestionDuration = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            ContributorEmails =
+                            {
+                                "contributor_emailsa64beb83",
+                            },
+                            UserEmailAddress = "user_email_address36240c4e",
+                        },
+                        ImageClassificationConfig = new ImageClassificationConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            AllowMultiLabel = true,
+                            AnswerAggregationType = StringAggregationType.NoAggregation,
+                        },
+                        BoundingPolyConfig = new BoundingPolyConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            InstructionMessage = "instruction_messagea30fe952",
+                        },
+                        TextClassificationConfig = new TextClassificationConfig
+                        {
+                            AllowMultiLabel = true,
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            SentimentConfig = new SentimentConfig
+                            {
+                                EnableLabelSentimentSelection = false,
+                            },
+                        },
+                        BigqueryImportKeys =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        ExampleCount = -1179891861,
+                        ExampleSamplePercentage = -4.868342680869164E+17,
+                        EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                        {
+                            Email = "email7cf5830c",
+                            MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                        },
+                    },
+                    AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    LabelMissingGroundTruth = true,
+                    Attempts =
+                    {
+                        new Attempt
+                        {
+                            AttemptTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PartialFailures =
+                            {
+                                new gr::Status
+                                {
+                                    Code = -1805175871,
+                                    Message = "message0231e778",
+                                    Details =
+                                    {
+                                        new wkt::Any
+                                        {
+                                            TypeUrl = "type_urlfde5623b",
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             EvaluationJob expectedResponse = new EvaluationJob
             {
@@ -2176,11 +7407,125 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 State = EvaluationJob.Types.State.Paused,
                 Schedule = "schedule59559879",
                 ModelVersion = "model_versionc74dd723",
-                EvaluationJobConfig = new EvaluationJobConfig(),
+                EvaluationJobConfig = new EvaluationJobConfig
+                {
+                    InputConfig = new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                    EvaluationConfig = new EvaluationConfig
+                    {
+                        BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                        },
+                    },
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    BigqueryImportKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ExampleCount = -1179891861,
+                    ExampleSamplePercentage = -4.868342680869164E+17,
+                    EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                    {
+                        Email = "email7cf5830c",
+                        MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                    },
+                },
                 AnnotationSpecSet = "annotation_spec_set5137ce89",
                 LabelMissingGroundTruth = true,
-                Attempts = { new Attempt(), },
-                CreateTime = new wkt::Timestamp(),
+                Attempts =
+                {
+                    new Attempt
+                    {
+                        AttemptTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        PartialFailures =
+                        {
+                            new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -2196,8 +7541,137 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateEvaluationJobRequest request = new UpdateEvaluationJobRequest
             {
-                EvaluationJob = new EvaluationJob(),
-                UpdateMask = new wkt::FieldMask(),
+                EvaluationJob = new EvaluationJob
+                {
+                    EvaluationJobName = EvaluationJobName.FromProjectEvaluationJob("[PROJECT]", "[EVALUATION_JOB]"),
+                    Description = "description2cf9da67",
+                    State = EvaluationJob.Types.State.Paused,
+                    Schedule = "schedule59559879",
+                    ModelVersion = "model_versionc74dd723",
+                    EvaluationJobConfig = new EvaluationJobConfig
+                    {
+                        InputConfig = new InputConfig
+                        {
+                            DataType = DataType.Video,
+                            GcsSource = new GcsSource
+                            {
+                                InputUri = "input_uriec9462a7",
+                                MimeType = "mime_type606a0ffc",
+                            },
+                            AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                            ClassificationMetadata = new ClassificationMetadata
+                            {
+                                IsMultiLabel = false,
+                            },
+                            BigquerySource = new BigQuerySource
+                            {
+                                InputUri = "input_uriec9462a7",
+                            },
+                            TextMetadata = new TextMetadata
+                            {
+                                LanguageCode = "language_code2f6c7160",
+                            },
+                        },
+                        EvaluationConfig = new EvaluationConfig
+                        {
+                            BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                            {
+                                IouThreshold = -2.1410331E+17F,
+                            },
+                        },
+                        HumanAnnotationConfig = new HumanAnnotationConfig
+                        {
+                            Instruction = "instructionfa6ecc39",
+                            AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                            AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                            LabelGroup = "label_groupef150cd3",
+                            LanguageCode = "language_code2f6c7160",
+                            ReplicaCount = -2132170114,
+                            QuestionDuration = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            ContributorEmails =
+                            {
+                                "contributor_emailsa64beb83",
+                            },
+                            UserEmailAddress = "user_email_address36240c4e",
+                        },
+                        ImageClassificationConfig = new ImageClassificationConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            AllowMultiLabel = true,
+                            AnswerAggregationType = StringAggregationType.NoAggregation,
+                        },
+                        BoundingPolyConfig = new BoundingPolyConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            InstructionMessage = "instruction_messagea30fe952",
+                        },
+                        TextClassificationConfig = new TextClassificationConfig
+                        {
+                            AllowMultiLabel = true,
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            SentimentConfig = new SentimentConfig
+                            {
+                                EnableLabelSentimentSelection = false,
+                            },
+                        },
+                        BigqueryImportKeys =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        ExampleCount = -1179891861,
+                        ExampleSamplePercentage = -4.868342680869164E+17,
+                        EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                        {
+                            Email = "email7cf5830c",
+                            MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                        },
+                    },
+                    AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    LabelMissingGroundTruth = true,
+                    Attempts =
+                    {
+                        new Attempt
+                        {
+                            AttemptTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PartialFailures =
+                            {
+                                new gr::Status
+                                {
+                                    Code = -1805175871,
+                                    Message = "message0231e778",
+                                    Details =
+                                    {
+                                        new wkt::Any
+                                        {
+                                            TypeUrl = "type_urlfde5623b",
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             EvaluationJob expectedResponse = new EvaluationJob
             {
@@ -2206,11 +7680,125 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 State = EvaluationJob.Types.State.Paused,
                 Schedule = "schedule59559879",
                 ModelVersion = "model_versionc74dd723",
-                EvaluationJobConfig = new EvaluationJobConfig(),
+                EvaluationJobConfig = new EvaluationJobConfig
+                {
+                    InputConfig = new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                    EvaluationConfig = new EvaluationConfig
+                    {
+                        BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                        },
+                    },
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    BigqueryImportKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ExampleCount = -1179891861,
+                    ExampleSamplePercentage = -4.868342680869164E+17,
+                    EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                    {
+                        Email = "email7cf5830c",
+                        MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                    },
+                },
                 AnnotationSpecSet = "annotation_spec_set5137ce89",
                 LabelMissingGroundTruth = true,
-                Attempts = { new Attempt(), },
-                CreateTime = new wkt::Timestamp(),
+                Attempts =
+                {
+                    new Attempt
+                    {
+                        AttemptTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        PartialFailures =
+                        {
+                            new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EvaluationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -2228,8 +7816,137 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateEvaluationJobRequest request = new UpdateEvaluationJobRequest
             {
-                EvaluationJob = new EvaluationJob(),
-                UpdateMask = new wkt::FieldMask(),
+                EvaluationJob = new EvaluationJob
+                {
+                    EvaluationJobName = EvaluationJobName.FromProjectEvaluationJob("[PROJECT]", "[EVALUATION_JOB]"),
+                    Description = "description2cf9da67",
+                    State = EvaluationJob.Types.State.Paused,
+                    Schedule = "schedule59559879",
+                    ModelVersion = "model_versionc74dd723",
+                    EvaluationJobConfig = new EvaluationJobConfig
+                    {
+                        InputConfig = new InputConfig
+                        {
+                            DataType = DataType.Video,
+                            GcsSource = new GcsSource
+                            {
+                                InputUri = "input_uriec9462a7",
+                                MimeType = "mime_type606a0ffc",
+                            },
+                            AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                            ClassificationMetadata = new ClassificationMetadata
+                            {
+                                IsMultiLabel = false,
+                            },
+                            BigquerySource = new BigQuerySource
+                            {
+                                InputUri = "input_uriec9462a7",
+                            },
+                            TextMetadata = new TextMetadata
+                            {
+                                LanguageCode = "language_code2f6c7160",
+                            },
+                        },
+                        EvaluationConfig = new EvaluationConfig
+                        {
+                            BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                            {
+                                IouThreshold = -2.1410331E+17F,
+                            },
+                        },
+                        HumanAnnotationConfig = new HumanAnnotationConfig
+                        {
+                            Instruction = "instructionfa6ecc39",
+                            AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                            AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                            LabelGroup = "label_groupef150cd3",
+                            LanguageCode = "language_code2f6c7160",
+                            ReplicaCount = -2132170114,
+                            QuestionDuration = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            ContributorEmails =
+                            {
+                                "contributor_emailsa64beb83",
+                            },
+                            UserEmailAddress = "user_email_address36240c4e",
+                        },
+                        ImageClassificationConfig = new ImageClassificationConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            AllowMultiLabel = true,
+                            AnswerAggregationType = StringAggregationType.NoAggregation,
+                        },
+                        BoundingPolyConfig = new BoundingPolyConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            InstructionMessage = "instruction_messagea30fe952",
+                        },
+                        TextClassificationConfig = new TextClassificationConfig
+                        {
+                            AllowMultiLabel = true,
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            SentimentConfig = new SentimentConfig
+                            {
+                                EnableLabelSentimentSelection = false,
+                            },
+                        },
+                        BigqueryImportKeys =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        ExampleCount = -1179891861,
+                        ExampleSamplePercentage = -4.868342680869164E+17,
+                        EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                        {
+                            Email = "email7cf5830c",
+                            MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                        },
+                    },
+                    AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    LabelMissingGroundTruth = true,
+                    Attempts =
+                    {
+                        new Attempt
+                        {
+                            AttemptTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PartialFailures =
+                            {
+                                new gr::Status
+                                {
+                                    Code = -1805175871,
+                                    Message = "message0231e778",
+                                    Details =
+                                    {
+                                        new wkt::Any
+                                        {
+                                            TypeUrl = "type_urlfde5623b",
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             EvaluationJob expectedResponse = new EvaluationJob
             {
@@ -2238,11 +7955,125 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 State = EvaluationJob.Types.State.Paused,
                 Schedule = "schedule59559879",
                 ModelVersion = "model_versionc74dd723",
-                EvaluationJobConfig = new EvaluationJobConfig(),
+                EvaluationJobConfig = new EvaluationJobConfig
+                {
+                    InputConfig = new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                    EvaluationConfig = new EvaluationConfig
+                    {
+                        BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                        },
+                    },
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    BigqueryImportKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ExampleCount = -1179891861,
+                    ExampleSamplePercentage = -4.868342680869164E+17,
+                    EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                    {
+                        Email = "email7cf5830c",
+                        MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                    },
+                },
                 AnnotationSpecSet = "annotation_spec_set5137ce89",
                 LabelMissingGroundTruth = true,
-                Attempts = { new Attempt(), },
-                CreateTime = new wkt::Timestamp(),
+                Attempts =
+                {
+                    new Attempt
+                    {
+                        AttemptTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        PartialFailures =
+                        {
+                            new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -2258,8 +8089,137 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateEvaluationJobRequest request = new UpdateEvaluationJobRequest
             {
-                EvaluationJob = new EvaluationJob(),
-                UpdateMask = new wkt::FieldMask(),
+                EvaluationJob = new EvaluationJob
+                {
+                    EvaluationJobName = EvaluationJobName.FromProjectEvaluationJob("[PROJECT]", "[EVALUATION_JOB]"),
+                    Description = "description2cf9da67",
+                    State = EvaluationJob.Types.State.Paused,
+                    Schedule = "schedule59559879",
+                    ModelVersion = "model_versionc74dd723",
+                    EvaluationJobConfig = new EvaluationJobConfig
+                    {
+                        InputConfig = new InputConfig
+                        {
+                            DataType = DataType.Video,
+                            GcsSource = new GcsSource
+                            {
+                                InputUri = "input_uriec9462a7",
+                                MimeType = "mime_type606a0ffc",
+                            },
+                            AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                            ClassificationMetadata = new ClassificationMetadata
+                            {
+                                IsMultiLabel = false,
+                            },
+                            BigquerySource = new BigQuerySource
+                            {
+                                InputUri = "input_uriec9462a7",
+                            },
+                            TextMetadata = new TextMetadata
+                            {
+                                LanguageCode = "language_code2f6c7160",
+                            },
+                        },
+                        EvaluationConfig = new EvaluationConfig
+                        {
+                            BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                            {
+                                IouThreshold = -2.1410331E+17F,
+                            },
+                        },
+                        HumanAnnotationConfig = new HumanAnnotationConfig
+                        {
+                            Instruction = "instructionfa6ecc39",
+                            AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                            AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                            LabelGroup = "label_groupef150cd3",
+                            LanguageCode = "language_code2f6c7160",
+                            ReplicaCount = -2132170114,
+                            QuestionDuration = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            ContributorEmails =
+                            {
+                                "contributor_emailsa64beb83",
+                            },
+                            UserEmailAddress = "user_email_address36240c4e",
+                        },
+                        ImageClassificationConfig = new ImageClassificationConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            AllowMultiLabel = true,
+                            AnswerAggregationType = StringAggregationType.NoAggregation,
+                        },
+                        BoundingPolyConfig = new BoundingPolyConfig
+                        {
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            InstructionMessage = "instruction_messagea30fe952",
+                        },
+                        TextClassificationConfig = new TextClassificationConfig
+                        {
+                            AllowMultiLabel = true,
+                            AnnotationSpecSet = "annotation_spec_set5137ce89",
+                            SentimentConfig = new SentimentConfig
+                            {
+                                EnableLabelSentimentSelection = false,
+                            },
+                        },
+                        BigqueryImportKeys =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        ExampleCount = -1179891861,
+                        ExampleSamplePercentage = -4.868342680869164E+17,
+                        EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                        {
+                            Email = "email7cf5830c",
+                            MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                        },
+                    },
+                    AnnotationSpecSet = "annotation_spec_set5137ce89",
+                    LabelMissingGroundTruth = true,
+                    Attempts =
+                    {
+                        new Attempt
+                        {
+                            AttemptTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            PartialFailures =
+                            {
+                                new gr::Status
+                                {
+                                    Code = -1805175871,
+                                    Message = "message0231e778",
+                                    Details =
+                                    {
+                                        new wkt::Any
+                                        {
+                                            TypeUrl = "type_urlfde5623b",
+                                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             EvaluationJob expectedResponse = new EvaluationJob
             {
@@ -2268,11 +8228,125 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 State = EvaluationJob.Types.State.Paused,
                 Schedule = "schedule59559879",
                 ModelVersion = "model_versionc74dd723",
-                EvaluationJobConfig = new EvaluationJobConfig(),
+                EvaluationJobConfig = new EvaluationJobConfig
+                {
+                    InputConfig = new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                    EvaluationConfig = new EvaluationConfig
+                    {
+                        BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                        },
+                    },
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    BigqueryImportKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ExampleCount = -1179891861,
+                    ExampleSamplePercentage = -4.868342680869164E+17,
+                    EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                    {
+                        Email = "email7cf5830c",
+                        MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                    },
+                },
                 AnnotationSpecSet = "annotation_spec_set5137ce89",
                 LabelMissingGroundTruth = true,
-                Attempts = { new Attempt(), },
-                CreateTime = new wkt::Timestamp(),
+                Attempts =
+                {
+                    new Attempt
+                    {
+                        AttemptTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        PartialFailures =
+                        {
+                            new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EvaluationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -2299,11 +8373,125 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 State = EvaluationJob.Types.State.Paused,
                 Schedule = "schedule59559879",
                 ModelVersion = "model_versionc74dd723",
-                EvaluationJobConfig = new EvaluationJobConfig(),
+                EvaluationJobConfig = new EvaluationJobConfig
+                {
+                    InputConfig = new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                    EvaluationConfig = new EvaluationConfig
+                    {
+                        BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                        },
+                    },
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    BigqueryImportKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ExampleCount = -1179891861,
+                    ExampleSamplePercentage = -4.868342680869164E+17,
+                    EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                    {
+                        Email = "email7cf5830c",
+                        MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                    },
+                },
                 AnnotationSpecSet = "annotation_spec_set5137ce89",
                 LabelMissingGroundTruth = true,
-                Attempts = { new Attempt(), },
-                CreateTime = new wkt::Timestamp(),
+                Attempts =
+                {
+                    new Attempt
+                    {
+                        AttemptTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        PartialFailures =
+                        {
+                            new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -2328,11 +8516,125 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 State = EvaluationJob.Types.State.Paused,
                 Schedule = "schedule59559879",
                 ModelVersion = "model_versionc74dd723",
-                EvaluationJobConfig = new EvaluationJobConfig(),
+                EvaluationJobConfig = new EvaluationJobConfig
+                {
+                    InputConfig = new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                    EvaluationConfig = new EvaluationConfig
+                    {
+                        BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                        },
+                    },
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    BigqueryImportKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ExampleCount = -1179891861,
+                    ExampleSamplePercentage = -4.868342680869164E+17,
+                    EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                    {
+                        Email = "email7cf5830c",
+                        MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                    },
+                },
                 AnnotationSpecSet = "annotation_spec_set5137ce89",
                 LabelMissingGroundTruth = true,
-                Attempts = { new Attempt(), },
-                CreateTime = new wkt::Timestamp(),
+                Attempts =
+                {
+                    new Attempt
+                    {
+                        AttemptTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        PartialFailures =
+                        {
+                            new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EvaluationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -2359,11 +8661,125 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 State = EvaluationJob.Types.State.Paused,
                 Schedule = "schedule59559879",
                 ModelVersion = "model_versionc74dd723",
-                EvaluationJobConfig = new EvaluationJobConfig(),
+                EvaluationJobConfig = new EvaluationJobConfig
+                {
+                    InputConfig = new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                    EvaluationConfig = new EvaluationConfig
+                    {
+                        BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                        },
+                    },
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    BigqueryImportKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ExampleCount = -1179891861,
+                    ExampleSamplePercentage = -4.868342680869164E+17,
+                    EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                    {
+                        Email = "email7cf5830c",
+                        MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                    },
+                },
                 AnnotationSpecSet = "annotation_spec_set5137ce89",
                 LabelMissingGroundTruth = true,
-                Attempts = { new Attempt(), },
-                CreateTime = new wkt::Timestamp(),
+                Attempts =
+                {
+                    new Attempt
+                    {
+                        AttemptTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        PartialFailures =
+                        {
+                            new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -2388,11 +8804,125 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 State = EvaluationJob.Types.State.Paused,
                 Schedule = "schedule59559879",
                 ModelVersion = "model_versionc74dd723",
-                EvaluationJobConfig = new EvaluationJobConfig(),
+                EvaluationJobConfig = new EvaluationJobConfig
+                {
+                    InputConfig = new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                    EvaluationConfig = new EvaluationConfig
+                    {
+                        BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                        },
+                    },
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    BigqueryImportKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ExampleCount = -1179891861,
+                    ExampleSamplePercentage = -4.868342680869164E+17,
+                    EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                    {
+                        Email = "email7cf5830c",
+                        MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                    },
+                },
                 AnnotationSpecSet = "annotation_spec_set5137ce89",
                 LabelMissingGroundTruth = true,
-                Attempts = { new Attempt(), },
-                CreateTime = new wkt::Timestamp(),
+                Attempts =
+                {
+                    new Attempt
+                    {
+                        AttemptTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        PartialFailures =
+                        {
+                            new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EvaluationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -2419,11 +8949,125 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 State = EvaluationJob.Types.State.Paused,
                 Schedule = "schedule59559879",
                 ModelVersion = "model_versionc74dd723",
-                EvaluationJobConfig = new EvaluationJobConfig(),
+                EvaluationJobConfig = new EvaluationJobConfig
+                {
+                    InputConfig = new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                    EvaluationConfig = new EvaluationConfig
+                    {
+                        BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                        },
+                    },
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    BigqueryImportKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ExampleCount = -1179891861,
+                    ExampleSamplePercentage = -4.868342680869164E+17,
+                    EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                    {
+                        Email = "email7cf5830c",
+                        MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                    },
+                },
                 AnnotationSpecSet = "annotation_spec_set5137ce89",
                 LabelMissingGroundTruth = true,
-                Attempts = { new Attempt(), },
-                CreateTime = new wkt::Timestamp(),
+                Attempts =
+                {
+                    new Attempt
+                    {
+                        AttemptTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        PartialFailures =
+                        {
+                            new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetEvaluationJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
@@ -2448,11 +9092,125 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Tests
                 State = EvaluationJob.Types.State.Paused,
                 Schedule = "schedule59559879",
                 ModelVersion = "model_versionc74dd723",
-                EvaluationJobConfig = new EvaluationJobConfig(),
+                EvaluationJobConfig = new EvaluationJobConfig
+                {
+                    InputConfig = new InputConfig
+                    {
+                        DataType = DataType.Video,
+                        GcsSource = new GcsSource
+                        {
+                            InputUri = "input_uriec9462a7",
+                            MimeType = "mime_type606a0ffc",
+                        },
+                        AnnotationType = AnnotationType.ImageOrientedBoundingBoxAnnotation,
+                        ClassificationMetadata = new ClassificationMetadata
+                        {
+                            IsMultiLabel = false,
+                        },
+                        BigquerySource = new BigQuerySource
+                        {
+                            InputUri = "input_uriec9462a7",
+                        },
+                        TextMetadata = new TextMetadata
+                        {
+                            LanguageCode = "language_code2f6c7160",
+                        },
+                    },
+                    EvaluationConfig = new EvaluationConfig
+                    {
+                        BoundingBoxEvaluationOptions = new BoundingBoxEvaluationOptions
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                        },
+                    },
+                    HumanAnnotationConfig = new HumanAnnotationConfig
+                    {
+                        Instruction = "instructionfa6ecc39",
+                        AnnotatedDatasetDisplayName = "annotated_dataset_display_name6e5d1c98",
+                        AnnotatedDatasetDescription = "annotated_dataset_descriptionf03c4228",
+                        LabelGroup = "label_groupef150cd3",
+                        LanguageCode = "language_code2f6c7160",
+                        ReplicaCount = -2132170114,
+                        QuestionDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        ContributorEmails =
+                        {
+                            "contributor_emailsa64beb83",
+                        },
+                        UserEmailAddress = "user_email_address36240c4e",
+                    },
+                    ImageClassificationConfig = new ImageClassificationConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        AllowMultiLabel = true,
+                        AnswerAggregationType = StringAggregationType.NoAggregation,
+                    },
+                    BoundingPolyConfig = new BoundingPolyConfig
+                    {
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        InstructionMessage = "instruction_messagea30fe952",
+                    },
+                    TextClassificationConfig = new TextClassificationConfig
+                    {
+                        AllowMultiLabel = true,
+                        AnnotationSpecSet = "annotation_spec_set5137ce89",
+                        SentimentConfig = new SentimentConfig
+                        {
+                            EnableLabelSentimentSelection = false,
+                        },
+                    },
+                    BigqueryImportKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ExampleCount = -1179891861,
+                    ExampleSamplePercentage = -4.868342680869164E+17,
+                    EvaluationJobAlertConfig = new EvaluationJobAlertConfig
+                    {
+                        Email = "email7cf5830c",
+                        MinAcceptableMeanAveragePrecision = -2.8662230132080832E+17,
+                    },
+                },
                 AnnotationSpecSet = "annotation_spec_set5137ce89",
                 LabelMissingGroundTruth = true,
-                Attempts = { new Attempt(), },
-                CreateTime = new wkt::Timestamp(),
+                Attempts =
+                {
+                    new Attempt
+                    {
+                        AttemptTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        PartialFailures =
+                        {
+                            new gr::Status
+                            {
+                                Code = -1805175871,
+                                Message = "message0231e778",
+                                Details =
+                                {
+                                    new wkt::Any
+                                    {
+                                        TypeUrl = "type_urlfde5623b",
+                                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetEvaluationJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EvaluationJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataLabelingServiceClient client = new DataLabelingServiceClientImpl(mockGrpcClient.Object, null);
