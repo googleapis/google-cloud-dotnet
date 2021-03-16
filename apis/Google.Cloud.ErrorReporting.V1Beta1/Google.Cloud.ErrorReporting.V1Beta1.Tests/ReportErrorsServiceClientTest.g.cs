@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -34,7 +35,40 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {
                 ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Event = new ReportedErrorEvent(),
+                Event = new ReportedErrorEvent
+                {
+                    EventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceContext = new ServiceContext
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        ResourceType = "resource_typed0f06245",
+                    },
+                    Message = "message0231e778",
+                    Context = new ErrorContext
+                    {
+                        HttpRequest = new HttpRequestContext
+                        {
+                            Method = "methodca6a9fea",
+                            Url = "url424e2d57",
+                            UserAgent = "user_agent707c6483",
+                            Referrer = "referrer8c5fa7ce",
+                            ResponseStatusCode = -2124407137,
+                            RemoteIp = "remote_ip98f52726",
+                        },
+                        User = "userb1cb11ee",
+                        ReportLocation = new SourceLocation
+                        {
+                            FilePath = "file_path5a81fd97",
+                            LineNumber = -657761607,
+                            FunctionName = "function_nameed832fe8",
+                        },
+                    },
+                },
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
             mockGrpcClient.Setup(x => x.ReportErrorEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -51,7 +85,40 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {
                 ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Event = new ReportedErrorEvent(),
+                Event = new ReportedErrorEvent
+                {
+                    EventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceContext = new ServiceContext
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        ResourceType = "resource_typed0f06245",
+                    },
+                    Message = "message0231e778",
+                    Context = new ErrorContext
+                    {
+                        HttpRequest = new HttpRequestContext
+                        {
+                            Method = "methodca6a9fea",
+                            Url = "url424e2d57",
+                            UserAgent = "user_agent707c6483",
+                            Referrer = "referrer8c5fa7ce",
+                            ResponseStatusCode = -2124407137,
+                            RemoteIp = "remote_ip98f52726",
+                        },
+                        User = "userb1cb11ee",
+                        ReportLocation = new SourceLocation
+                        {
+                            FilePath = "file_path5a81fd97",
+                            LineNumber = -657761607,
+                            FunctionName = "function_nameed832fe8",
+                        },
+                    },
+                },
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
             mockGrpcClient.Setup(x => x.ReportErrorEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReportErrorEventResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -70,7 +137,40 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {
                 ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Event = new ReportedErrorEvent(),
+                Event = new ReportedErrorEvent
+                {
+                    EventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceContext = new ServiceContext
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        ResourceType = "resource_typed0f06245",
+                    },
+                    Message = "message0231e778",
+                    Context = new ErrorContext
+                    {
+                        HttpRequest = new HttpRequestContext
+                        {
+                            Method = "methodca6a9fea",
+                            Url = "url424e2d57",
+                            UserAgent = "user_agent707c6483",
+                            Referrer = "referrer8c5fa7ce",
+                            ResponseStatusCode = -2124407137,
+                            RemoteIp = "remote_ip98f52726",
+                        },
+                        User = "userb1cb11ee",
+                        ReportLocation = new SourceLocation
+                        {
+                            FilePath = "file_path5a81fd97",
+                            LineNumber = -657761607,
+                            FunctionName = "function_nameed832fe8",
+                        },
+                    },
+                },
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
             mockGrpcClient.Setup(x => x.ReportErrorEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -87,7 +187,40 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {
                 ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Event = new ReportedErrorEvent(),
+                Event = new ReportedErrorEvent
+                {
+                    EventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceContext = new ServiceContext
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        ResourceType = "resource_typed0f06245",
+                    },
+                    Message = "message0231e778",
+                    Context = new ErrorContext
+                    {
+                        HttpRequest = new HttpRequestContext
+                        {
+                            Method = "methodca6a9fea",
+                            Url = "url424e2d57",
+                            UserAgent = "user_agent707c6483",
+                            Referrer = "referrer8c5fa7ce",
+                            ResponseStatusCode = -2124407137,
+                            RemoteIp = "remote_ip98f52726",
+                        },
+                        User = "userb1cb11ee",
+                        ReportLocation = new SourceLocation
+                        {
+                            FilePath = "file_path5a81fd97",
+                            LineNumber = -657761607,
+                            FunctionName = "function_nameed832fe8",
+                        },
+                    },
+                },
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
             mockGrpcClient.Setup(x => x.ReportErrorEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReportErrorEventResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -106,7 +239,40 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {
                 ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Event = new ReportedErrorEvent(),
+                Event = new ReportedErrorEvent
+                {
+                    EventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceContext = new ServiceContext
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        ResourceType = "resource_typed0f06245",
+                    },
+                    Message = "message0231e778",
+                    Context = new ErrorContext
+                    {
+                        HttpRequest = new HttpRequestContext
+                        {
+                            Method = "methodca6a9fea",
+                            Url = "url424e2d57",
+                            UserAgent = "user_agent707c6483",
+                            Referrer = "referrer8c5fa7ce",
+                            ResponseStatusCode = -2124407137,
+                            RemoteIp = "remote_ip98f52726",
+                        },
+                        User = "userb1cb11ee",
+                        ReportLocation = new SourceLocation
+                        {
+                            FilePath = "file_path5a81fd97",
+                            LineNumber = -657761607,
+                            FunctionName = "function_nameed832fe8",
+                        },
+                    },
+                },
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
             mockGrpcClient.Setup(x => x.ReportErrorEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -123,7 +289,40 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {
                 ProjectNameAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Event = new ReportedErrorEvent(),
+                Event = new ReportedErrorEvent
+                {
+                    EventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ServiceContext = new ServiceContext
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        ResourceType = "resource_typed0f06245",
+                    },
+                    Message = "message0231e778",
+                    Context = new ErrorContext
+                    {
+                        HttpRequest = new HttpRequestContext
+                        {
+                            Method = "methodca6a9fea",
+                            Url = "url424e2d57",
+                            UserAgent = "user_agent707c6483",
+                            Referrer = "referrer8c5fa7ce",
+                            ResponseStatusCode = -2124407137,
+                            RemoteIp = "remote_ip98f52726",
+                        },
+                        User = "userb1cb11ee",
+                        ReportLocation = new SourceLocation
+                        {
+                            FilePath = "file_path5a81fd97",
+                            LineNumber = -657761607,
+                            FunctionName = "function_nameed832fe8",
+                        },
+                    },
+                },
             };
             ReportErrorEventResponse expectedResponse = new ReportErrorEventResponse { };
             mockGrpcClient.Setup(x => x.ReportErrorEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReportErrorEventResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));

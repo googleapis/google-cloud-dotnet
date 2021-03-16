@@ -40,7 +40,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
-                    new TrackingIssue(),
+                    new TrackingIssue { Url = "url424e2d57", },
                 },
                 ResolutionStatus = ResolutionStatus.Muted,
             };
@@ -65,7 +65,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
-                    new TrackingIssue(),
+                    new TrackingIssue { Url = "url424e2d57", },
                 },
                 ResolutionStatus = ResolutionStatus.Muted,
             };
@@ -92,7 +92,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
-                    new TrackingIssue(),
+                    new TrackingIssue { Url = "url424e2d57", },
                 },
                 ResolutionStatus = ResolutionStatus.Muted,
             };
@@ -117,7 +117,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
-                    new TrackingIssue(),
+                    new TrackingIssue { Url = "url424e2d57", },
                 },
                 ResolutionStatus = ResolutionStatus.Muted,
             };
@@ -144,7 +144,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
-                    new TrackingIssue(),
+                    new TrackingIssue { Url = "url424e2d57", },
                 },
                 ResolutionStatus = ResolutionStatus.Muted,
             };
@@ -169,7 +169,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
-                    new TrackingIssue(),
+                    new TrackingIssue { Url = "url424e2d57", },
                 },
                 ResolutionStatus = ResolutionStatus.Muted,
             };
@@ -188,7 +188,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
             UpdateGroupRequest request = new UpdateGroupRequest
             {
-                Group = new ErrorGroup(),
+                Group = new ErrorGroup
+                {
+                    ErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                    GroupId = "group_id4f9a930e",
+                    TrackingIssues =
+                    {
+                        new TrackingIssue { Url = "url424e2d57", },
+                    },
+                    ResolutionStatus = ResolutionStatus.Muted,
+                },
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
@@ -196,7 +205,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
-                    new TrackingIssue(),
+                    new TrackingIssue { Url = "url424e2d57", },
                 },
                 ResolutionStatus = ResolutionStatus.Muted,
             };
@@ -213,7 +222,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
             UpdateGroupRequest request = new UpdateGroupRequest
             {
-                Group = new ErrorGroup(),
+                Group = new ErrorGroup
+                {
+                    ErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                    GroupId = "group_id4f9a930e",
+                    TrackingIssues =
+                    {
+                        new TrackingIssue { Url = "url424e2d57", },
+                    },
+                    ResolutionStatus = ResolutionStatus.Muted,
+                },
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
@@ -221,7 +239,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
-                    new TrackingIssue(),
+                    new TrackingIssue { Url = "url424e2d57", },
                 },
                 ResolutionStatus = ResolutionStatus.Muted,
             };
@@ -240,7 +258,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
             UpdateGroupRequest request = new UpdateGroupRequest
             {
-                Group = new ErrorGroup(),
+                Group = new ErrorGroup
+                {
+                    ErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                    GroupId = "group_id4f9a930e",
+                    TrackingIssues =
+                    {
+                        new TrackingIssue { Url = "url424e2d57", },
+                    },
+                    ResolutionStatus = ResolutionStatus.Muted,
+                },
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
@@ -248,7 +275,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
-                    new TrackingIssue(),
+                    new TrackingIssue { Url = "url424e2d57", },
                 },
                 ResolutionStatus = ResolutionStatus.Muted,
             };
@@ -265,7 +292,16 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
             moq::Mock<ErrorGroupService.ErrorGroupServiceClient> mockGrpcClient = new moq::Mock<ErrorGroupService.ErrorGroupServiceClient>(moq::MockBehavior.Strict);
             UpdateGroupRequest request = new UpdateGroupRequest
             {
-                Group = new ErrorGroup(),
+                Group = new ErrorGroup
+                {
+                    ErrorGroupName = ErrorGroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
+                    GroupId = "group_id4f9a930e",
+                    TrackingIssues =
+                    {
+                        new TrackingIssue { Url = "url424e2d57", },
+                    },
+                    ResolutionStatus = ResolutionStatus.Muted,
+                },
             };
             ErrorGroup expectedResponse = new ErrorGroup
             {
@@ -273,7 +309,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 GroupId = "group_id4f9a930e",
                 TrackingIssues =
                 {
-                    new TrackingIssue(),
+                    new TrackingIssue { Url = "url424e2d57", },
                 },
                 ResolutionStatus = ResolutionStatus.Muted,
             };
