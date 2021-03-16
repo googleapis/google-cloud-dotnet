@@ -41,17 +41,40 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 PolicyName = PolicyName.FromProject("[PROJECT]"),
                 AdmissionWhitelistPatterns =
                 {
-                    new AdmissionWhitelistPattern(),
+                    new AdmissionWhitelistPattern
+                    {
+                        NamePattern = "name_patterne2225868",
+                    },
                 },
                 ClusterAdmissionRules =
                 {
                     {
                         "key8a0b6e3c",
-                        new AdmissionRule()
+                        new AdmissionRule
+                        {
+                            EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                            RequireAttestationsBy =
+                            {
+                                "require_attestations_by9d03491a",
+                            },
+                            EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                        }
                     },
                 },
-                DefaultAdmissionRule = new AdmissionRule(),
-                UpdateTime = new wkt::Timestamp(),
+                DefaultAdmissionRule = new AdmissionRule
+                {
+                    EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                    RequireAttestationsBy =
+                    {
+                        "require_attestations_by9d03491a",
+                    },
+                    EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
             };
@@ -75,17 +98,40 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 PolicyName = PolicyName.FromProject("[PROJECT]"),
                 AdmissionWhitelistPatterns =
                 {
-                    new AdmissionWhitelistPattern(),
+                    new AdmissionWhitelistPattern
+                    {
+                        NamePattern = "name_patterne2225868",
+                    },
                 },
                 ClusterAdmissionRules =
                 {
                     {
                         "key8a0b6e3c",
-                        new AdmissionRule()
+                        new AdmissionRule
+                        {
+                            EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                            RequireAttestationsBy =
+                            {
+                                "require_attestations_by9d03491a",
+                            },
+                            EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                        }
                     },
                 },
-                DefaultAdmissionRule = new AdmissionRule(),
-                UpdateTime = new wkt::Timestamp(),
+                DefaultAdmissionRule = new AdmissionRule
+                {
+                    EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                    RequireAttestationsBy =
+                    {
+                        "require_attestations_by9d03491a",
+                    },
+                    EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
             };
@@ -111,17 +157,40 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 PolicyName = PolicyName.FromProject("[PROJECT]"),
                 AdmissionWhitelistPatterns =
                 {
-                    new AdmissionWhitelistPattern(),
+                    new AdmissionWhitelistPattern
+                    {
+                        NamePattern = "name_patterne2225868",
+                    },
                 },
                 ClusterAdmissionRules =
                 {
                     {
                         "key8a0b6e3c",
-                        new AdmissionRule()
+                        new AdmissionRule
+                        {
+                            EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                            RequireAttestationsBy =
+                            {
+                                "require_attestations_by9d03491a",
+                            },
+                            EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                        }
                     },
                 },
-                DefaultAdmissionRule = new AdmissionRule(),
-                UpdateTime = new wkt::Timestamp(),
+                DefaultAdmissionRule = new AdmissionRule
+                {
+                    EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                    RequireAttestationsBy =
+                    {
+                        "require_attestations_by9d03491a",
+                    },
+                    EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
             };
@@ -145,17 +214,40 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 PolicyName = PolicyName.FromProject("[PROJECT]"),
                 AdmissionWhitelistPatterns =
                 {
-                    new AdmissionWhitelistPattern(),
+                    new AdmissionWhitelistPattern
+                    {
+                        NamePattern = "name_patterne2225868",
+                    },
                 },
                 ClusterAdmissionRules =
                 {
                     {
                         "key8a0b6e3c",
-                        new AdmissionRule()
+                        new AdmissionRule
+                        {
+                            EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                            RequireAttestationsBy =
+                            {
+                                "require_attestations_by9d03491a",
+                            },
+                            EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                        }
                     },
                 },
-                DefaultAdmissionRule = new AdmissionRule(),
-                UpdateTime = new wkt::Timestamp(),
+                DefaultAdmissionRule = new AdmissionRule
+                {
+                    EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                    RequireAttestationsBy =
+                    {
+                        "require_attestations_by9d03491a",
+                    },
+                    EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
             };
@@ -181,17 +273,40 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 PolicyName = PolicyName.FromProject("[PROJECT]"),
                 AdmissionWhitelistPatterns =
                 {
-                    new AdmissionWhitelistPattern(),
+                    new AdmissionWhitelistPattern
+                    {
+                        NamePattern = "name_patterne2225868",
+                    },
                 },
                 ClusterAdmissionRules =
                 {
                     {
                         "key8a0b6e3c",
-                        new AdmissionRule()
+                        new AdmissionRule
+                        {
+                            EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                            RequireAttestationsBy =
+                            {
+                                "require_attestations_by9d03491a",
+                            },
+                            EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                        }
                     },
                 },
-                DefaultAdmissionRule = new AdmissionRule(),
-                UpdateTime = new wkt::Timestamp(),
+                DefaultAdmissionRule = new AdmissionRule
+                {
+                    EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                    RequireAttestationsBy =
+                    {
+                        "require_attestations_by9d03491a",
+                    },
+                    EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
             };
@@ -215,17 +330,40 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 PolicyName = PolicyName.FromProject("[PROJECT]"),
                 AdmissionWhitelistPatterns =
                 {
-                    new AdmissionWhitelistPattern(),
+                    new AdmissionWhitelistPattern
+                    {
+                        NamePattern = "name_patterne2225868",
+                    },
                 },
                 ClusterAdmissionRules =
                 {
                     {
                         "key8a0b6e3c",
-                        new AdmissionRule()
+                        new AdmissionRule
+                        {
+                            EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                            RequireAttestationsBy =
+                            {
+                                "require_attestations_by9d03491a",
+                            },
+                            EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                        }
                     },
                 },
-                DefaultAdmissionRule = new AdmissionRule(),
-                UpdateTime = new wkt::Timestamp(),
+                DefaultAdmissionRule = new AdmissionRule
+                {
+                    EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                    RequireAttestationsBy =
+                    {
+                        "require_attestations_by9d03491a",
+                    },
+                    EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
             };
@@ -244,24 +382,88 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             moq::Mock<BinauthzManagementServiceV1Beta1.BinauthzManagementServiceV1Beta1Client> mockGrpcClient = new moq::Mock<BinauthzManagementServiceV1Beta1.BinauthzManagementServiceV1Beta1Client>(moq::MockBehavior.Strict);
             UpdatePolicyRequest request = new UpdatePolicyRequest
             {
-                Policy = new Policy(),
+                Policy = new Policy
+                {
+                    PolicyName = PolicyName.FromProject("[PROJECT]"),
+                    AdmissionWhitelistPatterns =
+                    {
+                        new AdmissionWhitelistPattern
+                        {
+                            NamePattern = "name_patterne2225868",
+                        },
+                    },
+                    ClusterAdmissionRules =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new AdmissionRule
+                            {
+                                EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                                RequireAttestationsBy =
+                                {
+                                    "require_attestations_by9d03491a",
+                                },
+                                EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                            }
+                        },
+                    },
+                    DefaultAdmissionRule = new AdmissionRule
+                    {
+                        EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                        RequireAttestationsBy =
+                        {
+                            "require_attestations_by9d03491a",
+                        },
+                        EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Description = "description2cf9da67",
+                    GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
+                },
             };
             Policy expectedResponse = new Policy
             {
                 PolicyName = PolicyName.FromProject("[PROJECT]"),
                 AdmissionWhitelistPatterns =
                 {
-                    new AdmissionWhitelistPattern(),
+                    new AdmissionWhitelistPattern
+                    {
+                        NamePattern = "name_patterne2225868",
+                    },
                 },
                 ClusterAdmissionRules =
                 {
                     {
                         "key8a0b6e3c",
-                        new AdmissionRule()
+                        new AdmissionRule
+                        {
+                            EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                            RequireAttestationsBy =
+                            {
+                                "require_attestations_by9d03491a",
+                            },
+                            EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                        }
                     },
                 },
-                DefaultAdmissionRule = new AdmissionRule(),
-                UpdateTime = new wkt::Timestamp(),
+                DefaultAdmissionRule = new AdmissionRule
+                {
+                    EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                    RequireAttestationsBy =
+                    {
+                        "require_attestations_by9d03491a",
+                    },
+                    EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
             };
@@ -278,24 +480,88 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             moq::Mock<BinauthzManagementServiceV1Beta1.BinauthzManagementServiceV1Beta1Client> mockGrpcClient = new moq::Mock<BinauthzManagementServiceV1Beta1.BinauthzManagementServiceV1Beta1Client>(moq::MockBehavior.Strict);
             UpdatePolicyRequest request = new UpdatePolicyRequest
             {
-                Policy = new Policy(),
+                Policy = new Policy
+                {
+                    PolicyName = PolicyName.FromProject("[PROJECT]"),
+                    AdmissionWhitelistPatterns =
+                    {
+                        new AdmissionWhitelistPattern
+                        {
+                            NamePattern = "name_patterne2225868",
+                        },
+                    },
+                    ClusterAdmissionRules =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new AdmissionRule
+                            {
+                                EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                                RequireAttestationsBy =
+                                {
+                                    "require_attestations_by9d03491a",
+                                },
+                                EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                            }
+                        },
+                    },
+                    DefaultAdmissionRule = new AdmissionRule
+                    {
+                        EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                        RequireAttestationsBy =
+                        {
+                            "require_attestations_by9d03491a",
+                        },
+                        EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Description = "description2cf9da67",
+                    GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
+                },
             };
             Policy expectedResponse = new Policy
             {
                 PolicyName = PolicyName.FromProject("[PROJECT]"),
                 AdmissionWhitelistPatterns =
                 {
-                    new AdmissionWhitelistPattern(),
+                    new AdmissionWhitelistPattern
+                    {
+                        NamePattern = "name_patterne2225868",
+                    },
                 },
                 ClusterAdmissionRules =
                 {
                     {
                         "key8a0b6e3c",
-                        new AdmissionRule()
+                        new AdmissionRule
+                        {
+                            EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                            RequireAttestationsBy =
+                            {
+                                "require_attestations_by9d03491a",
+                            },
+                            EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                        }
                     },
                 },
-                DefaultAdmissionRule = new AdmissionRule(),
-                UpdateTime = new wkt::Timestamp(),
+                DefaultAdmissionRule = new AdmissionRule
+                {
+                    EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                    RequireAttestationsBy =
+                    {
+                        "require_attestations_by9d03491a",
+                    },
+                    EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
             };
@@ -314,24 +580,88 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             moq::Mock<BinauthzManagementServiceV1Beta1.BinauthzManagementServiceV1Beta1Client> mockGrpcClient = new moq::Mock<BinauthzManagementServiceV1Beta1.BinauthzManagementServiceV1Beta1Client>(moq::MockBehavior.Strict);
             UpdatePolicyRequest request = new UpdatePolicyRequest
             {
-                Policy = new Policy(),
+                Policy = new Policy
+                {
+                    PolicyName = PolicyName.FromProject("[PROJECT]"),
+                    AdmissionWhitelistPatterns =
+                    {
+                        new AdmissionWhitelistPattern
+                        {
+                            NamePattern = "name_patterne2225868",
+                        },
+                    },
+                    ClusterAdmissionRules =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new AdmissionRule
+                            {
+                                EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                                RequireAttestationsBy =
+                                {
+                                    "require_attestations_by9d03491a",
+                                },
+                                EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                            }
+                        },
+                    },
+                    DefaultAdmissionRule = new AdmissionRule
+                    {
+                        EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                        RequireAttestationsBy =
+                        {
+                            "require_attestations_by9d03491a",
+                        },
+                        EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Description = "description2cf9da67",
+                    GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
+                },
             };
             Policy expectedResponse = new Policy
             {
                 PolicyName = PolicyName.FromProject("[PROJECT]"),
                 AdmissionWhitelistPatterns =
                 {
-                    new AdmissionWhitelistPattern(),
+                    new AdmissionWhitelistPattern
+                    {
+                        NamePattern = "name_patterne2225868",
+                    },
                 },
                 ClusterAdmissionRules =
                 {
                     {
                         "key8a0b6e3c",
-                        new AdmissionRule()
+                        new AdmissionRule
+                        {
+                            EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                            RequireAttestationsBy =
+                            {
+                                "require_attestations_by9d03491a",
+                            },
+                            EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                        }
                     },
                 },
-                DefaultAdmissionRule = new AdmissionRule(),
-                UpdateTime = new wkt::Timestamp(),
+                DefaultAdmissionRule = new AdmissionRule
+                {
+                    EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                    RequireAttestationsBy =
+                    {
+                        "require_attestations_by9d03491a",
+                    },
+                    EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
             };
@@ -348,24 +678,88 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             moq::Mock<BinauthzManagementServiceV1Beta1.BinauthzManagementServiceV1Beta1Client> mockGrpcClient = new moq::Mock<BinauthzManagementServiceV1Beta1.BinauthzManagementServiceV1Beta1Client>(moq::MockBehavior.Strict);
             UpdatePolicyRequest request = new UpdatePolicyRequest
             {
-                Policy = new Policy(),
+                Policy = new Policy
+                {
+                    PolicyName = PolicyName.FromProject("[PROJECT]"),
+                    AdmissionWhitelistPatterns =
+                    {
+                        new AdmissionWhitelistPattern
+                        {
+                            NamePattern = "name_patterne2225868",
+                        },
+                    },
+                    ClusterAdmissionRules =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new AdmissionRule
+                            {
+                                EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                                RequireAttestationsBy =
+                                {
+                                    "require_attestations_by9d03491a",
+                                },
+                                EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                            }
+                        },
+                    },
+                    DefaultAdmissionRule = new AdmissionRule
+                    {
+                        EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                        RequireAttestationsBy =
+                        {
+                            "require_attestations_by9d03491a",
+                        },
+                        EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Description = "description2cf9da67",
+                    GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
+                },
             };
             Policy expectedResponse = new Policy
             {
                 PolicyName = PolicyName.FromProject("[PROJECT]"),
                 AdmissionWhitelistPatterns =
                 {
-                    new AdmissionWhitelistPattern(),
+                    new AdmissionWhitelistPattern
+                    {
+                        NamePattern = "name_patterne2225868",
+                    },
                 },
                 ClusterAdmissionRules =
                 {
                     {
                         "key8a0b6e3c",
-                        new AdmissionRule()
+                        new AdmissionRule
+                        {
+                            EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                            RequireAttestationsBy =
+                            {
+                                "require_attestations_by9d03491a",
+                            },
+                            EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                        }
                     },
                 },
-                DefaultAdmissionRule = new AdmissionRule(),
-                UpdateTime = new wkt::Timestamp(),
+                DefaultAdmissionRule = new AdmissionRule
+                {
+                    EvaluationMode = AdmissionRule.Types.EvaluationMode.AlwaysAllow,
+                    RequireAttestationsBy =
+                    {
+                        "require_attestations_by9d03491a",
+                    },
+                    EnforcementMode = AdmissionRule.Types.EnforcementMode.Unspecified,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
             };
@@ -386,13 +780,63 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 AttestorId = "attestor_id76a3ccd6",
-                Attestor = new Attestor(),
+                Attestor = new Attestor
+                {
+                    AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
+                    UserOwnedDrydockNote = new UserOwnedDrydockNote
+                    {
+                        NoteReference = "note_reference2bf78795",
+                        PublicKeys =
+                        {
+                            new AttestorPublicKey
+                            {
+                                Comment = "comment63cdd406",
+                                Id = "id74b70bb8",
+                                AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                                PkixPublicKey = new PkixPublicKey
+                                {
+                                    PublicKeyPem = "public_key_pemfcf371ef",
+                                    SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                                },
+                            },
+                        },
+                        DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Description = "description2cf9da67",
+                },
             };
             Attestor expectedResponse = new Attestor
             {
                 AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
-                UserOwnedDrydockNote = new UserOwnedDrydockNote(),
-                UpdateTime = new wkt::Timestamp(),
+                UserOwnedDrydockNote = new UserOwnedDrydockNote
+                {
+                    NoteReference = "note_reference2bf78795",
+                    PublicKeys =
+                    {
+                        new AttestorPublicKey
+                        {
+                            Comment = "comment63cdd406",
+                            Id = "id74b70bb8",
+                            AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                            PkixPublicKey = new PkixPublicKey
+                            {
+                                PublicKeyPem = "public_key_pemfcf371ef",
+                                SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                            },
+                        },
+                    },
+                    DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.CreateAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -410,13 +854,63 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 AttestorId = "attestor_id76a3ccd6",
-                Attestor = new Attestor(),
+                Attestor = new Attestor
+                {
+                    AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
+                    UserOwnedDrydockNote = new UserOwnedDrydockNote
+                    {
+                        NoteReference = "note_reference2bf78795",
+                        PublicKeys =
+                        {
+                            new AttestorPublicKey
+                            {
+                                Comment = "comment63cdd406",
+                                Id = "id74b70bb8",
+                                AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                                PkixPublicKey = new PkixPublicKey
+                                {
+                                    PublicKeyPem = "public_key_pemfcf371ef",
+                                    SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                                },
+                            },
+                        },
+                        DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Description = "description2cf9da67",
+                },
             };
             Attestor expectedResponse = new Attestor
             {
                 AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
-                UserOwnedDrydockNote = new UserOwnedDrydockNote(),
-                UpdateTime = new wkt::Timestamp(),
+                UserOwnedDrydockNote = new UserOwnedDrydockNote
+                {
+                    NoteReference = "note_reference2bf78795",
+                    PublicKeys =
+                    {
+                        new AttestorPublicKey
+                        {
+                            Comment = "comment63cdd406",
+                            Id = "id74b70bb8",
+                            AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                            PkixPublicKey = new PkixPublicKey
+                            {
+                                PublicKeyPem = "public_key_pemfcf371ef",
+                                SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                            },
+                        },
+                    },
+                    DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.CreateAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Attestor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -436,13 +930,63 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 AttestorId = "attestor_id76a3ccd6",
-                Attestor = new Attestor(),
+                Attestor = new Attestor
+                {
+                    AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
+                    UserOwnedDrydockNote = new UserOwnedDrydockNote
+                    {
+                        NoteReference = "note_reference2bf78795",
+                        PublicKeys =
+                        {
+                            new AttestorPublicKey
+                            {
+                                Comment = "comment63cdd406",
+                                Id = "id74b70bb8",
+                                AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                                PkixPublicKey = new PkixPublicKey
+                                {
+                                    PublicKeyPem = "public_key_pemfcf371ef",
+                                    SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                                },
+                            },
+                        },
+                        DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Description = "description2cf9da67",
+                },
             };
             Attestor expectedResponse = new Attestor
             {
                 AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
-                UserOwnedDrydockNote = new UserOwnedDrydockNote(),
-                UpdateTime = new wkt::Timestamp(),
+                UserOwnedDrydockNote = new UserOwnedDrydockNote
+                {
+                    NoteReference = "note_reference2bf78795",
+                    PublicKeys =
+                    {
+                        new AttestorPublicKey
+                        {
+                            Comment = "comment63cdd406",
+                            Id = "id74b70bb8",
+                            AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                            PkixPublicKey = new PkixPublicKey
+                            {
+                                PublicKeyPem = "public_key_pemfcf371ef",
+                                SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                            },
+                        },
+                    },
+                    DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.CreateAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -460,13 +1004,63 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 AttestorId = "attestor_id76a3ccd6",
-                Attestor = new Attestor(),
+                Attestor = new Attestor
+                {
+                    AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
+                    UserOwnedDrydockNote = new UserOwnedDrydockNote
+                    {
+                        NoteReference = "note_reference2bf78795",
+                        PublicKeys =
+                        {
+                            new AttestorPublicKey
+                            {
+                                Comment = "comment63cdd406",
+                                Id = "id74b70bb8",
+                                AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                                PkixPublicKey = new PkixPublicKey
+                                {
+                                    PublicKeyPem = "public_key_pemfcf371ef",
+                                    SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                                },
+                            },
+                        },
+                        DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Description = "description2cf9da67",
+                },
             };
             Attestor expectedResponse = new Attestor
             {
                 AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
-                UserOwnedDrydockNote = new UserOwnedDrydockNote(),
-                UpdateTime = new wkt::Timestamp(),
+                UserOwnedDrydockNote = new UserOwnedDrydockNote
+                {
+                    NoteReference = "note_reference2bf78795",
+                    PublicKeys =
+                    {
+                        new AttestorPublicKey
+                        {
+                            Comment = "comment63cdd406",
+                            Id = "id74b70bb8",
+                            AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                            PkixPublicKey = new PkixPublicKey
+                            {
+                                PublicKeyPem = "public_key_pemfcf371ef",
+                                SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                            },
+                        },
+                    },
+                    DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.CreateAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Attestor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -486,13 +1080,63 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 AttestorId = "attestor_id76a3ccd6",
-                Attestor = new Attestor(),
+                Attestor = new Attestor
+                {
+                    AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
+                    UserOwnedDrydockNote = new UserOwnedDrydockNote
+                    {
+                        NoteReference = "note_reference2bf78795",
+                        PublicKeys =
+                        {
+                            new AttestorPublicKey
+                            {
+                                Comment = "comment63cdd406",
+                                Id = "id74b70bb8",
+                                AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                                PkixPublicKey = new PkixPublicKey
+                                {
+                                    PublicKeyPem = "public_key_pemfcf371ef",
+                                    SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                                },
+                            },
+                        },
+                        DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Description = "description2cf9da67",
+                },
             };
             Attestor expectedResponse = new Attestor
             {
                 AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
-                UserOwnedDrydockNote = new UserOwnedDrydockNote(),
-                UpdateTime = new wkt::Timestamp(),
+                UserOwnedDrydockNote = new UserOwnedDrydockNote
+                {
+                    NoteReference = "note_reference2bf78795",
+                    PublicKeys =
+                    {
+                        new AttestorPublicKey
+                        {
+                            Comment = "comment63cdd406",
+                            Id = "id74b70bb8",
+                            AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                            PkixPublicKey = new PkixPublicKey
+                            {
+                                PublicKeyPem = "public_key_pemfcf371ef",
+                                SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                            },
+                        },
+                    },
+                    DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.CreateAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -510,13 +1154,63 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 AttestorId = "attestor_id76a3ccd6",
-                Attestor = new Attestor(),
+                Attestor = new Attestor
+                {
+                    AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
+                    UserOwnedDrydockNote = new UserOwnedDrydockNote
+                    {
+                        NoteReference = "note_reference2bf78795",
+                        PublicKeys =
+                        {
+                            new AttestorPublicKey
+                            {
+                                Comment = "comment63cdd406",
+                                Id = "id74b70bb8",
+                                AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                                PkixPublicKey = new PkixPublicKey
+                                {
+                                    PublicKeyPem = "public_key_pemfcf371ef",
+                                    SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                                },
+                            },
+                        },
+                        DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Description = "description2cf9da67",
+                },
             };
             Attestor expectedResponse = new Attestor
             {
                 AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
-                UserOwnedDrydockNote = new UserOwnedDrydockNote(),
-                UpdateTime = new wkt::Timestamp(),
+                UserOwnedDrydockNote = new UserOwnedDrydockNote
+                {
+                    NoteReference = "note_reference2bf78795",
+                    PublicKeys =
+                    {
+                        new AttestorPublicKey
+                        {
+                            Comment = "comment63cdd406",
+                            Id = "id74b70bb8",
+                            AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                            PkixPublicKey = new PkixPublicKey
+                            {
+                                PublicKeyPem = "public_key_pemfcf371ef",
+                                SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                            },
+                        },
+                    },
+                    DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.CreateAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Attestor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -539,8 +1233,30 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             Attestor expectedResponse = new Attestor
             {
                 AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
-                UserOwnedDrydockNote = new UserOwnedDrydockNote(),
-                UpdateTime = new wkt::Timestamp(),
+                UserOwnedDrydockNote = new UserOwnedDrydockNote
+                {
+                    NoteReference = "note_reference2bf78795",
+                    PublicKeys =
+                    {
+                        new AttestorPublicKey
+                        {
+                            Comment = "comment63cdd406",
+                            Id = "id74b70bb8",
+                            AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                            PkixPublicKey = new PkixPublicKey
+                            {
+                                PublicKeyPem = "public_key_pemfcf371ef",
+                                SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                            },
+                        },
+                    },
+                    DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -561,8 +1277,30 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             Attestor expectedResponse = new Attestor
             {
                 AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
-                UserOwnedDrydockNote = new UserOwnedDrydockNote(),
-                UpdateTime = new wkt::Timestamp(),
+                UserOwnedDrydockNote = new UserOwnedDrydockNote
+                {
+                    NoteReference = "note_reference2bf78795",
+                    PublicKeys =
+                    {
+                        new AttestorPublicKey
+                        {
+                            Comment = "comment63cdd406",
+                            Id = "id74b70bb8",
+                            AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                            PkixPublicKey = new PkixPublicKey
+                            {
+                                PublicKeyPem = "public_key_pemfcf371ef",
+                                SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                            },
+                        },
+                    },
+                    DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Attestor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -585,8 +1323,30 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             Attestor expectedResponse = new Attestor
             {
                 AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
-                UserOwnedDrydockNote = new UserOwnedDrydockNote(),
-                UpdateTime = new wkt::Timestamp(),
+                UserOwnedDrydockNote = new UserOwnedDrydockNote
+                {
+                    NoteReference = "note_reference2bf78795",
+                    PublicKeys =
+                    {
+                        new AttestorPublicKey
+                        {
+                            Comment = "comment63cdd406",
+                            Id = "id74b70bb8",
+                            AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                            PkixPublicKey = new PkixPublicKey
+                            {
+                                PublicKeyPem = "public_key_pemfcf371ef",
+                                SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                            },
+                        },
+                    },
+                    DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -607,8 +1367,30 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             Attestor expectedResponse = new Attestor
             {
                 AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
-                UserOwnedDrydockNote = new UserOwnedDrydockNote(),
-                UpdateTime = new wkt::Timestamp(),
+                UserOwnedDrydockNote = new UserOwnedDrydockNote
+                {
+                    NoteReference = "note_reference2bf78795",
+                    PublicKeys =
+                    {
+                        new AttestorPublicKey
+                        {
+                            Comment = "comment63cdd406",
+                            Id = "id74b70bb8",
+                            AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                            PkixPublicKey = new PkixPublicKey
+                            {
+                                PublicKeyPem = "public_key_pemfcf371ef",
+                                SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                            },
+                        },
+                    },
+                    DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Attestor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -631,8 +1413,30 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             Attestor expectedResponse = new Attestor
             {
                 AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
-                UserOwnedDrydockNote = new UserOwnedDrydockNote(),
-                UpdateTime = new wkt::Timestamp(),
+                UserOwnedDrydockNote = new UserOwnedDrydockNote
+                {
+                    NoteReference = "note_reference2bf78795",
+                    PublicKeys =
+                    {
+                        new AttestorPublicKey
+                        {
+                            Comment = "comment63cdd406",
+                            Id = "id74b70bb8",
+                            AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                            PkixPublicKey = new PkixPublicKey
+                            {
+                                PublicKeyPem = "public_key_pemfcf371ef",
+                                SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                            },
+                        },
+                    },
+                    DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -653,8 +1457,30 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             Attestor expectedResponse = new Attestor
             {
                 AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
-                UserOwnedDrydockNote = new UserOwnedDrydockNote(),
-                UpdateTime = new wkt::Timestamp(),
+                UserOwnedDrydockNote = new UserOwnedDrydockNote
+                {
+                    NoteReference = "note_reference2bf78795",
+                    PublicKeys =
+                    {
+                        new AttestorPublicKey
+                        {
+                            Comment = "comment63cdd406",
+                            Id = "id74b70bb8",
+                            AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                            PkixPublicKey = new PkixPublicKey
+                            {
+                                PublicKeyPem = "public_key_pemfcf371ef",
+                                SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                            },
+                        },
+                    },
+                    DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Attestor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -672,13 +1498,63 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             moq::Mock<BinauthzManagementServiceV1Beta1.BinauthzManagementServiceV1Beta1Client> mockGrpcClient = new moq::Mock<BinauthzManagementServiceV1Beta1.BinauthzManagementServiceV1Beta1Client>(moq::MockBehavior.Strict);
             UpdateAttestorRequest request = new UpdateAttestorRequest
             {
-                Attestor = new Attestor(),
+                Attestor = new Attestor
+                {
+                    AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
+                    UserOwnedDrydockNote = new UserOwnedDrydockNote
+                    {
+                        NoteReference = "note_reference2bf78795",
+                        PublicKeys =
+                        {
+                            new AttestorPublicKey
+                            {
+                                Comment = "comment63cdd406",
+                                Id = "id74b70bb8",
+                                AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                                PkixPublicKey = new PkixPublicKey
+                                {
+                                    PublicKeyPem = "public_key_pemfcf371ef",
+                                    SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                                },
+                            },
+                        },
+                        DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Description = "description2cf9da67",
+                },
             };
             Attestor expectedResponse = new Attestor
             {
                 AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
-                UserOwnedDrydockNote = new UserOwnedDrydockNote(),
-                UpdateTime = new wkt::Timestamp(),
+                UserOwnedDrydockNote = new UserOwnedDrydockNote
+                {
+                    NoteReference = "note_reference2bf78795",
+                    PublicKeys =
+                    {
+                        new AttestorPublicKey
+                        {
+                            Comment = "comment63cdd406",
+                            Id = "id74b70bb8",
+                            AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                            PkixPublicKey = new PkixPublicKey
+                            {
+                                PublicKeyPem = "public_key_pemfcf371ef",
+                                SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                            },
+                        },
+                    },
+                    DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -694,13 +1570,63 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             moq::Mock<BinauthzManagementServiceV1Beta1.BinauthzManagementServiceV1Beta1Client> mockGrpcClient = new moq::Mock<BinauthzManagementServiceV1Beta1.BinauthzManagementServiceV1Beta1Client>(moq::MockBehavior.Strict);
             UpdateAttestorRequest request = new UpdateAttestorRequest
             {
-                Attestor = new Attestor(),
+                Attestor = new Attestor
+                {
+                    AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
+                    UserOwnedDrydockNote = new UserOwnedDrydockNote
+                    {
+                        NoteReference = "note_reference2bf78795",
+                        PublicKeys =
+                        {
+                            new AttestorPublicKey
+                            {
+                                Comment = "comment63cdd406",
+                                Id = "id74b70bb8",
+                                AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                                PkixPublicKey = new PkixPublicKey
+                                {
+                                    PublicKeyPem = "public_key_pemfcf371ef",
+                                    SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                                },
+                            },
+                        },
+                        DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Description = "description2cf9da67",
+                },
             };
             Attestor expectedResponse = new Attestor
             {
                 AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
-                UserOwnedDrydockNote = new UserOwnedDrydockNote(),
-                UpdateTime = new wkt::Timestamp(),
+                UserOwnedDrydockNote = new UserOwnedDrydockNote
+                {
+                    NoteReference = "note_reference2bf78795",
+                    PublicKeys =
+                    {
+                        new AttestorPublicKey
+                        {
+                            Comment = "comment63cdd406",
+                            Id = "id74b70bb8",
+                            AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                            PkixPublicKey = new PkixPublicKey
+                            {
+                                PublicKeyPem = "public_key_pemfcf371ef",
+                                SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                            },
+                        },
+                    },
+                    DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Attestor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -718,13 +1644,63 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             moq::Mock<BinauthzManagementServiceV1Beta1.BinauthzManagementServiceV1Beta1Client> mockGrpcClient = new moq::Mock<BinauthzManagementServiceV1Beta1.BinauthzManagementServiceV1Beta1Client>(moq::MockBehavior.Strict);
             UpdateAttestorRequest request = new UpdateAttestorRequest
             {
-                Attestor = new Attestor(),
+                Attestor = new Attestor
+                {
+                    AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
+                    UserOwnedDrydockNote = new UserOwnedDrydockNote
+                    {
+                        NoteReference = "note_reference2bf78795",
+                        PublicKeys =
+                        {
+                            new AttestorPublicKey
+                            {
+                                Comment = "comment63cdd406",
+                                Id = "id74b70bb8",
+                                AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                                PkixPublicKey = new PkixPublicKey
+                                {
+                                    PublicKeyPem = "public_key_pemfcf371ef",
+                                    SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                                },
+                            },
+                        },
+                        DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Description = "description2cf9da67",
+                },
             };
             Attestor expectedResponse = new Attestor
             {
                 AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
-                UserOwnedDrydockNote = new UserOwnedDrydockNote(),
-                UpdateTime = new wkt::Timestamp(),
+                UserOwnedDrydockNote = new UserOwnedDrydockNote
+                {
+                    NoteReference = "note_reference2bf78795",
+                    PublicKeys =
+                    {
+                        new AttestorPublicKey
+                        {
+                            Comment = "comment63cdd406",
+                            Id = "id74b70bb8",
+                            AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                            PkixPublicKey = new PkixPublicKey
+                            {
+                                PublicKeyPem = "public_key_pemfcf371ef",
+                                SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                            },
+                        },
+                    },
+                    DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateAttestor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -740,13 +1716,63 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
             moq::Mock<BinauthzManagementServiceV1Beta1.BinauthzManagementServiceV1Beta1Client> mockGrpcClient = new moq::Mock<BinauthzManagementServiceV1Beta1.BinauthzManagementServiceV1Beta1Client>(moq::MockBehavior.Strict);
             UpdateAttestorRequest request = new UpdateAttestorRequest
             {
-                Attestor = new Attestor(),
+                Attestor = new Attestor
+                {
+                    AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
+                    UserOwnedDrydockNote = new UserOwnedDrydockNote
+                    {
+                        NoteReference = "note_reference2bf78795",
+                        PublicKeys =
+                        {
+                            new AttestorPublicKey
+                            {
+                                Comment = "comment63cdd406",
+                                Id = "id74b70bb8",
+                                AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                                PkixPublicKey = new PkixPublicKey
+                                {
+                                    PublicKeyPem = "public_key_pemfcf371ef",
+                                    SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                                },
+                            },
+                        },
+                        DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Description = "description2cf9da67",
+                },
             };
             Attestor expectedResponse = new Attestor
             {
                 AttestorName = AttestorName.FromProjectAttestor("[PROJECT]", "[ATTESTOR]"),
-                UserOwnedDrydockNote = new UserOwnedDrydockNote(),
-                UpdateTime = new wkt::Timestamp(),
+                UserOwnedDrydockNote = new UserOwnedDrydockNote
+                {
+                    NoteReference = "note_reference2bf78795",
+                    PublicKeys =
+                    {
+                        new AttestorPublicKey
+                        {
+                            Comment = "comment63cdd406",
+                            Id = "id74b70bb8",
+                            AsciiArmoredPgpPublicKey = "ascii_armored_pgp_public_key1651c247",
+                            PkixPublicKey = new PkixPublicKey
+                            {
+                                PublicKeyPem = "public_key_pemfcf371ef",
+                                SignatureAlgorithm = PkixPublicKey.Types.SignatureAlgorithm.RsaPss4096Sha512,
+                            },
+                        },
+                    },
+                    DelegationServiceAccountEmail = "delegation_service_account_emailb2db6acc",
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateAttestorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Attestor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
