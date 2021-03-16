@@ -38,7 +38,33 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             ResolveServiceResponse expectedResponse = new ResolveServiceResponse
             {
-                Service = new Service(),
+                Service = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Endpoints =
+                    {
+                        new Endpoint
+                        {
+                            EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                            Address = "address04984d88",
+                            Port = -78310000,
+                            Metadata =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ResolveService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             LookupServiceClient client = new LookupServiceClientImpl(mockGrpcClient.Object, null);
@@ -59,7 +85,33 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             };
             ResolveServiceResponse expectedResponse = new ResolveServiceResponse
             {
-                Service = new Service(),
+                Service = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Endpoints =
+                    {
+                        new Endpoint
+                        {
+                            EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                            Address = "address04984d88",
+                            Port = -78310000,
+                            Metadata =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ResolveServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ResolveServiceResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             LookupServiceClient client = new LookupServiceClientImpl(mockGrpcClient.Object, null);

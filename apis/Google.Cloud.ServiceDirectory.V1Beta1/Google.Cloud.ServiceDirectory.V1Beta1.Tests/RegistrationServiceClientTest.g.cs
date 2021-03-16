@@ -20,6 +20,7 @@ using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -39,7 +40,17 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 NamespaceId = "namespace_id78177bcf",
-                Namespace = new Namespace(),
+                Namespace = new Namespace
+                {
+                    NamespaceName = NamespaceName.FromProjectLocationNamespace("[PROJECT]", "[LOCATION]", "[NAMESPACE]"),
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Namespace expectedResponse = new Namespace
             {
@@ -67,7 +78,17 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 NamespaceId = "namespace_id78177bcf",
-                Namespace = new Namespace(),
+                Namespace = new Namespace
+                {
+                    NamespaceName = NamespaceName.FromProjectLocationNamespace("[PROJECT]", "[LOCATION]", "[NAMESPACE]"),
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Namespace expectedResponse = new Namespace
             {
@@ -97,7 +118,17 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 NamespaceId = "namespace_id78177bcf",
-                Namespace = new Namespace(),
+                Namespace = new Namespace
+                {
+                    NamespaceName = NamespaceName.FromProjectLocationNamespace("[PROJECT]", "[LOCATION]", "[NAMESPACE]"),
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Namespace expectedResponse = new Namespace
             {
@@ -125,7 +156,17 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 NamespaceId = "namespace_id78177bcf",
-                Namespace = new Namespace(),
+                Namespace = new Namespace
+                {
+                    NamespaceName = NamespaceName.FromProjectLocationNamespace("[PROJECT]", "[LOCATION]", "[NAMESPACE]"),
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Namespace expectedResponse = new Namespace
             {
@@ -155,7 +196,17 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 NamespaceId = "namespace_id78177bcf",
-                Namespace = new Namespace(),
+                Namespace = new Namespace
+                {
+                    NamespaceName = NamespaceName.FromProjectLocationNamespace("[PROJECT]", "[LOCATION]", "[NAMESPACE]"),
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Namespace expectedResponse = new Namespace
             {
@@ -183,7 +234,17 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 NamespaceId = "namespace_id78177bcf",
-                Namespace = new Namespace(),
+                Namespace = new Namespace
+                {
+                    NamespaceName = NamespaceName.FromProjectLocationNamespace("[PROJECT]", "[LOCATION]", "[NAMESPACE]"),
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Namespace expectedResponse = new Namespace
             {
@@ -373,8 +434,21 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             moq::Mock<RegistrationService.RegistrationServiceClient> mockGrpcClient = new moq::Mock<RegistrationService.RegistrationServiceClient>(moq::MockBehavior.Strict);
             UpdateNamespaceRequest request = new UpdateNamespaceRequest
             {
-                Namespace = new Namespace(),
-                UpdateMask = new wkt::FieldMask(),
+                Namespace = new Namespace
+                {
+                    NamespaceName = NamespaceName.FromProjectLocationNamespace("[PROJECT]", "[LOCATION]", "[NAMESPACE]"),
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Namespace expectedResponse = new Namespace
             {
@@ -400,8 +474,21 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             moq::Mock<RegistrationService.RegistrationServiceClient> mockGrpcClient = new moq::Mock<RegistrationService.RegistrationServiceClient>(moq::MockBehavior.Strict);
             UpdateNamespaceRequest request = new UpdateNamespaceRequest
             {
-                Namespace = new Namespace(),
-                UpdateMask = new wkt::FieldMask(),
+                Namespace = new Namespace
+                {
+                    NamespaceName = NamespaceName.FromProjectLocationNamespace("[PROJECT]", "[LOCATION]", "[NAMESPACE]"),
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Namespace expectedResponse = new Namespace
             {
@@ -429,8 +516,21 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             moq::Mock<RegistrationService.RegistrationServiceClient> mockGrpcClient = new moq::Mock<RegistrationService.RegistrationServiceClient>(moq::MockBehavior.Strict);
             UpdateNamespaceRequest request = new UpdateNamespaceRequest
             {
-                Namespace = new Namespace(),
-                UpdateMask = new wkt::FieldMask(),
+                Namespace = new Namespace
+                {
+                    NamespaceName = NamespaceName.FromProjectLocationNamespace("[PROJECT]", "[LOCATION]", "[NAMESPACE]"),
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Namespace expectedResponse = new Namespace
             {
@@ -456,8 +556,21 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             moq::Mock<RegistrationService.RegistrationServiceClient> mockGrpcClient = new moq::Mock<RegistrationService.RegistrationServiceClient>(moq::MockBehavior.Strict);
             UpdateNamespaceRequest request = new UpdateNamespaceRequest
             {
-                Namespace = new Namespace(),
-                UpdateMask = new wkt::FieldMask(),
+                Namespace = new Namespace
+                {
+                    NamespaceName = NamespaceName.FromProjectLocationNamespace("[PROJECT]", "[LOCATION]", "[NAMESPACE]"),
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Namespace expectedResponse = new Namespace
             {
@@ -580,7 +693,33 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsNamespaceName = NamespaceName.FromProjectLocationNamespace("[PROJECT]", "[LOCATION]", "[NAMESPACE]"),
                 ServiceId = "service_id291edcb0",
-                Service = new Service(),
+                Service = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Endpoints =
+                    {
+                        new Endpoint
+                        {
+                            EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                            Address = "address04984d88",
+                            Port = -78310000,
+                            Metadata =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                },
             };
             Service expectedResponse = new Service
             {
@@ -592,7 +731,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                Endpoints = { new Endpoint(), },
+                Endpoints =
+                {
+                    new Endpoint
+                    {
+                        EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                        Address = "address04984d88",
+                        Port = -78310000,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -609,7 +763,33 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsNamespaceName = NamespaceName.FromProjectLocationNamespace("[PROJECT]", "[LOCATION]", "[NAMESPACE]"),
                 ServiceId = "service_id291edcb0",
-                Service = new Service(),
+                Service = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Endpoints =
+                    {
+                        new Endpoint
+                        {
+                            EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                            Address = "address04984d88",
+                            Port = -78310000,
+                            Metadata =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                },
             };
             Service expectedResponse = new Service
             {
@@ -621,7 +801,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                Endpoints = { new Endpoint(), },
+                Endpoints =
+                {
+                    new Endpoint
+                    {
+                        EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                        Address = "address04984d88",
+                        Port = -78310000,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -640,7 +835,33 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsNamespaceName = NamespaceName.FromProjectLocationNamespace("[PROJECT]", "[LOCATION]", "[NAMESPACE]"),
                 ServiceId = "service_id291edcb0",
-                Service = new Service(),
+                Service = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Endpoints =
+                    {
+                        new Endpoint
+                        {
+                            EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                            Address = "address04984d88",
+                            Port = -78310000,
+                            Metadata =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                },
             };
             Service expectedResponse = new Service
             {
@@ -652,7 +873,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                Endpoints = { new Endpoint(), },
+                Endpoints =
+                {
+                    new Endpoint
+                    {
+                        EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                        Address = "address04984d88",
+                        Port = -78310000,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -669,7 +905,33 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsNamespaceName = NamespaceName.FromProjectLocationNamespace("[PROJECT]", "[LOCATION]", "[NAMESPACE]"),
                 ServiceId = "service_id291edcb0",
-                Service = new Service(),
+                Service = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Endpoints =
+                    {
+                        new Endpoint
+                        {
+                            EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                            Address = "address04984d88",
+                            Port = -78310000,
+                            Metadata =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                },
             };
             Service expectedResponse = new Service
             {
@@ -681,7 +943,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                Endpoints = { new Endpoint(), },
+                Endpoints =
+                {
+                    new Endpoint
+                    {
+                        EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                        Address = "address04984d88",
+                        Port = -78310000,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -700,7 +977,33 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsNamespaceName = NamespaceName.FromProjectLocationNamespace("[PROJECT]", "[LOCATION]", "[NAMESPACE]"),
                 ServiceId = "service_id291edcb0",
-                Service = new Service(),
+                Service = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Endpoints =
+                    {
+                        new Endpoint
+                        {
+                            EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                            Address = "address04984d88",
+                            Port = -78310000,
+                            Metadata =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                },
             };
             Service expectedResponse = new Service
             {
@@ -712,7 +1015,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                Endpoints = { new Endpoint(), },
+                Endpoints =
+                {
+                    new Endpoint
+                    {
+                        EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                        Address = "address04984d88",
+                        Port = -78310000,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -729,7 +1047,33 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsNamespaceName = NamespaceName.FromProjectLocationNamespace("[PROJECT]", "[LOCATION]", "[NAMESPACE]"),
                 ServiceId = "service_id291edcb0",
-                Service = new Service(),
+                Service = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Endpoints =
+                    {
+                        new Endpoint
+                        {
+                            EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                            Address = "address04984d88",
+                            Port = -78310000,
+                            Metadata =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                },
             };
             Service expectedResponse = new Service
             {
@@ -741,7 +1085,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                Endpoints = { new Endpoint(), },
+                Endpoints =
+                {
+                    new Endpoint
+                    {
+                        EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                        Address = "address04984d88",
+                        Port = -78310000,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -770,7 +1129,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                Endpoints = { new Endpoint(), },
+                Endpoints =
+                {
+                    new Endpoint
+                    {
+                        EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                        Address = "address04984d88",
+                        Port = -78310000,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -797,7 +1171,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                Endpoints = { new Endpoint(), },
+                Endpoints =
+                {
+                    new Endpoint
+                    {
+                        EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                        Address = "address04984d88",
+                        Port = -78310000,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -826,7 +1215,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                Endpoints = { new Endpoint(), },
+                Endpoints =
+                {
+                    new Endpoint
+                    {
+                        EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                        Address = "address04984d88",
+                        Port = -78310000,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -853,7 +1257,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                Endpoints = { new Endpoint(), },
+                Endpoints =
+                {
+                    new Endpoint
+                    {
+                        EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                        Address = "address04984d88",
+                        Port = -78310000,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -882,7 +1301,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                Endpoints = { new Endpoint(), },
+                Endpoints =
+                {
+                    new Endpoint
+                    {
+                        EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                        Address = "address04984d88",
+                        Port = -78310000,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -909,7 +1343,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                Endpoints = { new Endpoint(), },
+                Endpoints =
+                {
+                    new Endpoint
+                    {
+                        EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                        Address = "address04984d88",
+                        Port = -78310000,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -926,8 +1375,37 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             moq::Mock<RegistrationService.RegistrationServiceClient> mockGrpcClient = new moq::Mock<RegistrationService.RegistrationServiceClient>(moq::MockBehavior.Strict);
             UpdateServiceRequest request = new UpdateServiceRequest
             {
-                Service = new Service(),
-                UpdateMask = new wkt::FieldMask(),
+                Service = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Endpoints =
+                    {
+                        new Endpoint
+                        {
+                            EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                            Address = "address04984d88",
+                            Port = -78310000,
+                            Metadata =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Service expectedResponse = new Service
             {
@@ -939,7 +1417,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                Endpoints = { new Endpoint(), },
+                Endpoints =
+                {
+                    new Endpoint
+                    {
+                        EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                        Address = "address04984d88",
+                        Port = -78310000,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -954,8 +1447,37 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             moq::Mock<RegistrationService.RegistrationServiceClient> mockGrpcClient = new moq::Mock<RegistrationService.RegistrationServiceClient>(moq::MockBehavior.Strict);
             UpdateServiceRequest request = new UpdateServiceRequest
             {
-                Service = new Service(),
-                UpdateMask = new wkt::FieldMask(),
+                Service = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Endpoints =
+                    {
+                        new Endpoint
+                        {
+                            EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                            Address = "address04984d88",
+                            Port = -78310000,
+                            Metadata =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Service expectedResponse = new Service
             {
@@ -967,7 +1489,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                Endpoints = { new Endpoint(), },
+                Endpoints =
+                {
+                    new Endpoint
+                    {
+                        EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                        Address = "address04984d88",
+                        Port = -78310000,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -984,8 +1521,37 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             moq::Mock<RegistrationService.RegistrationServiceClient> mockGrpcClient = new moq::Mock<RegistrationService.RegistrationServiceClient>(moq::MockBehavior.Strict);
             UpdateServiceRequest request = new UpdateServiceRequest
             {
-                Service = new Service(),
-                UpdateMask = new wkt::FieldMask(),
+                Service = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Endpoints =
+                    {
+                        new Endpoint
+                        {
+                            EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                            Address = "address04984d88",
+                            Port = -78310000,
+                            Metadata =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Service expectedResponse = new Service
             {
@@ -997,7 +1563,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                Endpoints = { new Endpoint(), },
+                Endpoints =
+                {
+                    new Endpoint
+                    {
+                        EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                        Address = "address04984d88",
+                        Port = -78310000,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1012,8 +1593,37 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             moq::Mock<RegistrationService.RegistrationServiceClient> mockGrpcClient = new moq::Mock<RegistrationService.RegistrationServiceClient>(moq::MockBehavior.Strict);
             UpdateServiceRequest request = new UpdateServiceRequest
             {
-                Service = new Service(),
-                UpdateMask = new wkt::FieldMask(),
+                Service = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Endpoints =
+                    {
+                        new Endpoint
+                        {
+                            EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                            Address = "address04984d88",
+                            Port = -78310000,
+                            Metadata =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Service expectedResponse = new Service
             {
@@ -1025,7 +1635,22 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                Endpoints = { new Endpoint(), },
+                Endpoints =
+                {
+                    new Endpoint
+                    {
+                        EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                        Address = "address04984d88",
+                        Port = -78310000,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RegistrationServiceClient client = new RegistrationServiceClientImpl(mockGrpcClient.Object, null);
@@ -1137,7 +1762,19 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
                 EndpointId = "endpoint_id3e575e95",
-                Endpoint = new Endpoint(),
+                Endpoint = new Endpoint
+                {
+                    EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                    Address = "address04984d88",
+                    Port = -78310000,
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Endpoint expectedResponse = new Endpoint
             {
@@ -1167,7 +1804,19 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
                 EndpointId = "endpoint_id3e575e95",
-                Endpoint = new Endpoint(),
+                Endpoint = new Endpoint
+                {
+                    EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                    Address = "address04984d88",
+                    Port = -78310000,
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Endpoint expectedResponse = new Endpoint
             {
@@ -1199,7 +1848,19 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
                 EndpointId = "endpoint_id3e575e95",
-                Endpoint = new Endpoint(),
+                Endpoint = new Endpoint
+                {
+                    EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                    Address = "address04984d88",
+                    Port = -78310000,
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Endpoint expectedResponse = new Endpoint
             {
@@ -1229,7 +1890,19 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
                 EndpointId = "endpoint_id3e575e95",
-                Endpoint = new Endpoint(),
+                Endpoint = new Endpoint
+                {
+                    EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                    Address = "address04984d88",
+                    Port = -78310000,
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Endpoint expectedResponse = new Endpoint
             {
@@ -1261,7 +1934,19 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
                 EndpointId = "endpoint_id3e575e95",
-                Endpoint = new Endpoint(),
+                Endpoint = new Endpoint
+                {
+                    EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                    Address = "address04984d88",
+                    Port = -78310000,
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Endpoint expectedResponse = new Endpoint
             {
@@ -1291,7 +1976,19 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             {
                 ParentAsServiceName = ServiceName.FromProjectLocationNamespaceService("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]"),
                 EndpointId = "endpoint_id3e575e95",
-                Endpoint = new Endpoint(),
+                Endpoint = new Endpoint
+                {
+                    EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                    Address = "address04984d88",
+                    Port = -78310000,
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Endpoint expectedResponse = new Endpoint
             {
@@ -1495,8 +2192,23 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             moq::Mock<RegistrationService.RegistrationServiceClient> mockGrpcClient = new moq::Mock<RegistrationService.RegistrationServiceClient>(moq::MockBehavior.Strict);
             UpdateEndpointRequest request = new UpdateEndpointRequest
             {
-                Endpoint = new Endpoint(),
-                UpdateMask = new wkt::FieldMask(),
+                Endpoint = new Endpoint
+                {
+                    EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                    Address = "address04984d88",
+                    Port = -78310000,
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Endpoint expectedResponse = new Endpoint
             {
@@ -1524,8 +2236,23 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             moq::Mock<RegistrationService.RegistrationServiceClient> mockGrpcClient = new moq::Mock<RegistrationService.RegistrationServiceClient>(moq::MockBehavior.Strict);
             UpdateEndpointRequest request = new UpdateEndpointRequest
             {
-                Endpoint = new Endpoint(),
-                UpdateMask = new wkt::FieldMask(),
+                Endpoint = new Endpoint
+                {
+                    EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                    Address = "address04984d88",
+                    Port = -78310000,
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Endpoint expectedResponse = new Endpoint
             {
@@ -1555,8 +2282,23 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             moq::Mock<RegistrationService.RegistrationServiceClient> mockGrpcClient = new moq::Mock<RegistrationService.RegistrationServiceClient>(moq::MockBehavior.Strict);
             UpdateEndpointRequest request = new UpdateEndpointRequest
             {
-                Endpoint = new Endpoint(),
-                UpdateMask = new wkt::FieldMask(),
+                Endpoint = new Endpoint
+                {
+                    EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                    Address = "address04984d88",
+                    Port = -78310000,
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Endpoint expectedResponse = new Endpoint
             {
@@ -1584,8 +2326,23 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             moq::Mock<RegistrationService.RegistrationServiceClient> mockGrpcClient = new moq::Mock<RegistrationService.RegistrationServiceClient>(moq::MockBehavior.Strict);
             UpdateEndpointRequest request = new UpdateEndpointRequest
             {
-                Endpoint = new Endpoint(),
-                UpdateMask = new wkt::FieldMask(),
+                Endpoint = new Endpoint
+                {
+                    EndpointName = EndpointName.FromProjectLocationNamespaceServiceEndpoint("[PROJECT]", "[LOCATION]", "[NAMESPACE]", "[SERVICE]", "[ENDPOINT]"),
+                    Address = "address04984d88",
+                    Port = -78310000,
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Endpoint expectedResponse = new Endpoint
             {
@@ -1709,7 +2466,10 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1717,7 +2477,18 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1734,7 +2505,10 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1742,7 +2516,18 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1761,7 +2546,26 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1769,7 +2573,18 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1786,7 +2601,26 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1794,7 +2628,18 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
