@@ -42,15 +42,32 @@ namespace Google.Cloud.AutoML.V1.Tests
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Etag = "etage8ad7218",
                 ExampleCount = -1179891861,
-                TranslationDatasetMetadata = new TranslationDatasetMetadata(),
-                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata(),
-                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata(),
-                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata(),
-                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata(),
-                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata(),
+                TranslationDatasetMetadata = new TranslationDatasetMetadata
+                {
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata { },
+                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata { },
+                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata
+                {
+                    SentimentMax = -54336936,
+                },
                 Labels =
                 {
                     {
@@ -80,15 +97,32 @@ namespace Google.Cloud.AutoML.V1.Tests
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Etag = "etage8ad7218",
                 ExampleCount = -1179891861,
-                TranslationDatasetMetadata = new TranslationDatasetMetadata(),
-                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata(),
-                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata(),
-                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata(),
-                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata(),
-                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata(),
+                TranslationDatasetMetadata = new TranslationDatasetMetadata
+                {
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata { },
+                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata { },
+                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata
+                {
+                    SentimentMax = -54336936,
+                },
                 Labels =
                 {
                     {
@@ -120,15 +154,32 @@ namespace Google.Cloud.AutoML.V1.Tests
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Etag = "etage8ad7218",
                 ExampleCount = -1179891861,
-                TranslationDatasetMetadata = new TranslationDatasetMetadata(),
-                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata(),
-                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata(),
-                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata(),
-                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata(),
-                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata(),
+                TranslationDatasetMetadata = new TranslationDatasetMetadata
+                {
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata { },
+                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata { },
+                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata
+                {
+                    SentimentMax = -54336936,
+                },
                 Labels =
                 {
                     {
@@ -158,15 +209,32 @@ namespace Google.Cloud.AutoML.V1.Tests
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Etag = "etage8ad7218",
                 ExampleCount = -1179891861,
-                TranslationDatasetMetadata = new TranslationDatasetMetadata(),
-                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata(),
-                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata(),
-                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata(),
-                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata(),
-                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata(),
+                TranslationDatasetMetadata = new TranslationDatasetMetadata
+                {
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata { },
+                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata { },
+                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata
+                {
+                    SentimentMax = -54336936,
+                },
                 Labels =
                 {
                     {
@@ -198,15 +266,32 @@ namespace Google.Cloud.AutoML.V1.Tests
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Etag = "etage8ad7218",
                 ExampleCount = -1179891861,
-                TranslationDatasetMetadata = new TranslationDatasetMetadata(),
-                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata(),
-                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata(),
-                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata(),
-                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata(),
-                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata(),
+                TranslationDatasetMetadata = new TranslationDatasetMetadata
+                {
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata { },
+                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata { },
+                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata
+                {
+                    SentimentMax = -54336936,
+                },
                 Labels =
                 {
                     {
@@ -236,15 +321,32 @@ namespace Google.Cloud.AutoML.V1.Tests
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Etag = "etage8ad7218",
                 ExampleCount = -1179891861,
-                TranslationDatasetMetadata = new TranslationDatasetMetadata(),
-                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata(),
-                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata(),
-                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata(),
-                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata(),
-                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata(),
+                TranslationDatasetMetadata = new TranslationDatasetMetadata
+                {
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata { },
+                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata { },
+                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata
+                {
+                    SentimentMax = -54336936,
+                },
                 Labels =
                 {
                     {
@@ -269,23 +371,81 @@ namespace Google.Cloud.AutoML.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateDatasetRequest request = new UpdateDatasetRequest
             {
-                Dataset = new Dataset(),
-                UpdateMask = new wkt::FieldMask(),
+                Dataset = new Dataset
+                {
+                    DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Etag = "etage8ad7218",
+                    ExampleCount = -1179891861,
+                    TranslationDatasetMetadata = new TranslationDatasetMetadata
+                    {
+                        SourceLanguageCode = "source_language_code14998292",
+                        TargetLanguageCode = "target_language_code6ec12c87",
+                    },
+                    ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata
+                    {
+                        ClassificationType = ClassificationType.Unspecified,
+                    },
+                    TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata
+                    {
+                        ClassificationType = ClassificationType.Unspecified,
+                    },
+                    ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata { },
+                    TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata { },
+                    TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata
+                    {
+                        SentimentMax = -54336936,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Dataset expectedResponse = new Dataset
             {
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Etag = "etage8ad7218",
                 ExampleCount = -1179891861,
-                TranslationDatasetMetadata = new TranslationDatasetMetadata(),
-                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata(),
-                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata(),
-                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata(),
-                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata(),
-                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata(),
+                TranslationDatasetMetadata = new TranslationDatasetMetadata
+                {
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata { },
+                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata { },
+                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata
+                {
+                    SentimentMax = -54336936,
+                },
                 Labels =
                 {
                     {
@@ -308,23 +468,81 @@ namespace Google.Cloud.AutoML.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateDatasetRequest request = new UpdateDatasetRequest
             {
-                Dataset = new Dataset(),
-                UpdateMask = new wkt::FieldMask(),
+                Dataset = new Dataset
+                {
+                    DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Etag = "etage8ad7218",
+                    ExampleCount = -1179891861,
+                    TranslationDatasetMetadata = new TranslationDatasetMetadata
+                    {
+                        SourceLanguageCode = "source_language_code14998292",
+                        TargetLanguageCode = "target_language_code6ec12c87",
+                    },
+                    ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata
+                    {
+                        ClassificationType = ClassificationType.Unspecified,
+                    },
+                    TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata
+                    {
+                        ClassificationType = ClassificationType.Unspecified,
+                    },
+                    ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata { },
+                    TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata { },
+                    TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata
+                    {
+                        SentimentMax = -54336936,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Dataset expectedResponse = new Dataset
             {
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Etag = "etage8ad7218",
                 ExampleCount = -1179891861,
-                TranslationDatasetMetadata = new TranslationDatasetMetadata(),
-                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata(),
-                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata(),
-                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata(),
-                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata(),
-                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata(),
+                TranslationDatasetMetadata = new TranslationDatasetMetadata
+                {
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata { },
+                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata { },
+                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata
+                {
+                    SentimentMax = -54336936,
+                },
                 Labels =
                 {
                     {
@@ -349,23 +567,81 @@ namespace Google.Cloud.AutoML.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateDatasetRequest request = new UpdateDatasetRequest
             {
-                Dataset = new Dataset(),
-                UpdateMask = new wkt::FieldMask(),
+                Dataset = new Dataset
+                {
+                    DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Etag = "etage8ad7218",
+                    ExampleCount = -1179891861,
+                    TranslationDatasetMetadata = new TranslationDatasetMetadata
+                    {
+                        SourceLanguageCode = "source_language_code14998292",
+                        TargetLanguageCode = "target_language_code6ec12c87",
+                    },
+                    ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata
+                    {
+                        ClassificationType = ClassificationType.Unspecified,
+                    },
+                    TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata
+                    {
+                        ClassificationType = ClassificationType.Unspecified,
+                    },
+                    ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata { },
+                    TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata { },
+                    TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata
+                    {
+                        SentimentMax = -54336936,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Dataset expectedResponse = new Dataset
             {
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Etag = "etage8ad7218",
                 ExampleCount = -1179891861,
-                TranslationDatasetMetadata = new TranslationDatasetMetadata(),
-                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata(),
-                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata(),
-                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata(),
-                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata(),
-                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata(),
+                TranslationDatasetMetadata = new TranslationDatasetMetadata
+                {
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata { },
+                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata { },
+                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata
+                {
+                    SentimentMax = -54336936,
+                },
                 Labels =
                 {
                     {
@@ -388,23 +664,81 @@ namespace Google.Cloud.AutoML.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateDatasetRequest request = new UpdateDatasetRequest
             {
-                Dataset = new Dataset(),
-                UpdateMask = new wkt::FieldMask(),
+                Dataset = new Dataset
+                {
+                    DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Etag = "etage8ad7218",
+                    ExampleCount = -1179891861,
+                    TranslationDatasetMetadata = new TranslationDatasetMetadata
+                    {
+                        SourceLanguageCode = "source_language_code14998292",
+                        TargetLanguageCode = "target_language_code6ec12c87",
+                    },
+                    ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata
+                    {
+                        ClassificationType = ClassificationType.Unspecified,
+                    },
+                    TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata
+                    {
+                        ClassificationType = ClassificationType.Unspecified,
+                    },
+                    ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata { },
+                    TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata { },
+                    TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata
+                    {
+                        SentimentMax = -54336936,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Dataset expectedResponse = new Dataset
             {
                 DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
                 DisplayName = "display_name137f65c2",
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Etag = "etage8ad7218",
                 ExampleCount = -1179891861,
-                TranslationDatasetMetadata = new TranslationDatasetMetadata(),
-                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata(),
-                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata(),
-                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata(),
-                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata(),
-                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata(),
+                TranslationDatasetMetadata = new TranslationDatasetMetadata
+                {
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                ImageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TextClassificationDatasetMetadata = new TextClassificationDatasetMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                ImageObjectDetectionDatasetMetadata = new ImageObjectDetectionDatasetMetadata { },
+                TextExtractionDatasetMetadata = new TextExtractionDatasetMetadata { },
+                TextSentimentDatasetMetadata = new TextSentimentDatasetMetadata
+                {
+                    SentimentMax = -54336936,
+                },
                 Labels =
                 {
                     {
@@ -574,16 +908,49 @@ namespace Google.Cloud.AutoML.V1.Tests
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 DisplayName = "display_name137f65c2",
                 DatasetId = "dataset_id08d366d3",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DeploymentState = Model.Types.DeploymentState.Deployed,
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                ImageClassificationModelMetadata = new ImageClassificationModelMetadata(),
-                TextClassificationModelMetadata = new TextClassificationModelMetadata(),
-                TranslationModelMetadata = new TranslationModelMetadata(),
-                TextExtractionModelMetadata = new TextExtractionModelMetadata(),
-                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata(),
-                TextSentimentModelMetadata = new TextSentimentModelMetadata(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ImageClassificationModelMetadata = new ImageClassificationModelMetadata
+                {
+                    BaseModelId = "base_model_idd5c8d7dd",
+                    StopReason = "stop_reason6d507fa2",
+                    ModelType = "model_typeb6577352",
+                    NodeQps = 6.461755789497736E+17,
+                    NodeCount = -4047684044491192506L,
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextClassificationModelMetadata = new TextClassificationModelMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TranslationModelMetadata = new TranslationModelMetadata
+                {
+                    BaseModel = "base_model2671f9b9",
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                TextExtractionModelMetadata = new TextExtractionModelMetadata { },
+                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata
+                {
+                    ModelType = "model_typeb6577352",
+                    NodeCount = -4047684044491192506L,
+                    NodeQps = 6.461755789497736E+17,
+                    StopReason = "stop_reason6d507fa2",
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextSentimentModelMetadata = new TextSentimentModelMetadata { },
                 Labels =
                 {
                     {
@@ -613,16 +980,49 @@ namespace Google.Cloud.AutoML.V1.Tests
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 DisplayName = "display_name137f65c2",
                 DatasetId = "dataset_id08d366d3",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DeploymentState = Model.Types.DeploymentState.Deployed,
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                ImageClassificationModelMetadata = new ImageClassificationModelMetadata(),
-                TextClassificationModelMetadata = new TextClassificationModelMetadata(),
-                TranslationModelMetadata = new TranslationModelMetadata(),
-                TextExtractionModelMetadata = new TextExtractionModelMetadata(),
-                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata(),
-                TextSentimentModelMetadata = new TextSentimentModelMetadata(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ImageClassificationModelMetadata = new ImageClassificationModelMetadata
+                {
+                    BaseModelId = "base_model_idd5c8d7dd",
+                    StopReason = "stop_reason6d507fa2",
+                    ModelType = "model_typeb6577352",
+                    NodeQps = 6.461755789497736E+17,
+                    NodeCount = -4047684044491192506L,
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextClassificationModelMetadata = new TextClassificationModelMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TranslationModelMetadata = new TranslationModelMetadata
+                {
+                    BaseModel = "base_model2671f9b9",
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                TextExtractionModelMetadata = new TextExtractionModelMetadata { },
+                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata
+                {
+                    ModelType = "model_typeb6577352",
+                    NodeCount = -4047684044491192506L,
+                    NodeQps = 6.461755789497736E+17,
+                    StopReason = "stop_reason6d507fa2",
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextSentimentModelMetadata = new TextSentimentModelMetadata { },
                 Labels =
                 {
                     {
@@ -654,16 +1054,49 @@ namespace Google.Cloud.AutoML.V1.Tests
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 DisplayName = "display_name137f65c2",
                 DatasetId = "dataset_id08d366d3",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DeploymentState = Model.Types.DeploymentState.Deployed,
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                ImageClassificationModelMetadata = new ImageClassificationModelMetadata(),
-                TextClassificationModelMetadata = new TextClassificationModelMetadata(),
-                TranslationModelMetadata = new TranslationModelMetadata(),
-                TextExtractionModelMetadata = new TextExtractionModelMetadata(),
-                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata(),
-                TextSentimentModelMetadata = new TextSentimentModelMetadata(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ImageClassificationModelMetadata = new ImageClassificationModelMetadata
+                {
+                    BaseModelId = "base_model_idd5c8d7dd",
+                    StopReason = "stop_reason6d507fa2",
+                    ModelType = "model_typeb6577352",
+                    NodeQps = 6.461755789497736E+17,
+                    NodeCount = -4047684044491192506L,
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextClassificationModelMetadata = new TextClassificationModelMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TranslationModelMetadata = new TranslationModelMetadata
+                {
+                    BaseModel = "base_model2671f9b9",
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                TextExtractionModelMetadata = new TextExtractionModelMetadata { },
+                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata
+                {
+                    ModelType = "model_typeb6577352",
+                    NodeCount = -4047684044491192506L,
+                    NodeQps = 6.461755789497736E+17,
+                    StopReason = "stop_reason6d507fa2",
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextSentimentModelMetadata = new TextSentimentModelMetadata { },
                 Labels =
                 {
                     {
@@ -693,16 +1126,49 @@ namespace Google.Cloud.AutoML.V1.Tests
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 DisplayName = "display_name137f65c2",
                 DatasetId = "dataset_id08d366d3",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DeploymentState = Model.Types.DeploymentState.Deployed,
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                ImageClassificationModelMetadata = new ImageClassificationModelMetadata(),
-                TextClassificationModelMetadata = new TextClassificationModelMetadata(),
-                TranslationModelMetadata = new TranslationModelMetadata(),
-                TextExtractionModelMetadata = new TextExtractionModelMetadata(),
-                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata(),
-                TextSentimentModelMetadata = new TextSentimentModelMetadata(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ImageClassificationModelMetadata = new ImageClassificationModelMetadata
+                {
+                    BaseModelId = "base_model_idd5c8d7dd",
+                    StopReason = "stop_reason6d507fa2",
+                    ModelType = "model_typeb6577352",
+                    NodeQps = 6.461755789497736E+17,
+                    NodeCount = -4047684044491192506L,
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextClassificationModelMetadata = new TextClassificationModelMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TranslationModelMetadata = new TranslationModelMetadata
+                {
+                    BaseModel = "base_model2671f9b9",
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                TextExtractionModelMetadata = new TextExtractionModelMetadata { },
+                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata
+                {
+                    ModelType = "model_typeb6577352",
+                    NodeCount = -4047684044491192506L,
+                    NodeQps = 6.461755789497736E+17,
+                    StopReason = "stop_reason6d507fa2",
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextSentimentModelMetadata = new TextSentimentModelMetadata { },
                 Labels =
                 {
                     {
@@ -734,16 +1200,49 @@ namespace Google.Cloud.AutoML.V1.Tests
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 DisplayName = "display_name137f65c2",
                 DatasetId = "dataset_id08d366d3",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DeploymentState = Model.Types.DeploymentState.Deployed,
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                ImageClassificationModelMetadata = new ImageClassificationModelMetadata(),
-                TextClassificationModelMetadata = new TextClassificationModelMetadata(),
-                TranslationModelMetadata = new TranslationModelMetadata(),
-                TextExtractionModelMetadata = new TextExtractionModelMetadata(),
-                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata(),
-                TextSentimentModelMetadata = new TextSentimentModelMetadata(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ImageClassificationModelMetadata = new ImageClassificationModelMetadata
+                {
+                    BaseModelId = "base_model_idd5c8d7dd",
+                    StopReason = "stop_reason6d507fa2",
+                    ModelType = "model_typeb6577352",
+                    NodeQps = 6.461755789497736E+17,
+                    NodeCount = -4047684044491192506L,
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextClassificationModelMetadata = new TextClassificationModelMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TranslationModelMetadata = new TranslationModelMetadata
+                {
+                    BaseModel = "base_model2671f9b9",
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                TextExtractionModelMetadata = new TextExtractionModelMetadata { },
+                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata
+                {
+                    ModelType = "model_typeb6577352",
+                    NodeCount = -4047684044491192506L,
+                    NodeQps = 6.461755789497736E+17,
+                    StopReason = "stop_reason6d507fa2",
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextSentimentModelMetadata = new TextSentimentModelMetadata { },
                 Labels =
                 {
                     {
@@ -773,16 +1272,49 @@ namespace Google.Cloud.AutoML.V1.Tests
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 DisplayName = "display_name137f65c2",
                 DatasetId = "dataset_id08d366d3",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DeploymentState = Model.Types.DeploymentState.Deployed,
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                ImageClassificationModelMetadata = new ImageClassificationModelMetadata(),
-                TextClassificationModelMetadata = new TextClassificationModelMetadata(),
-                TranslationModelMetadata = new TranslationModelMetadata(),
-                TextExtractionModelMetadata = new TextExtractionModelMetadata(),
-                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata(),
-                TextSentimentModelMetadata = new TextSentimentModelMetadata(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ImageClassificationModelMetadata = new ImageClassificationModelMetadata
+                {
+                    BaseModelId = "base_model_idd5c8d7dd",
+                    StopReason = "stop_reason6d507fa2",
+                    ModelType = "model_typeb6577352",
+                    NodeQps = 6.461755789497736E+17,
+                    NodeCount = -4047684044491192506L,
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextClassificationModelMetadata = new TextClassificationModelMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TranslationModelMetadata = new TranslationModelMetadata
+                {
+                    BaseModel = "base_model2671f9b9",
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                TextExtractionModelMetadata = new TextExtractionModelMetadata { },
+                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata
+                {
+                    ModelType = "model_typeb6577352",
+                    NodeCount = -4047684044491192506L,
+                    NodeQps = 6.461755789497736E+17,
+                    StopReason = "stop_reason6d507fa2",
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextSentimentModelMetadata = new TextSentimentModelMetadata { },
                 Labels =
                 {
                     {
@@ -807,24 +1339,115 @@ namespace Google.Cloud.AutoML.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateModelRequest request = new UpdateModelRequest
             {
-                Model = new Model(),
-                UpdateMask = new wkt::FieldMask(),
+                Model = new Model
+                {
+                    ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                    DisplayName = "display_name137f65c2",
+                    DatasetId = "dataset_id08d366d3",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeploymentState = Model.Types.DeploymentState.Deployed,
+                    Etag = "etage8ad7218",
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImageClassificationModelMetadata = new ImageClassificationModelMetadata
+                    {
+                        BaseModelId = "base_model_idd5c8d7dd",
+                        StopReason = "stop_reason6d507fa2",
+                        ModelType = "model_typeb6577352",
+                        NodeQps = 6.461755789497736E+17,
+                        NodeCount = -4047684044491192506L,
+                        TrainBudgetMilliNodeHours = 7404564234854750876L,
+                        TrainCostMilliNodeHours = 3319292720042833376L,
+                    },
+                    TextClassificationModelMetadata = new TextClassificationModelMetadata
+                    {
+                        ClassificationType = ClassificationType.Unspecified,
+                    },
+                    TranslationModelMetadata = new TranslationModelMetadata
+                    {
+                        BaseModel = "base_model2671f9b9",
+                        SourceLanguageCode = "source_language_code14998292",
+                        TargetLanguageCode = "target_language_code6ec12c87",
+                    },
+                    TextExtractionModelMetadata = new TextExtractionModelMetadata { },
+                    ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata
+                    {
+                        ModelType = "model_typeb6577352",
+                        NodeCount = -4047684044491192506L,
+                        NodeQps = 6.461755789497736E+17,
+                        StopReason = "stop_reason6d507fa2",
+                        TrainBudgetMilliNodeHours = 7404564234854750876L,
+                        TrainCostMilliNodeHours = 3319292720042833376L,
+                    },
+                    TextSentimentModelMetadata = new TextSentimentModelMetadata { },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Model expectedResponse = new Model
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 DisplayName = "display_name137f65c2",
                 DatasetId = "dataset_id08d366d3",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DeploymentState = Model.Types.DeploymentState.Deployed,
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                ImageClassificationModelMetadata = new ImageClassificationModelMetadata(),
-                TextClassificationModelMetadata = new TextClassificationModelMetadata(),
-                TranslationModelMetadata = new TranslationModelMetadata(),
-                TextExtractionModelMetadata = new TextExtractionModelMetadata(),
-                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata(),
-                TextSentimentModelMetadata = new TextSentimentModelMetadata(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ImageClassificationModelMetadata = new ImageClassificationModelMetadata
+                {
+                    BaseModelId = "base_model_idd5c8d7dd",
+                    StopReason = "stop_reason6d507fa2",
+                    ModelType = "model_typeb6577352",
+                    NodeQps = 6.461755789497736E+17,
+                    NodeCount = -4047684044491192506L,
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextClassificationModelMetadata = new TextClassificationModelMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TranslationModelMetadata = new TranslationModelMetadata
+                {
+                    BaseModel = "base_model2671f9b9",
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                TextExtractionModelMetadata = new TextExtractionModelMetadata { },
+                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata
+                {
+                    ModelType = "model_typeb6577352",
+                    NodeCount = -4047684044491192506L,
+                    NodeQps = 6.461755789497736E+17,
+                    StopReason = "stop_reason6d507fa2",
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextSentimentModelMetadata = new TextSentimentModelMetadata { },
                 Labels =
                 {
                     {
@@ -847,24 +1470,115 @@ namespace Google.Cloud.AutoML.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateModelRequest request = new UpdateModelRequest
             {
-                Model = new Model(),
-                UpdateMask = new wkt::FieldMask(),
+                Model = new Model
+                {
+                    ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                    DisplayName = "display_name137f65c2",
+                    DatasetId = "dataset_id08d366d3",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeploymentState = Model.Types.DeploymentState.Deployed,
+                    Etag = "etage8ad7218",
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImageClassificationModelMetadata = new ImageClassificationModelMetadata
+                    {
+                        BaseModelId = "base_model_idd5c8d7dd",
+                        StopReason = "stop_reason6d507fa2",
+                        ModelType = "model_typeb6577352",
+                        NodeQps = 6.461755789497736E+17,
+                        NodeCount = -4047684044491192506L,
+                        TrainBudgetMilliNodeHours = 7404564234854750876L,
+                        TrainCostMilliNodeHours = 3319292720042833376L,
+                    },
+                    TextClassificationModelMetadata = new TextClassificationModelMetadata
+                    {
+                        ClassificationType = ClassificationType.Unspecified,
+                    },
+                    TranslationModelMetadata = new TranslationModelMetadata
+                    {
+                        BaseModel = "base_model2671f9b9",
+                        SourceLanguageCode = "source_language_code14998292",
+                        TargetLanguageCode = "target_language_code6ec12c87",
+                    },
+                    TextExtractionModelMetadata = new TextExtractionModelMetadata { },
+                    ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata
+                    {
+                        ModelType = "model_typeb6577352",
+                        NodeCount = -4047684044491192506L,
+                        NodeQps = 6.461755789497736E+17,
+                        StopReason = "stop_reason6d507fa2",
+                        TrainBudgetMilliNodeHours = 7404564234854750876L,
+                        TrainCostMilliNodeHours = 3319292720042833376L,
+                    },
+                    TextSentimentModelMetadata = new TextSentimentModelMetadata { },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Model expectedResponse = new Model
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 DisplayName = "display_name137f65c2",
                 DatasetId = "dataset_id08d366d3",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DeploymentState = Model.Types.DeploymentState.Deployed,
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                ImageClassificationModelMetadata = new ImageClassificationModelMetadata(),
-                TextClassificationModelMetadata = new TextClassificationModelMetadata(),
-                TranslationModelMetadata = new TranslationModelMetadata(),
-                TextExtractionModelMetadata = new TextExtractionModelMetadata(),
-                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata(),
-                TextSentimentModelMetadata = new TextSentimentModelMetadata(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ImageClassificationModelMetadata = new ImageClassificationModelMetadata
+                {
+                    BaseModelId = "base_model_idd5c8d7dd",
+                    StopReason = "stop_reason6d507fa2",
+                    ModelType = "model_typeb6577352",
+                    NodeQps = 6.461755789497736E+17,
+                    NodeCount = -4047684044491192506L,
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextClassificationModelMetadata = new TextClassificationModelMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TranslationModelMetadata = new TranslationModelMetadata
+                {
+                    BaseModel = "base_model2671f9b9",
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                TextExtractionModelMetadata = new TextExtractionModelMetadata { },
+                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata
+                {
+                    ModelType = "model_typeb6577352",
+                    NodeCount = -4047684044491192506L,
+                    NodeQps = 6.461755789497736E+17,
+                    StopReason = "stop_reason6d507fa2",
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextSentimentModelMetadata = new TextSentimentModelMetadata { },
                 Labels =
                 {
                     {
@@ -889,24 +1603,115 @@ namespace Google.Cloud.AutoML.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateModelRequest request = new UpdateModelRequest
             {
-                Model = new Model(),
-                UpdateMask = new wkt::FieldMask(),
+                Model = new Model
+                {
+                    ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                    DisplayName = "display_name137f65c2",
+                    DatasetId = "dataset_id08d366d3",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeploymentState = Model.Types.DeploymentState.Deployed,
+                    Etag = "etage8ad7218",
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImageClassificationModelMetadata = new ImageClassificationModelMetadata
+                    {
+                        BaseModelId = "base_model_idd5c8d7dd",
+                        StopReason = "stop_reason6d507fa2",
+                        ModelType = "model_typeb6577352",
+                        NodeQps = 6.461755789497736E+17,
+                        NodeCount = -4047684044491192506L,
+                        TrainBudgetMilliNodeHours = 7404564234854750876L,
+                        TrainCostMilliNodeHours = 3319292720042833376L,
+                    },
+                    TextClassificationModelMetadata = new TextClassificationModelMetadata
+                    {
+                        ClassificationType = ClassificationType.Unspecified,
+                    },
+                    TranslationModelMetadata = new TranslationModelMetadata
+                    {
+                        BaseModel = "base_model2671f9b9",
+                        SourceLanguageCode = "source_language_code14998292",
+                        TargetLanguageCode = "target_language_code6ec12c87",
+                    },
+                    TextExtractionModelMetadata = new TextExtractionModelMetadata { },
+                    ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata
+                    {
+                        ModelType = "model_typeb6577352",
+                        NodeCount = -4047684044491192506L,
+                        NodeQps = 6.461755789497736E+17,
+                        StopReason = "stop_reason6d507fa2",
+                        TrainBudgetMilliNodeHours = 7404564234854750876L,
+                        TrainCostMilliNodeHours = 3319292720042833376L,
+                    },
+                    TextSentimentModelMetadata = new TextSentimentModelMetadata { },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Model expectedResponse = new Model
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 DisplayName = "display_name137f65c2",
                 DatasetId = "dataset_id08d366d3",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DeploymentState = Model.Types.DeploymentState.Deployed,
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                ImageClassificationModelMetadata = new ImageClassificationModelMetadata(),
-                TextClassificationModelMetadata = new TextClassificationModelMetadata(),
-                TranslationModelMetadata = new TranslationModelMetadata(),
-                TextExtractionModelMetadata = new TextExtractionModelMetadata(),
-                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata(),
-                TextSentimentModelMetadata = new TextSentimentModelMetadata(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ImageClassificationModelMetadata = new ImageClassificationModelMetadata
+                {
+                    BaseModelId = "base_model_idd5c8d7dd",
+                    StopReason = "stop_reason6d507fa2",
+                    ModelType = "model_typeb6577352",
+                    NodeQps = 6.461755789497736E+17,
+                    NodeCount = -4047684044491192506L,
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextClassificationModelMetadata = new TextClassificationModelMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TranslationModelMetadata = new TranslationModelMetadata
+                {
+                    BaseModel = "base_model2671f9b9",
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                TextExtractionModelMetadata = new TextExtractionModelMetadata { },
+                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata
+                {
+                    ModelType = "model_typeb6577352",
+                    NodeCount = -4047684044491192506L,
+                    NodeQps = 6.461755789497736E+17,
+                    StopReason = "stop_reason6d507fa2",
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextSentimentModelMetadata = new TextSentimentModelMetadata { },
                 Labels =
                 {
                     {
@@ -929,24 +1734,115 @@ namespace Google.Cloud.AutoML.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateModelRequest request = new UpdateModelRequest
             {
-                Model = new Model(),
-                UpdateMask = new wkt::FieldMask(),
+                Model = new Model
+                {
+                    ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                    DisplayName = "display_name137f65c2",
+                    DatasetId = "dataset_id08d366d3",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeploymentState = Model.Types.DeploymentState.Deployed,
+                    Etag = "etage8ad7218",
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ImageClassificationModelMetadata = new ImageClassificationModelMetadata
+                    {
+                        BaseModelId = "base_model_idd5c8d7dd",
+                        StopReason = "stop_reason6d507fa2",
+                        ModelType = "model_typeb6577352",
+                        NodeQps = 6.461755789497736E+17,
+                        NodeCount = -4047684044491192506L,
+                        TrainBudgetMilliNodeHours = 7404564234854750876L,
+                        TrainCostMilliNodeHours = 3319292720042833376L,
+                    },
+                    TextClassificationModelMetadata = new TextClassificationModelMetadata
+                    {
+                        ClassificationType = ClassificationType.Unspecified,
+                    },
+                    TranslationModelMetadata = new TranslationModelMetadata
+                    {
+                        BaseModel = "base_model2671f9b9",
+                        SourceLanguageCode = "source_language_code14998292",
+                        TargetLanguageCode = "target_language_code6ec12c87",
+                    },
+                    TextExtractionModelMetadata = new TextExtractionModelMetadata { },
+                    ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata
+                    {
+                        ModelType = "model_typeb6577352",
+                        NodeCount = -4047684044491192506L,
+                        NodeQps = 6.461755789497736E+17,
+                        StopReason = "stop_reason6d507fa2",
+                        TrainBudgetMilliNodeHours = 7404564234854750876L,
+                        TrainCostMilliNodeHours = 3319292720042833376L,
+                    },
+                    TextSentimentModelMetadata = new TextSentimentModelMetadata { },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Model expectedResponse = new Model
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 DisplayName = "display_name137f65c2",
                 DatasetId = "dataset_id08d366d3",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DeploymentState = Model.Types.DeploymentState.Deployed,
                 Etag = "etage8ad7218",
-                UpdateTime = new wkt::Timestamp(),
-                ImageClassificationModelMetadata = new ImageClassificationModelMetadata(),
-                TextClassificationModelMetadata = new TextClassificationModelMetadata(),
-                TranslationModelMetadata = new TranslationModelMetadata(),
-                TextExtractionModelMetadata = new TextExtractionModelMetadata(),
-                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata(),
-                TextSentimentModelMetadata = new TextSentimentModelMetadata(),
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ImageClassificationModelMetadata = new ImageClassificationModelMetadata
+                {
+                    BaseModelId = "base_model_idd5c8d7dd",
+                    StopReason = "stop_reason6d507fa2",
+                    ModelType = "model_typeb6577352",
+                    NodeQps = 6.461755789497736E+17,
+                    NodeCount = -4047684044491192506L,
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextClassificationModelMetadata = new TextClassificationModelMetadata
+                {
+                    ClassificationType = ClassificationType.Unspecified,
+                },
+                TranslationModelMetadata = new TranslationModelMetadata
+                {
+                    BaseModel = "base_model2671f9b9",
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                TextExtractionModelMetadata = new TextExtractionModelMetadata { },
+                ImageObjectDetectionModelMetadata = new ImageObjectDetectionModelMetadata
+                {
+                    ModelType = "model_typeb6577352",
+                    NodeCount = -4047684044491192506L,
+                    NodeQps = 6.461755789497736E+17,
+                    StopReason = "stop_reason6d507fa2",
+                    TrainBudgetMilliNodeHours = 7404564234854750876L,
+                    TrainCostMilliNodeHours = 3319292720042833376L,
+                },
+                TextSentimentModelMetadata = new TextSentimentModelMetadata { },
                 Labels =
                 {
                     {
@@ -977,13 +1873,130 @@ namespace Google.Cloud.AutoML.V1.Tests
             {
                 ModelEvaluationName = ModelEvaluationName.FromProjectLocationModelModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[MODEL_EVALUATION]"),
                 AnnotationSpecId = "annotation_spec_ide0c3e8b2",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EvaluatedExampleCount = -1119926106,
-                ClassificationEvaluationMetrics = new ClassificationEvaluationMetrics(),
-                TranslationEvaluationMetrics = new TranslationEvaluationMetrics(),
-                TextSentimentEvaluationMetrics = new TextSentimentEvaluationMetrics(),
-                ImageObjectDetectionEvaluationMetrics = new ImageObjectDetectionEvaluationMetrics(),
-                TextExtractionEvaluationMetrics = new TextExtractionEvaluationMetrics(),
+                ClassificationEvaluationMetrics = new ClassificationEvaluationMetrics
+                {
+                    AuPrc = 9.800126E+16F,
+                    ConfidenceMetricsEntry =
+                    {
+                        new ClassificationEvaluationMetrics.Types.ConfidenceMetricsEntry
+                        {
+                            ConfidenceThreshold = -1.11012796E+18F,
+                            Recall = -1.1387424E+18F,
+                            Precision = -1.13876186E+18F,
+                            F1Score = -3.0822623E+17F,
+                            RecallAt1 = 1.8027053E+17F,
+                            PrecisionAt1 = 1.0815272E+18F,
+                            F1ScoreAt1 = -6.61423E+17F,
+                            FalsePositiveRate = 1.1331266E+18F,
+                            FalsePositiveRateAt1 = -3.2146074E+17F,
+                            TruePositiveCount = 6709011237445073796L,
+                            FalsePositiveCount = 4595416713428318326L,
+                            FalseNegativeCount = -7267184413032145641L,
+                            TrueNegativeCount = -2991927099035670398L,
+                            PositionThreshold = 1670973180,
+                        },
+                    },
+                    ConfusionMatrix = new ClassificationEvaluationMetrics.Types.ConfusionMatrix
+                    {
+                        AnnotationSpecId =
+                        {
+                            "annotation_spec_ide0c3e8b2",
+                        },
+                        Row =
+                        {
+                            new ClassificationEvaluationMetrics.Types.ConfusionMatrix.Types.Row
+                            {
+                                ExampleCount = { -1179891861, },
+                            },
+                        },
+                        DisplayName =
+                        {
+                            "display_name137f65c2",
+                        },
+                    },
+                    AnnotationSpecId =
+                    {
+                        "annotation_spec_ide0c3e8b2",
+                    },
+                    AuRoc = -1.10463205E+18F,
+                    LogLoss = -1.0487005E+18F,
+                },
+                TranslationEvaluationMetrics = new TranslationEvaluationMetrics
+                {
+                    BleuScore = 8.410203992481295E+17,
+                    BaseBleuScore = -5.223775261125297E+17,
+                },
+                TextSentimentEvaluationMetrics = new TextSentimentEvaluationMetrics
+                {
+                    Precision = -1.13876186E+18F,
+                    Recall = -1.1387424E+18F,
+                    F1Score = -3.0822623E+17F,
+                    MeanAbsoluteError = 1.6601737E+17F,
+                    MeanSquaredError = -9.862246E+17F,
+                    LinearKappa = -3.6517165E+16F,
+                    QuadraticKappa = 2.2739895E+17F,
+                    ConfusionMatrix = new ClassificationEvaluationMetrics.Types.ConfusionMatrix
+                    {
+                        AnnotationSpecId =
+                        {
+                            "annotation_spec_ide0c3e8b2",
+                        },
+                        Row =
+                        {
+                            new ClassificationEvaluationMetrics.Types.ConfusionMatrix.Types.Row
+                            {
+                                ExampleCount = { -1179891861, },
+                            },
+                        },
+                        DisplayName =
+                        {
+                            "display_name137f65c2",
+                        },
+                    },
+                },
+                ImageObjectDetectionEvaluationMetrics = new ImageObjectDetectionEvaluationMetrics
+                {
+                    EvaluatedBoundingBoxCount = 1920165476,
+                    BoundingBoxMetricsEntries =
+                    {
+                        new BoundingBoxMetricsEntry
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                            MeanAveragePrecision = 3.3292076E+16F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new BoundingBoxMetricsEntry.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                },
+                            },
+                        },
+                    },
+                    BoundingBoxMeanAveragePrecision = -9.5812295E+17F,
+                },
+                TextExtractionEvaluationMetrics = new TextExtractionEvaluationMetrics
+                {
+                    AuPrc = 9.800126E+16F,
+                    ConfidenceMetricsEntries =
+                    {
+                        new TextExtractionEvaluationMetrics.Types.ConfidenceMetricsEntry
+                        {
+                            ConfidenceThreshold = -1.11012796E+18F,
+                            Recall = -1.1387424E+18F,
+                            Precision = -1.13876186E+18F,
+                            F1Score = -3.0822623E+17F,
+                        },
+                    },
+                },
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1006,13 +2019,130 @@ namespace Google.Cloud.AutoML.V1.Tests
             {
                 ModelEvaluationName = ModelEvaluationName.FromProjectLocationModelModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[MODEL_EVALUATION]"),
                 AnnotationSpecId = "annotation_spec_ide0c3e8b2",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EvaluatedExampleCount = -1119926106,
-                ClassificationEvaluationMetrics = new ClassificationEvaluationMetrics(),
-                TranslationEvaluationMetrics = new TranslationEvaluationMetrics(),
-                TextSentimentEvaluationMetrics = new TextSentimentEvaluationMetrics(),
-                ImageObjectDetectionEvaluationMetrics = new ImageObjectDetectionEvaluationMetrics(),
-                TextExtractionEvaluationMetrics = new TextExtractionEvaluationMetrics(),
+                ClassificationEvaluationMetrics = new ClassificationEvaluationMetrics
+                {
+                    AuPrc = 9.800126E+16F,
+                    ConfidenceMetricsEntry =
+                    {
+                        new ClassificationEvaluationMetrics.Types.ConfidenceMetricsEntry
+                        {
+                            ConfidenceThreshold = -1.11012796E+18F,
+                            Recall = -1.1387424E+18F,
+                            Precision = -1.13876186E+18F,
+                            F1Score = -3.0822623E+17F,
+                            RecallAt1 = 1.8027053E+17F,
+                            PrecisionAt1 = 1.0815272E+18F,
+                            F1ScoreAt1 = -6.61423E+17F,
+                            FalsePositiveRate = 1.1331266E+18F,
+                            FalsePositiveRateAt1 = -3.2146074E+17F,
+                            TruePositiveCount = 6709011237445073796L,
+                            FalsePositiveCount = 4595416713428318326L,
+                            FalseNegativeCount = -7267184413032145641L,
+                            TrueNegativeCount = -2991927099035670398L,
+                            PositionThreshold = 1670973180,
+                        },
+                    },
+                    ConfusionMatrix = new ClassificationEvaluationMetrics.Types.ConfusionMatrix
+                    {
+                        AnnotationSpecId =
+                        {
+                            "annotation_spec_ide0c3e8b2",
+                        },
+                        Row =
+                        {
+                            new ClassificationEvaluationMetrics.Types.ConfusionMatrix.Types.Row
+                            {
+                                ExampleCount = { -1179891861, },
+                            },
+                        },
+                        DisplayName =
+                        {
+                            "display_name137f65c2",
+                        },
+                    },
+                    AnnotationSpecId =
+                    {
+                        "annotation_spec_ide0c3e8b2",
+                    },
+                    AuRoc = -1.10463205E+18F,
+                    LogLoss = -1.0487005E+18F,
+                },
+                TranslationEvaluationMetrics = new TranslationEvaluationMetrics
+                {
+                    BleuScore = 8.410203992481295E+17,
+                    BaseBleuScore = -5.223775261125297E+17,
+                },
+                TextSentimentEvaluationMetrics = new TextSentimentEvaluationMetrics
+                {
+                    Precision = -1.13876186E+18F,
+                    Recall = -1.1387424E+18F,
+                    F1Score = -3.0822623E+17F,
+                    MeanAbsoluteError = 1.6601737E+17F,
+                    MeanSquaredError = -9.862246E+17F,
+                    LinearKappa = -3.6517165E+16F,
+                    QuadraticKappa = 2.2739895E+17F,
+                    ConfusionMatrix = new ClassificationEvaluationMetrics.Types.ConfusionMatrix
+                    {
+                        AnnotationSpecId =
+                        {
+                            "annotation_spec_ide0c3e8b2",
+                        },
+                        Row =
+                        {
+                            new ClassificationEvaluationMetrics.Types.ConfusionMatrix.Types.Row
+                            {
+                                ExampleCount = { -1179891861, },
+                            },
+                        },
+                        DisplayName =
+                        {
+                            "display_name137f65c2",
+                        },
+                    },
+                },
+                ImageObjectDetectionEvaluationMetrics = new ImageObjectDetectionEvaluationMetrics
+                {
+                    EvaluatedBoundingBoxCount = 1920165476,
+                    BoundingBoxMetricsEntries =
+                    {
+                        new BoundingBoxMetricsEntry
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                            MeanAveragePrecision = 3.3292076E+16F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new BoundingBoxMetricsEntry.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                },
+                            },
+                        },
+                    },
+                    BoundingBoxMeanAveragePrecision = -9.5812295E+17F,
+                },
+                TextExtractionEvaluationMetrics = new TextExtractionEvaluationMetrics
+                {
+                    AuPrc = 9.800126E+16F,
+                    ConfidenceMetricsEntries =
+                    {
+                        new TextExtractionEvaluationMetrics.Types.ConfidenceMetricsEntry
+                        {
+                            ConfidenceThreshold = -1.11012796E+18F,
+                            Recall = -1.1387424E+18F,
+                            Precision = -1.13876186E+18F,
+                            F1Score = -3.0822623E+17F,
+                        },
+                    },
+                },
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1037,13 +2167,130 @@ namespace Google.Cloud.AutoML.V1.Tests
             {
                 ModelEvaluationName = ModelEvaluationName.FromProjectLocationModelModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[MODEL_EVALUATION]"),
                 AnnotationSpecId = "annotation_spec_ide0c3e8b2",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EvaluatedExampleCount = -1119926106,
-                ClassificationEvaluationMetrics = new ClassificationEvaluationMetrics(),
-                TranslationEvaluationMetrics = new TranslationEvaluationMetrics(),
-                TextSentimentEvaluationMetrics = new TextSentimentEvaluationMetrics(),
-                ImageObjectDetectionEvaluationMetrics = new ImageObjectDetectionEvaluationMetrics(),
-                TextExtractionEvaluationMetrics = new TextExtractionEvaluationMetrics(),
+                ClassificationEvaluationMetrics = new ClassificationEvaluationMetrics
+                {
+                    AuPrc = 9.800126E+16F,
+                    ConfidenceMetricsEntry =
+                    {
+                        new ClassificationEvaluationMetrics.Types.ConfidenceMetricsEntry
+                        {
+                            ConfidenceThreshold = -1.11012796E+18F,
+                            Recall = -1.1387424E+18F,
+                            Precision = -1.13876186E+18F,
+                            F1Score = -3.0822623E+17F,
+                            RecallAt1 = 1.8027053E+17F,
+                            PrecisionAt1 = 1.0815272E+18F,
+                            F1ScoreAt1 = -6.61423E+17F,
+                            FalsePositiveRate = 1.1331266E+18F,
+                            FalsePositiveRateAt1 = -3.2146074E+17F,
+                            TruePositiveCount = 6709011237445073796L,
+                            FalsePositiveCount = 4595416713428318326L,
+                            FalseNegativeCount = -7267184413032145641L,
+                            TrueNegativeCount = -2991927099035670398L,
+                            PositionThreshold = 1670973180,
+                        },
+                    },
+                    ConfusionMatrix = new ClassificationEvaluationMetrics.Types.ConfusionMatrix
+                    {
+                        AnnotationSpecId =
+                        {
+                            "annotation_spec_ide0c3e8b2",
+                        },
+                        Row =
+                        {
+                            new ClassificationEvaluationMetrics.Types.ConfusionMatrix.Types.Row
+                            {
+                                ExampleCount = { -1179891861, },
+                            },
+                        },
+                        DisplayName =
+                        {
+                            "display_name137f65c2",
+                        },
+                    },
+                    AnnotationSpecId =
+                    {
+                        "annotation_spec_ide0c3e8b2",
+                    },
+                    AuRoc = -1.10463205E+18F,
+                    LogLoss = -1.0487005E+18F,
+                },
+                TranslationEvaluationMetrics = new TranslationEvaluationMetrics
+                {
+                    BleuScore = 8.410203992481295E+17,
+                    BaseBleuScore = -5.223775261125297E+17,
+                },
+                TextSentimentEvaluationMetrics = new TextSentimentEvaluationMetrics
+                {
+                    Precision = -1.13876186E+18F,
+                    Recall = -1.1387424E+18F,
+                    F1Score = -3.0822623E+17F,
+                    MeanAbsoluteError = 1.6601737E+17F,
+                    MeanSquaredError = -9.862246E+17F,
+                    LinearKappa = -3.6517165E+16F,
+                    QuadraticKappa = 2.2739895E+17F,
+                    ConfusionMatrix = new ClassificationEvaluationMetrics.Types.ConfusionMatrix
+                    {
+                        AnnotationSpecId =
+                        {
+                            "annotation_spec_ide0c3e8b2",
+                        },
+                        Row =
+                        {
+                            new ClassificationEvaluationMetrics.Types.ConfusionMatrix.Types.Row
+                            {
+                                ExampleCount = { -1179891861, },
+                            },
+                        },
+                        DisplayName =
+                        {
+                            "display_name137f65c2",
+                        },
+                    },
+                },
+                ImageObjectDetectionEvaluationMetrics = new ImageObjectDetectionEvaluationMetrics
+                {
+                    EvaluatedBoundingBoxCount = 1920165476,
+                    BoundingBoxMetricsEntries =
+                    {
+                        new BoundingBoxMetricsEntry
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                            MeanAveragePrecision = 3.3292076E+16F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new BoundingBoxMetricsEntry.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                },
+                            },
+                        },
+                    },
+                    BoundingBoxMeanAveragePrecision = -9.5812295E+17F,
+                },
+                TextExtractionEvaluationMetrics = new TextExtractionEvaluationMetrics
+                {
+                    AuPrc = 9.800126E+16F,
+                    ConfidenceMetricsEntries =
+                    {
+                        new TextExtractionEvaluationMetrics.Types.ConfidenceMetricsEntry
+                        {
+                            ConfidenceThreshold = -1.11012796E+18F,
+                            Recall = -1.1387424E+18F,
+                            Precision = -1.13876186E+18F,
+                            F1Score = -3.0822623E+17F,
+                        },
+                    },
+                },
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1066,13 +2313,130 @@ namespace Google.Cloud.AutoML.V1.Tests
             {
                 ModelEvaluationName = ModelEvaluationName.FromProjectLocationModelModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[MODEL_EVALUATION]"),
                 AnnotationSpecId = "annotation_spec_ide0c3e8b2",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EvaluatedExampleCount = -1119926106,
-                ClassificationEvaluationMetrics = new ClassificationEvaluationMetrics(),
-                TranslationEvaluationMetrics = new TranslationEvaluationMetrics(),
-                TextSentimentEvaluationMetrics = new TextSentimentEvaluationMetrics(),
-                ImageObjectDetectionEvaluationMetrics = new ImageObjectDetectionEvaluationMetrics(),
-                TextExtractionEvaluationMetrics = new TextExtractionEvaluationMetrics(),
+                ClassificationEvaluationMetrics = new ClassificationEvaluationMetrics
+                {
+                    AuPrc = 9.800126E+16F,
+                    ConfidenceMetricsEntry =
+                    {
+                        new ClassificationEvaluationMetrics.Types.ConfidenceMetricsEntry
+                        {
+                            ConfidenceThreshold = -1.11012796E+18F,
+                            Recall = -1.1387424E+18F,
+                            Precision = -1.13876186E+18F,
+                            F1Score = -3.0822623E+17F,
+                            RecallAt1 = 1.8027053E+17F,
+                            PrecisionAt1 = 1.0815272E+18F,
+                            F1ScoreAt1 = -6.61423E+17F,
+                            FalsePositiveRate = 1.1331266E+18F,
+                            FalsePositiveRateAt1 = -3.2146074E+17F,
+                            TruePositiveCount = 6709011237445073796L,
+                            FalsePositiveCount = 4595416713428318326L,
+                            FalseNegativeCount = -7267184413032145641L,
+                            TrueNegativeCount = -2991927099035670398L,
+                            PositionThreshold = 1670973180,
+                        },
+                    },
+                    ConfusionMatrix = new ClassificationEvaluationMetrics.Types.ConfusionMatrix
+                    {
+                        AnnotationSpecId =
+                        {
+                            "annotation_spec_ide0c3e8b2",
+                        },
+                        Row =
+                        {
+                            new ClassificationEvaluationMetrics.Types.ConfusionMatrix.Types.Row
+                            {
+                                ExampleCount = { -1179891861, },
+                            },
+                        },
+                        DisplayName =
+                        {
+                            "display_name137f65c2",
+                        },
+                    },
+                    AnnotationSpecId =
+                    {
+                        "annotation_spec_ide0c3e8b2",
+                    },
+                    AuRoc = -1.10463205E+18F,
+                    LogLoss = -1.0487005E+18F,
+                },
+                TranslationEvaluationMetrics = new TranslationEvaluationMetrics
+                {
+                    BleuScore = 8.410203992481295E+17,
+                    BaseBleuScore = -5.223775261125297E+17,
+                },
+                TextSentimentEvaluationMetrics = new TextSentimentEvaluationMetrics
+                {
+                    Precision = -1.13876186E+18F,
+                    Recall = -1.1387424E+18F,
+                    F1Score = -3.0822623E+17F,
+                    MeanAbsoluteError = 1.6601737E+17F,
+                    MeanSquaredError = -9.862246E+17F,
+                    LinearKappa = -3.6517165E+16F,
+                    QuadraticKappa = 2.2739895E+17F,
+                    ConfusionMatrix = new ClassificationEvaluationMetrics.Types.ConfusionMatrix
+                    {
+                        AnnotationSpecId =
+                        {
+                            "annotation_spec_ide0c3e8b2",
+                        },
+                        Row =
+                        {
+                            new ClassificationEvaluationMetrics.Types.ConfusionMatrix.Types.Row
+                            {
+                                ExampleCount = { -1179891861, },
+                            },
+                        },
+                        DisplayName =
+                        {
+                            "display_name137f65c2",
+                        },
+                    },
+                },
+                ImageObjectDetectionEvaluationMetrics = new ImageObjectDetectionEvaluationMetrics
+                {
+                    EvaluatedBoundingBoxCount = 1920165476,
+                    BoundingBoxMetricsEntries =
+                    {
+                        new BoundingBoxMetricsEntry
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                            MeanAveragePrecision = 3.3292076E+16F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new BoundingBoxMetricsEntry.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                },
+                            },
+                        },
+                    },
+                    BoundingBoxMeanAveragePrecision = -9.5812295E+17F,
+                },
+                TextExtractionEvaluationMetrics = new TextExtractionEvaluationMetrics
+                {
+                    AuPrc = 9.800126E+16F,
+                    ConfidenceMetricsEntries =
+                    {
+                        new TextExtractionEvaluationMetrics.Types.ConfidenceMetricsEntry
+                        {
+                            ConfidenceThreshold = -1.11012796E+18F,
+                            Recall = -1.1387424E+18F,
+                            Precision = -1.13876186E+18F,
+                            F1Score = -3.0822623E+17F,
+                        },
+                    },
+                },
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1097,13 +2461,130 @@ namespace Google.Cloud.AutoML.V1.Tests
             {
                 ModelEvaluationName = ModelEvaluationName.FromProjectLocationModelModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[MODEL_EVALUATION]"),
                 AnnotationSpecId = "annotation_spec_ide0c3e8b2",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EvaluatedExampleCount = -1119926106,
-                ClassificationEvaluationMetrics = new ClassificationEvaluationMetrics(),
-                TranslationEvaluationMetrics = new TranslationEvaluationMetrics(),
-                TextSentimentEvaluationMetrics = new TextSentimentEvaluationMetrics(),
-                ImageObjectDetectionEvaluationMetrics = new ImageObjectDetectionEvaluationMetrics(),
-                TextExtractionEvaluationMetrics = new TextExtractionEvaluationMetrics(),
+                ClassificationEvaluationMetrics = new ClassificationEvaluationMetrics
+                {
+                    AuPrc = 9.800126E+16F,
+                    ConfidenceMetricsEntry =
+                    {
+                        new ClassificationEvaluationMetrics.Types.ConfidenceMetricsEntry
+                        {
+                            ConfidenceThreshold = -1.11012796E+18F,
+                            Recall = -1.1387424E+18F,
+                            Precision = -1.13876186E+18F,
+                            F1Score = -3.0822623E+17F,
+                            RecallAt1 = 1.8027053E+17F,
+                            PrecisionAt1 = 1.0815272E+18F,
+                            F1ScoreAt1 = -6.61423E+17F,
+                            FalsePositiveRate = 1.1331266E+18F,
+                            FalsePositiveRateAt1 = -3.2146074E+17F,
+                            TruePositiveCount = 6709011237445073796L,
+                            FalsePositiveCount = 4595416713428318326L,
+                            FalseNegativeCount = -7267184413032145641L,
+                            TrueNegativeCount = -2991927099035670398L,
+                            PositionThreshold = 1670973180,
+                        },
+                    },
+                    ConfusionMatrix = new ClassificationEvaluationMetrics.Types.ConfusionMatrix
+                    {
+                        AnnotationSpecId =
+                        {
+                            "annotation_spec_ide0c3e8b2",
+                        },
+                        Row =
+                        {
+                            new ClassificationEvaluationMetrics.Types.ConfusionMatrix.Types.Row
+                            {
+                                ExampleCount = { -1179891861, },
+                            },
+                        },
+                        DisplayName =
+                        {
+                            "display_name137f65c2",
+                        },
+                    },
+                    AnnotationSpecId =
+                    {
+                        "annotation_spec_ide0c3e8b2",
+                    },
+                    AuRoc = -1.10463205E+18F,
+                    LogLoss = -1.0487005E+18F,
+                },
+                TranslationEvaluationMetrics = new TranslationEvaluationMetrics
+                {
+                    BleuScore = 8.410203992481295E+17,
+                    BaseBleuScore = -5.223775261125297E+17,
+                },
+                TextSentimentEvaluationMetrics = new TextSentimentEvaluationMetrics
+                {
+                    Precision = -1.13876186E+18F,
+                    Recall = -1.1387424E+18F,
+                    F1Score = -3.0822623E+17F,
+                    MeanAbsoluteError = 1.6601737E+17F,
+                    MeanSquaredError = -9.862246E+17F,
+                    LinearKappa = -3.6517165E+16F,
+                    QuadraticKappa = 2.2739895E+17F,
+                    ConfusionMatrix = new ClassificationEvaluationMetrics.Types.ConfusionMatrix
+                    {
+                        AnnotationSpecId =
+                        {
+                            "annotation_spec_ide0c3e8b2",
+                        },
+                        Row =
+                        {
+                            new ClassificationEvaluationMetrics.Types.ConfusionMatrix.Types.Row
+                            {
+                                ExampleCount = { -1179891861, },
+                            },
+                        },
+                        DisplayName =
+                        {
+                            "display_name137f65c2",
+                        },
+                    },
+                },
+                ImageObjectDetectionEvaluationMetrics = new ImageObjectDetectionEvaluationMetrics
+                {
+                    EvaluatedBoundingBoxCount = 1920165476,
+                    BoundingBoxMetricsEntries =
+                    {
+                        new BoundingBoxMetricsEntry
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                            MeanAveragePrecision = 3.3292076E+16F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new BoundingBoxMetricsEntry.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                },
+                            },
+                        },
+                    },
+                    BoundingBoxMeanAveragePrecision = -9.5812295E+17F,
+                },
+                TextExtractionEvaluationMetrics = new TextExtractionEvaluationMetrics
+                {
+                    AuPrc = 9.800126E+16F,
+                    ConfidenceMetricsEntries =
+                    {
+                        new TextExtractionEvaluationMetrics.Types.ConfidenceMetricsEntry
+                        {
+                            ConfidenceThreshold = -1.11012796E+18F,
+                            Recall = -1.1387424E+18F,
+                            Precision = -1.13876186E+18F,
+                            F1Score = -3.0822623E+17F,
+                        },
+                    },
+                },
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1126,13 +2607,130 @@ namespace Google.Cloud.AutoML.V1.Tests
             {
                 ModelEvaluationName = ModelEvaluationName.FromProjectLocationModelModelEvaluation("[PROJECT]", "[LOCATION]", "[MODEL]", "[MODEL_EVALUATION]"),
                 AnnotationSpecId = "annotation_spec_ide0c3e8b2",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EvaluatedExampleCount = -1119926106,
-                ClassificationEvaluationMetrics = new ClassificationEvaluationMetrics(),
-                TranslationEvaluationMetrics = new TranslationEvaluationMetrics(),
-                TextSentimentEvaluationMetrics = new TextSentimentEvaluationMetrics(),
-                ImageObjectDetectionEvaluationMetrics = new ImageObjectDetectionEvaluationMetrics(),
-                TextExtractionEvaluationMetrics = new TextExtractionEvaluationMetrics(),
+                ClassificationEvaluationMetrics = new ClassificationEvaluationMetrics
+                {
+                    AuPrc = 9.800126E+16F,
+                    ConfidenceMetricsEntry =
+                    {
+                        new ClassificationEvaluationMetrics.Types.ConfidenceMetricsEntry
+                        {
+                            ConfidenceThreshold = -1.11012796E+18F,
+                            Recall = -1.1387424E+18F,
+                            Precision = -1.13876186E+18F,
+                            F1Score = -3.0822623E+17F,
+                            RecallAt1 = 1.8027053E+17F,
+                            PrecisionAt1 = 1.0815272E+18F,
+                            F1ScoreAt1 = -6.61423E+17F,
+                            FalsePositiveRate = 1.1331266E+18F,
+                            FalsePositiveRateAt1 = -3.2146074E+17F,
+                            TruePositiveCount = 6709011237445073796L,
+                            FalsePositiveCount = 4595416713428318326L,
+                            FalseNegativeCount = -7267184413032145641L,
+                            TrueNegativeCount = -2991927099035670398L,
+                            PositionThreshold = 1670973180,
+                        },
+                    },
+                    ConfusionMatrix = new ClassificationEvaluationMetrics.Types.ConfusionMatrix
+                    {
+                        AnnotationSpecId =
+                        {
+                            "annotation_spec_ide0c3e8b2",
+                        },
+                        Row =
+                        {
+                            new ClassificationEvaluationMetrics.Types.ConfusionMatrix.Types.Row
+                            {
+                                ExampleCount = { -1179891861, },
+                            },
+                        },
+                        DisplayName =
+                        {
+                            "display_name137f65c2",
+                        },
+                    },
+                    AnnotationSpecId =
+                    {
+                        "annotation_spec_ide0c3e8b2",
+                    },
+                    AuRoc = -1.10463205E+18F,
+                    LogLoss = -1.0487005E+18F,
+                },
+                TranslationEvaluationMetrics = new TranslationEvaluationMetrics
+                {
+                    BleuScore = 8.410203992481295E+17,
+                    BaseBleuScore = -5.223775261125297E+17,
+                },
+                TextSentimentEvaluationMetrics = new TextSentimentEvaluationMetrics
+                {
+                    Precision = -1.13876186E+18F,
+                    Recall = -1.1387424E+18F,
+                    F1Score = -3.0822623E+17F,
+                    MeanAbsoluteError = 1.6601737E+17F,
+                    MeanSquaredError = -9.862246E+17F,
+                    LinearKappa = -3.6517165E+16F,
+                    QuadraticKappa = 2.2739895E+17F,
+                    ConfusionMatrix = new ClassificationEvaluationMetrics.Types.ConfusionMatrix
+                    {
+                        AnnotationSpecId =
+                        {
+                            "annotation_spec_ide0c3e8b2",
+                        },
+                        Row =
+                        {
+                            new ClassificationEvaluationMetrics.Types.ConfusionMatrix.Types.Row
+                            {
+                                ExampleCount = { -1179891861, },
+                            },
+                        },
+                        DisplayName =
+                        {
+                            "display_name137f65c2",
+                        },
+                    },
+                },
+                ImageObjectDetectionEvaluationMetrics = new ImageObjectDetectionEvaluationMetrics
+                {
+                    EvaluatedBoundingBoxCount = 1920165476,
+                    BoundingBoxMetricsEntries =
+                    {
+                        new BoundingBoxMetricsEntry
+                        {
+                            IouThreshold = -2.1410331E+17F,
+                            MeanAveragePrecision = 3.3292076E+16F,
+                            ConfidenceMetricsEntries =
+                            {
+                                new BoundingBoxMetricsEntry.Types.ConfidenceMetricsEntry
+                                {
+                                    ConfidenceThreshold = -1.11012796E+18F,
+                                    Recall = -1.1387424E+18F,
+                                    Precision = -1.13876186E+18F,
+                                    F1Score = -3.0822623E+17F,
+                                },
+                            },
+                        },
+                    },
+                    BoundingBoxMeanAveragePrecision = -9.5812295E+17F,
+                },
+                TextExtractionEvaluationMetrics = new TextExtractionEvaluationMetrics
+                {
+                    AuPrc = 9.800126E+16F,
+                    ConfidenceMetricsEntries =
+                    {
+                        new TextExtractionEvaluationMetrics.Types.ConfidenceMetricsEntry
+                        {
+                            ConfidenceThreshold = -1.11012796E+18F,
+                            Recall = -1.1387424E+18F,
+                            Precision = -1.13876186E+18F,
+                            F1Score = -3.0822623E+17F,
+                        },
+                    },
+                },
                 DisplayName = "display_name137f65c2",
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));

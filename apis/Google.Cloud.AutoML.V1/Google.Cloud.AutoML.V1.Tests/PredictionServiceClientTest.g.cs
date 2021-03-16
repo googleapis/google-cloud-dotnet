@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -35,7 +36,71 @@ namespace Google.Cloud.AutoML.V1.Tests
             PredictRequest request = new PredictRequest
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
-                Payload = new ExamplePayload(),
+                Payload = new ExamplePayload
+                {
+                    Image = new Image
+                    {
+                        ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                        ThumbnailUri = "thumbnail_urie7bd82de",
+                    },
+                    TextSnippet = new TextSnippet
+                    {
+                        Content = "contentb964039a",
+                        MimeType = "mime_type606a0ffc",
+                        ContentUri = "content_uriaf560198",
+                    },
+                    Document = new Document
+                    {
+                        InputConfig = new DocumentInputConfig
+                        {
+                            GcsSource = new GcsSource
+                            {
+                                InputUris =
+                                {
+                                    "input_urisd64c3b58",
+                                },
+                            },
+                        },
+                        DocumentText = new TextSnippet
+                        {
+                            Content = "contentb964039a",
+                            MimeType = "mime_type606a0ffc",
+                            ContentUri = "content_uriaf560198",
+                        },
+                        Layout =
+                        {
+                            new Document.Types.Layout
+                            {
+                                TextSegment = new TextSegment
+                                {
+                                    StartOffset = 6160653193643117332L,
+                                    EndOffset = -5902643571191717951L,
+                                    Content = "contentb964039a",
+                                },
+                                PageNumber = 291687312,
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                                TextSegmentType = Document.Types.Layout.Types.TextSegmentType.FormFieldName,
+                            },
+                        },
+                        DocumentDimensions = new DocumentDimensions
+                        {
+                            Unit = DocumentDimensions.Types.DocumentDimensionUnit.Centimeter,
+                            Width = 5.667896E+17F,
+                            Height = 2.7137237E+17F,
+                        },
+                        PageCount = 1114157676,
+                    },
+                },
                 Params =
                 {
                     {
@@ -48,7 +113,53 @@ namespace Google.Cloud.AutoML.V1.Tests
             {
                 Payload =
                 {
-                    new AnnotationPayload(),
+                    new AnnotationPayload
+                    {
+                        AnnotationSpecId = "annotation_spec_ide0c3e8b2",
+                        Translation = new TranslationAnnotation
+                        {
+                            TranslatedContent = new TextSnippet
+                            {
+                                Content = "contentb964039a",
+                                MimeType = "mime_type606a0ffc",
+                                ContentUri = "content_uriaf560198",
+                            },
+                        },
+                        Classification = new ClassificationAnnotation
+                        {
+                            Score = -5.80354E+17F,
+                        },
+                        ImageObjectDetection = new ImageObjectDetectionAnnotation
+                        {
+                            BoundingBox = new BoundingPoly
+                            {
+                                NormalizedVertices =
+                                {
+                                    new NormalizedVertex
+                                    {
+                                        X = 4.7289724E+17F,
+                                        Y = 1.2858411E+17F,
+                                    },
+                                },
+                            },
+                            Score = -5.80354E+17F,
+                        },
+                        DisplayName = "display_name137f65c2",
+                        TextExtraction = new TextExtractionAnnotation
+                        {
+                            Score = -5.80354E+17F,
+                            TextSegment = new TextSegment
+                            {
+                                StartOffset = 6160653193643117332L,
+                                EndOffset = -5902643571191717951L,
+                                Content = "contentb964039a",
+                            },
+                        },
+                        TextSentiment = new TextSentimentAnnotation
+                        {
+                            Sentiment = 364187332,
+                        },
+                    },
                 },
                 Metadata =
                 {
@@ -57,7 +168,71 @@ namespace Google.Cloud.AutoML.V1.Tests
                         "value60c16320"
                     },
                 },
-                PreprocessedInput = new ExamplePayload(),
+                PreprocessedInput = new ExamplePayload
+                {
+                    Image = new Image
+                    {
+                        ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                        ThumbnailUri = "thumbnail_urie7bd82de",
+                    },
+                    TextSnippet = new TextSnippet
+                    {
+                        Content = "contentb964039a",
+                        MimeType = "mime_type606a0ffc",
+                        ContentUri = "content_uriaf560198",
+                    },
+                    Document = new Document
+                    {
+                        InputConfig = new DocumentInputConfig
+                        {
+                            GcsSource = new GcsSource
+                            {
+                                InputUris =
+                                {
+                                    "input_urisd64c3b58",
+                                },
+                            },
+                        },
+                        DocumentText = new TextSnippet
+                        {
+                            Content = "contentb964039a",
+                            MimeType = "mime_type606a0ffc",
+                            ContentUri = "content_uriaf560198",
+                        },
+                        Layout =
+                        {
+                            new Document.Types.Layout
+                            {
+                                TextSegment = new TextSegment
+                                {
+                                    StartOffset = 6160653193643117332L,
+                                    EndOffset = -5902643571191717951L,
+                                    Content = "contentb964039a",
+                                },
+                                PageNumber = 291687312,
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                                TextSegmentType = Document.Types.Layout.Types.TextSegmentType.FormFieldName,
+                            },
+                        },
+                        DocumentDimensions = new DocumentDimensions
+                        {
+                            Unit = DocumentDimensions.Types.DocumentDimensionUnit.Centimeter,
+                            Width = 5.667896E+17F,
+                            Height = 2.7137237E+17F,
+                        },
+                        PageCount = 1114157676,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.Predict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
@@ -74,7 +249,71 @@ namespace Google.Cloud.AutoML.V1.Tests
             PredictRequest request = new PredictRequest
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
-                Payload = new ExamplePayload(),
+                Payload = new ExamplePayload
+                {
+                    Image = new Image
+                    {
+                        ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                        ThumbnailUri = "thumbnail_urie7bd82de",
+                    },
+                    TextSnippet = new TextSnippet
+                    {
+                        Content = "contentb964039a",
+                        MimeType = "mime_type606a0ffc",
+                        ContentUri = "content_uriaf560198",
+                    },
+                    Document = new Document
+                    {
+                        InputConfig = new DocumentInputConfig
+                        {
+                            GcsSource = new GcsSource
+                            {
+                                InputUris =
+                                {
+                                    "input_urisd64c3b58",
+                                },
+                            },
+                        },
+                        DocumentText = new TextSnippet
+                        {
+                            Content = "contentb964039a",
+                            MimeType = "mime_type606a0ffc",
+                            ContentUri = "content_uriaf560198",
+                        },
+                        Layout =
+                        {
+                            new Document.Types.Layout
+                            {
+                                TextSegment = new TextSegment
+                                {
+                                    StartOffset = 6160653193643117332L,
+                                    EndOffset = -5902643571191717951L,
+                                    Content = "contentb964039a",
+                                },
+                                PageNumber = 291687312,
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                                TextSegmentType = Document.Types.Layout.Types.TextSegmentType.FormFieldName,
+                            },
+                        },
+                        DocumentDimensions = new DocumentDimensions
+                        {
+                            Unit = DocumentDimensions.Types.DocumentDimensionUnit.Centimeter,
+                            Width = 5.667896E+17F,
+                            Height = 2.7137237E+17F,
+                        },
+                        PageCount = 1114157676,
+                    },
+                },
                 Params =
                 {
                     {
@@ -87,7 +326,53 @@ namespace Google.Cloud.AutoML.V1.Tests
             {
                 Payload =
                 {
-                    new AnnotationPayload(),
+                    new AnnotationPayload
+                    {
+                        AnnotationSpecId = "annotation_spec_ide0c3e8b2",
+                        Translation = new TranslationAnnotation
+                        {
+                            TranslatedContent = new TextSnippet
+                            {
+                                Content = "contentb964039a",
+                                MimeType = "mime_type606a0ffc",
+                                ContentUri = "content_uriaf560198",
+                            },
+                        },
+                        Classification = new ClassificationAnnotation
+                        {
+                            Score = -5.80354E+17F,
+                        },
+                        ImageObjectDetection = new ImageObjectDetectionAnnotation
+                        {
+                            BoundingBox = new BoundingPoly
+                            {
+                                NormalizedVertices =
+                                {
+                                    new NormalizedVertex
+                                    {
+                                        X = 4.7289724E+17F,
+                                        Y = 1.2858411E+17F,
+                                    },
+                                },
+                            },
+                            Score = -5.80354E+17F,
+                        },
+                        DisplayName = "display_name137f65c2",
+                        TextExtraction = new TextExtractionAnnotation
+                        {
+                            Score = -5.80354E+17F,
+                            TextSegment = new TextSegment
+                            {
+                                StartOffset = 6160653193643117332L,
+                                EndOffset = -5902643571191717951L,
+                                Content = "contentb964039a",
+                            },
+                        },
+                        TextSentiment = new TextSentimentAnnotation
+                        {
+                            Sentiment = 364187332,
+                        },
+                    },
                 },
                 Metadata =
                 {
@@ -96,7 +381,71 @@ namespace Google.Cloud.AutoML.V1.Tests
                         "value60c16320"
                     },
                 },
-                PreprocessedInput = new ExamplePayload(),
+                PreprocessedInput = new ExamplePayload
+                {
+                    Image = new Image
+                    {
+                        ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                        ThumbnailUri = "thumbnail_urie7bd82de",
+                    },
+                    TextSnippet = new TextSnippet
+                    {
+                        Content = "contentb964039a",
+                        MimeType = "mime_type606a0ffc",
+                        ContentUri = "content_uriaf560198",
+                    },
+                    Document = new Document
+                    {
+                        InputConfig = new DocumentInputConfig
+                        {
+                            GcsSource = new GcsSource
+                            {
+                                InputUris =
+                                {
+                                    "input_urisd64c3b58",
+                                },
+                            },
+                        },
+                        DocumentText = new TextSnippet
+                        {
+                            Content = "contentb964039a",
+                            MimeType = "mime_type606a0ffc",
+                            ContentUri = "content_uriaf560198",
+                        },
+                        Layout =
+                        {
+                            new Document.Types.Layout
+                            {
+                                TextSegment = new TextSegment
+                                {
+                                    StartOffset = 6160653193643117332L,
+                                    EndOffset = -5902643571191717951L,
+                                    Content = "contentb964039a",
+                                },
+                                PageNumber = 291687312,
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                                TextSegmentType = Document.Types.Layout.Types.TextSegmentType.FormFieldName,
+                            },
+                        },
+                        DocumentDimensions = new DocumentDimensions
+                        {
+                            Unit = DocumentDimensions.Types.DocumentDimensionUnit.Centimeter,
+                            Width = 5.667896E+17F,
+                            Height = 2.7137237E+17F,
+                        },
+                        PageCount = 1114157676,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.PredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
@@ -115,7 +464,71 @@ namespace Google.Cloud.AutoML.V1.Tests
             PredictRequest request = new PredictRequest
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
-                Payload = new ExamplePayload(),
+                Payload = new ExamplePayload
+                {
+                    Image = new Image
+                    {
+                        ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                        ThumbnailUri = "thumbnail_urie7bd82de",
+                    },
+                    TextSnippet = new TextSnippet
+                    {
+                        Content = "contentb964039a",
+                        MimeType = "mime_type606a0ffc",
+                        ContentUri = "content_uriaf560198",
+                    },
+                    Document = new Document
+                    {
+                        InputConfig = new DocumentInputConfig
+                        {
+                            GcsSource = new GcsSource
+                            {
+                                InputUris =
+                                {
+                                    "input_urisd64c3b58",
+                                },
+                            },
+                        },
+                        DocumentText = new TextSnippet
+                        {
+                            Content = "contentb964039a",
+                            MimeType = "mime_type606a0ffc",
+                            ContentUri = "content_uriaf560198",
+                        },
+                        Layout =
+                        {
+                            new Document.Types.Layout
+                            {
+                                TextSegment = new TextSegment
+                                {
+                                    StartOffset = 6160653193643117332L,
+                                    EndOffset = -5902643571191717951L,
+                                    Content = "contentb964039a",
+                                },
+                                PageNumber = 291687312,
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                                TextSegmentType = Document.Types.Layout.Types.TextSegmentType.FormFieldName,
+                            },
+                        },
+                        DocumentDimensions = new DocumentDimensions
+                        {
+                            Unit = DocumentDimensions.Types.DocumentDimensionUnit.Centimeter,
+                            Width = 5.667896E+17F,
+                            Height = 2.7137237E+17F,
+                        },
+                        PageCount = 1114157676,
+                    },
+                },
                 Params =
                 {
                     {
@@ -128,7 +541,53 @@ namespace Google.Cloud.AutoML.V1.Tests
             {
                 Payload =
                 {
-                    new AnnotationPayload(),
+                    new AnnotationPayload
+                    {
+                        AnnotationSpecId = "annotation_spec_ide0c3e8b2",
+                        Translation = new TranslationAnnotation
+                        {
+                            TranslatedContent = new TextSnippet
+                            {
+                                Content = "contentb964039a",
+                                MimeType = "mime_type606a0ffc",
+                                ContentUri = "content_uriaf560198",
+                            },
+                        },
+                        Classification = new ClassificationAnnotation
+                        {
+                            Score = -5.80354E+17F,
+                        },
+                        ImageObjectDetection = new ImageObjectDetectionAnnotation
+                        {
+                            BoundingBox = new BoundingPoly
+                            {
+                                NormalizedVertices =
+                                {
+                                    new NormalizedVertex
+                                    {
+                                        X = 4.7289724E+17F,
+                                        Y = 1.2858411E+17F,
+                                    },
+                                },
+                            },
+                            Score = -5.80354E+17F,
+                        },
+                        DisplayName = "display_name137f65c2",
+                        TextExtraction = new TextExtractionAnnotation
+                        {
+                            Score = -5.80354E+17F,
+                            TextSegment = new TextSegment
+                            {
+                                StartOffset = 6160653193643117332L,
+                                EndOffset = -5902643571191717951L,
+                                Content = "contentb964039a",
+                            },
+                        },
+                        TextSentiment = new TextSentimentAnnotation
+                        {
+                            Sentiment = 364187332,
+                        },
+                    },
                 },
                 Metadata =
                 {
@@ -137,7 +596,71 @@ namespace Google.Cloud.AutoML.V1.Tests
                         "value60c16320"
                     },
                 },
-                PreprocessedInput = new ExamplePayload(),
+                PreprocessedInput = new ExamplePayload
+                {
+                    Image = new Image
+                    {
+                        ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                        ThumbnailUri = "thumbnail_urie7bd82de",
+                    },
+                    TextSnippet = new TextSnippet
+                    {
+                        Content = "contentb964039a",
+                        MimeType = "mime_type606a0ffc",
+                        ContentUri = "content_uriaf560198",
+                    },
+                    Document = new Document
+                    {
+                        InputConfig = new DocumentInputConfig
+                        {
+                            GcsSource = new GcsSource
+                            {
+                                InputUris =
+                                {
+                                    "input_urisd64c3b58",
+                                },
+                            },
+                        },
+                        DocumentText = new TextSnippet
+                        {
+                            Content = "contentb964039a",
+                            MimeType = "mime_type606a0ffc",
+                            ContentUri = "content_uriaf560198",
+                        },
+                        Layout =
+                        {
+                            new Document.Types.Layout
+                            {
+                                TextSegment = new TextSegment
+                                {
+                                    StartOffset = 6160653193643117332L,
+                                    EndOffset = -5902643571191717951L,
+                                    Content = "contentb964039a",
+                                },
+                                PageNumber = 291687312,
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                                TextSegmentType = Document.Types.Layout.Types.TextSegmentType.FormFieldName,
+                            },
+                        },
+                        DocumentDimensions = new DocumentDimensions
+                        {
+                            Unit = DocumentDimensions.Types.DocumentDimensionUnit.Centimeter,
+                            Width = 5.667896E+17F,
+                            Height = 2.7137237E+17F,
+                        },
+                        PageCount = 1114157676,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.Predict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
@@ -154,7 +677,71 @@ namespace Google.Cloud.AutoML.V1.Tests
             PredictRequest request = new PredictRequest
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
-                Payload = new ExamplePayload(),
+                Payload = new ExamplePayload
+                {
+                    Image = new Image
+                    {
+                        ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                        ThumbnailUri = "thumbnail_urie7bd82de",
+                    },
+                    TextSnippet = new TextSnippet
+                    {
+                        Content = "contentb964039a",
+                        MimeType = "mime_type606a0ffc",
+                        ContentUri = "content_uriaf560198",
+                    },
+                    Document = new Document
+                    {
+                        InputConfig = new DocumentInputConfig
+                        {
+                            GcsSource = new GcsSource
+                            {
+                                InputUris =
+                                {
+                                    "input_urisd64c3b58",
+                                },
+                            },
+                        },
+                        DocumentText = new TextSnippet
+                        {
+                            Content = "contentb964039a",
+                            MimeType = "mime_type606a0ffc",
+                            ContentUri = "content_uriaf560198",
+                        },
+                        Layout =
+                        {
+                            new Document.Types.Layout
+                            {
+                                TextSegment = new TextSegment
+                                {
+                                    StartOffset = 6160653193643117332L,
+                                    EndOffset = -5902643571191717951L,
+                                    Content = "contentb964039a",
+                                },
+                                PageNumber = 291687312,
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                                TextSegmentType = Document.Types.Layout.Types.TextSegmentType.FormFieldName,
+                            },
+                        },
+                        DocumentDimensions = new DocumentDimensions
+                        {
+                            Unit = DocumentDimensions.Types.DocumentDimensionUnit.Centimeter,
+                            Width = 5.667896E+17F,
+                            Height = 2.7137237E+17F,
+                        },
+                        PageCount = 1114157676,
+                    },
+                },
                 Params =
                 {
                     {
@@ -167,7 +754,53 @@ namespace Google.Cloud.AutoML.V1.Tests
             {
                 Payload =
                 {
-                    new AnnotationPayload(),
+                    new AnnotationPayload
+                    {
+                        AnnotationSpecId = "annotation_spec_ide0c3e8b2",
+                        Translation = new TranslationAnnotation
+                        {
+                            TranslatedContent = new TextSnippet
+                            {
+                                Content = "contentb964039a",
+                                MimeType = "mime_type606a0ffc",
+                                ContentUri = "content_uriaf560198",
+                            },
+                        },
+                        Classification = new ClassificationAnnotation
+                        {
+                            Score = -5.80354E+17F,
+                        },
+                        ImageObjectDetection = new ImageObjectDetectionAnnotation
+                        {
+                            BoundingBox = new BoundingPoly
+                            {
+                                NormalizedVertices =
+                                {
+                                    new NormalizedVertex
+                                    {
+                                        X = 4.7289724E+17F,
+                                        Y = 1.2858411E+17F,
+                                    },
+                                },
+                            },
+                            Score = -5.80354E+17F,
+                        },
+                        DisplayName = "display_name137f65c2",
+                        TextExtraction = new TextExtractionAnnotation
+                        {
+                            Score = -5.80354E+17F,
+                            TextSegment = new TextSegment
+                            {
+                                StartOffset = 6160653193643117332L,
+                                EndOffset = -5902643571191717951L,
+                                Content = "contentb964039a",
+                            },
+                        },
+                        TextSentiment = new TextSentimentAnnotation
+                        {
+                            Sentiment = 364187332,
+                        },
+                    },
                 },
                 Metadata =
                 {
@@ -176,7 +809,71 @@ namespace Google.Cloud.AutoML.V1.Tests
                         "value60c16320"
                     },
                 },
-                PreprocessedInput = new ExamplePayload(),
+                PreprocessedInput = new ExamplePayload
+                {
+                    Image = new Image
+                    {
+                        ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                        ThumbnailUri = "thumbnail_urie7bd82de",
+                    },
+                    TextSnippet = new TextSnippet
+                    {
+                        Content = "contentb964039a",
+                        MimeType = "mime_type606a0ffc",
+                        ContentUri = "content_uriaf560198",
+                    },
+                    Document = new Document
+                    {
+                        InputConfig = new DocumentInputConfig
+                        {
+                            GcsSource = new GcsSource
+                            {
+                                InputUris =
+                                {
+                                    "input_urisd64c3b58",
+                                },
+                            },
+                        },
+                        DocumentText = new TextSnippet
+                        {
+                            Content = "contentb964039a",
+                            MimeType = "mime_type606a0ffc",
+                            ContentUri = "content_uriaf560198",
+                        },
+                        Layout =
+                        {
+                            new Document.Types.Layout
+                            {
+                                TextSegment = new TextSegment
+                                {
+                                    StartOffset = 6160653193643117332L,
+                                    EndOffset = -5902643571191717951L,
+                                    Content = "contentb964039a",
+                                },
+                                PageNumber = 291687312,
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                                TextSegmentType = Document.Types.Layout.Types.TextSegmentType.FormFieldName,
+                            },
+                        },
+                        DocumentDimensions = new DocumentDimensions
+                        {
+                            Unit = DocumentDimensions.Types.DocumentDimensionUnit.Centimeter,
+                            Width = 5.667896E+17F,
+                            Height = 2.7137237E+17F,
+                        },
+                        PageCount = 1114157676,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.PredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
@@ -195,7 +892,71 @@ namespace Google.Cloud.AutoML.V1.Tests
             PredictRequest request = new PredictRequest
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
-                Payload = new ExamplePayload(),
+                Payload = new ExamplePayload
+                {
+                    Image = new Image
+                    {
+                        ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                        ThumbnailUri = "thumbnail_urie7bd82de",
+                    },
+                    TextSnippet = new TextSnippet
+                    {
+                        Content = "contentb964039a",
+                        MimeType = "mime_type606a0ffc",
+                        ContentUri = "content_uriaf560198",
+                    },
+                    Document = new Document
+                    {
+                        InputConfig = new DocumentInputConfig
+                        {
+                            GcsSource = new GcsSource
+                            {
+                                InputUris =
+                                {
+                                    "input_urisd64c3b58",
+                                },
+                            },
+                        },
+                        DocumentText = new TextSnippet
+                        {
+                            Content = "contentb964039a",
+                            MimeType = "mime_type606a0ffc",
+                            ContentUri = "content_uriaf560198",
+                        },
+                        Layout =
+                        {
+                            new Document.Types.Layout
+                            {
+                                TextSegment = new TextSegment
+                                {
+                                    StartOffset = 6160653193643117332L,
+                                    EndOffset = -5902643571191717951L,
+                                    Content = "contentb964039a",
+                                },
+                                PageNumber = 291687312,
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                                TextSegmentType = Document.Types.Layout.Types.TextSegmentType.FormFieldName,
+                            },
+                        },
+                        DocumentDimensions = new DocumentDimensions
+                        {
+                            Unit = DocumentDimensions.Types.DocumentDimensionUnit.Centimeter,
+                            Width = 5.667896E+17F,
+                            Height = 2.7137237E+17F,
+                        },
+                        PageCount = 1114157676,
+                    },
+                },
                 Params =
                 {
                     {
@@ -208,7 +969,53 @@ namespace Google.Cloud.AutoML.V1.Tests
             {
                 Payload =
                 {
-                    new AnnotationPayload(),
+                    new AnnotationPayload
+                    {
+                        AnnotationSpecId = "annotation_spec_ide0c3e8b2",
+                        Translation = new TranslationAnnotation
+                        {
+                            TranslatedContent = new TextSnippet
+                            {
+                                Content = "contentb964039a",
+                                MimeType = "mime_type606a0ffc",
+                                ContentUri = "content_uriaf560198",
+                            },
+                        },
+                        Classification = new ClassificationAnnotation
+                        {
+                            Score = -5.80354E+17F,
+                        },
+                        ImageObjectDetection = new ImageObjectDetectionAnnotation
+                        {
+                            BoundingBox = new BoundingPoly
+                            {
+                                NormalizedVertices =
+                                {
+                                    new NormalizedVertex
+                                    {
+                                        X = 4.7289724E+17F,
+                                        Y = 1.2858411E+17F,
+                                    },
+                                },
+                            },
+                            Score = -5.80354E+17F,
+                        },
+                        DisplayName = "display_name137f65c2",
+                        TextExtraction = new TextExtractionAnnotation
+                        {
+                            Score = -5.80354E+17F,
+                            TextSegment = new TextSegment
+                            {
+                                StartOffset = 6160653193643117332L,
+                                EndOffset = -5902643571191717951L,
+                                Content = "contentb964039a",
+                            },
+                        },
+                        TextSentiment = new TextSentimentAnnotation
+                        {
+                            Sentiment = 364187332,
+                        },
+                    },
                 },
                 Metadata =
                 {
@@ -217,7 +1024,71 @@ namespace Google.Cloud.AutoML.V1.Tests
                         "value60c16320"
                     },
                 },
-                PreprocessedInput = new ExamplePayload(),
+                PreprocessedInput = new ExamplePayload
+                {
+                    Image = new Image
+                    {
+                        ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                        ThumbnailUri = "thumbnail_urie7bd82de",
+                    },
+                    TextSnippet = new TextSnippet
+                    {
+                        Content = "contentb964039a",
+                        MimeType = "mime_type606a0ffc",
+                        ContentUri = "content_uriaf560198",
+                    },
+                    Document = new Document
+                    {
+                        InputConfig = new DocumentInputConfig
+                        {
+                            GcsSource = new GcsSource
+                            {
+                                InputUris =
+                                {
+                                    "input_urisd64c3b58",
+                                },
+                            },
+                        },
+                        DocumentText = new TextSnippet
+                        {
+                            Content = "contentb964039a",
+                            MimeType = "mime_type606a0ffc",
+                            ContentUri = "content_uriaf560198",
+                        },
+                        Layout =
+                        {
+                            new Document.Types.Layout
+                            {
+                                TextSegment = new TextSegment
+                                {
+                                    StartOffset = 6160653193643117332L,
+                                    EndOffset = -5902643571191717951L,
+                                    Content = "contentb964039a",
+                                },
+                                PageNumber = 291687312,
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                                TextSegmentType = Document.Types.Layout.Types.TextSegmentType.FormFieldName,
+                            },
+                        },
+                        DocumentDimensions = new DocumentDimensions
+                        {
+                            Unit = DocumentDimensions.Types.DocumentDimensionUnit.Centimeter,
+                            Width = 5.667896E+17F,
+                            Height = 2.7137237E+17F,
+                        },
+                        PageCount = 1114157676,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.Predict(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
@@ -234,7 +1105,71 @@ namespace Google.Cloud.AutoML.V1.Tests
             PredictRequest request = new PredictRequest
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
-                Payload = new ExamplePayload(),
+                Payload = new ExamplePayload
+                {
+                    Image = new Image
+                    {
+                        ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                        ThumbnailUri = "thumbnail_urie7bd82de",
+                    },
+                    TextSnippet = new TextSnippet
+                    {
+                        Content = "contentb964039a",
+                        MimeType = "mime_type606a0ffc",
+                        ContentUri = "content_uriaf560198",
+                    },
+                    Document = new Document
+                    {
+                        InputConfig = new DocumentInputConfig
+                        {
+                            GcsSource = new GcsSource
+                            {
+                                InputUris =
+                                {
+                                    "input_urisd64c3b58",
+                                },
+                            },
+                        },
+                        DocumentText = new TextSnippet
+                        {
+                            Content = "contentb964039a",
+                            MimeType = "mime_type606a0ffc",
+                            ContentUri = "content_uriaf560198",
+                        },
+                        Layout =
+                        {
+                            new Document.Types.Layout
+                            {
+                                TextSegment = new TextSegment
+                                {
+                                    StartOffset = 6160653193643117332L,
+                                    EndOffset = -5902643571191717951L,
+                                    Content = "contentb964039a",
+                                },
+                                PageNumber = 291687312,
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                                TextSegmentType = Document.Types.Layout.Types.TextSegmentType.FormFieldName,
+                            },
+                        },
+                        DocumentDimensions = new DocumentDimensions
+                        {
+                            Unit = DocumentDimensions.Types.DocumentDimensionUnit.Centimeter,
+                            Width = 5.667896E+17F,
+                            Height = 2.7137237E+17F,
+                        },
+                        PageCount = 1114157676,
+                    },
+                },
                 Params =
                 {
                     {
@@ -247,7 +1182,53 @@ namespace Google.Cloud.AutoML.V1.Tests
             {
                 Payload =
                 {
-                    new AnnotationPayload(),
+                    new AnnotationPayload
+                    {
+                        AnnotationSpecId = "annotation_spec_ide0c3e8b2",
+                        Translation = new TranslationAnnotation
+                        {
+                            TranslatedContent = new TextSnippet
+                            {
+                                Content = "contentb964039a",
+                                MimeType = "mime_type606a0ffc",
+                                ContentUri = "content_uriaf560198",
+                            },
+                        },
+                        Classification = new ClassificationAnnotation
+                        {
+                            Score = -5.80354E+17F,
+                        },
+                        ImageObjectDetection = new ImageObjectDetectionAnnotation
+                        {
+                            BoundingBox = new BoundingPoly
+                            {
+                                NormalizedVertices =
+                                {
+                                    new NormalizedVertex
+                                    {
+                                        X = 4.7289724E+17F,
+                                        Y = 1.2858411E+17F,
+                                    },
+                                },
+                            },
+                            Score = -5.80354E+17F,
+                        },
+                        DisplayName = "display_name137f65c2",
+                        TextExtraction = new TextExtractionAnnotation
+                        {
+                            Score = -5.80354E+17F,
+                            TextSegment = new TextSegment
+                            {
+                                StartOffset = 6160653193643117332L,
+                                EndOffset = -5902643571191717951L,
+                                Content = "contentb964039a",
+                            },
+                        },
+                        TextSentiment = new TextSentimentAnnotation
+                        {
+                            Sentiment = 364187332,
+                        },
+                    },
                 },
                 Metadata =
                 {
@@ -256,7 +1237,71 @@ namespace Google.Cloud.AutoML.V1.Tests
                         "value60c16320"
                     },
                 },
-                PreprocessedInput = new ExamplePayload(),
+                PreprocessedInput = new ExamplePayload
+                {
+                    Image = new Image
+                    {
+                        ImageBytes = proto::ByteString.CopyFromUtf8("image_bytesb9388415"),
+                        ThumbnailUri = "thumbnail_urie7bd82de",
+                    },
+                    TextSnippet = new TextSnippet
+                    {
+                        Content = "contentb964039a",
+                        MimeType = "mime_type606a0ffc",
+                        ContentUri = "content_uriaf560198",
+                    },
+                    Document = new Document
+                    {
+                        InputConfig = new DocumentInputConfig
+                        {
+                            GcsSource = new GcsSource
+                            {
+                                InputUris =
+                                {
+                                    "input_urisd64c3b58",
+                                },
+                            },
+                        },
+                        DocumentText = new TextSnippet
+                        {
+                            Content = "contentb964039a",
+                            MimeType = "mime_type606a0ffc",
+                            ContentUri = "content_uriaf560198",
+                        },
+                        Layout =
+                        {
+                            new Document.Types.Layout
+                            {
+                                TextSegment = new TextSegment
+                                {
+                                    StartOffset = 6160653193643117332L,
+                                    EndOffset = -5902643571191717951L,
+                                    Content = "contentb964039a",
+                                },
+                                PageNumber = 291687312,
+                                BoundingPoly = new BoundingPoly
+                                {
+                                    NormalizedVertices =
+                                    {
+                                        new NormalizedVertex
+                                        {
+                                            X = 4.7289724E+17F,
+                                            Y = 1.2858411E+17F,
+                                        },
+                                    },
+                                },
+                                TextSegmentType = Document.Types.Layout.Types.TextSegmentType.FormFieldName,
+                            },
+                        },
+                        DocumentDimensions = new DocumentDimensions
+                        {
+                            Unit = DocumentDimensions.Types.DocumentDimensionUnit.Centimeter,
+                            Width = 5.667896E+17F,
+                            Height = 2.7137237E+17F,
+                        },
+                        PageCount = 1114157676,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.PredictAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PredictResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PredictionServiceClient client = new PredictionServiceClientImpl(mockGrpcClient.Object, null);
