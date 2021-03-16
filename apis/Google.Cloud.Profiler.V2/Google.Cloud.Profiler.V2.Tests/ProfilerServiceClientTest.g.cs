@@ -34,7 +34,18 @@ namespace Google.Cloud.Profiler.V2.Tests
             moq::Mock<ProfilerService.ProfilerServiceClient> mockGrpcClient = new moq::Mock<ProfilerService.ProfilerServiceClient>(moq::MockBehavior.Strict);
             CreateProfileRequest request = new CreateProfileRequest
             {
-                Deployment = new Deployment(),
+                Deployment = new Deployment
+                {
+                    ProjectId = "project_id43ad98b0",
+                    Target = "targetaefbae42",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 ProfileType =
                 {
                     ProfileType.Contention,
@@ -45,8 +56,23 @@ namespace Google.Cloud.Profiler.V2.Tests
             {
                 Name = "name1c9368b0",
                 ProfileType = ProfileType.Contention,
-                Deployment = new Deployment(),
-                Duration = new wkt::Duration(),
+                Deployment = new Deployment
+                {
+                    ProjectId = "project_id43ad98b0",
+                    Target = "targetaefbae42",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProfileBytes = proto::ByteString.CopyFromUtf8("profile_bytes12d9894a"),
                 Labels =
                 {
@@ -69,7 +95,18 @@ namespace Google.Cloud.Profiler.V2.Tests
             moq::Mock<ProfilerService.ProfilerServiceClient> mockGrpcClient = new moq::Mock<ProfilerService.ProfilerServiceClient>(moq::MockBehavior.Strict);
             CreateProfileRequest request = new CreateProfileRequest
             {
-                Deployment = new Deployment(),
+                Deployment = new Deployment
+                {
+                    ProjectId = "project_id43ad98b0",
+                    Target = "targetaefbae42",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 ProfileType =
                 {
                     ProfileType.Contention,
@@ -80,8 +117,23 @@ namespace Google.Cloud.Profiler.V2.Tests
             {
                 Name = "name1c9368b0",
                 ProfileType = ProfileType.Contention,
-                Deployment = new Deployment(),
-                Duration = new wkt::Duration(),
+                Deployment = new Deployment
+                {
+                    ProjectId = "project_id43ad98b0",
+                    Target = "targetaefbae42",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProfileBytes = proto::ByteString.CopyFromUtf8("profile_bytes12d9894a"),
                 Labels =
                 {
@@ -107,14 +159,58 @@ namespace Google.Cloud.Profiler.V2.Tests
             CreateOfflineProfileRequest request = new CreateOfflineProfileRequest
             {
                 Parent = "parent7858e4d0",
-                Profile = new Profile(),
+                Profile = new Profile
+                {
+                    Name = "name1c9368b0",
+                    ProfileType = ProfileType.Contention,
+                    Deployment = new Deployment
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        Target = "targetaefbae42",
+                        Labels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    Duration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProfileBytes = proto::ByteString.CopyFromUtf8("profile_bytes12d9894a"),
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Profile expectedResponse = new Profile
             {
                 Name = "name1c9368b0",
                 ProfileType = ProfileType.Contention,
-                Deployment = new Deployment(),
-                Duration = new wkt::Duration(),
+                Deployment = new Deployment
+                {
+                    ProjectId = "project_id43ad98b0",
+                    Target = "targetaefbae42",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProfileBytes = proto::ByteString.CopyFromUtf8("profile_bytes12d9894a"),
                 Labels =
                 {
@@ -138,14 +234,58 @@ namespace Google.Cloud.Profiler.V2.Tests
             CreateOfflineProfileRequest request = new CreateOfflineProfileRequest
             {
                 Parent = "parent7858e4d0",
-                Profile = new Profile(),
+                Profile = new Profile
+                {
+                    Name = "name1c9368b0",
+                    ProfileType = ProfileType.Contention,
+                    Deployment = new Deployment
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        Target = "targetaefbae42",
+                        Labels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    Duration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProfileBytes = proto::ByteString.CopyFromUtf8("profile_bytes12d9894a"),
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
             };
             Profile expectedResponse = new Profile
             {
                 Name = "name1c9368b0",
                 ProfileType = ProfileType.Contention,
-                Deployment = new Deployment(),
-                Duration = new wkt::Duration(),
+                Deployment = new Deployment
+                {
+                    ProjectId = "project_id43ad98b0",
+                    Target = "targetaefbae42",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProfileBytes = proto::ByteString.CopyFromUtf8("profile_bytes12d9894a"),
                 Labels =
                 {
@@ -170,15 +310,62 @@ namespace Google.Cloud.Profiler.V2.Tests
             moq::Mock<ProfilerService.ProfilerServiceClient> mockGrpcClient = new moq::Mock<ProfilerService.ProfilerServiceClient>(moq::MockBehavior.Strict);
             UpdateProfileRequest request = new UpdateProfileRequest
             {
-                Profile = new Profile(),
-                UpdateMask = new wkt::FieldMask(),
+                Profile = new Profile
+                {
+                    Name = "name1c9368b0",
+                    ProfileType = ProfileType.Contention,
+                    Deployment = new Deployment
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        Target = "targetaefbae42",
+                        Labels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    Duration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProfileBytes = proto::ByteString.CopyFromUtf8("profile_bytes12d9894a"),
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Profile expectedResponse = new Profile
             {
                 Name = "name1c9368b0",
                 ProfileType = ProfileType.Contention,
-                Deployment = new Deployment(),
-                Duration = new wkt::Duration(),
+                Deployment = new Deployment
+                {
+                    ProjectId = "project_id43ad98b0",
+                    Target = "targetaefbae42",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProfileBytes = proto::ByteString.CopyFromUtf8("profile_bytes12d9894a"),
                 Labels =
                 {
@@ -201,15 +388,62 @@ namespace Google.Cloud.Profiler.V2.Tests
             moq::Mock<ProfilerService.ProfilerServiceClient> mockGrpcClient = new moq::Mock<ProfilerService.ProfilerServiceClient>(moq::MockBehavior.Strict);
             UpdateProfileRequest request = new UpdateProfileRequest
             {
-                Profile = new Profile(),
-                UpdateMask = new wkt::FieldMask(),
+                Profile = new Profile
+                {
+                    Name = "name1c9368b0",
+                    ProfileType = ProfileType.Contention,
+                    Deployment = new Deployment
+                    {
+                        ProjectId = "project_id43ad98b0",
+                        Target = "targetaefbae42",
+                        Labels =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    Duration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    ProfileBytes = proto::ByteString.CopyFromUtf8("profile_bytes12d9894a"),
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Profile expectedResponse = new Profile
             {
                 Name = "name1c9368b0",
                 ProfileType = ProfileType.Contention,
-                Deployment = new Deployment(),
-                Duration = new wkt::Duration(),
+                Deployment = new Deployment
+                {
+                    ProjectId = "project_id43ad98b0",
+                    Target = "targetaefbae42",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                Duration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 ProfileBytes = proto::ByteString.CopyFromUtf8("profile_bytes12d9894a"),
                 Labels =
                 {
