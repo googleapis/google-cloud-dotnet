@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using gt = Google.Type;
 using grpccore = Grpc.Core;
@@ -42,15 +43,65 @@ namespace Google.Cloud.Channel.V1.Tests
             {
                 CustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
                 OrgDisplayName = "org_display_nameb29ddfcb",
-                OrgPostalAddress = new gt::PostalAddress(),
-                PrimaryContactInfo = new ContactInfo(),
+                OrgPostalAddress = new gt::PostalAddress
+                {
+                    Revision = -1171785291,
+                    RegionCode = "region_code72561d46",
+                    LanguageCode = "language_code2f6c7160",
+                    PostalCode = "postal_code51d301e6",
+                    SortingCode = "sorting_codeab47cbcd",
+                    AdministrativeArea = "administrative_area5d9f9eab",
+                    Locality = "locality2082e309",
+                    Sublocality = "sublocality1a785e24",
+                    AddressLines =
+                    {
+                        "address_lines4ab5c702",
+                    },
+                    Recipients =
+                    {
+                        "recipients9bf62a97",
+                    },
+                    Organization = "organization8c94c1b4",
+                },
+                PrimaryContactInfo = new ContactInfo
+                {
+                    FirstName = "first_name9d4e032a",
+                    LastName = "last_namec053457d",
+                    DisplayName = "display_name137f65c2",
+                    Email = "email7cf5830c",
+                    Title = "title17dbd3d5",
+                    Phone = "phonee72fa4f7",
+                },
                 AlternateEmail = "alternate_email3cdfc6ce",
                 Domain = "domaine8825fad",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CloudIdentityId = "cloud_identity_idcb2e1526",
                 LanguageCode = "language_code2f6c7160",
-                CloudIdentityInfo = new CloudIdentityInfo(),
+                CloudIdentityInfo = new CloudIdentityInfo
+                {
+                    CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                    IsDomainVerified = false,
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    PhoneNumber = "phone_number9ebac341",
+                    LanguageCode = "language_code2f6c7160",
+                    PrimaryDomain = "primary_domainc60acdbc",
+                    AdminConsoleUri = "admin_console_urif9cabb4a",
+                    EduData = new EduData
+                    {
+                        InstituteType = EduData.Types.InstituteType.Unspecified,
+                        InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                        Website = "website03fabed1",
+                    },
+                },
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.GetCustomer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -73,15 +124,65 @@ namespace Google.Cloud.Channel.V1.Tests
             {
                 CustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
                 OrgDisplayName = "org_display_nameb29ddfcb",
-                OrgPostalAddress = new gt::PostalAddress(),
-                PrimaryContactInfo = new ContactInfo(),
+                OrgPostalAddress = new gt::PostalAddress
+                {
+                    Revision = -1171785291,
+                    RegionCode = "region_code72561d46",
+                    LanguageCode = "language_code2f6c7160",
+                    PostalCode = "postal_code51d301e6",
+                    SortingCode = "sorting_codeab47cbcd",
+                    AdministrativeArea = "administrative_area5d9f9eab",
+                    Locality = "locality2082e309",
+                    Sublocality = "sublocality1a785e24",
+                    AddressLines =
+                    {
+                        "address_lines4ab5c702",
+                    },
+                    Recipients =
+                    {
+                        "recipients9bf62a97",
+                    },
+                    Organization = "organization8c94c1b4",
+                },
+                PrimaryContactInfo = new ContactInfo
+                {
+                    FirstName = "first_name9d4e032a",
+                    LastName = "last_namec053457d",
+                    DisplayName = "display_name137f65c2",
+                    Email = "email7cf5830c",
+                    Title = "title17dbd3d5",
+                    Phone = "phonee72fa4f7",
+                },
                 AlternateEmail = "alternate_email3cdfc6ce",
                 Domain = "domaine8825fad",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CloudIdentityId = "cloud_identity_idcb2e1526",
                 LanguageCode = "language_code2f6c7160",
-                CloudIdentityInfo = new CloudIdentityInfo(),
+                CloudIdentityInfo = new CloudIdentityInfo
+                {
+                    CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                    IsDomainVerified = false,
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    PhoneNumber = "phone_number9ebac341",
+                    LanguageCode = "language_code2f6c7160",
+                    PrimaryDomain = "primary_domainc60acdbc",
+                    AdminConsoleUri = "admin_console_urif9cabb4a",
+                    EduData = new EduData
+                    {
+                        InstituteType = EduData.Types.InstituteType.Unspecified,
+                        InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                        Website = "website03fabed1",
+                    },
+                },
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.GetCustomerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Customer>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -106,15 +207,65 @@ namespace Google.Cloud.Channel.V1.Tests
             {
                 CustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
                 OrgDisplayName = "org_display_nameb29ddfcb",
-                OrgPostalAddress = new gt::PostalAddress(),
-                PrimaryContactInfo = new ContactInfo(),
+                OrgPostalAddress = new gt::PostalAddress
+                {
+                    Revision = -1171785291,
+                    RegionCode = "region_code72561d46",
+                    LanguageCode = "language_code2f6c7160",
+                    PostalCode = "postal_code51d301e6",
+                    SortingCode = "sorting_codeab47cbcd",
+                    AdministrativeArea = "administrative_area5d9f9eab",
+                    Locality = "locality2082e309",
+                    Sublocality = "sublocality1a785e24",
+                    AddressLines =
+                    {
+                        "address_lines4ab5c702",
+                    },
+                    Recipients =
+                    {
+                        "recipients9bf62a97",
+                    },
+                    Organization = "organization8c94c1b4",
+                },
+                PrimaryContactInfo = new ContactInfo
+                {
+                    FirstName = "first_name9d4e032a",
+                    LastName = "last_namec053457d",
+                    DisplayName = "display_name137f65c2",
+                    Email = "email7cf5830c",
+                    Title = "title17dbd3d5",
+                    Phone = "phonee72fa4f7",
+                },
                 AlternateEmail = "alternate_email3cdfc6ce",
                 Domain = "domaine8825fad",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CloudIdentityId = "cloud_identity_idcb2e1526",
                 LanguageCode = "language_code2f6c7160",
-                CloudIdentityInfo = new CloudIdentityInfo(),
+                CloudIdentityInfo = new CloudIdentityInfo
+                {
+                    CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                    IsDomainVerified = false,
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    PhoneNumber = "phone_number9ebac341",
+                    LanguageCode = "language_code2f6c7160",
+                    PrimaryDomain = "primary_domainc60acdbc",
+                    AdminConsoleUri = "admin_console_urif9cabb4a",
+                    EduData = new EduData
+                    {
+                        InstituteType = EduData.Types.InstituteType.Unspecified,
+                        InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                        Website = "website03fabed1",
+                    },
+                },
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.GetCustomer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -137,15 +288,65 @@ namespace Google.Cloud.Channel.V1.Tests
             {
                 CustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
                 OrgDisplayName = "org_display_nameb29ddfcb",
-                OrgPostalAddress = new gt::PostalAddress(),
-                PrimaryContactInfo = new ContactInfo(),
+                OrgPostalAddress = new gt::PostalAddress
+                {
+                    Revision = -1171785291,
+                    RegionCode = "region_code72561d46",
+                    LanguageCode = "language_code2f6c7160",
+                    PostalCode = "postal_code51d301e6",
+                    SortingCode = "sorting_codeab47cbcd",
+                    AdministrativeArea = "administrative_area5d9f9eab",
+                    Locality = "locality2082e309",
+                    Sublocality = "sublocality1a785e24",
+                    AddressLines =
+                    {
+                        "address_lines4ab5c702",
+                    },
+                    Recipients =
+                    {
+                        "recipients9bf62a97",
+                    },
+                    Organization = "organization8c94c1b4",
+                },
+                PrimaryContactInfo = new ContactInfo
+                {
+                    FirstName = "first_name9d4e032a",
+                    LastName = "last_namec053457d",
+                    DisplayName = "display_name137f65c2",
+                    Email = "email7cf5830c",
+                    Title = "title17dbd3d5",
+                    Phone = "phonee72fa4f7",
+                },
                 AlternateEmail = "alternate_email3cdfc6ce",
                 Domain = "domaine8825fad",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CloudIdentityId = "cloud_identity_idcb2e1526",
                 LanguageCode = "language_code2f6c7160",
-                CloudIdentityInfo = new CloudIdentityInfo(),
+                CloudIdentityInfo = new CloudIdentityInfo
+                {
+                    CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                    IsDomainVerified = false,
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    PhoneNumber = "phone_number9ebac341",
+                    LanguageCode = "language_code2f6c7160",
+                    PrimaryDomain = "primary_domainc60acdbc",
+                    AdminConsoleUri = "admin_console_urif9cabb4a",
+                    EduData = new EduData
+                    {
+                        InstituteType = EduData.Types.InstituteType.Unspecified,
+                        InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                        Website = "website03fabed1",
+                    },
+                },
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.GetCustomerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Customer>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -170,15 +371,65 @@ namespace Google.Cloud.Channel.V1.Tests
             {
                 CustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
                 OrgDisplayName = "org_display_nameb29ddfcb",
-                OrgPostalAddress = new gt::PostalAddress(),
-                PrimaryContactInfo = new ContactInfo(),
+                OrgPostalAddress = new gt::PostalAddress
+                {
+                    Revision = -1171785291,
+                    RegionCode = "region_code72561d46",
+                    LanguageCode = "language_code2f6c7160",
+                    PostalCode = "postal_code51d301e6",
+                    SortingCode = "sorting_codeab47cbcd",
+                    AdministrativeArea = "administrative_area5d9f9eab",
+                    Locality = "locality2082e309",
+                    Sublocality = "sublocality1a785e24",
+                    AddressLines =
+                    {
+                        "address_lines4ab5c702",
+                    },
+                    Recipients =
+                    {
+                        "recipients9bf62a97",
+                    },
+                    Organization = "organization8c94c1b4",
+                },
+                PrimaryContactInfo = new ContactInfo
+                {
+                    FirstName = "first_name9d4e032a",
+                    LastName = "last_namec053457d",
+                    DisplayName = "display_name137f65c2",
+                    Email = "email7cf5830c",
+                    Title = "title17dbd3d5",
+                    Phone = "phonee72fa4f7",
+                },
                 AlternateEmail = "alternate_email3cdfc6ce",
                 Domain = "domaine8825fad",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CloudIdentityId = "cloud_identity_idcb2e1526",
                 LanguageCode = "language_code2f6c7160",
-                CloudIdentityInfo = new CloudIdentityInfo(),
+                CloudIdentityInfo = new CloudIdentityInfo
+                {
+                    CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                    IsDomainVerified = false,
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    PhoneNumber = "phone_number9ebac341",
+                    LanguageCode = "language_code2f6c7160",
+                    PrimaryDomain = "primary_domainc60acdbc",
+                    AdminConsoleUri = "admin_console_urif9cabb4a",
+                    EduData = new EduData
+                    {
+                        InstituteType = EduData.Types.InstituteType.Unspecified,
+                        InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                        Website = "website03fabed1",
+                    },
+                },
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.GetCustomer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -201,15 +452,65 @@ namespace Google.Cloud.Channel.V1.Tests
             {
                 CustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
                 OrgDisplayName = "org_display_nameb29ddfcb",
-                OrgPostalAddress = new gt::PostalAddress(),
-                PrimaryContactInfo = new ContactInfo(),
+                OrgPostalAddress = new gt::PostalAddress
+                {
+                    Revision = -1171785291,
+                    RegionCode = "region_code72561d46",
+                    LanguageCode = "language_code2f6c7160",
+                    PostalCode = "postal_code51d301e6",
+                    SortingCode = "sorting_codeab47cbcd",
+                    AdministrativeArea = "administrative_area5d9f9eab",
+                    Locality = "locality2082e309",
+                    Sublocality = "sublocality1a785e24",
+                    AddressLines =
+                    {
+                        "address_lines4ab5c702",
+                    },
+                    Recipients =
+                    {
+                        "recipients9bf62a97",
+                    },
+                    Organization = "organization8c94c1b4",
+                },
+                PrimaryContactInfo = new ContactInfo
+                {
+                    FirstName = "first_name9d4e032a",
+                    LastName = "last_namec053457d",
+                    DisplayName = "display_name137f65c2",
+                    Email = "email7cf5830c",
+                    Title = "title17dbd3d5",
+                    Phone = "phonee72fa4f7",
+                },
                 AlternateEmail = "alternate_email3cdfc6ce",
                 Domain = "domaine8825fad",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CloudIdentityId = "cloud_identity_idcb2e1526",
                 LanguageCode = "language_code2f6c7160",
-                CloudIdentityInfo = new CloudIdentityInfo(),
+                CloudIdentityInfo = new CloudIdentityInfo
+                {
+                    CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                    IsDomainVerified = false,
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    PhoneNumber = "phone_number9ebac341",
+                    LanguageCode = "language_code2f6c7160",
+                    PrimaryDomain = "primary_domainc60acdbc",
+                    AdminConsoleUri = "admin_console_urif9cabb4a",
+                    EduData = new EduData
+                    {
+                        InstituteType = EduData.Types.InstituteType.Unspecified,
+                        InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                        Website = "website03fabed1",
+                    },
+                },
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.GetCustomerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Customer>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -235,7 +536,13 @@ namespace Google.Cloud.Channel.V1.Tests
             {
                 CloudIdentityAccounts =
                 {
-                    new CloudIdentityCustomerAccount(),
+                    new CloudIdentityCustomerAccount
+                    {
+                        Existing = true,
+                        Owned = true,
+                        CustomerName = "customer_name2ace137a",
+                        CustomerCloudIdentityId = "customer_cloud_identity_idb7a91a6c",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.CheckCloudIdentityAccountsExist(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -259,7 +566,13 @@ namespace Google.Cloud.Channel.V1.Tests
             {
                 CloudIdentityAccounts =
                 {
-                    new CloudIdentityCustomerAccount(),
+                    new CloudIdentityCustomerAccount
+                    {
+                        Existing = true,
+                        Owned = true,
+                        CustomerName = "customer_name2ace137a",
+                        CustomerCloudIdentityId = "customer_cloud_identity_idb7a91a6c",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.CheckCloudIdentityAccountsExistAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckCloudIdentityAccountsExistResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -279,21 +592,135 @@ namespace Google.Cloud.Channel.V1.Tests
             CreateCustomerRequest request = new CreateCustomerRequest
             {
                 Parent = "parent7858e4d0",
-                Customer = new Customer(),
+                Customer = new Customer
+                {
+                    CustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
+                    OrgDisplayName = "org_display_nameb29ddfcb",
+                    OrgPostalAddress = new gt::PostalAddress
+                    {
+                        Revision = -1171785291,
+                        RegionCode = "region_code72561d46",
+                        LanguageCode = "language_code2f6c7160",
+                        PostalCode = "postal_code51d301e6",
+                        SortingCode = "sorting_codeab47cbcd",
+                        AdministrativeArea = "administrative_area5d9f9eab",
+                        Locality = "locality2082e309",
+                        Sublocality = "sublocality1a785e24",
+                        AddressLines =
+                        {
+                            "address_lines4ab5c702",
+                        },
+                        Recipients =
+                        {
+                            "recipients9bf62a97",
+                        },
+                        Organization = "organization8c94c1b4",
+                    },
+                    PrimaryContactInfo = new ContactInfo
+                    {
+                        FirstName = "first_name9d4e032a",
+                        LastName = "last_namec053457d",
+                        DisplayName = "display_name137f65c2",
+                        Email = "email7cf5830c",
+                        Title = "title17dbd3d5",
+                        Phone = "phonee72fa4f7",
+                    },
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    Domain = "domaine8825fad",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CloudIdentityId = "cloud_identity_idcb2e1526",
+                    LanguageCode = "language_code2f6c7160",
+                    CloudIdentityInfo = new CloudIdentityInfo
+                    {
+                        CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                        IsDomainVerified = false,
+                        AlternateEmail = "alternate_email3cdfc6ce",
+                        PhoneNumber = "phone_number9ebac341",
+                        LanguageCode = "language_code2f6c7160",
+                        PrimaryDomain = "primary_domainc60acdbc",
+                        AdminConsoleUri = "admin_console_urif9cabb4a",
+                        EduData = new EduData
+                        {
+                            InstituteType = EduData.Types.InstituteType.Unspecified,
+                            InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                            Website = "website03fabed1",
+                        },
+                    },
+                    ChannelPartnerId = "channel_partner_ida548fd43",
+                },
             };
             Customer expectedResponse = new Customer
             {
                 CustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
                 OrgDisplayName = "org_display_nameb29ddfcb",
-                OrgPostalAddress = new gt::PostalAddress(),
-                PrimaryContactInfo = new ContactInfo(),
+                OrgPostalAddress = new gt::PostalAddress
+                {
+                    Revision = -1171785291,
+                    RegionCode = "region_code72561d46",
+                    LanguageCode = "language_code2f6c7160",
+                    PostalCode = "postal_code51d301e6",
+                    SortingCode = "sorting_codeab47cbcd",
+                    AdministrativeArea = "administrative_area5d9f9eab",
+                    Locality = "locality2082e309",
+                    Sublocality = "sublocality1a785e24",
+                    AddressLines =
+                    {
+                        "address_lines4ab5c702",
+                    },
+                    Recipients =
+                    {
+                        "recipients9bf62a97",
+                    },
+                    Organization = "organization8c94c1b4",
+                },
+                PrimaryContactInfo = new ContactInfo
+                {
+                    FirstName = "first_name9d4e032a",
+                    LastName = "last_namec053457d",
+                    DisplayName = "display_name137f65c2",
+                    Email = "email7cf5830c",
+                    Title = "title17dbd3d5",
+                    Phone = "phonee72fa4f7",
+                },
                 AlternateEmail = "alternate_email3cdfc6ce",
                 Domain = "domaine8825fad",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CloudIdentityId = "cloud_identity_idcb2e1526",
                 LanguageCode = "language_code2f6c7160",
-                CloudIdentityInfo = new CloudIdentityInfo(),
+                CloudIdentityInfo = new CloudIdentityInfo
+                {
+                    CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                    IsDomainVerified = false,
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    PhoneNumber = "phone_number9ebac341",
+                    LanguageCode = "language_code2f6c7160",
+                    PrimaryDomain = "primary_domainc60acdbc",
+                    AdminConsoleUri = "admin_console_urif9cabb4a",
+                    EduData = new EduData
+                    {
+                        InstituteType = EduData.Types.InstituteType.Unspecified,
+                        InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                        Website = "website03fabed1",
+                    },
+                },
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.CreateCustomer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -311,21 +738,135 @@ namespace Google.Cloud.Channel.V1.Tests
             CreateCustomerRequest request = new CreateCustomerRequest
             {
                 Parent = "parent7858e4d0",
-                Customer = new Customer(),
+                Customer = new Customer
+                {
+                    CustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
+                    OrgDisplayName = "org_display_nameb29ddfcb",
+                    OrgPostalAddress = new gt::PostalAddress
+                    {
+                        Revision = -1171785291,
+                        RegionCode = "region_code72561d46",
+                        LanguageCode = "language_code2f6c7160",
+                        PostalCode = "postal_code51d301e6",
+                        SortingCode = "sorting_codeab47cbcd",
+                        AdministrativeArea = "administrative_area5d9f9eab",
+                        Locality = "locality2082e309",
+                        Sublocality = "sublocality1a785e24",
+                        AddressLines =
+                        {
+                            "address_lines4ab5c702",
+                        },
+                        Recipients =
+                        {
+                            "recipients9bf62a97",
+                        },
+                        Organization = "organization8c94c1b4",
+                    },
+                    PrimaryContactInfo = new ContactInfo
+                    {
+                        FirstName = "first_name9d4e032a",
+                        LastName = "last_namec053457d",
+                        DisplayName = "display_name137f65c2",
+                        Email = "email7cf5830c",
+                        Title = "title17dbd3d5",
+                        Phone = "phonee72fa4f7",
+                    },
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    Domain = "domaine8825fad",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CloudIdentityId = "cloud_identity_idcb2e1526",
+                    LanguageCode = "language_code2f6c7160",
+                    CloudIdentityInfo = new CloudIdentityInfo
+                    {
+                        CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                        IsDomainVerified = false,
+                        AlternateEmail = "alternate_email3cdfc6ce",
+                        PhoneNumber = "phone_number9ebac341",
+                        LanguageCode = "language_code2f6c7160",
+                        PrimaryDomain = "primary_domainc60acdbc",
+                        AdminConsoleUri = "admin_console_urif9cabb4a",
+                        EduData = new EduData
+                        {
+                            InstituteType = EduData.Types.InstituteType.Unspecified,
+                            InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                            Website = "website03fabed1",
+                        },
+                    },
+                    ChannelPartnerId = "channel_partner_ida548fd43",
+                },
             };
             Customer expectedResponse = new Customer
             {
                 CustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
                 OrgDisplayName = "org_display_nameb29ddfcb",
-                OrgPostalAddress = new gt::PostalAddress(),
-                PrimaryContactInfo = new ContactInfo(),
+                OrgPostalAddress = new gt::PostalAddress
+                {
+                    Revision = -1171785291,
+                    RegionCode = "region_code72561d46",
+                    LanguageCode = "language_code2f6c7160",
+                    PostalCode = "postal_code51d301e6",
+                    SortingCode = "sorting_codeab47cbcd",
+                    AdministrativeArea = "administrative_area5d9f9eab",
+                    Locality = "locality2082e309",
+                    Sublocality = "sublocality1a785e24",
+                    AddressLines =
+                    {
+                        "address_lines4ab5c702",
+                    },
+                    Recipients =
+                    {
+                        "recipients9bf62a97",
+                    },
+                    Organization = "organization8c94c1b4",
+                },
+                PrimaryContactInfo = new ContactInfo
+                {
+                    FirstName = "first_name9d4e032a",
+                    LastName = "last_namec053457d",
+                    DisplayName = "display_name137f65c2",
+                    Email = "email7cf5830c",
+                    Title = "title17dbd3d5",
+                    Phone = "phonee72fa4f7",
+                },
                 AlternateEmail = "alternate_email3cdfc6ce",
                 Domain = "domaine8825fad",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CloudIdentityId = "cloud_identity_idcb2e1526",
                 LanguageCode = "language_code2f6c7160",
-                CloudIdentityInfo = new CloudIdentityInfo(),
+                CloudIdentityInfo = new CloudIdentityInfo
+                {
+                    CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                    IsDomainVerified = false,
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    PhoneNumber = "phone_number9ebac341",
+                    LanguageCode = "language_code2f6c7160",
+                    PrimaryDomain = "primary_domainc60acdbc",
+                    AdminConsoleUri = "admin_console_urif9cabb4a",
+                    EduData = new EduData
+                    {
+                        InstituteType = EduData.Types.InstituteType.Unspecified,
+                        InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                        Website = "website03fabed1",
+                    },
+                },
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.CreateCustomerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Customer>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -344,22 +885,139 @@ namespace Google.Cloud.Channel.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateCustomerRequest request = new UpdateCustomerRequest
             {
-                Customer = new Customer(),
-                UpdateMask = new wkt::FieldMask(),
+                Customer = new Customer
+                {
+                    CustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
+                    OrgDisplayName = "org_display_nameb29ddfcb",
+                    OrgPostalAddress = new gt::PostalAddress
+                    {
+                        Revision = -1171785291,
+                        RegionCode = "region_code72561d46",
+                        LanguageCode = "language_code2f6c7160",
+                        PostalCode = "postal_code51d301e6",
+                        SortingCode = "sorting_codeab47cbcd",
+                        AdministrativeArea = "administrative_area5d9f9eab",
+                        Locality = "locality2082e309",
+                        Sublocality = "sublocality1a785e24",
+                        AddressLines =
+                        {
+                            "address_lines4ab5c702",
+                        },
+                        Recipients =
+                        {
+                            "recipients9bf62a97",
+                        },
+                        Organization = "organization8c94c1b4",
+                    },
+                    PrimaryContactInfo = new ContactInfo
+                    {
+                        FirstName = "first_name9d4e032a",
+                        LastName = "last_namec053457d",
+                        DisplayName = "display_name137f65c2",
+                        Email = "email7cf5830c",
+                        Title = "title17dbd3d5",
+                        Phone = "phonee72fa4f7",
+                    },
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    Domain = "domaine8825fad",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CloudIdentityId = "cloud_identity_idcb2e1526",
+                    LanguageCode = "language_code2f6c7160",
+                    CloudIdentityInfo = new CloudIdentityInfo
+                    {
+                        CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                        IsDomainVerified = false,
+                        AlternateEmail = "alternate_email3cdfc6ce",
+                        PhoneNumber = "phone_number9ebac341",
+                        LanguageCode = "language_code2f6c7160",
+                        PrimaryDomain = "primary_domainc60acdbc",
+                        AdminConsoleUri = "admin_console_urif9cabb4a",
+                        EduData = new EduData
+                        {
+                            InstituteType = EduData.Types.InstituteType.Unspecified,
+                            InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                            Website = "website03fabed1",
+                        },
+                    },
+                    ChannelPartnerId = "channel_partner_ida548fd43",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Customer expectedResponse = new Customer
             {
                 CustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
                 OrgDisplayName = "org_display_nameb29ddfcb",
-                OrgPostalAddress = new gt::PostalAddress(),
-                PrimaryContactInfo = new ContactInfo(),
+                OrgPostalAddress = new gt::PostalAddress
+                {
+                    Revision = -1171785291,
+                    RegionCode = "region_code72561d46",
+                    LanguageCode = "language_code2f6c7160",
+                    PostalCode = "postal_code51d301e6",
+                    SortingCode = "sorting_codeab47cbcd",
+                    AdministrativeArea = "administrative_area5d9f9eab",
+                    Locality = "locality2082e309",
+                    Sublocality = "sublocality1a785e24",
+                    AddressLines =
+                    {
+                        "address_lines4ab5c702",
+                    },
+                    Recipients =
+                    {
+                        "recipients9bf62a97",
+                    },
+                    Organization = "organization8c94c1b4",
+                },
+                PrimaryContactInfo = new ContactInfo
+                {
+                    FirstName = "first_name9d4e032a",
+                    LastName = "last_namec053457d",
+                    DisplayName = "display_name137f65c2",
+                    Email = "email7cf5830c",
+                    Title = "title17dbd3d5",
+                    Phone = "phonee72fa4f7",
+                },
                 AlternateEmail = "alternate_email3cdfc6ce",
                 Domain = "domaine8825fad",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CloudIdentityId = "cloud_identity_idcb2e1526",
                 LanguageCode = "language_code2f6c7160",
-                CloudIdentityInfo = new CloudIdentityInfo(),
+                CloudIdentityInfo = new CloudIdentityInfo
+                {
+                    CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                    IsDomainVerified = false,
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    PhoneNumber = "phone_number9ebac341",
+                    LanguageCode = "language_code2f6c7160",
+                    PrimaryDomain = "primary_domainc60acdbc",
+                    AdminConsoleUri = "admin_console_urif9cabb4a",
+                    EduData = new EduData
+                    {
+                        InstituteType = EduData.Types.InstituteType.Unspecified,
+                        InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                        Website = "website03fabed1",
+                    },
+                },
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.UpdateCustomer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -376,22 +1034,139 @@ namespace Google.Cloud.Channel.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateCustomerRequest request = new UpdateCustomerRequest
             {
-                Customer = new Customer(),
-                UpdateMask = new wkt::FieldMask(),
+                Customer = new Customer
+                {
+                    CustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
+                    OrgDisplayName = "org_display_nameb29ddfcb",
+                    OrgPostalAddress = new gt::PostalAddress
+                    {
+                        Revision = -1171785291,
+                        RegionCode = "region_code72561d46",
+                        LanguageCode = "language_code2f6c7160",
+                        PostalCode = "postal_code51d301e6",
+                        SortingCode = "sorting_codeab47cbcd",
+                        AdministrativeArea = "administrative_area5d9f9eab",
+                        Locality = "locality2082e309",
+                        Sublocality = "sublocality1a785e24",
+                        AddressLines =
+                        {
+                            "address_lines4ab5c702",
+                        },
+                        Recipients =
+                        {
+                            "recipients9bf62a97",
+                        },
+                        Organization = "organization8c94c1b4",
+                    },
+                    PrimaryContactInfo = new ContactInfo
+                    {
+                        FirstName = "first_name9d4e032a",
+                        LastName = "last_namec053457d",
+                        DisplayName = "display_name137f65c2",
+                        Email = "email7cf5830c",
+                        Title = "title17dbd3d5",
+                        Phone = "phonee72fa4f7",
+                    },
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    Domain = "domaine8825fad",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    CloudIdentityId = "cloud_identity_idcb2e1526",
+                    LanguageCode = "language_code2f6c7160",
+                    CloudIdentityInfo = new CloudIdentityInfo
+                    {
+                        CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                        IsDomainVerified = false,
+                        AlternateEmail = "alternate_email3cdfc6ce",
+                        PhoneNumber = "phone_number9ebac341",
+                        LanguageCode = "language_code2f6c7160",
+                        PrimaryDomain = "primary_domainc60acdbc",
+                        AdminConsoleUri = "admin_console_urif9cabb4a",
+                        EduData = new EduData
+                        {
+                            InstituteType = EduData.Types.InstituteType.Unspecified,
+                            InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                            Website = "website03fabed1",
+                        },
+                    },
+                    ChannelPartnerId = "channel_partner_ida548fd43",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Customer expectedResponse = new Customer
             {
                 CustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
                 OrgDisplayName = "org_display_nameb29ddfcb",
-                OrgPostalAddress = new gt::PostalAddress(),
-                PrimaryContactInfo = new ContactInfo(),
+                OrgPostalAddress = new gt::PostalAddress
+                {
+                    Revision = -1171785291,
+                    RegionCode = "region_code72561d46",
+                    LanguageCode = "language_code2f6c7160",
+                    PostalCode = "postal_code51d301e6",
+                    SortingCode = "sorting_codeab47cbcd",
+                    AdministrativeArea = "administrative_area5d9f9eab",
+                    Locality = "locality2082e309",
+                    Sublocality = "sublocality1a785e24",
+                    AddressLines =
+                    {
+                        "address_lines4ab5c702",
+                    },
+                    Recipients =
+                    {
+                        "recipients9bf62a97",
+                    },
+                    Organization = "organization8c94c1b4",
+                },
+                PrimaryContactInfo = new ContactInfo
+                {
+                    FirstName = "first_name9d4e032a",
+                    LastName = "last_namec053457d",
+                    DisplayName = "display_name137f65c2",
+                    Email = "email7cf5830c",
+                    Title = "title17dbd3d5",
+                    Phone = "phonee72fa4f7",
+                },
                 AlternateEmail = "alternate_email3cdfc6ce",
                 Domain = "domaine8825fad",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 CloudIdentityId = "cloud_identity_idcb2e1526",
                 LanguageCode = "language_code2f6c7160",
-                CloudIdentityInfo = new CloudIdentityInfo(),
+                CloudIdentityInfo = new CloudIdentityInfo
+                {
+                    CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                    IsDomainVerified = false,
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    PhoneNumber = "phone_number9ebac341",
+                    LanguageCode = "language_code2f6c7160",
+                    PrimaryDomain = "primary_domainc60acdbc",
+                    AdminConsoleUri = "admin_console_urif9cabb4a",
+                    EduData = new EduData
+                    {
+                        InstituteType = EduData.Types.InstituteType.Unspecified,
+                        InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                        Website = "website03fabed1",
+                    },
+                },
                 ChannelPartnerId = "channel_partner_ida548fd43",
             };
             mockGrpcClient.Setup(x => x.UpdateCustomerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Customer>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -514,20 +1289,85 @@ namespace Google.Cloud.Channel.V1.Tests
             Entitlement expectedResponse = new Entitlement
             {
                 EntitlementName = EntitlementName.FromAccountCustomerEntitlement("[ACCOUNT]", "[CUSTOMER]", "[ENTITLEMENT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OfferAsOfferName = OfferName.FromAccountOffer("[ACCOUNT]", "[OFFER]"),
-                CommitmentSettings = new CommitmentSettings(),
+                CommitmentSettings = new CommitmentSettings
+                {
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RenewalSettings = new RenewalSettings
+                    {
+                        EnableRenewal = false,
+                        ResizeUnitCount = false,
+                        PaymentPlan = PaymentPlan.Commitment,
+                        PaymentCycle = new Period
+                        {
+                            Duration = 348348088,
+                            PeriodType = PeriodType.Year,
+                        },
+                    },
+                },
                 ProvisioningState = Entitlement.Types.ProvisioningState.Unspecified,
-                ProvisionedService = new ProvisionedService(),
+                ProvisionedService = new ProvisionedService
+                {
+                    ProvisioningId = "provisioning_idb6b17dad",
+                    ProductId = "product_idde82ea9b",
+                    SkuId = "sku_idca5bad22",
+                },
                 SuspensionReasons =
                 {
                     Entitlement.Types.SuspensionReason.TrialEnded,
                 },
                 PurchaseOrderId = "purchase_order_id4111e034",
-                TrialSettings = new TrialSettings(),
-                AssociationInfo = new AssociationInfo(),
-                Parameters = { new Parameter(), },
+                TrialSettings = new TrialSettings
+                {
+                    Trial = true,
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                AssociationInfo = new AssociationInfo
+                {
+                    BaseEntitlementAsEntitlementName = EntitlementName.FromAccountCustomerEntitlement("[ACCOUNT]", "[CUSTOMER]", "[ENTITLEMENT]"),
+                },
+                Parameters =
+                {
+                    new Parameter
+                    {
+                        Name = "name1c9368b0",
+                        Value = new Value
+                        {
+                            Int64Value = 4714169996607726047L,
+                            StringValue = "string_valueb4853a86",
+                            DoubleValue = -69080261192217800,
+                            ProtoValue = new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                        Editable = true,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetEntitlement(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
@@ -548,20 +1388,85 @@ namespace Google.Cloud.Channel.V1.Tests
             Entitlement expectedResponse = new Entitlement
             {
                 EntitlementName = EntitlementName.FromAccountCustomerEntitlement("[ACCOUNT]", "[CUSTOMER]", "[ENTITLEMENT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 OfferAsOfferName = OfferName.FromAccountOffer("[ACCOUNT]", "[OFFER]"),
-                CommitmentSettings = new CommitmentSettings(),
+                CommitmentSettings = new CommitmentSettings
+                {
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RenewalSettings = new RenewalSettings
+                    {
+                        EnableRenewal = false,
+                        ResizeUnitCount = false,
+                        PaymentPlan = PaymentPlan.Commitment,
+                        PaymentCycle = new Period
+                        {
+                            Duration = 348348088,
+                            PeriodType = PeriodType.Year,
+                        },
+                    },
+                },
                 ProvisioningState = Entitlement.Types.ProvisioningState.Unspecified,
-                ProvisionedService = new ProvisionedService(),
+                ProvisionedService = new ProvisionedService
+                {
+                    ProvisioningId = "provisioning_idb6b17dad",
+                    ProductId = "product_idde82ea9b",
+                    SkuId = "sku_idca5bad22",
+                },
                 SuspensionReasons =
                 {
                     Entitlement.Types.SuspensionReason.TrialEnded,
                 },
                 PurchaseOrderId = "purchase_order_id4111e034",
-                TrialSettings = new TrialSettings(),
-                AssociationInfo = new AssociationInfo(),
-                Parameters = { new Parameter(), },
+                TrialSettings = new TrialSettings
+                {
+                    Trial = true,
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                AssociationInfo = new AssociationInfo
+                {
+                    BaseEntitlementAsEntitlementName = EntitlementName.FromAccountCustomerEntitlement("[ACCOUNT]", "[CUSTOMER]", "[ENTITLEMENT]"),
+                },
+                Parameters =
+                {
+                    new Parameter
+                    {
+                        Name = "name1c9368b0",
+                        Value = new Value
+                        {
+                            Int64Value = 4714169996607726047L,
+                            StringValue = "string_valueb4853a86",
+                            DoubleValue = -69080261192217800,
+                            ProtoValue = new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                        Editable = true,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetEntitlementAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entitlement>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
@@ -588,10 +1493,33 @@ namespace Google.Cloud.Channel.V1.Tests
                 ResellerCloudIdentityId = "reseller_cloud_identity_id1b90ae2b",
                 LinkState = ChannelPartnerLinkState.Revoked,
                 InviteLinkUri = "invite_link_urie81ac099",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PublicId = "public_id4d74e21e",
-                ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo(),
+                ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo
+                {
+                    CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                    IsDomainVerified = false,
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    PhoneNumber = "phone_number9ebac341",
+                    LanguageCode = "language_code2f6c7160",
+                    PrimaryDomain = "primary_domainc60acdbc",
+                    AdminConsoleUri = "admin_console_urif9cabb4a",
+                    EduData = new EduData
+                    {
+                        InstituteType = EduData.Types.InstituteType.Unspecified,
+                        InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                        Website = "website03fabed1",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetChannelPartnerLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
@@ -616,10 +1544,33 @@ namespace Google.Cloud.Channel.V1.Tests
                 ResellerCloudIdentityId = "reseller_cloud_identity_id1b90ae2b",
                 LinkState = ChannelPartnerLinkState.Revoked,
                 InviteLinkUri = "invite_link_urie81ac099",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PublicId = "public_id4d74e21e",
-                ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo(),
+                ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo
+                {
+                    CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                    IsDomainVerified = false,
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    PhoneNumber = "phone_number9ebac341",
+                    LanguageCode = "language_code2f6c7160",
+                    PrimaryDomain = "primary_domainc60acdbc",
+                    AdminConsoleUri = "admin_console_urif9cabb4a",
+                    EduData = new EduData
+                    {
+                        InstituteType = EduData.Types.InstituteType.Unspecified,
+                        InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                        Website = "website03fabed1",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetChannelPartnerLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ChannelPartnerLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
@@ -638,7 +1589,40 @@ namespace Google.Cloud.Channel.V1.Tests
             CreateChannelPartnerLinkRequest request = new CreateChannelPartnerLinkRequest
             {
                 Parent = "parent7858e4d0",
-                ChannelPartnerLink = new ChannelPartnerLink(),
+                ChannelPartnerLink = new ChannelPartnerLink
+                {
+                    Name = "name1c9368b0",
+                    ResellerCloudIdentityId = "reseller_cloud_identity_id1b90ae2b",
+                    LinkState = ChannelPartnerLinkState.Revoked,
+                    InviteLinkUri = "invite_link_urie81ac099",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PublicId = "public_id4d74e21e",
+                    ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo
+                    {
+                        CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                        IsDomainVerified = false,
+                        AlternateEmail = "alternate_email3cdfc6ce",
+                        PhoneNumber = "phone_number9ebac341",
+                        LanguageCode = "language_code2f6c7160",
+                        PrimaryDomain = "primary_domainc60acdbc",
+                        AdminConsoleUri = "admin_console_urif9cabb4a",
+                        EduData = new EduData
+                        {
+                            InstituteType = EduData.Types.InstituteType.Unspecified,
+                            InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                            Website = "website03fabed1",
+                        },
+                    },
+                },
             };
             ChannelPartnerLink expectedResponse = new ChannelPartnerLink
             {
@@ -646,10 +1630,33 @@ namespace Google.Cloud.Channel.V1.Tests
                 ResellerCloudIdentityId = "reseller_cloud_identity_id1b90ae2b",
                 LinkState = ChannelPartnerLinkState.Revoked,
                 InviteLinkUri = "invite_link_urie81ac099",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PublicId = "public_id4d74e21e",
-                ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo(),
+                ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo
+                {
+                    CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                    IsDomainVerified = false,
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    PhoneNumber = "phone_number9ebac341",
+                    LanguageCode = "language_code2f6c7160",
+                    PrimaryDomain = "primary_domainc60acdbc",
+                    AdminConsoleUri = "admin_console_urif9cabb4a",
+                    EduData = new EduData
+                    {
+                        InstituteType = EduData.Types.InstituteType.Unspecified,
+                        InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                        Website = "website03fabed1",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateChannelPartnerLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
@@ -666,7 +1673,40 @@ namespace Google.Cloud.Channel.V1.Tests
             CreateChannelPartnerLinkRequest request = new CreateChannelPartnerLinkRequest
             {
                 Parent = "parent7858e4d0",
-                ChannelPartnerLink = new ChannelPartnerLink(),
+                ChannelPartnerLink = new ChannelPartnerLink
+                {
+                    Name = "name1c9368b0",
+                    ResellerCloudIdentityId = "reseller_cloud_identity_id1b90ae2b",
+                    LinkState = ChannelPartnerLinkState.Revoked,
+                    InviteLinkUri = "invite_link_urie81ac099",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PublicId = "public_id4d74e21e",
+                    ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo
+                    {
+                        CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                        IsDomainVerified = false,
+                        AlternateEmail = "alternate_email3cdfc6ce",
+                        PhoneNumber = "phone_number9ebac341",
+                        LanguageCode = "language_code2f6c7160",
+                        PrimaryDomain = "primary_domainc60acdbc",
+                        AdminConsoleUri = "admin_console_urif9cabb4a",
+                        EduData = new EduData
+                        {
+                            InstituteType = EduData.Types.InstituteType.Unspecified,
+                            InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                            Website = "website03fabed1",
+                        },
+                    },
+                },
             };
             ChannelPartnerLink expectedResponse = new ChannelPartnerLink
             {
@@ -674,10 +1714,33 @@ namespace Google.Cloud.Channel.V1.Tests
                 ResellerCloudIdentityId = "reseller_cloud_identity_id1b90ae2b",
                 LinkState = ChannelPartnerLinkState.Revoked,
                 InviteLinkUri = "invite_link_urie81ac099",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PublicId = "public_id4d74e21e",
-                ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo(),
+                ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo
+                {
+                    CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                    IsDomainVerified = false,
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    PhoneNumber = "phone_number9ebac341",
+                    LanguageCode = "language_code2f6c7160",
+                    PrimaryDomain = "primary_domainc60acdbc",
+                    AdminConsoleUri = "admin_console_urif9cabb4a",
+                    EduData = new EduData
+                    {
+                        InstituteType = EduData.Types.InstituteType.Unspecified,
+                        InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                        Website = "website03fabed1",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateChannelPartnerLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ChannelPartnerLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
@@ -696,8 +1759,44 @@ namespace Google.Cloud.Channel.V1.Tests
             UpdateChannelPartnerLinkRequest request = new UpdateChannelPartnerLinkRequest
             {
                 Name = "name1c9368b0",
-                ChannelPartnerLink = new ChannelPartnerLink(),
-                UpdateMask = new wkt::FieldMask(),
+                ChannelPartnerLink = new ChannelPartnerLink
+                {
+                    Name = "name1c9368b0",
+                    ResellerCloudIdentityId = "reseller_cloud_identity_id1b90ae2b",
+                    LinkState = ChannelPartnerLinkState.Revoked,
+                    InviteLinkUri = "invite_link_urie81ac099",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PublicId = "public_id4d74e21e",
+                    ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo
+                    {
+                        CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                        IsDomainVerified = false,
+                        AlternateEmail = "alternate_email3cdfc6ce",
+                        PhoneNumber = "phone_number9ebac341",
+                        LanguageCode = "language_code2f6c7160",
+                        PrimaryDomain = "primary_domainc60acdbc",
+                        AdminConsoleUri = "admin_console_urif9cabb4a",
+                        EduData = new EduData
+                        {
+                            InstituteType = EduData.Types.InstituteType.Unspecified,
+                            InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                            Website = "website03fabed1",
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             ChannelPartnerLink expectedResponse = new ChannelPartnerLink
             {
@@ -705,10 +1804,33 @@ namespace Google.Cloud.Channel.V1.Tests
                 ResellerCloudIdentityId = "reseller_cloud_identity_id1b90ae2b",
                 LinkState = ChannelPartnerLinkState.Revoked,
                 InviteLinkUri = "invite_link_urie81ac099",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PublicId = "public_id4d74e21e",
-                ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo(),
+                ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo
+                {
+                    CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                    IsDomainVerified = false,
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    PhoneNumber = "phone_number9ebac341",
+                    LanguageCode = "language_code2f6c7160",
+                    PrimaryDomain = "primary_domainc60acdbc",
+                    AdminConsoleUri = "admin_console_urif9cabb4a",
+                    EduData = new EduData
+                    {
+                        InstituteType = EduData.Types.InstituteType.Unspecified,
+                        InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                        Website = "website03fabed1",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateChannelPartnerLink(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
@@ -725,8 +1847,44 @@ namespace Google.Cloud.Channel.V1.Tests
             UpdateChannelPartnerLinkRequest request = new UpdateChannelPartnerLinkRequest
             {
                 Name = "name1c9368b0",
-                ChannelPartnerLink = new ChannelPartnerLink(),
-                UpdateMask = new wkt::FieldMask(),
+                ChannelPartnerLink = new ChannelPartnerLink
+                {
+                    Name = "name1c9368b0",
+                    ResellerCloudIdentityId = "reseller_cloud_identity_id1b90ae2b",
+                    LinkState = ChannelPartnerLinkState.Revoked,
+                    InviteLinkUri = "invite_link_urie81ac099",
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    PublicId = "public_id4d74e21e",
+                    ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo
+                    {
+                        CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                        IsDomainVerified = false,
+                        AlternateEmail = "alternate_email3cdfc6ce",
+                        PhoneNumber = "phone_number9ebac341",
+                        LanguageCode = "language_code2f6c7160",
+                        PrimaryDomain = "primary_domainc60acdbc",
+                        AdminConsoleUri = "admin_console_urif9cabb4a",
+                        EduData = new EduData
+                        {
+                            InstituteType = EduData.Types.InstituteType.Unspecified,
+                            InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                            Website = "website03fabed1",
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             ChannelPartnerLink expectedResponse = new ChannelPartnerLink
             {
@@ -734,10 +1892,33 @@ namespace Google.Cloud.Channel.V1.Tests
                 ResellerCloudIdentityId = "reseller_cloud_identity_id1b90ae2b",
                 LinkState = ChannelPartnerLinkState.Revoked,
                 InviteLinkUri = "invite_link_urie81ac099",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 PublicId = "public_id4d74e21e",
-                ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo(),
+                ChannelPartnerCloudIdentityInfo = new CloudIdentityInfo
+                {
+                    CustomerType = CloudIdentityInfo.Types.CustomerType.Domain,
+                    IsDomainVerified = false,
+                    AlternateEmail = "alternate_email3cdfc6ce",
+                    PhoneNumber = "phone_number9ebac341",
+                    LanguageCode = "language_code2f6c7160",
+                    PrimaryDomain = "primary_domainc60acdbc",
+                    AdminConsoleUri = "admin_console_urif9cabb4a",
+                    EduData = new EduData
+                    {
+                        InstituteType = EduData.Types.InstituteType.Unspecified,
+                        InstituteSize = EduData.Types.InstituteSize.Size10001OrMore,
+                        Website = "website03fabed1",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateChannelPartnerLinkAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ChannelPartnerLink>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
