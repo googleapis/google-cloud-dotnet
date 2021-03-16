@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -40,8 +41,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             Gateway expectedResponse = new Gateway
             {
                 GatewayName = GatewayName.FromProjectLocationGateway("[PROJECT]", "[LOCATION]", "[GATEWAY]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -73,8 +82,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             Gateway expectedResponse = new Gateway
             {
                 GatewayName = GatewayName.FromProjectLocationGateway("[PROJECT]", "[LOCATION]", "[GATEWAY]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -108,8 +125,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             Gateway expectedResponse = new Gateway
             {
                 GatewayName = GatewayName.FromProjectLocationGateway("[PROJECT]", "[LOCATION]", "[GATEWAY]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -141,8 +166,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             Gateway expectedResponse = new Gateway
             {
                 GatewayName = GatewayName.FromProjectLocationGateway("[PROJECT]", "[LOCATION]", "[GATEWAY]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -176,8 +209,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             Gateway expectedResponse = new Gateway
             {
                 GatewayName = GatewayName.FromProjectLocationGateway("[PROJECT]", "[LOCATION]", "[GATEWAY]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -209,8 +250,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             Gateway expectedResponse = new Gateway
             {
                 GatewayName = GatewayName.FromProjectLocationGateway("[PROJECT]", "[LOCATION]", "[GATEWAY]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -244,8 +293,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             Api expectedResponse = new Api
             {
                 ApiName = ApiName.FromProjectApi("[PROJECT]", "[API]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -276,8 +333,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             Api expectedResponse = new Api
             {
                 ApiName = ApiName.FromProjectApi("[PROJECT]", "[API]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -310,8 +375,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             Api expectedResponse = new Api
             {
                 ApiName = ApiName.FromProjectApi("[PROJECT]", "[API]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -342,8 +415,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             Api expectedResponse = new Api
             {
                 ApiName = ApiName.FromProjectApi("[PROJECT]", "[API]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -376,8 +457,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             Api expectedResponse = new Api
             {
                 ApiName = ApiName.FromProjectApi("[PROJECT]", "[API]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -408,8 +497,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             Api expectedResponse = new Api
             {
                 ApiName = ApiName.FromProjectApi("[PROJECT]", "[API]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -443,8 +540,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             ApiConfig expectedResponse = new ApiConfig
             {
                 ApiConfigName = ApiConfigName.FromProjectApiApiConfig("[PROJECT]", "[API]", "[API_CONFIG]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -456,15 +561,41 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 State = ApiConfig.Types.State.Activating,
                 OpenapiDocuments =
                 {
-                    new ApiConfig.Types.OpenApiDocument(),
+                    new ApiConfig.Types.OpenApiDocument
+                    {
+                        Document = new ApiConfig.Types.File
+                        {
+                            Path = "path0b1dfed6",
+                            Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                        },
+                    },
                 },
                 GrpcServices =
                 {
-                    new ApiConfig.Types.GrpcServiceDefinition(),
+                    new ApiConfig.Types.GrpcServiceDefinition
+                    {
+                        FileDescriptorSet = new ApiConfig.Types.File
+                        {
+                            Path = "path0b1dfed6",
+                            Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                        },
+                        Source =
+                        {
+                            new ApiConfig.Types.File
+                            {
+                                Path = "path0b1dfed6",
+                                Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                            },
+                        },
+                    },
                 },
                 ManagedServiceConfigs =
                 {
-                    new ApiConfig.Types.File(),
+                    new ApiConfig.Types.File
+                    {
+                        Path = "path0b1dfed6",
+                        Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                    },
                 },
                 ServiceConfigIdAsServiceName = ServiceName.FromServiceConfig("[SERVICE]", "[CONFIG]"),
                 GatewayServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
@@ -489,8 +620,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             ApiConfig expectedResponse = new ApiConfig
             {
                 ApiConfigName = ApiConfigName.FromProjectApiApiConfig("[PROJECT]", "[API]", "[API_CONFIG]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -502,15 +641,41 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 State = ApiConfig.Types.State.Activating,
                 OpenapiDocuments =
                 {
-                    new ApiConfig.Types.OpenApiDocument(),
+                    new ApiConfig.Types.OpenApiDocument
+                    {
+                        Document = new ApiConfig.Types.File
+                        {
+                            Path = "path0b1dfed6",
+                            Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                        },
+                    },
                 },
                 GrpcServices =
                 {
-                    new ApiConfig.Types.GrpcServiceDefinition(),
+                    new ApiConfig.Types.GrpcServiceDefinition
+                    {
+                        FileDescriptorSet = new ApiConfig.Types.File
+                        {
+                            Path = "path0b1dfed6",
+                            Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                        },
+                        Source =
+                        {
+                            new ApiConfig.Types.File
+                            {
+                                Path = "path0b1dfed6",
+                                Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                            },
+                        },
+                    },
                 },
                 ManagedServiceConfigs =
                 {
-                    new ApiConfig.Types.File(),
+                    new ApiConfig.Types.File
+                    {
+                        Path = "path0b1dfed6",
+                        Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                    },
                 },
                 ServiceConfigIdAsServiceName = ServiceName.FromServiceConfig("[SERVICE]", "[CONFIG]"),
                 GatewayServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
@@ -536,8 +701,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             ApiConfig expectedResponse = new ApiConfig
             {
                 ApiConfigName = ApiConfigName.FromProjectApiApiConfig("[PROJECT]", "[API]", "[API_CONFIG]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -549,15 +722,41 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 State = ApiConfig.Types.State.Activating,
                 OpenapiDocuments =
                 {
-                    new ApiConfig.Types.OpenApiDocument(),
+                    new ApiConfig.Types.OpenApiDocument
+                    {
+                        Document = new ApiConfig.Types.File
+                        {
+                            Path = "path0b1dfed6",
+                            Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                        },
+                    },
                 },
                 GrpcServices =
                 {
-                    new ApiConfig.Types.GrpcServiceDefinition(),
+                    new ApiConfig.Types.GrpcServiceDefinition
+                    {
+                        FileDescriptorSet = new ApiConfig.Types.File
+                        {
+                            Path = "path0b1dfed6",
+                            Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                        },
+                        Source =
+                        {
+                            new ApiConfig.Types.File
+                            {
+                                Path = "path0b1dfed6",
+                                Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                            },
+                        },
+                    },
                 },
                 ManagedServiceConfigs =
                 {
-                    new ApiConfig.Types.File(),
+                    new ApiConfig.Types.File
+                    {
+                        Path = "path0b1dfed6",
+                        Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                    },
                 },
                 ServiceConfigIdAsServiceName = ServiceName.FromServiceConfig("[SERVICE]", "[CONFIG]"),
                 GatewayServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
@@ -581,8 +780,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             ApiConfig expectedResponse = new ApiConfig
             {
                 ApiConfigName = ApiConfigName.FromProjectApiApiConfig("[PROJECT]", "[API]", "[API_CONFIG]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -594,15 +801,41 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 State = ApiConfig.Types.State.Activating,
                 OpenapiDocuments =
                 {
-                    new ApiConfig.Types.OpenApiDocument(),
+                    new ApiConfig.Types.OpenApiDocument
+                    {
+                        Document = new ApiConfig.Types.File
+                        {
+                            Path = "path0b1dfed6",
+                            Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                        },
+                    },
                 },
                 GrpcServices =
                 {
-                    new ApiConfig.Types.GrpcServiceDefinition(),
+                    new ApiConfig.Types.GrpcServiceDefinition
+                    {
+                        FileDescriptorSet = new ApiConfig.Types.File
+                        {
+                            Path = "path0b1dfed6",
+                            Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                        },
+                        Source =
+                        {
+                            new ApiConfig.Types.File
+                            {
+                                Path = "path0b1dfed6",
+                                Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                            },
+                        },
+                    },
                 },
                 ManagedServiceConfigs =
                 {
-                    new ApiConfig.Types.File(),
+                    new ApiConfig.Types.File
+                    {
+                        Path = "path0b1dfed6",
+                        Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                    },
                 },
                 ServiceConfigIdAsServiceName = ServiceName.FromServiceConfig("[SERVICE]", "[CONFIG]"),
                 GatewayServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
@@ -628,8 +861,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             ApiConfig expectedResponse = new ApiConfig
             {
                 ApiConfigName = ApiConfigName.FromProjectApiApiConfig("[PROJECT]", "[API]", "[API_CONFIG]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -641,15 +882,41 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 State = ApiConfig.Types.State.Activating,
                 OpenapiDocuments =
                 {
-                    new ApiConfig.Types.OpenApiDocument(),
+                    new ApiConfig.Types.OpenApiDocument
+                    {
+                        Document = new ApiConfig.Types.File
+                        {
+                            Path = "path0b1dfed6",
+                            Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                        },
+                    },
                 },
                 GrpcServices =
                 {
-                    new ApiConfig.Types.GrpcServiceDefinition(),
+                    new ApiConfig.Types.GrpcServiceDefinition
+                    {
+                        FileDescriptorSet = new ApiConfig.Types.File
+                        {
+                            Path = "path0b1dfed6",
+                            Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                        },
+                        Source =
+                        {
+                            new ApiConfig.Types.File
+                            {
+                                Path = "path0b1dfed6",
+                                Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                            },
+                        },
+                    },
                 },
                 ManagedServiceConfigs =
                 {
-                    new ApiConfig.Types.File(),
+                    new ApiConfig.Types.File
+                    {
+                        Path = "path0b1dfed6",
+                        Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                    },
                 },
                 ServiceConfigIdAsServiceName = ServiceName.FromServiceConfig("[SERVICE]", "[CONFIG]"),
                 GatewayServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
@@ -673,8 +940,16 @@ namespace Google.Cloud.ApiGateway.V1.Tests
             ApiConfig expectedResponse = new ApiConfig
             {
                 ApiConfigName = ApiConfigName.FromProjectApiApiConfig("[PROJECT]", "[API]", "[API_CONFIG]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -686,15 +961,41 @@ namespace Google.Cloud.ApiGateway.V1.Tests
                 State = ApiConfig.Types.State.Activating,
                 OpenapiDocuments =
                 {
-                    new ApiConfig.Types.OpenApiDocument(),
+                    new ApiConfig.Types.OpenApiDocument
+                    {
+                        Document = new ApiConfig.Types.File
+                        {
+                            Path = "path0b1dfed6",
+                            Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                        },
+                    },
                 },
                 GrpcServices =
                 {
-                    new ApiConfig.Types.GrpcServiceDefinition(),
+                    new ApiConfig.Types.GrpcServiceDefinition
+                    {
+                        FileDescriptorSet = new ApiConfig.Types.File
+                        {
+                            Path = "path0b1dfed6",
+                            Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                        },
+                        Source =
+                        {
+                            new ApiConfig.Types.File
+                            {
+                                Path = "path0b1dfed6",
+                                Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                            },
+                        },
+                    },
                 },
                 ManagedServiceConfigs =
                 {
-                    new ApiConfig.Types.File(),
+                    new ApiConfig.Types.File
+                    {
+                        Path = "path0b1dfed6",
+                        Contents = proto::ByteString.CopyFromUtf8("contents8c7dbf98"),
+                    },
                 },
                 ServiceConfigIdAsServiceName = ServiceName.FromServiceConfig("[SERVICE]", "[CONFIG]"),
                 GatewayServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
