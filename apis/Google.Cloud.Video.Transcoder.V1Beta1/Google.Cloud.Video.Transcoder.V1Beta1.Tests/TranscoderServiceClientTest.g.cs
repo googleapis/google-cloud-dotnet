@@ -35,7 +35,351 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                    InputUri = "input_uriec9462a7",
+                    OutputUri = "output_urice759a4d",
+                    TemplateId = "template_id6435f574",
+                    Config = new JobConfig
+                    {
+                        Inputs =
+                        {
+                            new Input
+                            {
+                                Key = "key8a0b6e3c",
+                                Uri = "uri3db70593",
+                                PreprocessingConfig = new PreprocessingConfig
+                                {
+                                    Color = new PreprocessingConfig.Types.Color
+                                    {
+                                        Saturation = 1.0610209803855252E+18,
+                                        Contrast = -3.1572143051787475E+17,
+                                        Brightness = 3.444089950256697E+17,
+                                    },
+                                    Denoise = new PreprocessingConfig.Types.Denoise
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Tune = "tune9468e17c",
+                                    },
+                                    Deblock = new PreprocessingConfig.Types.Deblock
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Enabled = true,
+                                    },
+                                    Audio = new PreprocessingConfig.Types.Audio
+                                    {
+                                        Lufs = -9.460867282568658E+17,
+                                        HighBoost = true,
+                                        LowBoost = false,
+                                    },
+                                },
+                            },
+                        },
+                        EditList =
+                        {
+                            new EditAtom
+                            {
+                                Key = "key8a0b6e3c",
+                                Inputs = { "inputs67f9afa8", },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        ElementaryStreams =
+                        {
+                            new ElementaryStream
+                            {
+                                VideoStream = new VideoStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    Profile = "profile1b48977d",
+                                    Tune = "tune9468e17c",
+                                    Preset = "presetb3d35dd1",
+                                    HeightPixels = 1227270303,
+                                    WidthPixels = 654228257,
+                                    PixelFormat = "pixel_format4cc45806",
+                                    BitrateBps = -1023292117,
+                                    RateControlMode = "rate_control_modef775cd90",
+                                    EnableTwoPass = false,
+                                    CrfLevel = -1080275429,
+                                    VbvSizeBits = -722075892,
+                                    VbvFullnessBits = 769124432,
+                                    AllowOpenGop = false,
+                                    GopFrameCount = 625883926,
+                                    GopDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EntropyCoder = "entropy_coder596b357b",
+                                    BPyramid = true,
+                                    BFrameCount = -1119033066,
+                                    FrameRate = 2.559168479117898E+17,
+                                    AqStrength = -2.9559583429686483E+17,
+                                },
+                                AudioStream = new AudioStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    BitrateBps = -1023292117,
+                                    ChannelCount = 613767397,
+                                    ChannelLayout =
+                                    {
+                                        "channel_layout9f5b73bc",
+                                    },
+                                    Mapping =
+                                    {
+                                        new AudioStream.Types.AudioAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Channels =
+                                            {
+                                                new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                                {
+                                                    Inputs =
+                                                    {
+                                                        new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                        {
+                                                            Key = "key8a0b6e3c",
+                                                            Track = -1312322506,
+                                                            Channel = -304970300,
+                                                            GainDb = 7.377894204596698E+17,
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    SampleRateHertz = -1305662007,
+                                },
+                                TextStream = new TextStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    LanguageCode = "language_code2f6c7160",
+                                    Mapping =
+                                    {
+                                        new TextStream.Types.TextAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Inputs =
+                                            {
+                                                new TextStream.Types.TextAtom.Types.TextInput
+                                                {
+                                                    Key = "key8a0b6e3c",
+                                                    Track = -1312322506,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                Key = "key8a0b6e3c",
+                            },
+                        },
+                        MuxStreams =
+                        {
+                            new MuxStream
+                            {
+                                Key = "key8a0b6e3c",
+                                FileName = "file_name88ad9030",
+                                Container = "containerbc6e0b5f",
+                                ElementaryStreams =
+                                {
+                                    "elementary_streams43f4aff8",
+                                },
+                                SegmentSettings = new SegmentSettings
+                                {
+                                    SegmentDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    IndividualSegments = true,
+                                },
+                                Encryption = new Encryption
+                                {
+                                    Key = "key8a0b6e3c",
+                                    Iv = "iv2d3bb5f0",
+                                    Aes128 = new Encryption.Types.Aes128Encryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    SampleAes = new Encryption.Types.SampleAesEncryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                    {
+                                        KeyId = "key_id2691f630",
+                                        Scheme = "scheme17393241",
+                                    },
+                                },
+                            },
+                        },
+                        Manifests =
+                        {
+                            new Manifest
+                            {
+                                FileName = "file_name88ad9030",
+                                Type = Manifest.Types.ManifestType.Unspecified,
+                                MuxStreams =
+                                {
+                                    "mux_streams70055637",
+                                },
+                            },
+                        },
+                        Output = new Output { Uri = "uri3db70593", },
+                        AdBreaks =
+                        {
+                            new AdBreak
+                            {
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        PubsubDestination = new PubsubDestination
+                        {
+                            Topic = "topicac689b9d",
+                        },
+                        SpriteSheets =
+                        {
+                            new SpriteSheet
+                            {
+                                Format = "format2ab9dc1d",
+                                FilePrefix = "file_prefix2c4935ea",
+                                SpriteWidthPixels = -1630794554,
+                                SpriteHeightPixels = 201588428,
+                                ColumnCount = -1836018183,
+                                RowCount = 743251772,
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                TotalCount = 52314676,
+                                Interval = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Overlays =
+                        {
+                            new Overlay
+                            {
+                                Image = new Overlay.Types.Image
+                                {
+                                    Uri = "uri3db70593",
+                                    Resolution = new Overlay.Types.NormalizedCoordinate
+                                    {
+                                        X = 4.728972229337811E+17,
+                                        Y = 1.285841168201181E+17,
+                                    },
+                                    Alpha = -5.821187609512911E+17,
+                                },
+                                Animations =
+                                {
+                                    new Overlay.Types.Animation
+                                    {
+                                        AnimationStatic = new Overlay.Types.AnimationStatic
+                                        {
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationFade = new Overlay.Types.AnimationFade
+                                        {
+                                            FadeType = Overlay.Types.FadeType.FadeIn,
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                            EndTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationEnd = new Overlay.Types.AnimationEnd
+                                        {
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    Priority = 1546225849,
+                    OriginUri = new Job.Types.OriginUri
+                    {
+                        Hls = "hls417d516b",
+                        Dash = "dashc3a799b9",
+                    },
+                    State = Job.Types.ProcessingState.Succeeded,
+                    Progress = new Progress
+                    {
+                        Analyzed = -40208054787815450,
+                        Encoded = -2.5369225662121213E+17,
+                        Uploaded = 6.7157903366413E+17,
+                        Notified = 1.0199682236791959E+18,
+                    },
+                    FailureReason = "failure_reasonb933af24",
+                    FailureDetails =
+                    {
+                        new FailureDetail
+                        {
+                            Description = "description2cf9da67",
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
@@ -43,19 +387,344 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 InputUri = "input_uriec9462a7",
                 OutputUri = "output_urice759a4d",
                 TemplateId = "template_id6435f574",
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 Priority = 1546225849,
-                OriginUri = new Job.Types.OriginUri(),
+                OriginUri = new Job.Types.OriginUri
+                {
+                    Hls = "hls417d516b",
+                    Dash = "dashc3a799b9",
+                },
                 State = Job.Types.ProcessingState.Succeeded,
-                Progress = new Progress(),
+                Progress = new Progress
+                {
+                    Analyzed = -40208054787815450,
+                    Encoded = -2.5369225662121213E+17,
+                    Uploaded = 6.7157903366413E+17,
+                    Notified = 1.0199682236791959E+18,
+                },
                 FailureReason = "failure_reasonb933af24",
                 FailureDetails =
                 {
-                    new FailureDetail(),
+                    new FailureDetail
+                    {
+                        Description = "description2cf9da67",
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -71,7 +740,351 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                    InputUri = "input_uriec9462a7",
+                    OutputUri = "output_urice759a4d",
+                    TemplateId = "template_id6435f574",
+                    Config = new JobConfig
+                    {
+                        Inputs =
+                        {
+                            new Input
+                            {
+                                Key = "key8a0b6e3c",
+                                Uri = "uri3db70593",
+                                PreprocessingConfig = new PreprocessingConfig
+                                {
+                                    Color = new PreprocessingConfig.Types.Color
+                                    {
+                                        Saturation = 1.0610209803855252E+18,
+                                        Contrast = -3.1572143051787475E+17,
+                                        Brightness = 3.444089950256697E+17,
+                                    },
+                                    Denoise = new PreprocessingConfig.Types.Denoise
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Tune = "tune9468e17c",
+                                    },
+                                    Deblock = new PreprocessingConfig.Types.Deblock
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Enabled = true,
+                                    },
+                                    Audio = new PreprocessingConfig.Types.Audio
+                                    {
+                                        Lufs = -9.460867282568658E+17,
+                                        HighBoost = true,
+                                        LowBoost = false,
+                                    },
+                                },
+                            },
+                        },
+                        EditList =
+                        {
+                            new EditAtom
+                            {
+                                Key = "key8a0b6e3c",
+                                Inputs = { "inputs67f9afa8", },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        ElementaryStreams =
+                        {
+                            new ElementaryStream
+                            {
+                                VideoStream = new VideoStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    Profile = "profile1b48977d",
+                                    Tune = "tune9468e17c",
+                                    Preset = "presetb3d35dd1",
+                                    HeightPixels = 1227270303,
+                                    WidthPixels = 654228257,
+                                    PixelFormat = "pixel_format4cc45806",
+                                    BitrateBps = -1023292117,
+                                    RateControlMode = "rate_control_modef775cd90",
+                                    EnableTwoPass = false,
+                                    CrfLevel = -1080275429,
+                                    VbvSizeBits = -722075892,
+                                    VbvFullnessBits = 769124432,
+                                    AllowOpenGop = false,
+                                    GopFrameCount = 625883926,
+                                    GopDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EntropyCoder = "entropy_coder596b357b",
+                                    BPyramid = true,
+                                    BFrameCount = -1119033066,
+                                    FrameRate = 2.559168479117898E+17,
+                                    AqStrength = -2.9559583429686483E+17,
+                                },
+                                AudioStream = new AudioStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    BitrateBps = -1023292117,
+                                    ChannelCount = 613767397,
+                                    ChannelLayout =
+                                    {
+                                        "channel_layout9f5b73bc",
+                                    },
+                                    Mapping =
+                                    {
+                                        new AudioStream.Types.AudioAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Channels =
+                                            {
+                                                new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                                {
+                                                    Inputs =
+                                                    {
+                                                        new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                        {
+                                                            Key = "key8a0b6e3c",
+                                                            Track = -1312322506,
+                                                            Channel = -304970300,
+                                                            GainDb = 7.377894204596698E+17,
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    SampleRateHertz = -1305662007,
+                                },
+                                TextStream = new TextStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    LanguageCode = "language_code2f6c7160",
+                                    Mapping =
+                                    {
+                                        new TextStream.Types.TextAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Inputs =
+                                            {
+                                                new TextStream.Types.TextAtom.Types.TextInput
+                                                {
+                                                    Key = "key8a0b6e3c",
+                                                    Track = -1312322506,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                Key = "key8a0b6e3c",
+                            },
+                        },
+                        MuxStreams =
+                        {
+                            new MuxStream
+                            {
+                                Key = "key8a0b6e3c",
+                                FileName = "file_name88ad9030",
+                                Container = "containerbc6e0b5f",
+                                ElementaryStreams =
+                                {
+                                    "elementary_streams43f4aff8",
+                                },
+                                SegmentSettings = new SegmentSettings
+                                {
+                                    SegmentDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    IndividualSegments = true,
+                                },
+                                Encryption = new Encryption
+                                {
+                                    Key = "key8a0b6e3c",
+                                    Iv = "iv2d3bb5f0",
+                                    Aes128 = new Encryption.Types.Aes128Encryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    SampleAes = new Encryption.Types.SampleAesEncryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                    {
+                                        KeyId = "key_id2691f630",
+                                        Scheme = "scheme17393241",
+                                    },
+                                },
+                            },
+                        },
+                        Manifests =
+                        {
+                            new Manifest
+                            {
+                                FileName = "file_name88ad9030",
+                                Type = Manifest.Types.ManifestType.Unspecified,
+                                MuxStreams =
+                                {
+                                    "mux_streams70055637",
+                                },
+                            },
+                        },
+                        Output = new Output { Uri = "uri3db70593", },
+                        AdBreaks =
+                        {
+                            new AdBreak
+                            {
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        PubsubDestination = new PubsubDestination
+                        {
+                            Topic = "topicac689b9d",
+                        },
+                        SpriteSheets =
+                        {
+                            new SpriteSheet
+                            {
+                                Format = "format2ab9dc1d",
+                                FilePrefix = "file_prefix2c4935ea",
+                                SpriteWidthPixels = -1630794554,
+                                SpriteHeightPixels = 201588428,
+                                ColumnCount = -1836018183,
+                                RowCount = 743251772,
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                TotalCount = 52314676,
+                                Interval = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Overlays =
+                        {
+                            new Overlay
+                            {
+                                Image = new Overlay.Types.Image
+                                {
+                                    Uri = "uri3db70593",
+                                    Resolution = new Overlay.Types.NormalizedCoordinate
+                                    {
+                                        X = 4.728972229337811E+17,
+                                        Y = 1.285841168201181E+17,
+                                    },
+                                    Alpha = -5.821187609512911E+17,
+                                },
+                                Animations =
+                                {
+                                    new Overlay.Types.Animation
+                                    {
+                                        AnimationStatic = new Overlay.Types.AnimationStatic
+                                        {
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationFade = new Overlay.Types.AnimationFade
+                                        {
+                                            FadeType = Overlay.Types.FadeType.FadeIn,
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                            EndTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationEnd = new Overlay.Types.AnimationEnd
+                                        {
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    Priority = 1546225849,
+                    OriginUri = new Job.Types.OriginUri
+                    {
+                        Hls = "hls417d516b",
+                        Dash = "dashc3a799b9",
+                    },
+                    State = Job.Types.ProcessingState.Succeeded,
+                    Progress = new Progress
+                    {
+                        Analyzed = -40208054787815450,
+                        Encoded = -2.5369225662121213E+17,
+                        Uploaded = 6.7157903366413E+17,
+                        Notified = 1.0199682236791959E+18,
+                    },
+                    FailureReason = "failure_reasonb933af24",
+                    FailureDetails =
+                    {
+                        new FailureDetail
+                        {
+                            Description = "description2cf9da67",
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
@@ -79,19 +1092,344 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 InputUri = "input_uriec9462a7",
                 OutputUri = "output_urice759a4d",
                 TemplateId = "template_id6435f574",
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 Priority = 1546225849,
-                OriginUri = new Job.Types.OriginUri(),
+                OriginUri = new Job.Types.OriginUri
+                {
+                    Hls = "hls417d516b",
+                    Dash = "dashc3a799b9",
+                },
                 State = Job.Types.ProcessingState.Succeeded,
-                Progress = new Progress(),
+                Progress = new Progress
+                {
+                    Analyzed = -40208054787815450,
+                    Encoded = -2.5369225662121213E+17,
+                    Uploaded = 6.7157903366413E+17,
+                    Notified = 1.0199682236791959E+18,
+                },
                 FailureReason = "failure_reasonb933af24",
                 FailureDetails =
                 {
-                    new FailureDetail(),
+                    new FailureDetail
+                    {
+                        Description = "description2cf9da67",
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -109,7 +1447,351 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                    InputUri = "input_uriec9462a7",
+                    OutputUri = "output_urice759a4d",
+                    TemplateId = "template_id6435f574",
+                    Config = new JobConfig
+                    {
+                        Inputs =
+                        {
+                            new Input
+                            {
+                                Key = "key8a0b6e3c",
+                                Uri = "uri3db70593",
+                                PreprocessingConfig = new PreprocessingConfig
+                                {
+                                    Color = new PreprocessingConfig.Types.Color
+                                    {
+                                        Saturation = 1.0610209803855252E+18,
+                                        Contrast = -3.1572143051787475E+17,
+                                        Brightness = 3.444089950256697E+17,
+                                    },
+                                    Denoise = new PreprocessingConfig.Types.Denoise
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Tune = "tune9468e17c",
+                                    },
+                                    Deblock = new PreprocessingConfig.Types.Deblock
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Enabled = true,
+                                    },
+                                    Audio = new PreprocessingConfig.Types.Audio
+                                    {
+                                        Lufs = -9.460867282568658E+17,
+                                        HighBoost = true,
+                                        LowBoost = false,
+                                    },
+                                },
+                            },
+                        },
+                        EditList =
+                        {
+                            new EditAtom
+                            {
+                                Key = "key8a0b6e3c",
+                                Inputs = { "inputs67f9afa8", },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        ElementaryStreams =
+                        {
+                            new ElementaryStream
+                            {
+                                VideoStream = new VideoStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    Profile = "profile1b48977d",
+                                    Tune = "tune9468e17c",
+                                    Preset = "presetb3d35dd1",
+                                    HeightPixels = 1227270303,
+                                    WidthPixels = 654228257,
+                                    PixelFormat = "pixel_format4cc45806",
+                                    BitrateBps = -1023292117,
+                                    RateControlMode = "rate_control_modef775cd90",
+                                    EnableTwoPass = false,
+                                    CrfLevel = -1080275429,
+                                    VbvSizeBits = -722075892,
+                                    VbvFullnessBits = 769124432,
+                                    AllowOpenGop = false,
+                                    GopFrameCount = 625883926,
+                                    GopDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EntropyCoder = "entropy_coder596b357b",
+                                    BPyramid = true,
+                                    BFrameCount = -1119033066,
+                                    FrameRate = 2.559168479117898E+17,
+                                    AqStrength = -2.9559583429686483E+17,
+                                },
+                                AudioStream = new AudioStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    BitrateBps = -1023292117,
+                                    ChannelCount = 613767397,
+                                    ChannelLayout =
+                                    {
+                                        "channel_layout9f5b73bc",
+                                    },
+                                    Mapping =
+                                    {
+                                        new AudioStream.Types.AudioAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Channels =
+                                            {
+                                                new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                                {
+                                                    Inputs =
+                                                    {
+                                                        new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                        {
+                                                            Key = "key8a0b6e3c",
+                                                            Track = -1312322506,
+                                                            Channel = -304970300,
+                                                            GainDb = 7.377894204596698E+17,
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    SampleRateHertz = -1305662007,
+                                },
+                                TextStream = new TextStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    LanguageCode = "language_code2f6c7160",
+                                    Mapping =
+                                    {
+                                        new TextStream.Types.TextAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Inputs =
+                                            {
+                                                new TextStream.Types.TextAtom.Types.TextInput
+                                                {
+                                                    Key = "key8a0b6e3c",
+                                                    Track = -1312322506,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                Key = "key8a0b6e3c",
+                            },
+                        },
+                        MuxStreams =
+                        {
+                            new MuxStream
+                            {
+                                Key = "key8a0b6e3c",
+                                FileName = "file_name88ad9030",
+                                Container = "containerbc6e0b5f",
+                                ElementaryStreams =
+                                {
+                                    "elementary_streams43f4aff8",
+                                },
+                                SegmentSettings = new SegmentSettings
+                                {
+                                    SegmentDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    IndividualSegments = true,
+                                },
+                                Encryption = new Encryption
+                                {
+                                    Key = "key8a0b6e3c",
+                                    Iv = "iv2d3bb5f0",
+                                    Aes128 = new Encryption.Types.Aes128Encryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    SampleAes = new Encryption.Types.SampleAesEncryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                    {
+                                        KeyId = "key_id2691f630",
+                                        Scheme = "scheme17393241",
+                                    },
+                                },
+                            },
+                        },
+                        Manifests =
+                        {
+                            new Manifest
+                            {
+                                FileName = "file_name88ad9030",
+                                Type = Manifest.Types.ManifestType.Unspecified,
+                                MuxStreams =
+                                {
+                                    "mux_streams70055637",
+                                },
+                            },
+                        },
+                        Output = new Output { Uri = "uri3db70593", },
+                        AdBreaks =
+                        {
+                            new AdBreak
+                            {
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        PubsubDestination = new PubsubDestination
+                        {
+                            Topic = "topicac689b9d",
+                        },
+                        SpriteSheets =
+                        {
+                            new SpriteSheet
+                            {
+                                Format = "format2ab9dc1d",
+                                FilePrefix = "file_prefix2c4935ea",
+                                SpriteWidthPixels = -1630794554,
+                                SpriteHeightPixels = 201588428,
+                                ColumnCount = -1836018183,
+                                RowCount = 743251772,
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                TotalCount = 52314676,
+                                Interval = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Overlays =
+                        {
+                            new Overlay
+                            {
+                                Image = new Overlay.Types.Image
+                                {
+                                    Uri = "uri3db70593",
+                                    Resolution = new Overlay.Types.NormalizedCoordinate
+                                    {
+                                        X = 4.728972229337811E+17,
+                                        Y = 1.285841168201181E+17,
+                                    },
+                                    Alpha = -5.821187609512911E+17,
+                                },
+                                Animations =
+                                {
+                                    new Overlay.Types.Animation
+                                    {
+                                        AnimationStatic = new Overlay.Types.AnimationStatic
+                                        {
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationFade = new Overlay.Types.AnimationFade
+                                        {
+                                            FadeType = Overlay.Types.FadeType.FadeIn,
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                            EndTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationEnd = new Overlay.Types.AnimationEnd
+                                        {
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    Priority = 1546225849,
+                    OriginUri = new Job.Types.OriginUri
+                    {
+                        Hls = "hls417d516b",
+                        Dash = "dashc3a799b9",
+                    },
+                    State = Job.Types.ProcessingState.Succeeded,
+                    Progress = new Progress
+                    {
+                        Analyzed = -40208054787815450,
+                        Encoded = -2.5369225662121213E+17,
+                        Uploaded = 6.7157903366413E+17,
+                        Notified = 1.0199682236791959E+18,
+                    },
+                    FailureReason = "failure_reasonb933af24",
+                    FailureDetails =
+                    {
+                        new FailureDetail
+                        {
+                            Description = "description2cf9da67",
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
@@ -117,19 +1799,344 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 InputUri = "input_uriec9462a7",
                 OutputUri = "output_urice759a4d",
                 TemplateId = "template_id6435f574",
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 Priority = 1546225849,
-                OriginUri = new Job.Types.OriginUri(),
+                OriginUri = new Job.Types.OriginUri
+                {
+                    Hls = "hls417d516b",
+                    Dash = "dashc3a799b9",
+                },
                 State = Job.Types.ProcessingState.Succeeded,
-                Progress = new Progress(),
+                Progress = new Progress
+                {
+                    Analyzed = -40208054787815450,
+                    Encoded = -2.5369225662121213E+17,
+                    Uploaded = 6.7157903366413E+17,
+                    Notified = 1.0199682236791959E+18,
+                },
                 FailureReason = "failure_reasonb933af24",
                 FailureDetails =
                 {
-                    new FailureDetail(),
+                    new FailureDetail
+                    {
+                        Description = "description2cf9da67",
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -145,7 +2152,351 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                    InputUri = "input_uriec9462a7",
+                    OutputUri = "output_urice759a4d",
+                    TemplateId = "template_id6435f574",
+                    Config = new JobConfig
+                    {
+                        Inputs =
+                        {
+                            new Input
+                            {
+                                Key = "key8a0b6e3c",
+                                Uri = "uri3db70593",
+                                PreprocessingConfig = new PreprocessingConfig
+                                {
+                                    Color = new PreprocessingConfig.Types.Color
+                                    {
+                                        Saturation = 1.0610209803855252E+18,
+                                        Contrast = -3.1572143051787475E+17,
+                                        Brightness = 3.444089950256697E+17,
+                                    },
+                                    Denoise = new PreprocessingConfig.Types.Denoise
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Tune = "tune9468e17c",
+                                    },
+                                    Deblock = new PreprocessingConfig.Types.Deblock
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Enabled = true,
+                                    },
+                                    Audio = new PreprocessingConfig.Types.Audio
+                                    {
+                                        Lufs = -9.460867282568658E+17,
+                                        HighBoost = true,
+                                        LowBoost = false,
+                                    },
+                                },
+                            },
+                        },
+                        EditList =
+                        {
+                            new EditAtom
+                            {
+                                Key = "key8a0b6e3c",
+                                Inputs = { "inputs67f9afa8", },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        ElementaryStreams =
+                        {
+                            new ElementaryStream
+                            {
+                                VideoStream = new VideoStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    Profile = "profile1b48977d",
+                                    Tune = "tune9468e17c",
+                                    Preset = "presetb3d35dd1",
+                                    HeightPixels = 1227270303,
+                                    WidthPixels = 654228257,
+                                    PixelFormat = "pixel_format4cc45806",
+                                    BitrateBps = -1023292117,
+                                    RateControlMode = "rate_control_modef775cd90",
+                                    EnableTwoPass = false,
+                                    CrfLevel = -1080275429,
+                                    VbvSizeBits = -722075892,
+                                    VbvFullnessBits = 769124432,
+                                    AllowOpenGop = false,
+                                    GopFrameCount = 625883926,
+                                    GopDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EntropyCoder = "entropy_coder596b357b",
+                                    BPyramid = true,
+                                    BFrameCount = -1119033066,
+                                    FrameRate = 2.559168479117898E+17,
+                                    AqStrength = -2.9559583429686483E+17,
+                                },
+                                AudioStream = new AudioStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    BitrateBps = -1023292117,
+                                    ChannelCount = 613767397,
+                                    ChannelLayout =
+                                    {
+                                        "channel_layout9f5b73bc",
+                                    },
+                                    Mapping =
+                                    {
+                                        new AudioStream.Types.AudioAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Channels =
+                                            {
+                                                new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                                {
+                                                    Inputs =
+                                                    {
+                                                        new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                        {
+                                                            Key = "key8a0b6e3c",
+                                                            Track = -1312322506,
+                                                            Channel = -304970300,
+                                                            GainDb = 7.377894204596698E+17,
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    SampleRateHertz = -1305662007,
+                                },
+                                TextStream = new TextStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    LanguageCode = "language_code2f6c7160",
+                                    Mapping =
+                                    {
+                                        new TextStream.Types.TextAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Inputs =
+                                            {
+                                                new TextStream.Types.TextAtom.Types.TextInput
+                                                {
+                                                    Key = "key8a0b6e3c",
+                                                    Track = -1312322506,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                Key = "key8a0b6e3c",
+                            },
+                        },
+                        MuxStreams =
+                        {
+                            new MuxStream
+                            {
+                                Key = "key8a0b6e3c",
+                                FileName = "file_name88ad9030",
+                                Container = "containerbc6e0b5f",
+                                ElementaryStreams =
+                                {
+                                    "elementary_streams43f4aff8",
+                                },
+                                SegmentSettings = new SegmentSettings
+                                {
+                                    SegmentDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    IndividualSegments = true,
+                                },
+                                Encryption = new Encryption
+                                {
+                                    Key = "key8a0b6e3c",
+                                    Iv = "iv2d3bb5f0",
+                                    Aes128 = new Encryption.Types.Aes128Encryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    SampleAes = new Encryption.Types.SampleAesEncryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                    {
+                                        KeyId = "key_id2691f630",
+                                        Scheme = "scheme17393241",
+                                    },
+                                },
+                            },
+                        },
+                        Manifests =
+                        {
+                            new Manifest
+                            {
+                                FileName = "file_name88ad9030",
+                                Type = Manifest.Types.ManifestType.Unspecified,
+                                MuxStreams =
+                                {
+                                    "mux_streams70055637",
+                                },
+                            },
+                        },
+                        Output = new Output { Uri = "uri3db70593", },
+                        AdBreaks =
+                        {
+                            new AdBreak
+                            {
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        PubsubDestination = new PubsubDestination
+                        {
+                            Topic = "topicac689b9d",
+                        },
+                        SpriteSheets =
+                        {
+                            new SpriteSheet
+                            {
+                                Format = "format2ab9dc1d",
+                                FilePrefix = "file_prefix2c4935ea",
+                                SpriteWidthPixels = -1630794554,
+                                SpriteHeightPixels = 201588428,
+                                ColumnCount = -1836018183,
+                                RowCount = 743251772,
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                TotalCount = 52314676,
+                                Interval = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Overlays =
+                        {
+                            new Overlay
+                            {
+                                Image = new Overlay.Types.Image
+                                {
+                                    Uri = "uri3db70593",
+                                    Resolution = new Overlay.Types.NormalizedCoordinate
+                                    {
+                                        X = 4.728972229337811E+17,
+                                        Y = 1.285841168201181E+17,
+                                    },
+                                    Alpha = -5.821187609512911E+17,
+                                },
+                                Animations =
+                                {
+                                    new Overlay.Types.Animation
+                                    {
+                                        AnimationStatic = new Overlay.Types.AnimationStatic
+                                        {
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationFade = new Overlay.Types.AnimationFade
+                                        {
+                                            FadeType = Overlay.Types.FadeType.FadeIn,
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                            EndTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationEnd = new Overlay.Types.AnimationEnd
+                                        {
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    Priority = 1546225849,
+                    OriginUri = new Job.Types.OriginUri
+                    {
+                        Hls = "hls417d516b",
+                        Dash = "dashc3a799b9",
+                    },
+                    State = Job.Types.ProcessingState.Succeeded,
+                    Progress = new Progress
+                    {
+                        Analyzed = -40208054787815450,
+                        Encoded = -2.5369225662121213E+17,
+                        Uploaded = 6.7157903366413E+17,
+                        Notified = 1.0199682236791959E+18,
+                    },
+                    FailureReason = "failure_reasonb933af24",
+                    FailureDetails =
+                    {
+                        new FailureDetail
+                        {
+                            Description = "description2cf9da67",
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
@@ -153,19 +2504,344 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 InputUri = "input_uriec9462a7",
                 OutputUri = "output_urice759a4d",
                 TemplateId = "template_id6435f574",
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 Priority = 1546225849,
-                OriginUri = new Job.Types.OriginUri(),
+                OriginUri = new Job.Types.OriginUri
+                {
+                    Hls = "hls417d516b",
+                    Dash = "dashc3a799b9",
+                },
                 State = Job.Types.ProcessingState.Succeeded,
-                Progress = new Progress(),
+                Progress = new Progress
+                {
+                    Analyzed = -40208054787815450,
+                    Encoded = -2.5369225662121213E+17,
+                    Uploaded = 6.7157903366413E+17,
+                    Notified = 1.0199682236791959E+18,
+                },
                 FailureReason = "failure_reasonb933af24",
                 FailureDetails =
                 {
-                    new FailureDetail(),
+                    new FailureDetail
+                    {
+                        Description = "description2cf9da67",
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -183,7 +2859,351 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                    InputUri = "input_uriec9462a7",
+                    OutputUri = "output_urice759a4d",
+                    TemplateId = "template_id6435f574",
+                    Config = new JobConfig
+                    {
+                        Inputs =
+                        {
+                            new Input
+                            {
+                                Key = "key8a0b6e3c",
+                                Uri = "uri3db70593",
+                                PreprocessingConfig = new PreprocessingConfig
+                                {
+                                    Color = new PreprocessingConfig.Types.Color
+                                    {
+                                        Saturation = 1.0610209803855252E+18,
+                                        Contrast = -3.1572143051787475E+17,
+                                        Brightness = 3.444089950256697E+17,
+                                    },
+                                    Denoise = new PreprocessingConfig.Types.Denoise
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Tune = "tune9468e17c",
+                                    },
+                                    Deblock = new PreprocessingConfig.Types.Deblock
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Enabled = true,
+                                    },
+                                    Audio = new PreprocessingConfig.Types.Audio
+                                    {
+                                        Lufs = -9.460867282568658E+17,
+                                        HighBoost = true,
+                                        LowBoost = false,
+                                    },
+                                },
+                            },
+                        },
+                        EditList =
+                        {
+                            new EditAtom
+                            {
+                                Key = "key8a0b6e3c",
+                                Inputs = { "inputs67f9afa8", },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        ElementaryStreams =
+                        {
+                            new ElementaryStream
+                            {
+                                VideoStream = new VideoStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    Profile = "profile1b48977d",
+                                    Tune = "tune9468e17c",
+                                    Preset = "presetb3d35dd1",
+                                    HeightPixels = 1227270303,
+                                    WidthPixels = 654228257,
+                                    PixelFormat = "pixel_format4cc45806",
+                                    BitrateBps = -1023292117,
+                                    RateControlMode = "rate_control_modef775cd90",
+                                    EnableTwoPass = false,
+                                    CrfLevel = -1080275429,
+                                    VbvSizeBits = -722075892,
+                                    VbvFullnessBits = 769124432,
+                                    AllowOpenGop = false,
+                                    GopFrameCount = 625883926,
+                                    GopDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EntropyCoder = "entropy_coder596b357b",
+                                    BPyramid = true,
+                                    BFrameCount = -1119033066,
+                                    FrameRate = 2.559168479117898E+17,
+                                    AqStrength = -2.9559583429686483E+17,
+                                },
+                                AudioStream = new AudioStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    BitrateBps = -1023292117,
+                                    ChannelCount = 613767397,
+                                    ChannelLayout =
+                                    {
+                                        "channel_layout9f5b73bc",
+                                    },
+                                    Mapping =
+                                    {
+                                        new AudioStream.Types.AudioAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Channels =
+                                            {
+                                                new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                                {
+                                                    Inputs =
+                                                    {
+                                                        new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                        {
+                                                            Key = "key8a0b6e3c",
+                                                            Track = -1312322506,
+                                                            Channel = -304970300,
+                                                            GainDb = 7.377894204596698E+17,
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    SampleRateHertz = -1305662007,
+                                },
+                                TextStream = new TextStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    LanguageCode = "language_code2f6c7160",
+                                    Mapping =
+                                    {
+                                        new TextStream.Types.TextAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Inputs =
+                                            {
+                                                new TextStream.Types.TextAtom.Types.TextInput
+                                                {
+                                                    Key = "key8a0b6e3c",
+                                                    Track = -1312322506,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                Key = "key8a0b6e3c",
+                            },
+                        },
+                        MuxStreams =
+                        {
+                            new MuxStream
+                            {
+                                Key = "key8a0b6e3c",
+                                FileName = "file_name88ad9030",
+                                Container = "containerbc6e0b5f",
+                                ElementaryStreams =
+                                {
+                                    "elementary_streams43f4aff8",
+                                },
+                                SegmentSettings = new SegmentSettings
+                                {
+                                    SegmentDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    IndividualSegments = true,
+                                },
+                                Encryption = new Encryption
+                                {
+                                    Key = "key8a0b6e3c",
+                                    Iv = "iv2d3bb5f0",
+                                    Aes128 = new Encryption.Types.Aes128Encryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    SampleAes = new Encryption.Types.SampleAesEncryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                    {
+                                        KeyId = "key_id2691f630",
+                                        Scheme = "scheme17393241",
+                                    },
+                                },
+                            },
+                        },
+                        Manifests =
+                        {
+                            new Manifest
+                            {
+                                FileName = "file_name88ad9030",
+                                Type = Manifest.Types.ManifestType.Unspecified,
+                                MuxStreams =
+                                {
+                                    "mux_streams70055637",
+                                },
+                            },
+                        },
+                        Output = new Output { Uri = "uri3db70593", },
+                        AdBreaks =
+                        {
+                            new AdBreak
+                            {
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        PubsubDestination = new PubsubDestination
+                        {
+                            Topic = "topicac689b9d",
+                        },
+                        SpriteSheets =
+                        {
+                            new SpriteSheet
+                            {
+                                Format = "format2ab9dc1d",
+                                FilePrefix = "file_prefix2c4935ea",
+                                SpriteWidthPixels = -1630794554,
+                                SpriteHeightPixels = 201588428,
+                                ColumnCount = -1836018183,
+                                RowCount = 743251772,
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                TotalCount = 52314676,
+                                Interval = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Overlays =
+                        {
+                            new Overlay
+                            {
+                                Image = new Overlay.Types.Image
+                                {
+                                    Uri = "uri3db70593",
+                                    Resolution = new Overlay.Types.NormalizedCoordinate
+                                    {
+                                        X = 4.728972229337811E+17,
+                                        Y = 1.285841168201181E+17,
+                                    },
+                                    Alpha = -5.821187609512911E+17,
+                                },
+                                Animations =
+                                {
+                                    new Overlay.Types.Animation
+                                    {
+                                        AnimationStatic = new Overlay.Types.AnimationStatic
+                                        {
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationFade = new Overlay.Types.AnimationFade
+                                        {
+                                            FadeType = Overlay.Types.FadeType.FadeIn,
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                            EndTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationEnd = new Overlay.Types.AnimationEnd
+                                        {
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    Priority = 1546225849,
+                    OriginUri = new Job.Types.OriginUri
+                    {
+                        Hls = "hls417d516b",
+                        Dash = "dashc3a799b9",
+                    },
+                    State = Job.Types.ProcessingState.Succeeded,
+                    Progress = new Progress
+                    {
+                        Analyzed = -40208054787815450,
+                        Encoded = -2.5369225662121213E+17,
+                        Uploaded = 6.7157903366413E+17,
+                        Notified = 1.0199682236791959E+18,
+                    },
+                    FailureReason = "failure_reasonb933af24",
+                    FailureDetails =
+                    {
+                        new FailureDetail
+                        {
+                            Description = "description2cf9da67",
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
@@ -191,19 +3211,344 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 InputUri = "input_uriec9462a7",
                 OutputUri = "output_urice759a4d",
                 TemplateId = "template_id6435f574",
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 Priority = 1546225849,
-                OriginUri = new Job.Types.OriginUri(),
+                OriginUri = new Job.Types.OriginUri
+                {
+                    Hls = "hls417d516b",
+                    Dash = "dashc3a799b9",
+                },
                 State = Job.Types.ProcessingState.Succeeded,
-                Progress = new Progress(),
+                Progress = new Progress
+                {
+                    Analyzed = -40208054787815450,
+                    Encoded = -2.5369225662121213E+17,
+                    Uploaded = 6.7157903366413E+17,
+                    Notified = 1.0199682236791959E+18,
+                },
                 FailureReason = "failure_reasonb933af24",
                 FailureDetails =
                 {
-                    new FailureDetail(),
+                    new FailureDetail
+                    {
+                        Description = "description2cf9da67",
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -219,7 +3564,351 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                    InputUri = "input_uriec9462a7",
+                    OutputUri = "output_urice759a4d",
+                    TemplateId = "template_id6435f574",
+                    Config = new JobConfig
+                    {
+                        Inputs =
+                        {
+                            new Input
+                            {
+                                Key = "key8a0b6e3c",
+                                Uri = "uri3db70593",
+                                PreprocessingConfig = new PreprocessingConfig
+                                {
+                                    Color = new PreprocessingConfig.Types.Color
+                                    {
+                                        Saturation = 1.0610209803855252E+18,
+                                        Contrast = -3.1572143051787475E+17,
+                                        Brightness = 3.444089950256697E+17,
+                                    },
+                                    Denoise = new PreprocessingConfig.Types.Denoise
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Tune = "tune9468e17c",
+                                    },
+                                    Deblock = new PreprocessingConfig.Types.Deblock
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Enabled = true,
+                                    },
+                                    Audio = new PreprocessingConfig.Types.Audio
+                                    {
+                                        Lufs = -9.460867282568658E+17,
+                                        HighBoost = true,
+                                        LowBoost = false,
+                                    },
+                                },
+                            },
+                        },
+                        EditList =
+                        {
+                            new EditAtom
+                            {
+                                Key = "key8a0b6e3c",
+                                Inputs = { "inputs67f9afa8", },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        ElementaryStreams =
+                        {
+                            new ElementaryStream
+                            {
+                                VideoStream = new VideoStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    Profile = "profile1b48977d",
+                                    Tune = "tune9468e17c",
+                                    Preset = "presetb3d35dd1",
+                                    HeightPixels = 1227270303,
+                                    WidthPixels = 654228257,
+                                    PixelFormat = "pixel_format4cc45806",
+                                    BitrateBps = -1023292117,
+                                    RateControlMode = "rate_control_modef775cd90",
+                                    EnableTwoPass = false,
+                                    CrfLevel = -1080275429,
+                                    VbvSizeBits = -722075892,
+                                    VbvFullnessBits = 769124432,
+                                    AllowOpenGop = false,
+                                    GopFrameCount = 625883926,
+                                    GopDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EntropyCoder = "entropy_coder596b357b",
+                                    BPyramid = true,
+                                    BFrameCount = -1119033066,
+                                    FrameRate = 2.559168479117898E+17,
+                                    AqStrength = -2.9559583429686483E+17,
+                                },
+                                AudioStream = new AudioStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    BitrateBps = -1023292117,
+                                    ChannelCount = 613767397,
+                                    ChannelLayout =
+                                    {
+                                        "channel_layout9f5b73bc",
+                                    },
+                                    Mapping =
+                                    {
+                                        new AudioStream.Types.AudioAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Channels =
+                                            {
+                                                new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                                {
+                                                    Inputs =
+                                                    {
+                                                        new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                        {
+                                                            Key = "key8a0b6e3c",
+                                                            Track = -1312322506,
+                                                            Channel = -304970300,
+                                                            GainDb = 7.377894204596698E+17,
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    SampleRateHertz = -1305662007,
+                                },
+                                TextStream = new TextStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    LanguageCode = "language_code2f6c7160",
+                                    Mapping =
+                                    {
+                                        new TextStream.Types.TextAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Inputs =
+                                            {
+                                                new TextStream.Types.TextAtom.Types.TextInput
+                                                {
+                                                    Key = "key8a0b6e3c",
+                                                    Track = -1312322506,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                Key = "key8a0b6e3c",
+                            },
+                        },
+                        MuxStreams =
+                        {
+                            new MuxStream
+                            {
+                                Key = "key8a0b6e3c",
+                                FileName = "file_name88ad9030",
+                                Container = "containerbc6e0b5f",
+                                ElementaryStreams =
+                                {
+                                    "elementary_streams43f4aff8",
+                                },
+                                SegmentSettings = new SegmentSettings
+                                {
+                                    SegmentDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    IndividualSegments = true,
+                                },
+                                Encryption = new Encryption
+                                {
+                                    Key = "key8a0b6e3c",
+                                    Iv = "iv2d3bb5f0",
+                                    Aes128 = new Encryption.Types.Aes128Encryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    SampleAes = new Encryption.Types.SampleAesEncryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                    {
+                                        KeyId = "key_id2691f630",
+                                        Scheme = "scheme17393241",
+                                    },
+                                },
+                            },
+                        },
+                        Manifests =
+                        {
+                            new Manifest
+                            {
+                                FileName = "file_name88ad9030",
+                                Type = Manifest.Types.ManifestType.Unspecified,
+                                MuxStreams =
+                                {
+                                    "mux_streams70055637",
+                                },
+                            },
+                        },
+                        Output = new Output { Uri = "uri3db70593", },
+                        AdBreaks =
+                        {
+                            new AdBreak
+                            {
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        PubsubDestination = new PubsubDestination
+                        {
+                            Topic = "topicac689b9d",
+                        },
+                        SpriteSheets =
+                        {
+                            new SpriteSheet
+                            {
+                                Format = "format2ab9dc1d",
+                                FilePrefix = "file_prefix2c4935ea",
+                                SpriteWidthPixels = -1630794554,
+                                SpriteHeightPixels = 201588428,
+                                ColumnCount = -1836018183,
+                                RowCount = 743251772,
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                TotalCount = 52314676,
+                                Interval = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Overlays =
+                        {
+                            new Overlay
+                            {
+                                Image = new Overlay.Types.Image
+                                {
+                                    Uri = "uri3db70593",
+                                    Resolution = new Overlay.Types.NormalizedCoordinate
+                                    {
+                                        X = 4.728972229337811E+17,
+                                        Y = 1.285841168201181E+17,
+                                    },
+                                    Alpha = -5.821187609512911E+17,
+                                },
+                                Animations =
+                                {
+                                    new Overlay.Types.Animation
+                                    {
+                                        AnimationStatic = new Overlay.Types.AnimationStatic
+                                        {
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationFade = new Overlay.Types.AnimationFade
+                                        {
+                                            FadeType = Overlay.Types.FadeType.FadeIn,
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                            EndTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationEnd = new Overlay.Types.AnimationEnd
+                                        {
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    Priority = 1546225849,
+                    OriginUri = new Job.Types.OriginUri
+                    {
+                        Hls = "hls417d516b",
+                        Dash = "dashc3a799b9",
+                    },
+                    State = Job.Types.ProcessingState.Succeeded,
+                    Progress = new Progress
+                    {
+                        Analyzed = -40208054787815450,
+                        Encoded = -2.5369225662121213E+17,
+                        Uploaded = 6.7157903366413E+17,
+                        Notified = 1.0199682236791959E+18,
+                    },
+                    FailureReason = "failure_reasonb933af24",
+                    FailureDetails =
+                    {
+                        new FailureDetail
+                        {
+                            Description = "description2cf9da67",
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    StartTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EndTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
@@ -227,19 +3916,344 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 InputUri = "input_uriec9462a7",
                 OutputUri = "output_urice759a4d",
                 TemplateId = "template_id6435f574",
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 Priority = 1546225849,
-                OriginUri = new Job.Types.OriginUri(),
+                OriginUri = new Job.Types.OriginUri
+                {
+                    Hls = "hls417d516b",
+                    Dash = "dashc3a799b9",
+                },
                 State = Job.Types.ProcessingState.Succeeded,
-                Progress = new Progress(),
+                Progress = new Progress
+                {
+                    Analyzed = -40208054787815450,
+                    Encoded = -2.5369225662121213E+17,
+                    Uploaded = 6.7157903366413E+17,
+                    Notified = 1.0199682236791959E+18,
+                },
                 FailureReason = "failure_reasonb933af24",
                 FailureDetails =
                 {
-                    new FailureDetail(),
+                    new FailureDetail
+                    {
+                        Description = "description2cf9da67",
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -264,19 +4278,344 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 InputUri = "input_uriec9462a7",
                 OutputUri = "output_urice759a4d",
                 TemplateId = "template_id6435f574",
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 Priority = 1546225849,
-                OriginUri = new Job.Types.OriginUri(),
+                OriginUri = new Job.Types.OriginUri
+                {
+                    Hls = "hls417d516b",
+                    Dash = "dashc3a799b9",
+                },
                 State = Job.Types.ProcessingState.Succeeded,
-                Progress = new Progress(),
+                Progress = new Progress
+                {
+                    Analyzed = -40208054787815450,
+                    Encoded = -2.5369225662121213E+17,
+                    Uploaded = 6.7157903366413E+17,
+                    Notified = 1.0199682236791959E+18,
+                },
                 FailureReason = "failure_reasonb933af24",
                 FailureDetails =
                 {
-                    new FailureDetail(),
+                    new FailureDetail
+                    {
+                        Description = "description2cf9da67",
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -299,19 +4638,344 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 InputUri = "input_uriec9462a7",
                 OutputUri = "output_urice759a4d",
                 TemplateId = "template_id6435f574",
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 Priority = 1546225849,
-                OriginUri = new Job.Types.OriginUri(),
+                OriginUri = new Job.Types.OriginUri
+                {
+                    Hls = "hls417d516b",
+                    Dash = "dashc3a799b9",
+                },
                 State = Job.Types.ProcessingState.Succeeded,
-                Progress = new Progress(),
+                Progress = new Progress
+                {
+                    Analyzed = -40208054787815450,
+                    Encoded = -2.5369225662121213E+17,
+                    Uploaded = 6.7157903366413E+17,
+                    Notified = 1.0199682236791959E+18,
+                },
                 FailureReason = "failure_reasonb933af24",
                 FailureDetails =
                 {
-                    new FailureDetail(),
+                    new FailureDetail
+                    {
+                        Description = "description2cf9da67",
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -336,19 +5000,344 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 InputUri = "input_uriec9462a7",
                 OutputUri = "output_urice759a4d",
                 TemplateId = "template_id6435f574",
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 Priority = 1546225849,
-                OriginUri = new Job.Types.OriginUri(),
+                OriginUri = new Job.Types.OriginUri
+                {
+                    Hls = "hls417d516b",
+                    Dash = "dashc3a799b9",
+                },
                 State = Job.Types.ProcessingState.Succeeded,
-                Progress = new Progress(),
+                Progress = new Progress
+                {
+                    Analyzed = -40208054787815450,
+                    Encoded = -2.5369225662121213E+17,
+                    Uploaded = 6.7157903366413E+17,
+                    Notified = 1.0199682236791959E+18,
+                },
                 FailureReason = "failure_reasonb933af24",
                 FailureDetails =
                 {
-                    new FailureDetail(),
+                    new FailureDetail
+                    {
+                        Description = "description2cf9da67",
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -371,19 +5360,344 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 InputUri = "input_uriec9462a7",
                 OutputUri = "output_urice759a4d",
                 TemplateId = "template_id6435f574",
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 Priority = 1546225849,
-                OriginUri = new Job.Types.OriginUri(),
+                OriginUri = new Job.Types.OriginUri
+                {
+                    Hls = "hls417d516b",
+                    Dash = "dashc3a799b9",
+                },
                 State = Job.Types.ProcessingState.Succeeded,
-                Progress = new Progress(),
+                Progress = new Progress
+                {
+                    Analyzed = -40208054787815450,
+                    Encoded = -2.5369225662121213E+17,
+                    Uploaded = 6.7157903366413E+17,
+                    Notified = 1.0199682236791959E+18,
+                },
                 FailureReason = "failure_reasonb933af24",
                 FailureDetails =
                 {
-                    new FailureDetail(),
+                    new FailureDetail
+                    {
+                        Description = "description2cf9da67",
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -408,19 +5722,344 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 InputUri = "input_uriec9462a7",
                 OutputUri = "output_urice759a4d",
                 TemplateId = "template_id6435f574",
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 Priority = 1546225849,
-                OriginUri = new Job.Types.OriginUri(),
+                OriginUri = new Job.Types.OriginUri
+                {
+                    Hls = "hls417d516b",
+                    Dash = "dashc3a799b9",
+                },
                 State = Job.Types.ProcessingState.Succeeded,
-                Progress = new Progress(),
+                Progress = new Progress
+                {
+                    Analyzed = -40208054787815450,
+                    Encoded = -2.5369225662121213E+17,
+                    Uploaded = 6.7157903366413E+17,
+                    Notified = 1.0199682236791959E+18,
+                },
                 FailureReason = "failure_reasonb933af24",
                 FailureDetails =
                 {
-                    new FailureDetail(),
+                    new FailureDetail
+                    {
+                        Description = "description2cf9da67",
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -443,19 +6082,344 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
                 InputUri = "input_uriec9462a7",
                 OutputUri = "output_urice759a4d",
                 TemplateId = "template_id6435f574",
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 Priority = 1546225849,
-                OriginUri = new Job.Types.OriginUri(),
+                OriginUri = new Job.Types.OriginUri
+                {
+                    Hls = "hls417d516b",
+                    Dash = "dashc3a799b9",
+                },
                 State = Job.Types.ProcessingState.Succeeded,
-                Progress = new Progress(),
+                Progress = new Progress
+                {
+                    Analyzed = -40208054787815450,
+                    Encoded = -2.5369225662121213E+17,
+                    Uploaded = 6.7157903366413E+17,
+                    Notified = 1.0199682236791959E+18,
+                },
                 FailureReason = "failure_reasonb933af24",
                 FailureDetails =
                 {
-                    new FailureDetail(),
+                    new FailureDetail
+                    {
+                        Description = "description2cf9da67",
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -566,13 +6530,617 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             CreateJobTemplateRequest request = new CreateJobTemplateRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                JobTemplate = new JobTemplate(),
+                JobTemplate = new JobTemplate
+                {
+                    JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
+                    Config = new JobConfig
+                    {
+                        Inputs =
+                        {
+                            new Input
+                            {
+                                Key = "key8a0b6e3c",
+                                Uri = "uri3db70593",
+                                PreprocessingConfig = new PreprocessingConfig
+                                {
+                                    Color = new PreprocessingConfig.Types.Color
+                                    {
+                                        Saturation = 1.0610209803855252E+18,
+                                        Contrast = -3.1572143051787475E+17,
+                                        Brightness = 3.444089950256697E+17,
+                                    },
+                                    Denoise = new PreprocessingConfig.Types.Denoise
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Tune = "tune9468e17c",
+                                    },
+                                    Deblock = new PreprocessingConfig.Types.Deblock
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Enabled = true,
+                                    },
+                                    Audio = new PreprocessingConfig.Types.Audio
+                                    {
+                                        Lufs = -9.460867282568658E+17,
+                                        HighBoost = true,
+                                        LowBoost = false,
+                                    },
+                                },
+                            },
+                        },
+                        EditList =
+                        {
+                            new EditAtom
+                            {
+                                Key = "key8a0b6e3c",
+                                Inputs = { "inputs67f9afa8", },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        ElementaryStreams =
+                        {
+                            new ElementaryStream
+                            {
+                                VideoStream = new VideoStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    Profile = "profile1b48977d",
+                                    Tune = "tune9468e17c",
+                                    Preset = "presetb3d35dd1",
+                                    HeightPixels = 1227270303,
+                                    WidthPixels = 654228257,
+                                    PixelFormat = "pixel_format4cc45806",
+                                    BitrateBps = -1023292117,
+                                    RateControlMode = "rate_control_modef775cd90",
+                                    EnableTwoPass = false,
+                                    CrfLevel = -1080275429,
+                                    VbvSizeBits = -722075892,
+                                    VbvFullnessBits = 769124432,
+                                    AllowOpenGop = false,
+                                    GopFrameCount = 625883926,
+                                    GopDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EntropyCoder = "entropy_coder596b357b",
+                                    BPyramid = true,
+                                    BFrameCount = -1119033066,
+                                    FrameRate = 2.559168479117898E+17,
+                                    AqStrength = -2.9559583429686483E+17,
+                                },
+                                AudioStream = new AudioStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    BitrateBps = -1023292117,
+                                    ChannelCount = 613767397,
+                                    ChannelLayout =
+                                    {
+                                        "channel_layout9f5b73bc",
+                                    },
+                                    Mapping =
+                                    {
+                                        new AudioStream.Types.AudioAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Channels =
+                                            {
+                                                new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                                {
+                                                    Inputs =
+                                                    {
+                                                        new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                        {
+                                                            Key = "key8a0b6e3c",
+                                                            Track = -1312322506,
+                                                            Channel = -304970300,
+                                                            GainDb = 7.377894204596698E+17,
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    SampleRateHertz = -1305662007,
+                                },
+                                TextStream = new TextStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    LanguageCode = "language_code2f6c7160",
+                                    Mapping =
+                                    {
+                                        new TextStream.Types.TextAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Inputs =
+                                            {
+                                                new TextStream.Types.TextAtom.Types.TextInput
+                                                {
+                                                    Key = "key8a0b6e3c",
+                                                    Track = -1312322506,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                Key = "key8a0b6e3c",
+                            },
+                        },
+                        MuxStreams =
+                        {
+                            new MuxStream
+                            {
+                                Key = "key8a0b6e3c",
+                                FileName = "file_name88ad9030",
+                                Container = "containerbc6e0b5f",
+                                ElementaryStreams =
+                                {
+                                    "elementary_streams43f4aff8",
+                                },
+                                SegmentSettings = new SegmentSettings
+                                {
+                                    SegmentDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    IndividualSegments = true,
+                                },
+                                Encryption = new Encryption
+                                {
+                                    Key = "key8a0b6e3c",
+                                    Iv = "iv2d3bb5f0",
+                                    Aes128 = new Encryption.Types.Aes128Encryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    SampleAes = new Encryption.Types.SampleAesEncryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                    {
+                                        KeyId = "key_id2691f630",
+                                        Scheme = "scheme17393241",
+                                    },
+                                },
+                            },
+                        },
+                        Manifests =
+                        {
+                            new Manifest
+                            {
+                                FileName = "file_name88ad9030",
+                                Type = Manifest.Types.ManifestType.Unspecified,
+                                MuxStreams =
+                                {
+                                    "mux_streams70055637",
+                                },
+                            },
+                        },
+                        Output = new Output { Uri = "uri3db70593", },
+                        AdBreaks =
+                        {
+                            new AdBreak
+                            {
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        PubsubDestination = new PubsubDestination
+                        {
+                            Topic = "topicac689b9d",
+                        },
+                        SpriteSheets =
+                        {
+                            new SpriteSheet
+                            {
+                                Format = "format2ab9dc1d",
+                                FilePrefix = "file_prefix2c4935ea",
+                                SpriteWidthPixels = -1630794554,
+                                SpriteHeightPixels = 201588428,
+                                ColumnCount = -1836018183,
+                                RowCount = 743251772,
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                TotalCount = 52314676,
+                                Interval = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Overlays =
+                        {
+                            new Overlay
+                            {
+                                Image = new Overlay.Types.Image
+                                {
+                                    Uri = "uri3db70593",
+                                    Resolution = new Overlay.Types.NormalizedCoordinate
+                                    {
+                                        X = 4.728972229337811E+17,
+                                        Y = 1.285841168201181E+17,
+                                    },
+                                    Alpha = -5.821187609512911E+17,
+                                },
+                                Animations =
+                                {
+                                    new Overlay.Types.Animation
+                                    {
+                                        AnimationStatic = new Overlay.Types.AnimationStatic
+                                        {
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationFade = new Overlay.Types.AnimationFade
+                                        {
+                                            FadeType = Overlay.Types.FadeType.FadeIn,
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                            EndTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationEnd = new Overlay.Types.AnimationEnd
+                                        {
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 JobTemplateId = "job_template_id7acfca7e",
             };
             JobTemplate expectedResponse = new JobTemplate
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -588,13 +7156,617 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             CreateJobTemplateRequest request = new CreateJobTemplateRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                JobTemplate = new JobTemplate(),
+                JobTemplate = new JobTemplate
+                {
+                    JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
+                    Config = new JobConfig
+                    {
+                        Inputs =
+                        {
+                            new Input
+                            {
+                                Key = "key8a0b6e3c",
+                                Uri = "uri3db70593",
+                                PreprocessingConfig = new PreprocessingConfig
+                                {
+                                    Color = new PreprocessingConfig.Types.Color
+                                    {
+                                        Saturation = 1.0610209803855252E+18,
+                                        Contrast = -3.1572143051787475E+17,
+                                        Brightness = 3.444089950256697E+17,
+                                    },
+                                    Denoise = new PreprocessingConfig.Types.Denoise
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Tune = "tune9468e17c",
+                                    },
+                                    Deblock = new PreprocessingConfig.Types.Deblock
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Enabled = true,
+                                    },
+                                    Audio = new PreprocessingConfig.Types.Audio
+                                    {
+                                        Lufs = -9.460867282568658E+17,
+                                        HighBoost = true,
+                                        LowBoost = false,
+                                    },
+                                },
+                            },
+                        },
+                        EditList =
+                        {
+                            new EditAtom
+                            {
+                                Key = "key8a0b6e3c",
+                                Inputs = { "inputs67f9afa8", },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        ElementaryStreams =
+                        {
+                            new ElementaryStream
+                            {
+                                VideoStream = new VideoStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    Profile = "profile1b48977d",
+                                    Tune = "tune9468e17c",
+                                    Preset = "presetb3d35dd1",
+                                    HeightPixels = 1227270303,
+                                    WidthPixels = 654228257,
+                                    PixelFormat = "pixel_format4cc45806",
+                                    BitrateBps = -1023292117,
+                                    RateControlMode = "rate_control_modef775cd90",
+                                    EnableTwoPass = false,
+                                    CrfLevel = -1080275429,
+                                    VbvSizeBits = -722075892,
+                                    VbvFullnessBits = 769124432,
+                                    AllowOpenGop = false,
+                                    GopFrameCount = 625883926,
+                                    GopDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EntropyCoder = "entropy_coder596b357b",
+                                    BPyramid = true,
+                                    BFrameCount = -1119033066,
+                                    FrameRate = 2.559168479117898E+17,
+                                    AqStrength = -2.9559583429686483E+17,
+                                },
+                                AudioStream = new AudioStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    BitrateBps = -1023292117,
+                                    ChannelCount = 613767397,
+                                    ChannelLayout =
+                                    {
+                                        "channel_layout9f5b73bc",
+                                    },
+                                    Mapping =
+                                    {
+                                        new AudioStream.Types.AudioAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Channels =
+                                            {
+                                                new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                                {
+                                                    Inputs =
+                                                    {
+                                                        new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                        {
+                                                            Key = "key8a0b6e3c",
+                                                            Track = -1312322506,
+                                                            Channel = -304970300,
+                                                            GainDb = 7.377894204596698E+17,
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    SampleRateHertz = -1305662007,
+                                },
+                                TextStream = new TextStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    LanguageCode = "language_code2f6c7160",
+                                    Mapping =
+                                    {
+                                        new TextStream.Types.TextAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Inputs =
+                                            {
+                                                new TextStream.Types.TextAtom.Types.TextInput
+                                                {
+                                                    Key = "key8a0b6e3c",
+                                                    Track = -1312322506,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                Key = "key8a0b6e3c",
+                            },
+                        },
+                        MuxStreams =
+                        {
+                            new MuxStream
+                            {
+                                Key = "key8a0b6e3c",
+                                FileName = "file_name88ad9030",
+                                Container = "containerbc6e0b5f",
+                                ElementaryStreams =
+                                {
+                                    "elementary_streams43f4aff8",
+                                },
+                                SegmentSettings = new SegmentSettings
+                                {
+                                    SegmentDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    IndividualSegments = true,
+                                },
+                                Encryption = new Encryption
+                                {
+                                    Key = "key8a0b6e3c",
+                                    Iv = "iv2d3bb5f0",
+                                    Aes128 = new Encryption.Types.Aes128Encryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    SampleAes = new Encryption.Types.SampleAesEncryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                    {
+                                        KeyId = "key_id2691f630",
+                                        Scheme = "scheme17393241",
+                                    },
+                                },
+                            },
+                        },
+                        Manifests =
+                        {
+                            new Manifest
+                            {
+                                FileName = "file_name88ad9030",
+                                Type = Manifest.Types.ManifestType.Unspecified,
+                                MuxStreams =
+                                {
+                                    "mux_streams70055637",
+                                },
+                            },
+                        },
+                        Output = new Output { Uri = "uri3db70593", },
+                        AdBreaks =
+                        {
+                            new AdBreak
+                            {
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        PubsubDestination = new PubsubDestination
+                        {
+                            Topic = "topicac689b9d",
+                        },
+                        SpriteSheets =
+                        {
+                            new SpriteSheet
+                            {
+                                Format = "format2ab9dc1d",
+                                FilePrefix = "file_prefix2c4935ea",
+                                SpriteWidthPixels = -1630794554,
+                                SpriteHeightPixels = 201588428,
+                                ColumnCount = -1836018183,
+                                RowCount = 743251772,
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                TotalCount = 52314676,
+                                Interval = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Overlays =
+                        {
+                            new Overlay
+                            {
+                                Image = new Overlay.Types.Image
+                                {
+                                    Uri = "uri3db70593",
+                                    Resolution = new Overlay.Types.NormalizedCoordinate
+                                    {
+                                        X = 4.728972229337811E+17,
+                                        Y = 1.285841168201181E+17,
+                                    },
+                                    Alpha = -5.821187609512911E+17,
+                                },
+                                Animations =
+                                {
+                                    new Overlay.Types.Animation
+                                    {
+                                        AnimationStatic = new Overlay.Types.AnimationStatic
+                                        {
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationFade = new Overlay.Types.AnimationFade
+                                        {
+                                            FadeType = Overlay.Types.FadeType.FadeIn,
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                            EndTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationEnd = new Overlay.Types.AnimationEnd
+                                        {
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 JobTemplateId = "job_template_id7acfca7e",
             };
             JobTemplate expectedResponse = new JobTemplate
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -612,13 +7784,617 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             CreateJobTemplateRequest request = new CreateJobTemplateRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                JobTemplate = new JobTemplate(),
+                JobTemplate = new JobTemplate
+                {
+                    JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
+                    Config = new JobConfig
+                    {
+                        Inputs =
+                        {
+                            new Input
+                            {
+                                Key = "key8a0b6e3c",
+                                Uri = "uri3db70593",
+                                PreprocessingConfig = new PreprocessingConfig
+                                {
+                                    Color = new PreprocessingConfig.Types.Color
+                                    {
+                                        Saturation = 1.0610209803855252E+18,
+                                        Contrast = -3.1572143051787475E+17,
+                                        Brightness = 3.444089950256697E+17,
+                                    },
+                                    Denoise = new PreprocessingConfig.Types.Denoise
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Tune = "tune9468e17c",
+                                    },
+                                    Deblock = new PreprocessingConfig.Types.Deblock
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Enabled = true,
+                                    },
+                                    Audio = new PreprocessingConfig.Types.Audio
+                                    {
+                                        Lufs = -9.460867282568658E+17,
+                                        HighBoost = true,
+                                        LowBoost = false,
+                                    },
+                                },
+                            },
+                        },
+                        EditList =
+                        {
+                            new EditAtom
+                            {
+                                Key = "key8a0b6e3c",
+                                Inputs = { "inputs67f9afa8", },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        ElementaryStreams =
+                        {
+                            new ElementaryStream
+                            {
+                                VideoStream = new VideoStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    Profile = "profile1b48977d",
+                                    Tune = "tune9468e17c",
+                                    Preset = "presetb3d35dd1",
+                                    HeightPixels = 1227270303,
+                                    WidthPixels = 654228257,
+                                    PixelFormat = "pixel_format4cc45806",
+                                    BitrateBps = -1023292117,
+                                    RateControlMode = "rate_control_modef775cd90",
+                                    EnableTwoPass = false,
+                                    CrfLevel = -1080275429,
+                                    VbvSizeBits = -722075892,
+                                    VbvFullnessBits = 769124432,
+                                    AllowOpenGop = false,
+                                    GopFrameCount = 625883926,
+                                    GopDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EntropyCoder = "entropy_coder596b357b",
+                                    BPyramid = true,
+                                    BFrameCount = -1119033066,
+                                    FrameRate = 2.559168479117898E+17,
+                                    AqStrength = -2.9559583429686483E+17,
+                                },
+                                AudioStream = new AudioStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    BitrateBps = -1023292117,
+                                    ChannelCount = 613767397,
+                                    ChannelLayout =
+                                    {
+                                        "channel_layout9f5b73bc",
+                                    },
+                                    Mapping =
+                                    {
+                                        new AudioStream.Types.AudioAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Channels =
+                                            {
+                                                new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                                {
+                                                    Inputs =
+                                                    {
+                                                        new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                        {
+                                                            Key = "key8a0b6e3c",
+                                                            Track = -1312322506,
+                                                            Channel = -304970300,
+                                                            GainDb = 7.377894204596698E+17,
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    SampleRateHertz = -1305662007,
+                                },
+                                TextStream = new TextStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    LanguageCode = "language_code2f6c7160",
+                                    Mapping =
+                                    {
+                                        new TextStream.Types.TextAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Inputs =
+                                            {
+                                                new TextStream.Types.TextAtom.Types.TextInput
+                                                {
+                                                    Key = "key8a0b6e3c",
+                                                    Track = -1312322506,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                Key = "key8a0b6e3c",
+                            },
+                        },
+                        MuxStreams =
+                        {
+                            new MuxStream
+                            {
+                                Key = "key8a0b6e3c",
+                                FileName = "file_name88ad9030",
+                                Container = "containerbc6e0b5f",
+                                ElementaryStreams =
+                                {
+                                    "elementary_streams43f4aff8",
+                                },
+                                SegmentSettings = new SegmentSettings
+                                {
+                                    SegmentDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    IndividualSegments = true,
+                                },
+                                Encryption = new Encryption
+                                {
+                                    Key = "key8a0b6e3c",
+                                    Iv = "iv2d3bb5f0",
+                                    Aes128 = new Encryption.Types.Aes128Encryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    SampleAes = new Encryption.Types.SampleAesEncryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                    {
+                                        KeyId = "key_id2691f630",
+                                        Scheme = "scheme17393241",
+                                    },
+                                },
+                            },
+                        },
+                        Manifests =
+                        {
+                            new Manifest
+                            {
+                                FileName = "file_name88ad9030",
+                                Type = Manifest.Types.ManifestType.Unspecified,
+                                MuxStreams =
+                                {
+                                    "mux_streams70055637",
+                                },
+                            },
+                        },
+                        Output = new Output { Uri = "uri3db70593", },
+                        AdBreaks =
+                        {
+                            new AdBreak
+                            {
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        PubsubDestination = new PubsubDestination
+                        {
+                            Topic = "topicac689b9d",
+                        },
+                        SpriteSheets =
+                        {
+                            new SpriteSheet
+                            {
+                                Format = "format2ab9dc1d",
+                                FilePrefix = "file_prefix2c4935ea",
+                                SpriteWidthPixels = -1630794554,
+                                SpriteHeightPixels = 201588428,
+                                ColumnCount = -1836018183,
+                                RowCount = 743251772,
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                TotalCount = 52314676,
+                                Interval = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Overlays =
+                        {
+                            new Overlay
+                            {
+                                Image = new Overlay.Types.Image
+                                {
+                                    Uri = "uri3db70593",
+                                    Resolution = new Overlay.Types.NormalizedCoordinate
+                                    {
+                                        X = 4.728972229337811E+17,
+                                        Y = 1.285841168201181E+17,
+                                    },
+                                    Alpha = -5.821187609512911E+17,
+                                },
+                                Animations =
+                                {
+                                    new Overlay.Types.Animation
+                                    {
+                                        AnimationStatic = new Overlay.Types.AnimationStatic
+                                        {
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationFade = new Overlay.Types.AnimationFade
+                                        {
+                                            FadeType = Overlay.Types.FadeType.FadeIn,
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                            EndTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationEnd = new Overlay.Types.AnimationEnd
+                                        {
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 JobTemplateId = "job_template_id7acfca7e",
             };
             JobTemplate expectedResponse = new JobTemplate
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -634,13 +8410,617 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             CreateJobTemplateRequest request = new CreateJobTemplateRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                JobTemplate = new JobTemplate(),
+                JobTemplate = new JobTemplate
+                {
+                    JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
+                    Config = new JobConfig
+                    {
+                        Inputs =
+                        {
+                            new Input
+                            {
+                                Key = "key8a0b6e3c",
+                                Uri = "uri3db70593",
+                                PreprocessingConfig = new PreprocessingConfig
+                                {
+                                    Color = new PreprocessingConfig.Types.Color
+                                    {
+                                        Saturation = 1.0610209803855252E+18,
+                                        Contrast = -3.1572143051787475E+17,
+                                        Brightness = 3.444089950256697E+17,
+                                    },
+                                    Denoise = new PreprocessingConfig.Types.Denoise
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Tune = "tune9468e17c",
+                                    },
+                                    Deblock = new PreprocessingConfig.Types.Deblock
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Enabled = true,
+                                    },
+                                    Audio = new PreprocessingConfig.Types.Audio
+                                    {
+                                        Lufs = -9.460867282568658E+17,
+                                        HighBoost = true,
+                                        LowBoost = false,
+                                    },
+                                },
+                            },
+                        },
+                        EditList =
+                        {
+                            new EditAtom
+                            {
+                                Key = "key8a0b6e3c",
+                                Inputs = { "inputs67f9afa8", },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        ElementaryStreams =
+                        {
+                            new ElementaryStream
+                            {
+                                VideoStream = new VideoStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    Profile = "profile1b48977d",
+                                    Tune = "tune9468e17c",
+                                    Preset = "presetb3d35dd1",
+                                    HeightPixels = 1227270303,
+                                    WidthPixels = 654228257,
+                                    PixelFormat = "pixel_format4cc45806",
+                                    BitrateBps = -1023292117,
+                                    RateControlMode = "rate_control_modef775cd90",
+                                    EnableTwoPass = false,
+                                    CrfLevel = -1080275429,
+                                    VbvSizeBits = -722075892,
+                                    VbvFullnessBits = 769124432,
+                                    AllowOpenGop = false,
+                                    GopFrameCount = 625883926,
+                                    GopDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EntropyCoder = "entropy_coder596b357b",
+                                    BPyramid = true,
+                                    BFrameCount = -1119033066,
+                                    FrameRate = 2.559168479117898E+17,
+                                    AqStrength = -2.9559583429686483E+17,
+                                },
+                                AudioStream = new AudioStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    BitrateBps = -1023292117,
+                                    ChannelCount = 613767397,
+                                    ChannelLayout =
+                                    {
+                                        "channel_layout9f5b73bc",
+                                    },
+                                    Mapping =
+                                    {
+                                        new AudioStream.Types.AudioAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Channels =
+                                            {
+                                                new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                                {
+                                                    Inputs =
+                                                    {
+                                                        new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                        {
+                                                            Key = "key8a0b6e3c",
+                                                            Track = -1312322506,
+                                                            Channel = -304970300,
+                                                            GainDb = 7.377894204596698E+17,
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    SampleRateHertz = -1305662007,
+                                },
+                                TextStream = new TextStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    LanguageCode = "language_code2f6c7160",
+                                    Mapping =
+                                    {
+                                        new TextStream.Types.TextAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Inputs =
+                                            {
+                                                new TextStream.Types.TextAtom.Types.TextInput
+                                                {
+                                                    Key = "key8a0b6e3c",
+                                                    Track = -1312322506,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                Key = "key8a0b6e3c",
+                            },
+                        },
+                        MuxStreams =
+                        {
+                            new MuxStream
+                            {
+                                Key = "key8a0b6e3c",
+                                FileName = "file_name88ad9030",
+                                Container = "containerbc6e0b5f",
+                                ElementaryStreams =
+                                {
+                                    "elementary_streams43f4aff8",
+                                },
+                                SegmentSettings = new SegmentSettings
+                                {
+                                    SegmentDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    IndividualSegments = true,
+                                },
+                                Encryption = new Encryption
+                                {
+                                    Key = "key8a0b6e3c",
+                                    Iv = "iv2d3bb5f0",
+                                    Aes128 = new Encryption.Types.Aes128Encryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    SampleAes = new Encryption.Types.SampleAesEncryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                    {
+                                        KeyId = "key_id2691f630",
+                                        Scheme = "scheme17393241",
+                                    },
+                                },
+                            },
+                        },
+                        Manifests =
+                        {
+                            new Manifest
+                            {
+                                FileName = "file_name88ad9030",
+                                Type = Manifest.Types.ManifestType.Unspecified,
+                                MuxStreams =
+                                {
+                                    "mux_streams70055637",
+                                },
+                            },
+                        },
+                        Output = new Output { Uri = "uri3db70593", },
+                        AdBreaks =
+                        {
+                            new AdBreak
+                            {
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        PubsubDestination = new PubsubDestination
+                        {
+                            Topic = "topicac689b9d",
+                        },
+                        SpriteSheets =
+                        {
+                            new SpriteSheet
+                            {
+                                Format = "format2ab9dc1d",
+                                FilePrefix = "file_prefix2c4935ea",
+                                SpriteWidthPixels = -1630794554,
+                                SpriteHeightPixels = 201588428,
+                                ColumnCount = -1836018183,
+                                RowCount = 743251772,
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                TotalCount = 52314676,
+                                Interval = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Overlays =
+                        {
+                            new Overlay
+                            {
+                                Image = new Overlay.Types.Image
+                                {
+                                    Uri = "uri3db70593",
+                                    Resolution = new Overlay.Types.NormalizedCoordinate
+                                    {
+                                        X = 4.728972229337811E+17,
+                                        Y = 1.285841168201181E+17,
+                                    },
+                                    Alpha = -5.821187609512911E+17,
+                                },
+                                Animations =
+                                {
+                                    new Overlay.Types.Animation
+                                    {
+                                        AnimationStatic = new Overlay.Types.AnimationStatic
+                                        {
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationFade = new Overlay.Types.AnimationFade
+                                        {
+                                            FadeType = Overlay.Types.FadeType.FadeIn,
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                            EndTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationEnd = new Overlay.Types.AnimationEnd
+                                        {
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 JobTemplateId = "job_template_id7acfca7e",
             };
             JobTemplate expectedResponse = new JobTemplate
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -658,13 +9038,617 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             CreateJobTemplateRequest request = new CreateJobTemplateRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                JobTemplate = new JobTemplate(),
+                JobTemplate = new JobTemplate
+                {
+                    JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
+                    Config = new JobConfig
+                    {
+                        Inputs =
+                        {
+                            new Input
+                            {
+                                Key = "key8a0b6e3c",
+                                Uri = "uri3db70593",
+                                PreprocessingConfig = new PreprocessingConfig
+                                {
+                                    Color = new PreprocessingConfig.Types.Color
+                                    {
+                                        Saturation = 1.0610209803855252E+18,
+                                        Contrast = -3.1572143051787475E+17,
+                                        Brightness = 3.444089950256697E+17,
+                                    },
+                                    Denoise = new PreprocessingConfig.Types.Denoise
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Tune = "tune9468e17c",
+                                    },
+                                    Deblock = new PreprocessingConfig.Types.Deblock
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Enabled = true,
+                                    },
+                                    Audio = new PreprocessingConfig.Types.Audio
+                                    {
+                                        Lufs = -9.460867282568658E+17,
+                                        HighBoost = true,
+                                        LowBoost = false,
+                                    },
+                                },
+                            },
+                        },
+                        EditList =
+                        {
+                            new EditAtom
+                            {
+                                Key = "key8a0b6e3c",
+                                Inputs = { "inputs67f9afa8", },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        ElementaryStreams =
+                        {
+                            new ElementaryStream
+                            {
+                                VideoStream = new VideoStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    Profile = "profile1b48977d",
+                                    Tune = "tune9468e17c",
+                                    Preset = "presetb3d35dd1",
+                                    HeightPixels = 1227270303,
+                                    WidthPixels = 654228257,
+                                    PixelFormat = "pixel_format4cc45806",
+                                    BitrateBps = -1023292117,
+                                    RateControlMode = "rate_control_modef775cd90",
+                                    EnableTwoPass = false,
+                                    CrfLevel = -1080275429,
+                                    VbvSizeBits = -722075892,
+                                    VbvFullnessBits = 769124432,
+                                    AllowOpenGop = false,
+                                    GopFrameCount = 625883926,
+                                    GopDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EntropyCoder = "entropy_coder596b357b",
+                                    BPyramid = true,
+                                    BFrameCount = -1119033066,
+                                    FrameRate = 2.559168479117898E+17,
+                                    AqStrength = -2.9559583429686483E+17,
+                                },
+                                AudioStream = new AudioStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    BitrateBps = -1023292117,
+                                    ChannelCount = 613767397,
+                                    ChannelLayout =
+                                    {
+                                        "channel_layout9f5b73bc",
+                                    },
+                                    Mapping =
+                                    {
+                                        new AudioStream.Types.AudioAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Channels =
+                                            {
+                                                new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                                {
+                                                    Inputs =
+                                                    {
+                                                        new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                        {
+                                                            Key = "key8a0b6e3c",
+                                                            Track = -1312322506,
+                                                            Channel = -304970300,
+                                                            GainDb = 7.377894204596698E+17,
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    SampleRateHertz = -1305662007,
+                                },
+                                TextStream = new TextStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    LanguageCode = "language_code2f6c7160",
+                                    Mapping =
+                                    {
+                                        new TextStream.Types.TextAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Inputs =
+                                            {
+                                                new TextStream.Types.TextAtom.Types.TextInput
+                                                {
+                                                    Key = "key8a0b6e3c",
+                                                    Track = -1312322506,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                Key = "key8a0b6e3c",
+                            },
+                        },
+                        MuxStreams =
+                        {
+                            new MuxStream
+                            {
+                                Key = "key8a0b6e3c",
+                                FileName = "file_name88ad9030",
+                                Container = "containerbc6e0b5f",
+                                ElementaryStreams =
+                                {
+                                    "elementary_streams43f4aff8",
+                                },
+                                SegmentSettings = new SegmentSettings
+                                {
+                                    SegmentDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    IndividualSegments = true,
+                                },
+                                Encryption = new Encryption
+                                {
+                                    Key = "key8a0b6e3c",
+                                    Iv = "iv2d3bb5f0",
+                                    Aes128 = new Encryption.Types.Aes128Encryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    SampleAes = new Encryption.Types.SampleAesEncryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                    {
+                                        KeyId = "key_id2691f630",
+                                        Scheme = "scheme17393241",
+                                    },
+                                },
+                            },
+                        },
+                        Manifests =
+                        {
+                            new Manifest
+                            {
+                                FileName = "file_name88ad9030",
+                                Type = Manifest.Types.ManifestType.Unspecified,
+                                MuxStreams =
+                                {
+                                    "mux_streams70055637",
+                                },
+                            },
+                        },
+                        Output = new Output { Uri = "uri3db70593", },
+                        AdBreaks =
+                        {
+                            new AdBreak
+                            {
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        PubsubDestination = new PubsubDestination
+                        {
+                            Topic = "topicac689b9d",
+                        },
+                        SpriteSheets =
+                        {
+                            new SpriteSheet
+                            {
+                                Format = "format2ab9dc1d",
+                                FilePrefix = "file_prefix2c4935ea",
+                                SpriteWidthPixels = -1630794554,
+                                SpriteHeightPixels = 201588428,
+                                ColumnCount = -1836018183,
+                                RowCount = 743251772,
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                TotalCount = 52314676,
+                                Interval = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Overlays =
+                        {
+                            new Overlay
+                            {
+                                Image = new Overlay.Types.Image
+                                {
+                                    Uri = "uri3db70593",
+                                    Resolution = new Overlay.Types.NormalizedCoordinate
+                                    {
+                                        X = 4.728972229337811E+17,
+                                        Y = 1.285841168201181E+17,
+                                    },
+                                    Alpha = -5.821187609512911E+17,
+                                },
+                                Animations =
+                                {
+                                    new Overlay.Types.Animation
+                                    {
+                                        AnimationStatic = new Overlay.Types.AnimationStatic
+                                        {
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationFade = new Overlay.Types.AnimationFade
+                                        {
+                                            FadeType = Overlay.Types.FadeType.FadeIn,
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                            EndTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationEnd = new Overlay.Types.AnimationEnd
+                                        {
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 JobTemplateId = "job_template_id7acfca7e",
             };
             JobTemplate expectedResponse = new JobTemplate
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -680,13 +9664,617 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             CreateJobTemplateRequest request = new CreateJobTemplateRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                JobTemplate = new JobTemplate(),
+                JobTemplate = new JobTemplate
+                {
+                    JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
+                    Config = new JobConfig
+                    {
+                        Inputs =
+                        {
+                            new Input
+                            {
+                                Key = "key8a0b6e3c",
+                                Uri = "uri3db70593",
+                                PreprocessingConfig = new PreprocessingConfig
+                                {
+                                    Color = new PreprocessingConfig.Types.Color
+                                    {
+                                        Saturation = 1.0610209803855252E+18,
+                                        Contrast = -3.1572143051787475E+17,
+                                        Brightness = 3.444089950256697E+17,
+                                    },
+                                    Denoise = new PreprocessingConfig.Types.Denoise
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Tune = "tune9468e17c",
+                                    },
+                                    Deblock = new PreprocessingConfig.Types.Deblock
+                                    {
+                                        Strength = -7.831029901542566E+17,
+                                        Enabled = true,
+                                    },
+                                    Audio = new PreprocessingConfig.Types.Audio
+                                    {
+                                        Lufs = -9.460867282568658E+17,
+                                        HighBoost = true,
+                                        LowBoost = false,
+                                    },
+                                },
+                            },
+                        },
+                        EditList =
+                        {
+                            new EditAtom
+                            {
+                                Key = "key8a0b6e3c",
+                                Inputs = { "inputs67f9afa8", },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        ElementaryStreams =
+                        {
+                            new ElementaryStream
+                            {
+                                VideoStream = new VideoStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    Profile = "profile1b48977d",
+                                    Tune = "tune9468e17c",
+                                    Preset = "presetb3d35dd1",
+                                    HeightPixels = 1227270303,
+                                    WidthPixels = 654228257,
+                                    PixelFormat = "pixel_format4cc45806",
+                                    BitrateBps = -1023292117,
+                                    RateControlMode = "rate_control_modef775cd90",
+                                    EnableTwoPass = false,
+                                    CrfLevel = -1080275429,
+                                    VbvSizeBits = -722075892,
+                                    VbvFullnessBits = 769124432,
+                                    AllowOpenGop = false,
+                                    GopFrameCount = 625883926,
+                                    GopDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    EntropyCoder = "entropy_coder596b357b",
+                                    BPyramid = true,
+                                    BFrameCount = -1119033066,
+                                    FrameRate = 2.559168479117898E+17,
+                                    AqStrength = -2.9559583429686483E+17,
+                                },
+                                AudioStream = new AudioStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    BitrateBps = -1023292117,
+                                    ChannelCount = 613767397,
+                                    ChannelLayout =
+                                    {
+                                        "channel_layout9f5b73bc",
+                                    },
+                                    Mapping =
+                                    {
+                                        new AudioStream.Types.AudioAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Channels =
+                                            {
+                                                new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                                {
+                                                    Inputs =
+                                                    {
+                                                        new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                        {
+                                                            Key = "key8a0b6e3c",
+                                                            Track = -1312322506,
+                                                            Channel = -304970300,
+                                                            GainDb = 7.377894204596698E+17,
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    SampleRateHertz = -1305662007,
+                                },
+                                TextStream = new TextStream
+                                {
+                                    Codec = "codec64cb0d6f",
+                                    LanguageCode = "language_code2f6c7160",
+                                    Mapping =
+                                    {
+                                        new TextStream.Types.TextAtom
+                                        {
+                                            Key = "key8a0b6e3c",
+                                            Inputs =
+                                            {
+                                                new TextStream.Types.TextAtom.Types.TextInput
+                                                {
+                                                    Key = "key8a0b6e3c",
+                                                    Track = -1312322506,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                Key = "key8a0b6e3c",
+                            },
+                        },
+                        MuxStreams =
+                        {
+                            new MuxStream
+                            {
+                                Key = "key8a0b6e3c",
+                                FileName = "file_name88ad9030",
+                                Container = "containerbc6e0b5f",
+                                ElementaryStreams =
+                                {
+                                    "elementary_streams43f4aff8",
+                                },
+                                SegmentSettings = new SegmentSettings
+                                {
+                                    SegmentDuration = new wkt::Duration
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    IndividualSegments = true,
+                                },
+                                Encryption = new Encryption
+                                {
+                                    Key = "key8a0b6e3c",
+                                    Iv = "iv2d3bb5f0",
+                                    Aes128 = new Encryption.Types.Aes128Encryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    SampleAes = new Encryption.Types.SampleAesEncryption
+                                    {
+                                        KeyUri = "key_uribcabf666",
+                                    },
+                                    MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                    {
+                                        KeyId = "key_id2691f630",
+                                        Scheme = "scheme17393241",
+                                    },
+                                },
+                            },
+                        },
+                        Manifests =
+                        {
+                            new Manifest
+                            {
+                                FileName = "file_name88ad9030",
+                                Type = Manifest.Types.ManifestType.Unspecified,
+                                MuxStreams =
+                                {
+                                    "mux_streams70055637",
+                                },
+                            },
+                        },
+                        Output = new Output { Uri = "uri3db70593", },
+                        AdBreaks =
+                        {
+                            new AdBreak
+                            {
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        PubsubDestination = new PubsubDestination
+                        {
+                            Topic = "topicac689b9d",
+                        },
+                        SpriteSheets =
+                        {
+                            new SpriteSheet
+                            {
+                                Format = "format2ab9dc1d",
+                                FilePrefix = "file_prefix2c4935ea",
+                                SpriteWidthPixels = -1630794554,
+                                SpriteHeightPixels = 201588428,
+                                ColumnCount = -1836018183,
+                                RowCount = 743251772,
+                                StartTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTimeOffset = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                TotalCount = 52314676,
+                                Interval = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                            },
+                        },
+                        Overlays =
+                        {
+                            new Overlay
+                            {
+                                Image = new Overlay.Types.Image
+                                {
+                                    Uri = "uri3db70593",
+                                    Resolution = new Overlay.Types.NormalizedCoordinate
+                                    {
+                                        X = 4.728972229337811E+17,
+                                        Y = 1.285841168201181E+17,
+                                    },
+                                    Alpha = -5.821187609512911E+17,
+                                },
+                                Animations =
+                                {
+                                    new Overlay.Types.Animation
+                                    {
+                                        AnimationStatic = new Overlay.Types.AnimationStatic
+                                        {
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationFade = new Overlay.Types.AnimationFade
+                                        {
+                                            FadeType = Overlay.Types.FadeType.FadeIn,
+                                            Xy = new Overlay.Types.NormalizedCoordinate
+                                            {
+                                                X = 4.728972229337811E+17,
+                                                Y = 1.285841168201181E+17,
+                                            },
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                            EndTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                        AnimationEnd = new Overlay.Types.AnimationEnd
+                                        {
+                                            StartTimeOffset = new wkt::Duration
+                                            {
+                                                Seconds = -2106654494186127752L,
+                                                Nanos = 985689544,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
                 JobTemplateId = "job_template_id7acfca7e",
             };
             JobTemplate expectedResponse = new JobTemplate
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -708,7 +10296,307 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             JobTemplate expectedResponse = new JobTemplate
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -728,7 +10616,307 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             JobTemplate expectedResponse = new JobTemplate
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -750,7 +10938,307 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             JobTemplate expectedResponse = new JobTemplate
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -770,7 +11258,307 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             JobTemplate expectedResponse = new JobTemplate
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -792,7 +11580,307 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             JobTemplate expectedResponse = new JobTemplate
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
@@ -812,7 +11900,307 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Tests
             JobTemplate expectedResponse = new JobTemplate
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
-                Config = new JobConfig(),
+                Config = new JobConfig
+                {
+                    Inputs =
+                    {
+                        new Input
+                        {
+                            Key = "key8a0b6e3c",
+                            Uri = "uri3db70593",
+                            PreprocessingConfig = new PreprocessingConfig
+                            {
+                                Color = new PreprocessingConfig.Types.Color
+                                {
+                                    Saturation = 1.0610209803855252E+18,
+                                    Contrast = -3.1572143051787475E+17,
+                                    Brightness = 3.444089950256697E+17,
+                                },
+                                Denoise = new PreprocessingConfig.Types.Denoise
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Tune = "tune9468e17c",
+                                },
+                                Deblock = new PreprocessingConfig.Types.Deblock
+                                {
+                                    Strength = -7.831029901542566E+17,
+                                    Enabled = true,
+                                },
+                                Audio = new PreprocessingConfig.Types.Audio
+                                {
+                                    Lufs = -9.460867282568658E+17,
+                                    HighBoost = true,
+                                    LowBoost = false,
+                                },
+                            },
+                        },
+                    },
+                    EditList =
+                    {
+                        new EditAtom
+                        {
+                            Key = "key8a0b6e3c",
+                            Inputs = { "inputs67f9afa8", },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ElementaryStreams =
+                    {
+                        new ElementaryStream
+                        {
+                            VideoStream = new VideoStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                Profile = "profile1b48977d",
+                                Tune = "tune9468e17c",
+                                Preset = "presetb3d35dd1",
+                                HeightPixels = 1227270303,
+                                WidthPixels = 654228257,
+                                PixelFormat = "pixel_format4cc45806",
+                                BitrateBps = -1023292117,
+                                RateControlMode = "rate_control_modef775cd90",
+                                EnableTwoPass = false,
+                                CrfLevel = -1080275429,
+                                VbvSizeBits = -722075892,
+                                VbvFullnessBits = 769124432,
+                                AllowOpenGop = false,
+                                GopFrameCount = 625883926,
+                                GopDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EntropyCoder = "entropy_coder596b357b",
+                                BPyramid = true,
+                                BFrameCount = -1119033066,
+                                FrameRate = 2.559168479117898E+17,
+                                AqStrength = -2.9559583429686483E+17,
+                            },
+                            AudioStream = new AudioStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                BitrateBps = -1023292117,
+                                ChannelCount = 613767397,
+                                ChannelLayout =
+                                {
+                                    "channel_layout9f5b73bc",
+                                },
+                                Mapping =
+                                {
+                                    new AudioStream.Types.AudioAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Channels =
+                                        {
+                                            new AudioStream.Types.AudioAtom.Types.AudioChannel
+                                            {
+                                                Inputs =
+                                                {
+                                                    new AudioStream.Types.AudioAtom.Types.AudioChannel.Types.AudioChannelInput
+                                                    {
+                                                        Key = "key8a0b6e3c",
+                                                        Track = -1312322506,
+                                                        Channel = -304970300,
+                                                        GainDb = 7.377894204596698E+17,
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                SampleRateHertz = -1305662007,
+                            },
+                            TextStream = new TextStream
+                            {
+                                Codec = "codec64cb0d6f",
+                                LanguageCode = "language_code2f6c7160",
+                                Mapping =
+                                {
+                                    new TextStream.Types.TextAtom
+                                    {
+                                        Key = "key8a0b6e3c",
+                                        Inputs =
+                                        {
+                                            new TextStream.Types.TextAtom.Types.TextInput
+                                            {
+                                                Key = "key8a0b6e3c",
+                                                Track = -1312322506,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            Key = "key8a0b6e3c",
+                        },
+                    },
+                    MuxStreams =
+                    {
+                        new MuxStream
+                        {
+                            Key = "key8a0b6e3c",
+                            FileName = "file_name88ad9030",
+                            Container = "containerbc6e0b5f",
+                            ElementaryStreams =
+                            {
+                                "elementary_streams43f4aff8",
+                            },
+                            SegmentSettings = new SegmentSettings
+                            {
+                                SegmentDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                IndividualSegments = true,
+                            },
+                            Encryption = new Encryption
+                            {
+                                Key = "key8a0b6e3c",
+                                Iv = "iv2d3bb5f0",
+                                Aes128 = new Encryption.Types.Aes128Encryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                SampleAes = new Encryption.Types.SampleAesEncryption
+                                {
+                                    KeyUri = "key_uribcabf666",
+                                },
+                                MpegCenc = new Encryption.Types.MpegCommonEncryption
+                                {
+                                    KeyId = "key_id2691f630",
+                                    Scheme = "scheme17393241",
+                                },
+                            },
+                        },
+                    },
+                    Manifests =
+                    {
+                        new Manifest
+                        {
+                            FileName = "file_name88ad9030",
+                            Type = Manifest.Types.ManifestType.Unspecified,
+                            MuxStreams =
+                            {
+                                "mux_streams70055637",
+                            },
+                        },
+                    },
+                    Output = new Output { Uri = "uri3db70593", },
+                    AdBreaks =
+                    {
+                        new AdBreak
+                        {
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    PubsubDestination = new PubsubDestination
+                    {
+                        Topic = "topicac689b9d",
+                    },
+                    SpriteSheets =
+                    {
+                        new SpriteSheet
+                        {
+                            Format = "format2ab9dc1d",
+                            FilePrefix = "file_prefix2c4935ea",
+                            SpriteWidthPixels = -1630794554,
+                            SpriteHeightPixels = 201588428,
+                            ColumnCount = -1836018183,
+                            RowCount = 743251772,
+                            StartTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTimeOffset = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            TotalCount = 52314676,
+                            Interval = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Overlays =
+                    {
+                        new Overlay
+                        {
+                            Image = new Overlay.Types.Image
+                            {
+                                Uri = "uri3db70593",
+                                Resolution = new Overlay.Types.NormalizedCoordinate
+                                {
+                                    X = 4.728972229337811E+17,
+                                    Y = 1.285841168201181E+17,
+                                },
+                                Alpha = -5.821187609512911E+17,
+                            },
+                            Animations =
+                            {
+                                new Overlay.Types.Animation
+                                {
+                                    AnimationStatic = new Overlay.Types.AnimationStatic
+                                    {
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationFade = new Overlay.Types.AnimationFade
+                                    {
+                                        FadeType = Overlay.Types.FadeType.FadeIn,
+                                        Xy = new Overlay.Types.NormalizedCoordinate
+                                        {
+                                            X = 4.728972229337811E+17,
+                                            Y = 1.285841168201181E+17,
+                                        },
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                        EndTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                    AnimationEnd = new Overlay.Types.AnimationEnd
+                                    {
+                                        StartTimeOffset = new wkt::Duration
+                                        {
+                                            Seconds = -2106654494186127752L,
+                                            Nanos = 985689544,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranscoderServiceClient client = new TranscoderServiceClientImpl(mockGrpcClient.Object, null);
