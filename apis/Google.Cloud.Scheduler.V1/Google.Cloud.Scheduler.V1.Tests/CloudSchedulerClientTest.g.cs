@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using gr = Google.Rpc;
 using grpccore = Grpc.Core;
@@ -41,18 +42,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -73,18 +173,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -107,18 +306,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -139,18 +437,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -173,18 +570,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -205,18 +701,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -234,24 +829,238 @@ namespace Google.Cloud.Scheduler.V1.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                    Description = "description2cf9da67",
+                    PubsubTarget = new PubsubTarget
+                    {
+                        TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    AppEngineHttpTarget = new AppEngineHttpTarget
+                    {
+                        HttpMethod = HttpMethod.Put,
+                        AppEngineRouting = new AppEngineRouting
+                        {
+                            Service = "serviced3f0abaa",
+                            Version = "version102ff72a",
+                            Instance = "instance99a62371",
+                            Host = "hosta8dbb367",
+                        },
+                        RelativeUri = "relative_uri4e468832",
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    },
+                    HttpTarget = new HttpTarget
+                    {
+                        Uri = "uri3db70593",
+                        HttpMethod = HttpMethod.Put,
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                        OauthToken = new OAuthToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Scope = "scope14fda131",
+                        },
+                        OidcToken = new OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    UserUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = Job.Types.State.Disabled,
+                    Status = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastAttemptTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        RetryCount = 1150497264,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    Schedule = "schedule59559879",
+                    TimeZone = "time_zone73f23b20",
+                    AttemptDeadline = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -267,24 +1076,238 @@ namespace Google.Cloud.Scheduler.V1.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                    Description = "description2cf9da67",
+                    PubsubTarget = new PubsubTarget
+                    {
+                        TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    AppEngineHttpTarget = new AppEngineHttpTarget
+                    {
+                        HttpMethod = HttpMethod.Put,
+                        AppEngineRouting = new AppEngineRouting
+                        {
+                            Service = "serviced3f0abaa",
+                            Version = "version102ff72a",
+                            Instance = "instance99a62371",
+                            Host = "hosta8dbb367",
+                        },
+                        RelativeUri = "relative_uri4e468832",
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    },
+                    HttpTarget = new HttpTarget
+                    {
+                        Uri = "uri3db70593",
+                        HttpMethod = HttpMethod.Put,
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                        OauthToken = new OAuthToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Scope = "scope14fda131",
+                        },
+                        OidcToken = new OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    UserUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = Job.Types.State.Disabled,
+                    Status = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastAttemptTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        RetryCount = 1150497264,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    Schedule = "schedule59559879",
+                    TimeZone = "time_zone73f23b20",
+                    AttemptDeadline = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -302,24 +1325,238 @@ namespace Google.Cloud.Scheduler.V1.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                    Description = "description2cf9da67",
+                    PubsubTarget = new PubsubTarget
+                    {
+                        TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    AppEngineHttpTarget = new AppEngineHttpTarget
+                    {
+                        HttpMethod = HttpMethod.Put,
+                        AppEngineRouting = new AppEngineRouting
+                        {
+                            Service = "serviced3f0abaa",
+                            Version = "version102ff72a",
+                            Instance = "instance99a62371",
+                            Host = "hosta8dbb367",
+                        },
+                        RelativeUri = "relative_uri4e468832",
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    },
+                    HttpTarget = new HttpTarget
+                    {
+                        Uri = "uri3db70593",
+                        HttpMethod = HttpMethod.Put,
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                        OauthToken = new OAuthToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Scope = "scope14fda131",
+                        },
+                        OidcToken = new OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    UserUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = Job.Types.State.Disabled,
+                    Status = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastAttemptTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        RetryCount = 1150497264,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    Schedule = "schedule59559879",
+                    TimeZone = "time_zone73f23b20",
+                    AttemptDeadline = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -335,24 +1572,238 @@ namespace Google.Cloud.Scheduler.V1.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                    Description = "description2cf9da67",
+                    PubsubTarget = new PubsubTarget
+                    {
+                        TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    AppEngineHttpTarget = new AppEngineHttpTarget
+                    {
+                        HttpMethod = HttpMethod.Put,
+                        AppEngineRouting = new AppEngineRouting
+                        {
+                            Service = "serviced3f0abaa",
+                            Version = "version102ff72a",
+                            Instance = "instance99a62371",
+                            Host = "hosta8dbb367",
+                        },
+                        RelativeUri = "relative_uri4e468832",
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    },
+                    HttpTarget = new HttpTarget
+                    {
+                        Uri = "uri3db70593",
+                        HttpMethod = HttpMethod.Put,
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                        OauthToken = new OAuthToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Scope = "scope14fda131",
+                        },
+                        OidcToken = new OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    UserUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = Job.Types.State.Disabled,
+                    Status = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastAttemptTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        RetryCount = 1150497264,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    Schedule = "schedule59559879",
+                    TimeZone = "time_zone73f23b20",
+                    AttemptDeadline = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -370,24 +1821,238 @@ namespace Google.Cloud.Scheduler.V1.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                    Description = "description2cf9da67",
+                    PubsubTarget = new PubsubTarget
+                    {
+                        TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    AppEngineHttpTarget = new AppEngineHttpTarget
+                    {
+                        HttpMethod = HttpMethod.Put,
+                        AppEngineRouting = new AppEngineRouting
+                        {
+                            Service = "serviced3f0abaa",
+                            Version = "version102ff72a",
+                            Instance = "instance99a62371",
+                            Host = "hosta8dbb367",
+                        },
+                        RelativeUri = "relative_uri4e468832",
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    },
+                    HttpTarget = new HttpTarget
+                    {
+                        Uri = "uri3db70593",
+                        HttpMethod = HttpMethod.Put,
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                        OauthToken = new OAuthToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Scope = "scope14fda131",
+                        },
+                        OidcToken = new OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    UserUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = Job.Types.State.Disabled,
+                    Status = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastAttemptTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        RetryCount = 1150497264,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    Schedule = "schedule59559879",
+                    TimeZone = "time_zone73f23b20",
+                    AttemptDeadline = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -403,24 +2068,238 @@ namespace Google.Cloud.Scheduler.V1.Tests
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Job = new Job(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                    Description = "description2cf9da67",
+                    PubsubTarget = new PubsubTarget
+                    {
+                        TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    AppEngineHttpTarget = new AppEngineHttpTarget
+                    {
+                        HttpMethod = HttpMethod.Put,
+                        AppEngineRouting = new AppEngineRouting
+                        {
+                            Service = "serviced3f0abaa",
+                            Version = "version102ff72a",
+                            Instance = "instance99a62371",
+                            Host = "hosta8dbb367",
+                        },
+                        RelativeUri = "relative_uri4e468832",
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    },
+                    HttpTarget = new HttpTarget
+                    {
+                        Uri = "uri3db70593",
+                        HttpMethod = HttpMethod.Put,
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                        OauthToken = new OAuthToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Scope = "scope14fda131",
+                        },
+                        OidcToken = new OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    UserUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = Job.Types.State.Disabled,
+                    Status = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastAttemptTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        RetryCount = 1150497264,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    Schedule = "schedule59559879",
+                    TimeZone = "time_zone73f23b20",
+                    AttemptDeadline = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Job expectedResponse = new Job
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -437,25 +2316,242 @@ namespace Google.Cloud.Scheduler.V1.Tests
             moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             UpdateJobRequest request = new UpdateJobRequest
             {
-                Job = new Job(),
-                UpdateMask = new wkt::FieldMask(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                    Description = "description2cf9da67",
+                    PubsubTarget = new PubsubTarget
+                    {
+                        TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    AppEngineHttpTarget = new AppEngineHttpTarget
+                    {
+                        HttpMethod = HttpMethod.Put,
+                        AppEngineRouting = new AppEngineRouting
+                        {
+                            Service = "serviced3f0abaa",
+                            Version = "version102ff72a",
+                            Instance = "instance99a62371",
+                            Host = "hosta8dbb367",
+                        },
+                        RelativeUri = "relative_uri4e468832",
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    },
+                    HttpTarget = new HttpTarget
+                    {
+                        Uri = "uri3db70593",
+                        HttpMethod = HttpMethod.Put,
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                        OauthToken = new OAuthToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Scope = "scope14fda131",
+                        },
+                        OidcToken = new OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    UserUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = Job.Types.State.Disabled,
+                    Status = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastAttemptTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        RetryCount = 1150497264,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    Schedule = "schedule59559879",
+                    TimeZone = "time_zone73f23b20",
+                    AttemptDeadline = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Job expectedResponse = new Job
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -470,25 +2566,242 @@ namespace Google.Cloud.Scheduler.V1.Tests
             moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             UpdateJobRequest request = new UpdateJobRequest
             {
-                Job = new Job(),
-                UpdateMask = new wkt::FieldMask(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                    Description = "description2cf9da67",
+                    PubsubTarget = new PubsubTarget
+                    {
+                        TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    AppEngineHttpTarget = new AppEngineHttpTarget
+                    {
+                        HttpMethod = HttpMethod.Put,
+                        AppEngineRouting = new AppEngineRouting
+                        {
+                            Service = "serviced3f0abaa",
+                            Version = "version102ff72a",
+                            Instance = "instance99a62371",
+                            Host = "hosta8dbb367",
+                        },
+                        RelativeUri = "relative_uri4e468832",
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    },
+                    HttpTarget = new HttpTarget
+                    {
+                        Uri = "uri3db70593",
+                        HttpMethod = HttpMethod.Put,
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                        OauthToken = new OAuthToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Scope = "scope14fda131",
+                        },
+                        OidcToken = new OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    UserUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = Job.Types.State.Disabled,
+                    Status = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastAttemptTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        RetryCount = 1150497264,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    Schedule = "schedule59559879",
+                    TimeZone = "time_zone73f23b20",
+                    AttemptDeadline = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Job expectedResponse = new Job
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -505,25 +2818,242 @@ namespace Google.Cloud.Scheduler.V1.Tests
             moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             UpdateJobRequest request = new UpdateJobRequest
             {
-                Job = new Job(),
-                UpdateMask = new wkt::FieldMask(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                    Description = "description2cf9da67",
+                    PubsubTarget = new PubsubTarget
+                    {
+                        TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    AppEngineHttpTarget = new AppEngineHttpTarget
+                    {
+                        HttpMethod = HttpMethod.Put,
+                        AppEngineRouting = new AppEngineRouting
+                        {
+                            Service = "serviced3f0abaa",
+                            Version = "version102ff72a",
+                            Instance = "instance99a62371",
+                            Host = "hosta8dbb367",
+                        },
+                        RelativeUri = "relative_uri4e468832",
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    },
+                    HttpTarget = new HttpTarget
+                    {
+                        Uri = "uri3db70593",
+                        HttpMethod = HttpMethod.Put,
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                        OauthToken = new OAuthToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Scope = "scope14fda131",
+                        },
+                        OidcToken = new OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    UserUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = Job.Types.State.Disabled,
+                    Status = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastAttemptTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        RetryCount = 1150497264,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    Schedule = "schedule59559879",
+                    TimeZone = "time_zone73f23b20",
+                    AttemptDeadline = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Job expectedResponse = new Job
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -538,25 +3068,242 @@ namespace Google.Cloud.Scheduler.V1.Tests
             moq::Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new moq::Mock<CloudScheduler.CloudSchedulerClient>(moq::MockBehavior.Strict);
             UpdateJobRequest request = new UpdateJobRequest
             {
-                Job = new Job(),
-                UpdateMask = new wkt::FieldMask(),
+                Job = new Job
+                {
+                    JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                    Description = "description2cf9da67",
+                    PubsubTarget = new PubsubTarget
+                    {
+                        TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                        Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                    },
+                    AppEngineHttpTarget = new AppEngineHttpTarget
+                    {
+                        HttpMethod = HttpMethod.Put,
+                        AppEngineRouting = new AppEngineRouting
+                        {
+                            Service = "serviced3f0abaa",
+                            Version = "version102ff72a",
+                            Instance = "instance99a62371",
+                            Host = "hosta8dbb367",
+                        },
+                        RelativeUri = "relative_uri4e468832",
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    },
+                    HttpTarget = new HttpTarget
+                    {
+                        Uri = "uri3db70593",
+                        HttpMethod = HttpMethod.Put,
+                        Headers =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                        OauthToken = new OAuthToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Scope = "scope14fda131",
+                        },
+                        OidcToken = new OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    UserUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = Job.Types.State.Disabled,
+                    Status = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    ScheduleTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastAttemptTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RetryConfig = new RetryConfig
+                    {
+                        RetryCount = 1150497264,
+                        MaxRetryDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MinBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxBackoffDuration = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaxDoublings = 118749490,
+                    },
+                    Schedule = "schedule59559879",
+                    TimeZone = "time_zone73f23b20",
+                    AttemptDeadline = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Job expectedResponse = new Job
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -672,18 +3419,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.PauseJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -704,18 +3550,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.PauseJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -738,18 +3683,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.PauseJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -770,18 +3814,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.PauseJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -804,18 +3947,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.PauseJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -836,18 +4078,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.PauseJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -870,18 +4211,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.ResumeJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -902,18 +4342,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.ResumeJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -936,18 +4475,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.ResumeJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -968,18 +4606,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.ResumeJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -1002,18 +4739,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.ResumeJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -1034,18 +4870,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.ResumeJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -1068,18 +5003,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.RunJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -1100,18 +5134,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.RunJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -1134,18 +5267,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.RunJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -1166,18 +5398,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.RunJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -1200,18 +5531,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.RunJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
@@ -1232,18 +5662,117 @@ namespace Google.Cloud.Scheduler.V1.Tests
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description2cf9da67",
-                PubsubTarget = new PubsubTarget(),
-                AppEngineHttpTarget = new AppEngineHttpTarget(),
-                HttpTarget = new HttpTarget(),
-                UserUpdateTime = new wkt::Timestamp(),
+                PubsubTarget = new PubsubTarget
+                {
+                    TopicNameAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                AppEngineHttpTarget = new AppEngineHttpTarget
+                {
+                    HttpMethod = HttpMethod.Put,
+                    AppEngineRouting = new AppEngineRouting
+                    {
+                        Service = "serviced3f0abaa",
+                        Version = "version102ff72a",
+                        Instance = "instance99a62371",
+                        Host = "hosta8dbb367",
+                    },
+                    RelativeUri = "relative_uri4e468832",
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                },
+                HttpTarget = new HttpTarget
+                {
+                    Uri = "uri3db70593",
+                    HttpMethod = HttpMethod.Put,
+                    Headers =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    Body = proto::ByteString.CopyFromUtf8("body682d1a84"),
+                    OauthToken = new OAuthToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Scope = "scope14fda131",
+                    },
+                    OidcToken = new OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
+                UserUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Job.Types.State.Disabled,
-                Status = new gr::Status(),
-                ScheduleTime = new wkt::Timestamp(),
-                LastAttemptTime = new wkt::Timestamp(),
-                RetryConfig = new RetryConfig(),
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                ScheduleTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastAttemptTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                RetryConfig = new RetryConfig
+                {
+                    RetryCount = 1150497264,
+                    MaxRetryDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MinBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxBackoffDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaxDoublings = 118749490,
+                },
                 Schedule = "schedule59559879",
                 TimeZone = "time_zone73f23b20",
-                AttemptDeadline = new wkt::Duration(),
+                AttemptDeadline = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.RunJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Job>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
