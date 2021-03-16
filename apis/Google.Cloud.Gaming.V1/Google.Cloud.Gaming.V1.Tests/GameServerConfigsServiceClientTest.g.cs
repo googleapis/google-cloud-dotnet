@@ -40,8 +40,16 @@ namespace Google.Cloud.Gaming.V1.Tests
             GameServerConfig expectedResponse = new GameServerConfig
             {
                 GameServerConfigName = GameServerConfigName.FromProjectLocationDeploymentConfig("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]", "[CONFIG]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -49,10 +57,56 @@ namespace Google.Cloud.Gaming.V1.Tests
                         "value60c16320"
                     },
                 },
-                FleetConfigs = { new FleetConfig(), },
+                FleetConfigs =
+                {
+                    new FleetConfig
+                    {
+                        FleetSpec = "fleet_spec167aed51",
+                        Name = "name1c9368b0",
+                    },
+                },
                 ScalingConfigs =
                 {
-                    new ScalingConfig(),
+                    new ScalingConfig
+                    {
+                        Name = "name1c9368b0",
+                        FleetAutoscalerSpec = "fleet_autoscaler_spec6bd536d2",
+                        Selectors =
+                        {
+                            new LabelSelector
+                            {
+                                Labels =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        Schedules =
+                        {
+                            new Schedule
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                CronJobDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                CronSpec = "cron_spec77d6a069",
+                            },
+                        },
+                    },
                 },
                 Description = "description2cf9da67",
             };
@@ -75,8 +129,16 @@ namespace Google.Cloud.Gaming.V1.Tests
             GameServerConfig expectedResponse = new GameServerConfig
             {
                 GameServerConfigName = GameServerConfigName.FromProjectLocationDeploymentConfig("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]", "[CONFIG]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -84,10 +146,56 @@ namespace Google.Cloud.Gaming.V1.Tests
                         "value60c16320"
                     },
                 },
-                FleetConfigs = { new FleetConfig(), },
+                FleetConfigs =
+                {
+                    new FleetConfig
+                    {
+                        FleetSpec = "fleet_spec167aed51",
+                        Name = "name1c9368b0",
+                    },
+                },
                 ScalingConfigs =
                 {
-                    new ScalingConfig(),
+                    new ScalingConfig
+                    {
+                        Name = "name1c9368b0",
+                        FleetAutoscalerSpec = "fleet_autoscaler_spec6bd536d2",
+                        Selectors =
+                        {
+                            new LabelSelector
+                            {
+                                Labels =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        Schedules =
+                        {
+                            new Schedule
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                CronJobDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                CronSpec = "cron_spec77d6a069",
+                            },
+                        },
+                    },
                 },
                 Description = "description2cf9da67",
             };
@@ -112,8 +220,16 @@ namespace Google.Cloud.Gaming.V1.Tests
             GameServerConfig expectedResponse = new GameServerConfig
             {
                 GameServerConfigName = GameServerConfigName.FromProjectLocationDeploymentConfig("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]", "[CONFIG]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -121,10 +237,56 @@ namespace Google.Cloud.Gaming.V1.Tests
                         "value60c16320"
                     },
                 },
-                FleetConfigs = { new FleetConfig(), },
+                FleetConfigs =
+                {
+                    new FleetConfig
+                    {
+                        FleetSpec = "fleet_spec167aed51",
+                        Name = "name1c9368b0",
+                    },
+                },
                 ScalingConfigs =
                 {
-                    new ScalingConfig(),
+                    new ScalingConfig
+                    {
+                        Name = "name1c9368b0",
+                        FleetAutoscalerSpec = "fleet_autoscaler_spec6bd536d2",
+                        Selectors =
+                        {
+                            new LabelSelector
+                            {
+                                Labels =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        Schedules =
+                        {
+                            new Schedule
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                CronJobDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                CronSpec = "cron_spec77d6a069",
+                            },
+                        },
+                    },
                 },
                 Description = "description2cf9da67",
             };
@@ -147,8 +309,16 @@ namespace Google.Cloud.Gaming.V1.Tests
             GameServerConfig expectedResponse = new GameServerConfig
             {
                 GameServerConfigName = GameServerConfigName.FromProjectLocationDeploymentConfig("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]", "[CONFIG]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -156,10 +326,56 @@ namespace Google.Cloud.Gaming.V1.Tests
                         "value60c16320"
                     },
                 },
-                FleetConfigs = { new FleetConfig(), },
+                FleetConfigs =
+                {
+                    new FleetConfig
+                    {
+                        FleetSpec = "fleet_spec167aed51",
+                        Name = "name1c9368b0",
+                    },
+                },
                 ScalingConfigs =
                 {
-                    new ScalingConfig(),
+                    new ScalingConfig
+                    {
+                        Name = "name1c9368b0",
+                        FleetAutoscalerSpec = "fleet_autoscaler_spec6bd536d2",
+                        Selectors =
+                        {
+                            new LabelSelector
+                            {
+                                Labels =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        Schedules =
+                        {
+                            new Schedule
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                CronJobDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                CronSpec = "cron_spec77d6a069",
+                            },
+                        },
+                    },
                 },
                 Description = "description2cf9da67",
             };
@@ -184,8 +400,16 @@ namespace Google.Cloud.Gaming.V1.Tests
             GameServerConfig expectedResponse = new GameServerConfig
             {
                 GameServerConfigName = GameServerConfigName.FromProjectLocationDeploymentConfig("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]", "[CONFIG]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -193,10 +417,56 @@ namespace Google.Cloud.Gaming.V1.Tests
                         "value60c16320"
                     },
                 },
-                FleetConfigs = { new FleetConfig(), },
+                FleetConfigs =
+                {
+                    new FleetConfig
+                    {
+                        FleetSpec = "fleet_spec167aed51",
+                        Name = "name1c9368b0",
+                    },
+                },
                 ScalingConfigs =
                 {
-                    new ScalingConfig(),
+                    new ScalingConfig
+                    {
+                        Name = "name1c9368b0",
+                        FleetAutoscalerSpec = "fleet_autoscaler_spec6bd536d2",
+                        Selectors =
+                        {
+                            new LabelSelector
+                            {
+                                Labels =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        Schedules =
+                        {
+                            new Schedule
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                CronJobDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                CronSpec = "cron_spec77d6a069",
+                            },
+                        },
+                    },
                 },
                 Description = "description2cf9da67",
             };
@@ -219,8 +489,16 @@ namespace Google.Cloud.Gaming.V1.Tests
             GameServerConfig expectedResponse = new GameServerConfig
             {
                 GameServerConfigName = GameServerConfigName.FromProjectLocationDeploymentConfig("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]", "[CONFIG]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -228,10 +506,56 @@ namespace Google.Cloud.Gaming.V1.Tests
                         "value60c16320"
                     },
                 },
-                FleetConfigs = { new FleetConfig(), },
+                FleetConfigs =
+                {
+                    new FleetConfig
+                    {
+                        FleetSpec = "fleet_spec167aed51",
+                        Name = "name1c9368b0",
+                    },
+                },
                 ScalingConfigs =
                 {
-                    new ScalingConfig(),
+                    new ScalingConfig
+                    {
+                        Name = "name1c9368b0",
+                        FleetAutoscalerSpec = "fleet_autoscaler_spec6bd536d2",
+                        Selectors =
+                        {
+                            new LabelSelector
+                            {
+                                Labels =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        "value60c16320"
+                                    },
+                                },
+                            },
+                        },
+                        Schedules =
+                        {
+                            new Schedule
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                CronJobDuration = new wkt::Duration
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                CronSpec = "cron_spec77d6a069",
+                            },
+                        },
+                    },
                 },
                 Description = "description2cf9da67",
             };

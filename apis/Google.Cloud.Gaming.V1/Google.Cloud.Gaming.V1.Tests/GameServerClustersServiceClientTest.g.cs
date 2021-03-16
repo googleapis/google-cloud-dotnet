@@ -40,8 +40,16 @@ namespace Google.Cloud.Gaming.V1.Tests
             GameServerCluster expectedResponse = new GameServerCluster
             {
                 GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -49,7 +57,14 @@ namespace Google.Cloud.Gaming.V1.Tests
                         "value60c16320"
                     },
                 },
-                ConnectionInfo = new GameServerClusterConnectionInfo(),
+                ConnectionInfo = new GameServerClusterConnectionInfo
+                {
+                    Namespace = "namespace9e1e8089",
+                    GkeClusterReference = new GkeClusterReference
+                    {
+                        Cluster = "clusterb9d4b206",
+                    },
+                },
                 Etag = "etage8ad7218",
                 Description = "description2cf9da67",
             };
@@ -72,8 +87,16 @@ namespace Google.Cloud.Gaming.V1.Tests
             GameServerCluster expectedResponse = new GameServerCluster
             {
                 GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -81,7 +104,14 @@ namespace Google.Cloud.Gaming.V1.Tests
                         "value60c16320"
                     },
                 },
-                ConnectionInfo = new GameServerClusterConnectionInfo(),
+                ConnectionInfo = new GameServerClusterConnectionInfo
+                {
+                    Namespace = "namespace9e1e8089",
+                    GkeClusterReference = new GkeClusterReference
+                    {
+                        Cluster = "clusterb9d4b206",
+                    },
+                },
                 Etag = "etage8ad7218",
                 Description = "description2cf9da67",
             };
@@ -106,8 +136,16 @@ namespace Google.Cloud.Gaming.V1.Tests
             GameServerCluster expectedResponse = new GameServerCluster
             {
                 GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -115,7 +153,14 @@ namespace Google.Cloud.Gaming.V1.Tests
                         "value60c16320"
                     },
                 },
-                ConnectionInfo = new GameServerClusterConnectionInfo(),
+                ConnectionInfo = new GameServerClusterConnectionInfo
+                {
+                    Namespace = "namespace9e1e8089",
+                    GkeClusterReference = new GkeClusterReference
+                    {
+                        Cluster = "clusterb9d4b206",
+                    },
+                },
                 Etag = "etage8ad7218",
                 Description = "description2cf9da67",
             };
@@ -138,8 +183,16 @@ namespace Google.Cloud.Gaming.V1.Tests
             GameServerCluster expectedResponse = new GameServerCluster
             {
                 GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -147,7 +200,14 @@ namespace Google.Cloud.Gaming.V1.Tests
                         "value60c16320"
                     },
                 },
-                ConnectionInfo = new GameServerClusterConnectionInfo(),
+                ConnectionInfo = new GameServerClusterConnectionInfo
+                {
+                    Namespace = "namespace9e1e8089",
+                    GkeClusterReference = new GkeClusterReference
+                    {
+                        Cluster = "clusterb9d4b206",
+                    },
+                },
                 Etag = "etage8ad7218",
                 Description = "description2cf9da67",
             };
@@ -172,8 +232,16 @@ namespace Google.Cloud.Gaming.V1.Tests
             GameServerCluster expectedResponse = new GameServerCluster
             {
                 GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -181,7 +249,14 @@ namespace Google.Cloud.Gaming.V1.Tests
                         "value60c16320"
                     },
                 },
-                ConnectionInfo = new GameServerClusterConnectionInfo(),
+                ConnectionInfo = new GameServerClusterConnectionInfo
+                {
+                    Namespace = "namespace9e1e8089",
+                    GkeClusterReference = new GkeClusterReference
+                    {
+                        Cluster = "clusterb9d4b206",
+                    },
+                },
                 Etag = "etage8ad7218",
                 Description = "description2cf9da67",
             };
@@ -204,8 +279,16 @@ namespace Google.Cloud.Gaming.V1.Tests
             GameServerCluster expectedResponse = new GameServerCluster
             {
                 GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -213,7 +296,14 @@ namespace Google.Cloud.Gaming.V1.Tests
                         "value60c16320"
                     },
                 },
-                ConnectionInfo = new GameServerClusterConnectionInfo(),
+                ConnectionInfo = new GameServerClusterConnectionInfo
+                {
+                    Namespace = "namespace9e1e8089",
+                    GkeClusterReference = new GkeClusterReference
+                    {
+                        Cluster = "clusterb9d4b206",
+                    },
+                },
                 Etag = "etage8ad7218",
                 Description = "description2cf9da67",
             };
@@ -235,13 +325,81 @@ namespace Google.Cloud.Gaming.V1.Tests
             {
                 ParentAsRealmName = RealmName.FromProjectLocationRealm("[PROJECT]", "[LOCATION]", "[REALM]"),
                 GameServerClusterId = "game_server_cluster_ida2310829",
-                GameServerCluster = new GameServerCluster(),
-                PreviewTime = new wkt::Timestamp(),
+                GameServerCluster = new GameServerCluster
+                {
+                    GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ConnectionInfo = new GameServerClusterConnectionInfo
+                    {
+                        Namespace = "namespace9e1e8089",
+                        GkeClusterReference = new GkeClusterReference
+                        {
+                            Cluster = "clusterb9d4b206",
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                    Description = "description2cf9da67",
+                },
+                PreviewTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             PreviewCreateGameServerClusterResponse expectedResponse = new PreviewCreateGameServerClusterResponse
             {
                 Etag = "etage8ad7218",
-                TargetState = new TargetState(),
+                TargetState = new TargetState
+                {
+                    Details =
+                    {
+                        new TargetDetails
+                        {
+                            GameServerClusterName = "game_server_cluster_name1d66cd90",
+                            GameServerDeploymentName = "game_server_deployment_namebd8f8314",
+                            FleetDetails =
+                            {
+                                new TargetDetails.Types.TargetFleetDetails
+                                {
+                                    Fleet = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleet
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                    Autoscaler = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleetAutoscaler
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.PreviewCreateGameServerCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
@@ -259,13 +417,81 @@ namespace Google.Cloud.Gaming.V1.Tests
             {
                 ParentAsRealmName = RealmName.FromProjectLocationRealm("[PROJECT]", "[LOCATION]", "[REALM]"),
                 GameServerClusterId = "game_server_cluster_ida2310829",
-                GameServerCluster = new GameServerCluster(),
-                PreviewTime = new wkt::Timestamp(),
+                GameServerCluster = new GameServerCluster
+                {
+                    GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ConnectionInfo = new GameServerClusterConnectionInfo
+                    {
+                        Namespace = "namespace9e1e8089",
+                        GkeClusterReference = new GkeClusterReference
+                        {
+                            Cluster = "clusterb9d4b206",
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                    Description = "description2cf9da67",
+                },
+                PreviewTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             PreviewCreateGameServerClusterResponse expectedResponse = new PreviewCreateGameServerClusterResponse
             {
                 Etag = "etage8ad7218",
-                TargetState = new TargetState(),
+                TargetState = new TargetState
+                {
+                    Details =
+                    {
+                        new TargetDetails
+                        {
+                            GameServerClusterName = "game_server_cluster_name1d66cd90",
+                            GameServerDeploymentName = "game_server_deployment_namebd8f8314",
+                            FleetDetails =
+                            {
+                                new TargetDetails.Types.TargetFleetDetails
+                                {
+                                    Fleet = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleet
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                    Autoscaler = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleetAutoscaler
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.PreviewCreateGameServerClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PreviewCreateGameServerClusterResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
@@ -284,12 +510,50 @@ namespace Google.Cloud.Gaming.V1.Tests
             PreviewDeleteGameServerClusterRequest request = new PreviewDeleteGameServerClusterRequest
             {
                 GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
-                PreviewTime = new wkt::Timestamp(),
+                PreviewTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             PreviewDeleteGameServerClusterResponse expectedResponse = new PreviewDeleteGameServerClusterResponse
             {
                 Etag = "etage8ad7218",
-                TargetState = new TargetState(),
+                TargetState = new TargetState
+                {
+                    Details =
+                    {
+                        new TargetDetails
+                        {
+                            GameServerClusterName = "game_server_cluster_name1d66cd90",
+                            GameServerDeploymentName = "game_server_deployment_namebd8f8314",
+                            FleetDetails =
+                            {
+                                new TargetDetails.Types.TargetFleetDetails
+                                {
+                                    Fleet = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleet
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                    Autoscaler = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleetAutoscaler
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.PreviewDeleteGameServerCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
@@ -306,12 +570,50 @@ namespace Google.Cloud.Gaming.V1.Tests
             PreviewDeleteGameServerClusterRequest request = new PreviewDeleteGameServerClusterRequest
             {
                 GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
-                PreviewTime = new wkt::Timestamp(),
+                PreviewTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             PreviewDeleteGameServerClusterResponse expectedResponse = new PreviewDeleteGameServerClusterResponse
             {
                 Etag = "etage8ad7218",
-                TargetState = new TargetState(),
+                TargetState = new TargetState
+                {
+                    Details =
+                    {
+                        new TargetDetails
+                        {
+                            GameServerClusterName = "game_server_cluster_name1d66cd90",
+                            GameServerDeploymentName = "game_server_deployment_namebd8f8314",
+                            FleetDetails =
+                            {
+                                new TargetDetails.Types.TargetFleetDetails
+                                {
+                                    Fleet = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleet
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                    Autoscaler = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleetAutoscaler
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.PreviewDeleteGameServerClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PreviewDeleteGameServerClusterResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
@@ -329,14 +631,85 @@ namespace Google.Cloud.Gaming.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             PreviewUpdateGameServerClusterRequest request = new PreviewUpdateGameServerClusterRequest
             {
-                GameServerCluster = new GameServerCluster(),
-                UpdateMask = new wkt::FieldMask(),
-                PreviewTime = new wkt::Timestamp(),
+                GameServerCluster = new GameServerCluster
+                {
+                    GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ConnectionInfo = new GameServerClusterConnectionInfo
+                    {
+                        Namespace = "namespace9e1e8089",
+                        GkeClusterReference = new GkeClusterReference
+                        {
+                            Cluster = "clusterb9d4b206",
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                    Description = "description2cf9da67",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
+                PreviewTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             PreviewUpdateGameServerClusterResponse expectedResponse = new PreviewUpdateGameServerClusterResponse
             {
                 Etag = "etage8ad7218",
-                TargetState = new TargetState(),
+                TargetState = new TargetState
+                {
+                    Details =
+                    {
+                        new TargetDetails
+                        {
+                            GameServerClusterName = "game_server_cluster_name1d66cd90",
+                            GameServerDeploymentName = "game_server_deployment_namebd8f8314",
+                            FleetDetails =
+                            {
+                                new TargetDetails.Types.TargetFleetDetails
+                                {
+                                    Fleet = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleet
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                    Autoscaler = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleetAutoscaler
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.PreviewUpdateGameServerCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
@@ -352,14 +725,85 @@ namespace Google.Cloud.Gaming.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             PreviewUpdateGameServerClusterRequest request = new PreviewUpdateGameServerClusterRequest
             {
-                GameServerCluster = new GameServerCluster(),
-                UpdateMask = new wkt::FieldMask(),
-                PreviewTime = new wkt::Timestamp(),
+                GameServerCluster = new GameServerCluster
+                {
+                    GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    ConnectionInfo = new GameServerClusterConnectionInfo
+                    {
+                        Namespace = "namespace9e1e8089",
+                        GkeClusterReference = new GkeClusterReference
+                        {
+                            Cluster = "clusterb9d4b206",
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                    Description = "description2cf9da67",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
+                PreviewTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             PreviewUpdateGameServerClusterResponse expectedResponse = new PreviewUpdateGameServerClusterResponse
             {
                 Etag = "etage8ad7218",
-                TargetState = new TargetState(),
+                TargetState = new TargetState
+                {
+                    Details =
+                    {
+                        new TargetDetails
+                        {
+                            GameServerClusterName = "game_server_cluster_name1d66cd90",
+                            GameServerDeploymentName = "game_server_deployment_namebd8f8314",
+                            FleetDetails =
+                            {
+                                new TargetDetails.Types.TargetFleetDetails
+                                {
+                                    Fleet = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleet
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                    Autoscaler = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleetAutoscaler
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.PreviewUpdateGameServerClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PreviewUpdateGameServerClusterResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
