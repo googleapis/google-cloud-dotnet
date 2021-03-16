@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -41,9 +42,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                         "value60c16320"
                     },
                 },
-                MessageStoragePolicy = new MessageStoragePolicy(),
+                MessageStoragePolicy = new MessageStoragePolicy
+                {
+                    AllowedPersistenceRegions =
+                    {
+                        "allowed_persistence_regions9d38d037",
+                    },
+                },
                 KmsKeyName = "kms_key_name06bd122b",
-                SchemaSettings = new SchemaSettings(),
+                SchemaSettings = new SchemaSettings
+                {
+                    SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Encoding = Encoding.Json,
+                },
                 SatisfiesPzs = false,
             };
             Topic expectedResponse = new Topic
@@ -56,9 +67,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                         "value60c16320"
                     },
                 },
-                MessageStoragePolicy = new MessageStoragePolicy(),
+                MessageStoragePolicy = new MessageStoragePolicy
+                {
+                    AllowedPersistenceRegions =
+                    {
+                        "allowed_persistence_regions9d38d037",
+                    },
+                },
                 KmsKeyName = "kms_key_name06bd122b",
-                SchemaSettings = new SchemaSettings(),
+                SchemaSettings = new SchemaSettings
+                {
+                    SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Encoding = Encoding.Json,
+                },
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.CreateTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -82,9 +103,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                         "value60c16320"
                     },
                 },
-                MessageStoragePolicy = new MessageStoragePolicy(),
+                MessageStoragePolicy = new MessageStoragePolicy
+                {
+                    AllowedPersistenceRegions =
+                    {
+                        "allowed_persistence_regions9d38d037",
+                    },
+                },
                 KmsKeyName = "kms_key_name06bd122b",
-                SchemaSettings = new SchemaSettings(),
+                SchemaSettings = new SchemaSettings
+                {
+                    SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Encoding = Encoding.Json,
+                },
                 SatisfiesPzs = false,
             };
             Topic expectedResponse = new Topic
@@ -97,9 +128,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                         "value60c16320"
                     },
                 },
-                MessageStoragePolicy = new MessageStoragePolicy(),
+                MessageStoragePolicy = new MessageStoragePolicy
+                {
+                    AllowedPersistenceRegions =
+                    {
+                        "allowed_persistence_regions9d38d037",
+                    },
+                },
                 KmsKeyName = "kms_key_name06bd122b",
-                SchemaSettings = new SchemaSettings(),
+                SchemaSettings = new SchemaSettings
+                {
+                    SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Encoding = Encoding.Json,
+                },
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.CreateTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -129,9 +170,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                         "value60c16320"
                     },
                 },
-                MessageStoragePolicy = new MessageStoragePolicy(),
+                MessageStoragePolicy = new MessageStoragePolicy
+                {
+                    AllowedPersistenceRegions =
+                    {
+                        "allowed_persistence_regions9d38d037",
+                    },
+                },
                 KmsKeyName = "kms_key_name06bd122b",
-                SchemaSettings = new SchemaSettings(),
+                SchemaSettings = new SchemaSettings
+                {
+                    SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Encoding = Encoding.Json,
+                },
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.CreateTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -159,9 +210,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                         "value60c16320"
                     },
                 },
-                MessageStoragePolicy = new MessageStoragePolicy(),
+                MessageStoragePolicy = new MessageStoragePolicy
+                {
+                    AllowedPersistenceRegions =
+                    {
+                        "allowed_persistence_regions9d38d037",
+                    },
+                },
                 KmsKeyName = "kms_key_name06bd122b",
-                SchemaSettings = new SchemaSettings(),
+                SchemaSettings = new SchemaSettings
+                {
+                    SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Encoding = Encoding.Json,
+                },
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.CreateTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -191,9 +252,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                         "value60c16320"
                     },
                 },
-                MessageStoragePolicy = new MessageStoragePolicy(),
+                MessageStoragePolicy = new MessageStoragePolicy
+                {
+                    AllowedPersistenceRegions =
+                    {
+                        "allowed_persistence_regions9d38d037",
+                    },
+                },
                 KmsKeyName = "kms_key_name06bd122b",
-                SchemaSettings = new SchemaSettings(),
+                SchemaSettings = new SchemaSettings
+                {
+                    SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Encoding = Encoding.Json,
+                },
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.CreateTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -221,9 +292,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                         "value60c16320"
                     },
                 },
-                MessageStoragePolicy = new MessageStoragePolicy(),
+                MessageStoragePolicy = new MessageStoragePolicy
+                {
+                    AllowedPersistenceRegions =
+                    {
+                        "allowed_persistence_regions9d38d037",
+                    },
+                },
                 KmsKeyName = "kms_key_name06bd122b",
-                SchemaSettings = new SchemaSettings(),
+                SchemaSettings = new SchemaSettings
+                {
+                    SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Encoding = Encoding.Json,
+                },
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.CreateTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -241,8 +322,35 @@ namespace Google.Cloud.PubSub.V1.Tests
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             UpdateTopicRequest request = new UpdateTopicRequest
             {
-                Topic = new Topic(),
-                UpdateMask = new wkt::FieldMask(),
+                Topic = new Topic
+                {
+                    TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    MessageStoragePolicy = new MessageStoragePolicy
+                    {
+                        AllowedPersistenceRegions =
+                        {
+                            "allowed_persistence_regions9d38d037",
+                        },
+                    },
+                    KmsKeyName = "kms_key_name06bd122b",
+                    SchemaSettings = new SchemaSettings
+                    {
+                        SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                        Encoding = Encoding.Json,
+                    },
+                    SatisfiesPzs = false,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Topic expectedResponse = new Topic
             {
@@ -254,9 +362,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                         "value60c16320"
                     },
                 },
-                MessageStoragePolicy = new MessageStoragePolicy(),
+                MessageStoragePolicy = new MessageStoragePolicy
+                {
+                    AllowedPersistenceRegions =
+                    {
+                        "allowed_persistence_regions9d38d037",
+                    },
+                },
                 KmsKeyName = "kms_key_name06bd122b",
-                SchemaSettings = new SchemaSettings(),
+                SchemaSettings = new SchemaSettings
+                {
+                    SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Encoding = Encoding.Json,
+                },
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.UpdateTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -272,8 +390,35 @@ namespace Google.Cloud.PubSub.V1.Tests
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             UpdateTopicRequest request = new UpdateTopicRequest
             {
-                Topic = new Topic(),
-                UpdateMask = new wkt::FieldMask(),
+                Topic = new Topic
+                {
+                    TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    MessageStoragePolicy = new MessageStoragePolicy
+                    {
+                        AllowedPersistenceRegions =
+                        {
+                            "allowed_persistence_regions9d38d037",
+                        },
+                    },
+                    KmsKeyName = "kms_key_name06bd122b",
+                    SchemaSettings = new SchemaSettings
+                    {
+                        SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                        Encoding = Encoding.Json,
+                    },
+                    SatisfiesPzs = false,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Topic expectedResponse = new Topic
             {
@@ -285,9 +430,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                         "value60c16320"
                     },
                 },
-                MessageStoragePolicy = new MessageStoragePolicy(),
+                MessageStoragePolicy = new MessageStoragePolicy
+                {
+                    AllowedPersistenceRegions =
+                    {
+                        "allowed_persistence_regions9d38d037",
+                    },
+                },
                 KmsKeyName = "kms_key_name06bd122b",
-                SchemaSettings = new SchemaSettings(),
+                SchemaSettings = new SchemaSettings
+                {
+                    SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Encoding = Encoding.Json,
+                },
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.UpdateTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -308,7 +463,24 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 Messages =
                 {
-                    new PubsubMessage(),
+                    new PubsubMessage
+                    {
+                        Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        MessageId = "message_id72a1ca4c",
+                        PublishTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        OrderingKey = "ordering_key8d4cf536",
+                    },
                 },
             };
             PublishResponse expectedResponse = new PublishResponse
@@ -334,7 +506,24 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 Messages =
                 {
-                    new PubsubMessage(),
+                    new PubsubMessage
+                    {
+                        Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        MessageId = "message_id72a1ca4c",
+                        PublishTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        OrderingKey = "ordering_key8d4cf536",
+                    },
                 },
             };
             PublishResponse expectedResponse = new PublishResponse
@@ -362,7 +551,24 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 Messages =
                 {
-                    new PubsubMessage(),
+                    new PubsubMessage
+                    {
+                        Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        MessageId = "message_id72a1ca4c",
+                        PublishTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        OrderingKey = "ordering_key8d4cf536",
+                    },
                 },
             };
             PublishResponse expectedResponse = new PublishResponse
@@ -388,7 +594,24 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 Messages =
                 {
-                    new PubsubMessage(),
+                    new PubsubMessage
+                    {
+                        Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        MessageId = "message_id72a1ca4c",
+                        PublishTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        OrderingKey = "ordering_key8d4cf536",
+                    },
                 },
             };
             PublishResponse expectedResponse = new PublishResponse
@@ -416,7 +639,24 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 Messages =
                 {
-                    new PubsubMessage(),
+                    new PubsubMessage
+                    {
+                        Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        MessageId = "message_id72a1ca4c",
+                        PublishTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        OrderingKey = "ordering_key8d4cf536",
+                    },
                 },
             };
             PublishResponse expectedResponse = new PublishResponse
@@ -442,7 +682,24 @@ namespace Google.Cloud.PubSub.V1.Tests
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
                 Messages =
                 {
-                    new PubsubMessage(),
+                    new PubsubMessage
+                    {
+                        Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        MessageId = "message_id72a1ca4c",
+                        PublishTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        OrderingKey = "ordering_key8d4cf536",
+                    },
                 },
             };
             PublishResponse expectedResponse = new PublishResponse
@@ -479,9 +736,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                         "value60c16320"
                     },
                 },
-                MessageStoragePolicy = new MessageStoragePolicy(),
+                MessageStoragePolicy = new MessageStoragePolicy
+                {
+                    AllowedPersistenceRegions =
+                    {
+                        "allowed_persistence_regions9d38d037",
+                    },
+                },
                 KmsKeyName = "kms_key_name06bd122b",
-                SchemaSettings = new SchemaSettings(),
+                SchemaSettings = new SchemaSettings
+                {
+                    SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Encoding = Encoding.Json,
+                },
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -509,9 +776,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                         "value60c16320"
                     },
                 },
-                MessageStoragePolicy = new MessageStoragePolicy(),
+                MessageStoragePolicy = new MessageStoragePolicy
+                {
+                    AllowedPersistenceRegions =
+                    {
+                        "allowed_persistence_regions9d38d037",
+                    },
+                },
                 KmsKeyName = "kms_key_name06bd122b",
-                SchemaSettings = new SchemaSettings(),
+                SchemaSettings = new SchemaSettings
+                {
+                    SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Encoding = Encoding.Json,
+                },
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -541,9 +818,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                         "value60c16320"
                     },
                 },
-                MessageStoragePolicy = new MessageStoragePolicy(),
+                MessageStoragePolicy = new MessageStoragePolicy
+                {
+                    AllowedPersistenceRegions =
+                    {
+                        "allowed_persistence_regions9d38d037",
+                    },
+                },
                 KmsKeyName = "kms_key_name06bd122b",
-                SchemaSettings = new SchemaSettings(),
+                SchemaSettings = new SchemaSettings
+                {
+                    SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Encoding = Encoding.Json,
+                },
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -571,9 +858,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                         "value60c16320"
                     },
                 },
-                MessageStoragePolicy = new MessageStoragePolicy(),
+                MessageStoragePolicy = new MessageStoragePolicy
+                {
+                    AllowedPersistenceRegions =
+                    {
+                        "allowed_persistence_regions9d38d037",
+                    },
+                },
                 KmsKeyName = "kms_key_name06bd122b",
-                SchemaSettings = new SchemaSettings(),
+                SchemaSettings = new SchemaSettings
+                {
+                    SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Encoding = Encoding.Json,
+                },
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -603,9 +900,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                         "value60c16320"
                     },
                 },
-                MessageStoragePolicy = new MessageStoragePolicy(),
+                MessageStoragePolicy = new MessageStoragePolicy
+                {
+                    AllowedPersistenceRegions =
+                    {
+                        "allowed_persistence_regions9d38d037",
+                    },
+                },
                 KmsKeyName = "kms_key_name06bd122b",
-                SchemaSettings = new SchemaSettings(),
+                SchemaSettings = new SchemaSettings
+                {
+                    SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Encoding = Encoding.Json,
+                },
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -633,9 +940,19 @@ namespace Google.Cloud.PubSub.V1.Tests
                         "value60c16320"
                     },
                 },
-                MessageStoragePolicy = new MessageStoragePolicy(),
+                MessageStoragePolicy = new MessageStoragePolicy
+                {
+                    AllowedPersistenceRegions =
+                    {
+                        "allowed_persistence_regions9d38d037",
+                    },
+                },
                 KmsKeyName = "kms_key_name06bd122b",
-                SchemaSettings = new SchemaSettings(),
+                SchemaSettings = new SchemaSettings
+                {
+                    SchemaAsSchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Encoding = Encoding.Json,
+                },
                 SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));

@@ -36,7 +36,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             CreateSchemaRequest request = new CreateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Schema = new Schema(),
+                Schema = new Schema
+                {
+                    SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Type = Schema.Types.Type.Unspecified,
+                    Definition = "definition3b8b6130",
+                },
                 SchemaId = "schema_idb515cf80",
             };
             Schema expectedResponse = new Schema
@@ -59,7 +64,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             CreateSchemaRequest request = new CreateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Schema = new Schema(),
+                Schema = new Schema
+                {
+                    SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Type = Schema.Types.Type.Unspecified,
+                    Definition = "definition3b8b6130",
+                },
                 SchemaId = "schema_idb515cf80",
             };
             Schema expectedResponse = new Schema
@@ -84,7 +94,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             CreateSchemaRequest request = new CreateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Schema = new Schema(),
+                Schema = new Schema
+                {
+                    SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Type = Schema.Types.Type.Unspecified,
+                    Definition = "definition3b8b6130",
+                },
                 SchemaId = "schema_idb515cf80",
             };
             Schema expectedResponse = new Schema
@@ -107,7 +122,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             CreateSchemaRequest request = new CreateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Schema = new Schema(),
+                Schema = new Schema
+                {
+                    SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Type = Schema.Types.Type.Unspecified,
+                    Definition = "definition3b8b6130",
+                },
                 SchemaId = "schema_idb515cf80",
             };
             Schema expectedResponse = new Schema
@@ -132,7 +152,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             CreateSchemaRequest request = new CreateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Schema = new Schema(),
+                Schema = new Schema
+                {
+                    SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Type = Schema.Types.Type.Unspecified,
+                    Definition = "definition3b8b6130",
+                },
                 SchemaId = "schema_idb515cf80",
             };
             Schema expectedResponse = new Schema
@@ -155,7 +180,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             CreateSchemaRequest request = new CreateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Schema = new Schema(),
+                Schema = new Schema
+                {
+                    SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Type = Schema.Types.Type.Unspecified,
+                    Definition = "definition3b8b6130",
+                },
                 SchemaId = "schema_idb515cf80",
             };
             Schema expectedResponse = new Schema
@@ -407,7 +437,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             ValidateSchemaRequest request = new ValidateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Schema = new Schema(),
+                Schema = new Schema
+                {
+                    SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Type = Schema.Types.Type.Unspecified,
+                    Definition = "definition3b8b6130",
+                },
             };
             ValidateSchemaResponse expectedResponse = new ValidateSchemaResponse { };
             mockGrpcClient.Setup(x => x.ValidateSchema(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -424,7 +459,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             ValidateSchemaRequest request = new ValidateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Schema = new Schema(),
+                Schema = new Schema
+                {
+                    SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Type = Schema.Types.Type.Unspecified,
+                    Definition = "definition3b8b6130",
+                },
             };
             ValidateSchemaResponse expectedResponse = new ValidateSchemaResponse { };
             mockGrpcClient.Setup(x => x.ValidateSchemaAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ValidateSchemaResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -443,7 +483,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             ValidateSchemaRequest request = new ValidateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Schema = new Schema(),
+                Schema = new Schema
+                {
+                    SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Type = Schema.Types.Type.Unspecified,
+                    Definition = "definition3b8b6130",
+                },
             };
             ValidateSchemaResponse expectedResponse = new ValidateSchemaResponse { };
             mockGrpcClient.Setup(x => x.ValidateSchema(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -460,7 +505,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             ValidateSchemaRequest request = new ValidateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Schema = new Schema(),
+                Schema = new Schema
+                {
+                    SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Type = Schema.Types.Type.Unspecified,
+                    Definition = "definition3b8b6130",
+                },
             };
             ValidateSchemaResponse expectedResponse = new ValidateSchemaResponse { };
             mockGrpcClient.Setup(x => x.ValidateSchemaAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ValidateSchemaResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -479,7 +529,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             ValidateSchemaRequest request = new ValidateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Schema = new Schema(),
+                Schema = new Schema
+                {
+                    SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Type = Schema.Types.Type.Unspecified,
+                    Definition = "definition3b8b6130",
+                },
             };
             ValidateSchemaResponse expectedResponse = new ValidateSchemaResponse { };
             mockGrpcClient.Setup(x => x.ValidateSchema(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -496,7 +551,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             ValidateSchemaRequest request = new ValidateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Schema = new Schema(),
+                Schema = new Schema
+                {
+                    SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Type = Schema.Types.Type.Unspecified,
+                    Definition = "definition3b8b6130",
+                },
             };
             ValidateSchemaResponse expectedResponse = new ValidateSchemaResponse { };
             mockGrpcClient.Setup(x => x.ValidateSchemaAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ValidateSchemaResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -516,7 +576,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
-                Schema = new Schema(),
+                Schema = new Schema
+                {
+                    SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Type = Schema.Types.Type.Unspecified,
+                    Definition = "definition3b8b6130",
+                },
                 Message = proto::ByteString.CopyFromUtf8("message0231e778"),
                 Encoding = Encoding.Json,
             };
@@ -536,7 +601,12 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
-                Schema = new Schema(),
+                Schema = new Schema
+                {
+                    SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
+                    Type = Schema.Types.Type.Unspecified,
+                    Definition = "definition3b8b6130",
+                },
                 Message = proto::ByteString.CopyFromUtf8("message0231e778"),
                 Encoding = Encoding.Json,
             };

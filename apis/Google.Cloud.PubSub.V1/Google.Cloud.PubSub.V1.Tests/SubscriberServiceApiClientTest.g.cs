@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -35,10 +36,29 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
                 RetainAckedMessages = false,
-                MessageRetentionDuration = new wkt::Duration(),
+                MessageRetentionDuration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -47,20 +67,62 @@ namespace Google.Cloud.PubSub.V1.Tests
                     },
                 },
                 EnableMessageOrdering = true,
-                ExpirationPolicy = new ExpirationPolicy(),
+                ExpirationPolicy = new ExpirationPolicy
+                {
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Filter = "filtere47ac9b2",
-                DeadLetterPolicy = new DeadLetterPolicy(),
-                RetryPolicy = new RetryPolicy(),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = "dead_letter_topic48397712",
+                    MaxDeliveryAttempts = -1445168770,
+                },
+                RetryPolicy = new RetryPolicy
+                {
+                    MinimumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Detached = false,
             };
             Subscription expectedResponse = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
                 RetainAckedMessages = false,
-                MessageRetentionDuration = new wkt::Duration(),
+                MessageRetentionDuration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -69,10 +131,33 @@ namespace Google.Cloud.PubSub.V1.Tests
                     },
                 },
                 EnableMessageOrdering = true,
-                ExpirationPolicy = new ExpirationPolicy(),
+                ExpirationPolicy = new ExpirationPolicy
+                {
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Filter = "filtere47ac9b2",
-                DeadLetterPolicy = new DeadLetterPolicy(),
-                RetryPolicy = new RetryPolicy(),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = "dead_letter_topic48397712",
+                    MaxDeliveryAttempts = -1445168770,
+                },
+                RetryPolicy = new RetryPolicy
+                {
+                    MinimumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Detached = false,
             };
             mockGrpcClient.Setup(x => x.CreateSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -90,10 +175,29 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
                 RetainAckedMessages = false,
-                MessageRetentionDuration = new wkt::Duration(),
+                MessageRetentionDuration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -102,20 +206,62 @@ namespace Google.Cloud.PubSub.V1.Tests
                     },
                 },
                 EnableMessageOrdering = true,
-                ExpirationPolicy = new ExpirationPolicy(),
+                ExpirationPolicy = new ExpirationPolicy
+                {
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Filter = "filtere47ac9b2",
-                DeadLetterPolicy = new DeadLetterPolicy(),
-                RetryPolicy = new RetryPolicy(),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = "dead_letter_topic48397712",
+                    MaxDeliveryAttempts = -1445168770,
+                },
+                RetryPolicy = new RetryPolicy
+                {
+                    MinimumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Detached = false,
             };
             Subscription expectedResponse = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
                 RetainAckedMessages = false,
-                MessageRetentionDuration = new wkt::Duration(),
+                MessageRetentionDuration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -124,10 +270,33 @@ namespace Google.Cloud.PubSub.V1.Tests
                     },
                 },
                 EnableMessageOrdering = true,
-                ExpirationPolicy = new ExpirationPolicy(),
+                ExpirationPolicy = new ExpirationPolicy
+                {
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Filter = "filtere47ac9b2",
-                DeadLetterPolicy = new DeadLetterPolicy(),
-                RetryPolicy = new RetryPolicy(),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = "dead_letter_topic48397712",
+                    MaxDeliveryAttempts = -1445168770,
+                },
+                RetryPolicy = new RetryPolicy
+                {
+                    MinimumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Detached = false,
             };
             mockGrpcClient.Setup(x => x.CreateSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -147,17 +316,51 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
             };
             Subscription expectedResponse = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
                 RetainAckedMessages = false,
-                MessageRetentionDuration = new wkt::Duration(),
+                MessageRetentionDuration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -166,10 +369,33 @@ namespace Google.Cloud.PubSub.V1.Tests
                     },
                 },
                 EnableMessageOrdering = true,
-                ExpirationPolicy = new ExpirationPolicy(),
+                ExpirationPolicy = new ExpirationPolicy
+                {
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Filter = "filtere47ac9b2",
-                DeadLetterPolicy = new DeadLetterPolicy(),
-                RetryPolicy = new RetryPolicy(),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = "dead_letter_topic48397712",
+                    MaxDeliveryAttempts = -1445168770,
+                },
+                RetryPolicy = new RetryPolicy
+                {
+                    MinimumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Detached = false,
             };
             mockGrpcClient.Setup(x => x.CreateSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -187,17 +413,51 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
             };
             Subscription expectedResponse = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
                 RetainAckedMessages = false,
-                MessageRetentionDuration = new wkt::Duration(),
+                MessageRetentionDuration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -206,10 +466,33 @@ namespace Google.Cloud.PubSub.V1.Tests
                     },
                 },
                 EnableMessageOrdering = true,
-                ExpirationPolicy = new ExpirationPolicy(),
+                ExpirationPolicy = new ExpirationPolicy
+                {
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Filter = "filtere47ac9b2",
-                DeadLetterPolicy = new DeadLetterPolicy(),
-                RetryPolicy = new RetryPolicy(),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = "dead_letter_topic48397712",
+                    MaxDeliveryAttempts = -1445168770,
+                },
+                RetryPolicy = new RetryPolicy
+                {
+                    MinimumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Detached = false,
             };
             mockGrpcClient.Setup(x => x.CreateSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -229,17 +512,51 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
             };
             Subscription expectedResponse = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
                 RetainAckedMessages = false,
-                MessageRetentionDuration = new wkt::Duration(),
+                MessageRetentionDuration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -248,10 +565,33 @@ namespace Google.Cloud.PubSub.V1.Tests
                     },
                 },
                 EnableMessageOrdering = true,
-                ExpirationPolicy = new ExpirationPolicy(),
+                ExpirationPolicy = new ExpirationPolicy
+                {
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Filter = "filtere47ac9b2",
-                DeadLetterPolicy = new DeadLetterPolicy(),
-                RetryPolicy = new RetryPolicy(),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = "dead_letter_topic48397712",
+                    MaxDeliveryAttempts = -1445168770,
+                },
+                RetryPolicy = new RetryPolicy
+                {
+                    MinimumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Detached = false,
             };
             mockGrpcClient.Setup(x => x.CreateSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -269,17 +609,51 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
             };
             Subscription expectedResponse = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
                 RetainAckedMessages = false,
-                MessageRetentionDuration = new wkt::Duration(),
+                MessageRetentionDuration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -288,10 +662,33 @@ namespace Google.Cloud.PubSub.V1.Tests
                     },
                 },
                 EnableMessageOrdering = true,
-                ExpirationPolicy = new ExpirationPolicy(),
+                ExpirationPolicy = new ExpirationPolicy
+                {
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Filter = "filtere47ac9b2",
-                DeadLetterPolicy = new DeadLetterPolicy(),
-                RetryPolicy = new RetryPolicy(),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = "dead_letter_topic48397712",
+                    MaxDeliveryAttempts = -1445168770,
+                },
+                RetryPolicy = new RetryPolicy
+                {
+                    MinimumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Detached = false,
             };
             mockGrpcClient.Setup(x => x.CreateSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -315,10 +712,29 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
                 RetainAckedMessages = false,
-                MessageRetentionDuration = new wkt::Duration(),
+                MessageRetentionDuration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -327,10 +743,33 @@ namespace Google.Cloud.PubSub.V1.Tests
                     },
                 },
                 EnableMessageOrdering = true,
-                ExpirationPolicy = new ExpirationPolicy(),
+                ExpirationPolicy = new ExpirationPolicy
+                {
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Filter = "filtere47ac9b2",
-                DeadLetterPolicy = new DeadLetterPolicy(),
-                RetryPolicy = new RetryPolicy(),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = "dead_letter_topic48397712",
+                    MaxDeliveryAttempts = -1445168770,
+                },
+                RetryPolicy = new RetryPolicy
+                {
+                    MinimumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Detached = false,
             };
             mockGrpcClient.Setup(x => x.GetSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -352,10 +791,29 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
                 RetainAckedMessages = false,
-                MessageRetentionDuration = new wkt::Duration(),
+                MessageRetentionDuration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -364,10 +822,33 @@ namespace Google.Cloud.PubSub.V1.Tests
                     },
                 },
                 EnableMessageOrdering = true,
-                ExpirationPolicy = new ExpirationPolicy(),
+                ExpirationPolicy = new ExpirationPolicy
+                {
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Filter = "filtere47ac9b2",
-                DeadLetterPolicy = new DeadLetterPolicy(),
-                RetryPolicy = new RetryPolicy(),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = "dead_letter_topic48397712",
+                    MaxDeliveryAttempts = -1445168770,
+                },
+                RetryPolicy = new RetryPolicy
+                {
+                    MinimumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Detached = false,
             };
             mockGrpcClient.Setup(x => x.GetSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -391,10 +872,29 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
                 RetainAckedMessages = false,
-                MessageRetentionDuration = new wkt::Duration(),
+                MessageRetentionDuration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -403,10 +903,33 @@ namespace Google.Cloud.PubSub.V1.Tests
                     },
                 },
                 EnableMessageOrdering = true,
-                ExpirationPolicy = new ExpirationPolicy(),
+                ExpirationPolicy = new ExpirationPolicy
+                {
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Filter = "filtere47ac9b2",
-                DeadLetterPolicy = new DeadLetterPolicy(),
-                RetryPolicy = new RetryPolicy(),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = "dead_letter_topic48397712",
+                    MaxDeliveryAttempts = -1445168770,
+                },
+                RetryPolicy = new RetryPolicy
+                {
+                    MinimumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Detached = false,
             };
             mockGrpcClient.Setup(x => x.GetSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -428,10 +951,29 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
                 RetainAckedMessages = false,
-                MessageRetentionDuration = new wkt::Duration(),
+                MessageRetentionDuration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -440,10 +982,33 @@ namespace Google.Cloud.PubSub.V1.Tests
                     },
                 },
                 EnableMessageOrdering = true,
-                ExpirationPolicy = new ExpirationPolicy(),
+                ExpirationPolicy = new ExpirationPolicy
+                {
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Filter = "filtere47ac9b2",
-                DeadLetterPolicy = new DeadLetterPolicy(),
-                RetryPolicy = new RetryPolicy(),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = "dead_letter_topic48397712",
+                    MaxDeliveryAttempts = -1445168770,
+                },
+                RetryPolicy = new RetryPolicy
+                {
+                    MinimumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Detached = false,
             };
             mockGrpcClient.Setup(x => x.GetSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -467,10 +1032,29 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
                 RetainAckedMessages = false,
-                MessageRetentionDuration = new wkt::Duration(),
+                MessageRetentionDuration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -479,10 +1063,33 @@ namespace Google.Cloud.PubSub.V1.Tests
                     },
                 },
                 EnableMessageOrdering = true,
-                ExpirationPolicy = new ExpirationPolicy(),
+                ExpirationPolicy = new ExpirationPolicy
+                {
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Filter = "filtere47ac9b2",
-                DeadLetterPolicy = new DeadLetterPolicy(),
-                RetryPolicy = new RetryPolicy(),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = "dead_letter_topic48397712",
+                    MaxDeliveryAttempts = -1445168770,
+                },
+                RetryPolicy = new RetryPolicy
+                {
+                    MinimumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Detached = false,
             };
             mockGrpcClient.Setup(x => x.GetSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -504,10 +1111,29 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
                 RetainAckedMessages = false,
-                MessageRetentionDuration = new wkt::Duration(),
+                MessageRetentionDuration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -516,10 +1142,33 @@ namespace Google.Cloud.PubSub.V1.Tests
                     },
                 },
                 EnableMessageOrdering = true,
-                ExpirationPolicy = new ExpirationPolicy(),
+                ExpirationPolicy = new ExpirationPolicy
+                {
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Filter = "filtere47ac9b2",
-                DeadLetterPolicy = new DeadLetterPolicy(),
-                RetryPolicy = new RetryPolicy(),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = "dead_letter_topic48397712",
+                    MaxDeliveryAttempts = -1445168770,
+                },
+                RetryPolicy = new RetryPolicy
+                {
+                    MinimumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Detached = false,
             };
             mockGrpcClient.Setup(x => x.GetSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -537,17 +1186,102 @@ namespace Google.Cloud.PubSub.V1.Tests
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
             {
-                Subscription = new Subscription(),
-                UpdateMask = new wkt::FieldMask(),
+                Subscription = new Subscription
+                {
+                    SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
+                    TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    PushConfig = new PushConfig
+                    {
+                        PushEndpoint = "push_endpoint79f50e08",
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        OidcToken = new PushConfig.Types.OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    AckDeadlineSeconds = -1594362342,
+                    RetainAckedMessages = false,
+                    MessageRetentionDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    EnableMessageOrdering = true,
+                    ExpirationPolicy = new ExpirationPolicy
+                    {
+                        Ttl = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    Filter = "filtere47ac9b2",
+                    DeadLetterPolicy = new DeadLetterPolicy
+                    {
+                        DeadLetterTopic = "dead_letter_topic48397712",
+                        MaxDeliveryAttempts = -1445168770,
+                    },
+                    RetryPolicy = new RetryPolicy
+                    {
+                        MinimumBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaximumBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    Detached = false,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Subscription expectedResponse = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
                 RetainAckedMessages = false,
-                MessageRetentionDuration = new wkt::Duration(),
+                MessageRetentionDuration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -556,10 +1290,33 @@ namespace Google.Cloud.PubSub.V1.Tests
                     },
                 },
                 EnableMessageOrdering = true,
-                ExpirationPolicy = new ExpirationPolicy(),
+                ExpirationPolicy = new ExpirationPolicy
+                {
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Filter = "filtere47ac9b2",
-                DeadLetterPolicy = new DeadLetterPolicy(),
-                RetryPolicy = new RetryPolicy(),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = "dead_letter_topic48397712",
+                    MaxDeliveryAttempts = -1445168770,
+                },
+                RetryPolicy = new RetryPolicy
+                {
+                    MinimumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Detached = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -575,17 +1332,102 @@ namespace Google.Cloud.PubSub.V1.Tests
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
             {
-                Subscription = new Subscription(),
-                UpdateMask = new wkt::FieldMask(),
+                Subscription = new Subscription
+                {
+                    SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
+                    TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    PushConfig = new PushConfig
+                    {
+                        PushEndpoint = "push_endpoint79f50e08",
+                        Attributes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        OidcToken = new PushConfig.Types.OidcToken
+                        {
+                            ServiceAccountEmail = "service_account_emailb0c3703d",
+                            Audience = "audience986f1fe3",
+                        },
+                    },
+                    AckDeadlineSeconds = -1594362342,
+                    RetainAckedMessages = false,
+                    MessageRetentionDuration = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    EnableMessageOrdering = true,
+                    ExpirationPolicy = new ExpirationPolicy
+                    {
+                        Ttl = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    Filter = "filtere47ac9b2",
+                    DeadLetterPolicy = new DeadLetterPolicy
+                    {
+                        DeadLetterTopic = "dead_letter_topic48397712",
+                        MaxDeliveryAttempts = -1445168770,
+                    },
+                    RetryPolicy = new RetryPolicy
+                    {
+                        MinimumBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        MaximumBackoff = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                    Detached = false,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Subscription expectedResponse = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
                 AckDeadlineSeconds = -1594362342,
                 RetainAckedMessages = false,
-                MessageRetentionDuration = new wkt::Duration(),
+                MessageRetentionDuration = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -594,10 +1436,33 @@ namespace Google.Cloud.PubSub.V1.Tests
                     },
                 },
                 EnableMessageOrdering = true,
-                ExpirationPolicy = new ExpirationPolicy(),
+                ExpirationPolicy = new ExpirationPolicy
+                {
+                    Ttl = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Filter = "filtere47ac9b2",
-                DeadLetterPolicy = new DeadLetterPolicy(),
-                RetryPolicy = new RetryPolicy(),
+                DeadLetterPolicy = new DeadLetterPolicy
+                {
+                    DeadLetterTopic = "dead_letter_topic48397712",
+                    MaxDeliveryAttempts = -1445168770,
+                },
+                RetryPolicy = new RetryPolicy
+                {
+                    MinimumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    MaximumBackoff = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
                 Detached = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -922,7 +1787,29 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 ReceivedMessages =
                 {
-                    new ReceivedMessage(),
+                    new ReceivedMessage
+                    {
+                        AckId = "ack_idf5ea2cca",
+                        Message = new PubsubMessage
+                        {
+                            Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                            Attributes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                            MessageId = "message_id72a1ca4c",
+                            PublishTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            OrderingKey = "ordering_key8d4cf536",
+                        },
+                        DeliveryAttempt = 550642127,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.Pull(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -948,7 +1835,29 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 ReceivedMessages =
                 {
-                    new ReceivedMessage(),
+                    new ReceivedMessage
+                    {
+                        AckId = "ack_idf5ea2cca",
+                        Message = new PubsubMessage
+                        {
+                            Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                            Attributes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                            MessageId = "message_id72a1ca4c",
+                            PublishTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            OrderingKey = "ordering_key8d4cf536",
+                        },
+                        DeliveryAttempt = 550642127,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.PullAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PullResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -976,7 +1885,29 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 ReceivedMessages =
                 {
-                    new ReceivedMessage(),
+                    new ReceivedMessage
+                    {
+                        AckId = "ack_idf5ea2cca",
+                        Message = new PubsubMessage
+                        {
+                            Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                            Attributes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                            MessageId = "message_id72a1ca4c",
+                            PublishTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            OrderingKey = "ordering_key8d4cf536",
+                        },
+                        DeliveryAttempt = 550642127,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.Pull(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1004,7 +1935,29 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 ReceivedMessages =
                 {
-                    new ReceivedMessage(),
+                    new ReceivedMessage
+                    {
+                        AckId = "ack_idf5ea2cca",
+                        Message = new PubsubMessage
+                        {
+                            Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                            Attributes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                            MessageId = "message_id72a1ca4c",
+                            PublishTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            OrderingKey = "ordering_key8d4cf536",
+                        },
+                        DeliveryAttempt = 550642127,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.PullAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PullResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1036,7 +1989,29 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 ReceivedMessages =
                 {
-                    new ReceivedMessage(),
+                    new ReceivedMessage
+                    {
+                        AckId = "ack_idf5ea2cca",
+                        Message = new PubsubMessage
+                        {
+                            Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                            Attributes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                            MessageId = "message_id72a1ca4c",
+                            PublishTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            OrderingKey = "ordering_key8d4cf536",
+                        },
+                        DeliveryAttempt = 550642127,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.Pull(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1064,7 +2039,29 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 ReceivedMessages =
                 {
-                    new ReceivedMessage(),
+                    new ReceivedMessage
+                    {
+                        AckId = "ack_idf5ea2cca",
+                        Message = new PubsubMessage
+                        {
+                            Data = proto::ByteString.CopyFromUtf8("data387f778d"),
+                            Attributes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                            MessageId = "message_id72a1ca4c",
+                            PublishTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            OrderingKey = "ordering_key8d4cf536",
+                        },
+                        DeliveryAttempt = 550642127,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.PullAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PullResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1087,7 +2084,22 @@ namespace Google.Cloud.PubSub.V1.Tests
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyPushConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1103,7 +2115,22 @@ namespace Google.Cloud.PubSub.V1.Tests
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyPushConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1120,7 +2147,22 @@ namespace Google.Cloud.PubSub.V1.Tests
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyPushConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1136,7 +2178,22 @@ namespace Google.Cloud.PubSub.V1.Tests
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyPushConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1153,7 +2210,22 @@ namespace Google.Cloud.PubSub.V1.Tests
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyPushConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1169,7 +2241,22 @@ namespace Google.Cloud.PubSub.V1.Tests
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
-                PushConfig = new PushConfig(),
+                PushConfig = new PushConfig
+                {
+                    PushEndpoint = "push_endpoint79f50e08",
+                    Attributes =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    OidcToken = new PushConfig.Types.OidcToken
+                    {
+                        ServiceAccountEmail = "service_account_emailb0c3703d",
+                        Audience = "audience986f1fe3",
+                    },
+                },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.ModifyPushConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1191,7 +2278,11 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1219,7 +2310,11 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1249,7 +2344,11 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1277,7 +2376,11 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1307,7 +2410,11 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1335,7 +2442,11 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1373,7 +2484,11 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1409,7 +2524,11 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1440,7 +2559,11 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1469,7 +2592,11 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1500,7 +2627,11 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1529,7 +2660,11 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1553,14 +2688,37 @@ namespace Google.Cloud.PubSub.V1.Tests
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             UpdateSnapshotRequest request = new UpdateSnapshotRequest
             {
-                Snapshot = new Snapshot(),
-                UpdateMask = new wkt::FieldMask(),
+                Snapshot = new Snapshot
+                {
+                    SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
+                    TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Snapshot expectedResponse = new Snapshot
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1582,14 +2740,37 @@ namespace Google.Cloud.PubSub.V1.Tests
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
             UpdateSnapshotRequest request = new UpdateSnapshotRequest
             {
-                Snapshot = new Snapshot(),
-                UpdateMask = new wkt::FieldMask(),
+                Snapshot = new Snapshot
+                {
+                    SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
+                    TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                    ExpireTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Snapshot expectedResponse = new Snapshot
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -1707,7 +2888,11 @@ namespace Google.Cloud.PubSub.V1.Tests
             SeekRequest request = new SeekRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
-                Time = new wkt::Timestamp(),
+                Time = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
             };
             SeekResponse expectedResponse = new SeekResponse { };
@@ -1725,7 +2910,11 @@ namespace Google.Cloud.PubSub.V1.Tests
             SeekRequest request = new SeekRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
-                Time = new wkt::Timestamp(),
+                Time = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
             };
             SeekResponse expectedResponse = new SeekResponse { };
