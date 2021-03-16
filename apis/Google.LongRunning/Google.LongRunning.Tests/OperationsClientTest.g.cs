@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using gr = Google.Rpc;
 using grpccore = Grpc.Core;
@@ -39,10 +40,30 @@ namespace Google.LongRunning.Tests
             Operation expectedResponse = new Operation
             {
                 Name = "name1c9368b0",
-                Metadata = new wkt::Any(),
+                Metadata = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
                 Done = true,
-                Error = new gr::Status(),
-                Response = new wkt::Any(),
+                Error = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                Response = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.GetOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
@@ -62,10 +83,30 @@ namespace Google.LongRunning.Tests
             Operation expectedResponse = new Operation
             {
                 Name = "name1c9368b0",
-                Metadata = new wkt::Any(),
+                Metadata = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
                 Done = true,
-                Error = new gr::Status(),
-                Response = new wkt::Any(),
+                Error = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                Response = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.GetOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
@@ -87,10 +128,30 @@ namespace Google.LongRunning.Tests
             Operation expectedResponse = new Operation
             {
                 Name = "name1c9368b0",
-                Metadata = new wkt::Any(),
+                Metadata = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
                 Done = true,
-                Error = new gr::Status(),
-                Response = new wkt::Any(),
+                Error = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                Response = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.GetOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
@@ -110,10 +171,30 @@ namespace Google.LongRunning.Tests
             Operation expectedResponse = new Operation
             {
                 Name = "name1c9368b0",
-                Metadata = new wkt::Any(),
+                Metadata = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
                 Done = true,
-                Error = new gr::Status(),
-                Response = new wkt::Any(),
+                Error = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                Response = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.GetOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
@@ -255,15 +336,39 @@ namespace Google.LongRunning.Tests
             WaitOperationRequest request = new WaitOperationRequest
             {
                 Name = "name1c9368b0",
-                Timeout = new wkt::Duration(),
+                Timeout = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             Operation expectedResponse = new Operation
             {
                 Name = "name1c9368b0",
-                Metadata = new wkt::Any(),
+                Metadata = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
                 Done = true,
-                Error = new gr::Status(),
-                Response = new wkt::Any(),
+                Error = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                Response = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.WaitOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
@@ -279,15 +384,39 @@ namespace Google.LongRunning.Tests
             WaitOperationRequest request = new WaitOperationRequest
             {
                 Name = "name1c9368b0",
-                Timeout = new wkt::Duration(),
+                Timeout = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             Operation expectedResponse = new Operation
             {
                 Name = "name1c9368b0",
-                Metadata = new wkt::Any(),
+                Metadata = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
                 Done = true,
-                Error = new gr::Status(),
-                Response = new wkt::Any(),
+                Error = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
+                Response = new wkt::Any
+                {
+                    TypeUrl = "type_urlfde5623b",
+                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                },
             };
             mockGrpcClient.Setup(x => x.WaitOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OperationsClient client = new OperationsClientImpl(mockGrpcClient.Object, null);
