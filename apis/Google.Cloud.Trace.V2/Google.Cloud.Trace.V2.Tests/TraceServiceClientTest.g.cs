@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using gr = Google.Rpc;
 using grpccore = Grpc.Core;
@@ -36,7 +37,199 @@ namespace Google.Cloud.Trace.V2.Tests
             BatchWriteSpansRequest request = new BatchWriteSpansRequest
             {
                 ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Spans = { new Span(), },
+                Spans =
+                {
+                    new Span
+                    {
+                        SpanName = SpanName.FromProjectTraceSpan("[PROJECT]", "[TRACE]", "[SPAN]"),
+                        SpanId = "span_id47c232d3",
+                        ParentSpanId = "parent_span_ide637f6a2",
+                        DisplayName = new TruncatableString
+                        {
+                            Value = "value60c16320",
+                            TruncatedByteCount = 2128325585,
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Attributes = new Span.Types.Attributes
+                        {
+                            AttributeMap =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new AttributeValue
+                                    {
+                                        StringValue = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        IntValue = 6964907734533641939L,
+                                        BoolValue = false,
+                                    }
+                                },
+                            },
+                            DroppedAttributesCount = -943197187,
+                        },
+                        StackTrace = new StackTrace
+                        {
+                            StackFrames = new StackTrace.Types.StackFrames
+                            {
+                                Frame =
+                                {
+                                    new StackTrace.Types.StackFrame
+                                    {
+                                        FunctionName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        OriginalFunctionName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        FileName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        LineNumber = -6767150858782418247L,
+                                        ColumnNumber = -1645305070928801317L,
+                                        LoadModule = new Module
+                                        {
+                                            Module_ = new TruncatableString
+                                            {
+                                                Value = "value60c16320",
+                                                TruncatedByteCount = 2128325585,
+                                            },
+                                            BuildId = new TruncatableString
+                                            {
+                                                Value = "value60c16320",
+                                                TruncatedByteCount = 2128325585,
+                                            },
+                                        },
+                                        SourceVersion = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                    },
+                                },
+                                DroppedFramesCount = -530937800,
+                            },
+                            StackTraceHashId = -3233071409397891082L,
+                        },
+                        TimeEvents = new Span.Types.TimeEvents
+                        {
+                            TimeEvent =
+                            {
+                                new Span.Types.TimeEvent
+                                {
+                                    Time = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    Annotation = new Span.Types.TimeEvent.Types.Annotation
+                                    {
+                                        Description = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        Attributes = new Span.Types.Attributes
+                                        {
+                                            AttributeMap =
+                                            {
+                                                {
+                                                    "key8a0b6e3c",
+                                                    new AttributeValue
+                                                    {
+                                                        StringValue = new TruncatableString
+                                                        {
+                                                            Value = "value60c16320",
+                                                            TruncatedByteCount = 2128325585,
+                                                        },
+                                                        IntValue = 6964907734533641939L,
+                                                        BoolValue = false,
+                                                    }
+                                                },
+                                            },
+                                            DroppedAttributesCount = -943197187,
+                                        },
+                                    },
+                                    MessageEvent = new Span.Types.TimeEvent.Types.MessageEvent
+                                    {
+                                        Type = Span.Types.TimeEvent.Types.MessageEvent.Types.Type.Unspecified,
+                                        Id = -6774108720365892680L,
+                                        UncompressedSizeBytes = 7207111653247989525L,
+                                        CompressedSizeBytes = -5863566423773706985L,
+                                    },
+                                },
+                            },
+                            DroppedAnnotationsCount = -1339084470,
+                            DroppedMessageEventsCount = -2043953306,
+                        },
+                        Links = new Span.Types.Links
+                        {
+                            Link =
+                            {
+                                new Span.Types.Link
+                                {
+                                    TraceId = "trace_id105c890f",
+                                    SpanId = "span_id47c232d3",
+                                    Type = Span.Types.Link.Types.Type.Unspecified,
+                                    Attributes = new Span.Types.Attributes
+                                    {
+                                        AttributeMap =
+                                        {
+                                            {
+                                                "key8a0b6e3c",
+                                                new AttributeValue
+                                                {
+                                                    StringValue = new TruncatableString
+                                                    {
+                                                        Value = "value60c16320",
+                                                        TruncatedByteCount = 2128325585,
+                                                    },
+                                                    IntValue = 6964907734533641939L,
+                                                    BoolValue = false,
+                                                }
+                                            },
+                                        },
+                                        DroppedAttributesCount = -943197187,
+                                    },
+                                },
+                            },
+                            DroppedLinksCount = 996193750,
+                        },
+                        Status = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        SameProcessAsParentSpan = false,
+                        ChildSpanCount = -1491694397,
+                        SpanKind = Span.Types.SpanKind.Consumer,
+                    },
+                },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchWriteSpans(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -52,7 +245,199 @@ namespace Google.Cloud.Trace.V2.Tests
             BatchWriteSpansRequest request = new BatchWriteSpansRequest
             {
                 ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Spans = { new Span(), },
+                Spans =
+                {
+                    new Span
+                    {
+                        SpanName = SpanName.FromProjectTraceSpan("[PROJECT]", "[TRACE]", "[SPAN]"),
+                        SpanId = "span_id47c232d3",
+                        ParentSpanId = "parent_span_ide637f6a2",
+                        DisplayName = new TruncatableString
+                        {
+                            Value = "value60c16320",
+                            TruncatedByteCount = 2128325585,
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Attributes = new Span.Types.Attributes
+                        {
+                            AttributeMap =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new AttributeValue
+                                    {
+                                        StringValue = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        IntValue = 6964907734533641939L,
+                                        BoolValue = false,
+                                    }
+                                },
+                            },
+                            DroppedAttributesCount = -943197187,
+                        },
+                        StackTrace = new StackTrace
+                        {
+                            StackFrames = new StackTrace.Types.StackFrames
+                            {
+                                Frame =
+                                {
+                                    new StackTrace.Types.StackFrame
+                                    {
+                                        FunctionName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        OriginalFunctionName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        FileName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        LineNumber = -6767150858782418247L,
+                                        ColumnNumber = -1645305070928801317L,
+                                        LoadModule = new Module
+                                        {
+                                            Module_ = new TruncatableString
+                                            {
+                                                Value = "value60c16320",
+                                                TruncatedByteCount = 2128325585,
+                                            },
+                                            BuildId = new TruncatableString
+                                            {
+                                                Value = "value60c16320",
+                                                TruncatedByteCount = 2128325585,
+                                            },
+                                        },
+                                        SourceVersion = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                    },
+                                },
+                                DroppedFramesCount = -530937800,
+                            },
+                            StackTraceHashId = -3233071409397891082L,
+                        },
+                        TimeEvents = new Span.Types.TimeEvents
+                        {
+                            TimeEvent =
+                            {
+                                new Span.Types.TimeEvent
+                                {
+                                    Time = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    Annotation = new Span.Types.TimeEvent.Types.Annotation
+                                    {
+                                        Description = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        Attributes = new Span.Types.Attributes
+                                        {
+                                            AttributeMap =
+                                            {
+                                                {
+                                                    "key8a0b6e3c",
+                                                    new AttributeValue
+                                                    {
+                                                        StringValue = new TruncatableString
+                                                        {
+                                                            Value = "value60c16320",
+                                                            TruncatedByteCount = 2128325585,
+                                                        },
+                                                        IntValue = 6964907734533641939L,
+                                                        BoolValue = false,
+                                                    }
+                                                },
+                                            },
+                                            DroppedAttributesCount = -943197187,
+                                        },
+                                    },
+                                    MessageEvent = new Span.Types.TimeEvent.Types.MessageEvent
+                                    {
+                                        Type = Span.Types.TimeEvent.Types.MessageEvent.Types.Type.Unspecified,
+                                        Id = -6774108720365892680L,
+                                        UncompressedSizeBytes = 7207111653247989525L,
+                                        CompressedSizeBytes = -5863566423773706985L,
+                                    },
+                                },
+                            },
+                            DroppedAnnotationsCount = -1339084470,
+                            DroppedMessageEventsCount = -2043953306,
+                        },
+                        Links = new Span.Types.Links
+                        {
+                            Link =
+                            {
+                                new Span.Types.Link
+                                {
+                                    TraceId = "trace_id105c890f",
+                                    SpanId = "span_id47c232d3",
+                                    Type = Span.Types.Link.Types.Type.Unspecified,
+                                    Attributes = new Span.Types.Attributes
+                                    {
+                                        AttributeMap =
+                                        {
+                                            {
+                                                "key8a0b6e3c",
+                                                new AttributeValue
+                                                {
+                                                    StringValue = new TruncatableString
+                                                    {
+                                                        Value = "value60c16320",
+                                                        TruncatedByteCount = 2128325585,
+                                                    },
+                                                    IntValue = 6964907734533641939L,
+                                                    BoolValue = false,
+                                                }
+                                            },
+                                        },
+                                        DroppedAttributesCount = -943197187,
+                                    },
+                                },
+                            },
+                            DroppedLinksCount = 996193750,
+                        },
+                        Status = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        SameProcessAsParentSpan = false,
+                        ChildSpanCount = -1491694397,
+                        SpanKind = Span.Types.SpanKind.Consumer,
+                    },
+                },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchWriteSpansAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -69,7 +454,199 @@ namespace Google.Cloud.Trace.V2.Tests
             BatchWriteSpansRequest request = new BatchWriteSpansRequest
             {
                 ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Spans = { new Span(), },
+                Spans =
+                {
+                    new Span
+                    {
+                        SpanName = SpanName.FromProjectTraceSpan("[PROJECT]", "[TRACE]", "[SPAN]"),
+                        SpanId = "span_id47c232d3",
+                        ParentSpanId = "parent_span_ide637f6a2",
+                        DisplayName = new TruncatableString
+                        {
+                            Value = "value60c16320",
+                            TruncatedByteCount = 2128325585,
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Attributes = new Span.Types.Attributes
+                        {
+                            AttributeMap =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new AttributeValue
+                                    {
+                                        StringValue = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        IntValue = 6964907734533641939L,
+                                        BoolValue = false,
+                                    }
+                                },
+                            },
+                            DroppedAttributesCount = -943197187,
+                        },
+                        StackTrace = new StackTrace
+                        {
+                            StackFrames = new StackTrace.Types.StackFrames
+                            {
+                                Frame =
+                                {
+                                    new StackTrace.Types.StackFrame
+                                    {
+                                        FunctionName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        OriginalFunctionName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        FileName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        LineNumber = -6767150858782418247L,
+                                        ColumnNumber = -1645305070928801317L,
+                                        LoadModule = new Module
+                                        {
+                                            Module_ = new TruncatableString
+                                            {
+                                                Value = "value60c16320",
+                                                TruncatedByteCount = 2128325585,
+                                            },
+                                            BuildId = new TruncatableString
+                                            {
+                                                Value = "value60c16320",
+                                                TruncatedByteCount = 2128325585,
+                                            },
+                                        },
+                                        SourceVersion = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                    },
+                                },
+                                DroppedFramesCount = -530937800,
+                            },
+                            StackTraceHashId = -3233071409397891082L,
+                        },
+                        TimeEvents = new Span.Types.TimeEvents
+                        {
+                            TimeEvent =
+                            {
+                                new Span.Types.TimeEvent
+                                {
+                                    Time = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    Annotation = new Span.Types.TimeEvent.Types.Annotation
+                                    {
+                                        Description = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        Attributes = new Span.Types.Attributes
+                                        {
+                                            AttributeMap =
+                                            {
+                                                {
+                                                    "key8a0b6e3c",
+                                                    new AttributeValue
+                                                    {
+                                                        StringValue = new TruncatableString
+                                                        {
+                                                            Value = "value60c16320",
+                                                            TruncatedByteCount = 2128325585,
+                                                        },
+                                                        IntValue = 6964907734533641939L,
+                                                        BoolValue = false,
+                                                    }
+                                                },
+                                            },
+                                            DroppedAttributesCount = -943197187,
+                                        },
+                                    },
+                                    MessageEvent = new Span.Types.TimeEvent.Types.MessageEvent
+                                    {
+                                        Type = Span.Types.TimeEvent.Types.MessageEvent.Types.Type.Unspecified,
+                                        Id = -6774108720365892680L,
+                                        UncompressedSizeBytes = 7207111653247989525L,
+                                        CompressedSizeBytes = -5863566423773706985L,
+                                    },
+                                },
+                            },
+                            DroppedAnnotationsCount = -1339084470,
+                            DroppedMessageEventsCount = -2043953306,
+                        },
+                        Links = new Span.Types.Links
+                        {
+                            Link =
+                            {
+                                new Span.Types.Link
+                                {
+                                    TraceId = "trace_id105c890f",
+                                    SpanId = "span_id47c232d3",
+                                    Type = Span.Types.Link.Types.Type.Unspecified,
+                                    Attributes = new Span.Types.Attributes
+                                    {
+                                        AttributeMap =
+                                        {
+                                            {
+                                                "key8a0b6e3c",
+                                                new AttributeValue
+                                                {
+                                                    StringValue = new TruncatableString
+                                                    {
+                                                        Value = "value60c16320",
+                                                        TruncatedByteCount = 2128325585,
+                                                    },
+                                                    IntValue = 6964907734533641939L,
+                                                    BoolValue = false,
+                                                }
+                                            },
+                                        },
+                                        DroppedAttributesCount = -943197187,
+                                    },
+                                },
+                            },
+                            DroppedLinksCount = 996193750,
+                        },
+                        Status = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        SameProcessAsParentSpan = false,
+                        ChildSpanCount = -1491694397,
+                        SpanKind = Span.Types.SpanKind.Consumer,
+                    },
+                },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchWriteSpans(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -85,7 +662,199 @@ namespace Google.Cloud.Trace.V2.Tests
             BatchWriteSpansRequest request = new BatchWriteSpansRequest
             {
                 ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Spans = { new Span(), },
+                Spans =
+                {
+                    new Span
+                    {
+                        SpanName = SpanName.FromProjectTraceSpan("[PROJECT]", "[TRACE]", "[SPAN]"),
+                        SpanId = "span_id47c232d3",
+                        ParentSpanId = "parent_span_ide637f6a2",
+                        DisplayName = new TruncatableString
+                        {
+                            Value = "value60c16320",
+                            TruncatedByteCount = 2128325585,
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Attributes = new Span.Types.Attributes
+                        {
+                            AttributeMap =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new AttributeValue
+                                    {
+                                        StringValue = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        IntValue = 6964907734533641939L,
+                                        BoolValue = false,
+                                    }
+                                },
+                            },
+                            DroppedAttributesCount = -943197187,
+                        },
+                        StackTrace = new StackTrace
+                        {
+                            StackFrames = new StackTrace.Types.StackFrames
+                            {
+                                Frame =
+                                {
+                                    new StackTrace.Types.StackFrame
+                                    {
+                                        FunctionName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        OriginalFunctionName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        FileName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        LineNumber = -6767150858782418247L,
+                                        ColumnNumber = -1645305070928801317L,
+                                        LoadModule = new Module
+                                        {
+                                            Module_ = new TruncatableString
+                                            {
+                                                Value = "value60c16320",
+                                                TruncatedByteCount = 2128325585,
+                                            },
+                                            BuildId = new TruncatableString
+                                            {
+                                                Value = "value60c16320",
+                                                TruncatedByteCount = 2128325585,
+                                            },
+                                        },
+                                        SourceVersion = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                    },
+                                },
+                                DroppedFramesCount = -530937800,
+                            },
+                            StackTraceHashId = -3233071409397891082L,
+                        },
+                        TimeEvents = new Span.Types.TimeEvents
+                        {
+                            TimeEvent =
+                            {
+                                new Span.Types.TimeEvent
+                                {
+                                    Time = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    Annotation = new Span.Types.TimeEvent.Types.Annotation
+                                    {
+                                        Description = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        Attributes = new Span.Types.Attributes
+                                        {
+                                            AttributeMap =
+                                            {
+                                                {
+                                                    "key8a0b6e3c",
+                                                    new AttributeValue
+                                                    {
+                                                        StringValue = new TruncatableString
+                                                        {
+                                                            Value = "value60c16320",
+                                                            TruncatedByteCount = 2128325585,
+                                                        },
+                                                        IntValue = 6964907734533641939L,
+                                                        BoolValue = false,
+                                                    }
+                                                },
+                                            },
+                                            DroppedAttributesCount = -943197187,
+                                        },
+                                    },
+                                    MessageEvent = new Span.Types.TimeEvent.Types.MessageEvent
+                                    {
+                                        Type = Span.Types.TimeEvent.Types.MessageEvent.Types.Type.Unspecified,
+                                        Id = -6774108720365892680L,
+                                        UncompressedSizeBytes = 7207111653247989525L,
+                                        CompressedSizeBytes = -5863566423773706985L,
+                                    },
+                                },
+                            },
+                            DroppedAnnotationsCount = -1339084470,
+                            DroppedMessageEventsCount = -2043953306,
+                        },
+                        Links = new Span.Types.Links
+                        {
+                            Link =
+                            {
+                                new Span.Types.Link
+                                {
+                                    TraceId = "trace_id105c890f",
+                                    SpanId = "span_id47c232d3",
+                                    Type = Span.Types.Link.Types.Type.Unspecified,
+                                    Attributes = new Span.Types.Attributes
+                                    {
+                                        AttributeMap =
+                                        {
+                                            {
+                                                "key8a0b6e3c",
+                                                new AttributeValue
+                                                {
+                                                    StringValue = new TruncatableString
+                                                    {
+                                                        Value = "value60c16320",
+                                                        TruncatedByteCount = 2128325585,
+                                                    },
+                                                    IntValue = 6964907734533641939L,
+                                                    BoolValue = false,
+                                                }
+                                            },
+                                        },
+                                        DroppedAttributesCount = -943197187,
+                                    },
+                                },
+                            },
+                            DroppedLinksCount = 996193750,
+                        },
+                        Status = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        SameProcessAsParentSpan = false,
+                        ChildSpanCount = -1491694397,
+                        SpanKind = Span.Types.SpanKind.Consumer,
+                    },
+                },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchWriteSpansAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -102,7 +871,199 @@ namespace Google.Cloud.Trace.V2.Tests
             BatchWriteSpansRequest request = new BatchWriteSpansRequest
             {
                 ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Spans = { new Span(), },
+                Spans =
+                {
+                    new Span
+                    {
+                        SpanName = SpanName.FromProjectTraceSpan("[PROJECT]", "[TRACE]", "[SPAN]"),
+                        SpanId = "span_id47c232d3",
+                        ParentSpanId = "parent_span_ide637f6a2",
+                        DisplayName = new TruncatableString
+                        {
+                            Value = "value60c16320",
+                            TruncatedByteCount = 2128325585,
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Attributes = new Span.Types.Attributes
+                        {
+                            AttributeMap =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new AttributeValue
+                                    {
+                                        StringValue = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        IntValue = 6964907734533641939L,
+                                        BoolValue = false,
+                                    }
+                                },
+                            },
+                            DroppedAttributesCount = -943197187,
+                        },
+                        StackTrace = new StackTrace
+                        {
+                            StackFrames = new StackTrace.Types.StackFrames
+                            {
+                                Frame =
+                                {
+                                    new StackTrace.Types.StackFrame
+                                    {
+                                        FunctionName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        OriginalFunctionName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        FileName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        LineNumber = -6767150858782418247L,
+                                        ColumnNumber = -1645305070928801317L,
+                                        LoadModule = new Module
+                                        {
+                                            Module_ = new TruncatableString
+                                            {
+                                                Value = "value60c16320",
+                                                TruncatedByteCount = 2128325585,
+                                            },
+                                            BuildId = new TruncatableString
+                                            {
+                                                Value = "value60c16320",
+                                                TruncatedByteCount = 2128325585,
+                                            },
+                                        },
+                                        SourceVersion = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                    },
+                                },
+                                DroppedFramesCount = -530937800,
+                            },
+                            StackTraceHashId = -3233071409397891082L,
+                        },
+                        TimeEvents = new Span.Types.TimeEvents
+                        {
+                            TimeEvent =
+                            {
+                                new Span.Types.TimeEvent
+                                {
+                                    Time = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    Annotation = new Span.Types.TimeEvent.Types.Annotation
+                                    {
+                                        Description = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        Attributes = new Span.Types.Attributes
+                                        {
+                                            AttributeMap =
+                                            {
+                                                {
+                                                    "key8a0b6e3c",
+                                                    new AttributeValue
+                                                    {
+                                                        StringValue = new TruncatableString
+                                                        {
+                                                            Value = "value60c16320",
+                                                            TruncatedByteCount = 2128325585,
+                                                        },
+                                                        IntValue = 6964907734533641939L,
+                                                        BoolValue = false,
+                                                    }
+                                                },
+                                            },
+                                            DroppedAttributesCount = -943197187,
+                                        },
+                                    },
+                                    MessageEvent = new Span.Types.TimeEvent.Types.MessageEvent
+                                    {
+                                        Type = Span.Types.TimeEvent.Types.MessageEvent.Types.Type.Unspecified,
+                                        Id = -6774108720365892680L,
+                                        UncompressedSizeBytes = 7207111653247989525L,
+                                        CompressedSizeBytes = -5863566423773706985L,
+                                    },
+                                },
+                            },
+                            DroppedAnnotationsCount = -1339084470,
+                            DroppedMessageEventsCount = -2043953306,
+                        },
+                        Links = new Span.Types.Links
+                        {
+                            Link =
+                            {
+                                new Span.Types.Link
+                                {
+                                    TraceId = "trace_id105c890f",
+                                    SpanId = "span_id47c232d3",
+                                    Type = Span.Types.Link.Types.Type.Unspecified,
+                                    Attributes = new Span.Types.Attributes
+                                    {
+                                        AttributeMap =
+                                        {
+                                            {
+                                                "key8a0b6e3c",
+                                                new AttributeValue
+                                                {
+                                                    StringValue = new TruncatableString
+                                                    {
+                                                        Value = "value60c16320",
+                                                        TruncatedByteCount = 2128325585,
+                                                    },
+                                                    IntValue = 6964907734533641939L,
+                                                    BoolValue = false,
+                                                }
+                                            },
+                                        },
+                                        DroppedAttributesCount = -943197187,
+                                    },
+                                },
+                            },
+                            DroppedLinksCount = 996193750,
+                        },
+                        Status = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        SameProcessAsParentSpan = false,
+                        ChildSpanCount = -1491694397,
+                        SpanKind = Span.Types.SpanKind.Consumer,
+                    },
+                },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchWriteSpans(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -118,7 +1079,199 @@ namespace Google.Cloud.Trace.V2.Tests
             BatchWriteSpansRequest request = new BatchWriteSpansRequest
             {
                 ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Spans = { new Span(), },
+                Spans =
+                {
+                    new Span
+                    {
+                        SpanName = SpanName.FromProjectTraceSpan("[PROJECT]", "[TRACE]", "[SPAN]"),
+                        SpanId = "span_id47c232d3",
+                        ParentSpanId = "parent_span_ide637f6a2",
+                        DisplayName = new TruncatableString
+                        {
+                            Value = "value60c16320",
+                            TruncatedByteCount = 2128325585,
+                        },
+                        StartTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        EndTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Attributes = new Span.Types.Attributes
+                        {
+                            AttributeMap =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new AttributeValue
+                                    {
+                                        StringValue = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        IntValue = 6964907734533641939L,
+                                        BoolValue = false,
+                                    }
+                                },
+                            },
+                            DroppedAttributesCount = -943197187,
+                        },
+                        StackTrace = new StackTrace
+                        {
+                            StackFrames = new StackTrace.Types.StackFrames
+                            {
+                                Frame =
+                                {
+                                    new StackTrace.Types.StackFrame
+                                    {
+                                        FunctionName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        OriginalFunctionName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        FileName = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        LineNumber = -6767150858782418247L,
+                                        ColumnNumber = -1645305070928801317L,
+                                        LoadModule = new Module
+                                        {
+                                            Module_ = new TruncatableString
+                                            {
+                                                Value = "value60c16320",
+                                                TruncatedByteCount = 2128325585,
+                                            },
+                                            BuildId = new TruncatableString
+                                            {
+                                                Value = "value60c16320",
+                                                TruncatedByteCount = 2128325585,
+                                            },
+                                        },
+                                        SourceVersion = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                    },
+                                },
+                                DroppedFramesCount = -530937800,
+                            },
+                            StackTraceHashId = -3233071409397891082L,
+                        },
+                        TimeEvents = new Span.Types.TimeEvents
+                        {
+                            TimeEvent =
+                            {
+                                new Span.Types.TimeEvent
+                                {
+                                    Time = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    Annotation = new Span.Types.TimeEvent.Types.Annotation
+                                    {
+                                        Description = new TruncatableString
+                                        {
+                                            Value = "value60c16320",
+                                            TruncatedByteCount = 2128325585,
+                                        },
+                                        Attributes = new Span.Types.Attributes
+                                        {
+                                            AttributeMap =
+                                            {
+                                                {
+                                                    "key8a0b6e3c",
+                                                    new AttributeValue
+                                                    {
+                                                        StringValue = new TruncatableString
+                                                        {
+                                                            Value = "value60c16320",
+                                                            TruncatedByteCount = 2128325585,
+                                                        },
+                                                        IntValue = 6964907734533641939L,
+                                                        BoolValue = false,
+                                                    }
+                                                },
+                                            },
+                                            DroppedAttributesCount = -943197187,
+                                        },
+                                    },
+                                    MessageEvent = new Span.Types.TimeEvent.Types.MessageEvent
+                                    {
+                                        Type = Span.Types.TimeEvent.Types.MessageEvent.Types.Type.Unspecified,
+                                        Id = -6774108720365892680L,
+                                        UncompressedSizeBytes = 7207111653247989525L,
+                                        CompressedSizeBytes = -5863566423773706985L,
+                                    },
+                                },
+                            },
+                            DroppedAnnotationsCount = -1339084470,
+                            DroppedMessageEventsCount = -2043953306,
+                        },
+                        Links = new Span.Types.Links
+                        {
+                            Link =
+                            {
+                                new Span.Types.Link
+                                {
+                                    TraceId = "trace_id105c890f",
+                                    SpanId = "span_id47c232d3",
+                                    Type = Span.Types.Link.Types.Type.Unspecified,
+                                    Attributes = new Span.Types.Attributes
+                                    {
+                                        AttributeMap =
+                                        {
+                                            {
+                                                "key8a0b6e3c",
+                                                new AttributeValue
+                                                {
+                                                    StringValue = new TruncatableString
+                                                    {
+                                                        Value = "value60c16320",
+                                                        TruncatedByteCount = 2128325585,
+                                                    },
+                                                    IntValue = 6964907734533641939L,
+                                                    BoolValue = false,
+                                                }
+                                            },
+                                        },
+                                        DroppedAttributesCount = -943197187,
+                                    },
+                                },
+                            },
+                            DroppedLinksCount = 996193750,
+                        },
+                        Status = new gr::Status
+                        {
+                            Code = -1805175871,
+                            Message = "message0231e778",
+                            Details =
+                            {
+                                new wkt::Any
+                                {
+                                    TypeUrl = "type_urlfde5623b",
+                                    Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                                },
+                            },
+                        },
+                        SameProcessAsParentSpan = false,
+                        ChildSpanCount = -1491694397,
+                        SpanKind = Span.Types.SpanKind.Consumer,
+                    },
+                },
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.BatchWriteSpansAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -137,14 +1290,187 @@ namespace Google.Cloud.Trace.V2.Tests
                 SpanName = SpanName.FromProjectTraceSpan("[PROJECT]", "[TRACE]", "[SPAN]"),
                 SpanId = "span_id47c232d3",
                 ParentSpanId = "parent_span_ide637f6a2",
-                DisplayName = new TruncatableString(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-                Attributes = new Span.Types.Attributes(),
-                StackTrace = new StackTrace(),
-                TimeEvents = new Span.Types.TimeEvents(),
-                Links = new Span.Types.Links(),
-                Status = new gr::Status(),
+                DisplayName = new TruncatableString
+                {
+                    Value = "value60c16320",
+                    TruncatedByteCount = 2128325585,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Attributes = new Span.Types.Attributes
+                {
+                    AttributeMap =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new AttributeValue
+                            {
+                                StringValue = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                IntValue = 6964907734533641939L,
+                                BoolValue = false,
+                            }
+                        },
+                    },
+                    DroppedAttributesCount = -943197187,
+                },
+                StackTrace = new StackTrace
+                {
+                    StackFrames = new StackTrace.Types.StackFrames
+                    {
+                        Frame =
+                        {
+                            new StackTrace.Types.StackFrame
+                            {
+                                FunctionName = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                OriginalFunctionName = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                FileName = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                LineNumber = -6767150858782418247L,
+                                ColumnNumber = -1645305070928801317L,
+                                LoadModule = new Module
+                                {
+                                    Module_ = new TruncatableString
+                                    {
+                                        Value = "value60c16320",
+                                        TruncatedByteCount = 2128325585,
+                                    },
+                                    BuildId = new TruncatableString
+                                    {
+                                        Value = "value60c16320",
+                                        TruncatedByteCount = 2128325585,
+                                    },
+                                },
+                                SourceVersion = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                            },
+                        },
+                        DroppedFramesCount = -530937800,
+                    },
+                    StackTraceHashId = -3233071409397891082L,
+                },
+                TimeEvents = new Span.Types.TimeEvents
+                {
+                    TimeEvent =
+                    {
+                        new Span.Types.TimeEvent
+                        {
+                            Time = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Annotation = new Span.Types.TimeEvent.Types.Annotation
+                            {
+                                Description = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                Attributes = new Span.Types.Attributes
+                                {
+                                    AttributeMap =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new AttributeValue
+                                            {
+                                                StringValue = new TruncatableString
+                                                {
+                                                    Value = "value60c16320",
+                                                    TruncatedByteCount = 2128325585,
+                                                },
+                                                IntValue = 6964907734533641939L,
+                                                BoolValue = false,
+                                            }
+                                        },
+                                    },
+                                    DroppedAttributesCount = -943197187,
+                                },
+                            },
+                            MessageEvent = new Span.Types.TimeEvent.Types.MessageEvent
+                            {
+                                Type = Span.Types.TimeEvent.Types.MessageEvent.Types.Type.Unspecified,
+                                Id = -6774108720365892680L,
+                                UncompressedSizeBytes = 7207111653247989525L,
+                                CompressedSizeBytes = -5863566423773706985L,
+                            },
+                        },
+                    },
+                    DroppedAnnotationsCount = -1339084470,
+                    DroppedMessageEventsCount = -2043953306,
+                },
+                Links = new Span.Types.Links
+                {
+                    Link =
+                    {
+                        new Span.Types.Link
+                        {
+                            TraceId = "trace_id105c890f",
+                            SpanId = "span_id47c232d3",
+                            Type = Span.Types.Link.Types.Type.Unspecified,
+                            Attributes = new Span.Types.Attributes
+                            {
+                                AttributeMap =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new AttributeValue
+                                        {
+                                            StringValue = new TruncatableString
+                                            {
+                                                Value = "value60c16320",
+                                                TruncatedByteCount = 2128325585,
+                                            },
+                                            IntValue = 6964907734533641939L,
+                                            BoolValue = false,
+                                        }
+                                    },
+                                },
+                                DroppedAttributesCount = -943197187,
+                            },
+                        },
+                    },
+                    DroppedLinksCount = 996193750,
+                },
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 SameProcessAsParentSpan = false,
                 ChildSpanCount = -1491694397,
                 SpanKind = Span.Types.SpanKind.Consumer,
@@ -154,14 +1480,187 @@ namespace Google.Cloud.Trace.V2.Tests
                 SpanName = SpanName.FromProjectTraceSpan("[PROJECT]", "[TRACE]", "[SPAN]"),
                 SpanId = "span_id47c232d3",
                 ParentSpanId = "parent_span_ide637f6a2",
-                DisplayName = new TruncatableString(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-                Attributes = new Span.Types.Attributes(),
-                StackTrace = new StackTrace(),
-                TimeEvents = new Span.Types.TimeEvents(),
-                Links = new Span.Types.Links(),
-                Status = new gr::Status(),
+                DisplayName = new TruncatableString
+                {
+                    Value = "value60c16320",
+                    TruncatedByteCount = 2128325585,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Attributes = new Span.Types.Attributes
+                {
+                    AttributeMap =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new AttributeValue
+                            {
+                                StringValue = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                IntValue = 6964907734533641939L,
+                                BoolValue = false,
+                            }
+                        },
+                    },
+                    DroppedAttributesCount = -943197187,
+                },
+                StackTrace = new StackTrace
+                {
+                    StackFrames = new StackTrace.Types.StackFrames
+                    {
+                        Frame =
+                        {
+                            new StackTrace.Types.StackFrame
+                            {
+                                FunctionName = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                OriginalFunctionName = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                FileName = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                LineNumber = -6767150858782418247L,
+                                ColumnNumber = -1645305070928801317L,
+                                LoadModule = new Module
+                                {
+                                    Module_ = new TruncatableString
+                                    {
+                                        Value = "value60c16320",
+                                        TruncatedByteCount = 2128325585,
+                                    },
+                                    BuildId = new TruncatableString
+                                    {
+                                        Value = "value60c16320",
+                                        TruncatedByteCount = 2128325585,
+                                    },
+                                },
+                                SourceVersion = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                            },
+                        },
+                        DroppedFramesCount = -530937800,
+                    },
+                    StackTraceHashId = -3233071409397891082L,
+                },
+                TimeEvents = new Span.Types.TimeEvents
+                {
+                    TimeEvent =
+                    {
+                        new Span.Types.TimeEvent
+                        {
+                            Time = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Annotation = new Span.Types.TimeEvent.Types.Annotation
+                            {
+                                Description = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                Attributes = new Span.Types.Attributes
+                                {
+                                    AttributeMap =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new AttributeValue
+                                            {
+                                                StringValue = new TruncatableString
+                                                {
+                                                    Value = "value60c16320",
+                                                    TruncatedByteCount = 2128325585,
+                                                },
+                                                IntValue = 6964907734533641939L,
+                                                BoolValue = false,
+                                            }
+                                        },
+                                    },
+                                    DroppedAttributesCount = -943197187,
+                                },
+                            },
+                            MessageEvent = new Span.Types.TimeEvent.Types.MessageEvent
+                            {
+                                Type = Span.Types.TimeEvent.Types.MessageEvent.Types.Type.Unspecified,
+                                Id = -6774108720365892680L,
+                                UncompressedSizeBytes = 7207111653247989525L,
+                                CompressedSizeBytes = -5863566423773706985L,
+                            },
+                        },
+                    },
+                    DroppedAnnotationsCount = -1339084470,
+                    DroppedMessageEventsCount = -2043953306,
+                },
+                Links = new Span.Types.Links
+                {
+                    Link =
+                    {
+                        new Span.Types.Link
+                        {
+                            TraceId = "trace_id105c890f",
+                            SpanId = "span_id47c232d3",
+                            Type = Span.Types.Link.Types.Type.Unspecified,
+                            Attributes = new Span.Types.Attributes
+                            {
+                                AttributeMap =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new AttributeValue
+                                        {
+                                            StringValue = new TruncatableString
+                                            {
+                                                Value = "value60c16320",
+                                                TruncatedByteCount = 2128325585,
+                                            },
+                                            IntValue = 6964907734533641939L,
+                                            BoolValue = false,
+                                        }
+                                    },
+                                },
+                                DroppedAttributesCount = -943197187,
+                            },
+                        },
+                    },
+                    DroppedLinksCount = 996193750,
+                },
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 SameProcessAsParentSpan = false,
                 ChildSpanCount = -1491694397,
                 SpanKind = Span.Types.SpanKind.Consumer,
@@ -182,14 +1681,187 @@ namespace Google.Cloud.Trace.V2.Tests
                 SpanName = SpanName.FromProjectTraceSpan("[PROJECT]", "[TRACE]", "[SPAN]"),
                 SpanId = "span_id47c232d3",
                 ParentSpanId = "parent_span_ide637f6a2",
-                DisplayName = new TruncatableString(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-                Attributes = new Span.Types.Attributes(),
-                StackTrace = new StackTrace(),
-                TimeEvents = new Span.Types.TimeEvents(),
-                Links = new Span.Types.Links(),
-                Status = new gr::Status(),
+                DisplayName = new TruncatableString
+                {
+                    Value = "value60c16320",
+                    TruncatedByteCount = 2128325585,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Attributes = new Span.Types.Attributes
+                {
+                    AttributeMap =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new AttributeValue
+                            {
+                                StringValue = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                IntValue = 6964907734533641939L,
+                                BoolValue = false,
+                            }
+                        },
+                    },
+                    DroppedAttributesCount = -943197187,
+                },
+                StackTrace = new StackTrace
+                {
+                    StackFrames = new StackTrace.Types.StackFrames
+                    {
+                        Frame =
+                        {
+                            new StackTrace.Types.StackFrame
+                            {
+                                FunctionName = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                OriginalFunctionName = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                FileName = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                LineNumber = -6767150858782418247L,
+                                ColumnNumber = -1645305070928801317L,
+                                LoadModule = new Module
+                                {
+                                    Module_ = new TruncatableString
+                                    {
+                                        Value = "value60c16320",
+                                        TruncatedByteCount = 2128325585,
+                                    },
+                                    BuildId = new TruncatableString
+                                    {
+                                        Value = "value60c16320",
+                                        TruncatedByteCount = 2128325585,
+                                    },
+                                },
+                                SourceVersion = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                            },
+                        },
+                        DroppedFramesCount = -530937800,
+                    },
+                    StackTraceHashId = -3233071409397891082L,
+                },
+                TimeEvents = new Span.Types.TimeEvents
+                {
+                    TimeEvent =
+                    {
+                        new Span.Types.TimeEvent
+                        {
+                            Time = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Annotation = new Span.Types.TimeEvent.Types.Annotation
+                            {
+                                Description = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                Attributes = new Span.Types.Attributes
+                                {
+                                    AttributeMap =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new AttributeValue
+                                            {
+                                                StringValue = new TruncatableString
+                                                {
+                                                    Value = "value60c16320",
+                                                    TruncatedByteCount = 2128325585,
+                                                },
+                                                IntValue = 6964907734533641939L,
+                                                BoolValue = false,
+                                            }
+                                        },
+                                    },
+                                    DroppedAttributesCount = -943197187,
+                                },
+                            },
+                            MessageEvent = new Span.Types.TimeEvent.Types.MessageEvent
+                            {
+                                Type = Span.Types.TimeEvent.Types.MessageEvent.Types.Type.Unspecified,
+                                Id = -6774108720365892680L,
+                                UncompressedSizeBytes = 7207111653247989525L,
+                                CompressedSizeBytes = -5863566423773706985L,
+                            },
+                        },
+                    },
+                    DroppedAnnotationsCount = -1339084470,
+                    DroppedMessageEventsCount = -2043953306,
+                },
+                Links = new Span.Types.Links
+                {
+                    Link =
+                    {
+                        new Span.Types.Link
+                        {
+                            TraceId = "trace_id105c890f",
+                            SpanId = "span_id47c232d3",
+                            Type = Span.Types.Link.Types.Type.Unspecified,
+                            Attributes = new Span.Types.Attributes
+                            {
+                                AttributeMap =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new AttributeValue
+                                        {
+                                            StringValue = new TruncatableString
+                                            {
+                                                Value = "value60c16320",
+                                                TruncatedByteCount = 2128325585,
+                                            },
+                                            IntValue = 6964907734533641939L,
+                                            BoolValue = false,
+                                        }
+                                    },
+                                },
+                                DroppedAttributesCount = -943197187,
+                            },
+                        },
+                    },
+                    DroppedLinksCount = 996193750,
+                },
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 SameProcessAsParentSpan = false,
                 ChildSpanCount = -1491694397,
                 SpanKind = Span.Types.SpanKind.Consumer,
@@ -199,14 +1871,187 @@ namespace Google.Cloud.Trace.V2.Tests
                 SpanName = SpanName.FromProjectTraceSpan("[PROJECT]", "[TRACE]", "[SPAN]"),
                 SpanId = "span_id47c232d3",
                 ParentSpanId = "parent_span_ide637f6a2",
-                DisplayName = new TruncatableString(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-                Attributes = new Span.Types.Attributes(),
-                StackTrace = new StackTrace(),
-                TimeEvents = new Span.Types.TimeEvents(),
-                Links = new Span.Types.Links(),
-                Status = new gr::Status(),
+                DisplayName = new TruncatableString
+                {
+                    Value = "value60c16320",
+                    TruncatedByteCount = 2128325585,
+                },
+                StartTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                Attributes = new Span.Types.Attributes
+                {
+                    AttributeMap =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new AttributeValue
+                            {
+                                StringValue = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                IntValue = 6964907734533641939L,
+                                BoolValue = false,
+                            }
+                        },
+                    },
+                    DroppedAttributesCount = -943197187,
+                },
+                StackTrace = new StackTrace
+                {
+                    StackFrames = new StackTrace.Types.StackFrames
+                    {
+                        Frame =
+                        {
+                            new StackTrace.Types.StackFrame
+                            {
+                                FunctionName = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                OriginalFunctionName = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                FileName = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                LineNumber = -6767150858782418247L,
+                                ColumnNumber = -1645305070928801317L,
+                                LoadModule = new Module
+                                {
+                                    Module_ = new TruncatableString
+                                    {
+                                        Value = "value60c16320",
+                                        TruncatedByteCount = 2128325585,
+                                    },
+                                    BuildId = new TruncatableString
+                                    {
+                                        Value = "value60c16320",
+                                        TruncatedByteCount = 2128325585,
+                                    },
+                                },
+                                SourceVersion = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                            },
+                        },
+                        DroppedFramesCount = -530937800,
+                    },
+                    StackTraceHashId = -3233071409397891082L,
+                },
+                TimeEvents = new Span.Types.TimeEvents
+                {
+                    TimeEvent =
+                    {
+                        new Span.Types.TimeEvent
+                        {
+                            Time = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            Annotation = new Span.Types.TimeEvent.Types.Annotation
+                            {
+                                Description = new TruncatableString
+                                {
+                                    Value = "value60c16320",
+                                    TruncatedByteCount = 2128325585,
+                                },
+                                Attributes = new Span.Types.Attributes
+                                {
+                                    AttributeMap =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new AttributeValue
+                                            {
+                                                StringValue = new TruncatableString
+                                                {
+                                                    Value = "value60c16320",
+                                                    TruncatedByteCount = 2128325585,
+                                                },
+                                                IntValue = 6964907734533641939L,
+                                                BoolValue = false,
+                                            }
+                                        },
+                                    },
+                                    DroppedAttributesCount = -943197187,
+                                },
+                            },
+                            MessageEvent = new Span.Types.TimeEvent.Types.MessageEvent
+                            {
+                                Type = Span.Types.TimeEvent.Types.MessageEvent.Types.Type.Unspecified,
+                                Id = -6774108720365892680L,
+                                UncompressedSizeBytes = 7207111653247989525L,
+                                CompressedSizeBytes = -5863566423773706985L,
+                            },
+                        },
+                    },
+                    DroppedAnnotationsCount = -1339084470,
+                    DroppedMessageEventsCount = -2043953306,
+                },
+                Links = new Span.Types.Links
+                {
+                    Link =
+                    {
+                        new Span.Types.Link
+                        {
+                            TraceId = "trace_id105c890f",
+                            SpanId = "span_id47c232d3",
+                            Type = Span.Types.Link.Types.Type.Unspecified,
+                            Attributes = new Span.Types.Attributes
+                            {
+                                AttributeMap =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new AttributeValue
+                                        {
+                                            StringValue = new TruncatableString
+                                            {
+                                                Value = "value60c16320",
+                                                TruncatedByteCount = 2128325585,
+                                            },
+                                            IntValue = 6964907734533641939L,
+                                            BoolValue = false,
+                                        }
+                                    },
+                                },
+                                DroppedAttributesCount = -943197187,
+                            },
+                        },
+                    },
+                    DroppedLinksCount = 996193750,
+                },
+                Status = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 SameProcessAsParentSpan = false,
                 ChildSpanCount = -1491694397,
                 SpanKind = Span.Types.SpanKind.Consumer,
