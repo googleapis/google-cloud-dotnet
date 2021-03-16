@@ -44,7 +44,11 @@ namespace Google.Cloud.Translate.V3.Tests
                 SourceLanguageCode = "source_language_code14998292",
                 TargetLanguageCode = "target_language_code6ec12c87",
                 Model = "model635ef320",
-                GlossaryConfig = new TranslateTextGlossaryConfig(),
+                GlossaryConfig = new TranslateTextGlossaryConfig
+                {
+                    Glossary = "glossaryefad3ad6",
+                    IgnoreCase = false,
+                },
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Labels =
                 {
@@ -56,8 +60,34 @@ namespace Google.Cloud.Translate.V3.Tests
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
-                Translations = { new Translation(), },
-                GlossaryTranslations = { new Translation(), },
+                Translations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
+                GlossaryTranslations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.TranslateText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
@@ -81,7 +111,11 @@ namespace Google.Cloud.Translate.V3.Tests
                 SourceLanguageCode = "source_language_code14998292",
                 TargetLanguageCode = "target_language_code6ec12c87",
                 Model = "model635ef320",
-                GlossaryConfig = new TranslateTextGlossaryConfig(),
+                GlossaryConfig = new TranslateTextGlossaryConfig
+                {
+                    Glossary = "glossaryefad3ad6",
+                    IgnoreCase = false,
+                },
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Labels =
                 {
@@ -93,8 +127,34 @@ namespace Google.Cloud.Translate.V3.Tests
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
-                Translations = { new Translation(), },
-                GlossaryTranslations = { new Translation(), },
+                Translations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
+                GlossaryTranslations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.TranslateTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TranslateTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
@@ -121,8 +181,34 @@ namespace Google.Cloud.Translate.V3.Tests
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
-                Translations = { new Translation(), },
-                GlossaryTranslations = { new Translation(), },
+                Translations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
+                GlossaryTranslations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.TranslateText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
@@ -147,8 +233,34 @@ namespace Google.Cloud.Translate.V3.Tests
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
-                Translations = { new Translation(), },
-                GlossaryTranslations = { new Translation(), },
+                Translations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
+                GlossaryTranslations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.TranslateTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TranslateTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
@@ -175,8 +287,34 @@ namespace Google.Cloud.Translate.V3.Tests
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
-                Translations = { new Translation(), },
-                GlossaryTranslations = { new Translation(), },
+                Translations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
+                GlossaryTranslations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.TranslateText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
@@ -201,8 +339,34 @@ namespace Google.Cloud.Translate.V3.Tests
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
-                Translations = { new Translation(), },
-                GlossaryTranslations = { new Translation(), },
+                Translations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
+                GlossaryTranslations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.TranslateTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TranslateTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
@@ -232,8 +396,34 @@ namespace Google.Cloud.Translate.V3.Tests
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
-                Translations = { new Translation(), },
-                GlossaryTranslations = { new Translation(), },
+                Translations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
+                GlossaryTranslations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.TranslateText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
@@ -261,8 +451,34 @@ namespace Google.Cloud.Translate.V3.Tests
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
-                Translations = { new Translation(), },
-                GlossaryTranslations = { new Translation(), },
+                Translations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
+                GlossaryTranslations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.TranslateTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TranslateTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
@@ -292,8 +508,34 @@ namespace Google.Cloud.Translate.V3.Tests
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
-                Translations = { new Translation(), },
-                GlossaryTranslations = { new Translation(), },
+                Translations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
+                GlossaryTranslations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.TranslateText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
@@ -321,8 +563,34 @@ namespace Google.Cloud.Translate.V3.Tests
             };
             TranslateTextResponse expectedResponse = new TranslateTextResponse
             {
-                Translations = { new Translation(), },
-                GlossaryTranslations = { new Translation(), },
+                Translations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
+                GlossaryTranslations =
+                {
+                    new Translation
+                    {
+                        TranslatedText = "translated_textac8a055e",
+                        Model = "model635ef320",
+                        GlossaryConfig = new TranslateTextGlossaryConfig
+                        {
+                            Glossary = "glossaryefad3ad6",
+                            IgnoreCase = false,
+                        },
+                        DetectedLanguageCode = "detected_language_code489c7750",
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.TranslateTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TranslateTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
@@ -356,7 +624,11 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 Languages =
                 {
-                    new DetectedLanguage(),
+                    new DetectedLanguage
+                    {
+                        LanguageCode = "language_code2f6c7160",
+                        Confidence = 8.101506E+17F,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.DetectLanguage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -389,7 +661,11 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 Languages =
                 {
-                    new DetectedLanguage(),
+                    new DetectedLanguage
+                    {
+                        LanguageCode = "language_code2f6c7160",
+                        Confidence = 8.101506E+17F,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.DetectLanguageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DetectLanguageResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -417,7 +693,11 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 Languages =
                 {
-                    new DetectedLanguage(),
+                    new DetectedLanguage
+                    {
+                        LanguageCode = "language_code2f6c7160",
+                        Confidence = 8.101506E+17F,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.DetectLanguage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -443,7 +723,11 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 Languages =
                 {
-                    new DetectedLanguage(),
+                    new DetectedLanguage
+                    {
+                        LanguageCode = "language_code2f6c7160",
+                        Confidence = 8.101506E+17F,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.DetectLanguageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DetectLanguageResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -471,7 +755,11 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 Languages =
                 {
-                    new DetectedLanguage(),
+                    new DetectedLanguage
+                    {
+                        LanguageCode = "language_code2f6c7160",
+                        Confidence = 8.101506E+17F,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.DetectLanguage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -497,7 +785,11 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 Languages =
                 {
-                    new DetectedLanguage(),
+                    new DetectedLanguage
+                    {
+                        LanguageCode = "language_code2f6c7160",
+                        Confidence = 8.101506E+17F,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.DetectLanguageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DetectLanguageResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -524,7 +816,13 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 Languages =
                 {
-                    new SupportedLanguage(),
+                    new SupportedLanguage
+                    {
+                        LanguageCode = "language_code2f6c7160",
+                        DisplayName = "display_name137f65c2",
+                        SupportSource = true,
+                        SupportTarget = true,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetSupportedLanguages(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -549,7 +847,13 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 Languages =
                 {
-                    new SupportedLanguage(),
+                    new SupportedLanguage
+                    {
+                        LanguageCode = "language_code2f6c7160",
+                        DisplayName = "display_name137f65c2",
+                        SupportSource = true,
+                        SupportTarget = true,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetSupportedLanguagesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SupportedLanguages>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -576,7 +880,13 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 Languages =
                 {
-                    new SupportedLanguage(),
+                    new SupportedLanguage
+                    {
+                        LanguageCode = "language_code2f6c7160",
+                        DisplayName = "display_name137f65c2",
+                        SupportSource = true,
+                        SupportTarget = true,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetSupportedLanguages(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -601,7 +911,13 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 Languages =
                 {
-                    new SupportedLanguage(),
+                    new SupportedLanguage
+                    {
+                        LanguageCode = "language_code2f6c7160",
+                        DisplayName = "display_name137f65c2",
+                        SupportSource = true,
+                        SupportTarget = true,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetSupportedLanguagesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SupportedLanguages>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -628,7 +944,13 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 Languages =
                 {
-                    new SupportedLanguage(),
+                    new SupportedLanguage
+                    {
+                        LanguageCode = "language_code2f6c7160",
+                        DisplayName = "display_name137f65c2",
+                        SupportSource = true,
+                        SupportTarget = true,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetSupportedLanguages(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -653,7 +975,13 @@ namespace Google.Cloud.Translate.V3.Tests
             {
                 Languages =
                 {
-                    new SupportedLanguage(),
+                    new SupportedLanguage
+                    {
+                        LanguageCode = "language_code2f6c7160",
+                        DisplayName = "display_name137f65c2",
+                        SupportSource = true,
+                        SupportTarget = true,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetSupportedLanguagesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SupportedLanguages>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -677,12 +1005,36 @@ namespace Google.Cloud.Translate.V3.Tests
             Glossary expectedResponse = new Glossary
             {
                 GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
-                LanguagePair = new Glossary.Types.LanguageCodePair(),
-                LanguageCodesSet = new Glossary.Types.LanguageCodesSet(),
-                InputConfig = new GlossaryInputConfig(),
+                LanguagePair = new Glossary.Types.LanguageCodePair
+                {
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                LanguageCodesSet = new Glossary.Types.LanguageCodesSet
+                {
+                    LanguageCodes =
+                    {
+                        "language_codes1de1a181",
+                    },
+                },
+                InputConfig = new GlossaryInputConfig
+                {
+                    GcsSource = new GcsSource
+                    {
+                        InputUri = "input_uriec9462a7",
+                    },
+                },
                 EntryCount = -1925390589,
-                SubmitTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                SubmitTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetGlossary(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
@@ -703,12 +1055,36 @@ namespace Google.Cloud.Translate.V3.Tests
             Glossary expectedResponse = new Glossary
             {
                 GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
-                LanguagePair = new Glossary.Types.LanguageCodePair(),
-                LanguageCodesSet = new Glossary.Types.LanguageCodesSet(),
-                InputConfig = new GlossaryInputConfig(),
+                LanguagePair = new Glossary.Types.LanguageCodePair
+                {
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                LanguageCodesSet = new Glossary.Types.LanguageCodesSet
+                {
+                    LanguageCodes =
+                    {
+                        "language_codes1de1a181",
+                    },
+                },
+                InputConfig = new GlossaryInputConfig
+                {
+                    GcsSource = new GcsSource
+                    {
+                        InputUri = "input_uriec9462a7",
+                    },
+                },
                 EntryCount = -1925390589,
-                SubmitTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                SubmitTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetGlossaryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Glossary>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
@@ -731,12 +1107,36 @@ namespace Google.Cloud.Translate.V3.Tests
             Glossary expectedResponse = new Glossary
             {
                 GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
-                LanguagePair = new Glossary.Types.LanguageCodePair(),
-                LanguageCodesSet = new Glossary.Types.LanguageCodesSet(),
-                InputConfig = new GlossaryInputConfig(),
+                LanguagePair = new Glossary.Types.LanguageCodePair
+                {
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                LanguageCodesSet = new Glossary.Types.LanguageCodesSet
+                {
+                    LanguageCodes =
+                    {
+                        "language_codes1de1a181",
+                    },
+                },
+                InputConfig = new GlossaryInputConfig
+                {
+                    GcsSource = new GcsSource
+                    {
+                        InputUri = "input_uriec9462a7",
+                    },
+                },
                 EntryCount = -1925390589,
-                SubmitTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                SubmitTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetGlossary(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
@@ -757,12 +1157,36 @@ namespace Google.Cloud.Translate.V3.Tests
             Glossary expectedResponse = new Glossary
             {
                 GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
-                LanguagePair = new Glossary.Types.LanguageCodePair(),
-                LanguageCodesSet = new Glossary.Types.LanguageCodesSet(),
-                InputConfig = new GlossaryInputConfig(),
+                LanguagePair = new Glossary.Types.LanguageCodePair
+                {
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                LanguageCodesSet = new Glossary.Types.LanguageCodesSet
+                {
+                    LanguageCodes =
+                    {
+                        "language_codes1de1a181",
+                    },
+                },
+                InputConfig = new GlossaryInputConfig
+                {
+                    GcsSource = new GcsSource
+                    {
+                        InputUri = "input_uriec9462a7",
+                    },
+                },
                 EntryCount = -1925390589,
-                SubmitTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                SubmitTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetGlossaryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Glossary>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
@@ -785,12 +1209,36 @@ namespace Google.Cloud.Translate.V3.Tests
             Glossary expectedResponse = new Glossary
             {
                 GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
-                LanguagePair = new Glossary.Types.LanguageCodePair(),
-                LanguageCodesSet = new Glossary.Types.LanguageCodesSet(),
-                InputConfig = new GlossaryInputConfig(),
+                LanguagePair = new Glossary.Types.LanguageCodePair
+                {
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                LanguageCodesSet = new Glossary.Types.LanguageCodesSet
+                {
+                    LanguageCodes =
+                    {
+                        "language_codes1de1a181",
+                    },
+                },
+                InputConfig = new GlossaryInputConfig
+                {
+                    GcsSource = new GcsSource
+                    {
+                        InputUri = "input_uriec9462a7",
+                    },
+                },
                 EntryCount = -1925390589,
-                SubmitTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                SubmitTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetGlossary(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
@@ -811,12 +1259,36 @@ namespace Google.Cloud.Translate.V3.Tests
             Glossary expectedResponse = new Glossary
             {
                 GlossaryName = GlossaryName.FromProjectLocationGlossary("[PROJECT]", "[LOCATION]", "[GLOSSARY]"),
-                LanguagePair = new Glossary.Types.LanguageCodePair(),
-                LanguageCodesSet = new Glossary.Types.LanguageCodesSet(),
-                InputConfig = new GlossaryInputConfig(),
+                LanguagePair = new Glossary.Types.LanguageCodePair
+                {
+                    SourceLanguageCode = "source_language_code14998292",
+                    TargetLanguageCode = "target_language_code6ec12c87",
+                },
+                LanguageCodesSet = new Glossary.Types.LanguageCodesSet
+                {
+                    LanguageCodes =
+                    {
+                        "language_codes1de1a181",
+                    },
+                },
+                InputConfig = new GlossaryInputConfig
+                {
+                    GcsSource = new GcsSource
+                    {
+                        InputUri = "input_uriec9462a7",
+                    },
+                },
                 EntryCount = -1925390589,
-                SubmitTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                SubmitTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetGlossaryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Glossary>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
