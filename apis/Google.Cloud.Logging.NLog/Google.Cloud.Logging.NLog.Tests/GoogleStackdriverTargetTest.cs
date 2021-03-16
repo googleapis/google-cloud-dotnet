@@ -27,6 +27,7 @@ using NLog.Targets.Wrappers;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -289,15 +290,44 @@ namespace Google.Cloud.Logging.NLog.Tests
                 {
                     googleTarget.SpanId = "${event-properties:SpanId:Format=x16}";
                     googleTarget.TraceId = "${activityid}";
-                    googleTarget.TraceSampled = "TRUE";
-                    System.Diagnostics.Trace.CorrelationManager.ActivityId = guidTraceId;
-                    LogManager.GetLogger("testlogger").Info("Hello {SpanId}", 74);
+                    googleTarget.TraceSampled = "${event-properties:Sampled}";
+                    Trace.CorrelationManager.ActivityId = guidTraceId;
+                    LogManager.GetLogger("testlogger").Info("Hello {SpanId}. You are being {Sampled}", 74, true);
                     return Task.FromResult(0);
                 });
             Assert.Single(uploadedEntries);
             Assert.Equal("000000000000004a", uploadedEntries[0].SpanId);
             Assert.Equal($"projects/projectId/traces/{guidTraceId}", uploadedEntries[0].Trace);
             Assert.True(uploadedEntries[0].TraceSampled);
+        }
+
+        [Theory]
+        [InlineData(true, true)]
+        [InlineData("true", true)]
+        [InlineData("TruE", true)]
+        [InlineData(1, true)] // This is useful when reading directly from X-Cloud-Trace-Context header.
+        [InlineData("1", true)]
+        [InlineData(false, false)]
+        [InlineData("false", false)]
+        [InlineData("fALse", false)]
+        [InlineData(0, false)]
+        [InlineData(5, false)]
+        [InlineData("something", false)]
+        public async Task TraceSampledValues(object sampled, bool expectedSampled)
+        {
+            var guidTraceId = Guid.NewGuid();
+
+            var uploadedEntries = await RunTestWorkingServer(
+                googleTarget =>
+                {
+                    googleTarget.TraceId = "${event-properties:TraceId}";
+                    googleTarget.TraceSampled = "${event-properties:Sampled}";
+                    LogManager.GetLogger("testlogger").Info("Hello {TraceId}. You are being {Sampled}", guidTraceId, sampled);
+                    return Task.FromResult(0);
+                });
+            Assert.Single(uploadedEntries);
+            Assert.Equal($"projects/projectId/traces/{guidTraceId}", uploadedEntries[0].Trace);
+            Assert.Equal(expectedSampled, uploadedEntries[0].TraceSampled);
         }
 
         [Fact]
