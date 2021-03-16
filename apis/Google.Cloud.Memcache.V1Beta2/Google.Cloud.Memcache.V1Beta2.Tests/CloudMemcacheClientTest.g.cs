@@ -51,20 +51,65 @@ namespace Google.Cloud.Memcache.V1Beta2.Tests
                 AuthorizedNetwork = "authorized_network63563381",
                 Zones = { "zones3641f926", },
                 NodeCount = -1659500730,
-                NodeConfig = new Instance.Types.NodeConfig(),
+                NodeConfig = new Instance.Types.NodeConfig
+                {
+                    CpuCount = 1530517824,
+                    MemorySizeMb = 486579090,
+                },
                 MemcacheVersion = MemcacheVersion.Memcache15,
-                Parameters = new MemcacheParameters(),
+                Parameters = new MemcacheParameters
+                {
+                    Id = "id74b70bb8",
+                    Params =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 MemcacheNodes =
                 {
-                    new Instance.Types.Node(),
+                    new Instance.Types.Node
+                    {
+                        NodeId = "node_idc8eb93c6",
+                        Zone = "zone255f4ea8",
+                        State = Instance.Types.Node.Types.State.Deleting,
+                        Host = "hosta8dbb367",
+                        Port = -78310000,
+                        Parameters = new MemcacheParameters
+                        {
+                            Id = "id74b70bb8",
+                            Params =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                        UpdateAvailable = true,
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Instance.Types.State.Deleting,
                 MemcacheFullVersion = "memcache_full_version4b648a5f",
                 InstanceMessages =
                 {
-                    new Instance.Types.InstanceMessage(),
+                    new Instance.Types.InstanceMessage
+                    {
+                        Code = Instance.Types.InstanceMessage.Types.Code.ZoneDistributionUnbalanced,
+                        Message = "message0231e778",
+                    },
                 },
                 DiscoveryEndpoint = "discovery_endpointe07f14c7",
                 UpdateAvailable = true,
@@ -99,20 +144,65 @@ namespace Google.Cloud.Memcache.V1Beta2.Tests
                 AuthorizedNetwork = "authorized_network63563381",
                 Zones = { "zones3641f926", },
                 NodeCount = -1659500730,
-                NodeConfig = new Instance.Types.NodeConfig(),
+                NodeConfig = new Instance.Types.NodeConfig
+                {
+                    CpuCount = 1530517824,
+                    MemorySizeMb = 486579090,
+                },
                 MemcacheVersion = MemcacheVersion.Memcache15,
-                Parameters = new MemcacheParameters(),
+                Parameters = new MemcacheParameters
+                {
+                    Id = "id74b70bb8",
+                    Params =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 MemcacheNodes =
                 {
-                    new Instance.Types.Node(),
+                    new Instance.Types.Node
+                    {
+                        NodeId = "node_idc8eb93c6",
+                        Zone = "zone255f4ea8",
+                        State = Instance.Types.Node.Types.State.Deleting,
+                        Host = "hosta8dbb367",
+                        Port = -78310000,
+                        Parameters = new MemcacheParameters
+                        {
+                            Id = "id74b70bb8",
+                            Params =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                        UpdateAvailable = true,
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Instance.Types.State.Deleting,
                 MemcacheFullVersion = "memcache_full_version4b648a5f",
                 InstanceMessages =
                 {
-                    new Instance.Types.InstanceMessage(),
+                    new Instance.Types.InstanceMessage
+                    {
+                        Code = Instance.Types.InstanceMessage.Types.Code.ZoneDistributionUnbalanced,
+                        Message = "message0231e778",
+                    },
                 },
                 DiscoveryEndpoint = "discovery_endpointe07f14c7",
                 UpdateAvailable = true,
@@ -149,20 +239,65 @@ namespace Google.Cloud.Memcache.V1Beta2.Tests
                 AuthorizedNetwork = "authorized_network63563381",
                 Zones = { "zones3641f926", },
                 NodeCount = -1659500730,
-                NodeConfig = new Instance.Types.NodeConfig(),
+                NodeConfig = new Instance.Types.NodeConfig
+                {
+                    CpuCount = 1530517824,
+                    MemorySizeMb = 486579090,
+                },
                 MemcacheVersion = MemcacheVersion.Memcache15,
-                Parameters = new MemcacheParameters(),
+                Parameters = new MemcacheParameters
+                {
+                    Id = "id74b70bb8",
+                    Params =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 MemcacheNodes =
                 {
-                    new Instance.Types.Node(),
+                    new Instance.Types.Node
+                    {
+                        NodeId = "node_idc8eb93c6",
+                        Zone = "zone255f4ea8",
+                        State = Instance.Types.Node.Types.State.Deleting,
+                        Host = "hosta8dbb367",
+                        Port = -78310000,
+                        Parameters = new MemcacheParameters
+                        {
+                            Id = "id74b70bb8",
+                            Params =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                        UpdateAvailable = true,
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Instance.Types.State.Deleting,
                 MemcacheFullVersion = "memcache_full_version4b648a5f",
                 InstanceMessages =
                 {
-                    new Instance.Types.InstanceMessage(),
+                    new Instance.Types.InstanceMessage
+                    {
+                        Code = Instance.Types.InstanceMessage.Types.Code.ZoneDistributionUnbalanced,
+                        Message = "message0231e778",
+                    },
                 },
                 DiscoveryEndpoint = "discovery_endpointe07f14c7",
                 UpdateAvailable = true,
@@ -197,20 +332,65 @@ namespace Google.Cloud.Memcache.V1Beta2.Tests
                 AuthorizedNetwork = "authorized_network63563381",
                 Zones = { "zones3641f926", },
                 NodeCount = -1659500730,
-                NodeConfig = new Instance.Types.NodeConfig(),
+                NodeConfig = new Instance.Types.NodeConfig
+                {
+                    CpuCount = 1530517824,
+                    MemorySizeMb = 486579090,
+                },
                 MemcacheVersion = MemcacheVersion.Memcache15,
-                Parameters = new MemcacheParameters(),
+                Parameters = new MemcacheParameters
+                {
+                    Id = "id74b70bb8",
+                    Params =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 MemcacheNodes =
                 {
-                    new Instance.Types.Node(),
+                    new Instance.Types.Node
+                    {
+                        NodeId = "node_idc8eb93c6",
+                        Zone = "zone255f4ea8",
+                        State = Instance.Types.Node.Types.State.Deleting,
+                        Host = "hosta8dbb367",
+                        Port = -78310000,
+                        Parameters = new MemcacheParameters
+                        {
+                            Id = "id74b70bb8",
+                            Params =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                        UpdateAvailable = true,
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Instance.Types.State.Deleting,
                 MemcacheFullVersion = "memcache_full_version4b648a5f",
                 InstanceMessages =
                 {
-                    new Instance.Types.InstanceMessage(),
+                    new Instance.Types.InstanceMessage
+                    {
+                        Code = Instance.Types.InstanceMessage.Types.Code.ZoneDistributionUnbalanced,
+                        Message = "message0231e778",
+                    },
                 },
                 DiscoveryEndpoint = "discovery_endpointe07f14c7",
                 UpdateAvailable = true,
@@ -247,20 +427,65 @@ namespace Google.Cloud.Memcache.V1Beta2.Tests
                 AuthorizedNetwork = "authorized_network63563381",
                 Zones = { "zones3641f926", },
                 NodeCount = -1659500730,
-                NodeConfig = new Instance.Types.NodeConfig(),
+                NodeConfig = new Instance.Types.NodeConfig
+                {
+                    CpuCount = 1530517824,
+                    MemorySizeMb = 486579090,
+                },
                 MemcacheVersion = MemcacheVersion.Memcache15,
-                Parameters = new MemcacheParameters(),
+                Parameters = new MemcacheParameters
+                {
+                    Id = "id74b70bb8",
+                    Params =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 MemcacheNodes =
                 {
-                    new Instance.Types.Node(),
+                    new Instance.Types.Node
+                    {
+                        NodeId = "node_idc8eb93c6",
+                        Zone = "zone255f4ea8",
+                        State = Instance.Types.Node.Types.State.Deleting,
+                        Host = "hosta8dbb367",
+                        Port = -78310000,
+                        Parameters = new MemcacheParameters
+                        {
+                            Id = "id74b70bb8",
+                            Params =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                        UpdateAvailable = true,
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Instance.Types.State.Deleting,
                 MemcacheFullVersion = "memcache_full_version4b648a5f",
                 InstanceMessages =
                 {
-                    new Instance.Types.InstanceMessage(),
+                    new Instance.Types.InstanceMessage
+                    {
+                        Code = Instance.Types.InstanceMessage.Types.Code.ZoneDistributionUnbalanced,
+                        Message = "message0231e778",
+                    },
                 },
                 DiscoveryEndpoint = "discovery_endpointe07f14c7",
                 UpdateAvailable = true,
@@ -295,20 +520,65 @@ namespace Google.Cloud.Memcache.V1Beta2.Tests
                 AuthorizedNetwork = "authorized_network63563381",
                 Zones = { "zones3641f926", },
                 NodeCount = -1659500730,
-                NodeConfig = new Instance.Types.NodeConfig(),
+                NodeConfig = new Instance.Types.NodeConfig
+                {
+                    CpuCount = 1530517824,
+                    MemorySizeMb = 486579090,
+                },
                 MemcacheVersion = MemcacheVersion.Memcache15,
-                Parameters = new MemcacheParameters(),
+                Parameters = new MemcacheParameters
+                {
+                    Id = "id74b70bb8",
+                    Params =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                },
                 MemcacheNodes =
                 {
-                    new Instance.Types.Node(),
+                    new Instance.Types.Node
+                    {
+                        NodeId = "node_idc8eb93c6",
+                        Zone = "zone255f4ea8",
+                        State = Instance.Types.Node.Types.State.Deleting,
+                        Host = "hosta8dbb367",
+                        Port = -78310000,
+                        Parameters = new MemcacheParameters
+                        {
+                            Id = "id74b70bb8",
+                            Params =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    "value60c16320"
+                                },
+                            },
+                        },
+                        UpdateAvailable = true,
+                    },
                 },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Instance.Types.State.Deleting,
                 MemcacheFullVersion = "memcache_full_version4b648a5f",
                 InstanceMessages =
                 {
-                    new Instance.Types.InstanceMessage(),
+                    new Instance.Types.InstanceMessage
+                    {
+                        Code = Instance.Types.InstanceMessage.Types.Code.ZoneDistributionUnbalanced,
+                        Message = "message0231e778",
+                    },
                 },
                 DiscoveryEndpoint = "discovery_endpointe07f14c7",
                 UpdateAvailable = true,
