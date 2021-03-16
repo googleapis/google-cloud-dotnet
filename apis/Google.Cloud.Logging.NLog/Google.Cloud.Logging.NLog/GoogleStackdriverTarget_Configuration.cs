@@ -99,26 +99,37 @@ namespace Google.Cloud.Logging.NLog
         public Layout LogId { get; set; } = "Default";
 
         /// <summary>
-        /// Request TraceId for correlation of LogEvents from same request
+        /// Trace ID of the trace associated to the Log Entry.
         /// </summary>
         /// <remarks>
-        /// Resource name of the trace associated with the log entry. Ex: '06796866738c859f2f19b7cfb3214824'
+        /// See https://cloud.google.com/logging/docs/reference/v2/rpc/google.logging.v2#logentry
+        /// for more information. Note that this property, when rendered, should only return the
+        /// actual trace ID, not including the resource path, ex: '06796866738c859f2f19b7cfb3214824'.
         /// </remarks>
         public Layout TraceId { get; set; }
 
         /// <summary>
-        /// Activity SpanId for correlation of LogEvents from same activity.
+        /// The span ID within the trace associated with the log entry.
         /// </summary>
         /// <remarks>
-        /// Trace API v2 uses: a 16-character hexadecimal encoding of an 8-byte array. Ex: `000000000000004a` = String.format("{0:x16}", 74)
+        /// See https://cloud.google.com/logging/docs/reference/v2/rpc/google.logging.v2#logentry
+        /// for more information. Note that the Trace API v2 uses a 16-character hexadecimal
+        /// encoding of an 8-byte array, ex: `000000000000004a`
         /// </remarks>
         public Layout SpanId { get; set; }
 
         /// <summary>
-        /// True means that the trace resource name in the trace field was sampled for storage in a trace backend.
-        /// False means that the trace was not sampled for storage when this log entry was written, or the sampling decision was unknown at the time.
-        /// A non-sampled trace value is still useful as a request correlation identifier. The default is False.
+        /// The sampling decision of the trace associated with the log entry.
+        /// true means that the trace identified by <see cref="TraceId"/> was sampled for storage in a trace backend.
+        /// false means that the trace was not sampled for storage when this log entry was written,
+        /// or the sampling decision was unknown at the time.
+        /// A non-sampled trace value is still useful as a request correlation identifier. The default is false.
         /// </summary>
+        /// <remarks>
+        /// See https://cloud.google.com/logging/docs/reference/v2/rpc/google.logging.v2#logentry
+        /// for more information. Note that, when rendered, this may return "true" (case insentive) or 1 to
+        /// indicate a true value for <see cref="LogEntry.TraceSampled"/>. Else, false will be set.
+        /// </remarks>
         public Layout TraceSampled { get; set; }
 
         /// <summary>
