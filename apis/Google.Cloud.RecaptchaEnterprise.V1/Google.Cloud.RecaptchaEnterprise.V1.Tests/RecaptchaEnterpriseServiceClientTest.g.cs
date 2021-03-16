@@ -35,14 +35,70 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             CreateAssessmentRequest request = new CreateAssessmentRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Assessment = new Assessment(),
+                Assessment = new Assessment
+                {
+                    AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
+                    Event = new Event
+                    {
+                        Token = "tokena18da094",
+                        SiteKey = "site_key06a3ad86",
+                        UserAgent = "user_agent707c6483",
+                        UserIpAddress = "user_ip_address2d7005a7",
+                        ExpectedAction = "expected_actionb605573c",
+                    },
+                    RiskAnalysis = new RiskAnalysis
+                    {
+                        Score = -5.80354E+17F,
+                        Reasons =
+                        {
+                            RiskAnalysis.Types.ClassificationReason.LowConfidenceScore,
+                        },
+                    },
+                    TokenProperties = new TokenProperties
+                    {
+                        Valid = false,
+                        InvalidReason = TokenProperties.Types.InvalidReason.UnknownInvalidReason,
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Hostname = "hostnamef4ac9708",
+                        Action = "action09558c41",
+                    },
+                },
             };
             Assessment expectedResponse = new Assessment
             {
                 AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
-                Event = new Event(),
-                RiskAnalysis = new RiskAnalysis(),
-                TokenProperties = new TokenProperties(),
+                Event = new Event
+                {
+                    Token = "tokena18da094",
+                    SiteKey = "site_key06a3ad86",
+                    UserAgent = "user_agent707c6483",
+                    UserIpAddress = "user_ip_address2d7005a7",
+                    ExpectedAction = "expected_actionb605573c",
+                },
+                RiskAnalysis = new RiskAnalysis
+                {
+                    Score = -5.80354E+17F,
+                    Reasons =
+                    {
+                        RiskAnalysis.Types.ClassificationReason.LowConfidenceScore,
+                    },
+                },
+                TokenProperties = new TokenProperties
+                {
+                    Valid = false,
+                    InvalidReason = TokenProperties.Types.InvalidReason.UnknownInvalidReason,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Hostname = "hostnamef4ac9708",
+                    Action = "action09558c41",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -58,14 +114,70 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             CreateAssessmentRequest request = new CreateAssessmentRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Assessment = new Assessment(),
+                Assessment = new Assessment
+                {
+                    AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
+                    Event = new Event
+                    {
+                        Token = "tokena18da094",
+                        SiteKey = "site_key06a3ad86",
+                        UserAgent = "user_agent707c6483",
+                        UserIpAddress = "user_ip_address2d7005a7",
+                        ExpectedAction = "expected_actionb605573c",
+                    },
+                    RiskAnalysis = new RiskAnalysis
+                    {
+                        Score = -5.80354E+17F,
+                        Reasons =
+                        {
+                            RiskAnalysis.Types.ClassificationReason.LowConfidenceScore,
+                        },
+                    },
+                    TokenProperties = new TokenProperties
+                    {
+                        Valid = false,
+                        InvalidReason = TokenProperties.Types.InvalidReason.UnknownInvalidReason,
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Hostname = "hostnamef4ac9708",
+                        Action = "action09558c41",
+                    },
+                },
             };
             Assessment expectedResponse = new Assessment
             {
                 AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
-                Event = new Event(),
-                RiskAnalysis = new RiskAnalysis(),
-                TokenProperties = new TokenProperties(),
+                Event = new Event
+                {
+                    Token = "tokena18da094",
+                    SiteKey = "site_key06a3ad86",
+                    UserAgent = "user_agent707c6483",
+                    UserIpAddress = "user_ip_address2d7005a7",
+                    ExpectedAction = "expected_actionb605573c",
+                },
+                RiskAnalysis = new RiskAnalysis
+                {
+                    Score = -5.80354E+17F,
+                    Reasons =
+                    {
+                        RiskAnalysis.Types.ClassificationReason.LowConfidenceScore,
+                    },
+                },
+                TokenProperties = new TokenProperties
+                {
+                    Valid = false,
+                    InvalidReason = TokenProperties.Types.InvalidReason.UnknownInvalidReason,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Hostname = "hostnamef4ac9708",
+                    Action = "action09558c41",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assessment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -83,14 +195,70 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             CreateAssessmentRequest request = new CreateAssessmentRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Assessment = new Assessment(),
+                Assessment = new Assessment
+                {
+                    AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
+                    Event = new Event
+                    {
+                        Token = "tokena18da094",
+                        SiteKey = "site_key06a3ad86",
+                        UserAgent = "user_agent707c6483",
+                        UserIpAddress = "user_ip_address2d7005a7",
+                        ExpectedAction = "expected_actionb605573c",
+                    },
+                    RiskAnalysis = new RiskAnalysis
+                    {
+                        Score = -5.80354E+17F,
+                        Reasons =
+                        {
+                            RiskAnalysis.Types.ClassificationReason.LowConfidenceScore,
+                        },
+                    },
+                    TokenProperties = new TokenProperties
+                    {
+                        Valid = false,
+                        InvalidReason = TokenProperties.Types.InvalidReason.UnknownInvalidReason,
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Hostname = "hostnamef4ac9708",
+                        Action = "action09558c41",
+                    },
+                },
             };
             Assessment expectedResponse = new Assessment
             {
                 AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
-                Event = new Event(),
-                RiskAnalysis = new RiskAnalysis(),
-                TokenProperties = new TokenProperties(),
+                Event = new Event
+                {
+                    Token = "tokena18da094",
+                    SiteKey = "site_key06a3ad86",
+                    UserAgent = "user_agent707c6483",
+                    UserIpAddress = "user_ip_address2d7005a7",
+                    ExpectedAction = "expected_actionb605573c",
+                },
+                RiskAnalysis = new RiskAnalysis
+                {
+                    Score = -5.80354E+17F,
+                    Reasons =
+                    {
+                        RiskAnalysis.Types.ClassificationReason.LowConfidenceScore,
+                    },
+                },
+                TokenProperties = new TokenProperties
+                {
+                    Valid = false,
+                    InvalidReason = TokenProperties.Types.InvalidReason.UnknownInvalidReason,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Hostname = "hostnamef4ac9708",
+                    Action = "action09558c41",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -106,14 +274,70 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             CreateAssessmentRequest request = new CreateAssessmentRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Assessment = new Assessment(),
+                Assessment = new Assessment
+                {
+                    AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
+                    Event = new Event
+                    {
+                        Token = "tokena18da094",
+                        SiteKey = "site_key06a3ad86",
+                        UserAgent = "user_agent707c6483",
+                        UserIpAddress = "user_ip_address2d7005a7",
+                        ExpectedAction = "expected_actionb605573c",
+                    },
+                    RiskAnalysis = new RiskAnalysis
+                    {
+                        Score = -5.80354E+17F,
+                        Reasons =
+                        {
+                            RiskAnalysis.Types.ClassificationReason.LowConfidenceScore,
+                        },
+                    },
+                    TokenProperties = new TokenProperties
+                    {
+                        Valid = false,
+                        InvalidReason = TokenProperties.Types.InvalidReason.UnknownInvalidReason,
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Hostname = "hostnamef4ac9708",
+                        Action = "action09558c41",
+                    },
+                },
             };
             Assessment expectedResponse = new Assessment
             {
                 AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
-                Event = new Event(),
-                RiskAnalysis = new RiskAnalysis(),
-                TokenProperties = new TokenProperties(),
+                Event = new Event
+                {
+                    Token = "tokena18da094",
+                    SiteKey = "site_key06a3ad86",
+                    UserAgent = "user_agent707c6483",
+                    UserIpAddress = "user_ip_address2d7005a7",
+                    ExpectedAction = "expected_actionb605573c",
+                },
+                RiskAnalysis = new RiskAnalysis
+                {
+                    Score = -5.80354E+17F,
+                    Reasons =
+                    {
+                        RiskAnalysis.Types.ClassificationReason.LowConfidenceScore,
+                    },
+                },
+                TokenProperties = new TokenProperties
+                {
+                    Valid = false,
+                    InvalidReason = TokenProperties.Types.InvalidReason.UnknownInvalidReason,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Hostname = "hostnamef4ac9708",
+                    Action = "action09558c41",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assessment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -131,14 +355,70 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             CreateAssessmentRequest request = new CreateAssessmentRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Assessment = new Assessment(),
+                Assessment = new Assessment
+                {
+                    AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
+                    Event = new Event
+                    {
+                        Token = "tokena18da094",
+                        SiteKey = "site_key06a3ad86",
+                        UserAgent = "user_agent707c6483",
+                        UserIpAddress = "user_ip_address2d7005a7",
+                        ExpectedAction = "expected_actionb605573c",
+                    },
+                    RiskAnalysis = new RiskAnalysis
+                    {
+                        Score = -5.80354E+17F,
+                        Reasons =
+                        {
+                            RiskAnalysis.Types.ClassificationReason.LowConfidenceScore,
+                        },
+                    },
+                    TokenProperties = new TokenProperties
+                    {
+                        Valid = false,
+                        InvalidReason = TokenProperties.Types.InvalidReason.UnknownInvalidReason,
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Hostname = "hostnamef4ac9708",
+                        Action = "action09558c41",
+                    },
+                },
             };
             Assessment expectedResponse = new Assessment
             {
                 AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
-                Event = new Event(),
-                RiskAnalysis = new RiskAnalysis(),
-                TokenProperties = new TokenProperties(),
+                Event = new Event
+                {
+                    Token = "tokena18da094",
+                    SiteKey = "site_key06a3ad86",
+                    UserAgent = "user_agent707c6483",
+                    UserIpAddress = "user_ip_address2d7005a7",
+                    ExpectedAction = "expected_actionb605573c",
+                },
+                RiskAnalysis = new RiskAnalysis
+                {
+                    Score = -5.80354E+17F,
+                    Reasons =
+                    {
+                        RiskAnalysis.Types.ClassificationReason.LowConfidenceScore,
+                    },
+                },
+                TokenProperties = new TokenProperties
+                {
+                    Valid = false,
+                    InvalidReason = TokenProperties.Types.InvalidReason.UnknownInvalidReason,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Hostname = "hostnamef4ac9708",
+                    Action = "action09558c41",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -154,14 +434,70 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             CreateAssessmentRequest request = new CreateAssessmentRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Assessment = new Assessment(),
+                Assessment = new Assessment
+                {
+                    AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
+                    Event = new Event
+                    {
+                        Token = "tokena18da094",
+                        SiteKey = "site_key06a3ad86",
+                        UserAgent = "user_agent707c6483",
+                        UserIpAddress = "user_ip_address2d7005a7",
+                        ExpectedAction = "expected_actionb605573c",
+                    },
+                    RiskAnalysis = new RiskAnalysis
+                    {
+                        Score = -5.80354E+17F,
+                        Reasons =
+                        {
+                            RiskAnalysis.Types.ClassificationReason.LowConfidenceScore,
+                        },
+                    },
+                    TokenProperties = new TokenProperties
+                    {
+                        Valid = false,
+                        InvalidReason = TokenProperties.Types.InvalidReason.UnknownInvalidReason,
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        Hostname = "hostnamef4ac9708",
+                        Action = "action09558c41",
+                    },
+                },
             };
             Assessment expectedResponse = new Assessment
             {
                 AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
-                Event = new Event(),
-                RiskAnalysis = new RiskAnalysis(),
-                TokenProperties = new TokenProperties(),
+                Event = new Event
+                {
+                    Token = "tokena18da094",
+                    SiteKey = "site_key06a3ad86",
+                    UserAgent = "user_agent707c6483",
+                    UserIpAddress = "user_ip_address2d7005a7",
+                    ExpectedAction = "expected_actionb605573c",
+                },
+                RiskAnalysis = new RiskAnalysis
+                {
+                    Score = -5.80354E+17F,
+                    Reasons =
+                    {
+                        RiskAnalysis.Types.ClassificationReason.LowConfidenceScore,
+                    },
+                },
+                TokenProperties = new TokenProperties
+                {
+                    Valid = false,
+                    InvalidReason = TokenProperties.Types.InvalidReason.UnknownInvalidReason,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Hostname = "hostnamef4ac9708",
+                    Action = "action09558c41",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assessment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -287,15 +623,78 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             CreateKeyRequest request = new CreateKeyRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Key = new Key(),
+                Key = new Key
+                {
+                    KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+                    DisplayName = "display_name137f65c2",
+                    WebSettings = new WebKeySettings
+                    {
+                        AllowedDomains =
+                        {
+                            "allowed_domains1cb97697",
+                        },
+                        AllowAmpTraffic = false,
+                        AllowAllDomains = false,
+                        IntegrationType = WebKeySettings.Types.IntegrationType.Invisible,
+                        ChallengeSecurityPreference = WebKeySettings.Types.ChallengeSecurityPreference.Usability,
+                    },
+                    AndroidSettings = new AndroidKeySettings
+                    {
+                        AllowedPackageNames =
+                        {
+                            "allowed_package_names6b4981eb",
+                        },
+                    },
+                    IosSettings = new IOSKeySettings
+                    {
+                        AllowedBundleIds =
+                        {
+                            "allowed_bundle_ids7fb7895f",
+                        },
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Key expectedResponse = new Key
             {
                 KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
                 DisplayName = "display_name137f65c2",
-                WebSettings = new WebKeySettings(),
-                AndroidSettings = new AndroidKeySettings(),
-                IosSettings = new IOSKeySettings(),
+                WebSettings = new WebKeySettings
+                {
+                    AllowedDomains =
+                    {
+                        "allowed_domains1cb97697",
+                    },
+                    AllowAmpTraffic = false,
+                    AllowAllDomains = false,
+                    IntegrationType = WebKeySettings.Types.IntegrationType.Invisible,
+                    ChallengeSecurityPreference = WebKeySettings.Types.ChallengeSecurityPreference.Usability,
+                },
+                AndroidSettings = new AndroidKeySettings
+                {
+                    AllowedPackageNames =
+                    {
+                        "allowed_package_names6b4981eb",
+                    },
+                },
+                IosSettings = new IOSKeySettings
+                {
+                    AllowedBundleIds =
+                    {
+                        "allowed_bundle_ids7fb7895f",
+                    },
+                },
                 Labels =
                 {
                     {
@@ -303,7 +702,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                         "value60c16320"
                     },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -319,15 +722,78 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             CreateKeyRequest request = new CreateKeyRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Key = new Key(),
+                Key = new Key
+                {
+                    KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+                    DisplayName = "display_name137f65c2",
+                    WebSettings = new WebKeySettings
+                    {
+                        AllowedDomains =
+                        {
+                            "allowed_domains1cb97697",
+                        },
+                        AllowAmpTraffic = false,
+                        AllowAllDomains = false,
+                        IntegrationType = WebKeySettings.Types.IntegrationType.Invisible,
+                        ChallengeSecurityPreference = WebKeySettings.Types.ChallengeSecurityPreference.Usability,
+                    },
+                    AndroidSettings = new AndroidKeySettings
+                    {
+                        AllowedPackageNames =
+                        {
+                            "allowed_package_names6b4981eb",
+                        },
+                    },
+                    IosSettings = new IOSKeySettings
+                    {
+                        AllowedBundleIds =
+                        {
+                            "allowed_bundle_ids7fb7895f",
+                        },
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             Key expectedResponse = new Key
             {
                 KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
                 DisplayName = "display_name137f65c2",
-                WebSettings = new WebKeySettings(),
-                AndroidSettings = new AndroidKeySettings(),
-                IosSettings = new IOSKeySettings(),
+                WebSettings = new WebKeySettings
+                {
+                    AllowedDomains =
+                    {
+                        "allowed_domains1cb97697",
+                    },
+                    AllowAmpTraffic = false,
+                    AllowAllDomains = false,
+                    IntegrationType = WebKeySettings.Types.IntegrationType.Invisible,
+                    ChallengeSecurityPreference = WebKeySettings.Types.ChallengeSecurityPreference.Usability,
+                },
+                AndroidSettings = new AndroidKeySettings
+                {
+                    AllowedPackageNames =
+                    {
+                        "allowed_package_names6b4981eb",
+                    },
+                },
+                IosSettings = new IOSKeySettings
+                {
+                    AllowedBundleIds =
+                    {
+                        "allowed_bundle_ids7fb7895f",
+                    },
+                },
                 Labels =
                 {
                     {
@@ -335,7 +801,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                         "value60c16320"
                     },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.CreateKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Key>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -358,9 +828,31 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             {
                 KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
                 DisplayName = "display_name137f65c2",
-                WebSettings = new WebKeySettings(),
-                AndroidSettings = new AndroidKeySettings(),
-                IosSettings = new IOSKeySettings(),
+                WebSettings = new WebKeySettings
+                {
+                    AllowedDomains =
+                    {
+                        "allowed_domains1cb97697",
+                    },
+                    AllowAmpTraffic = false,
+                    AllowAllDomains = false,
+                    IntegrationType = WebKeySettings.Types.IntegrationType.Invisible,
+                    ChallengeSecurityPreference = WebKeySettings.Types.ChallengeSecurityPreference.Usability,
+                },
+                AndroidSettings = new AndroidKeySettings
+                {
+                    AllowedPackageNames =
+                    {
+                        "allowed_package_names6b4981eb",
+                    },
+                },
+                IosSettings = new IOSKeySettings
+                {
+                    AllowedBundleIds =
+                    {
+                        "allowed_bundle_ids7fb7895f",
+                    },
+                },
                 Labels =
                 {
                     {
@@ -368,7 +860,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                         "value60c16320"
                     },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -389,9 +885,31 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             {
                 KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
                 DisplayName = "display_name137f65c2",
-                WebSettings = new WebKeySettings(),
-                AndroidSettings = new AndroidKeySettings(),
-                IosSettings = new IOSKeySettings(),
+                WebSettings = new WebKeySettings
+                {
+                    AllowedDomains =
+                    {
+                        "allowed_domains1cb97697",
+                    },
+                    AllowAmpTraffic = false,
+                    AllowAllDomains = false,
+                    IntegrationType = WebKeySettings.Types.IntegrationType.Invisible,
+                    ChallengeSecurityPreference = WebKeySettings.Types.ChallengeSecurityPreference.Usability,
+                },
+                AndroidSettings = new AndroidKeySettings
+                {
+                    AllowedPackageNames =
+                    {
+                        "allowed_package_names6b4981eb",
+                    },
+                },
+                IosSettings = new IOSKeySettings
+                {
+                    AllowedBundleIds =
+                    {
+                        "allowed_bundle_ids7fb7895f",
+                    },
+                },
                 Labels =
                 {
                     {
@@ -399,7 +917,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                         "value60c16320"
                     },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GetKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Key>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -416,16 +938,82 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient>(moq::MockBehavior.Strict);
             UpdateKeyRequest request = new UpdateKeyRequest
             {
-                Key = new Key(),
-                UpdateMask = new wkt::FieldMask(),
+                Key = new Key
+                {
+                    KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+                    DisplayName = "display_name137f65c2",
+                    WebSettings = new WebKeySettings
+                    {
+                        AllowedDomains =
+                        {
+                            "allowed_domains1cb97697",
+                        },
+                        AllowAmpTraffic = false,
+                        AllowAllDomains = false,
+                        IntegrationType = WebKeySettings.Types.IntegrationType.Invisible,
+                        ChallengeSecurityPreference = WebKeySettings.Types.ChallengeSecurityPreference.Usability,
+                    },
+                    AndroidSettings = new AndroidKeySettings
+                    {
+                        AllowedPackageNames =
+                        {
+                            "allowed_package_names6b4981eb",
+                        },
+                    },
+                    IosSettings = new IOSKeySettings
+                    {
+                        AllowedBundleIds =
+                        {
+                            "allowed_bundle_ids7fb7895f",
+                        },
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Key expectedResponse = new Key
             {
                 KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
                 DisplayName = "display_name137f65c2",
-                WebSettings = new WebKeySettings(),
-                AndroidSettings = new AndroidKeySettings(),
-                IosSettings = new IOSKeySettings(),
+                WebSettings = new WebKeySettings
+                {
+                    AllowedDomains =
+                    {
+                        "allowed_domains1cb97697",
+                    },
+                    AllowAmpTraffic = false,
+                    AllowAllDomains = false,
+                    IntegrationType = WebKeySettings.Types.IntegrationType.Invisible,
+                    ChallengeSecurityPreference = WebKeySettings.Types.ChallengeSecurityPreference.Usability,
+                },
+                AndroidSettings = new AndroidKeySettings
+                {
+                    AllowedPackageNames =
+                    {
+                        "allowed_package_names6b4981eb",
+                    },
+                },
+                IosSettings = new IOSKeySettings
+                {
+                    AllowedBundleIds =
+                    {
+                        "allowed_bundle_ids7fb7895f",
+                    },
+                },
                 Labels =
                 {
                     {
@@ -433,7 +1021,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                         "value60c16320"
                     },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -448,16 +1040,82 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient>(moq::MockBehavior.Strict);
             UpdateKeyRequest request = new UpdateKeyRequest
             {
-                Key = new Key(),
-                UpdateMask = new wkt::FieldMask(),
+                Key = new Key
+                {
+                    KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+                    DisplayName = "display_name137f65c2",
+                    WebSettings = new WebKeySettings
+                    {
+                        AllowedDomains =
+                        {
+                            "allowed_domains1cb97697",
+                        },
+                        AllowAmpTraffic = false,
+                        AllowAllDomains = false,
+                        IntegrationType = WebKeySettings.Types.IntegrationType.Invisible,
+                        ChallengeSecurityPreference = WebKeySettings.Types.ChallengeSecurityPreference.Usability,
+                    },
+                    AndroidSettings = new AndroidKeySettings
+                    {
+                        AllowedPackageNames =
+                        {
+                            "allowed_package_names6b4981eb",
+                        },
+                    },
+                    IosSettings = new IOSKeySettings
+                    {
+                        AllowedBundleIds =
+                        {
+                            "allowed_bundle_ids7fb7895f",
+                        },
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Key expectedResponse = new Key
             {
                 KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
                 DisplayName = "display_name137f65c2",
-                WebSettings = new WebKeySettings(),
-                AndroidSettings = new AndroidKeySettings(),
-                IosSettings = new IOSKeySettings(),
+                WebSettings = new WebKeySettings
+                {
+                    AllowedDomains =
+                    {
+                        "allowed_domains1cb97697",
+                    },
+                    AllowAmpTraffic = false,
+                    AllowAllDomains = false,
+                    IntegrationType = WebKeySettings.Types.IntegrationType.Invisible,
+                    ChallengeSecurityPreference = WebKeySettings.Types.ChallengeSecurityPreference.Usability,
+                },
+                AndroidSettings = new AndroidKeySettings
+                {
+                    AllowedPackageNames =
+                    {
+                        "allowed_package_names6b4981eb",
+                    },
+                },
+                IosSettings = new IOSKeySettings
+                {
+                    AllowedBundleIds =
+                    {
+                        "allowed_bundle_ids7fb7895f",
+                    },
+                },
                 Labels =
                 {
                     {
@@ -465,7 +1123,11 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                         "value60c16320"
                     },
                 },
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Key>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
