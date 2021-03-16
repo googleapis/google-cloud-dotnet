@@ -55,7 +55,11 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
                 Host = "hosta8dbb367",
                 Port = -78310000,
                 CurrentLocationId = "current_location_id65ef644c",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Instance.Types.State.Updating,
                 StatusMessage = "status_message2c618f86",
                 RedisConfigs =
@@ -105,7 +109,11 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
                 Host = "hosta8dbb367",
                 Port = -78310000,
                 CurrentLocationId = "current_location_id65ef644c",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Instance.Types.State.Updating,
                 StatusMessage = "status_message2c618f86",
                 RedisConfigs =
@@ -157,7 +165,11 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
                 Host = "hosta8dbb367",
                 Port = -78310000,
                 CurrentLocationId = "current_location_id65ef644c",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Instance.Types.State.Updating,
                 StatusMessage = "status_message2c618f86",
                 RedisConfigs =
@@ -207,7 +219,11 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
                 Host = "hosta8dbb367",
                 Port = -78310000,
                 CurrentLocationId = "current_location_id65ef644c",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Instance.Types.State.Updating,
                 StatusMessage = "status_message2c618f86",
                 RedisConfigs =
@@ -259,7 +275,11 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
                 Host = "hosta8dbb367",
                 Port = -78310000,
                 CurrentLocationId = "current_location_id65ef644c",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Instance.Types.State.Updating,
                 StatusMessage = "status_message2c618f86",
                 RedisConfigs =
@@ -309,7 +329,11 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
                 Host = "hosta8dbb367",
                 Port = -78310000,
                 CurrentLocationId = "current_location_id65ef644c",
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Instance.Types.State.Updating,
                 StatusMessage = "status_message2c618f86",
                 RedisConfigs =
