@@ -40,12 +40,20 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                     "delegates331d18f6",
                 },
                 Scope = { "scope14fda131", },
-                Lifetime = new wkt::Duration(),
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             GenerateAccessTokenResponse expectedResponse = new GenerateAccessTokenResponse
             {
                 AccessToken = "access_token85826cd8",
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GenerateAccessToken(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
@@ -66,12 +74,20 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                     "delegates331d18f6",
                 },
                 Scope = { "scope14fda131", },
-                Lifetime = new wkt::Duration(),
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             GenerateAccessTokenResponse expectedResponse = new GenerateAccessTokenResponse
             {
                 AccessToken = "access_token85826cd8",
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GenerateAccessTokenAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateAccessTokenResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
@@ -94,12 +110,20 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                     "delegates331d18f6",
                 },
                 Scope = { "scope14fda131", },
-                Lifetime = new wkt::Duration(),
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             GenerateAccessTokenResponse expectedResponse = new GenerateAccessTokenResponse
             {
                 AccessToken = "access_token85826cd8",
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GenerateAccessToken(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
@@ -120,12 +144,20 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                     "delegates331d18f6",
                 },
                 Scope = { "scope14fda131", },
-                Lifetime = new wkt::Duration(),
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             GenerateAccessTokenResponse expectedResponse = new GenerateAccessTokenResponse
             {
                 AccessToken = "access_token85826cd8",
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GenerateAccessTokenAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateAccessTokenResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
@@ -148,12 +180,20 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                     "delegates331d18f6",
                 },
                 Scope = { "scope14fda131", },
-                Lifetime = new wkt::Duration(),
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             GenerateAccessTokenResponse expectedResponse = new GenerateAccessTokenResponse
             {
                 AccessToken = "access_token85826cd8",
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GenerateAccessToken(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
@@ -174,12 +214,20 @@ namespace Google.Cloud.Iam.Credentials.V1.Tests
                     "delegates331d18f6",
                 },
                 Scope = { "scope14fda131", },
-                Lifetime = new wkt::Duration(),
+                Lifetime = new wkt::Duration
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             GenerateAccessTokenResponse expectedResponse = new GenerateAccessTokenResponse
             {
                 AccessToken = "access_token85826cd8",
-                ExpireTime = new wkt::Timestamp(),
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             mockGrpcClient.Setup(x => x.GenerateAccessTokenAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GenerateAccessTokenResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IAMCredentialsClient client = new IAMCredentialsClientImpl(mockGrpcClient.Object, null);
