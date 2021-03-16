@@ -17,6 +17,7 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -40,8 +41,16 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             Service expectedResponse = new Service
             {
                 ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -49,7 +58,26 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                         "value60c16320"
                     },
                 },
-                HiveMetastoreConfig = new HiveMetastoreConfig(),
+                HiveMetastoreConfig = new HiveMetastoreConfig
+                {
+                    Version = "version102ff72a",
+                    ConfigOverrides =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    KerberosConfig = new KerberosConfig
+                    {
+                        Keytab = new Secret
+                        {
+                            CloudSecret = "cloud_secret43b25b31",
+                        },
+                        Principal = "principala915d7e7",
+                        Krb5ConfigGcsUri = "krb5_config_gcs_uriddd4079f",
+                    },
+                },
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 EndpointUri = "endpoint_uri59c03c94",
                 Port = -78310000,
@@ -57,10 +85,58 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 StateMessage = "state_message46cf28c0",
                 ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
                 Tier = Service.Types.Tier.Developer,
-                MetadataIntegration = new MetadataIntegration(),
-                MaintenanceWindow = new MaintenanceWindow(),
+                MetadataIntegration = new MetadataIntegration
+                {
+                    DataCatalogConfig = new DataCatalogConfig { Enabled = true, },
+                },
+                MaintenanceWindow = new MaintenanceWindow
+                {
+                    HourOfDay = 697281791,
+                    DayOfWeek = gt::DayOfWeek.Thursday,
+                },
                 Uid = "uida2d37198",
-                MetadataManagementActivity = new MetadataManagementActivity(),
+                MetadataManagementActivity = new MetadataManagementActivity
+                {
+                    MetadataExports =
+                    {
+                        new MetadataExport
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            State = MetadataExport.Types.State.Failed,
+                            DestinationGcsUri = "destination_gcs_uri0793fa8c",
+                            DatabaseDumpType = DatabaseDumpSpec.Types.Type.Unspecified,
+                        },
+                    },
+                    Restores =
+                    {
+                        new Restore
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            State = Restore.Types.State.Failed,
+                            BackupAsBackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                            Type = Restore.Types.RestoreType.Unspecified,
+                            Details = "details47297927",
+                        },
+                    },
+                },
                 ReleaseChannel = Service.Types.ReleaseChannel.Stable,
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -82,8 +158,16 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             Service expectedResponse = new Service
             {
                 ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -91,7 +175,26 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                         "value60c16320"
                     },
                 },
-                HiveMetastoreConfig = new HiveMetastoreConfig(),
+                HiveMetastoreConfig = new HiveMetastoreConfig
+                {
+                    Version = "version102ff72a",
+                    ConfigOverrides =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    KerberosConfig = new KerberosConfig
+                    {
+                        Keytab = new Secret
+                        {
+                            CloudSecret = "cloud_secret43b25b31",
+                        },
+                        Principal = "principala915d7e7",
+                        Krb5ConfigGcsUri = "krb5_config_gcs_uriddd4079f",
+                    },
+                },
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 EndpointUri = "endpoint_uri59c03c94",
                 Port = -78310000,
@@ -99,10 +202,58 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 StateMessage = "state_message46cf28c0",
                 ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
                 Tier = Service.Types.Tier.Developer,
-                MetadataIntegration = new MetadataIntegration(),
-                MaintenanceWindow = new MaintenanceWindow(),
+                MetadataIntegration = new MetadataIntegration
+                {
+                    DataCatalogConfig = new DataCatalogConfig { Enabled = true, },
+                },
+                MaintenanceWindow = new MaintenanceWindow
+                {
+                    HourOfDay = 697281791,
+                    DayOfWeek = gt::DayOfWeek.Thursday,
+                },
                 Uid = "uida2d37198",
-                MetadataManagementActivity = new MetadataManagementActivity(),
+                MetadataManagementActivity = new MetadataManagementActivity
+                {
+                    MetadataExports =
+                    {
+                        new MetadataExport
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            State = MetadataExport.Types.State.Failed,
+                            DestinationGcsUri = "destination_gcs_uri0793fa8c",
+                            DatabaseDumpType = DatabaseDumpSpec.Types.Type.Unspecified,
+                        },
+                    },
+                    Restores =
+                    {
+                        new Restore
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            State = Restore.Types.State.Failed,
+                            BackupAsBackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                            Type = Restore.Types.RestoreType.Unspecified,
+                            Details = "details47297927",
+                        },
+                    },
+                },
                 ReleaseChannel = Service.Types.ReleaseChannel.Stable,
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -126,8 +277,16 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             Service expectedResponse = new Service
             {
                 ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -135,7 +294,26 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                         "value60c16320"
                     },
                 },
-                HiveMetastoreConfig = new HiveMetastoreConfig(),
+                HiveMetastoreConfig = new HiveMetastoreConfig
+                {
+                    Version = "version102ff72a",
+                    ConfigOverrides =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    KerberosConfig = new KerberosConfig
+                    {
+                        Keytab = new Secret
+                        {
+                            CloudSecret = "cloud_secret43b25b31",
+                        },
+                        Principal = "principala915d7e7",
+                        Krb5ConfigGcsUri = "krb5_config_gcs_uriddd4079f",
+                    },
+                },
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 EndpointUri = "endpoint_uri59c03c94",
                 Port = -78310000,
@@ -143,10 +321,58 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 StateMessage = "state_message46cf28c0",
                 ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
                 Tier = Service.Types.Tier.Developer,
-                MetadataIntegration = new MetadataIntegration(),
-                MaintenanceWindow = new MaintenanceWindow(),
+                MetadataIntegration = new MetadataIntegration
+                {
+                    DataCatalogConfig = new DataCatalogConfig { Enabled = true, },
+                },
+                MaintenanceWindow = new MaintenanceWindow
+                {
+                    HourOfDay = 697281791,
+                    DayOfWeek = gt::DayOfWeek.Thursday,
+                },
                 Uid = "uida2d37198",
-                MetadataManagementActivity = new MetadataManagementActivity(),
+                MetadataManagementActivity = new MetadataManagementActivity
+                {
+                    MetadataExports =
+                    {
+                        new MetadataExport
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            State = MetadataExport.Types.State.Failed,
+                            DestinationGcsUri = "destination_gcs_uri0793fa8c",
+                            DatabaseDumpType = DatabaseDumpSpec.Types.Type.Unspecified,
+                        },
+                    },
+                    Restores =
+                    {
+                        new Restore
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            State = Restore.Types.State.Failed,
+                            BackupAsBackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                            Type = Restore.Types.RestoreType.Unspecified,
+                            Details = "details47297927",
+                        },
+                    },
+                },
                 ReleaseChannel = Service.Types.ReleaseChannel.Stable,
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -168,8 +394,16 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             Service expectedResponse = new Service
             {
                 ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -177,7 +411,26 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                         "value60c16320"
                     },
                 },
-                HiveMetastoreConfig = new HiveMetastoreConfig(),
+                HiveMetastoreConfig = new HiveMetastoreConfig
+                {
+                    Version = "version102ff72a",
+                    ConfigOverrides =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    KerberosConfig = new KerberosConfig
+                    {
+                        Keytab = new Secret
+                        {
+                            CloudSecret = "cloud_secret43b25b31",
+                        },
+                        Principal = "principala915d7e7",
+                        Krb5ConfigGcsUri = "krb5_config_gcs_uriddd4079f",
+                    },
+                },
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 EndpointUri = "endpoint_uri59c03c94",
                 Port = -78310000,
@@ -185,10 +438,58 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 StateMessage = "state_message46cf28c0",
                 ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
                 Tier = Service.Types.Tier.Developer,
-                MetadataIntegration = new MetadataIntegration(),
-                MaintenanceWindow = new MaintenanceWindow(),
+                MetadataIntegration = new MetadataIntegration
+                {
+                    DataCatalogConfig = new DataCatalogConfig { Enabled = true, },
+                },
+                MaintenanceWindow = new MaintenanceWindow
+                {
+                    HourOfDay = 697281791,
+                    DayOfWeek = gt::DayOfWeek.Thursday,
+                },
                 Uid = "uida2d37198",
-                MetadataManagementActivity = new MetadataManagementActivity(),
+                MetadataManagementActivity = new MetadataManagementActivity
+                {
+                    MetadataExports =
+                    {
+                        new MetadataExport
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            State = MetadataExport.Types.State.Failed,
+                            DestinationGcsUri = "destination_gcs_uri0793fa8c",
+                            DatabaseDumpType = DatabaseDumpSpec.Types.Type.Unspecified,
+                        },
+                    },
+                    Restores =
+                    {
+                        new Restore
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            State = Restore.Types.State.Failed,
+                            BackupAsBackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                            Type = Restore.Types.RestoreType.Unspecified,
+                            Details = "details47297927",
+                        },
+                    },
+                },
                 ReleaseChannel = Service.Types.ReleaseChannel.Stable,
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -212,8 +513,16 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             Service expectedResponse = new Service
             {
                 ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -221,7 +530,26 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                         "value60c16320"
                     },
                 },
-                HiveMetastoreConfig = new HiveMetastoreConfig(),
+                HiveMetastoreConfig = new HiveMetastoreConfig
+                {
+                    Version = "version102ff72a",
+                    ConfigOverrides =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    KerberosConfig = new KerberosConfig
+                    {
+                        Keytab = new Secret
+                        {
+                            CloudSecret = "cloud_secret43b25b31",
+                        },
+                        Principal = "principala915d7e7",
+                        Krb5ConfigGcsUri = "krb5_config_gcs_uriddd4079f",
+                    },
+                },
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 EndpointUri = "endpoint_uri59c03c94",
                 Port = -78310000,
@@ -229,10 +557,58 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 StateMessage = "state_message46cf28c0",
                 ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
                 Tier = Service.Types.Tier.Developer,
-                MetadataIntegration = new MetadataIntegration(),
-                MaintenanceWindow = new MaintenanceWindow(),
+                MetadataIntegration = new MetadataIntegration
+                {
+                    DataCatalogConfig = new DataCatalogConfig { Enabled = true, },
+                },
+                MaintenanceWindow = new MaintenanceWindow
+                {
+                    HourOfDay = 697281791,
+                    DayOfWeek = gt::DayOfWeek.Thursday,
+                },
                 Uid = "uida2d37198",
-                MetadataManagementActivity = new MetadataManagementActivity(),
+                MetadataManagementActivity = new MetadataManagementActivity
+                {
+                    MetadataExports =
+                    {
+                        new MetadataExport
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            State = MetadataExport.Types.State.Failed,
+                            DestinationGcsUri = "destination_gcs_uri0793fa8c",
+                            DatabaseDumpType = DatabaseDumpSpec.Types.Type.Unspecified,
+                        },
+                    },
+                    Restores =
+                    {
+                        new Restore
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            State = Restore.Types.State.Failed,
+                            BackupAsBackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                            Type = Restore.Types.RestoreType.Unspecified,
+                            Details = "details47297927",
+                        },
+                    },
+                },
                 ReleaseChannel = Service.Types.ReleaseChannel.Stable,
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -254,8 +630,16 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             Service expectedResponse = new Service
             {
                 ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -263,7 +647,26 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                         "value60c16320"
                     },
                 },
-                HiveMetastoreConfig = new HiveMetastoreConfig(),
+                HiveMetastoreConfig = new HiveMetastoreConfig
+                {
+                    Version = "version102ff72a",
+                    ConfigOverrides =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    KerberosConfig = new KerberosConfig
+                    {
+                        Keytab = new Secret
+                        {
+                            CloudSecret = "cloud_secret43b25b31",
+                        },
+                        Principal = "principala915d7e7",
+                        Krb5ConfigGcsUri = "krb5_config_gcs_uriddd4079f",
+                    },
+                },
                 NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 EndpointUri = "endpoint_uri59c03c94",
                 Port = -78310000,
@@ -271,10 +674,58 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 StateMessage = "state_message46cf28c0",
                 ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
                 Tier = Service.Types.Tier.Developer,
-                MetadataIntegration = new MetadataIntegration(),
-                MaintenanceWindow = new MaintenanceWindow(),
+                MetadataIntegration = new MetadataIntegration
+                {
+                    DataCatalogConfig = new DataCatalogConfig { Enabled = true, },
+                },
+                MaintenanceWindow = new MaintenanceWindow
+                {
+                    HourOfDay = 697281791,
+                    DayOfWeek = gt::DayOfWeek.Thursday,
+                },
                 Uid = "uida2d37198",
-                MetadataManagementActivity = new MetadataManagementActivity(),
+                MetadataManagementActivity = new MetadataManagementActivity
+                {
+                    MetadataExports =
+                    {
+                        new MetadataExport
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            State = MetadataExport.Types.State.Failed,
+                            DestinationGcsUri = "destination_gcs_uri0793fa8c",
+                            DatabaseDumpType = DatabaseDumpSpec.Types.Type.Unspecified,
+                        },
+                    },
+                    Restores =
+                    {
+                        new Restore
+                        {
+                            StartTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            EndTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            State = Restore.Types.State.Failed,
+                            BackupAsBackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                            Type = Restore.Types.RestoreType.Unspecified,
+                            Details = "details47297927",
+                        },
+                    },
+                },
                 ReleaseChannel = Service.Types.ReleaseChannel.Stable,
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -299,10 +750,28 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             {
                 MetadataImportName = MetadataImportName.FromProjectLocationServiceMetadataImport("[PROJECT]", "[LOCATION]", "[SERVICE]", "[METADATA_IMPORT]"),
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = MetadataImport.Types.State.Updating,
-                DatabaseDump = new MetadataImport.Types.DatabaseDump(),
+                DatabaseDump = new MetadataImport.Types.DatabaseDump
+                {
+#pragma warning disable CS0612
+                    DatabaseType = MetadataImport.Types.DatabaseDump.Types.DatabaseType.Mysql,
+#pragma warning restore CS0612
+                    GcsUri = "gcs_uric5579bcf",
+#pragma warning disable CS0612
+                    SourceDatabase = "source_databaseba3e0d78",
+#pragma warning restore CS0612
+                    Type = DatabaseDumpSpec.Types.Type.Mysql,
+                },
             };
             mockGrpcClient.Setup(x => x.GetMetadataImport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -324,10 +793,28 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             {
                 MetadataImportName = MetadataImportName.FromProjectLocationServiceMetadataImport("[PROJECT]", "[LOCATION]", "[SERVICE]", "[METADATA_IMPORT]"),
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = MetadataImport.Types.State.Updating,
-                DatabaseDump = new MetadataImport.Types.DatabaseDump(),
+                DatabaseDump = new MetadataImport.Types.DatabaseDump
+                {
+#pragma warning disable CS0612
+                    DatabaseType = MetadataImport.Types.DatabaseDump.Types.DatabaseType.Mysql,
+#pragma warning restore CS0612
+                    GcsUri = "gcs_uric5579bcf",
+#pragma warning disable CS0612
+                    SourceDatabase = "source_databaseba3e0d78",
+#pragma warning restore CS0612
+                    Type = DatabaseDumpSpec.Types.Type.Mysql,
+                },
             };
             mockGrpcClient.Setup(x => x.GetMetadataImportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MetadataImport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -351,10 +838,28 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             {
                 MetadataImportName = MetadataImportName.FromProjectLocationServiceMetadataImport("[PROJECT]", "[LOCATION]", "[SERVICE]", "[METADATA_IMPORT]"),
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = MetadataImport.Types.State.Updating,
-                DatabaseDump = new MetadataImport.Types.DatabaseDump(),
+                DatabaseDump = new MetadataImport.Types.DatabaseDump
+                {
+#pragma warning disable CS0612
+                    DatabaseType = MetadataImport.Types.DatabaseDump.Types.DatabaseType.Mysql,
+#pragma warning restore CS0612
+                    GcsUri = "gcs_uric5579bcf",
+#pragma warning disable CS0612
+                    SourceDatabase = "source_databaseba3e0d78",
+#pragma warning restore CS0612
+                    Type = DatabaseDumpSpec.Types.Type.Mysql,
+                },
             };
             mockGrpcClient.Setup(x => x.GetMetadataImport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -376,10 +881,28 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             {
                 MetadataImportName = MetadataImportName.FromProjectLocationServiceMetadataImport("[PROJECT]", "[LOCATION]", "[SERVICE]", "[METADATA_IMPORT]"),
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = MetadataImport.Types.State.Updating,
-                DatabaseDump = new MetadataImport.Types.DatabaseDump(),
+                DatabaseDump = new MetadataImport.Types.DatabaseDump
+                {
+#pragma warning disable CS0612
+                    DatabaseType = MetadataImport.Types.DatabaseDump.Types.DatabaseType.Mysql,
+#pragma warning restore CS0612
+                    GcsUri = "gcs_uric5579bcf",
+#pragma warning disable CS0612
+                    SourceDatabase = "source_databaseba3e0d78",
+#pragma warning restore CS0612
+                    Type = DatabaseDumpSpec.Types.Type.Mysql,
+                },
             };
             mockGrpcClient.Setup(x => x.GetMetadataImportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MetadataImport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -403,10 +926,28 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             {
                 MetadataImportName = MetadataImportName.FromProjectLocationServiceMetadataImport("[PROJECT]", "[LOCATION]", "[SERVICE]", "[METADATA_IMPORT]"),
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = MetadataImport.Types.State.Updating,
-                DatabaseDump = new MetadataImport.Types.DatabaseDump(),
+                DatabaseDump = new MetadataImport.Types.DatabaseDump
+                {
+#pragma warning disable CS0612
+                    DatabaseType = MetadataImport.Types.DatabaseDump.Types.DatabaseType.Mysql,
+#pragma warning restore CS0612
+                    GcsUri = "gcs_uric5579bcf",
+#pragma warning disable CS0612
+                    SourceDatabase = "source_databaseba3e0d78",
+#pragma warning restore CS0612
+                    Type = DatabaseDumpSpec.Types.Type.Mysql,
+                },
             };
             mockGrpcClient.Setup(x => x.GetMetadataImport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -428,10 +969,28 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             {
                 MetadataImportName = MetadataImportName.FromProjectLocationServiceMetadataImport("[PROJECT]", "[LOCATION]", "[SERVICE]", "[METADATA_IMPORT]"),
                 Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = MetadataImport.Types.State.Updating,
-                DatabaseDump = new MetadataImport.Types.DatabaseDump(),
+                DatabaseDump = new MetadataImport.Types.DatabaseDump
+                {
+#pragma warning disable CS0612
+                    DatabaseType = MetadataImport.Types.DatabaseDump.Types.DatabaseType.Mysql,
+#pragma warning restore CS0612
+                    GcsUri = "gcs_uric5579bcf",
+#pragma warning disable CS0612
+                    SourceDatabase = "source_databaseba3e0d78",
+#pragma warning restore CS0612
+                    Type = DatabaseDumpSpec.Types.Type.Mysql,
+                },
             };
             mockGrpcClient.Setup(x => x.GetMetadataImportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MetadataImport>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -454,10 +1013,118 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
-                CreateTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Backup.Types.State.Active,
-                ServiceRevision = new Service(),
+                ServiceRevision = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    HiveMetastoreConfig = new HiveMetastoreConfig
+                    {
+                        Version = "version102ff72a",
+                        ConfigOverrides =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        KerberosConfig = new KerberosConfig
+                        {
+                            Keytab = new Secret
+                            {
+                                CloudSecret = "cloud_secret43b25b31",
+                            },
+                            Principal = "principala915d7e7",
+                            Krb5ConfigGcsUri = "krb5_config_gcs_uriddd4079f",
+                        },
+                    },
+                    NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                    EndpointUri = "endpoint_uri59c03c94",
+                    Port = -78310000,
+                    State = Service.Types.State.Deleting,
+                    StateMessage = "state_message46cf28c0",
+                    ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
+                    Tier = Service.Types.Tier.Developer,
+                    MetadataIntegration = new MetadataIntegration
+                    {
+                        DataCatalogConfig = new DataCatalogConfig { Enabled = true, },
+                    },
+                    MaintenanceWindow = new MaintenanceWindow
+                    {
+                        HourOfDay = 697281791,
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Uid = "uida2d37198",
+                    MetadataManagementActivity = new MetadataManagementActivity
+                    {
+                        MetadataExports =
+                        {
+                            new MetadataExport
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                State = MetadataExport.Types.State.Failed,
+                                DestinationGcsUri = "destination_gcs_uri0793fa8c",
+                                DatabaseDumpType = DatabaseDumpSpec.Types.Type.Unspecified,
+                            },
+                        },
+                        Restores =
+                        {
+                            new Restore
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                State = Restore.Types.State.Failed,
+                                BackupAsBackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                                Type = Restore.Types.RestoreType.Unspecified,
+                                Details = "details47297927",
+                            },
+                        },
+                    },
+                    ReleaseChannel = Service.Types.ReleaseChannel.Stable,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -479,10 +1146,118 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
-                CreateTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Backup.Types.State.Active,
-                ServiceRevision = new Service(),
+                ServiceRevision = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    HiveMetastoreConfig = new HiveMetastoreConfig
+                    {
+                        Version = "version102ff72a",
+                        ConfigOverrides =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        KerberosConfig = new KerberosConfig
+                        {
+                            Keytab = new Secret
+                            {
+                                CloudSecret = "cloud_secret43b25b31",
+                            },
+                            Principal = "principala915d7e7",
+                            Krb5ConfigGcsUri = "krb5_config_gcs_uriddd4079f",
+                        },
+                    },
+                    NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                    EndpointUri = "endpoint_uri59c03c94",
+                    Port = -78310000,
+                    State = Service.Types.State.Deleting,
+                    StateMessage = "state_message46cf28c0",
+                    ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
+                    Tier = Service.Types.Tier.Developer,
+                    MetadataIntegration = new MetadataIntegration
+                    {
+                        DataCatalogConfig = new DataCatalogConfig { Enabled = true, },
+                    },
+                    MaintenanceWindow = new MaintenanceWindow
+                    {
+                        HourOfDay = 697281791,
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Uid = "uida2d37198",
+                    MetadataManagementActivity = new MetadataManagementActivity
+                    {
+                        MetadataExports =
+                        {
+                            new MetadataExport
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                State = MetadataExport.Types.State.Failed,
+                                DestinationGcsUri = "destination_gcs_uri0793fa8c",
+                                DatabaseDumpType = DatabaseDumpSpec.Types.Type.Unspecified,
+                            },
+                        },
+                        Restores =
+                        {
+                            new Restore
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                State = Restore.Types.State.Failed,
+                                BackupAsBackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                                Type = Restore.Types.RestoreType.Unspecified,
+                                Details = "details47297927",
+                            },
+                        },
+                    },
+                    ReleaseChannel = Service.Types.ReleaseChannel.Stable,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -506,10 +1281,118 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
-                CreateTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Backup.Types.State.Active,
-                ServiceRevision = new Service(),
+                ServiceRevision = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    HiveMetastoreConfig = new HiveMetastoreConfig
+                    {
+                        Version = "version102ff72a",
+                        ConfigOverrides =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        KerberosConfig = new KerberosConfig
+                        {
+                            Keytab = new Secret
+                            {
+                                CloudSecret = "cloud_secret43b25b31",
+                            },
+                            Principal = "principala915d7e7",
+                            Krb5ConfigGcsUri = "krb5_config_gcs_uriddd4079f",
+                        },
+                    },
+                    NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                    EndpointUri = "endpoint_uri59c03c94",
+                    Port = -78310000,
+                    State = Service.Types.State.Deleting,
+                    StateMessage = "state_message46cf28c0",
+                    ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
+                    Tier = Service.Types.Tier.Developer,
+                    MetadataIntegration = new MetadataIntegration
+                    {
+                        DataCatalogConfig = new DataCatalogConfig { Enabled = true, },
+                    },
+                    MaintenanceWindow = new MaintenanceWindow
+                    {
+                        HourOfDay = 697281791,
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Uid = "uida2d37198",
+                    MetadataManagementActivity = new MetadataManagementActivity
+                    {
+                        MetadataExports =
+                        {
+                            new MetadataExport
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                State = MetadataExport.Types.State.Failed,
+                                DestinationGcsUri = "destination_gcs_uri0793fa8c",
+                                DatabaseDumpType = DatabaseDumpSpec.Types.Type.Unspecified,
+                            },
+                        },
+                        Restores =
+                        {
+                            new Restore
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                State = Restore.Types.State.Failed,
+                                BackupAsBackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                                Type = Restore.Types.RestoreType.Unspecified,
+                                Details = "details47297927",
+                            },
+                        },
+                    },
+                    ReleaseChannel = Service.Types.ReleaseChannel.Stable,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -531,10 +1414,118 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
-                CreateTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Backup.Types.State.Active,
-                ServiceRevision = new Service(),
+                ServiceRevision = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    HiveMetastoreConfig = new HiveMetastoreConfig
+                    {
+                        Version = "version102ff72a",
+                        ConfigOverrides =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        KerberosConfig = new KerberosConfig
+                        {
+                            Keytab = new Secret
+                            {
+                                CloudSecret = "cloud_secret43b25b31",
+                            },
+                            Principal = "principala915d7e7",
+                            Krb5ConfigGcsUri = "krb5_config_gcs_uriddd4079f",
+                        },
+                    },
+                    NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                    EndpointUri = "endpoint_uri59c03c94",
+                    Port = -78310000,
+                    State = Service.Types.State.Deleting,
+                    StateMessage = "state_message46cf28c0",
+                    ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
+                    Tier = Service.Types.Tier.Developer,
+                    MetadataIntegration = new MetadataIntegration
+                    {
+                        DataCatalogConfig = new DataCatalogConfig { Enabled = true, },
+                    },
+                    MaintenanceWindow = new MaintenanceWindow
+                    {
+                        HourOfDay = 697281791,
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Uid = "uida2d37198",
+                    MetadataManagementActivity = new MetadataManagementActivity
+                    {
+                        MetadataExports =
+                        {
+                            new MetadataExport
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                State = MetadataExport.Types.State.Failed,
+                                DestinationGcsUri = "destination_gcs_uri0793fa8c",
+                                DatabaseDumpType = DatabaseDumpSpec.Types.Type.Unspecified,
+                            },
+                        },
+                        Restores =
+                        {
+                            new Restore
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                State = Restore.Types.State.Failed,
+                                BackupAsBackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                                Type = Restore.Types.RestoreType.Unspecified,
+                                Details = "details47297927",
+                            },
+                        },
+                    },
+                    ReleaseChannel = Service.Types.ReleaseChannel.Stable,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -558,10 +1549,118 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
-                CreateTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Backup.Types.State.Active,
-                ServiceRevision = new Service(),
+                ServiceRevision = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    HiveMetastoreConfig = new HiveMetastoreConfig
+                    {
+                        Version = "version102ff72a",
+                        ConfigOverrides =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        KerberosConfig = new KerberosConfig
+                        {
+                            Keytab = new Secret
+                            {
+                                CloudSecret = "cloud_secret43b25b31",
+                            },
+                            Principal = "principala915d7e7",
+                            Krb5ConfigGcsUri = "krb5_config_gcs_uriddd4079f",
+                        },
+                    },
+                    NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                    EndpointUri = "endpoint_uri59c03c94",
+                    Port = -78310000,
+                    State = Service.Types.State.Deleting,
+                    StateMessage = "state_message46cf28c0",
+                    ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
+                    Tier = Service.Types.Tier.Developer,
+                    MetadataIntegration = new MetadataIntegration
+                    {
+                        DataCatalogConfig = new DataCatalogConfig { Enabled = true, },
+                    },
+                    MaintenanceWindow = new MaintenanceWindow
+                    {
+                        HourOfDay = 697281791,
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Uid = "uida2d37198",
+                    MetadataManagementActivity = new MetadataManagementActivity
+                    {
+                        MetadataExports =
+                        {
+                            new MetadataExport
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                State = MetadataExport.Types.State.Failed,
+                                DestinationGcsUri = "destination_gcs_uri0793fa8c",
+                                DatabaseDumpType = DatabaseDumpSpec.Types.Type.Unspecified,
+                            },
+                        },
+                        Restores =
+                        {
+                            new Restore
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                State = Restore.Types.State.Failed,
+                                BackupAsBackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                                Type = Restore.Types.RestoreType.Unspecified,
+                                Details = "details47297927",
+                            },
+                        },
+                    },
+                    ReleaseChannel = Service.Types.ReleaseChannel.Stable,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -583,10 +1682,118 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
-                CreateTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                EndTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Backup.Types.State.Active,
-                ServiceRevision = new Service(),
+                ServiceRevision = new Service
+                {
+                    ServiceName = ServiceName.FromProjectLocationService("[PROJECT]", "[LOCATION]", "[SERVICE]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    HiveMetastoreConfig = new HiveMetastoreConfig
+                    {
+                        Version = "version102ff72a",
+                        ConfigOverrides =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        KerberosConfig = new KerberosConfig
+                        {
+                            Keytab = new Secret
+                            {
+                                CloudSecret = "cloud_secret43b25b31",
+                            },
+                            Principal = "principala915d7e7",
+                            Krb5ConfigGcsUri = "krb5_config_gcs_uriddd4079f",
+                        },
+                    },
+                    NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
+                    EndpointUri = "endpoint_uri59c03c94",
+                    Port = -78310000,
+                    State = Service.Types.State.Deleting,
+                    StateMessage = "state_message46cf28c0",
+                    ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
+                    Tier = Service.Types.Tier.Developer,
+                    MetadataIntegration = new MetadataIntegration
+                    {
+                        DataCatalogConfig = new DataCatalogConfig { Enabled = true, },
+                    },
+                    MaintenanceWindow = new MaintenanceWindow
+                    {
+                        HourOfDay = 697281791,
+                        DayOfWeek = gt::DayOfWeek.Thursday,
+                    },
+                    Uid = "uida2d37198",
+                    MetadataManagementActivity = new MetadataManagementActivity
+                    {
+                        MetadataExports =
+                        {
+                            new MetadataExport
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                State = MetadataExport.Types.State.Failed,
+                                DestinationGcsUri = "destination_gcs_uri0793fa8c",
+                                DatabaseDumpType = DatabaseDumpSpec.Types.Type.Unspecified,
+                            },
+                        },
+                        Restores =
+                        {
+                            new Restore
+                            {
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                EndTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                State = Restore.Types.State.Failed,
+                                BackupAsBackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                                Type = Restore.Types.RestoreType.Unspecified,
+                                Details = "details47297927",
+                            },
+                        },
+                    },
+                    ReleaseChannel = Service.Types.ReleaseChannel.Stable,
+                },
                 Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
