@@ -21,6 +21,7 @@ using gcscv = Google.Cloud.Spanner.Common.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -45,7 +46,15 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             {
                 InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
                 DisplayName = "display_name137f65c2",
-                Replicas = { new ReplicaInfo(), },
+                Replicas =
+                {
+                    new ReplicaInfo
+                    {
+                        Location = "locatione09d18d5",
+                        Type = ReplicaInfo.Types.ReplicaType.Witness,
+                        DefaultLeaderLocation = false,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -67,7 +76,15 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             {
                 InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
                 DisplayName = "display_name137f65c2",
-                Replicas = { new ReplicaInfo(), },
+                Replicas =
+                {
+                    new ReplicaInfo
+                    {
+                        Location = "locatione09d18d5",
+                        Type = ReplicaInfo.Types.ReplicaType.Witness,
+                        DefaultLeaderLocation = false,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -91,7 +108,15 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             {
                 InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
                 DisplayName = "display_name137f65c2",
-                Replicas = { new ReplicaInfo(), },
+                Replicas =
+                {
+                    new ReplicaInfo
+                    {
+                        Location = "locatione09d18d5",
+                        Type = ReplicaInfo.Types.ReplicaType.Witness,
+                        DefaultLeaderLocation = false,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -113,7 +138,15 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             {
                 InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
                 DisplayName = "display_name137f65c2",
-                Replicas = { new ReplicaInfo(), },
+                Replicas =
+                {
+                    new ReplicaInfo
+                    {
+                        Location = "locatione09d18d5",
+                        Type = ReplicaInfo.Types.ReplicaType.Witness,
+                        DefaultLeaderLocation = false,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -137,7 +170,15 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             {
                 InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
                 DisplayName = "display_name137f65c2",
-                Replicas = { new ReplicaInfo(), },
+                Replicas =
+                {
+                    new ReplicaInfo
+                    {
+                        Location = "locatione09d18d5",
+                        Type = ReplicaInfo.Types.ReplicaType.Witness,
+                        DefaultLeaderLocation = false,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -159,7 +200,15 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             {
                 InstanceConfigName = InstanceConfigName.FromProjectInstanceConfig("[PROJECT]", "[INSTANCE_CONFIG]"),
                 DisplayName = "display_name137f65c2",
-                Replicas = { new ReplicaInfo(), },
+                Replicas =
+                {
+                    new ReplicaInfo
+                    {
+                        Location = "locatione09d18d5",
+                        Type = ReplicaInfo.Types.ReplicaType.Witness,
+                        DefaultLeaderLocation = false,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetInstanceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InstanceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstanceAdminClient client = new InstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -178,7 +227,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             GetInstanceRequest request = new GetInstanceRequest
             {
                 InstanceName = gcscv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
-                FieldMask = new wkt::FieldMask(),
+                FieldMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Instance expectedResponse = new Instance
             {
@@ -214,7 +266,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             GetInstanceRequest request = new GetInstanceRequest
             {
                 InstanceName = gcscv::InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
-                FieldMask = new wkt::FieldMask(),
+                FieldMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Instance expectedResponse = new Instance
             {
@@ -495,7 +550,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -503,7 +577,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -521,7 +606,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -529,7 +633,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -549,7 +664,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -557,7 +691,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -575,7 +720,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -583,7 +747,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -603,7 +778,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -611,7 +805,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -629,7 +834,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -637,7 +861,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -657,7 +892,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -665,7 +903,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -683,7 +932,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -691,7 +943,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -718,7 +981,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -743,7 +1017,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -770,7 +1055,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -795,7 +1091,18 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
