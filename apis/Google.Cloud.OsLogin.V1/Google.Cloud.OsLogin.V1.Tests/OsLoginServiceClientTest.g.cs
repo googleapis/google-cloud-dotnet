@@ -229,13 +229,32 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Name = "name1c9368b0",
                 PosixAccounts =
                 {
-                    new gcoc::PosixAccount(),
+                    new gcoc::PosixAccount
+                    {
+                        Primary = true,
+                        Username = "username6bb0c414",
+                        Uid = 8192703879957410200L,
+                        Gid = -1775615093138500819L,
+                        HomeDirectory = "home_directory0fe89954",
+                        Shell = "shell8bc99125",
+                        Gecos = "gecosf68da09b",
+                        SystemId = "system_id43548ac1",
+                        AccountId = "account_id2a9c088a",
+                        OperatingSystemType = gcoc::OperatingSystemType.Windows,
+                        PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
+                    },
                 },
                 SshPublicKeys =
                 {
                     {
                         "key8a0b6e3c",
-                        new gcoc::SshPublicKey()
+                        new gcoc::SshPublicKey
+                        {
+                            Key = "key8a0b6e3c",
+                            ExpirationTimeUsec = -3860803259883837145L,
+                            Fingerprint = "fingerprint009e6052",
+                            SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                        }
                     },
                 },
             };
@@ -261,13 +280,32 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Name = "name1c9368b0",
                 PosixAccounts =
                 {
-                    new gcoc::PosixAccount(),
+                    new gcoc::PosixAccount
+                    {
+                        Primary = true,
+                        Username = "username6bb0c414",
+                        Uid = 8192703879957410200L,
+                        Gid = -1775615093138500819L,
+                        HomeDirectory = "home_directory0fe89954",
+                        Shell = "shell8bc99125",
+                        Gecos = "gecosf68da09b",
+                        SystemId = "system_id43548ac1",
+                        AccountId = "account_id2a9c088a",
+                        OperatingSystemType = gcoc::OperatingSystemType.Windows,
+                        PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
+                    },
                 },
                 SshPublicKeys =
                 {
                     {
                         "key8a0b6e3c",
-                        new gcoc::SshPublicKey()
+                        new gcoc::SshPublicKey
+                        {
+                            Key = "key8a0b6e3c",
+                            ExpirationTimeUsec = -3860803259883837145L,
+                            Fingerprint = "fingerprint009e6052",
+                            SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                        }
                     },
                 },
             };
@@ -293,13 +331,32 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Name = "name1c9368b0",
                 PosixAccounts =
                 {
-                    new gcoc::PosixAccount(),
+                    new gcoc::PosixAccount
+                    {
+                        Primary = true,
+                        Username = "username6bb0c414",
+                        Uid = 8192703879957410200L,
+                        Gid = -1775615093138500819L,
+                        HomeDirectory = "home_directory0fe89954",
+                        Shell = "shell8bc99125",
+                        Gecos = "gecosf68da09b",
+                        SystemId = "system_id43548ac1",
+                        AccountId = "account_id2a9c088a",
+                        OperatingSystemType = gcoc::OperatingSystemType.Windows,
+                        PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
+                    },
                 },
                 SshPublicKeys =
                 {
                     {
                         "key8a0b6e3c",
-                        new gcoc::SshPublicKey()
+                        new gcoc::SshPublicKey
+                        {
+                            Key = "key8a0b6e3c",
+                            ExpirationTimeUsec = -3860803259883837145L,
+                            Fingerprint = "fingerprint009e6052",
+                            SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                        }
                     },
                 },
             };
@@ -323,13 +380,32 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Name = "name1c9368b0",
                 PosixAccounts =
                 {
-                    new gcoc::PosixAccount(),
+                    new gcoc::PosixAccount
+                    {
+                        Primary = true,
+                        Username = "username6bb0c414",
+                        Uid = 8192703879957410200L,
+                        Gid = -1775615093138500819L,
+                        HomeDirectory = "home_directory0fe89954",
+                        Shell = "shell8bc99125",
+                        Gecos = "gecosf68da09b",
+                        SystemId = "system_id43548ac1",
+                        AccountId = "account_id2a9c088a",
+                        OperatingSystemType = gcoc::OperatingSystemType.Windows,
+                        PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
+                    },
                 },
                 SshPublicKeys =
                 {
                     {
                         "key8a0b6e3c",
-                        new gcoc::SshPublicKey()
+                        new gcoc::SshPublicKey
+                        {
+                            Key = "key8a0b6e3c",
+                            ExpirationTimeUsec = -3860803259883837145L,
+                            Fingerprint = "fingerprint009e6052",
+                            SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                        }
                     },
                 },
             };
@@ -355,13 +431,32 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Name = "name1c9368b0",
                 PosixAccounts =
                 {
-                    new gcoc::PosixAccount(),
+                    new gcoc::PosixAccount
+                    {
+                        Primary = true,
+                        Username = "username6bb0c414",
+                        Uid = 8192703879957410200L,
+                        Gid = -1775615093138500819L,
+                        HomeDirectory = "home_directory0fe89954",
+                        Shell = "shell8bc99125",
+                        Gecos = "gecosf68da09b",
+                        SystemId = "system_id43548ac1",
+                        AccountId = "account_id2a9c088a",
+                        OperatingSystemType = gcoc::OperatingSystemType.Windows,
+                        PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
+                    },
                 },
                 SshPublicKeys =
                 {
                     {
                         "key8a0b6e3c",
-                        new gcoc::SshPublicKey()
+                        new gcoc::SshPublicKey
+                        {
+                            Key = "key8a0b6e3c",
+                            ExpirationTimeUsec = -3860803259883837145L,
+                            Fingerprint = "fingerprint009e6052",
+                            SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                        }
                     },
                 },
             };
@@ -385,13 +480,32 @@ namespace Google.Cloud.OsLogin.V1.Tests
                 Name = "name1c9368b0",
                 PosixAccounts =
                 {
-                    new gcoc::PosixAccount(),
+                    new gcoc::PosixAccount
+                    {
+                        Primary = true,
+                        Username = "username6bb0c414",
+                        Uid = 8192703879957410200L,
+                        Gid = -1775615093138500819L,
+                        HomeDirectory = "home_directory0fe89954",
+                        Shell = "shell8bc99125",
+                        Gecos = "gecosf68da09b",
+                        SystemId = "system_id43548ac1",
+                        AccountId = "account_id2a9c088a",
+                        OperatingSystemType = gcoc::OperatingSystemType.Windows,
+                        PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
+                    },
                 },
                 SshPublicKeys =
                 {
                     {
                         "key8a0b6e3c",
-                        new gcoc::SshPublicKey()
+                        new gcoc::SshPublicKey
+                        {
+                            Key = "key8a0b6e3c",
+                            ExpirationTimeUsec = -3860803259883837145L,
+                            Fingerprint = "fingerprint009e6052",
+                            SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                        }
                     },
                 },
             };
@@ -549,12 +663,51 @@ namespace Google.Cloud.OsLogin.V1.Tests
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
                 ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
                 ProjectId = "project_id43ad98b0",
             };
             ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
             {
-                LoginProfile = new LoginProfile(),
+                LoginProfile = new LoginProfile
+                {
+                    Name = "name1c9368b0",
+                    PosixAccounts =
+                    {
+                        new gcoc::PosixAccount
+                        {
+                            Primary = true,
+                            Username = "username6bb0c414",
+                            Uid = 8192703879957410200L,
+                            Gid = -1775615093138500819L,
+                            HomeDirectory = "home_directory0fe89954",
+                            Shell = "shell8bc99125",
+                            Gecos = "gecosf68da09b",
+                            SystemId = "system_id43548ac1",
+                            AccountId = "account_id2a9c088a",
+                            OperatingSystemType = gcoc::OperatingSystemType.Windows,
+                            PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
+                        },
+                    },
+                    SshPublicKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new gcoc::SshPublicKey
+                            {
+                                Key = "key8a0b6e3c",
+                                ExpirationTimeUsec = -3860803259883837145L,
+                                Fingerprint = "fingerprint009e6052",
+                                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                            }
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -570,12 +723,51 @@ namespace Google.Cloud.OsLogin.V1.Tests
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
                 ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
                 ProjectId = "project_id43ad98b0",
             };
             ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
             {
-                LoginProfile = new LoginProfile(),
+                LoginProfile = new LoginProfile
+                {
+                    Name = "name1c9368b0",
+                    PosixAccounts =
+                    {
+                        new gcoc::PosixAccount
+                        {
+                            Primary = true,
+                            Username = "username6bb0c414",
+                            Uid = 8192703879957410200L,
+                            Gid = -1775615093138500819L,
+                            HomeDirectory = "home_directory0fe89954",
+                            Shell = "shell8bc99125",
+                            Gecos = "gecosf68da09b",
+                            SystemId = "system_id43548ac1",
+                            AccountId = "account_id2a9c088a",
+                            OperatingSystemType = gcoc::OperatingSystemType.Windows,
+                            PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
+                        },
+                    },
+                    SshPublicKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new gcoc::SshPublicKey
+                            {
+                                Key = "key8a0b6e3c",
+                                ExpirationTimeUsec = -3860803259883837145L,
+                                Fingerprint = "fingerprint009e6052",
+                                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                            }
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportSshPublicKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -593,11 +785,50 @@ namespace Google.Cloud.OsLogin.V1.Tests
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
                 ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
             };
             ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
             {
-                LoginProfile = new LoginProfile(),
+                LoginProfile = new LoginProfile
+                {
+                    Name = "name1c9368b0",
+                    PosixAccounts =
+                    {
+                        new gcoc::PosixAccount
+                        {
+                            Primary = true,
+                            Username = "username6bb0c414",
+                            Uid = 8192703879957410200L,
+                            Gid = -1775615093138500819L,
+                            HomeDirectory = "home_directory0fe89954",
+                            Shell = "shell8bc99125",
+                            Gecos = "gecosf68da09b",
+                            SystemId = "system_id43548ac1",
+                            AccountId = "account_id2a9c088a",
+                            OperatingSystemType = gcoc::OperatingSystemType.Windows,
+                            PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
+                        },
+                    },
+                    SshPublicKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new gcoc::SshPublicKey
+                            {
+                                Key = "key8a0b6e3c",
+                                ExpirationTimeUsec = -3860803259883837145L,
+                                Fingerprint = "fingerprint009e6052",
+                                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                            }
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -613,11 +844,50 @@ namespace Google.Cloud.OsLogin.V1.Tests
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
                 ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
             };
             ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
             {
-                LoginProfile = new LoginProfile(),
+                LoginProfile = new LoginProfile
+                {
+                    Name = "name1c9368b0",
+                    PosixAccounts =
+                    {
+                        new gcoc::PosixAccount
+                        {
+                            Primary = true,
+                            Username = "username6bb0c414",
+                            Uid = 8192703879957410200L,
+                            Gid = -1775615093138500819L,
+                            HomeDirectory = "home_directory0fe89954",
+                            Shell = "shell8bc99125",
+                            Gecos = "gecosf68da09b",
+                            SystemId = "system_id43548ac1",
+                            AccountId = "account_id2a9c088a",
+                            OperatingSystemType = gcoc::OperatingSystemType.Windows,
+                            PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
+                        },
+                    },
+                    SshPublicKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new gcoc::SshPublicKey
+                            {
+                                Key = "key8a0b6e3c",
+                                ExpirationTimeUsec = -3860803259883837145L,
+                                Fingerprint = "fingerprint009e6052",
+                                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                            }
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportSshPublicKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -635,11 +905,50 @@ namespace Google.Cloud.OsLogin.V1.Tests
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
                 ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
             };
             ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
             {
-                LoginProfile = new LoginProfile(),
+                LoginProfile = new LoginProfile
+                {
+                    Name = "name1c9368b0",
+                    PosixAccounts =
+                    {
+                        new gcoc::PosixAccount
+                        {
+                            Primary = true,
+                            Username = "username6bb0c414",
+                            Uid = 8192703879957410200L,
+                            Gid = -1775615093138500819L,
+                            HomeDirectory = "home_directory0fe89954",
+                            Shell = "shell8bc99125",
+                            Gecos = "gecosf68da09b",
+                            SystemId = "system_id43548ac1",
+                            AccountId = "account_id2a9c088a",
+                            OperatingSystemType = gcoc::OperatingSystemType.Windows,
+                            PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
+                        },
+                    },
+                    SshPublicKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new gcoc::SshPublicKey
+                            {
+                                Key = "key8a0b6e3c",
+                                ExpirationTimeUsec = -3860803259883837145L,
+                                Fingerprint = "fingerprint009e6052",
+                                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                            }
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -655,11 +964,50 @@ namespace Google.Cloud.OsLogin.V1.Tests
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
                 ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
             };
             ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
             {
-                LoginProfile = new LoginProfile(),
+                LoginProfile = new LoginProfile
+                {
+                    Name = "name1c9368b0",
+                    PosixAccounts =
+                    {
+                        new gcoc::PosixAccount
+                        {
+                            Primary = true,
+                            Username = "username6bb0c414",
+                            Uid = 8192703879957410200L,
+                            Gid = -1775615093138500819L,
+                            HomeDirectory = "home_directory0fe89954",
+                            Shell = "shell8bc99125",
+                            Gecos = "gecosf68da09b",
+                            SystemId = "system_id43548ac1",
+                            AccountId = "account_id2a9c088a",
+                            OperatingSystemType = gcoc::OperatingSystemType.Windows,
+                            PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
+                        },
+                    },
+                    SshPublicKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new gcoc::SshPublicKey
+                            {
+                                Key = "key8a0b6e3c",
+                                ExpirationTimeUsec = -3860803259883837145L,
+                                Fingerprint = "fingerprint009e6052",
+                                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                            }
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportSshPublicKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -677,12 +1025,51 @@ namespace Google.Cloud.OsLogin.V1.Tests
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
                 ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
                 ProjectId = "project_id43ad98b0",
             };
             ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
             {
-                LoginProfile = new LoginProfile(),
+                LoginProfile = new LoginProfile
+                {
+                    Name = "name1c9368b0",
+                    PosixAccounts =
+                    {
+                        new gcoc::PosixAccount
+                        {
+                            Primary = true,
+                            Username = "username6bb0c414",
+                            Uid = 8192703879957410200L,
+                            Gid = -1775615093138500819L,
+                            HomeDirectory = "home_directory0fe89954",
+                            Shell = "shell8bc99125",
+                            Gecos = "gecosf68da09b",
+                            SystemId = "system_id43548ac1",
+                            AccountId = "account_id2a9c088a",
+                            OperatingSystemType = gcoc::OperatingSystemType.Windows,
+                            PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
+                        },
+                    },
+                    SshPublicKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new gcoc::SshPublicKey
+                            {
+                                Key = "key8a0b6e3c",
+                                ExpirationTimeUsec = -3860803259883837145L,
+                                Fingerprint = "fingerprint009e6052",
+                                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                            }
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -698,12 +1085,51 @@ namespace Google.Cloud.OsLogin.V1.Tests
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
                 ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
                 ProjectId = "project_id43ad98b0",
             };
             ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
             {
-                LoginProfile = new LoginProfile(),
+                LoginProfile = new LoginProfile
+                {
+                    Name = "name1c9368b0",
+                    PosixAccounts =
+                    {
+                        new gcoc::PosixAccount
+                        {
+                            Primary = true,
+                            Username = "username6bb0c414",
+                            Uid = 8192703879957410200L,
+                            Gid = -1775615093138500819L,
+                            HomeDirectory = "home_directory0fe89954",
+                            Shell = "shell8bc99125",
+                            Gecos = "gecosf68da09b",
+                            SystemId = "system_id43548ac1",
+                            AccountId = "account_id2a9c088a",
+                            OperatingSystemType = gcoc::OperatingSystemType.Windows,
+                            PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
+                        },
+                    },
+                    SshPublicKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new gcoc::SshPublicKey
+                            {
+                                Key = "key8a0b6e3c",
+                                ExpirationTimeUsec = -3860803259883837145L,
+                                Fingerprint = "fingerprint009e6052",
+                                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                            }
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportSshPublicKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -721,12 +1147,51 @@ namespace Google.Cloud.OsLogin.V1.Tests
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
                 ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
                 ProjectId = "project_id43ad98b0",
             };
             ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
             {
-                LoginProfile = new LoginProfile(),
+                LoginProfile = new LoginProfile
+                {
+                    Name = "name1c9368b0",
+                    PosixAccounts =
+                    {
+                        new gcoc::PosixAccount
+                        {
+                            Primary = true,
+                            Username = "username6bb0c414",
+                            Uid = 8192703879957410200L,
+                            Gid = -1775615093138500819L,
+                            HomeDirectory = "home_directory0fe89954",
+                            Shell = "shell8bc99125",
+                            Gecos = "gecosf68da09b",
+                            SystemId = "system_id43548ac1",
+                            AccountId = "account_id2a9c088a",
+                            OperatingSystemType = gcoc::OperatingSystemType.Windows,
+                            PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
+                        },
+                    },
+                    SshPublicKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new gcoc::SshPublicKey
+                            {
+                                Key = "key8a0b6e3c",
+                                ExpirationTimeUsec = -3860803259883837145L,
+                                Fingerprint = "fingerprint009e6052",
+                                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                            }
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -742,12 +1207,51 @@ namespace Google.Cloud.OsLogin.V1.Tests
             ImportSshPublicKeyRequest request = new ImportSshPublicKeyRequest
             {
                 ParentAsUserName = gcoc::UserName.FromUser("[USER]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
                 ProjectId = "project_id43ad98b0",
             };
             ImportSshPublicKeyResponse expectedResponse = new ImportSshPublicKeyResponse
             {
-                LoginProfile = new LoginProfile(),
+                LoginProfile = new LoginProfile
+                {
+                    Name = "name1c9368b0",
+                    PosixAccounts =
+                    {
+                        new gcoc::PosixAccount
+                        {
+                            Primary = true,
+                            Username = "username6bb0c414",
+                            Uid = 8192703879957410200L,
+                            Gid = -1775615093138500819L,
+                            HomeDirectory = "home_directory0fe89954",
+                            Shell = "shell8bc99125",
+                            Gecos = "gecosf68da09b",
+                            SystemId = "system_id43548ac1",
+                            AccountId = "account_id2a9c088a",
+                            OperatingSystemType = gcoc::OperatingSystemType.Windows,
+                            PosixAccountName = gcoc::PosixAccountName.FromUserProject("[USER]", "[PROJECT]"),
+                        },
+                    },
+                    SshPublicKeys =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new gcoc::SshPublicKey
+                            {
+                                Key = "key8a0b6e3c",
+                                ExpirationTimeUsec = -3860803259883837145L,
+                                Fingerprint = "fingerprint009e6052",
+                                SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                            }
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ImportSshPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportSshPublicKeyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsLoginServiceClient client = new OsLoginServiceClientImpl(mockGrpcClient.Object, null);
@@ -765,8 +1269,17 @@ namespace Google.Cloud.OsLogin.V1.Tests
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
-                UpdateMask = new wkt::FieldMask(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
@@ -789,8 +1302,17 @@ namespace Google.Cloud.OsLogin.V1.Tests
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
-                UpdateMask = new wkt::FieldMask(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
@@ -815,7 +1337,13 @@ namespace Google.Cloud.OsLogin.V1.Tests
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
@@ -838,7 +1366,13 @@ namespace Google.Cloud.OsLogin.V1.Tests
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
@@ -863,7 +1397,13 @@ namespace Google.Cloud.OsLogin.V1.Tests
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
@@ -886,7 +1426,13 @@ namespace Google.Cloud.OsLogin.V1.Tests
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
@@ -911,8 +1457,17 @@ namespace Google.Cloud.OsLogin.V1.Tests
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
-                UpdateMask = new wkt::FieldMask(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
@@ -935,8 +1490,17 @@ namespace Google.Cloud.OsLogin.V1.Tests
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
-                UpdateMask = new wkt::FieldMask(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
@@ -961,8 +1525,17 @@ namespace Google.Cloud.OsLogin.V1.Tests
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
-                UpdateMask = new wkt::FieldMask(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
@@ -985,8 +1558,17 @@ namespace Google.Cloud.OsLogin.V1.Tests
             UpdateSshPublicKeyRequest request = new UpdateSshPublicKeyRequest
             {
                 SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
-                SshPublicKey = new gcoc::SshPublicKey(),
-                UpdateMask = new wkt::FieldMask(),
+                SshPublicKey = new gcoc::SshPublicKey
+                {
+                    Key = "key8a0b6e3c",
+                    ExpirationTimeUsec = -3860803259883837145L,
+                    Fingerprint = "fingerprint009e6052",
+                    SshPublicKeyName = gcoc::SshPublicKeyName.FromUserFingerprint("[USER]", "[FINGERPRINT]"),
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             gcoc::SshPublicKey expectedResponse = new gcoc::SshPublicKey
             {
