@@ -39,7 +39,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
             };
             Instance expectedResponse = new Instance
             {
-                Name = "name1c9368b0",
+                InstanceName = InstanceName.FromAppServiceVersionInstance("[APP]", "[SERVICE]", "[VERSION]", "[INSTANCE]"),
                 Id = "id74b70bb8",
                 AppEngineRelease = "app_engine_release0d3b73e6",
                 Availability = Instance.Types.Availability.Unspecified,
@@ -55,6 +55,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 VmStatus = "vm_status3752e225",
                 VmDebugEnabled = false,
                 VmIp = "vm_ipe63c1f99",
+                VmLiveness = Instance.Types.Liveness.Types.LivenessState.Draining,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
@@ -74,7 +75,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
             };
             Instance expectedResponse = new Instance
             {
-                Name = "name1c9368b0",
+                InstanceName = InstanceName.FromAppServiceVersionInstance("[APP]", "[SERVICE]", "[VERSION]", "[INSTANCE]"),
                 Id = "id74b70bb8",
                 AppEngineRelease = "app_engine_release0d3b73e6",
                 Availability = Instance.Types.Availability.Unspecified,
@@ -90,6 +91,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 VmStatus = "vm_status3752e225",
                 VmDebugEnabled = false,
                 VmIp = "vm_ipe63c1f99",
+                VmLiveness = Instance.Types.Liveness.Types.LivenessState.Draining,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);

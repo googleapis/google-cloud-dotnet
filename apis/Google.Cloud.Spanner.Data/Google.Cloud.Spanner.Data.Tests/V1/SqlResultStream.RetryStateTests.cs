@@ -89,10 +89,10 @@ namespace Google.Cloud.Spanner.V1.Tests
             var exception = new RpcException(new Status(StatusCode.Unavailable, "Bang"));
 
             Assert.True(state.CanRetry(exception));
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
 
             Assert.True(state.CanRetry(exception));
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
 
             Assert.True(state.CanRetry(exception));
         }
@@ -108,15 +108,15 @@ namespace Google.Cloud.Spanner.V1.Tests
             var exception = new RpcException(new Status(StatusCode.Unavailable, "Bang"));
 
             Assert.True(state.CanRetry(exception));
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
 
             Assert.True(state.CanRetry(exception));
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
 
             state.Reset();
 
             Assert.True(state.CanRetry(exception));
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
 
             Assert.True(state.CanRetry(exception));
         }
@@ -144,12 +144,12 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             var state = new RetryState(new FakeClock(), mock.Object, retrySettings, s_callSettings);
 
-            await state.RecordErrorAndWaitAsync(exception, default);
-            await state.RecordErrorAndWaitAsync(exception, default);
-            await state.RecordErrorAndWaitAsync(exception, default);
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
             state.Reset();
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
         }
 
         [Fact]
@@ -173,10 +173,10 @@ namespace Google.Cloud.Spanner.V1.Tests
             RetryState state = new RetryState(new FakeClock(), mock.Object, s_retrySettings, s_callSettings);
 
             Assert.True(state.CanRetry(exception1));
-            await state.RecordErrorAndWaitAsync(exception1, default);
+            await state.WaitAsync(exception1, default);
 
             Assert.True(state.CanRetry(exception2));
-            await state.RecordErrorAndWaitAsync(exception2, default);
+            await state.WaitAsync(exception2, default);
         }
 
         [Fact]
@@ -197,7 +197,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             var exception = new RpcException(new Status(StatusCode.Unavailable, "Bang"), trailers);
             Assert.True(state.CanRetry(exception));
-            await Assert.ThrowsAsync<RpcException>(() => state.RecordErrorAndWaitAsync(exception, default));
+            await Assert.ThrowsAsync<RpcException>(() => state.WaitAsync(exception, default));
             // Check that the clock has not been advanced to verify that the retry state did not wait 20 seconds
             // before throwing an exception.
             Assert.Equal(0, clock.GetCurrentDateTimeUtc().Ticks);
@@ -221,7 +221,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             var exception = new RpcException(new Status(StatusCode.Unavailable, "Bang"), trailers);
             Assert.True(state.CanRetry(exception));
-            await Assert.ThrowsAsync<RpcException>(() => state.RecordErrorAndWaitAsync(exception, default));
+            await Assert.ThrowsAsync<RpcException>(() => state.WaitAsync(exception, default));
             // Check that the clock has not been advanced to verify that the retry state did not wait 20 seconds
             // before throwing an exception.
             Assert.Equal(0, clock.GetCurrentDateTimeUtc().Ticks);
@@ -243,13 +243,13 @@ namespace Google.Cloud.Spanner.V1.Tests
             var exception = new RpcException(new Status(StatusCode.Unavailable, "Bang"), trailers);
 
             Assert.True(state.CanRetry(exception));
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
 
             Assert.True(state.CanRetry(exception));
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
 
             Assert.True(state.CanRetry(exception));
-            await Assert.ThrowsAsync<RpcException>(() => state.RecordErrorAndWaitAsync(exception, default));
+            await Assert.ThrowsAsync<RpcException>(() => state.WaitAsync(exception, default));
 
             // Verify that the clock has been advanced 6 seconds.
             Assert.Equal(TimeSpan.FromSeconds(6).Ticks, clock.GetCurrentDateTimeUtc().Ticks);
@@ -271,13 +271,13 @@ namespace Google.Cloud.Spanner.V1.Tests
             var exception = new RpcException(new Status(StatusCode.Unavailable, "Bang"), trailers);
 
             Assert.True(state.CanRetry(exception));
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
 
             Assert.True(state.CanRetry(exception));
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
 
             Assert.True(state.CanRetry(exception));
-            await Assert.ThrowsAsync<RpcException>(() => state.RecordErrorAndWaitAsync(exception, default));
+            await Assert.ThrowsAsync<RpcException>(() => state.WaitAsync(exception, default));
 
             // Verify that the clock has been advanced 6 seconds.
             Assert.Equal(TimeSpan.FromSeconds(6).Ticks, clock.GetCurrentDateTimeUtc().Ticks);
@@ -299,23 +299,23 @@ namespace Google.Cloud.Spanner.V1.Tests
             var exception = new RpcException(new Status(StatusCode.Unavailable, "Bang"), trailers);
 
             Assert.True(state.CanRetry(exception));
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
 
             Assert.True(state.CanRetry(exception));
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
 
             // Reset should set the deadline of the call to CurrentTime + Timeout.
             // That means that we can do two new retries without a timeout exception.
             state.Reset();
 
             Assert.True(state.CanRetry(exception));
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
 
             Assert.True(state.CanRetry(exception));
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
 
             Assert.True(state.CanRetry(exception));
-            await Assert.ThrowsAsync<RpcException>(() => state.RecordErrorAndWaitAsync(exception, default));
+            await Assert.ThrowsAsync<RpcException>(() => state.WaitAsync(exception, default));
 
             // Verify that the clock has been advanced 12 seconds.
             Assert.Equal(TimeSpan.FromSeconds(12).Ticks, clock.GetCurrentDateTimeUtc().Ticks);
@@ -337,17 +337,17 @@ namespace Google.Cloud.Spanner.V1.Tests
             var exception = new RpcException(new Status(StatusCode.Unavailable, "Bang"), trailers);
 
             Assert.True(state.CanRetry(exception));
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
 
             Assert.True(state.CanRetry(exception));
-            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.WaitAsync(exception, default);
 
             // Reset does not change the absolute deadline of the call.
             // The next retry attempt will therefore fail.
             state.Reset();
 
             Assert.True(state.CanRetry(exception));
-            await Assert.ThrowsAsync<RpcException>(() => state.RecordErrorAndWaitAsync(exception, default));
+            await Assert.ThrowsAsync<RpcException>(() => state.WaitAsync(exception, default));
 
             Assert.Equal(TimeSpan.FromSeconds(6).Ticks, clock.GetCurrentDateTimeUtc().Ticks);
         }

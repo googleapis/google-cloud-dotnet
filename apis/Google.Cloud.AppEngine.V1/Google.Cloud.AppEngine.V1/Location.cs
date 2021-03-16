@@ -25,18 +25,20 @@ namespace Google.Cloud.AppEngine.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvYXBwZW5naW5lL3YxL2xvY2F0aW9uLnByb3RvEhNnb29nbGUu",
-            "YXBwZW5naW5lLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvImIK",
-            "EExvY2F0aW9uTWV0YWRhdGESJgoec3RhbmRhcmRfZW52aXJvbm1lbnRfYXZh",
-            "aWxhYmxlGAIgASgIEiYKHmZsZXhpYmxlX2Vudmlyb25tZW50X2F2YWlsYWJs",
-            "ZRgEIAEoCEK/AQoXY29tLmdvb2dsZS5hcHBlbmdpbmUudjFCDUxvY2F0aW9u",
-            "UHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9hcHBlbmdpbmUvdjE7YXBwZW5naW5lqgIZR29vZ2xlLkNsb3VkLkFwcEVu",
-            "Z2luZS5WMcoCGUdvb2dsZVxDbG91ZFxBcHBFbmdpbmVcVjHqAhxHb29nbGU6",
-            "OkNsb3VkOjpBcHBFbmdpbmU6OlYxYgZwcm90bzM="));
+            "YXBwZW5naW5lLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
+            "Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIoUBChBMb2NhdGlvbk1l",
+            "dGFkYXRhEiYKHnN0YW5kYXJkX2Vudmlyb25tZW50X2F2YWlsYWJsZRgCIAEo",
+            "CBImCh5mbGV4aWJsZV9lbnZpcm9ubWVudF9hdmFpbGFibGUYBCABKAgSIQoU",
+            "c2VhcmNoX2FwaV9hdmFpbGFibGUYBiABKAhCA+BBA0K/AQoXY29tLmdvb2ds",
+            "ZS5hcHBlbmdpbmUudjFCDUxvY2F0aW9uUHJvdG9QAVo8Z29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hcHBlbmdpbmUvdjE7YXBwZW5n",
+            "aW5lqgIZR29vZ2xlLkNsb3VkLkFwcEVuZ2luZS5WMcoCGUdvb2dsZVxDbG91",
+            "ZFxBcHBFbmdpbmVcVjHqAhxHb29nbGU6OkNsb3VkOjpBcHBFbmdpbmU6OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.LocationMetadata), global::Google.Cloud.AppEngine.V1.LocationMetadata.Parser, new[]{ "StandardEnvironmentAvailable", "FlexibleEnvironmentAvailable" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.LocationMetadata), global::Google.Cloud.AppEngine.V1.LocationMetadata.Parser, new[]{ "StandardEnvironmentAvailable", "FlexibleEnvironmentAvailable", "SearchApiAvailable" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,6 +79,7 @@ namespace Google.Cloud.AppEngine.V1 {
     public LocationMetadata(LocationMetadata other) : this() {
       standardEnvironmentAvailable_ = other.standardEnvironmentAvailable_;
       flexibleEnvironmentAvailable_ = other.flexibleEnvironmentAvailable_;
+      searchApiAvailable_ = other.searchApiAvailable_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -117,6 +120,21 @@ namespace Google.Cloud.AppEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "search_api_available" field.</summary>
+    public const int SearchApiAvailableFieldNumber = 6;
+    private bool searchApiAvailable_;
+    /// <summary>
+    /// Output only. [Search API](https://cloud.google.com/appengine/docs/standard/python/search)
+    /// is available in the given location.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool SearchApiAvailable {
+      get { return searchApiAvailable_; }
+      set {
+        searchApiAvailable_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as LocationMetadata);
@@ -132,6 +150,7 @@ namespace Google.Cloud.AppEngine.V1 {
       }
       if (StandardEnvironmentAvailable != other.StandardEnvironmentAvailable) return false;
       if (FlexibleEnvironmentAvailable != other.FlexibleEnvironmentAvailable) return false;
+      if (SearchApiAvailable != other.SearchApiAvailable) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -140,6 +159,7 @@ namespace Google.Cloud.AppEngine.V1 {
       int hash = 1;
       if (StandardEnvironmentAvailable != false) hash ^= StandardEnvironmentAvailable.GetHashCode();
       if (FlexibleEnvironmentAvailable != false) hash ^= FlexibleEnvironmentAvailable.GetHashCode();
+      if (SearchApiAvailable != false) hash ^= SearchApiAvailable.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -164,6 +184,10 @@ namespace Google.Cloud.AppEngine.V1 {
         output.WriteRawTag(32);
         output.WriteBool(FlexibleEnvironmentAvailable);
       }
+      if (SearchApiAvailable != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(SearchApiAvailable);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -181,6 +205,10 @@ namespace Google.Cloud.AppEngine.V1 {
         output.WriteRawTag(32);
         output.WriteBool(FlexibleEnvironmentAvailable);
       }
+      if (SearchApiAvailable != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(SearchApiAvailable);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -194,6 +222,9 @@ namespace Google.Cloud.AppEngine.V1 {
         size += 1 + 1;
       }
       if (FlexibleEnvironmentAvailable != false) {
+        size += 1 + 1;
+      }
+      if (SearchApiAvailable != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -212,6 +243,9 @@ namespace Google.Cloud.AppEngine.V1 {
       }
       if (other.FlexibleEnvironmentAvailable != false) {
         FlexibleEnvironmentAvailable = other.FlexibleEnvironmentAvailable;
+      }
+      if (other.SearchApiAvailable != false) {
+        SearchApiAvailable = other.SearchApiAvailable;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -235,6 +269,10 @@ namespace Google.Cloud.AppEngine.V1 {
             FlexibleEnvironmentAvailable = input.ReadBool();
             break;
           }
+          case 48: {
+            SearchApiAvailable = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -255,6 +293,10 @@ namespace Google.Cloud.AppEngine.V1 {
           }
           case 32: {
             FlexibleEnvironmentAvailable = input.ReadBool();
+            break;
+          }
+          case 48: {
+            SearchApiAvailable = input.ReadBool();
             break;
           }
         }

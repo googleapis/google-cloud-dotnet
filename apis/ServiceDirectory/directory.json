@@ -154,9 +154,9 @@
     {
       "ServiceDirectory": "google/appengine/v1",
       "Name": "appengine.googleapis.com",
-      "Title": "App Engine Audit Data",
+      "Title": "App Engine Admin API",
       "Description": "Provisions and manages developers' App Engine applications.",
-      "ServiceConfigFile": "google/appengine/v1/appengine.yaml",
+      "ServiceConfigFile": "google/appengine/v1/appengine_v1.yaml",
       "Version": "v1",
       "PackageFromDirectory": "google.appengine.v1",
       "PackageFromProtos": "google.appengine.v1",
@@ -1374,6 +1374,24 @@
       ],
       "Stable": false,
       "CSharpNamespaceFromProtos": "Google.Cloud.Metastore.V1Alpha"
+    },
+    {
+      "ServiceDirectory": "google/cloud/metastore/v1beta",
+      "Name": "metastore.googleapis.com",
+      "Title": "Dataproc Metastore API",
+      "Description": "The Dataproc Metastore API is used to manage the lifecycle and configuration of metastore services.",
+      "ServiceConfigFile": "google/cloud/metastore/v1beta/metastore_v1beta.yaml",
+      "Version": "v1beta",
+      "PackageFromDirectory": "google.cloud.metastore.v1beta",
+      "PackageFromProtos": "google.cloud.metastore.v1beta",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf",
+        "google/type"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Metastore.V1Beta"
     },
     {
       "ServiceDirectory": "google/cloud/networkconnectivity/v1alpha1",

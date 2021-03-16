@@ -61,6 +61,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 MaintenanceWindow = new MaintenanceWindow(),
                 Uid = "uida2d37198",
                 MetadataManagementActivity = new MetadataManagementActivity(),
+                ReleaseChannel = Service.Types.ReleaseChannel.Stable,
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -102,6 +103,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 MaintenanceWindow = new MaintenanceWindow(),
                 Uid = "uida2d37198",
                 MetadataManagementActivity = new MetadataManagementActivity(),
+                ReleaseChannel = Service.Types.ReleaseChannel.Stable,
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -145,6 +147,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 MaintenanceWindow = new MaintenanceWindow(),
                 Uid = "uida2d37198",
                 MetadataManagementActivity = new MetadataManagementActivity(),
+                ReleaseChannel = Service.Types.ReleaseChannel.Stable,
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -186,6 +189,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 MaintenanceWindow = new MaintenanceWindow(),
                 Uid = "uida2d37198",
                 MetadataManagementActivity = new MetadataManagementActivity(),
+                ReleaseChannel = Service.Types.ReleaseChannel.Stable,
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -229,6 +233,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 MaintenanceWindow = new MaintenanceWindow(),
                 Uid = "uida2d37198",
                 MetadataManagementActivity = new MetadataManagementActivity(),
+                ReleaseChannel = Service.Types.ReleaseChannel.Stable,
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -270,6 +275,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 MaintenanceWindow = new MaintenanceWindow(),
                 Uid = "uida2d37198",
                 MetadataManagementActivity = new MetadataManagementActivity(),
+                ReleaseChannel = Service.Types.ReleaseChannel.Stable,
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);

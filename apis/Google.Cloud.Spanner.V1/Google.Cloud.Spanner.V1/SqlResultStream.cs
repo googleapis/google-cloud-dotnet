@@ -113,7 +113,6 @@ namespace Google.Cloud.Spanner.V1
         {
             // The retry state is local to the method as we're not trying to handle callers retrying.
             RetryState retryState = new RetryState(_client.Settings.Clock ?? SystemClock.Instance, _client.Settings.Scheduler ?? SystemScheduler.Instance, _retrySettings, _callSettings);
-
             while (true)
             {
                 // If we've successfully read to the end of the stream and emptied the buffer, we've read all the responses.
@@ -183,7 +182,7 @@ namespace Google.Cloud.Spanner.V1
                 catch (RpcException e) when (_safeToRetry && retryState.CanRetry(e))
                 {
                     _client.Settings.Logger.Warn($"Exception when reading from result stream. Retrying.", e);
-                    await retryState.RecordErrorAndWaitAsync(e, cancellationToken).ConfigureAwait(false);
+                    await retryState.WaitAsync(e, cancellationToken).ConfigureAwait(false);
 
                     // Clear anything we've received since the previous response that contained a resume token
                     _buffer.Clear();
@@ -245,7 +244,7 @@ namespace Google.Cloud.Spanner.V1
             /// Updates the state on the basis of the given exception, delaying for as long as is necessary
             /// between retries.
             /// </summary>
-            internal async Task RecordErrorAndWaitAsync(RpcException exception, CancellationToken cancellationToken)
+            internal async Task WaitAsync(RpcException exception, CancellationToken cancellationToken)
             {
                 TimeSpan? delayFromException = GetRetryDelay(exception);
                 TimeSpan delay = _retrySettings.BackoffJitter.GetDelay(delayFromException ?? _retrySettingsBackoffs.Current);
