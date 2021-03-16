@@ -32,14 +32,39 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeSentimentRequest request = new AnalyzeSentimentRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
                 EncodingType = EncodingType.None,
             };
             AnalyzeSentimentResponse expectedResponse = new AnalyzeSentimentResponse
             {
-                DocumentSentiment = new Sentiment(),
+                DocumentSentiment = new Sentiment
+                {
+                    Magnitude = -7.2891855E+17F,
+                    Score = -5.80354E+17F,
+                },
                 Language = "language7dae1285",
-                Sentences = { new Sentence(), },
+                Sentences =
+                {
+                    new Sentence
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.AnalyzeSentiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
@@ -54,14 +79,39 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeSentimentRequest request = new AnalyzeSentimentRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
                 EncodingType = EncodingType.None,
             };
             AnalyzeSentimentResponse expectedResponse = new AnalyzeSentimentResponse
             {
-                DocumentSentiment = new Sentiment(),
+                DocumentSentiment = new Sentiment
+                {
+                    Magnitude = -7.2891855E+17F,
+                    Score = -5.80354E+17F,
+                },
                 Language = "language7dae1285",
-                Sentences = { new Sentence(), },
+                Sentences =
+                {
+                    new Sentence
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.AnalyzeSentimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeSentimentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
@@ -78,14 +128,39 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeSentimentRequest request = new AnalyzeSentimentRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
                 EncodingType = EncodingType.None,
             };
             AnalyzeSentimentResponse expectedResponse = new AnalyzeSentimentResponse
             {
-                DocumentSentiment = new Sentiment(),
+                DocumentSentiment = new Sentiment
+                {
+                    Magnitude = -7.2891855E+17F,
+                    Score = -5.80354E+17F,
+                },
                 Language = "language7dae1285",
-                Sentences = { new Sentence(), },
+                Sentences =
+                {
+                    new Sentence
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.AnalyzeSentiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
@@ -100,14 +175,39 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeSentimentRequest request = new AnalyzeSentimentRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
                 EncodingType = EncodingType.None,
             };
             AnalyzeSentimentResponse expectedResponse = new AnalyzeSentimentResponse
             {
-                DocumentSentiment = new Sentiment(),
+                DocumentSentiment = new Sentiment
+                {
+                    Magnitude = -7.2891855E+17F,
+                    Score = -5.80354E+17F,
+                },
                 Language = "language7dae1285",
-                Sentences = { new Sentence(), },
+                Sentences =
+                {
+                    new Sentence
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.AnalyzeSentimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeSentimentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
@@ -124,13 +224,38 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeSentimentRequest request = new AnalyzeSentimentRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
             };
             AnalyzeSentimentResponse expectedResponse = new AnalyzeSentimentResponse
             {
-                DocumentSentiment = new Sentiment(),
+                DocumentSentiment = new Sentiment
+                {
+                    Magnitude = -7.2891855E+17F,
+                    Score = -5.80354E+17F,
+                },
                 Language = "language7dae1285",
-                Sentences = { new Sentence(), },
+                Sentences =
+                {
+                    new Sentence
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.AnalyzeSentiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
@@ -145,13 +270,38 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeSentimentRequest request = new AnalyzeSentimentRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
             };
             AnalyzeSentimentResponse expectedResponse = new AnalyzeSentimentResponse
             {
-                DocumentSentiment = new Sentiment(),
+                DocumentSentiment = new Sentiment
+                {
+                    Magnitude = -7.2891855E+17F,
+                    Score = -5.80354E+17F,
+                },
                 Language = "language7dae1285",
-                Sentences = { new Sentence(), },
+                Sentences =
+                {
+                    new Sentence
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.AnalyzeSentimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeSentimentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             LanguageServiceClient client = new LanguageServiceClientImpl(mockGrpcClient.Object, null);
@@ -168,12 +318,55 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeEntitiesRequest request = new AnalyzeEntitiesRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
                 EncodingType = EncodingType.None,
             };
             AnalyzeEntitiesResponse expectedResponse = new AnalyzeEntitiesResponse
             {
-                Entities = { new Entity(), },
+                Entities =
+                {
+                    new Entity
+                    {
+                        Name = "name1c9368b0",
+                        Type = Entity.Types.Type.Address,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Salience = -5.940677E+17F,
+                        Mentions =
+                        {
+                            new EntityMention
+                            {
+                                Text = new TextSpan
+                                {
+                                    Content = "contentb964039a",
+                                    BeginOffset = 612829134,
+                                },
+                                Type = EntityMention.Types.Type.Unknown,
+                                Sentiment = new Sentiment
+                                {
+                                    Magnitude = -7.2891855E+17F,
+                                    Score = -5.80354E+17F,
+                                },
+                            },
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeEntities(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -189,12 +382,55 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeEntitiesRequest request = new AnalyzeEntitiesRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
                 EncodingType = EncodingType.None,
             };
             AnalyzeEntitiesResponse expectedResponse = new AnalyzeEntitiesResponse
             {
-                Entities = { new Entity(), },
+                Entities =
+                {
+                    new Entity
+                    {
+                        Name = "name1c9368b0",
+                        Type = Entity.Types.Type.Address,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Salience = -5.940677E+17F,
+                        Mentions =
+                        {
+                            new EntityMention
+                            {
+                                Text = new TextSpan
+                                {
+                                    Content = "contentb964039a",
+                                    BeginOffset = 612829134,
+                                },
+                                Type = EntityMention.Types.Type.Unknown,
+                                Sentiment = new Sentiment
+                                {
+                                    Magnitude = -7.2891855E+17F,
+                                    Score = -5.80354E+17F,
+                                },
+                            },
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeEntitiesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeEntitiesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -212,12 +448,55 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeEntitiesRequest request = new AnalyzeEntitiesRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
                 EncodingType = EncodingType.None,
             };
             AnalyzeEntitiesResponse expectedResponse = new AnalyzeEntitiesResponse
             {
-                Entities = { new Entity(), },
+                Entities =
+                {
+                    new Entity
+                    {
+                        Name = "name1c9368b0",
+                        Type = Entity.Types.Type.Address,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Salience = -5.940677E+17F,
+                        Mentions =
+                        {
+                            new EntityMention
+                            {
+                                Text = new TextSpan
+                                {
+                                    Content = "contentb964039a",
+                                    BeginOffset = 612829134,
+                                },
+                                Type = EntityMention.Types.Type.Unknown,
+                                Sentiment = new Sentiment
+                                {
+                                    Magnitude = -7.2891855E+17F,
+                                    Score = -5.80354E+17F,
+                                },
+                            },
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeEntities(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -233,12 +512,55 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeEntitiesRequest request = new AnalyzeEntitiesRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
                 EncodingType = EncodingType.None,
             };
             AnalyzeEntitiesResponse expectedResponse = new AnalyzeEntitiesResponse
             {
-                Entities = { new Entity(), },
+                Entities =
+                {
+                    new Entity
+                    {
+                        Name = "name1c9368b0",
+                        Type = Entity.Types.Type.Address,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Salience = -5.940677E+17F,
+                        Mentions =
+                        {
+                            new EntityMention
+                            {
+                                Text = new TextSpan
+                                {
+                                    Content = "contentb964039a",
+                                    BeginOffset = 612829134,
+                                },
+                                Type = EntityMention.Types.Type.Unknown,
+                                Sentiment = new Sentiment
+                                {
+                                    Magnitude = -7.2891855E+17F,
+                                    Score = -5.80354E+17F,
+                                },
+                            },
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeEntitiesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeEntitiesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -256,12 +578,55 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeEntitySentimentRequest request = new AnalyzeEntitySentimentRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
                 EncodingType = EncodingType.None,
             };
             AnalyzeEntitySentimentResponse expectedResponse = new AnalyzeEntitySentimentResponse
             {
-                Entities = { new Entity(), },
+                Entities =
+                {
+                    new Entity
+                    {
+                        Name = "name1c9368b0",
+                        Type = Entity.Types.Type.Address,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Salience = -5.940677E+17F,
+                        Mentions =
+                        {
+                            new EntityMention
+                            {
+                                Text = new TextSpan
+                                {
+                                    Content = "contentb964039a",
+                                    BeginOffset = 612829134,
+                                },
+                                Type = EntityMention.Types.Type.Unknown,
+                                Sentiment = new Sentiment
+                                {
+                                    Magnitude = -7.2891855E+17F,
+                                    Score = -5.80354E+17F,
+                                },
+                            },
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeEntitySentiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -277,12 +642,55 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeEntitySentimentRequest request = new AnalyzeEntitySentimentRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
                 EncodingType = EncodingType.None,
             };
             AnalyzeEntitySentimentResponse expectedResponse = new AnalyzeEntitySentimentResponse
             {
-                Entities = { new Entity(), },
+                Entities =
+                {
+                    new Entity
+                    {
+                        Name = "name1c9368b0",
+                        Type = Entity.Types.Type.Address,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Salience = -5.940677E+17F,
+                        Mentions =
+                        {
+                            new EntityMention
+                            {
+                                Text = new TextSpan
+                                {
+                                    Content = "contentb964039a",
+                                    BeginOffset = 612829134,
+                                },
+                                Type = EntityMention.Types.Type.Unknown,
+                                Sentiment = new Sentiment
+                                {
+                                    Magnitude = -7.2891855E+17F,
+                                    Score = -5.80354E+17F,
+                                },
+                            },
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeEntitySentimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeEntitySentimentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -300,12 +708,55 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeEntitySentimentRequest request = new AnalyzeEntitySentimentRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
                 EncodingType = EncodingType.None,
             };
             AnalyzeEntitySentimentResponse expectedResponse = new AnalyzeEntitySentimentResponse
             {
-                Entities = { new Entity(), },
+                Entities =
+                {
+                    new Entity
+                    {
+                        Name = "name1c9368b0",
+                        Type = Entity.Types.Type.Address,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Salience = -5.940677E+17F,
+                        Mentions =
+                        {
+                            new EntityMention
+                            {
+                                Text = new TextSpan
+                                {
+                                    Content = "contentb964039a",
+                                    BeginOffset = 612829134,
+                                },
+                                Type = EntityMention.Types.Type.Unknown,
+                                Sentiment = new Sentiment
+                                {
+                                    Magnitude = -7.2891855E+17F,
+                                    Score = -5.80354E+17F,
+                                },
+                            },
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeEntitySentiment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -321,12 +772,55 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeEntitySentimentRequest request = new AnalyzeEntitySentimentRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
                 EncodingType = EncodingType.None,
             };
             AnalyzeEntitySentimentResponse expectedResponse = new AnalyzeEntitySentimentResponse
             {
-                Entities = { new Entity(), },
+                Entities =
+                {
+                    new Entity
+                    {
+                        Name = "name1c9368b0",
+                        Type = Entity.Types.Type.Address,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Salience = -5.940677E+17F,
+                        Mentions =
+                        {
+                            new EntityMention
+                            {
+                                Text = new TextSpan
+                                {
+                                    Content = "contentb964039a",
+                                    BeginOffset = 612829134,
+                                },
+                                Type = EntityMention.Types.Type.Unknown,
+                                Sentiment = new Sentiment
+                                {
+                                    Magnitude = -7.2891855E+17F,
+                                    Score = -5.80354E+17F,
+                                },
+                            },
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeEntitySentimentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeEntitySentimentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -344,13 +838,65 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeSyntaxRequest request = new AnalyzeSyntaxRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
                 EncodingType = EncodingType.None,
             };
             AnalyzeSyntaxResponse expectedResponse = new AnalyzeSyntaxResponse
             {
-                Sentences = { new Sentence(), },
-                Tokens = { new Token(), },
+                Sentences =
+                {
+                    new Sentence
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
+                Tokens =
+                {
+                    new Token
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        PartOfSpeech = new PartOfSpeech
+                        {
+                            Tag = PartOfSpeech.Types.Tag.Punct,
+                            Aspect = PartOfSpeech.Types.Aspect.Imperfective,
+                            Case = PartOfSpeech.Types.Case.Genitive,
+                            Form = PartOfSpeech.Types.Form.Specific,
+                            Gender = PartOfSpeech.Types.Gender.Unknown,
+                            Mood = PartOfSpeech.Types.Mood.Interrogative,
+                            Number = PartOfSpeech.Types.Number.Dual,
+                            Person = PartOfSpeech.Types.Person.First,
+                            Proper = PartOfSpeech.Types.Proper.NotProper,
+                            Reciprocity = PartOfSpeech.Types.Reciprocity.Unknown,
+                            Tense = PartOfSpeech.Types.Tense.ConditionalTense,
+                            Voice = PartOfSpeech.Types.Voice.Active,
+                        },
+                        DependencyEdge = new DependencyEdge
+                        {
+                            HeadTokenIndex = -1038801562,
+                            Label = DependencyEdge.Types.Label.Asp,
+                        },
+                        Lemma = "lemma6052df9c",
+                    },
+                },
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeSyntax(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -366,13 +912,65 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeSyntaxRequest request = new AnalyzeSyntaxRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
                 EncodingType = EncodingType.None,
             };
             AnalyzeSyntaxResponse expectedResponse = new AnalyzeSyntaxResponse
             {
-                Sentences = { new Sentence(), },
-                Tokens = { new Token(), },
+                Sentences =
+                {
+                    new Sentence
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
+                Tokens =
+                {
+                    new Token
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        PartOfSpeech = new PartOfSpeech
+                        {
+                            Tag = PartOfSpeech.Types.Tag.Punct,
+                            Aspect = PartOfSpeech.Types.Aspect.Imperfective,
+                            Case = PartOfSpeech.Types.Case.Genitive,
+                            Form = PartOfSpeech.Types.Form.Specific,
+                            Gender = PartOfSpeech.Types.Gender.Unknown,
+                            Mood = PartOfSpeech.Types.Mood.Interrogative,
+                            Number = PartOfSpeech.Types.Number.Dual,
+                            Person = PartOfSpeech.Types.Person.First,
+                            Proper = PartOfSpeech.Types.Proper.NotProper,
+                            Reciprocity = PartOfSpeech.Types.Reciprocity.Unknown,
+                            Tense = PartOfSpeech.Types.Tense.ConditionalTense,
+                            Voice = PartOfSpeech.Types.Voice.Active,
+                        },
+                        DependencyEdge = new DependencyEdge
+                        {
+                            HeadTokenIndex = -1038801562,
+                            Label = DependencyEdge.Types.Label.Asp,
+                        },
+                        Lemma = "lemma6052df9c",
+                    },
+                },
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeSyntaxAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeSyntaxResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -390,13 +988,65 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeSyntaxRequest request = new AnalyzeSyntaxRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
                 EncodingType = EncodingType.None,
             };
             AnalyzeSyntaxResponse expectedResponse = new AnalyzeSyntaxResponse
             {
-                Sentences = { new Sentence(), },
-                Tokens = { new Token(), },
+                Sentences =
+                {
+                    new Sentence
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
+                Tokens =
+                {
+                    new Token
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        PartOfSpeech = new PartOfSpeech
+                        {
+                            Tag = PartOfSpeech.Types.Tag.Punct,
+                            Aspect = PartOfSpeech.Types.Aspect.Imperfective,
+                            Case = PartOfSpeech.Types.Case.Genitive,
+                            Form = PartOfSpeech.Types.Form.Specific,
+                            Gender = PartOfSpeech.Types.Gender.Unknown,
+                            Mood = PartOfSpeech.Types.Mood.Interrogative,
+                            Number = PartOfSpeech.Types.Number.Dual,
+                            Person = PartOfSpeech.Types.Person.First,
+                            Proper = PartOfSpeech.Types.Proper.NotProper,
+                            Reciprocity = PartOfSpeech.Types.Reciprocity.Unknown,
+                            Tense = PartOfSpeech.Types.Tense.ConditionalTense,
+                            Voice = PartOfSpeech.Types.Voice.Active,
+                        },
+                        DependencyEdge = new DependencyEdge
+                        {
+                            HeadTokenIndex = -1038801562,
+                            Label = DependencyEdge.Types.Label.Asp,
+                        },
+                        Lemma = "lemma6052df9c",
+                    },
+                },
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeSyntax(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -412,13 +1062,65 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnalyzeSyntaxRequest request = new AnalyzeSyntaxRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
                 EncodingType = EncodingType.None,
             };
             AnalyzeSyntaxResponse expectedResponse = new AnalyzeSyntaxResponse
             {
-                Sentences = { new Sentence(), },
-                Tokens = { new Token(), },
+                Sentences =
+                {
+                    new Sentence
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
+                Tokens =
+                {
+                    new Token
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        PartOfSpeech = new PartOfSpeech
+                        {
+                            Tag = PartOfSpeech.Types.Tag.Punct,
+                            Aspect = PartOfSpeech.Types.Aspect.Imperfective,
+                            Case = PartOfSpeech.Types.Case.Genitive,
+                            Form = PartOfSpeech.Types.Form.Specific,
+                            Gender = PartOfSpeech.Types.Gender.Unknown,
+                            Mood = PartOfSpeech.Types.Mood.Interrogative,
+                            Number = PartOfSpeech.Types.Number.Dual,
+                            Person = PartOfSpeech.Types.Person.First,
+                            Proper = PartOfSpeech.Types.Proper.NotProper,
+                            Reciprocity = PartOfSpeech.Types.Reciprocity.Unknown,
+                            Tense = PartOfSpeech.Types.Tense.ConditionalTense,
+                            Voice = PartOfSpeech.Types.Voice.Active,
+                        },
+                        DependencyEdge = new DependencyEdge
+                        {
+                            HeadTokenIndex = -1038801562,
+                            Label = DependencyEdge.Types.Label.Asp,
+                        },
+                        Lemma = "lemma6052df9c",
+                    },
+                },
                 Language = "language7dae1285",
             };
             mockGrpcClient.Setup(x => x.AnalyzeSyntaxAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeSyntaxResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -436,13 +1138,23 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             ClassifyTextRequest request = new ClassifyTextRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
             };
             ClassifyTextResponse expectedResponse = new ClassifyTextResponse
             {
                 Categories =
                 {
-                    new ClassificationCategory(),
+                    new ClassificationCategory
+                    {
+                        Name = "name1c9368b0",
+                        Confidence = 8.101506E+17F,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.ClassifyText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -458,13 +1170,23 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             ClassifyTextRequest request = new ClassifyTextRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
             };
             ClassifyTextResponse expectedResponse = new ClassifyTextResponse
             {
                 Categories =
                 {
-                    new ClassificationCategory(),
+                    new ClassificationCategory
+                    {
+                        Name = "name1c9368b0",
+                        Confidence = 8.101506E+17F,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.ClassifyTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClassifyTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -482,13 +1204,23 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             ClassifyTextRequest request = new ClassifyTextRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
             };
             ClassifyTextResponse expectedResponse = new ClassifyTextResponse
             {
                 Categories =
                 {
-                    new ClassificationCategory(),
+                    new ClassificationCategory
+                    {
+                        Name = "name1c9368b0",
+                        Confidence = 8.101506E+17F,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.ClassifyText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -504,13 +1236,23 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             ClassifyTextRequest request = new ClassifyTextRequest
             {
-                Document = new Document(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
             };
             ClassifyTextResponse expectedResponse = new ClassifyTextResponse
             {
                 Categories =
                 {
-                    new ClassificationCategory(),
+                    new ClassificationCategory
+                    {
+                        Name = "name1c9368b0",
+                        Confidence = 8.101506E+17F,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.ClassifyTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ClassifyTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -528,20 +1270,124 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnnotateTextRequest request = new AnnotateTextRequest
             {
-                Document = new Document(),
-                Features = new AnnotateTextRequest.Types.Features(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
+                Features = new AnnotateTextRequest.Types.Features
+                {
+                    ExtractSyntax = false,
+                    ExtractEntities = false,
+                    ExtractDocumentSentiment = false,
+                    ExtractEntitySentiment = false,
+                    ClassifyText = true,
+                },
                 EncodingType = EncodingType.None,
             };
             AnnotateTextResponse expectedResponse = new AnnotateTextResponse
             {
-                Sentences = { new Sentence(), },
-                Tokens = { new Token(), },
-                Entities = { new Entity(), },
-                DocumentSentiment = new Sentiment(),
+                Sentences =
+                {
+                    new Sentence
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
+                Tokens =
+                {
+                    new Token
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        PartOfSpeech = new PartOfSpeech
+                        {
+                            Tag = PartOfSpeech.Types.Tag.Punct,
+                            Aspect = PartOfSpeech.Types.Aspect.Imperfective,
+                            Case = PartOfSpeech.Types.Case.Genitive,
+                            Form = PartOfSpeech.Types.Form.Specific,
+                            Gender = PartOfSpeech.Types.Gender.Unknown,
+                            Mood = PartOfSpeech.Types.Mood.Interrogative,
+                            Number = PartOfSpeech.Types.Number.Dual,
+                            Person = PartOfSpeech.Types.Person.First,
+                            Proper = PartOfSpeech.Types.Proper.NotProper,
+                            Reciprocity = PartOfSpeech.Types.Reciprocity.Unknown,
+                            Tense = PartOfSpeech.Types.Tense.ConditionalTense,
+                            Voice = PartOfSpeech.Types.Voice.Active,
+                        },
+                        DependencyEdge = new DependencyEdge
+                        {
+                            HeadTokenIndex = -1038801562,
+                            Label = DependencyEdge.Types.Label.Asp,
+                        },
+                        Lemma = "lemma6052df9c",
+                    },
+                },
+                Entities =
+                {
+                    new Entity
+                    {
+                        Name = "name1c9368b0",
+                        Type = Entity.Types.Type.Address,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Salience = -5.940677E+17F,
+                        Mentions =
+                        {
+                            new EntityMention
+                            {
+                                Text = new TextSpan
+                                {
+                                    Content = "contentb964039a",
+                                    BeginOffset = 612829134,
+                                },
+                                Type = EntityMention.Types.Type.Unknown,
+                                Sentiment = new Sentiment
+                                {
+                                    Magnitude = -7.2891855E+17F,
+                                    Score = -5.80354E+17F,
+                                },
+                            },
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
+                DocumentSentiment = new Sentiment
+                {
+                    Magnitude = -7.2891855E+17F,
+                    Score = -5.80354E+17F,
+                },
                 Language = "language7dae1285",
                 Categories =
                 {
-                    new ClassificationCategory(),
+                    new ClassificationCategory
+                    {
+                        Name = "name1c9368b0",
+                        Confidence = 8.101506E+17F,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.AnnotateText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -557,20 +1403,124 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnnotateTextRequest request = new AnnotateTextRequest
             {
-                Document = new Document(),
-                Features = new AnnotateTextRequest.Types.Features(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
+                Features = new AnnotateTextRequest.Types.Features
+                {
+                    ExtractSyntax = false,
+                    ExtractEntities = false,
+                    ExtractDocumentSentiment = false,
+                    ExtractEntitySentiment = false,
+                    ClassifyText = true,
+                },
                 EncodingType = EncodingType.None,
             };
             AnnotateTextResponse expectedResponse = new AnnotateTextResponse
             {
-                Sentences = { new Sentence(), },
-                Tokens = { new Token(), },
-                Entities = { new Entity(), },
-                DocumentSentiment = new Sentiment(),
+                Sentences =
+                {
+                    new Sentence
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
+                Tokens =
+                {
+                    new Token
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        PartOfSpeech = new PartOfSpeech
+                        {
+                            Tag = PartOfSpeech.Types.Tag.Punct,
+                            Aspect = PartOfSpeech.Types.Aspect.Imperfective,
+                            Case = PartOfSpeech.Types.Case.Genitive,
+                            Form = PartOfSpeech.Types.Form.Specific,
+                            Gender = PartOfSpeech.Types.Gender.Unknown,
+                            Mood = PartOfSpeech.Types.Mood.Interrogative,
+                            Number = PartOfSpeech.Types.Number.Dual,
+                            Person = PartOfSpeech.Types.Person.First,
+                            Proper = PartOfSpeech.Types.Proper.NotProper,
+                            Reciprocity = PartOfSpeech.Types.Reciprocity.Unknown,
+                            Tense = PartOfSpeech.Types.Tense.ConditionalTense,
+                            Voice = PartOfSpeech.Types.Voice.Active,
+                        },
+                        DependencyEdge = new DependencyEdge
+                        {
+                            HeadTokenIndex = -1038801562,
+                            Label = DependencyEdge.Types.Label.Asp,
+                        },
+                        Lemma = "lemma6052df9c",
+                    },
+                },
+                Entities =
+                {
+                    new Entity
+                    {
+                        Name = "name1c9368b0",
+                        Type = Entity.Types.Type.Address,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Salience = -5.940677E+17F,
+                        Mentions =
+                        {
+                            new EntityMention
+                            {
+                                Text = new TextSpan
+                                {
+                                    Content = "contentb964039a",
+                                    BeginOffset = 612829134,
+                                },
+                                Type = EntityMention.Types.Type.Unknown,
+                                Sentiment = new Sentiment
+                                {
+                                    Magnitude = -7.2891855E+17F,
+                                    Score = -5.80354E+17F,
+                                },
+                            },
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
+                DocumentSentiment = new Sentiment
+                {
+                    Magnitude = -7.2891855E+17F,
+                    Score = -5.80354E+17F,
+                },
                 Language = "language7dae1285",
                 Categories =
                 {
-                    new ClassificationCategory(),
+                    new ClassificationCategory
+                    {
+                        Name = "name1c9368b0",
+                        Confidence = 8.101506E+17F,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.AnnotateTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotateTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -588,20 +1538,124 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnnotateTextRequest request = new AnnotateTextRequest
             {
-                Document = new Document(),
-                Features = new AnnotateTextRequest.Types.Features(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
+                Features = new AnnotateTextRequest.Types.Features
+                {
+                    ExtractSyntax = false,
+                    ExtractEntities = false,
+                    ExtractDocumentSentiment = false,
+                    ExtractEntitySentiment = false,
+                    ClassifyText = true,
+                },
                 EncodingType = EncodingType.None,
             };
             AnnotateTextResponse expectedResponse = new AnnotateTextResponse
             {
-                Sentences = { new Sentence(), },
-                Tokens = { new Token(), },
-                Entities = { new Entity(), },
-                DocumentSentiment = new Sentiment(),
+                Sentences =
+                {
+                    new Sentence
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
+                Tokens =
+                {
+                    new Token
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        PartOfSpeech = new PartOfSpeech
+                        {
+                            Tag = PartOfSpeech.Types.Tag.Punct,
+                            Aspect = PartOfSpeech.Types.Aspect.Imperfective,
+                            Case = PartOfSpeech.Types.Case.Genitive,
+                            Form = PartOfSpeech.Types.Form.Specific,
+                            Gender = PartOfSpeech.Types.Gender.Unknown,
+                            Mood = PartOfSpeech.Types.Mood.Interrogative,
+                            Number = PartOfSpeech.Types.Number.Dual,
+                            Person = PartOfSpeech.Types.Person.First,
+                            Proper = PartOfSpeech.Types.Proper.NotProper,
+                            Reciprocity = PartOfSpeech.Types.Reciprocity.Unknown,
+                            Tense = PartOfSpeech.Types.Tense.ConditionalTense,
+                            Voice = PartOfSpeech.Types.Voice.Active,
+                        },
+                        DependencyEdge = new DependencyEdge
+                        {
+                            HeadTokenIndex = -1038801562,
+                            Label = DependencyEdge.Types.Label.Asp,
+                        },
+                        Lemma = "lemma6052df9c",
+                    },
+                },
+                Entities =
+                {
+                    new Entity
+                    {
+                        Name = "name1c9368b0",
+                        Type = Entity.Types.Type.Address,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Salience = -5.940677E+17F,
+                        Mentions =
+                        {
+                            new EntityMention
+                            {
+                                Text = new TextSpan
+                                {
+                                    Content = "contentb964039a",
+                                    BeginOffset = 612829134,
+                                },
+                                Type = EntityMention.Types.Type.Unknown,
+                                Sentiment = new Sentiment
+                                {
+                                    Magnitude = -7.2891855E+17F,
+                                    Score = -5.80354E+17F,
+                                },
+                            },
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
+                DocumentSentiment = new Sentiment
+                {
+                    Magnitude = -7.2891855E+17F,
+                    Score = -5.80354E+17F,
+                },
                 Language = "language7dae1285",
                 Categories =
                 {
-                    new ClassificationCategory(),
+                    new ClassificationCategory
+                    {
+                        Name = "name1c9368b0",
+                        Confidence = 8.101506E+17F,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.AnnotateText(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -617,20 +1671,124 @@ namespace Google.Cloud.Language.V1.Tests
             moq::Mock<LanguageService.LanguageServiceClient> mockGrpcClient = new moq::Mock<LanguageService.LanguageServiceClient>(moq::MockBehavior.Strict);
             AnnotateTextRequest request = new AnnotateTextRequest
             {
-                Document = new Document(),
-                Features = new AnnotateTextRequest.Types.Features(),
+                Document = new Document
+                {
+                    Type = Document.Types.Type.Unspecified,
+                    Content = "contentb964039a",
+                    GcsContentUri = "gcs_content_urif2d05657",
+                    Language = "language7dae1285",
+                },
+                Features = new AnnotateTextRequest.Types.Features
+                {
+                    ExtractSyntax = false,
+                    ExtractEntities = false,
+                    ExtractDocumentSentiment = false,
+                    ExtractEntitySentiment = false,
+                    ClassifyText = true,
+                },
                 EncodingType = EncodingType.None,
             };
             AnnotateTextResponse expectedResponse = new AnnotateTextResponse
             {
-                Sentences = { new Sentence(), },
-                Tokens = { new Token(), },
-                Entities = { new Entity(), },
-                DocumentSentiment = new Sentiment(),
+                Sentences =
+                {
+                    new Sentence
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
+                Tokens =
+                {
+                    new Token
+                    {
+                        Text = new TextSpan
+                        {
+                            Content = "contentb964039a",
+                            BeginOffset = 612829134,
+                        },
+                        PartOfSpeech = new PartOfSpeech
+                        {
+                            Tag = PartOfSpeech.Types.Tag.Punct,
+                            Aspect = PartOfSpeech.Types.Aspect.Imperfective,
+                            Case = PartOfSpeech.Types.Case.Genitive,
+                            Form = PartOfSpeech.Types.Form.Specific,
+                            Gender = PartOfSpeech.Types.Gender.Unknown,
+                            Mood = PartOfSpeech.Types.Mood.Interrogative,
+                            Number = PartOfSpeech.Types.Number.Dual,
+                            Person = PartOfSpeech.Types.Person.First,
+                            Proper = PartOfSpeech.Types.Proper.NotProper,
+                            Reciprocity = PartOfSpeech.Types.Reciprocity.Unknown,
+                            Tense = PartOfSpeech.Types.Tense.ConditionalTense,
+                            Voice = PartOfSpeech.Types.Voice.Active,
+                        },
+                        DependencyEdge = new DependencyEdge
+                        {
+                            HeadTokenIndex = -1038801562,
+                            Label = DependencyEdge.Types.Label.Asp,
+                        },
+                        Lemma = "lemma6052df9c",
+                    },
+                },
+                Entities =
+                {
+                    new Entity
+                    {
+                        Name = "name1c9368b0",
+                        Type = Entity.Types.Type.Address,
+                        Metadata =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                "value60c16320"
+                            },
+                        },
+                        Salience = -5.940677E+17F,
+                        Mentions =
+                        {
+                            new EntityMention
+                            {
+                                Text = new TextSpan
+                                {
+                                    Content = "contentb964039a",
+                                    BeginOffset = 612829134,
+                                },
+                                Type = EntityMention.Types.Type.Unknown,
+                                Sentiment = new Sentiment
+                                {
+                                    Magnitude = -7.2891855E+17F,
+                                    Score = -5.80354E+17F,
+                                },
+                            },
+                        },
+                        Sentiment = new Sentiment
+                        {
+                            Magnitude = -7.2891855E+17F,
+                            Score = -5.80354E+17F,
+                        },
+                    },
+                },
+                DocumentSentiment = new Sentiment
+                {
+                    Magnitude = -7.2891855E+17F,
+                    Score = -5.80354E+17F,
+                },
                 Language = "language7dae1285",
                 Categories =
                 {
-                    new ClassificationCategory(),
+                    new ClassificationCategory
+                    {
+                        Name = "name1c9368b0",
+                        Confidence = 8.101506E+17F,
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.AnnotateTextAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotateTextResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
