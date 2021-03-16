@@ -17,6 +17,7 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
+using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using gr = Google.Rpc;
 using grpccore = Grpc.Core;
@@ -38,15 +39,53 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateProductSetRequest request = new CreateProductSetRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                ProductSet = new ProductSet(),
+                ProductSet = new ProductSet
+                {
+                    ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                    DisplayName = "display_name137f65c2",
+                    IndexTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    IndexError = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 ProductSetId = "product_set_idc0ec7b3e",
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "display_name137f65c2",
-                IndexTime = new wkt::Timestamp(),
-                IndexError = new gr::Status(),
+                IndexTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                IndexError = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -63,15 +102,53 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateProductSetRequest request = new CreateProductSetRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                ProductSet = new ProductSet(),
+                ProductSet = new ProductSet
+                {
+                    ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                    DisplayName = "display_name137f65c2",
+                    IndexTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    IndexError = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 ProductSetId = "product_set_idc0ec7b3e",
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "display_name137f65c2",
-                IndexTime = new wkt::Timestamp(),
-                IndexError = new gr::Status(),
+                IndexTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                IndexError = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -90,15 +167,53 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateProductSetRequest request = new CreateProductSetRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                ProductSet = new ProductSet(),
+                ProductSet = new ProductSet
+                {
+                    ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                    DisplayName = "display_name137f65c2",
+                    IndexTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    IndexError = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 ProductSetId = "product_set_idc0ec7b3e",
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "display_name137f65c2",
-                IndexTime = new wkt::Timestamp(),
-                IndexError = new gr::Status(),
+                IndexTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                IndexError = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -115,15 +230,53 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateProductSetRequest request = new CreateProductSetRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                ProductSet = new ProductSet(),
+                ProductSet = new ProductSet
+                {
+                    ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                    DisplayName = "display_name137f65c2",
+                    IndexTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    IndexError = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 ProductSetId = "product_set_idc0ec7b3e",
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "display_name137f65c2",
-                IndexTime = new wkt::Timestamp(),
-                IndexError = new gr::Status(),
+                IndexTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                IndexError = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -142,15 +295,53 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateProductSetRequest request = new CreateProductSetRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                ProductSet = new ProductSet(),
+                ProductSet = new ProductSet
+                {
+                    ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                    DisplayName = "display_name137f65c2",
+                    IndexTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    IndexError = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 ProductSetId = "product_set_idc0ec7b3e",
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "display_name137f65c2",
-                IndexTime = new wkt::Timestamp(),
-                IndexError = new gr::Status(),
+                IndexTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                IndexError = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -167,15 +358,53 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateProductSetRequest request = new CreateProductSetRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                ProductSet = new ProductSet(),
+                ProductSet = new ProductSet
+                {
+                    ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                    DisplayName = "display_name137f65c2",
+                    IndexTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    IndexError = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
                 ProductSetId = "product_set_idc0ec7b3e",
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "display_name137f65c2",
-                IndexTime = new wkt::Timestamp(),
-                IndexError = new gr::Status(),
+                IndexTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                IndexError = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -199,8 +428,24 @@ namespace Google.Cloud.Vision.V1.Tests
             {
                 ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "display_name137f65c2",
-                IndexTime = new wkt::Timestamp(),
-                IndexError = new gr::Status(),
+                IndexTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                IndexError = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -222,8 +467,24 @@ namespace Google.Cloud.Vision.V1.Tests
             {
                 ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "display_name137f65c2",
-                IndexTime = new wkt::Timestamp(),
-                IndexError = new gr::Status(),
+                IndexTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                IndexError = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -247,8 +508,24 @@ namespace Google.Cloud.Vision.V1.Tests
             {
                 ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "display_name137f65c2",
-                IndexTime = new wkt::Timestamp(),
-                IndexError = new gr::Status(),
+                IndexTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                IndexError = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -270,8 +547,24 @@ namespace Google.Cloud.Vision.V1.Tests
             {
                 ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "display_name137f65c2",
-                IndexTime = new wkt::Timestamp(),
-                IndexError = new gr::Status(),
+                IndexTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                IndexError = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -295,8 +588,24 @@ namespace Google.Cloud.Vision.V1.Tests
             {
                 ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "display_name137f65c2",
-                IndexTime = new wkt::Timestamp(),
-                IndexError = new gr::Status(),
+                IndexTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                IndexError = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -318,8 +627,24 @@ namespace Google.Cloud.Vision.V1.Tests
             {
                 ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "display_name137f65c2",
-                IndexTime = new wkt::Timestamp(),
-                IndexError = new gr::Status(),
+                IndexTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                IndexError = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -337,15 +662,56 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateProductSetRequest request = new UpdateProductSetRequest
             {
-                ProductSet = new ProductSet(),
-                UpdateMask = new wkt::FieldMask(),
+                ProductSet = new ProductSet
+                {
+                    ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                    DisplayName = "display_name137f65c2",
+                    IndexTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    IndexError = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "display_name137f65c2",
-                IndexTime = new wkt::Timestamp(),
-                IndexError = new gr::Status(),
+                IndexTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                IndexError = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -361,15 +727,56 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateProductSetRequest request = new UpdateProductSetRequest
             {
-                ProductSet = new ProductSet(),
-                UpdateMask = new wkt::FieldMask(),
+                ProductSet = new ProductSet
+                {
+                    ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                    DisplayName = "display_name137f65c2",
+                    IndexTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    IndexError = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "display_name137f65c2",
-                IndexTime = new wkt::Timestamp(),
-                IndexError = new gr::Status(),
+                IndexTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                IndexError = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -387,15 +794,56 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateProductSetRequest request = new UpdateProductSetRequest
             {
-                ProductSet = new ProductSet(),
-                UpdateMask = new wkt::FieldMask(),
+                ProductSet = new ProductSet
+                {
+                    ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                    DisplayName = "display_name137f65c2",
+                    IndexTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    IndexError = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "display_name137f65c2",
-                IndexTime = new wkt::Timestamp(),
-                IndexError = new gr::Status(),
+                IndexTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                IndexError = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateProductSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -411,15 +859,56 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateProductSetRequest request = new UpdateProductSetRequest
             {
-                ProductSet = new ProductSet(),
-                UpdateMask = new wkt::FieldMask(),
+                ProductSet = new ProductSet
+                {
+                    ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                    DisplayName = "display_name137f65c2",
+                    IndexTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    IndexError = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             ProductSet expectedResponse = new ProductSet
             {
                 ProductSetName = ProductSetName.FromProjectLocationProductSet("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "display_name137f65c2",
-                IndexTime = new wkt::Timestamp(),
-                IndexError = new gr::Status(),
+                IndexTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                IndexError = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateProductSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ProductSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -537,7 +1026,21 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateProductRequest request = new CreateProductRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Product = new Product(),
+                Product = new Product
+                {
+                    ProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    ProductCategory = "product_category7fba5b40",
+                    ProductLabels =
+                    {
+                        new Product.Types.KeyValue
+                        {
+                            Key = "key8a0b6e3c",
+                            Value = "value60c16320",
+                        },
+                    },
+                },
                 ProductId = "product_idde82ea9b",
             };
             Product expectedResponse = new Product
@@ -548,7 +1051,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 ProductCategory = "product_category7fba5b40",
                 ProductLabels =
                 {
-                    new Product.Types.KeyValue(),
+                    new Product.Types.KeyValue
+                    {
+                        Key = "key8a0b6e3c",
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -566,7 +1073,21 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateProductRequest request = new CreateProductRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Product = new Product(),
+                Product = new Product
+                {
+                    ProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    ProductCategory = "product_category7fba5b40",
+                    ProductLabels =
+                    {
+                        new Product.Types.KeyValue
+                        {
+                            Key = "key8a0b6e3c",
+                            Value = "value60c16320",
+                        },
+                    },
+                },
                 ProductId = "product_idde82ea9b",
             };
             Product expectedResponse = new Product
@@ -577,7 +1098,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 ProductCategory = "product_category7fba5b40",
                 ProductLabels =
                 {
-                    new Product.Types.KeyValue(),
+                    new Product.Types.KeyValue
+                    {
+                        Key = "key8a0b6e3c",
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -597,7 +1122,21 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateProductRequest request = new CreateProductRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Product = new Product(),
+                Product = new Product
+                {
+                    ProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    ProductCategory = "product_category7fba5b40",
+                    ProductLabels =
+                    {
+                        new Product.Types.KeyValue
+                        {
+                            Key = "key8a0b6e3c",
+                            Value = "value60c16320",
+                        },
+                    },
+                },
                 ProductId = "product_idde82ea9b",
             };
             Product expectedResponse = new Product
@@ -608,7 +1147,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 ProductCategory = "product_category7fba5b40",
                 ProductLabels =
                 {
-                    new Product.Types.KeyValue(),
+                    new Product.Types.KeyValue
+                    {
+                        Key = "key8a0b6e3c",
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -626,7 +1169,21 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateProductRequest request = new CreateProductRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Product = new Product(),
+                Product = new Product
+                {
+                    ProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    ProductCategory = "product_category7fba5b40",
+                    ProductLabels =
+                    {
+                        new Product.Types.KeyValue
+                        {
+                            Key = "key8a0b6e3c",
+                            Value = "value60c16320",
+                        },
+                    },
+                },
                 ProductId = "product_idde82ea9b",
             };
             Product expectedResponse = new Product
@@ -637,7 +1194,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 ProductCategory = "product_category7fba5b40",
                 ProductLabels =
                 {
-                    new Product.Types.KeyValue(),
+                    new Product.Types.KeyValue
+                    {
+                        Key = "key8a0b6e3c",
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -657,7 +1218,21 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateProductRequest request = new CreateProductRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Product = new Product(),
+                Product = new Product
+                {
+                    ProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    ProductCategory = "product_category7fba5b40",
+                    ProductLabels =
+                    {
+                        new Product.Types.KeyValue
+                        {
+                            Key = "key8a0b6e3c",
+                            Value = "value60c16320",
+                        },
+                    },
+                },
                 ProductId = "product_idde82ea9b",
             };
             Product expectedResponse = new Product
@@ -668,7 +1243,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 ProductCategory = "product_category7fba5b40",
                 ProductLabels =
                 {
-                    new Product.Types.KeyValue(),
+                    new Product.Types.KeyValue
+                    {
+                        Key = "key8a0b6e3c",
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -686,7 +1265,21 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateProductRequest request = new CreateProductRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Product = new Product(),
+                Product = new Product
+                {
+                    ProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    ProductCategory = "product_category7fba5b40",
+                    ProductLabels =
+                    {
+                        new Product.Types.KeyValue
+                        {
+                            Key = "key8a0b6e3c",
+                            Value = "value60c16320",
+                        },
+                    },
+                },
                 ProductId = "product_idde82ea9b",
             };
             Product expectedResponse = new Product
@@ -697,7 +1290,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 ProductCategory = "product_category7fba5b40",
                 ProductLabels =
                 {
-                    new Product.Types.KeyValue(),
+                    new Product.Types.KeyValue
+                    {
+                        Key = "key8a0b6e3c",
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -726,7 +1323,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 ProductCategory = "product_category7fba5b40",
                 ProductLabels =
                 {
-                    new Product.Types.KeyValue(),
+                    new Product.Types.KeyValue
+                    {
+                        Key = "key8a0b6e3c",
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -753,7 +1354,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 ProductCategory = "product_category7fba5b40",
                 ProductLabels =
                 {
-                    new Product.Types.KeyValue(),
+                    new Product.Types.KeyValue
+                    {
+                        Key = "key8a0b6e3c",
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -782,7 +1387,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 ProductCategory = "product_category7fba5b40",
                 ProductLabels =
                 {
-                    new Product.Types.KeyValue(),
+                    new Product.Types.KeyValue
+                    {
+                        Key = "key8a0b6e3c",
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -809,7 +1418,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 ProductCategory = "product_category7fba5b40",
                 ProductLabels =
                 {
-                    new Product.Types.KeyValue(),
+                    new Product.Types.KeyValue
+                    {
+                        Key = "key8a0b6e3c",
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -838,7 +1451,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 ProductCategory = "product_category7fba5b40",
                 ProductLabels =
                 {
-                    new Product.Types.KeyValue(),
+                    new Product.Types.KeyValue
+                    {
+                        Key = "key8a0b6e3c",
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -865,7 +1482,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 ProductCategory = "product_category7fba5b40",
                 ProductLabels =
                 {
-                    new Product.Types.KeyValue(),
+                    new Product.Types.KeyValue
+                    {
+                        Key = "key8a0b6e3c",
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -884,8 +1505,25 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateProductRequest request = new UpdateProductRequest
             {
-                Product = new Product(),
-                UpdateMask = new wkt::FieldMask(),
+                Product = new Product
+                {
+                    ProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    ProductCategory = "product_category7fba5b40",
+                    ProductLabels =
+                    {
+                        new Product.Types.KeyValue
+                        {
+                            Key = "key8a0b6e3c",
+                            Value = "value60c16320",
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Product expectedResponse = new Product
             {
@@ -895,7 +1533,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 ProductCategory = "product_category7fba5b40",
                 ProductLabels =
                 {
-                    new Product.Types.KeyValue(),
+                    new Product.Types.KeyValue
+                    {
+                        Key = "key8a0b6e3c",
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -912,8 +1554,25 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateProductRequest request = new UpdateProductRequest
             {
-                Product = new Product(),
-                UpdateMask = new wkt::FieldMask(),
+                Product = new Product
+                {
+                    ProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    ProductCategory = "product_category7fba5b40",
+                    ProductLabels =
+                    {
+                        new Product.Types.KeyValue
+                        {
+                            Key = "key8a0b6e3c",
+                            Value = "value60c16320",
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Product expectedResponse = new Product
             {
@@ -923,7 +1582,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 ProductCategory = "product_category7fba5b40",
                 ProductLabels =
                 {
-                    new Product.Types.KeyValue(),
+                    new Product.Types.KeyValue
+                    {
+                        Key = "key8a0b6e3c",
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -942,8 +1605,25 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateProductRequest request = new UpdateProductRequest
             {
-                Product = new Product(),
-                UpdateMask = new wkt::FieldMask(),
+                Product = new Product
+                {
+                    ProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    ProductCategory = "product_category7fba5b40",
+                    ProductLabels =
+                    {
+                        new Product.Types.KeyValue
+                        {
+                            Key = "key8a0b6e3c",
+                            Value = "value60c16320",
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Product expectedResponse = new Product
             {
@@ -953,7 +1633,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 ProductCategory = "product_category7fba5b40",
                 ProductLabels =
                 {
-                    new Product.Types.KeyValue(),
+                    new Product.Types.KeyValue
+                    {
+                        Key = "key8a0b6e3c",
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -970,8 +1654,25 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateProductRequest request = new UpdateProductRequest
             {
-                Product = new Product(),
-                UpdateMask = new wkt::FieldMask(),
+                Product = new Product
+                {
+                    ProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                    DisplayName = "display_name137f65c2",
+                    Description = "description2cf9da67",
+                    ProductCategory = "product_category7fba5b40",
+                    ProductLabels =
+                    {
+                        new Product.Types.KeyValue
+                        {
+                            Key = "key8a0b6e3c",
+                            Value = "value60c16320",
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Product expectedResponse = new Product
             {
@@ -981,7 +1682,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 ProductCategory = "product_category7fba5b40",
                 ProductLabels =
                 {
-                    new Product.Types.KeyValue(),
+                    new Product.Types.KeyValue
+                    {
+                        Key = "key8a0b6e3c",
+                        Value = "value60c16320",
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.UpdateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1100,14 +1805,61 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateReferenceImageRequest request = new CreateReferenceImageRequest
             {
                 ParentAsProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                ReferenceImage = new ReferenceImage(),
+                ReferenceImage = new ReferenceImage
+                {
+                    ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                    Uri = "uri3db70593",
+                    BoundingPolys =
+                    {
+                        new BoundingPoly
+                        {
+                            Vertices =
+                            {
+                                new Vertex
+                                {
+                                    X = 1642386589,
+                                    Y = 1989169729,
+                                },
+                            },
+                            NormalizedVertices =
+                            {
+                                new NormalizedVertex
+                                {
+                                    X = 4.7289724E+17F,
+                                    Y = 1.2858411E+17F,
+                                },
+                            },
+                        },
+                    },
+                },
                 ReferenceImageId = "reference_image_idda348389",
             };
             ReferenceImage expectedResponse = new ReferenceImage
             {
                 ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri3db70593",
-                BoundingPolys = { new BoundingPoly(), },
+                BoundingPolys =
+                {
+                    new BoundingPoly
+                    {
+                        Vertices =
+                        {
+                            new Vertex
+                            {
+                                X = 1642386589,
+                                Y = 1989169729,
+                            },
+                        },
+                        NormalizedVertices =
+                        {
+                            new NormalizedVertex
+                            {
+                                X = 4.7289724E+17F,
+                                Y = 1.2858411E+17F,
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -1124,14 +1876,61 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateReferenceImageRequest request = new CreateReferenceImageRequest
             {
                 ParentAsProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                ReferenceImage = new ReferenceImage(),
+                ReferenceImage = new ReferenceImage
+                {
+                    ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                    Uri = "uri3db70593",
+                    BoundingPolys =
+                    {
+                        new BoundingPoly
+                        {
+                            Vertices =
+                            {
+                                new Vertex
+                                {
+                                    X = 1642386589,
+                                    Y = 1989169729,
+                                },
+                            },
+                            NormalizedVertices =
+                            {
+                                new NormalizedVertex
+                                {
+                                    X = 4.7289724E+17F,
+                                    Y = 1.2858411E+17F,
+                                },
+                            },
+                        },
+                    },
+                },
                 ReferenceImageId = "reference_image_idda348389",
             };
             ReferenceImage expectedResponse = new ReferenceImage
             {
                 ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri3db70593",
-                BoundingPolys = { new BoundingPoly(), },
+                BoundingPolys =
+                {
+                    new BoundingPoly
+                    {
+                        Vertices =
+                        {
+                            new Vertex
+                            {
+                                X = 1642386589,
+                                Y = 1989169729,
+                            },
+                        },
+                        NormalizedVertices =
+                        {
+                            new NormalizedVertex
+                            {
+                                X = 4.7289724E+17F,
+                                Y = 1.2858411E+17F,
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -1150,14 +1949,61 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateReferenceImageRequest request = new CreateReferenceImageRequest
             {
                 ParentAsProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                ReferenceImage = new ReferenceImage(),
+                ReferenceImage = new ReferenceImage
+                {
+                    ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                    Uri = "uri3db70593",
+                    BoundingPolys =
+                    {
+                        new BoundingPoly
+                        {
+                            Vertices =
+                            {
+                                new Vertex
+                                {
+                                    X = 1642386589,
+                                    Y = 1989169729,
+                                },
+                            },
+                            NormalizedVertices =
+                            {
+                                new NormalizedVertex
+                                {
+                                    X = 4.7289724E+17F,
+                                    Y = 1.2858411E+17F,
+                                },
+                            },
+                        },
+                    },
+                },
                 ReferenceImageId = "reference_image_idda348389",
             };
             ReferenceImage expectedResponse = new ReferenceImage
             {
                 ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri3db70593",
-                BoundingPolys = { new BoundingPoly(), },
+                BoundingPolys =
+                {
+                    new BoundingPoly
+                    {
+                        Vertices =
+                        {
+                            new Vertex
+                            {
+                                X = 1642386589,
+                                Y = 1989169729,
+                            },
+                        },
+                        NormalizedVertices =
+                        {
+                            new NormalizedVertex
+                            {
+                                X = 4.7289724E+17F,
+                                Y = 1.2858411E+17F,
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -1174,14 +2020,61 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateReferenceImageRequest request = new CreateReferenceImageRequest
             {
                 ParentAsProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                ReferenceImage = new ReferenceImage(),
+                ReferenceImage = new ReferenceImage
+                {
+                    ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                    Uri = "uri3db70593",
+                    BoundingPolys =
+                    {
+                        new BoundingPoly
+                        {
+                            Vertices =
+                            {
+                                new Vertex
+                                {
+                                    X = 1642386589,
+                                    Y = 1989169729,
+                                },
+                            },
+                            NormalizedVertices =
+                            {
+                                new NormalizedVertex
+                                {
+                                    X = 4.7289724E+17F,
+                                    Y = 1.2858411E+17F,
+                                },
+                            },
+                        },
+                    },
+                },
                 ReferenceImageId = "reference_image_idda348389",
             };
             ReferenceImage expectedResponse = new ReferenceImage
             {
                 ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri3db70593",
-                BoundingPolys = { new BoundingPoly(), },
+                BoundingPolys =
+                {
+                    new BoundingPoly
+                    {
+                        Vertices =
+                        {
+                            new Vertex
+                            {
+                                X = 1642386589,
+                                Y = 1989169729,
+                            },
+                        },
+                        NormalizedVertices =
+                        {
+                            new NormalizedVertex
+                            {
+                                X = 4.7289724E+17F,
+                                Y = 1.2858411E+17F,
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -1200,14 +2093,61 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateReferenceImageRequest request = new CreateReferenceImageRequest
             {
                 ParentAsProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                ReferenceImage = new ReferenceImage(),
+                ReferenceImage = new ReferenceImage
+                {
+                    ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                    Uri = "uri3db70593",
+                    BoundingPolys =
+                    {
+                        new BoundingPoly
+                        {
+                            Vertices =
+                            {
+                                new Vertex
+                                {
+                                    X = 1642386589,
+                                    Y = 1989169729,
+                                },
+                            },
+                            NormalizedVertices =
+                            {
+                                new NormalizedVertex
+                                {
+                                    X = 4.7289724E+17F,
+                                    Y = 1.2858411E+17F,
+                                },
+                            },
+                        },
+                    },
+                },
                 ReferenceImageId = "reference_image_idda348389",
             };
             ReferenceImage expectedResponse = new ReferenceImage
             {
                 ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri3db70593",
-                BoundingPolys = { new BoundingPoly(), },
+                BoundingPolys =
+                {
+                    new BoundingPoly
+                    {
+                        Vertices =
+                        {
+                            new Vertex
+                            {
+                                X = 1642386589,
+                                Y = 1989169729,
+                            },
+                        },
+                        NormalizedVertices =
+                        {
+                            new NormalizedVertex
+                            {
+                                X = 4.7289724E+17F,
+                                Y = 1.2858411E+17F,
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -1224,14 +2164,61 @@ namespace Google.Cloud.Vision.V1.Tests
             CreateReferenceImageRequest request = new CreateReferenceImageRequest
             {
                 ParentAsProductName = ProductName.FromProjectLocationProduct("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                ReferenceImage = new ReferenceImage(),
+                ReferenceImage = new ReferenceImage
+                {
+                    ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                    Uri = "uri3db70593",
+                    BoundingPolys =
+                    {
+                        new BoundingPoly
+                        {
+                            Vertices =
+                            {
+                                new Vertex
+                                {
+                                    X = 1642386589,
+                                    Y = 1989169729,
+                                },
+                            },
+                            NormalizedVertices =
+                            {
+                                new NormalizedVertex
+                                {
+                                    X = 4.7289724E+17F,
+                                    Y = 1.2858411E+17F,
+                                },
+                            },
+                        },
+                    },
+                },
                 ReferenceImageId = "reference_image_idda348389",
             };
             ReferenceImage expectedResponse = new ReferenceImage
             {
                 ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri3db70593",
-                BoundingPolys = { new BoundingPoly(), },
+                BoundingPolys =
+                {
+                    new BoundingPoly
+                    {
+                        Vertices =
+                        {
+                            new Vertex
+                            {
+                                X = 1642386589,
+                                Y = 1989169729,
+                            },
+                        },
+                        NormalizedVertices =
+                        {
+                            new NormalizedVertex
+                            {
+                                X = 4.7289724E+17F,
+                                Y = 1.2858411E+17F,
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -1354,7 +2341,28 @@ namespace Google.Cloud.Vision.V1.Tests
             {
                 ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri3db70593",
-                BoundingPolys = { new BoundingPoly(), },
+                BoundingPolys =
+                {
+                    new BoundingPoly
+                    {
+                        Vertices =
+                        {
+                            new Vertex
+                            {
+                                X = 1642386589,
+                                Y = 1989169729,
+                            },
+                        },
+                        NormalizedVertices =
+                        {
+                            new NormalizedVertex
+                            {
+                                X = 4.7289724E+17F,
+                                Y = 1.2858411E+17F,
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -1376,7 +2384,28 @@ namespace Google.Cloud.Vision.V1.Tests
             {
                 ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri3db70593",
-                BoundingPolys = { new BoundingPoly(), },
+                BoundingPolys =
+                {
+                    new BoundingPoly
+                    {
+                        Vertices =
+                        {
+                            new Vertex
+                            {
+                                X = 1642386589,
+                                Y = 1989169729,
+                            },
+                        },
+                        NormalizedVertices =
+                        {
+                            new NormalizedVertex
+                            {
+                                X = 4.7289724E+17F,
+                                Y = 1.2858411E+17F,
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -1400,7 +2429,28 @@ namespace Google.Cloud.Vision.V1.Tests
             {
                 ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri3db70593",
-                BoundingPolys = { new BoundingPoly(), },
+                BoundingPolys =
+                {
+                    new BoundingPoly
+                    {
+                        Vertices =
+                        {
+                            new Vertex
+                            {
+                                X = 1642386589,
+                                Y = 1989169729,
+                            },
+                        },
+                        NormalizedVertices =
+                        {
+                            new NormalizedVertex
+                            {
+                                X = 4.7289724E+17F,
+                                Y = 1.2858411E+17F,
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -1422,7 +2472,28 @@ namespace Google.Cloud.Vision.V1.Tests
             {
                 ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri3db70593",
-                BoundingPolys = { new BoundingPoly(), },
+                BoundingPolys =
+                {
+                    new BoundingPoly
+                    {
+                        Vertices =
+                        {
+                            new Vertex
+                            {
+                                X = 1642386589,
+                                Y = 1989169729,
+                            },
+                        },
+                        NormalizedVertices =
+                        {
+                            new NormalizedVertex
+                            {
+                                X = 4.7289724E+17F,
+                                Y = 1.2858411E+17F,
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -1446,7 +2517,28 @@ namespace Google.Cloud.Vision.V1.Tests
             {
                 ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri3db70593",
-                BoundingPolys = { new BoundingPoly(), },
+                BoundingPolys =
+                {
+                    new BoundingPoly
+                    {
+                        Vertices =
+                        {
+                            new Vertex
+                            {
+                                X = 1642386589,
+                                Y = 1989169729,
+                            },
+                        },
+                        NormalizedVertices =
+                        {
+                            new NormalizedVertex
+                            {
+                                X = 4.7289724E+17F,
+                                Y = 1.2858411E+17F,
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetReferenceImage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
@@ -1468,7 +2560,28 @@ namespace Google.Cloud.Vision.V1.Tests
             {
                 ReferenceImageName = ReferenceImageName.FromProjectLocationProductReferenceImage("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri3db70593",
-                BoundingPolys = { new BoundingPoly(), },
+                BoundingPolys =
+                {
+                    new BoundingPoly
+                    {
+                        Vertices =
+                        {
+                            new Vertex
+                            {
+                                X = 1642386589,
+                                Y = 1989169729,
+                            },
+                        },
+                        NormalizedVertices =
+                        {
+                            new NormalizedVertex
+                            {
+                                X = 4.7289724E+17F,
+                                Y = 1.2858411E+17F,
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetReferenceImageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReferenceImage>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
