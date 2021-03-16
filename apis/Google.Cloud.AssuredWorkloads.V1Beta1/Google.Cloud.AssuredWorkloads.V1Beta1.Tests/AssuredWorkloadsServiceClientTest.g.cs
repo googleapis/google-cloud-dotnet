@@ -35,8 +35,124 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateWorkloadRequest request = new UpdateWorkloadRequest
             {
-                Workload = new Workload(),
-                UpdateMask = new wkt::FieldMask(),
+                Workload = new Workload
+                {
+                    WorkloadName = WorkloadName.FromOrganizationLocationWorkload("[ORGANIZATION]", "[LOCATION]", "[WORKLOAD]"),
+                    DisplayName = "display_name137f65c2",
+                    Resources =
+                    {
+                        new Workload.Types.ResourceInfo
+                        {
+                            ResourceId = -1761669221043932190L,
+                            ResourceType = Workload.Types.ResourceInfo.Types.ResourceType.ConsumerProject,
+                        },
+                    },
+                    ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BillingAccount = "billing_account2062abb6",
+#pragma warning disable CS0612
+                    Il4Settings = new Workload.Types.IL4Settings
+#pragma warning restore CS0612
+                    {
+                        KmsSettings = new Workload.Types.KMSSettings
+                        {
+                            NextRotationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            RotationPeriod = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+#pragma warning disable CS0612
+                    CjisSettings = new Workload.Types.CJISSettings
+#pragma warning restore CS0612
+                    {
+                        KmsSettings = new Workload.Types.KMSSettings
+                        {
+                            NextRotationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            RotationPeriod = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+#pragma warning disable CS0612
+                    FedrampHighSettings = new Workload.Types.FedrampHighSettings
+#pragma warning restore CS0612
+                    {
+                        KmsSettings = new Workload.Types.KMSSettings
+                        {
+                            NextRotationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            RotationPeriod = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+#pragma warning disable CS0612
+                    FedrampModerateSettings = new Workload.Types.FedrampModerateSettings
+#pragma warning restore CS0612
+                    {
+                        KmsSettings = new Workload.Types.KMSSettings
+                        {
+                            NextRotationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            RotationPeriod = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Workload expectedResponse = new Workload
             {
@@ -44,15 +160,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 DisplayName = "display_name137f65c2",
                 Resources =
                 {
-                    new Workload.Types.ResourceInfo(),
+                    new Workload.Types.ResourceInfo
+                    {
+                        ResourceId = -1761669221043932190L,
+                        ResourceType = Workload.Types.ResourceInfo.Types.ResourceType.ConsumerProject,
+                    },
                 },
                 ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
-                Il4Settings = new Workload.Types.IL4Settings(),
-                CjisSettings = new Workload.Types.CJISSettings(),
+                Il4Settings = new Workload.Types.IL4Settings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                CjisSettings = new Workload.Types.CJISSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 Etag = "etage8ad7218",
                 Labels =
                 {
@@ -62,11 +218,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                     },
                 },
 #pragma warning disable CS0612
-                FedrampHighSettings = new Workload.Types.FedrampHighSettings(),
-                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
+                FedrampHighSettings = new Workload.Types.FedrampHighSettings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
-                KmsSettings = new Workload.Types.KMSSettings(),
+                KmsSettings = new Workload.Types.KMSSettings
+                {
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -82,8 +282,124 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateWorkloadRequest request = new UpdateWorkloadRequest
             {
-                Workload = new Workload(),
-                UpdateMask = new wkt::FieldMask(),
+                Workload = new Workload
+                {
+                    WorkloadName = WorkloadName.FromOrganizationLocationWorkload("[ORGANIZATION]", "[LOCATION]", "[WORKLOAD]"),
+                    DisplayName = "display_name137f65c2",
+                    Resources =
+                    {
+                        new Workload.Types.ResourceInfo
+                        {
+                            ResourceId = -1761669221043932190L,
+                            ResourceType = Workload.Types.ResourceInfo.Types.ResourceType.ConsumerProject,
+                        },
+                    },
+                    ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BillingAccount = "billing_account2062abb6",
+#pragma warning disable CS0612
+                    Il4Settings = new Workload.Types.IL4Settings
+#pragma warning restore CS0612
+                    {
+                        KmsSettings = new Workload.Types.KMSSettings
+                        {
+                            NextRotationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            RotationPeriod = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+#pragma warning disable CS0612
+                    CjisSettings = new Workload.Types.CJISSettings
+#pragma warning restore CS0612
+                    {
+                        KmsSettings = new Workload.Types.KMSSettings
+                        {
+                            NextRotationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            RotationPeriod = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+#pragma warning disable CS0612
+                    FedrampHighSettings = new Workload.Types.FedrampHighSettings
+#pragma warning restore CS0612
+                    {
+                        KmsSettings = new Workload.Types.KMSSettings
+                        {
+                            NextRotationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            RotationPeriod = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+#pragma warning disable CS0612
+                    FedrampModerateSettings = new Workload.Types.FedrampModerateSettings
+#pragma warning restore CS0612
+                    {
+                        KmsSettings = new Workload.Types.KMSSettings
+                        {
+                            NextRotationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            RotationPeriod = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Workload expectedResponse = new Workload
             {
@@ -91,15 +407,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 DisplayName = "display_name137f65c2",
                 Resources =
                 {
-                    new Workload.Types.ResourceInfo(),
+                    new Workload.Types.ResourceInfo
+                    {
+                        ResourceId = -1761669221043932190L,
+                        ResourceType = Workload.Types.ResourceInfo.Types.ResourceType.ConsumerProject,
+                    },
                 },
                 ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
-                Il4Settings = new Workload.Types.IL4Settings(),
-                CjisSettings = new Workload.Types.CJISSettings(),
+                Il4Settings = new Workload.Types.IL4Settings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                CjisSettings = new Workload.Types.CJISSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 Etag = "etage8ad7218",
                 Labels =
                 {
@@ -109,11 +465,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                     },
                 },
 #pragma warning disable CS0612
-                FedrampHighSettings = new Workload.Types.FedrampHighSettings(),
-                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
+                FedrampHighSettings = new Workload.Types.FedrampHighSettings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
-                KmsSettings = new Workload.Types.KMSSettings(),
+                KmsSettings = new Workload.Types.KMSSettings
+                {
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -131,8 +531,124 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateWorkloadRequest request = new UpdateWorkloadRequest
             {
-                Workload = new Workload(),
-                UpdateMask = new wkt::FieldMask(),
+                Workload = new Workload
+                {
+                    WorkloadName = WorkloadName.FromOrganizationLocationWorkload("[ORGANIZATION]", "[LOCATION]", "[WORKLOAD]"),
+                    DisplayName = "display_name137f65c2",
+                    Resources =
+                    {
+                        new Workload.Types.ResourceInfo
+                        {
+                            ResourceId = -1761669221043932190L,
+                            ResourceType = Workload.Types.ResourceInfo.Types.ResourceType.ConsumerProject,
+                        },
+                    },
+                    ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BillingAccount = "billing_account2062abb6",
+#pragma warning disable CS0612
+                    Il4Settings = new Workload.Types.IL4Settings
+#pragma warning restore CS0612
+                    {
+                        KmsSettings = new Workload.Types.KMSSettings
+                        {
+                            NextRotationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            RotationPeriod = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+#pragma warning disable CS0612
+                    CjisSettings = new Workload.Types.CJISSettings
+#pragma warning restore CS0612
+                    {
+                        KmsSettings = new Workload.Types.KMSSettings
+                        {
+                            NextRotationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            RotationPeriod = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+#pragma warning disable CS0612
+                    FedrampHighSettings = new Workload.Types.FedrampHighSettings
+#pragma warning restore CS0612
+                    {
+                        KmsSettings = new Workload.Types.KMSSettings
+                        {
+                            NextRotationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            RotationPeriod = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+#pragma warning disable CS0612
+                    FedrampModerateSettings = new Workload.Types.FedrampModerateSettings
+#pragma warning restore CS0612
+                    {
+                        KmsSettings = new Workload.Types.KMSSettings
+                        {
+                            NextRotationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            RotationPeriod = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Workload expectedResponse = new Workload
             {
@@ -140,15 +656,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 DisplayName = "display_name137f65c2",
                 Resources =
                 {
-                    new Workload.Types.ResourceInfo(),
+                    new Workload.Types.ResourceInfo
+                    {
+                        ResourceId = -1761669221043932190L,
+                        ResourceType = Workload.Types.ResourceInfo.Types.ResourceType.ConsumerProject,
+                    },
                 },
                 ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
-                Il4Settings = new Workload.Types.IL4Settings(),
-                CjisSettings = new Workload.Types.CJISSettings(),
+                Il4Settings = new Workload.Types.IL4Settings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                CjisSettings = new Workload.Types.CJISSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 Etag = "etage8ad7218",
                 Labels =
                 {
@@ -158,11 +714,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                     },
                 },
 #pragma warning disable CS0612
-                FedrampHighSettings = new Workload.Types.FedrampHighSettings(),
-                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
+                FedrampHighSettings = new Workload.Types.FedrampHighSettings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
-                KmsSettings = new Workload.Types.KMSSettings(),
+                KmsSettings = new Workload.Types.KMSSettings
+                {
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -178,8 +778,124 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             UpdateWorkloadRequest request = new UpdateWorkloadRequest
             {
-                Workload = new Workload(),
-                UpdateMask = new wkt::FieldMask(),
+                Workload = new Workload
+                {
+                    WorkloadName = WorkloadName.FromOrganizationLocationWorkload("[ORGANIZATION]", "[LOCATION]", "[WORKLOAD]"),
+                    DisplayName = "display_name137f65c2",
+                    Resources =
+                    {
+                        new Workload.Types.ResourceInfo
+                        {
+                            ResourceId = -1761669221043932190L,
+                            ResourceType = Workload.Types.ResourceInfo.Types.ResourceType.ConsumerProject,
+                        },
+                    },
+                    ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BillingAccount = "billing_account2062abb6",
+#pragma warning disable CS0612
+                    Il4Settings = new Workload.Types.IL4Settings
+#pragma warning restore CS0612
+                    {
+                        KmsSettings = new Workload.Types.KMSSettings
+                        {
+                            NextRotationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            RotationPeriod = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+#pragma warning disable CS0612
+                    CjisSettings = new Workload.Types.CJISSettings
+#pragma warning restore CS0612
+                    {
+                        KmsSettings = new Workload.Types.KMSSettings
+                        {
+                            NextRotationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            RotationPeriod = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+#pragma warning disable CS0612
+                    FedrampHighSettings = new Workload.Types.FedrampHighSettings
+#pragma warning restore CS0612
+                    {
+                        KmsSettings = new Workload.Types.KMSSettings
+                        {
+                            NextRotationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            RotationPeriod = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+#pragma warning disable CS0612
+                    FedrampModerateSettings = new Workload.Types.FedrampModerateSettings
+#pragma warning restore CS0612
+                    {
+                        KmsSettings = new Workload.Types.KMSSettings
+                        {
+                            NextRotationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                            RotationPeriod = new wkt::Duration
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Workload expectedResponse = new Workload
             {
@@ -187,15 +903,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 DisplayName = "display_name137f65c2",
                 Resources =
                 {
-                    new Workload.Types.ResourceInfo(),
+                    new Workload.Types.ResourceInfo
+                    {
+                        ResourceId = -1761669221043932190L,
+                        ResourceType = Workload.Types.ResourceInfo.Types.ResourceType.ConsumerProject,
+                    },
                 },
                 ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
-                Il4Settings = new Workload.Types.IL4Settings(),
-                CjisSettings = new Workload.Types.CJISSettings(),
+                Il4Settings = new Workload.Types.IL4Settings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                CjisSettings = new Workload.Types.CJISSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 Etag = "etage8ad7218",
                 Labels =
                 {
@@ -205,11 +961,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                     },
                 },
 #pragma warning disable CS0612
-                FedrampHighSettings = new Workload.Types.FedrampHighSettings(),
-                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
+                FedrampHighSettings = new Workload.Types.FedrampHighSettings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
-                KmsSettings = new Workload.Types.KMSSettings(),
+                KmsSettings = new Workload.Types.KMSSettings
+                {
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -336,15 +1136,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 DisplayName = "display_name137f65c2",
                 Resources =
                 {
-                    new Workload.Types.ResourceInfo(),
+                    new Workload.Types.ResourceInfo
+                    {
+                        ResourceId = -1761669221043932190L,
+                        ResourceType = Workload.Types.ResourceInfo.Types.ResourceType.ConsumerProject,
+                    },
                 },
                 ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
-                Il4Settings = new Workload.Types.IL4Settings(),
-                CjisSettings = new Workload.Types.CJISSettings(),
+                Il4Settings = new Workload.Types.IL4Settings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                CjisSettings = new Workload.Types.CJISSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 Etag = "etage8ad7218",
                 Labels =
                 {
@@ -354,11 +1194,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                     },
                 },
 #pragma warning disable CS0612
-                FedrampHighSettings = new Workload.Types.FedrampHighSettings(),
-                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
+                FedrampHighSettings = new Workload.Types.FedrampHighSettings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
-                KmsSettings = new Workload.Types.KMSSettings(),
+                KmsSettings = new Workload.Types.KMSSettings
+                {
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -382,15 +1266,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 DisplayName = "display_name137f65c2",
                 Resources =
                 {
-                    new Workload.Types.ResourceInfo(),
+                    new Workload.Types.ResourceInfo
+                    {
+                        ResourceId = -1761669221043932190L,
+                        ResourceType = Workload.Types.ResourceInfo.Types.ResourceType.ConsumerProject,
+                    },
                 },
                 ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
-                Il4Settings = new Workload.Types.IL4Settings(),
-                CjisSettings = new Workload.Types.CJISSettings(),
+                Il4Settings = new Workload.Types.IL4Settings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                CjisSettings = new Workload.Types.CJISSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 Etag = "etage8ad7218",
                 Labels =
                 {
@@ -400,11 +1324,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                     },
                 },
 #pragma warning disable CS0612
-                FedrampHighSettings = new Workload.Types.FedrampHighSettings(),
-                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
+                FedrampHighSettings = new Workload.Types.FedrampHighSettings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
-                KmsSettings = new Workload.Types.KMSSettings(),
+                KmsSettings = new Workload.Types.KMSSettings
+                {
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -430,15 +1398,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 DisplayName = "display_name137f65c2",
                 Resources =
                 {
-                    new Workload.Types.ResourceInfo(),
+                    new Workload.Types.ResourceInfo
+                    {
+                        ResourceId = -1761669221043932190L,
+                        ResourceType = Workload.Types.ResourceInfo.Types.ResourceType.ConsumerProject,
+                    },
                 },
                 ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
-                Il4Settings = new Workload.Types.IL4Settings(),
-                CjisSettings = new Workload.Types.CJISSettings(),
+                Il4Settings = new Workload.Types.IL4Settings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                CjisSettings = new Workload.Types.CJISSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 Etag = "etage8ad7218",
                 Labels =
                 {
@@ -448,11 +1456,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                     },
                 },
 #pragma warning disable CS0612
-                FedrampHighSettings = new Workload.Types.FedrampHighSettings(),
-                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
+                FedrampHighSettings = new Workload.Types.FedrampHighSettings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
-                KmsSettings = new Workload.Types.KMSSettings(),
+                KmsSettings = new Workload.Types.KMSSettings
+                {
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -476,15 +1528,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 DisplayName = "display_name137f65c2",
                 Resources =
                 {
-                    new Workload.Types.ResourceInfo(),
+                    new Workload.Types.ResourceInfo
+                    {
+                        ResourceId = -1761669221043932190L,
+                        ResourceType = Workload.Types.ResourceInfo.Types.ResourceType.ConsumerProject,
+                    },
                 },
                 ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
-                Il4Settings = new Workload.Types.IL4Settings(),
-                CjisSettings = new Workload.Types.CJISSettings(),
+                Il4Settings = new Workload.Types.IL4Settings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                CjisSettings = new Workload.Types.CJISSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 Etag = "etage8ad7218",
                 Labels =
                 {
@@ -494,11 +1586,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                     },
                 },
 #pragma warning disable CS0612
-                FedrampHighSettings = new Workload.Types.FedrampHighSettings(),
-                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
+                FedrampHighSettings = new Workload.Types.FedrampHighSettings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
-                KmsSettings = new Workload.Types.KMSSettings(),
+                KmsSettings = new Workload.Types.KMSSettings
+                {
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -524,15 +1660,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 DisplayName = "display_name137f65c2",
                 Resources =
                 {
-                    new Workload.Types.ResourceInfo(),
+                    new Workload.Types.ResourceInfo
+                    {
+                        ResourceId = -1761669221043932190L,
+                        ResourceType = Workload.Types.ResourceInfo.Types.ResourceType.ConsumerProject,
+                    },
                 },
                 ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
-                Il4Settings = new Workload.Types.IL4Settings(),
-                CjisSettings = new Workload.Types.CJISSettings(),
+                Il4Settings = new Workload.Types.IL4Settings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                CjisSettings = new Workload.Types.CJISSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 Etag = "etage8ad7218",
                 Labels =
                 {
@@ -542,11 +1718,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                     },
                 },
 #pragma warning disable CS0612
-                FedrampHighSettings = new Workload.Types.FedrampHighSettings(),
-                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
+                FedrampHighSettings = new Workload.Types.FedrampHighSettings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
-                KmsSettings = new Workload.Types.KMSSettings(),
+                KmsSettings = new Workload.Types.KMSSettings
+                {
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -570,15 +1790,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 DisplayName = "display_name137f65c2",
                 Resources =
                 {
-                    new Workload.Types.ResourceInfo(),
+                    new Workload.Types.ResourceInfo
+                    {
+                        ResourceId = -1761669221043932190L,
+                        ResourceType = Workload.Types.ResourceInfo.Types.ResourceType.ConsumerProject,
+                    },
                 },
                 ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
-                CreateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
-                Il4Settings = new Workload.Types.IL4Settings(),
-                CjisSettings = new Workload.Types.CJISSettings(),
+                Il4Settings = new Workload.Types.IL4Settings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                CjisSettings = new Workload.Types.CJISSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 Etag = "etage8ad7218",
                 Labels =
                 {
@@ -588,11 +1848,55 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                     },
                 },
 #pragma warning disable CS0612
-                FedrampHighSettings = new Workload.Types.FedrampHighSettings(),
-                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings(),
+                FedrampHighSettings = new Workload.Types.FedrampHighSettings
 #pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+#pragma warning disable CS0612
+                FedrampModerateSettings = new Workload.Types.FedrampModerateSettings
+#pragma warning restore CS0612
+                {
+                    KmsSettings = new Workload.Types.KMSSettings
+                    {
+                        NextRotationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        RotationPeriod = new wkt::Duration
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
-                KmsSettings = new Workload.Types.KMSSettings(),
+                KmsSettings = new Workload.Types.KMSSettings
+                {
+                    NextRotationTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    RotationPeriod = new wkt::Duration
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
