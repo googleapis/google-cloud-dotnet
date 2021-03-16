@@ -21,6 +21,7 @@ using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using gr = Google.Rpc;
+using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -39,22 +40,112 @@ namespace Google.Cloud.Iot.V1.Tests
             CreateDeviceRegistryRequest request = new CreateDeviceRegistryRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                DeviceRegistry = new DeviceRegistry(),
+                DeviceRegistry = new DeviceRegistry
+                {
+                    Id = "id74b70bb8",
+                    RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
+                    MqttConfig = new MqttConfig
+                    {
+                        MqttEnabledState = MqttState.MqttDisabled,
+                    },
+                    StateNotificationConfig = new StateNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                    },
+                    Credentials =
+                    {
+                        new RegistryCredential
+                        {
+                            PublicKeyCertificate = new PublicKeyCertificate
+                            {
+                                Format = PublicKeyCertificateFormat.X509CertificatePem,
+                                Certificate = "certificateef0cd3e0",
+                                X509Details = new X509CertificateDetails
+                                {
+                                    Issuer = "issuerc12b6c3e",
+                                    Subject = "subject4e37e3b5",
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    ExpiryTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                    PublicKeyType = "public_key_type7da55d43",
+                                },
+                            },
+                        },
+                    },
+                    HttpConfig = new HttpConfig
+                    {
+                        HttpEnabledState = HttpState.HttpDisabled,
+                    },
+                    EventNotificationConfigs =
+                    {
+                        new EventNotificationConfig
+                        {
+                            PubsubTopicName = "pubsub_topic_name33543f4c",
+                            SubfolderMatches = "subfolder_matches4c61dfda",
+                        },
+                    },
+                    LogLevel = LogLevel.Info,
+                },
             };
             DeviceRegistry expectedResponse = new DeviceRegistry
             {
                 Id = "id74b70bb8",
                 RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                MqttConfig = new MqttConfig(),
-                StateNotificationConfig = new StateNotificationConfig(),
+                MqttConfig = new MqttConfig
+                {
+                    MqttEnabledState = MqttState.MqttDisabled,
+                },
+                StateNotificationConfig = new StateNotificationConfig
+                {
+                    PubsubTopicName = "pubsub_topic_name33543f4c",
+                },
                 Credentials =
                 {
-                    new RegistryCredential(),
+                    new RegistryCredential
+                    {
+                        PublicKeyCertificate = new PublicKeyCertificate
+                        {
+                            Format = PublicKeyCertificateFormat.X509CertificatePem,
+                            Certificate = "certificateef0cd3e0",
+                            X509Details = new X509CertificateDetails
+                            {
+                                Issuer = "issuerc12b6c3e",
+                                Subject = "subject4e37e3b5",
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                ExpiryTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                PublicKeyType = "public_key_type7da55d43",
+                            },
+                        },
+                    },
                 },
-                HttpConfig = new HttpConfig(),
+                HttpConfig = new HttpConfig
+                {
+                    HttpEnabledState = HttpState.HttpDisabled,
+                },
                 EventNotificationConfigs =
                 {
-                    new EventNotificationConfig(),
+                    new EventNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                        SubfolderMatches = "subfolder_matches4c61dfda",
+                    },
                 },
                 LogLevel = LogLevel.Info,
             };
@@ -72,22 +163,112 @@ namespace Google.Cloud.Iot.V1.Tests
             CreateDeviceRegistryRequest request = new CreateDeviceRegistryRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                DeviceRegistry = new DeviceRegistry(),
+                DeviceRegistry = new DeviceRegistry
+                {
+                    Id = "id74b70bb8",
+                    RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
+                    MqttConfig = new MqttConfig
+                    {
+                        MqttEnabledState = MqttState.MqttDisabled,
+                    },
+                    StateNotificationConfig = new StateNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                    },
+                    Credentials =
+                    {
+                        new RegistryCredential
+                        {
+                            PublicKeyCertificate = new PublicKeyCertificate
+                            {
+                                Format = PublicKeyCertificateFormat.X509CertificatePem,
+                                Certificate = "certificateef0cd3e0",
+                                X509Details = new X509CertificateDetails
+                                {
+                                    Issuer = "issuerc12b6c3e",
+                                    Subject = "subject4e37e3b5",
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    ExpiryTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                    PublicKeyType = "public_key_type7da55d43",
+                                },
+                            },
+                        },
+                    },
+                    HttpConfig = new HttpConfig
+                    {
+                        HttpEnabledState = HttpState.HttpDisabled,
+                    },
+                    EventNotificationConfigs =
+                    {
+                        new EventNotificationConfig
+                        {
+                            PubsubTopicName = "pubsub_topic_name33543f4c",
+                            SubfolderMatches = "subfolder_matches4c61dfda",
+                        },
+                    },
+                    LogLevel = LogLevel.Info,
+                },
             };
             DeviceRegistry expectedResponse = new DeviceRegistry
             {
                 Id = "id74b70bb8",
                 RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                MqttConfig = new MqttConfig(),
-                StateNotificationConfig = new StateNotificationConfig(),
+                MqttConfig = new MqttConfig
+                {
+                    MqttEnabledState = MqttState.MqttDisabled,
+                },
+                StateNotificationConfig = new StateNotificationConfig
+                {
+                    PubsubTopicName = "pubsub_topic_name33543f4c",
+                },
                 Credentials =
                 {
-                    new RegistryCredential(),
+                    new RegistryCredential
+                    {
+                        PublicKeyCertificate = new PublicKeyCertificate
+                        {
+                            Format = PublicKeyCertificateFormat.X509CertificatePem,
+                            Certificate = "certificateef0cd3e0",
+                            X509Details = new X509CertificateDetails
+                            {
+                                Issuer = "issuerc12b6c3e",
+                                Subject = "subject4e37e3b5",
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                ExpiryTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                PublicKeyType = "public_key_type7da55d43",
+                            },
+                        },
+                    },
                 },
-                HttpConfig = new HttpConfig(),
+                HttpConfig = new HttpConfig
+                {
+                    HttpEnabledState = HttpState.HttpDisabled,
+                },
                 EventNotificationConfigs =
                 {
-                    new EventNotificationConfig(),
+                    new EventNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                        SubfolderMatches = "subfolder_matches4c61dfda",
+                    },
                 },
                 LogLevel = LogLevel.Info,
             };
@@ -107,22 +288,112 @@ namespace Google.Cloud.Iot.V1.Tests
             CreateDeviceRegistryRequest request = new CreateDeviceRegistryRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                DeviceRegistry = new DeviceRegistry(),
+                DeviceRegistry = new DeviceRegistry
+                {
+                    Id = "id74b70bb8",
+                    RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
+                    MqttConfig = new MqttConfig
+                    {
+                        MqttEnabledState = MqttState.MqttDisabled,
+                    },
+                    StateNotificationConfig = new StateNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                    },
+                    Credentials =
+                    {
+                        new RegistryCredential
+                        {
+                            PublicKeyCertificate = new PublicKeyCertificate
+                            {
+                                Format = PublicKeyCertificateFormat.X509CertificatePem,
+                                Certificate = "certificateef0cd3e0",
+                                X509Details = new X509CertificateDetails
+                                {
+                                    Issuer = "issuerc12b6c3e",
+                                    Subject = "subject4e37e3b5",
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    ExpiryTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                    PublicKeyType = "public_key_type7da55d43",
+                                },
+                            },
+                        },
+                    },
+                    HttpConfig = new HttpConfig
+                    {
+                        HttpEnabledState = HttpState.HttpDisabled,
+                    },
+                    EventNotificationConfigs =
+                    {
+                        new EventNotificationConfig
+                        {
+                            PubsubTopicName = "pubsub_topic_name33543f4c",
+                            SubfolderMatches = "subfolder_matches4c61dfda",
+                        },
+                    },
+                    LogLevel = LogLevel.Info,
+                },
             };
             DeviceRegistry expectedResponse = new DeviceRegistry
             {
                 Id = "id74b70bb8",
                 RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                MqttConfig = new MqttConfig(),
-                StateNotificationConfig = new StateNotificationConfig(),
+                MqttConfig = new MqttConfig
+                {
+                    MqttEnabledState = MqttState.MqttDisabled,
+                },
+                StateNotificationConfig = new StateNotificationConfig
+                {
+                    PubsubTopicName = "pubsub_topic_name33543f4c",
+                },
                 Credentials =
                 {
-                    new RegistryCredential(),
+                    new RegistryCredential
+                    {
+                        PublicKeyCertificate = new PublicKeyCertificate
+                        {
+                            Format = PublicKeyCertificateFormat.X509CertificatePem,
+                            Certificate = "certificateef0cd3e0",
+                            X509Details = new X509CertificateDetails
+                            {
+                                Issuer = "issuerc12b6c3e",
+                                Subject = "subject4e37e3b5",
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                ExpiryTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                PublicKeyType = "public_key_type7da55d43",
+                            },
+                        },
+                    },
                 },
-                HttpConfig = new HttpConfig(),
+                HttpConfig = new HttpConfig
+                {
+                    HttpEnabledState = HttpState.HttpDisabled,
+                },
                 EventNotificationConfigs =
                 {
-                    new EventNotificationConfig(),
+                    new EventNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                        SubfolderMatches = "subfolder_matches4c61dfda",
+                    },
                 },
                 LogLevel = LogLevel.Info,
             };
@@ -140,22 +411,112 @@ namespace Google.Cloud.Iot.V1.Tests
             CreateDeviceRegistryRequest request = new CreateDeviceRegistryRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                DeviceRegistry = new DeviceRegistry(),
+                DeviceRegistry = new DeviceRegistry
+                {
+                    Id = "id74b70bb8",
+                    RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
+                    MqttConfig = new MqttConfig
+                    {
+                        MqttEnabledState = MqttState.MqttDisabled,
+                    },
+                    StateNotificationConfig = new StateNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                    },
+                    Credentials =
+                    {
+                        new RegistryCredential
+                        {
+                            PublicKeyCertificate = new PublicKeyCertificate
+                            {
+                                Format = PublicKeyCertificateFormat.X509CertificatePem,
+                                Certificate = "certificateef0cd3e0",
+                                X509Details = new X509CertificateDetails
+                                {
+                                    Issuer = "issuerc12b6c3e",
+                                    Subject = "subject4e37e3b5",
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    ExpiryTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                    PublicKeyType = "public_key_type7da55d43",
+                                },
+                            },
+                        },
+                    },
+                    HttpConfig = new HttpConfig
+                    {
+                        HttpEnabledState = HttpState.HttpDisabled,
+                    },
+                    EventNotificationConfigs =
+                    {
+                        new EventNotificationConfig
+                        {
+                            PubsubTopicName = "pubsub_topic_name33543f4c",
+                            SubfolderMatches = "subfolder_matches4c61dfda",
+                        },
+                    },
+                    LogLevel = LogLevel.Info,
+                },
             };
             DeviceRegistry expectedResponse = new DeviceRegistry
             {
                 Id = "id74b70bb8",
                 RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                MqttConfig = new MqttConfig(),
-                StateNotificationConfig = new StateNotificationConfig(),
+                MqttConfig = new MqttConfig
+                {
+                    MqttEnabledState = MqttState.MqttDisabled,
+                },
+                StateNotificationConfig = new StateNotificationConfig
+                {
+                    PubsubTopicName = "pubsub_topic_name33543f4c",
+                },
                 Credentials =
                 {
-                    new RegistryCredential(),
+                    new RegistryCredential
+                    {
+                        PublicKeyCertificate = new PublicKeyCertificate
+                        {
+                            Format = PublicKeyCertificateFormat.X509CertificatePem,
+                            Certificate = "certificateef0cd3e0",
+                            X509Details = new X509CertificateDetails
+                            {
+                                Issuer = "issuerc12b6c3e",
+                                Subject = "subject4e37e3b5",
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                ExpiryTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                PublicKeyType = "public_key_type7da55d43",
+                            },
+                        },
+                    },
                 },
-                HttpConfig = new HttpConfig(),
+                HttpConfig = new HttpConfig
+                {
+                    HttpEnabledState = HttpState.HttpDisabled,
+                },
                 EventNotificationConfigs =
                 {
-                    new EventNotificationConfig(),
+                    new EventNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                        SubfolderMatches = "subfolder_matches4c61dfda",
+                    },
                 },
                 LogLevel = LogLevel.Info,
             };
@@ -175,22 +536,112 @@ namespace Google.Cloud.Iot.V1.Tests
             CreateDeviceRegistryRequest request = new CreateDeviceRegistryRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                DeviceRegistry = new DeviceRegistry(),
+                DeviceRegistry = new DeviceRegistry
+                {
+                    Id = "id74b70bb8",
+                    RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
+                    MqttConfig = new MqttConfig
+                    {
+                        MqttEnabledState = MqttState.MqttDisabled,
+                    },
+                    StateNotificationConfig = new StateNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                    },
+                    Credentials =
+                    {
+                        new RegistryCredential
+                        {
+                            PublicKeyCertificate = new PublicKeyCertificate
+                            {
+                                Format = PublicKeyCertificateFormat.X509CertificatePem,
+                                Certificate = "certificateef0cd3e0",
+                                X509Details = new X509CertificateDetails
+                                {
+                                    Issuer = "issuerc12b6c3e",
+                                    Subject = "subject4e37e3b5",
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    ExpiryTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                    PublicKeyType = "public_key_type7da55d43",
+                                },
+                            },
+                        },
+                    },
+                    HttpConfig = new HttpConfig
+                    {
+                        HttpEnabledState = HttpState.HttpDisabled,
+                    },
+                    EventNotificationConfigs =
+                    {
+                        new EventNotificationConfig
+                        {
+                            PubsubTopicName = "pubsub_topic_name33543f4c",
+                            SubfolderMatches = "subfolder_matches4c61dfda",
+                        },
+                    },
+                    LogLevel = LogLevel.Info,
+                },
             };
             DeviceRegistry expectedResponse = new DeviceRegistry
             {
                 Id = "id74b70bb8",
                 RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                MqttConfig = new MqttConfig(),
-                StateNotificationConfig = new StateNotificationConfig(),
+                MqttConfig = new MqttConfig
+                {
+                    MqttEnabledState = MqttState.MqttDisabled,
+                },
+                StateNotificationConfig = new StateNotificationConfig
+                {
+                    PubsubTopicName = "pubsub_topic_name33543f4c",
+                },
                 Credentials =
                 {
-                    new RegistryCredential(),
+                    new RegistryCredential
+                    {
+                        PublicKeyCertificate = new PublicKeyCertificate
+                        {
+                            Format = PublicKeyCertificateFormat.X509CertificatePem,
+                            Certificate = "certificateef0cd3e0",
+                            X509Details = new X509CertificateDetails
+                            {
+                                Issuer = "issuerc12b6c3e",
+                                Subject = "subject4e37e3b5",
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                ExpiryTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                PublicKeyType = "public_key_type7da55d43",
+                            },
+                        },
+                    },
                 },
-                HttpConfig = new HttpConfig(),
+                HttpConfig = new HttpConfig
+                {
+                    HttpEnabledState = HttpState.HttpDisabled,
+                },
                 EventNotificationConfigs =
                 {
-                    new EventNotificationConfig(),
+                    new EventNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                        SubfolderMatches = "subfolder_matches4c61dfda",
+                    },
                 },
                 LogLevel = LogLevel.Info,
             };
@@ -208,22 +659,112 @@ namespace Google.Cloud.Iot.V1.Tests
             CreateDeviceRegistryRequest request = new CreateDeviceRegistryRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                DeviceRegistry = new DeviceRegistry(),
+                DeviceRegistry = new DeviceRegistry
+                {
+                    Id = "id74b70bb8",
+                    RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
+                    MqttConfig = new MqttConfig
+                    {
+                        MqttEnabledState = MqttState.MqttDisabled,
+                    },
+                    StateNotificationConfig = new StateNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                    },
+                    Credentials =
+                    {
+                        new RegistryCredential
+                        {
+                            PublicKeyCertificate = new PublicKeyCertificate
+                            {
+                                Format = PublicKeyCertificateFormat.X509CertificatePem,
+                                Certificate = "certificateef0cd3e0",
+                                X509Details = new X509CertificateDetails
+                                {
+                                    Issuer = "issuerc12b6c3e",
+                                    Subject = "subject4e37e3b5",
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    ExpiryTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                    PublicKeyType = "public_key_type7da55d43",
+                                },
+                            },
+                        },
+                    },
+                    HttpConfig = new HttpConfig
+                    {
+                        HttpEnabledState = HttpState.HttpDisabled,
+                    },
+                    EventNotificationConfigs =
+                    {
+                        new EventNotificationConfig
+                        {
+                            PubsubTopicName = "pubsub_topic_name33543f4c",
+                            SubfolderMatches = "subfolder_matches4c61dfda",
+                        },
+                    },
+                    LogLevel = LogLevel.Info,
+                },
             };
             DeviceRegistry expectedResponse = new DeviceRegistry
             {
                 Id = "id74b70bb8",
                 RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                MqttConfig = new MqttConfig(),
-                StateNotificationConfig = new StateNotificationConfig(),
+                MqttConfig = new MqttConfig
+                {
+                    MqttEnabledState = MqttState.MqttDisabled,
+                },
+                StateNotificationConfig = new StateNotificationConfig
+                {
+                    PubsubTopicName = "pubsub_topic_name33543f4c",
+                },
                 Credentials =
                 {
-                    new RegistryCredential(),
+                    new RegistryCredential
+                    {
+                        PublicKeyCertificate = new PublicKeyCertificate
+                        {
+                            Format = PublicKeyCertificateFormat.X509CertificatePem,
+                            Certificate = "certificateef0cd3e0",
+                            X509Details = new X509CertificateDetails
+                            {
+                                Issuer = "issuerc12b6c3e",
+                                Subject = "subject4e37e3b5",
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                ExpiryTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                PublicKeyType = "public_key_type7da55d43",
+                            },
+                        },
+                    },
                 },
-                HttpConfig = new HttpConfig(),
+                HttpConfig = new HttpConfig
+                {
+                    HttpEnabledState = HttpState.HttpDisabled,
+                },
                 EventNotificationConfigs =
                 {
-                    new EventNotificationConfig(),
+                    new EventNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                        SubfolderMatches = "subfolder_matches4c61dfda",
+                    },
                 },
                 LogLevel = LogLevel.Info,
             };
@@ -248,16 +789,53 @@ namespace Google.Cloud.Iot.V1.Tests
             {
                 Id = "id74b70bb8",
                 RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                MqttConfig = new MqttConfig(),
-                StateNotificationConfig = new StateNotificationConfig(),
+                MqttConfig = new MqttConfig
+                {
+                    MqttEnabledState = MqttState.MqttDisabled,
+                },
+                StateNotificationConfig = new StateNotificationConfig
+                {
+                    PubsubTopicName = "pubsub_topic_name33543f4c",
+                },
                 Credentials =
                 {
-                    new RegistryCredential(),
+                    new RegistryCredential
+                    {
+                        PublicKeyCertificate = new PublicKeyCertificate
+                        {
+                            Format = PublicKeyCertificateFormat.X509CertificatePem,
+                            Certificate = "certificateef0cd3e0",
+                            X509Details = new X509CertificateDetails
+                            {
+                                Issuer = "issuerc12b6c3e",
+                                Subject = "subject4e37e3b5",
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                ExpiryTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                PublicKeyType = "public_key_type7da55d43",
+                            },
+                        },
+                    },
                 },
-                HttpConfig = new HttpConfig(),
+                HttpConfig = new HttpConfig
+                {
+                    HttpEnabledState = HttpState.HttpDisabled,
+                },
                 EventNotificationConfigs =
                 {
-                    new EventNotificationConfig(),
+                    new EventNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                        SubfolderMatches = "subfolder_matches4c61dfda",
+                    },
                 },
                 LogLevel = LogLevel.Info,
             };
@@ -280,16 +858,53 @@ namespace Google.Cloud.Iot.V1.Tests
             {
                 Id = "id74b70bb8",
                 RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                MqttConfig = new MqttConfig(),
-                StateNotificationConfig = new StateNotificationConfig(),
+                MqttConfig = new MqttConfig
+                {
+                    MqttEnabledState = MqttState.MqttDisabled,
+                },
+                StateNotificationConfig = new StateNotificationConfig
+                {
+                    PubsubTopicName = "pubsub_topic_name33543f4c",
+                },
                 Credentials =
                 {
-                    new RegistryCredential(),
+                    new RegistryCredential
+                    {
+                        PublicKeyCertificate = new PublicKeyCertificate
+                        {
+                            Format = PublicKeyCertificateFormat.X509CertificatePem,
+                            Certificate = "certificateef0cd3e0",
+                            X509Details = new X509CertificateDetails
+                            {
+                                Issuer = "issuerc12b6c3e",
+                                Subject = "subject4e37e3b5",
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                ExpiryTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                PublicKeyType = "public_key_type7da55d43",
+                            },
+                        },
+                    },
                 },
-                HttpConfig = new HttpConfig(),
+                HttpConfig = new HttpConfig
+                {
+                    HttpEnabledState = HttpState.HttpDisabled,
+                },
                 EventNotificationConfigs =
                 {
-                    new EventNotificationConfig(),
+                    new EventNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                        SubfolderMatches = "subfolder_matches4c61dfda",
+                    },
                 },
                 LogLevel = LogLevel.Info,
             };
@@ -314,16 +929,53 @@ namespace Google.Cloud.Iot.V1.Tests
             {
                 Id = "id74b70bb8",
                 RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                MqttConfig = new MqttConfig(),
-                StateNotificationConfig = new StateNotificationConfig(),
+                MqttConfig = new MqttConfig
+                {
+                    MqttEnabledState = MqttState.MqttDisabled,
+                },
+                StateNotificationConfig = new StateNotificationConfig
+                {
+                    PubsubTopicName = "pubsub_topic_name33543f4c",
+                },
                 Credentials =
                 {
-                    new RegistryCredential(),
+                    new RegistryCredential
+                    {
+                        PublicKeyCertificate = new PublicKeyCertificate
+                        {
+                            Format = PublicKeyCertificateFormat.X509CertificatePem,
+                            Certificate = "certificateef0cd3e0",
+                            X509Details = new X509CertificateDetails
+                            {
+                                Issuer = "issuerc12b6c3e",
+                                Subject = "subject4e37e3b5",
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                ExpiryTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                PublicKeyType = "public_key_type7da55d43",
+                            },
+                        },
+                    },
                 },
-                HttpConfig = new HttpConfig(),
+                HttpConfig = new HttpConfig
+                {
+                    HttpEnabledState = HttpState.HttpDisabled,
+                },
                 EventNotificationConfigs =
                 {
-                    new EventNotificationConfig(),
+                    new EventNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                        SubfolderMatches = "subfolder_matches4c61dfda",
+                    },
                 },
                 LogLevel = LogLevel.Info,
             };
@@ -346,16 +998,53 @@ namespace Google.Cloud.Iot.V1.Tests
             {
                 Id = "id74b70bb8",
                 RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                MqttConfig = new MqttConfig(),
-                StateNotificationConfig = new StateNotificationConfig(),
+                MqttConfig = new MqttConfig
+                {
+                    MqttEnabledState = MqttState.MqttDisabled,
+                },
+                StateNotificationConfig = new StateNotificationConfig
+                {
+                    PubsubTopicName = "pubsub_topic_name33543f4c",
+                },
                 Credentials =
                 {
-                    new RegistryCredential(),
+                    new RegistryCredential
+                    {
+                        PublicKeyCertificate = new PublicKeyCertificate
+                        {
+                            Format = PublicKeyCertificateFormat.X509CertificatePem,
+                            Certificate = "certificateef0cd3e0",
+                            X509Details = new X509CertificateDetails
+                            {
+                                Issuer = "issuerc12b6c3e",
+                                Subject = "subject4e37e3b5",
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                ExpiryTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                PublicKeyType = "public_key_type7da55d43",
+                            },
+                        },
+                    },
                 },
-                HttpConfig = new HttpConfig(),
+                HttpConfig = new HttpConfig
+                {
+                    HttpEnabledState = HttpState.HttpDisabled,
+                },
                 EventNotificationConfigs =
                 {
-                    new EventNotificationConfig(),
+                    new EventNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                        SubfolderMatches = "subfolder_matches4c61dfda",
+                    },
                 },
                 LogLevel = LogLevel.Info,
             };
@@ -380,16 +1069,53 @@ namespace Google.Cloud.Iot.V1.Tests
             {
                 Id = "id74b70bb8",
                 RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                MqttConfig = new MqttConfig(),
-                StateNotificationConfig = new StateNotificationConfig(),
+                MqttConfig = new MqttConfig
+                {
+                    MqttEnabledState = MqttState.MqttDisabled,
+                },
+                StateNotificationConfig = new StateNotificationConfig
+                {
+                    PubsubTopicName = "pubsub_topic_name33543f4c",
+                },
                 Credentials =
                 {
-                    new RegistryCredential(),
+                    new RegistryCredential
+                    {
+                        PublicKeyCertificate = new PublicKeyCertificate
+                        {
+                            Format = PublicKeyCertificateFormat.X509CertificatePem,
+                            Certificate = "certificateef0cd3e0",
+                            X509Details = new X509CertificateDetails
+                            {
+                                Issuer = "issuerc12b6c3e",
+                                Subject = "subject4e37e3b5",
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                ExpiryTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                PublicKeyType = "public_key_type7da55d43",
+                            },
+                        },
+                    },
                 },
-                HttpConfig = new HttpConfig(),
+                HttpConfig = new HttpConfig
+                {
+                    HttpEnabledState = HttpState.HttpDisabled,
+                },
                 EventNotificationConfigs =
                 {
-                    new EventNotificationConfig(),
+                    new EventNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                        SubfolderMatches = "subfolder_matches4c61dfda",
+                    },
                 },
                 LogLevel = LogLevel.Info,
             };
@@ -412,16 +1138,53 @@ namespace Google.Cloud.Iot.V1.Tests
             {
                 Id = "id74b70bb8",
                 RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                MqttConfig = new MqttConfig(),
-                StateNotificationConfig = new StateNotificationConfig(),
+                MqttConfig = new MqttConfig
+                {
+                    MqttEnabledState = MqttState.MqttDisabled,
+                },
+                StateNotificationConfig = new StateNotificationConfig
+                {
+                    PubsubTopicName = "pubsub_topic_name33543f4c",
+                },
                 Credentials =
                 {
-                    new RegistryCredential(),
+                    new RegistryCredential
+                    {
+                        PublicKeyCertificate = new PublicKeyCertificate
+                        {
+                            Format = PublicKeyCertificateFormat.X509CertificatePem,
+                            Certificate = "certificateef0cd3e0",
+                            X509Details = new X509CertificateDetails
+                            {
+                                Issuer = "issuerc12b6c3e",
+                                Subject = "subject4e37e3b5",
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                ExpiryTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                PublicKeyType = "public_key_type7da55d43",
+                            },
+                        },
+                    },
                 },
-                HttpConfig = new HttpConfig(),
+                HttpConfig = new HttpConfig
+                {
+                    HttpEnabledState = HttpState.HttpDisabled,
+                },
                 EventNotificationConfigs =
                 {
-                    new EventNotificationConfig(),
+                    new EventNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                        SubfolderMatches = "subfolder_matches4c61dfda",
+                    },
                 },
                 LogLevel = LogLevel.Info,
             };
@@ -440,23 +1203,116 @@ namespace Google.Cloud.Iot.V1.Tests
             moq::Mock<DeviceManager.DeviceManagerClient> mockGrpcClient = new moq::Mock<DeviceManager.DeviceManagerClient>(moq::MockBehavior.Strict);
             UpdateDeviceRegistryRequest request = new UpdateDeviceRegistryRequest
             {
-                DeviceRegistry = new DeviceRegistry(),
-                UpdateMask = new wkt::FieldMask(),
+                DeviceRegistry = new DeviceRegistry
+                {
+                    Id = "id74b70bb8",
+                    RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
+                    MqttConfig = new MqttConfig
+                    {
+                        MqttEnabledState = MqttState.MqttDisabled,
+                    },
+                    StateNotificationConfig = new StateNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                    },
+                    Credentials =
+                    {
+                        new RegistryCredential
+                        {
+                            PublicKeyCertificate = new PublicKeyCertificate
+                            {
+                                Format = PublicKeyCertificateFormat.X509CertificatePem,
+                                Certificate = "certificateef0cd3e0",
+                                X509Details = new X509CertificateDetails
+                                {
+                                    Issuer = "issuerc12b6c3e",
+                                    Subject = "subject4e37e3b5",
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    ExpiryTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                    PublicKeyType = "public_key_type7da55d43",
+                                },
+                            },
+                        },
+                    },
+                    HttpConfig = new HttpConfig
+                    {
+                        HttpEnabledState = HttpState.HttpDisabled,
+                    },
+                    EventNotificationConfigs =
+                    {
+                        new EventNotificationConfig
+                        {
+                            PubsubTopicName = "pubsub_topic_name33543f4c",
+                            SubfolderMatches = "subfolder_matches4c61dfda",
+                        },
+                    },
+                    LogLevel = LogLevel.Info,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             DeviceRegistry expectedResponse = new DeviceRegistry
             {
                 Id = "id74b70bb8",
                 RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                MqttConfig = new MqttConfig(),
-                StateNotificationConfig = new StateNotificationConfig(),
+                MqttConfig = new MqttConfig
+                {
+                    MqttEnabledState = MqttState.MqttDisabled,
+                },
+                StateNotificationConfig = new StateNotificationConfig
+                {
+                    PubsubTopicName = "pubsub_topic_name33543f4c",
+                },
                 Credentials =
                 {
-                    new RegistryCredential(),
+                    new RegistryCredential
+                    {
+                        PublicKeyCertificate = new PublicKeyCertificate
+                        {
+                            Format = PublicKeyCertificateFormat.X509CertificatePem,
+                            Certificate = "certificateef0cd3e0",
+                            X509Details = new X509CertificateDetails
+                            {
+                                Issuer = "issuerc12b6c3e",
+                                Subject = "subject4e37e3b5",
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                ExpiryTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                PublicKeyType = "public_key_type7da55d43",
+                            },
+                        },
+                    },
                 },
-                HttpConfig = new HttpConfig(),
+                HttpConfig = new HttpConfig
+                {
+                    HttpEnabledState = HttpState.HttpDisabled,
+                },
                 EventNotificationConfigs =
                 {
-                    new EventNotificationConfig(),
+                    new EventNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                        SubfolderMatches = "subfolder_matches4c61dfda",
+                    },
                 },
                 LogLevel = LogLevel.Info,
             };
@@ -473,23 +1329,116 @@ namespace Google.Cloud.Iot.V1.Tests
             moq::Mock<DeviceManager.DeviceManagerClient> mockGrpcClient = new moq::Mock<DeviceManager.DeviceManagerClient>(moq::MockBehavior.Strict);
             UpdateDeviceRegistryRequest request = new UpdateDeviceRegistryRequest
             {
-                DeviceRegistry = new DeviceRegistry(),
-                UpdateMask = new wkt::FieldMask(),
+                DeviceRegistry = new DeviceRegistry
+                {
+                    Id = "id74b70bb8",
+                    RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
+                    MqttConfig = new MqttConfig
+                    {
+                        MqttEnabledState = MqttState.MqttDisabled,
+                    },
+                    StateNotificationConfig = new StateNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                    },
+                    Credentials =
+                    {
+                        new RegistryCredential
+                        {
+                            PublicKeyCertificate = new PublicKeyCertificate
+                            {
+                                Format = PublicKeyCertificateFormat.X509CertificatePem,
+                                Certificate = "certificateef0cd3e0",
+                                X509Details = new X509CertificateDetails
+                                {
+                                    Issuer = "issuerc12b6c3e",
+                                    Subject = "subject4e37e3b5",
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    ExpiryTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                    PublicKeyType = "public_key_type7da55d43",
+                                },
+                            },
+                        },
+                    },
+                    HttpConfig = new HttpConfig
+                    {
+                        HttpEnabledState = HttpState.HttpDisabled,
+                    },
+                    EventNotificationConfigs =
+                    {
+                        new EventNotificationConfig
+                        {
+                            PubsubTopicName = "pubsub_topic_name33543f4c",
+                            SubfolderMatches = "subfolder_matches4c61dfda",
+                        },
+                    },
+                    LogLevel = LogLevel.Info,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             DeviceRegistry expectedResponse = new DeviceRegistry
             {
                 Id = "id74b70bb8",
                 RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                MqttConfig = new MqttConfig(),
-                StateNotificationConfig = new StateNotificationConfig(),
+                MqttConfig = new MqttConfig
+                {
+                    MqttEnabledState = MqttState.MqttDisabled,
+                },
+                StateNotificationConfig = new StateNotificationConfig
+                {
+                    PubsubTopicName = "pubsub_topic_name33543f4c",
+                },
                 Credentials =
                 {
-                    new RegistryCredential(),
+                    new RegistryCredential
+                    {
+                        PublicKeyCertificate = new PublicKeyCertificate
+                        {
+                            Format = PublicKeyCertificateFormat.X509CertificatePem,
+                            Certificate = "certificateef0cd3e0",
+                            X509Details = new X509CertificateDetails
+                            {
+                                Issuer = "issuerc12b6c3e",
+                                Subject = "subject4e37e3b5",
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                ExpiryTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                PublicKeyType = "public_key_type7da55d43",
+                            },
+                        },
+                    },
                 },
-                HttpConfig = new HttpConfig(),
+                HttpConfig = new HttpConfig
+                {
+                    HttpEnabledState = HttpState.HttpDisabled,
+                },
                 EventNotificationConfigs =
                 {
-                    new EventNotificationConfig(),
+                    new EventNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                        SubfolderMatches = "subfolder_matches4c61dfda",
+                    },
                 },
                 LogLevel = LogLevel.Info,
             };
@@ -508,23 +1457,116 @@ namespace Google.Cloud.Iot.V1.Tests
             moq::Mock<DeviceManager.DeviceManagerClient> mockGrpcClient = new moq::Mock<DeviceManager.DeviceManagerClient>(moq::MockBehavior.Strict);
             UpdateDeviceRegistryRequest request = new UpdateDeviceRegistryRequest
             {
-                DeviceRegistry = new DeviceRegistry(),
-                UpdateMask = new wkt::FieldMask(),
+                DeviceRegistry = new DeviceRegistry
+                {
+                    Id = "id74b70bb8",
+                    RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
+                    MqttConfig = new MqttConfig
+                    {
+                        MqttEnabledState = MqttState.MqttDisabled,
+                    },
+                    StateNotificationConfig = new StateNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                    },
+                    Credentials =
+                    {
+                        new RegistryCredential
+                        {
+                            PublicKeyCertificate = new PublicKeyCertificate
+                            {
+                                Format = PublicKeyCertificateFormat.X509CertificatePem,
+                                Certificate = "certificateef0cd3e0",
+                                X509Details = new X509CertificateDetails
+                                {
+                                    Issuer = "issuerc12b6c3e",
+                                    Subject = "subject4e37e3b5",
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    ExpiryTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                    PublicKeyType = "public_key_type7da55d43",
+                                },
+                            },
+                        },
+                    },
+                    HttpConfig = new HttpConfig
+                    {
+                        HttpEnabledState = HttpState.HttpDisabled,
+                    },
+                    EventNotificationConfigs =
+                    {
+                        new EventNotificationConfig
+                        {
+                            PubsubTopicName = "pubsub_topic_name33543f4c",
+                            SubfolderMatches = "subfolder_matches4c61dfda",
+                        },
+                    },
+                    LogLevel = LogLevel.Info,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             DeviceRegistry expectedResponse = new DeviceRegistry
             {
                 Id = "id74b70bb8",
                 RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                MqttConfig = new MqttConfig(),
-                StateNotificationConfig = new StateNotificationConfig(),
+                MqttConfig = new MqttConfig
+                {
+                    MqttEnabledState = MqttState.MqttDisabled,
+                },
+                StateNotificationConfig = new StateNotificationConfig
+                {
+                    PubsubTopicName = "pubsub_topic_name33543f4c",
+                },
                 Credentials =
                 {
-                    new RegistryCredential(),
+                    new RegistryCredential
+                    {
+                        PublicKeyCertificate = new PublicKeyCertificate
+                        {
+                            Format = PublicKeyCertificateFormat.X509CertificatePem,
+                            Certificate = "certificateef0cd3e0",
+                            X509Details = new X509CertificateDetails
+                            {
+                                Issuer = "issuerc12b6c3e",
+                                Subject = "subject4e37e3b5",
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                ExpiryTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                PublicKeyType = "public_key_type7da55d43",
+                            },
+                        },
+                    },
                 },
-                HttpConfig = new HttpConfig(),
+                HttpConfig = new HttpConfig
+                {
+                    HttpEnabledState = HttpState.HttpDisabled,
+                },
                 EventNotificationConfigs =
                 {
-                    new EventNotificationConfig(),
+                    new EventNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                        SubfolderMatches = "subfolder_matches4c61dfda",
+                    },
                 },
                 LogLevel = LogLevel.Info,
             };
@@ -541,23 +1583,116 @@ namespace Google.Cloud.Iot.V1.Tests
             moq::Mock<DeviceManager.DeviceManagerClient> mockGrpcClient = new moq::Mock<DeviceManager.DeviceManagerClient>(moq::MockBehavior.Strict);
             UpdateDeviceRegistryRequest request = new UpdateDeviceRegistryRequest
             {
-                DeviceRegistry = new DeviceRegistry(),
-                UpdateMask = new wkt::FieldMask(),
+                DeviceRegistry = new DeviceRegistry
+                {
+                    Id = "id74b70bb8",
+                    RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
+                    MqttConfig = new MqttConfig
+                    {
+                        MqttEnabledState = MqttState.MqttDisabled,
+                    },
+                    StateNotificationConfig = new StateNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                    },
+                    Credentials =
+                    {
+                        new RegistryCredential
+                        {
+                            PublicKeyCertificate = new PublicKeyCertificate
+                            {
+                                Format = PublicKeyCertificateFormat.X509CertificatePem,
+                                Certificate = "certificateef0cd3e0",
+                                X509Details = new X509CertificateDetails
+                                {
+                                    Issuer = "issuerc12b6c3e",
+                                    Subject = "subject4e37e3b5",
+                                    StartTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    ExpiryTime = new wkt::Timestamp
+                                    {
+                                        Seconds = -2106654494186127752L,
+                                        Nanos = 985689544,
+                                    },
+                                    SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                    PublicKeyType = "public_key_type7da55d43",
+                                },
+                            },
+                        },
+                    },
+                    HttpConfig = new HttpConfig
+                    {
+                        HttpEnabledState = HttpState.HttpDisabled,
+                    },
+                    EventNotificationConfigs =
+                    {
+                        new EventNotificationConfig
+                        {
+                            PubsubTopicName = "pubsub_topic_name33543f4c",
+                            SubfolderMatches = "subfolder_matches4c61dfda",
+                        },
+                    },
+                    LogLevel = LogLevel.Info,
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             DeviceRegistry expectedResponse = new DeviceRegistry
             {
                 Id = "id74b70bb8",
                 RegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                MqttConfig = new MqttConfig(),
-                StateNotificationConfig = new StateNotificationConfig(),
+                MqttConfig = new MqttConfig
+                {
+                    MqttEnabledState = MqttState.MqttDisabled,
+                },
+                StateNotificationConfig = new StateNotificationConfig
+                {
+                    PubsubTopicName = "pubsub_topic_name33543f4c",
+                },
                 Credentials =
                 {
-                    new RegistryCredential(),
+                    new RegistryCredential
+                    {
+                        PublicKeyCertificate = new PublicKeyCertificate
+                        {
+                            Format = PublicKeyCertificateFormat.X509CertificatePem,
+                            Certificate = "certificateef0cd3e0",
+                            X509Details = new X509CertificateDetails
+                            {
+                                Issuer = "issuerc12b6c3e",
+                                Subject = "subject4e37e3b5",
+                                StartTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                ExpiryTime = new wkt::Timestamp
+                                {
+                                    Seconds = -2106654494186127752L,
+                                    Nanos = 985689544,
+                                },
+                                SignatureAlgorithm = "signature_algorithmb4ca5f54",
+                                PublicKeyType = "public_key_type7da55d43",
+                            },
+                        },
+                    },
                 },
-                HttpConfig = new HttpConfig(),
+                HttpConfig = new HttpConfig
+                {
+                    HttpEnabledState = HttpState.HttpDisabled,
+                },
                 EventNotificationConfigs =
                 {
-                    new EventNotificationConfig(),
+                    new EventNotificationConfig
+                    {
+                        PubsubTopicName = "pubsub_topic_name33543f4c",
+                        SubfolderMatches = "subfolder_matches4c61dfda",
+                    },
                 },
                 LogLevel = LogLevel.Info,
             };
@@ -670,24 +1805,194 @@ namespace Google.Cloud.Iot.V1.Tests
             CreateDeviceRequest request = new CreateDeviceRequest
             {
                 ParentAsRegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                Device = new Device(),
+                Device = new Device
+                {
+                    Id = "id74b70bb8",
+                    DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
+                    NumId = 15493549572921294156UL,
+                    LastHeartbeatTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    Credentials =
+                    {
+                        new DeviceCredential
+                        {
+                            PublicKey = new PublicKeyCredential
+                            {
+                                Format = PublicKeyFormat.RsaPem,
+                                Key = "key8a0b6e3c",
+                            },
+                            ExpirationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Config = new DeviceConfig
+                    {
+                        Version = 8314266188006815530L,
+                        CloudUpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeviceAckTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    LastConfigAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = new DeviceState
+                    {
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LastConfigSendTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Blocked = true,
+                    LastStateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LogLevel = LogLevel.Info,
+                    GatewayConfig = new GatewayConfig
+                    {
+                        GatewayType = GatewayType.Unspecified,
+                        GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                        LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                        LastAccessedGatewayTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             Device expectedResponse = new Device
             {
                 Id = "id74b70bb8",
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
                 NumId = 15493549572921294156UL,
-                LastHeartbeatTime = new wkt::Timestamp(),
-                LastEventTime = new wkt::Timestamp(),
-                LastErrorTime = new wkt::Timestamp(),
-                LastErrorStatus = new gr::Status(),
+                LastHeartbeatTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Credentials =
                 {
-                    new DeviceCredential(),
+                    new DeviceCredential
+                    {
+                        PublicKey = new PublicKeyCredential
+                        {
+                            Format = PublicKeyFormat.RsaPem,
+                            Key = "key8a0b6e3c",
+                        },
+                        ExpirationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                Config = new DeviceConfig(),
-                LastConfigAckTime = new wkt::Timestamp(),
-                State = new DeviceState(),
+                Config = new DeviceConfig
+                {
+                    Version = 8314266188006815530L,
+                    CloudUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeviceAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
+                LastConfigAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                State = new DeviceState
+                {
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
                 Metadata =
                 {
                     {
@@ -695,11 +2000,29 @@ namespace Google.Cloud.Iot.V1.Tests
                         "value60c16320"
                     },
                 },
-                LastConfigSendTime = new wkt::Timestamp(),
+                LastConfigSendTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Blocked = true,
-                LastStateTime = new wkt::Timestamp(),
+                LastStateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 LogLevel = LogLevel.Info,
-                GatewayConfig = new GatewayConfig(),
+                GatewayConfig = new GatewayConfig
+                {
+                    GatewayType = GatewayType.Unspecified,
+                    GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                    LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                    LastAccessedGatewayTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -715,24 +2038,194 @@ namespace Google.Cloud.Iot.V1.Tests
             CreateDeviceRequest request = new CreateDeviceRequest
             {
                 ParentAsRegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                Device = new Device(),
+                Device = new Device
+                {
+                    Id = "id74b70bb8",
+                    DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
+                    NumId = 15493549572921294156UL,
+                    LastHeartbeatTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    Credentials =
+                    {
+                        new DeviceCredential
+                        {
+                            PublicKey = new PublicKeyCredential
+                            {
+                                Format = PublicKeyFormat.RsaPem,
+                                Key = "key8a0b6e3c",
+                            },
+                            ExpirationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Config = new DeviceConfig
+                    {
+                        Version = 8314266188006815530L,
+                        CloudUpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeviceAckTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    LastConfigAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = new DeviceState
+                    {
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LastConfigSendTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Blocked = true,
+                    LastStateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LogLevel = LogLevel.Info,
+                    GatewayConfig = new GatewayConfig
+                    {
+                        GatewayType = GatewayType.Unspecified,
+                        GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                        LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                        LastAccessedGatewayTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             Device expectedResponse = new Device
             {
                 Id = "id74b70bb8",
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
                 NumId = 15493549572921294156UL,
-                LastHeartbeatTime = new wkt::Timestamp(),
-                LastEventTime = new wkt::Timestamp(),
-                LastErrorTime = new wkt::Timestamp(),
-                LastErrorStatus = new gr::Status(),
+                LastHeartbeatTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Credentials =
                 {
-                    new DeviceCredential(),
+                    new DeviceCredential
+                    {
+                        PublicKey = new PublicKeyCredential
+                        {
+                            Format = PublicKeyFormat.RsaPem,
+                            Key = "key8a0b6e3c",
+                        },
+                        ExpirationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                Config = new DeviceConfig(),
-                LastConfigAckTime = new wkt::Timestamp(),
-                State = new DeviceState(),
+                Config = new DeviceConfig
+                {
+                    Version = 8314266188006815530L,
+                    CloudUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeviceAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
+                LastConfigAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                State = new DeviceState
+                {
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
                 Metadata =
                 {
                     {
@@ -740,11 +2233,29 @@ namespace Google.Cloud.Iot.V1.Tests
                         "value60c16320"
                     },
                 },
-                LastConfigSendTime = new wkt::Timestamp(),
+                LastConfigSendTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Blocked = true,
-                LastStateTime = new wkt::Timestamp(),
+                LastStateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 LogLevel = LogLevel.Info,
-                GatewayConfig = new GatewayConfig(),
+                GatewayConfig = new GatewayConfig
+                {
+                    GatewayType = GatewayType.Unspecified,
+                    GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                    LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                    LastAccessedGatewayTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Device>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -762,24 +2273,194 @@ namespace Google.Cloud.Iot.V1.Tests
             CreateDeviceRequest request = new CreateDeviceRequest
             {
                 ParentAsRegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                Device = new Device(),
+                Device = new Device
+                {
+                    Id = "id74b70bb8",
+                    DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
+                    NumId = 15493549572921294156UL,
+                    LastHeartbeatTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    Credentials =
+                    {
+                        new DeviceCredential
+                        {
+                            PublicKey = new PublicKeyCredential
+                            {
+                                Format = PublicKeyFormat.RsaPem,
+                                Key = "key8a0b6e3c",
+                            },
+                            ExpirationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Config = new DeviceConfig
+                    {
+                        Version = 8314266188006815530L,
+                        CloudUpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeviceAckTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    LastConfigAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = new DeviceState
+                    {
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LastConfigSendTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Blocked = true,
+                    LastStateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LogLevel = LogLevel.Info,
+                    GatewayConfig = new GatewayConfig
+                    {
+                        GatewayType = GatewayType.Unspecified,
+                        GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                        LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                        LastAccessedGatewayTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             Device expectedResponse = new Device
             {
                 Id = "id74b70bb8",
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
                 NumId = 15493549572921294156UL,
-                LastHeartbeatTime = new wkt::Timestamp(),
-                LastEventTime = new wkt::Timestamp(),
-                LastErrorTime = new wkt::Timestamp(),
-                LastErrorStatus = new gr::Status(),
+                LastHeartbeatTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Credentials =
                 {
-                    new DeviceCredential(),
+                    new DeviceCredential
+                    {
+                        PublicKey = new PublicKeyCredential
+                        {
+                            Format = PublicKeyFormat.RsaPem,
+                            Key = "key8a0b6e3c",
+                        },
+                        ExpirationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                Config = new DeviceConfig(),
-                LastConfigAckTime = new wkt::Timestamp(),
-                State = new DeviceState(),
+                Config = new DeviceConfig
+                {
+                    Version = 8314266188006815530L,
+                    CloudUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeviceAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
+                LastConfigAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                State = new DeviceState
+                {
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
                 Metadata =
                 {
                     {
@@ -787,11 +2468,29 @@ namespace Google.Cloud.Iot.V1.Tests
                         "value60c16320"
                     },
                 },
-                LastConfigSendTime = new wkt::Timestamp(),
+                LastConfigSendTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Blocked = true,
-                LastStateTime = new wkt::Timestamp(),
+                LastStateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 LogLevel = LogLevel.Info,
-                GatewayConfig = new GatewayConfig(),
+                GatewayConfig = new GatewayConfig
+                {
+                    GatewayType = GatewayType.Unspecified,
+                    GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                    LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                    LastAccessedGatewayTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -807,24 +2506,194 @@ namespace Google.Cloud.Iot.V1.Tests
             CreateDeviceRequest request = new CreateDeviceRequest
             {
                 ParentAsRegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                Device = new Device(),
+                Device = new Device
+                {
+                    Id = "id74b70bb8",
+                    DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
+                    NumId = 15493549572921294156UL,
+                    LastHeartbeatTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    Credentials =
+                    {
+                        new DeviceCredential
+                        {
+                            PublicKey = new PublicKeyCredential
+                            {
+                                Format = PublicKeyFormat.RsaPem,
+                                Key = "key8a0b6e3c",
+                            },
+                            ExpirationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Config = new DeviceConfig
+                    {
+                        Version = 8314266188006815530L,
+                        CloudUpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeviceAckTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    LastConfigAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = new DeviceState
+                    {
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LastConfigSendTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Blocked = true,
+                    LastStateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LogLevel = LogLevel.Info,
+                    GatewayConfig = new GatewayConfig
+                    {
+                        GatewayType = GatewayType.Unspecified,
+                        GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                        LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                        LastAccessedGatewayTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             Device expectedResponse = new Device
             {
                 Id = "id74b70bb8",
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
                 NumId = 15493549572921294156UL,
-                LastHeartbeatTime = new wkt::Timestamp(),
-                LastEventTime = new wkt::Timestamp(),
-                LastErrorTime = new wkt::Timestamp(),
-                LastErrorStatus = new gr::Status(),
+                LastHeartbeatTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Credentials =
                 {
-                    new DeviceCredential(),
+                    new DeviceCredential
+                    {
+                        PublicKey = new PublicKeyCredential
+                        {
+                            Format = PublicKeyFormat.RsaPem,
+                            Key = "key8a0b6e3c",
+                        },
+                        ExpirationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                Config = new DeviceConfig(),
-                LastConfigAckTime = new wkt::Timestamp(),
-                State = new DeviceState(),
+                Config = new DeviceConfig
+                {
+                    Version = 8314266188006815530L,
+                    CloudUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeviceAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
+                LastConfigAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                State = new DeviceState
+                {
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
                 Metadata =
                 {
                     {
@@ -832,11 +2701,29 @@ namespace Google.Cloud.Iot.V1.Tests
                         "value60c16320"
                     },
                 },
-                LastConfigSendTime = new wkt::Timestamp(),
+                LastConfigSendTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Blocked = true,
-                LastStateTime = new wkt::Timestamp(),
+                LastStateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 LogLevel = LogLevel.Info,
-                GatewayConfig = new GatewayConfig(),
+                GatewayConfig = new GatewayConfig
+                {
+                    GatewayType = GatewayType.Unspecified,
+                    GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                    LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                    LastAccessedGatewayTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Device>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -854,24 +2741,194 @@ namespace Google.Cloud.Iot.V1.Tests
             CreateDeviceRequest request = new CreateDeviceRequest
             {
                 ParentAsRegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                Device = new Device(),
+                Device = new Device
+                {
+                    Id = "id74b70bb8",
+                    DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
+                    NumId = 15493549572921294156UL,
+                    LastHeartbeatTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    Credentials =
+                    {
+                        new DeviceCredential
+                        {
+                            PublicKey = new PublicKeyCredential
+                            {
+                                Format = PublicKeyFormat.RsaPem,
+                                Key = "key8a0b6e3c",
+                            },
+                            ExpirationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Config = new DeviceConfig
+                    {
+                        Version = 8314266188006815530L,
+                        CloudUpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeviceAckTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    LastConfigAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = new DeviceState
+                    {
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LastConfigSendTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Blocked = true,
+                    LastStateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LogLevel = LogLevel.Info,
+                    GatewayConfig = new GatewayConfig
+                    {
+                        GatewayType = GatewayType.Unspecified,
+                        GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                        LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                        LastAccessedGatewayTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             Device expectedResponse = new Device
             {
                 Id = "id74b70bb8",
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
                 NumId = 15493549572921294156UL,
-                LastHeartbeatTime = new wkt::Timestamp(),
-                LastEventTime = new wkt::Timestamp(),
-                LastErrorTime = new wkt::Timestamp(),
-                LastErrorStatus = new gr::Status(),
+                LastHeartbeatTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Credentials =
                 {
-                    new DeviceCredential(),
+                    new DeviceCredential
+                    {
+                        PublicKey = new PublicKeyCredential
+                        {
+                            Format = PublicKeyFormat.RsaPem,
+                            Key = "key8a0b6e3c",
+                        },
+                        ExpirationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                Config = new DeviceConfig(),
-                LastConfigAckTime = new wkt::Timestamp(),
-                State = new DeviceState(),
+                Config = new DeviceConfig
+                {
+                    Version = 8314266188006815530L,
+                    CloudUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeviceAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
+                LastConfigAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                State = new DeviceState
+                {
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
                 Metadata =
                 {
                     {
@@ -879,11 +2936,29 @@ namespace Google.Cloud.Iot.V1.Tests
                         "value60c16320"
                     },
                 },
-                LastConfigSendTime = new wkt::Timestamp(),
+                LastConfigSendTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Blocked = true,
-                LastStateTime = new wkt::Timestamp(),
+                LastStateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 LogLevel = LogLevel.Info,
-                GatewayConfig = new GatewayConfig(),
+                GatewayConfig = new GatewayConfig
+                {
+                    GatewayType = GatewayType.Unspecified,
+                    GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                    LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                    LastAccessedGatewayTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -899,24 +2974,194 @@ namespace Google.Cloud.Iot.V1.Tests
             CreateDeviceRequest request = new CreateDeviceRequest
             {
                 ParentAsRegistryName = RegistryName.FromProjectLocationRegistry("[PROJECT]", "[LOCATION]", "[REGISTRY]"),
-                Device = new Device(),
+                Device = new Device
+                {
+                    Id = "id74b70bb8",
+                    DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
+                    NumId = 15493549572921294156UL,
+                    LastHeartbeatTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    Credentials =
+                    {
+                        new DeviceCredential
+                        {
+                            PublicKey = new PublicKeyCredential
+                            {
+                                Format = PublicKeyFormat.RsaPem,
+                                Key = "key8a0b6e3c",
+                            },
+                            ExpirationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Config = new DeviceConfig
+                    {
+                        Version = 8314266188006815530L,
+                        CloudUpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeviceAckTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    LastConfigAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = new DeviceState
+                    {
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LastConfigSendTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Blocked = true,
+                    LastStateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LogLevel = LogLevel.Info,
+                    GatewayConfig = new GatewayConfig
+                    {
+                        GatewayType = GatewayType.Unspecified,
+                        GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                        LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                        LastAccessedGatewayTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             Device expectedResponse = new Device
             {
                 Id = "id74b70bb8",
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
                 NumId = 15493549572921294156UL,
-                LastHeartbeatTime = new wkt::Timestamp(),
-                LastEventTime = new wkt::Timestamp(),
-                LastErrorTime = new wkt::Timestamp(),
-                LastErrorStatus = new gr::Status(),
+                LastHeartbeatTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Credentials =
                 {
-                    new DeviceCredential(),
+                    new DeviceCredential
+                    {
+                        PublicKey = new PublicKeyCredential
+                        {
+                            Format = PublicKeyFormat.RsaPem,
+                            Key = "key8a0b6e3c",
+                        },
+                        ExpirationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                Config = new DeviceConfig(),
-                LastConfigAckTime = new wkt::Timestamp(),
-                State = new DeviceState(),
+                Config = new DeviceConfig
+                {
+                    Version = 8314266188006815530L,
+                    CloudUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeviceAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
+                LastConfigAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                State = new DeviceState
+                {
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
                 Metadata =
                 {
                     {
@@ -924,11 +3169,29 @@ namespace Google.Cloud.Iot.V1.Tests
                         "value60c16320"
                     },
                 },
-                LastConfigSendTime = new wkt::Timestamp(),
+                LastConfigSendTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Blocked = true,
-                LastStateTime = new wkt::Timestamp(),
+                LastStateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 LogLevel = LogLevel.Info,
-                GatewayConfig = new GatewayConfig(),
+                GatewayConfig = new GatewayConfig
+                {
+                    GatewayType = GatewayType.Unspecified,
+                    GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                    LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                    LastAccessedGatewayTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Device>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -946,24 +3209,89 @@ namespace Google.Cloud.Iot.V1.Tests
             GetDeviceRequest request = new GetDeviceRequest
             {
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
-                FieldMask = new wkt::FieldMask(),
+                FieldMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Device expectedResponse = new Device
             {
                 Id = "id74b70bb8",
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
                 NumId = 15493549572921294156UL,
-                LastHeartbeatTime = new wkt::Timestamp(),
-                LastEventTime = new wkt::Timestamp(),
-                LastErrorTime = new wkt::Timestamp(),
-                LastErrorStatus = new gr::Status(),
+                LastHeartbeatTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Credentials =
                 {
-                    new DeviceCredential(),
+                    new DeviceCredential
+                    {
+                        PublicKey = new PublicKeyCredential
+                        {
+                            Format = PublicKeyFormat.RsaPem,
+                            Key = "key8a0b6e3c",
+                        },
+                        ExpirationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                Config = new DeviceConfig(),
-                LastConfigAckTime = new wkt::Timestamp(),
-                State = new DeviceState(),
+                Config = new DeviceConfig
+                {
+                    Version = 8314266188006815530L,
+                    CloudUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeviceAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
+                LastConfigAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                State = new DeviceState
+                {
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
                 Metadata =
                 {
                     {
@@ -971,11 +3299,29 @@ namespace Google.Cloud.Iot.V1.Tests
                         "value60c16320"
                     },
                 },
-                LastConfigSendTime = new wkt::Timestamp(),
+                LastConfigSendTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Blocked = true,
-                LastStateTime = new wkt::Timestamp(),
+                LastStateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 LogLevel = LogLevel.Info,
-                GatewayConfig = new GatewayConfig(),
+                GatewayConfig = new GatewayConfig
+                {
+                    GatewayType = GatewayType.Unspecified,
+                    GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                    LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                    LastAccessedGatewayTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -991,24 +3337,89 @@ namespace Google.Cloud.Iot.V1.Tests
             GetDeviceRequest request = new GetDeviceRequest
             {
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
-                FieldMask = new wkt::FieldMask(),
+                FieldMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Device expectedResponse = new Device
             {
                 Id = "id74b70bb8",
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
                 NumId = 15493549572921294156UL,
-                LastHeartbeatTime = new wkt::Timestamp(),
-                LastEventTime = new wkt::Timestamp(),
-                LastErrorTime = new wkt::Timestamp(),
-                LastErrorStatus = new gr::Status(),
+                LastHeartbeatTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Credentials =
                 {
-                    new DeviceCredential(),
+                    new DeviceCredential
+                    {
+                        PublicKey = new PublicKeyCredential
+                        {
+                            Format = PublicKeyFormat.RsaPem,
+                            Key = "key8a0b6e3c",
+                        },
+                        ExpirationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                Config = new DeviceConfig(),
-                LastConfigAckTime = new wkt::Timestamp(),
-                State = new DeviceState(),
+                Config = new DeviceConfig
+                {
+                    Version = 8314266188006815530L,
+                    CloudUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeviceAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
+                LastConfigAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                State = new DeviceState
+                {
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
                 Metadata =
                 {
                     {
@@ -1016,11 +3427,29 @@ namespace Google.Cloud.Iot.V1.Tests
                         "value60c16320"
                     },
                 },
-                LastConfigSendTime = new wkt::Timestamp(),
+                LastConfigSendTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Blocked = true,
-                LastStateTime = new wkt::Timestamp(),
+                LastStateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 LogLevel = LogLevel.Info,
-                GatewayConfig = new GatewayConfig(),
+                GatewayConfig = new GatewayConfig
+                {
+                    GatewayType = GatewayType.Unspecified,
+                    GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                    LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                    LastAccessedGatewayTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Device>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1044,17 +3473,79 @@ namespace Google.Cloud.Iot.V1.Tests
                 Id = "id74b70bb8",
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
                 NumId = 15493549572921294156UL,
-                LastHeartbeatTime = new wkt::Timestamp(),
-                LastEventTime = new wkt::Timestamp(),
-                LastErrorTime = new wkt::Timestamp(),
-                LastErrorStatus = new gr::Status(),
+                LastHeartbeatTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Credentials =
                 {
-                    new DeviceCredential(),
+                    new DeviceCredential
+                    {
+                        PublicKey = new PublicKeyCredential
+                        {
+                            Format = PublicKeyFormat.RsaPem,
+                            Key = "key8a0b6e3c",
+                        },
+                        ExpirationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                Config = new DeviceConfig(),
-                LastConfigAckTime = new wkt::Timestamp(),
-                State = new DeviceState(),
+                Config = new DeviceConfig
+                {
+                    Version = 8314266188006815530L,
+                    CloudUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeviceAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
+                LastConfigAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                State = new DeviceState
+                {
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
                 Metadata =
                 {
                     {
@@ -1062,11 +3553,29 @@ namespace Google.Cloud.Iot.V1.Tests
                         "value60c16320"
                     },
                 },
-                LastConfigSendTime = new wkt::Timestamp(),
+                LastConfigSendTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Blocked = true,
-                LastStateTime = new wkt::Timestamp(),
+                LastStateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 LogLevel = LogLevel.Info,
-                GatewayConfig = new GatewayConfig(),
+                GatewayConfig = new GatewayConfig
+                {
+                    GatewayType = GatewayType.Unspecified,
+                    GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                    LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                    LastAccessedGatewayTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1088,17 +3597,79 @@ namespace Google.Cloud.Iot.V1.Tests
                 Id = "id74b70bb8",
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
                 NumId = 15493549572921294156UL,
-                LastHeartbeatTime = new wkt::Timestamp(),
-                LastEventTime = new wkt::Timestamp(),
-                LastErrorTime = new wkt::Timestamp(),
-                LastErrorStatus = new gr::Status(),
+                LastHeartbeatTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Credentials =
                 {
-                    new DeviceCredential(),
+                    new DeviceCredential
+                    {
+                        PublicKey = new PublicKeyCredential
+                        {
+                            Format = PublicKeyFormat.RsaPem,
+                            Key = "key8a0b6e3c",
+                        },
+                        ExpirationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                Config = new DeviceConfig(),
-                LastConfigAckTime = new wkt::Timestamp(),
-                State = new DeviceState(),
+                Config = new DeviceConfig
+                {
+                    Version = 8314266188006815530L,
+                    CloudUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeviceAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
+                LastConfigAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                State = new DeviceState
+                {
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
                 Metadata =
                 {
                     {
@@ -1106,11 +3677,29 @@ namespace Google.Cloud.Iot.V1.Tests
                         "value60c16320"
                     },
                 },
-                LastConfigSendTime = new wkt::Timestamp(),
+                LastConfigSendTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Blocked = true,
-                LastStateTime = new wkt::Timestamp(),
+                LastStateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 LogLevel = LogLevel.Info,
-                GatewayConfig = new GatewayConfig(),
+                GatewayConfig = new GatewayConfig
+                {
+                    GatewayType = GatewayType.Unspecified,
+                    GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                    LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                    LastAccessedGatewayTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Device>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1134,17 +3723,79 @@ namespace Google.Cloud.Iot.V1.Tests
                 Id = "id74b70bb8",
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
                 NumId = 15493549572921294156UL,
-                LastHeartbeatTime = new wkt::Timestamp(),
-                LastEventTime = new wkt::Timestamp(),
-                LastErrorTime = new wkt::Timestamp(),
-                LastErrorStatus = new gr::Status(),
+                LastHeartbeatTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Credentials =
                 {
-                    new DeviceCredential(),
+                    new DeviceCredential
+                    {
+                        PublicKey = new PublicKeyCredential
+                        {
+                            Format = PublicKeyFormat.RsaPem,
+                            Key = "key8a0b6e3c",
+                        },
+                        ExpirationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                Config = new DeviceConfig(),
-                LastConfigAckTime = new wkt::Timestamp(),
-                State = new DeviceState(),
+                Config = new DeviceConfig
+                {
+                    Version = 8314266188006815530L,
+                    CloudUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeviceAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
+                LastConfigAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                State = new DeviceState
+                {
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
                 Metadata =
                 {
                     {
@@ -1152,11 +3803,29 @@ namespace Google.Cloud.Iot.V1.Tests
                         "value60c16320"
                     },
                 },
-                LastConfigSendTime = new wkt::Timestamp(),
+                LastConfigSendTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Blocked = true,
-                LastStateTime = new wkt::Timestamp(),
+                LastStateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 LogLevel = LogLevel.Info,
-                GatewayConfig = new GatewayConfig(),
+                GatewayConfig = new GatewayConfig
+                {
+                    GatewayType = GatewayType.Unspecified,
+                    GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                    LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                    LastAccessedGatewayTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1178,17 +3847,79 @@ namespace Google.Cloud.Iot.V1.Tests
                 Id = "id74b70bb8",
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
                 NumId = 15493549572921294156UL,
-                LastHeartbeatTime = new wkt::Timestamp(),
-                LastEventTime = new wkt::Timestamp(),
-                LastErrorTime = new wkt::Timestamp(),
-                LastErrorStatus = new gr::Status(),
+                LastHeartbeatTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Credentials =
                 {
-                    new DeviceCredential(),
+                    new DeviceCredential
+                    {
+                        PublicKey = new PublicKeyCredential
+                        {
+                            Format = PublicKeyFormat.RsaPem,
+                            Key = "key8a0b6e3c",
+                        },
+                        ExpirationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                Config = new DeviceConfig(),
-                LastConfigAckTime = new wkt::Timestamp(),
-                State = new DeviceState(),
+                Config = new DeviceConfig
+                {
+                    Version = 8314266188006815530L,
+                    CloudUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeviceAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
+                LastConfigAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                State = new DeviceState
+                {
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
                 Metadata =
                 {
                     {
@@ -1196,11 +3927,29 @@ namespace Google.Cloud.Iot.V1.Tests
                         "value60c16320"
                     },
                 },
-                LastConfigSendTime = new wkt::Timestamp(),
+                LastConfigSendTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Blocked = true,
-                LastStateTime = new wkt::Timestamp(),
+                LastStateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 LogLevel = LogLevel.Info,
-                GatewayConfig = new GatewayConfig(),
+                GatewayConfig = new GatewayConfig
+                {
+                    GatewayType = GatewayType.Unspecified,
+                    GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                    LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                    LastAccessedGatewayTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Device>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1217,25 +3966,198 @@ namespace Google.Cloud.Iot.V1.Tests
             moq::Mock<DeviceManager.DeviceManagerClient> mockGrpcClient = new moq::Mock<DeviceManager.DeviceManagerClient>(moq::MockBehavior.Strict);
             UpdateDeviceRequest request = new UpdateDeviceRequest
             {
-                Device = new Device(),
-                UpdateMask = new wkt::FieldMask(),
+                Device = new Device
+                {
+                    Id = "id74b70bb8",
+                    DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
+                    NumId = 15493549572921294156UL,
+                    LastHeartbeatTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    Credentials =
+                    {
+                        new DeviceCredential
+                        {
+                            PublicKey = new PublicKeyCredential
+                            {
+                                Format = PublicKeyFormat.RsaPem,
+                                Key = "key8a0b6e3c",
+                            },
+                            ExpirationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Config = new DeviceConfig
+                    {
+                        Version = 8314266188006815530L,
+                        CloudUpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeviceAckTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    LastConfigAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = new DeviceState
+                    {
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LastConfigSendTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Blocked = true,
+                    LastStateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LogLevel = LogLevel.Info,
+                    GatewayConfig = new GatewayConfig
+                    {
+                        GatewayType = GatewayType.Unspecified,
+                        GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                        LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                        LastAccessedGatewayTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Device expectedResponse = new Device
             {
                 Id = "id74b70bb8",
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
                 NumId = 15493549572921294156UL,
-                LastHeartbeatTime = new wkt::Timestamp(),
-                LastEventTime = new wkt::Timestamp(),
-                LastErrorTime = new wkt::Timestamp(),
-                LastErrorStatus = new gr::Status(),
+                LastHeartbeatTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Credentials =
                 {
-                    new DeviceCredential(),
+                    new DeviceCredential
+                    {
+                        PublicKey = new PublicKeyCredential
+                        {
+                            Format = PublicKeyFormat.RsaPem,
+                            Key = "key8a0b6e3c",
+                        },
+                        ExpirationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                Config = new DeviceConfig(),
-                LastConfigAckTime = new wkt::Timestamp(),
-                State = new DeviceState(),
+                Config = new DeviceConfig
+                {
+                    Version = 8314266188006815530L,
+                    CloudUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeviceAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
+                LastConfigAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                State = new DeviceState
+                {
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
                 Metadata =
                 {
                     {
@@ -1243,11 +4165,29 @@ namespace Google.Cloud.Iot.V1.Tests
                         "value60c16320"
                     },
                 },
-                LastConfigSendTime = new wkt::Timestamp(),
+                LastConfigSendTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Blocked = true,
-                LastStateTime = new wkt::Timestamp(),
+                LastStateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 LogLevel = LogLevel.Info,
-                GatewayConfig = new GatewayConfig(),
+                GatewayConfig = new GatewayConfig
+                {
+                    GatewayType = GatewayType.Unspecified,
+                    GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                    LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                    LastAccessedGatewayTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1262,25 +4202,198 @@ namespace Google.Cloud.Iot.V1.Tests
             moq::Mock<DeviceManager.DeviceManagerClient> mockGrpcClient = new moq::Mock<DeviceManager.DeviceManagerClient>(moq::MockBehavior.Strict);
             UpdateDeviceRequest request = new UpdateDeviceRequest
             {
-                Device = new Device(),
-                UpdateMask = new wkt::FieldMask(),
+                Device = new Device
+                {
+                    Id = "id74b70bb8",
+                    DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
+                    NumId = 15493549572921294156UL,
+                    LastHeartbeatTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    Credentials =
+                    {
+                        new DeviceCredential
+                        {
+                            PublicKey = new PublicKeyCredential
+                            {
+                                Format = PublicKeyFormat.RsaPem,
+                                Key = "key8a0b6e3c",
+                            },
+                            ExpirationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Config = new DeviceConfig
+                    {
+                        Version = 8314266188006815530L,
+                        CloudUpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeviceAckTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    LastConfigAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = new DeviceState
+                    {
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LastConfigSendTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Blocked = true,
+                    LastStateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LogLevel = LogLevel.Info,
+                    GatewayConfig = new GatewayConfig
+                    {
+                        GatewayType = GatewayType.Unspecified,
+                        GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                        LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                        LastAccessedGatewayTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Device expectedResponse = new Device
             {
                 Id = "id74b70bb8",
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
                 NumId = 15493549572921294156UL,
-                LastHeartbeatTime = new wkt::Timestamp(),
-                LastEventTime = new wkt::Timestamp(),
-                LastErrorTime = new wkt::Timestamp(),
-                LastErrorStatus = new gr::Status(),
+                LastHeartbeatTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Credentials =
                 {
-                    new DeviceCredential(),
+                    new DeviceCredential
+                    {
+                        PublicKey = new PublicKeyCredential
+                        {
+                            Format = PublicKeyFormat.RsaPem,
+                            Key = "key8a0b6e3c",
+                        },
+                        ExpirationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                Config = new DeviceConfig(),
-                LastConfigAckTime = new wkt::Timestamp(),
-                State = new DeviceState(),
+                Config = new DeviceConfig
+                {
+                    Version = 8314266188006815530L,
+                    CloudUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeviceAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
+                LastConfigAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                State = new DeviceState
+                {
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
                 Metadata =
                 {
                     {
@@ -1288,11 +4401,29 @@ namespace Google.Cloud.Iot.V1.Tests
                         "value60c16320"
                     },
                 },
-                LastConfigSendTime = new wkt::Timestamp(),
+                LastConfigSendTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Blocked = true,
-                LastStateTime = new wkt::Timestamp(),
+                LastStateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 LogLevel = LogLevel.Info,
-                GatewayConfig = new GatewayConfig(),
+                GatewayConfig = new GatewayConfig
+                {
+                    GatewayType = GatewayType.Unspecified,
+                    GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                    LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                    LastAccessedGatewayTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Device>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1309,25 +4440,198 @@ namespace Google.Cloud.Iot.V1.Tests
             moq::Mock<DeviceManager.DeviceManagerClient> mockGrpcClient = new moq::Mock<DeviceManager.DeviceManagerClient>(moq::MockBehavior.Strict);
             UpdateDeviceRequest request = new UpdateDeviceRequest
             {
-                Device = new Device(),
-                UpdateMask = new wkt::FieldMask(),
+                Device = new Device
+                {
+                    Id = "id74b70bb8",
+                    DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
+                    NumId = 15493549572921294156UL,
+                    LastHeartbeatTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    Credentials =
+                    {
+                        new DeviceCredential
+                        {
+                            PublicKey = new PublicKeyCredential
+                            {
+                                Format = PublicKeyFormat.RsaPem,
+                                Key = "key8a0b6e3c",
+                            },
+                            ExpirationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Config = new DeviceConfig
+                    {
+                        Version = 8314266188006815530L,
+                        CloudUpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeviceAckTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    LastConfigAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = new DeviceState
+                    {
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LastConfigSendTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Blocked = true,
+                    LastStateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LogLevel = LogLevel.Info,
+                    GatewayConfig = new GatewayConfig
+                    {
+                        GatewayType = GatewayType.Unspecified,
+                        GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                        LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                        LastAccessedGatewayTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Device expectedResponse = new Device
             {
                 Id = "id74b70bb8",
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
                 NumId = 15493549572921294156UL,
-                LastHeartbeatTime = new wkt::Timestamp(),
-                LastEventTime = new wkt::Timestamp(),
-                LastErrorTime = new wkt::Timestamp(),
-                LastErrorStatus = new gr::Status(),
+                LastHeartbeatTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Credentials =
                 {
-                    new DeviceCredential(),
+                    new DeviceCredential
+                    {
+                        PublicKey = new PublicKeyCredential
+                        {
+                            Format = PublicKeyFormat.RsaPem,
+                            Key = "key8a0b6e3c",
+                        },
+                        ExpirationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                Config = new DeviceConfig(),
-                LastConfigAckTime = new wkt::Timestamp(),
-                State = new DeviceState(),
+                Config = new DeviceConfig
+                {
+                    Version = 8314266188006815530L,
+                    CloudUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeviceAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
+                LastConfigAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                State = new DeviceState
+                {
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
                 Metadata =
                 {
                     {
@@ -1335,11 +4639,29 @@ namespace Google.Cloud.Iot.V1.Tests
                         "value60c16320"
                     },
                 },
-                LastConfigSendTime = new wkt::Timestamp(),
+                LastConfigSendTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Blocked = true,
-                LastStateTime = new wkt::Timestamp(),
+                LastStateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 LogLevel = LogLevel.Info,
-                GatewayConfig = new GatewayConfig(),
+                GatewayConfig = new GatewayConfig
+                {
+                    GatewayType = GatewayType.Unspecified,
+                    GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                    LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                    LastAccessedGatewayTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateDevice(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1354,25 +4676,198 @@ namespace Google.Cloud.Iot.V1.Tests
             moq::Mock<DeviceManager.DeviceManagerClient> mockGrpcClient = new moq::Mock<DeviceManager.DeviceManagerClient>(moq::MockBehavior.Strict);
             UpdateDeviceRequest request = new UpdateDeviceRequest
             {
-                Device = new Device(),
-                UpdateMask = new wkt::FieldMask(),
+                Device = new Device
+                {
+                    Id = "id74b70bb8",
+                    DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
+                    NumId = 15493549572921294156UL,
+                    LastHeartbeatTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastEventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LastErrorStatus = new gr::Status
+                    {
+                        Code = -1805175871,
+                        Message = "message0231e778",
+                        Details =
+                        {
+                            new wkt::Any
+                            {
+                                TypeUrl = "type_urlfde5623b",
+                                Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                            },
+                        },
+                    },
+                    Credentials =
+                    {
+                        new DeviceCredential
+                        {
+                            PublicKey = new PublicKeyCredential
+                            {
+                                Format = PublicKeyFormat.RsaPem,
+                                Key = "key8a0b6e3c",
+                            },
+                            ExpirationTime = new wkt::Timestamp
+                            {
+                                Seconds = -2106654494186127752L,
+                                Nanos = 985689544,
+                            },
+                        },
+                    },
+                    Config = new DeviceConfig
+                    {
+                        Version = 8314266188006815530L,
+                        CloudUpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeviceAckTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    LastConfigAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    State = new DeviceState
+                    {
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                    Metadata =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    LastConfigSendTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Blocked = true,
+                    LastStateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    LogLevel = LogLevel.Info,
+                    GatewayConfig = new GatewayConfig
+                    {
+                        GatewayType = GatewayType.Unspecified,
+                        GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                        LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                        LastAccessedGatewayTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             Device expectedResponse = new Device
             {
                 Id = "id74b70bb8",
                 DeviceName = DeviceName.FromProjectLocationRegistryDevice("[PROJECT]", "[LOCATION]", "[REGISTRY]", "[DEVICE]"),
                 NumId = 15493549572921294156UL,
-                LastHeartbeatTime = new wkt::Timestamp(),
-                LastEventTime = new wkt::Timestamp(),
-                LastErrorTime = new wkt::Timestamp(),
-                LastErrorStatus = new gr::Status(),
+                LastHeartbeatTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastEventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                LastErrorStatus = new gr::Status
+                {
+                    Code = -1805175871,
+                    Message = "message0231e778",
+                    Details =
+                    {
+                        new wkt::Any
+                        {
+                            TypeUrl = "type_urlfde5623b",
+                            Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                        },
+                    },
+                },
                 Credentials =
                 {
-                    new DeviceCredential(),
+                    new DeviceCredential
+                    {
+                        PublicKey = new PublicKeyCredential
+                        {
+                            Format = PublicKeyFormat.RsaPem,
+                            Key = "key8a0b6e3c",
+                        },
+                        ExpirationTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
-                Config = new DeviceConfig(),
-                LastConfigAckTime = new wkt::Timestamp(),
-                State = new DeviceState(),
+                Config = new DeviceConfig
+                {
+                    Version = 8314266188006815530L,
+                    CloudUpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DeviceAckTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
+                LastConfigAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                State = new DeviceState
+                {
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                },
                 Metadata =
                 {
                     {
@@ -1380,11 +4875,29 @@ namespace Google.Cloud.Iot.V1.Tests
                         "value60c16320"
                     },
                 },
-                LastConfigSendTime = new wkt::Timestamp(),
+                LastConfigSendTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Blocked = true,
-                LastStateTime = new wkt::Timestamp(),
+                LastStateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 LogLevel = LogLevel.Info,
-                GatewayConfig = new GatewayConfig(),
+                GatewayConfig = new GatewayConfig
+                {
+                    GatewayType = GatewayType.Unspecified,
+                    GatewayAuthMethod = GatewayAuthMethod.DeviceAuthTokenOnly,
+                    LastAccessedGatewayId = "last_accessed_gateway_id2ea302da",
+                    LastAccessedGatewayTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateDeviceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Device>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1501,8 +5014,16 @@ namespace Google.Cloud.Iot.V1.Tests
             DeviceConfig expectedResponse = new DeviceConfig
             {
                 Version = 8314266188006815530L,
-                CloudUpdateTime = new wkt::Timestamp(),
-                DeviceAckTime = new wkt::Timestamp(),
+                CloudUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeviceAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
             };
             mockGrpcClient.Setup(x => x.ModifyCloudToDeviceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1525,8 +5046,16 @@ namespace Google.Cloud.Iot.V1.Tests
             DeviceConfig expectedResponse = new DeviceConfig
             {
                 Version = 8314266188006815530L,
-                CloudUpdateTime = new wkt::Timestamp(),
-                DeviceAckTime = new wkt::Timestamp(),
+                CloudUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeviceAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
             };
             mockGrpcClient.Setup(x => x.ModifyCloudToDeviceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeviceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1550,8 +5079,16 @@ namespace Google.Cloud.Iot.V1.Tests
             DeviceConfig expectedResponse = new DeviceConfig
             {
                 Version = 8314266188006815530L,
-                CloudUpdateTime = new wkt::Timestamp(),
-                DeviceAckTime = new wkt::Timestamp(),
+                CloudUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeviceAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
             };
             mockGrpcClient.Setup(x => x.ModifyCloudToDeviceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1573,8 +5110,16 @@ namespace Google.Cloud.Iot.V1.Tests
             DeviceConfig expectedResponse = new DeviceConfig
             {
                 Version = 8314266188006815530L,
-                CloudUpdateTime = new wkt::Timestamp(),
-                DeviceAckTime = new wkt::Timestamp(),
+                CloudUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeviceAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
             };
             mockGrpcClient.Setup(x => x.ModifyCloudToDeviceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeviceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1598,8 +5143,16 @@ namespace Google.Cloud.Iot.V1.Tests
             DeviceConfig expectedResponse = new DeviceConfig
             {
                 Version = 8314266188006815530L,
-                CloudUpdateTime = new wkt::Timestamp(),
-                DeviceAckTime = new wkt::Timestamp(),
+                CloudUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeviceAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
             };
             mockGrpcClient.Setup(x => x.ModifyCloudToDeviceConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1621,8 +5174,16 @@ namespace Google.Cloud.Iot.V1.Tests
             DeviceConfig expectedResponse = new DeviceConfig
             {
                 Version = 8314266188006815530L,
-                CloudUpdateTime = new wkt::Timestamp(),
-                DeviceAckTime = new wkt::Timestamp(),
+                CloudUpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                DeviceAckTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
             };
             mockGrpcClient.Setup(x => x.ModifyCloudToDeviceConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeviceConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1645,7 +5206,24 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             ListDeviceConfigVersionsResponse expectedResponse = new ListDeviceConfigVersionsResponse
             {
-                DeviceConfigs = { new DeviceConfig(), },
+                DeviceConfigs =
+                {
+                    new DeviceConfig
+                    {
+                        Version = 8314266188006815530L,
+                        CloudUpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeviceAckTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListDeviceConfigVersions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1665,7 +5243,24 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             ListDeviceConfigVersionsResponse expectedResponse = new ListDeviceConfigVersionsResponse
             {
-                DeviceConfigs = { new DeviceConfig(), },
+                DeviceConfigs =
+                {
+                    new DeviceConfig
+                    {
+                        Version = 8314266188006815530L,
+                        CloudUpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeviceAckTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListDeviceConfigVersionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDeviceConfigVersionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1686,7 +5281,24 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             ListDeviceConfigVersionsResponse expectedResponse = new ListDeviceConfigVersionsResponse
             {
-                DeviceConfigs = { new DeviceConfig(), },
+                DeviceConfigs =
+                {
+                    new DeviceConfig
+                    {
+                        Version = 8314266188006815530L,
+                        CloudUpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeviceAckTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListDeviceConfigVersions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1705,7 +5317,24 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             ListDeviceConfigVersionsResponse expectedResponse = new ListDeviceConfigVersionsResponse
             {
-                DeviceConfigs = { new DeviceConfig(), },
+                DeviceConfigs =
+                {
+                    new DeviceConfig
+                    {
+                        Version = 8314266188006815530L,
+                        CloudUpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeviceAckTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListDeviceConfigVersionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDeviceConfigVersionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1726,7 +5355,24 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             ListDeviceConfigVersionsResponse expectedResponse = new ListDeviceConfigVersionsResponse
             {
-                DeviceConfigs = { new DeviceConfig(), },
+                DeviceConfigs =
+                {
+                    new DeviceConfig
+                    {
+                        Version = 8314266188006815530L,
+                        CloudUpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeviceAckTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListDeviceConfigVersions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1745,7 +5391,24 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             ListDeviceConfigVersionsResponse expectedResponse = new ListDeviceConfigVersionsResponse
             {
-                DeviceConfigs = { new DeviceConfig(), },
+                DeviceConfigs =
+                {
+                    new DeviceConfig
+                    {
+                        Version = 8314266188006815530L,
+                        CloudUpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        DeviceAckTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListDeviceConfigVersionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDeviceConfigVersionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1767,7 +5430,18 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             ListDeviceStatesResponse expectedResponse = new ListDeviceStatesResponse
             {
-                DeviceStates = { new DeviceState(), },
+                DeviceStates =
+                {
+                    new DeviceState
+                    {
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListDeviceStates(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1787,7 +5461,18 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             ListDeviceStatesResponse expectedResponse = new ListDeviceStatesResponse
             {
-                DeviceStates = { new DeviceState(), },
+                DeviceStates =
+                {
+                    new DeviceState
+                    {
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListDeviceStatesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDeviceStatesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1808,7 +5493,18 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             ListDeviceStatesResponse expectedResponse = new ListDeviceStatesResponse
             {
-                DeviceStates = { new DeviceState(), },
+                DeviceStates =
+                {
+                    new DeviceState
+                    {
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListDeviceStates(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1827,7 +5523,18 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             ListDeviceStatesResponse expectedResponse = new ListDeviceStatesResponse
             {
-                DeviceStates = { new DeviceState(), },
+                DeviceStates =
+                {
+                    new DeviceState
+                    {
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListDeviceStatesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDeviceStatesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1848,7 +5555,18 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             ListDeviceStatesResponse expectedResponse = new ListDeviceStatesResponse
             {
-                DeviceStates = { new DeviceState(), },
+                DeviceStates =
+                {
+                    new DeviceState
+                    {
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListDeviceStates(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1867,7 +5585,18 @@ namespace Google.Cloud.Iot.V1.Tests
             };
             ListDeviceStatesResponse expectedResponse = new ListDeviceStatesResponse
             {
-                DeviceStates = { new DeviceState(), },
+                DeviceStates =
+                {
+                    new DeviceState
+                    {
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        BinaryData = proto::ByteString.CopyFromUtf8("binary_data7b16906c"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.ListDeviceStatesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDeviceStatesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DeviceManagerClient client = new DeviceManagerClientImpl(mockGrpcClient.Object, null);
@@ -1885,7 +5614,26 @@ namespace Google.Cloud.Iot.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1893,7 +5641,18 @@ namespace Google.Cloud.Iot.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1910,7 +5669,26 @@ namespace Google.Cloud.Iot.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1918,7 +5696,18 @@ namespace Google.Cloud.Iot.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1937,7 +5726,26 @@ namespace Google.Cloud.Iot.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1945,7 +5753,18 @@ namespace Google.Cloud.Iot.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1962,7 +5781,26 @@ namespace Google.Cloud.Iot.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1970,7 +5808,18 @@ namespace Google.Cloud.Iot.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1989,7 +5838,26 @@ namespace Google.Cloud.Iot.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -1997,7 +5865,18 @@ namespace Google.Cloud.Iot.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -2014,7 +5893,26 @@ namespace Google.Cloud.Iot.V1.Tests
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Policy = new gciv::Policy(),
+                Policy = new gciv::Policy
+                {
+                    Version = 271578922,
+                    Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                    Bindings =
+                    {
+                        new gciv::Binding
+                        {
+                            Role = "role64e9a729",
+                            Members = { "members3408e3d2", },
+                            Condition = new gt::Expr
+                            {
+                                Expression = "expressiond33c9763",
+                                Title = "title17dbd3d5",
+                                Description = "description2cf9da67",
+                                Location = "locatione09d18d5",
+                            },
+                        },
+                    },
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -2022,7 +5920,18 @@ namespace Google.Cloud.Iot.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -2041,7 +5950,10 @@ namespace Google.Cloud.Iot.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -2049,7 +5961,18 @@ namespace Google.Cloud.Iot.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -2066,7 +5989,10 @@ namespace Google.Cloud.Iot.V1.Tests
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
-                Options = new gciv::GetPolicyOptions(),
+                Options = new gciv::GetPolicyOptions
+                {
+                    RequestedPolicyVersion = -1009868260,
+                },
             };
             gciv::Policy expectedResponse = new gciv::Policy
             {
@@ -2074,7 +6000,18 @@ namespace Google.Cloud.Iot.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -2100,7 +6037,18 @@ namespace Google.Cloud.Iot.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -2124,7 +6072,18 @@ namespace Google.Cloud.Iot.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -2150,7 +6109,18 @@ namespace Google.Cloud.Iot.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -2174,7 +6144,18 @@ namespace Google.Cloud.Iot.V1.Tests
                 Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
                 Bindings =
                 {
-                    new gciv::Binding(),
+                    new gciv::Binding
+                    {
+                        Role = "role64e9a729",
+                        Members = { "members3408e3d2", },
+                        Condition = new gt::Expr
+                        {
+                            Expression = "expressiond33c9763",
+                            Title = "title17dbd3d5",
+                            Description = "description2cf9da67",
+                            Location = "locatione09d18d5",
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
