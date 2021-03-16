@@ -184,11 +184,50 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 },
                 Admin = "admin292f2321",
                 Fqdn = "fqdnc75d2ea0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Domain.Types.State.PerformingMaintenance,
                 StatusMessage = "status_message2c618f86",
-                Trusts = { new Trust(), },
+                Trusts =
+                {
+                    new Trust
+                    {
+                        TargetDomainName = "target_domain_namee913c445",
+                        TrustType = Trust.Types.TrustType.External,
+                        TrustDirection = Trust.Types.TrustDirection.Outbound,
+                        SelectiveAuthentication = false,
+                        TargetDnsIpAddresses =
+                        {
+                            "target_dns_ip_addresses0301bc76",
+                        },
+                        TrustHandshakeSecret = "trust_handshake_secret63743eb2",
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        State = Trust.Types.State.Unspecified,
+                        StateDescription = "state_descriptionec6a49b7",
+                        LastTrustHeartbeatTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetDomain(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
@@ -227,11 +266,50 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 },
                 Admin = "admin292f2321",
                 Fqdn = "fqdnc75d2ea0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Domain.Types.State.PerformingMaintenance,
                 StatusMessage = "status_message2c618f86",
-                Trusts = { new Trust(), },
+                Trusts =
+                {
+                    new Trust
+                    {
+                        TargetDomainName = "target_domain_namee913c445",
+                        TrustType = Trust.Types.TrustType.External,
+                        TrustDirection = Trust.Types.TrustDirection.Outbound,
+                        SelectiveAuthentication = false,
+                        TargetDnsIpAddresses =
+                        {
+                            "target_dns_ip_addresses0301bc76",
+                        },
+                        TrustHandshakeSecret = "trust_handshake_secret63743eb2",
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        State = Trust.Types.State.Unspecified,
+                        StateDescription = "state_descriptionec6a49b7",
+                        LastTrustHeartbeatTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetDomainAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Domain>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
@@ -272,11 +350,50 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 },
                 Admin = "admin292f2321",
                 Fqdn = "fqdnc75d2ea0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Domain.Types.State.PerformingMaintenance,
                 StatusMessage = "status_message2c618f86",
-                Trusts = { new Trust(), },
+                Trusts =
+                {
+                    new Trust
+                    {
+                        TargetDomainName = "target_domain_namee913c445",
+                        TrustType = Trust.Types.TrustType.External,
+                        TrustDirection = Trust.Types.TrustDirection.Outbound,
+                        SelectiveAuthentication = false,
+                        TargetDnsIpAddresses =
+                        {
+                            "target_dns_ip_addresses0301bc76",
+                        },
+                        TrustHandshakeSecret = "trust_handshake_secret63743eb2",
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        State = Trust.Types.State.Unspecified,
+                        StateDescription = "state_descriptionec6a49b7",
+                        LastTrustHeartbeatTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetDomain(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
@@ -315,11 +432,50 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 },
                 Admin = "admin292f2321",
                 Fqdn = "fqdnc75d2ea0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Domain.Types.State.PerformingMaintenance,
                 StatusMessage = "status_message2c618f86",
-                Trusts = { new Trust(), },
+                Trusts =
+                {
+                    new Trust
+                    {
+                        TargetDomainName = "target_domain_namee913c445",
+                        TrustType = Trust.Types.TrustType.External,
+                        TrustDirection = Trust.Types.TrustDirection.Outbound,
+                        SelectiveAuthentication = false,
+                        TargetDnsIpAddresses =
+                        {
+                            "target_dns_ip_addresses0301bc76",
+                        },
+                        TrustHandshakeSecret = "trust_handshake_secret63743eb2",
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        State = Trust.Types.State.Unspecified,
+                        StateDescription = "state_descriptionec6a49b7",
+                        LastTrustHeartbeatTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetDomainAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Domain>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
@@ -360,11 +516,50 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 },
                 Admin = "admin292f2321",
                 Fqdn = "fqdnc75d2ea0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Domain.Types.State.PerformingMaintenance,
                 StatusMessage = "status_message2c618f86",
-                Trusts = { new Trust(), },
+                Trusts =
+                {
+                    new Trust
+                    {
+                        TargetDomainName = "target_domain_namee913c445",
+                        TrustType = Trust.Types.TrustType.External,
+                        TrustDirection = Trust.Types.TrustDirection.Outbound,
+                        SelectiveAuthentication = false,
+                        TargetDnsIpAddresses =
+                        {
+                            "target_dns_ip_addresses0301bc76",
+                        },
+                        TrustHandshakeSecret = "trust_handshake_secret63743eb2",
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        State = Trust.Types.State.Unspecified,
+                        StateDescription = "state_descriptionec6a49b7",
+                        LastTrustHeartbeatTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetDomain(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
@@ -403,11 +598,50 @@ namespace Google.Cloud.ManagedIdentities.V1.Tests
                 },
                 Admin = "admin292f2321",
                 Fqdn = "fqdnc75d2ea0",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Domain.Types.State.PerformingMaintenance,
                 StatusMessage = "status_message2c618f86",
-                Trusts = { new Trust(), },
+                Trusts =
+                {
+                    new Trust
+                    {
+                        TargetDomainName = "target_domain_namee913c445",
+                        TrustType = Trust.Types.TrustType.External,
+                        TrustDirection = Trust.Types.TrustDirection.Outbound,
+                        SelectiveAuthentication = false,
+                        TargetDnsIpAddresses =
+                        {
+                            "target_dns_ip_addresses0301bc76",
+                        },
+                        TrustHandshakeSecret = "trust_handshake_secret63743eb2",
+                        CreateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        UpdateTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                        State = Trust.Types.State.Unspecified,
+                        StateDescription = "state_descriptionec6a49b7",
+                        LastTrustHeartbeatTime = new wkt::Timestamp
+                        {
+                            Seconds = -2106654494186127752L,
+                            Nanos = 985689544,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetDomainAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Domain>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ManagedIdentitiesServiceClient client = new ManagedIdentitiesServiceClientImpl(mockGrpcClient.Object, null);
