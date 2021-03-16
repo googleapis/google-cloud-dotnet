@@ -40,8 +40,16 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             Realm expectedResponse = new Realm
             {
                 RealmName = RealmName.FromProjectLocationRealm("[PROJECT]", "[LOCATION]", "[REALM]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -72,8 +80,16 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             Realm expectedResponse = new Realm
             {
                 RealmName = RealmName.FromProjectLocationRealm("[PROJECT]", "[LOCATION]", "[REALM]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -106,8 +122,16 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             Realm expectedResponse = new Realm
             {
                 RealmName = RealmName.FromProjectLocationRealm("[PROJECT]", "[LOCATION]", "[REALM]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -138,8 +162,16 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             Realm expectedResponse = new Realm
             {
                 RealmName = RealmName.FromProjectLocationRealm("[PROJECT]", "[LOCATION]", "[REALM]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -172,8 +204,16 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             Realm expectedResponse = new Realm
             {
                 RealmName = RealmName.FromProjectLocationRealm("[PROJECT]", "[LOCATION]", "[REALM]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -204,8 +244,16 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             Realm expectedResponse = new Realm
             {
                 RealmName = RealmName.FromProjectLocationRealm("[PROJECT]", "[LOCATION]", "[REALM]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -233,14 +281,78 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             PreviewRealmUpdateRequest request = new PreviewRealmUpdateRequest
             {
-                Realm = new Realm(),
-                UpdateMask = new wkt::FieldMask(),
-                PreviewTime = new wkt::Timestamp(),
+                Realm = new Realm
+                {
+                    RealmName = RealmName.FromProjectLocationRealm("[PROJECT]", "[LOCATION]", "[REALM]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    TimeZone = "time_zone73f23b20",
+                    Etag = "etage8ad7218",
+                    Description = "description2cf9da67",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
+                PreviewTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             PreviewRealmUpdateResponse expectedResponse = new PreviewRealmUpdateResponse
             {
                 Etag = "etage8ad7218",
-                TargetState = new TargetState(),
+                TargetState = new TargetState
+                {
+                    Details =
+                    {
+                        new TargetDetails
+                        {
+                            GameServerClusterName = "game_server_cluster_name1d66cd90",
+                            GameServerDeploymentName = "game_server_deployment_namebd8f8314",
+                            FleetDetails =
+                            {
+                                new TargetDetails.Types.TargetFleetDetails
+                                {
+                                    Fleet = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleet
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                    Autoscaler = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleetAutoscaler
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.PreviewRealmUpdate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null);
@@ -256,14 +368,78 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             PreviewRealmUpdateRequest request = new PreviewRealmUpdateRequest
             {
-                Realm = new Realm(),
-                UpdateMask = new wkt::FieldMask(),
-                PreviewTime = new wkt::Timestamp(),
+                Realm = new Realm
+                {
+                    RealmName = RealmName.FromProjectLocationRealm("[PROJECT]", "[LOCATION]", "[REALM]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    Labels =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            "value60c16320"
+                        },
+                    },
+                    TimeZone = "time_zone73f23b20",
+                    Etag = "etage8ad7218",
+                    Description = "description2cf9da67",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
+                PreviewTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             PreviewRealmUpdateResponse expectedResponse = new PreviewRealmUpdateResponse
             {
                 Etag = "etage8ad7218",
-                TargetState = new TargetState(),
+                TargetState = new TargetState
+                {
+                    Details =
+                    {
+                        new TargetDetails
+                        {
+                            GameServerClusterName = "game_server_cluster_name1d66cd90",
+                            GameServerDeploymentName = "game_server_deployment_namebd8f8314",
+                            FleetDetails =
+                            {
+                                new TargetDetails.Types.TargetFleetDetails
+                                {
+                                    Fleet = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleet
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                    Autoscaler = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleetAutoscaler
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.PreviewRealmUpdateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PreviewRealmUpdateResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RealmsServiceClient client = new RealmsServiceClientImpl(mockGrpcClient.Object, null);

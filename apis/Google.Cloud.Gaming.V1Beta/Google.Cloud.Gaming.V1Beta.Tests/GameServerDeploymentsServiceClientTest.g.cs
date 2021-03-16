@@ -40,8 +40,16 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             GameServerDeployment expectedResponse = new GameServerDeployment
             {
                 GameServerDeploymentName = GameServerDeploymentName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -71,8 +79,16 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             GameServerDeployment expectedResponse = new GameServerDeployment
             {
                 GameServerDeploymentName = GameServerDeploymentName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -104,8 +120,16 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             GameServerDeployment expectedResponse = new GameServerDeployment
             {
                 GameServerDeploymentName = GameServerDeploymentName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -135,8 +159,16 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             GameServerDeployment expectedResponse = new GameServerDeployment
             {
                 GameServerDeploymentName = GameServerDeploymentName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -168,8 +200,16 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             GameServerDeployment expectedResponse = new GameServerDeployment
             {
                 GameServerDeploymentName = GameServerDeploymentName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -199,8 +239,16 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             GameServerDeployment expectedResponse = new GameServerDeployment
             {
                 GameServerDeploymentName = GameServerDeploymentName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 Labels =
                 {
                     {
@@ -232,12 +280,27 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             GameServerDeploymentRollout expectedResponse = new GameServerDeploymentRollout
             {
                 GameServerDeploymentRolloutName = GameServerDeploymentRolloutName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultGameServerConfig = "default_game_server_config2214de2f",
                 GameServerConfigOverrides =
                 {
-                    new GameServerConfigOverride(),
+                    new GameServerConfigOverride
+                    {
+                        RealmsSelector = new RealmSelector
+                        {
+                            Realms = { "realms890f7120", },
+                        },
+                        ConfigVersion = "config_version90dc75d6",
+                    },
                 },
                 Etag = "etage8ad7218",
             };
@@ -260,12 +323,27 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             GameServerDeploymentRollout expectedResponse = new GameServerDeploymentRollout
             {
                 GameServerDeploymentRolloutName = GameServerDeploymentRolloutName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultGameServerConfig = "default_game_server_config2214de2f",
                 GameServerConfigOverrides =
                 {
-                    new GameServerConfigOverride(),
+                    new GameServerConfigOverride
+                    {
+                        RealmsSelector = new RealmSelector
+                        {
+                            Realms = { "realms890f7120", },
+                        },
+                        ConfigVersion = "config_version90dc75d6",
+                    },
                 },
                 Etag = "etage8ad7218",
             };
@@ -290,12 +368,27 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             GameServerDeploymentRollout expectedResponse = new GameServerDeploymentRollout
             {
                 GameServerDeploymentRolloutName = GameServerDeploymentRolloutName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultGameServerConfig = "default_game_server_config2214de2f",
                 GameServerConfigOverrides =
                 {
-                    new GameServerConfigOverride(),
+                    new GameServerConfigOverride
+                    {
+                        RealmsSelector = new RealmSelector
+                        {
+                            Realms = { "realms890f7120", },
+                        },
+                        ConfigVersion = "config_version90dc75d6",
+                    },
                 },
                 Etag = "etage8ad7218",
             };
@@ -318,12 +411,27 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             GameServerDeploymentRollout expectedResponse = new GameServerDeploymentRollout
             {
                 GameServerDeploymentRolloutName = GameServerDeploymentRolloutName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultGameServerConfig = "default_game_server_config2214de2f",
                 GameServerConfigOverrides =
                 {
-                    new GameServerConfigOverride(),
+                    new GameServerConfigOverride
+                    {
+                        RealmsSelector = new RealmSelector
+                        {
+                            Realms = { "realms890f7120", },
+                        },
+                        ConfigVersion = "config_version90dc75d6",
+                    },
                 },
                 Etag = "etage8ad7218",
             };
@@ -348,12 +456,27 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             GameServerDeploymentRollout expectedResponse = new GameServerDeploymentRollout
             {
                 GameServerDeploymentRolloutName = GameServerDeploymentRolloutName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultGameServerConfig = "default_game_server_config2214de2f",
                 GameServerConfigOverrides =
                 {
-                    new GameServerConfigOverride(),
+                    new GameServerConfigOverride
+                    {
+                        RealmsSelector = new RealmSelector
+                        {
+                            Realms = { "realms890f7120", },
+                        },
+                        ConfigVersion = "config_version90dc75d6",
+                    },
                 },
                 Etag = "etage8ad7218",
             };
@@ -376,12 +499,27 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             GameServerDeploymentRollout expectedResponse = new GameServerDeploymentRollout
             {
                 GameServerDeploymentRolloutName = GameServerDeploymentRolloutName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]"),
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                UpdateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 DefaultGameServerConfig = "default_game_server_config2214de2f",
                 GameServerConfigOverrides =
                 {
-                    new GameServerConfigOverride(),
+                    new GameServerConfigOverride
+                    {
+                        RealmsSelector = new RealmSelector
+                        {
+                            Realms = { "realms890f7120", },
+                        },
+                        ConfigVersion = "config_version90dc75d6",
+                    },
                 },
                 Etag = "etage8ad7218",
             };
@@ -401,9 +539,42 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             PreviewGameServerDeploymentRolloutRequest request = new PreviewGameServerDeploymentRolloutRequest
             {
-                Rollout = new GameServerDeploymentRollout(),
-                UpdateMask = new wkt::FieldMask(),
-                PreviewTime = new wkt::Timestamp(),
+                Rollout = new GameServerDeploymentRollout
+                {
+                    GameServerDeploymentRolloutName = GameServerDeploymentRolloutName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DefaultGameServerConfig = "default_game_server_config2214de2f",
+                    GameServerConfigOverrides =
+                    {
+                        new GameServerConfigOverride
+                        {
+                            RealmsSelector = new RealmSelector
+                            {
+                                Realms = { "realms890f7120", },
+                            },
+                            ConfigVersion = "config_version90dc75d6",
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
+                PreviewTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             PreviewGameServerDeploymentRolloutResponse expectedResponse = new PreviewGameServerDeploymentRolloutResponse
             {
@@ -412,7 +583,41 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                     "unavailable48e06070",
                 },
                 Etag = "etage8ad7218",
-                TargetState = new TargetState(),
+                TargetState = new TargetState
+                {
+                    Details =
+                    {
+                        new TargetDetails
+                        {
+                            GameServerClusterName = "game_server_cluster_name1d66cd90",
+                            GameServerDeploymentName = "game_server_deployment_namebd8f8314",
+                            FleetDetails =
+                            {
+                                new TargetDetails.Types.TargetFleetDetails
+                                {
+                                    Fleet = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleet
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                    Autoscaler = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleetAutoscaler
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.PreviewGameServerDeploymentRollout(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
@@ -428,9 +633,42 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             PreviewGameServerDeploymentRolloutRequest request = new PreviewGameServerDeploymentRolloutRequest
             {
-                Rollout = new GameServerDeploymentRollout(),
-                UpdateMask = new wkt::FieldMask(),
-                PreviewTime = new wkt::Timestamp(),
+                Rollout = new GameServerDeploymentRollout
+                {
+                    GameServerDeploymentRolloutName = GameServerDeploymentRolloutName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]"),
+                    CreateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    UpdateTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    DefaultGameServerConfig = "default_game_server_config2214de2f",
+                    GameServerConfigOverrides =
+                    {
+                        new GameServerConfigOverride
+                        {
+                            RealmsSelector = new RealmSelector
+                            {
+                                Realms = { "realms890f7120", },
+                            },
+                            ConfigVersion = "config_version90dc75d6",
+                        },
+                    },
+                    Etag = "etage8ad7218",
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
+                PreviewTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
             };
             PreviewGameServerDeploymentRolloutResponse expectedResponse = new PreviewGameServerDeploymentRolloutResponse
             {
@@ -439,7 +677,41 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
                     "unavailable48e06070",
                 },
                 Etag = "etage8ad7218",
-                TargetState = new TargetState(),
+                TargetState = new TargetState
+                {
+                    Details =
+                    {
+                        new TargetDetails
+                        {
+                            GameServerClusterName = "game_server_cluster_name1d66cd90",
+                            GameServerDeploymentName = "game_server_deployment_namebd8f8314",
+                            FleetDetails =
+                            {
+                                new TargetDetails.Types.TargetFleetDetails
+                                {
+                                    Fleet = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleet
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                    Autoscaler = new TargetDetails.Types.TargetFleetDetails.Types.TargetFleetAutoscaler
+                                    {
+                                        Name = "name1c9368b0",
+                                        SpecSource = new SpecSource
+                                        {
+                                            GameServerConfigName = "game_server_config_name71336260",
+                                            Name = "name1c9368b0",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.PreviewGameServerDeploymentRolloutAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PreviewGameServerDeploymentRolloutResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GameServerDeploymentsServiceClient client = new GameServerDeploymentsServiceClientImpl(mockGrpcClient.Object, null);
@@ -463,7 +735,43 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             {
                 ClusterState =
                 {
-                    new FetchDeploymentStateResponse.Types.DeployedClusterState(),
+                    new FetchDeploymentStateResponse.Types.DeployedClusterState
+                    {
+                        Cluster = "clusterb9d4b206",
+                        FleetDetails =
+                        {
+                            new DeployedFleetDetails
+                            {
+                                DeployedFleet = new DeployedFleetDetails.Types.DeployedFleet
+                                {
+                                    Fleet = "fleet82b7fbdd",
+                                    FleetSpec = "fleet_spec167aed51",
+                                    SpecSource = new SpecSource
+                                    {
+                                        GameServerConfigName = "game_server_config_name71336260",
+                                        Name = "name1c9368b0",
+                                    },
+                                    Status = new DeployedFleetDetails.Types.DeployedFleet.Types.DeployedFleetStatus
+                                    {
+                                        ReadyReplicas = -8726814613623568562L,
+                                        AllocatedReplicas = -6331829865761877406L,
+                                        ReservedReplicas = 5559465490171881939L,
+                                        Replicas = -4305070884841570245L,
+                                    },
+                                },
+                                DeployedAutoscaler = new DeployedFleetDetails.Types.DeployedFleetAutoscaler
+                                {
+                                    Autoscaler = "autoscaleradfcda44",
+                                    FleetAutoscalerSpec = "fleet_autoscaler_spec6bd536d2",
+                                    SpecSource = new SpecSource
+                                    {
+                                        GameServerConfigName = "game_server_config_name71336260",
+                                        Name = "name1c9368b0",
+                                    },
+                                },
+                            },
+                        },
+                    },
                 },
                 Unavailable =
                 {
@@ -490,7 +798,43 @@ namespace Google.Cloud.Gaming.V1Beta.Tests
             {
                 ClusterState =
                 {
-                    new FetchDeploymentStateResponse.Types.DeployedClusterState(),
+                    new FetchDeploymentStateResponse.Types.DeployedClusterState
+                    {
+                        Cluster = "clusterb9d4b206",
+                        FleetDetails =
+                        {
+                            new DeployedFleetDetails
+                            {
+                                DeployedFleet = new DeployedFleetDetails.Types.DeployedFleet
+                                {
+                                    Fleet = "fleet82b7fbdd",
+                                    FleetSpec = "fleet_spec167aed51",
+                                    SpecSource = new SpecSource
+                                    {
+                                        GameServerConfigName = "game_server_config_name71336260",
+                                        Name = "name1c9368b0",
+                                    },
+                                    Status = new DeployedFleetDetails.Types.DeployedFleet.Types.DeployedFleetStatus
+                                    {
+                                        ReadyReplicas = -8726814613623568562L,
+                                        AllocatedReplicas = -6331829865761877406L,
+                                        ReservedReplicas = 5559465490171881939L,
+                                        Replicas = -4305070884841570245L,
+                                    },
+                                },
+                                DeployedAutoscaler = new DeployedFleetDetails.Types.DeployedFleetAutoscaler
+                                {
+                                    Autoscaler = "autoscaleradfcda44",
+                                    FleetAutoscalerSpec = "fleet_autoscaler_spec6bd536d2",
+                                    SpecSource = new SpecSource
+                                    {
+                                        GameServerConfigName = "game_server_config_name71336260",
+                                        Name = "name1c9368b0",
+                                    },
+                                },
+                            },
+                        },
+                    },
                 },
                 Unavailable =
                 {
