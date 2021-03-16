@@ -43,7 +43,12 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 QueryScope = Index.Types.QueryScope.Unspecified,
                 Fields =
                 {
-                    new Index.Types.IndexField(),
+                    new Index.Types.IndexField
+                    {
+                        FieldPath = "field_path643c19ae",
+                        Order = Index.Types.IndexField.Types.Order.Descending,
+                        ArrayConfig = Index.Types.IndexField.Types.ArrayConfig.Unspecified,
+                    },
                 },
                 State = Index.Types.State.Ready,
             };
@@ -69,7 +74,12 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 QueryScope = Index.Types.QueryScope.Unspecified,
                 Fields =
                 {
-                    new Index.Types.IndexField(),
+                    new Index.Types.IndexField
+                    {
+                        FieldPath = "field_path643c19ae",
+                        Order = Index.Types.IndexField.Types.Order.Descending,
+                        ArrayConfig = Index.Types.IndexField.Types.ArrayConfig.Unspecified,
+                    },
                 },
                 State = Index.Types.State.Ready,
             };
@@ -97,7 +107,12 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 QueryScope = Index.Types.QueryScope.Unspecified,
                 Fields =
                 {
-                    new Index.Types.IndexField(),
+                    new Index.Types.IndexField
+                    {
+                        FieldPath = "field_path643c19ae",
+                        Order = Index.Types.IndexField.Types.Order.Descending,
+                        ArrayConfig = Index.Types.IndexField.Types.ArrayConfig.Unspecified,
+                    },
                 },
                 State = Index.Types.State.Ready,
             };
@@ -123,7 +138,12 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 QueryScope = Index.Types.QueryScope.Unspecified,
                 Fields =
                 {
-                    new Index.Types.IndexField(),
+                    new Index.Types.IndexField
+                    {
+                        FieldPath = "field_path643c19ae",
+                        Order = Index.Types.IndexField.Types.Order.Descending,
+                        ArrayConfig = Index.Types.IndexField.Types.ArrayConfig.Unspecified,
+                    },
                 },
                 State = Index.Types.State.Ready,
             };
@@ -151,7 +171,12 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 QueryScope = Index.Types.QueryScope.Unspecified,
                 Fields =
                 {
-                    new Index.Types.IndexField(),
+                    new Index.Types.IndexField
+                    {
+                        FieldPath = "field_path643c19ae",
+                        Order = Index.Types.IndexField.Types.Order.Descending,
+                        ArrayConfig = Index.Types.IndexField.Types.ArrayConfig.Unspecified,
+                    },
                 },
                 State = Index.Types.State.Ready,
             };
@@ -177,7 +202,12 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
                 QueryScope = Index.Types.QueryScope.Unspecified,
                 Fields =
                 {
-                    new Index.Types.IndexField(),
+                    new Index.Types.IndexField
+                    {
+                        FieldPath = "field_path643c19ae",
+                        Order = Index.Types.IndexField.Types.Order.Descending,
+                        ArrayConfig = Index.Types.IndexField.Types.ArrayConfig.Unspecified,
+                    },
                 },
                 State = Index.Types.State.Ready,
             };
@@ -301,7 +331,30 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             Field expectedResponse = new Field
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
-                IndexConfig = new Field.Types.IndexConfig(),
+                IndexConfig = new Field.Types.IndexConfig
+                {
+                    Indexes =
+                    {
+                        new Index
+                        {
+                            IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+                            QueryScope = Index.Types.QueryScope.Unspecified,
+                            Fields =
+                            {
+                                new Index.Types.IndexField
+                                {
+                                    FieldPath = "field_path643c19ae",
+                                    Order = Index.Types.IndexField.Types.Order.Descending,
+                                    ArrayConfig = Index.Types.IndexField.Types.ArrayConfig.Unspecified,
+                                },
+                            },
+                            State = Index.Types.State.Ready,
+                        },
+                    },
+                    UsesAncestorConfig = true,
+                    AncestorField = "ancestor_field038fd22b",
+                    Reverting = true,
+                },
             };
             mockGrpcClient.Setup(x => x.GetField(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
@@ -322,7 +375,30 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             Field expectedResponse = new Field
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
-                IndexConfig = new Field.Types.IndexConfig(),
+                IndexConfig = new Field.Types.IndexConfig
+                {
+                    Indexes =
+                    {
+                        new Index
+                        {
+                            IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+                            QueryScope = Index.Types.QueryScope.Unspecified,
+                            Fields =
+                            {
+                                new Index.Types.IndexField
+                                {
+                                    FieldPath = "field_path643c19ae",
+                                    Order = Index.Types.IndexField.Types.Order.Descending,
+                                    ArrayConfig = Index.Types.IndexField.Types.ArrayConfig.Unspecified,
+                                },
+                            },
+                            State = Index.Types.State.Ready,
+                        },
+                    },
+                    UsesAncestorConfig = true,
+                    AncestorField = "ancestor_field038fd22b",
+                    Reverting = true,
+                },
             };
             mockGrpcClient.Setup(x => x.GetFieldAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Field>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
@@ -345,7 +421,30 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             Field expectedResponse = new Field
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
-                IndexConfig = new Field.Types.IndexConfig(),
+                IndexConfig = new Field.Types.IndexConfig
+                {
+                    Indexes =
+                    {
+                        new Index
+                        {
+                            IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+                            QueryScope = Index.Types.QueryScope.Unspecified,
+                            Fields =
+                            {
+                                new Index.Types.IndexField
+                                {
+                                    FieldPath = "field_path643c19ae",
+                                    Order = Index.Types.IndexField.Types.Order.Descending,
+                                    ArrayConfig = Index.Types.IndexField.Types.ArrayConfig.Unspecified,
+                                },
+                            },
+                            State = Index.Types.State.Ready,
+                        },
+                    },
+                    UsesAncestorConfig = true,
+                    AncestorField = "ancestor_field038fd22b",
+                    Reverting = true,
+                },
             };
             mockGrpcClient.Setup(x => x.GetField(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
@@ -366,7 +465,30 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             Field expectedResponse = new Field
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
-                IndexConfig = new Field.Types.IndexConfig(),
+                IndexConfig = new Field.Types.IndexConfig
+                {
+                    Indexes =
+                    {
+                        new Index
+                        {
+                            IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+                            QueryScope = Index.Types.QueryScope.Unspecified,
+                            Fields =
+                            {
+                                new Index.Types.IndexField
+                                {
+                                    FieldPath = "field_path643c19ae",
+                                    Order = Index.Types.IndexField.Types.Order.Descending,
+                                    ArrayConfig = Index.Types.IndexField.Types.ArrayConfig.Unspecified,
+                                },
+                            },
+                            State = Index.Types.State.Ready,
+                        },
+                    },
+                    UsesAncestorConfig = true,
+                    AncestorField = "ancestor_field038fd22b",
+                    Reverting = true,
+                },
             };
             mockGrpcClient.Setup(x => x.GetFieldAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Field>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
@@ -389,7 +511,30 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             Field expectedResponse = new Field
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
-                IndexConfig = new Field.Types.IndexConfig(),
+                IndexConfig = new Field.Types.IndexConfig
+                {
+                    Indexes =
+                    {
+                        new Index
+                        {
+                            IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+                            QueryScope = Index.Types.QueryScope.Unspecified,
+                            Fields =
+                            {
+                                new Index.Types.IndexField
+                                {
+                                    FieldPath = "field_path643c19ae",
+                                    Order = Index.Types.IndexField.Types.Order.Descending,
+                                    ArrayConfig = Index.Types.IndexField.Types.ArrayConfig.Unspecified,
+                                },
+                            },
+                            State = Index.Types.State.Ready,
+                        },
+                    },
+                    UsesAncestorConfig = true,
+                    AncestorField = "ancestor_field038fd22b",
+                    Reverting = true,
+                },
             };
             mockGrpcClient.Setup(x => x.GetField(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
@@ -410,7 +555,30 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             Field expectedResponse = new Field
             {
                 FieldName = FieldName.FromProjectDatabaseCollectionField("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[FIELD]"),
-                IndexConfig = new Field.Types.IndexConfig(),
+                IndexConfig = new Field.Types.IndexConfig
+                {
+                    Indexes =
+                    {
+                        new Index
+                        {
+                            IndexName = IndexName.FromProjectDatabaseCollectionIndex("[PROJECT]", "[DATABASE]", "[COLLECTION]", "[INDEX]"),
+                            QueryScope = Index.Types.QueryScope.Unspecified,
+                            Fields =
+                            {
+                                new Index.Types.IndexField
+                                {
+                                    FieldPath = "field_path643c19ae",
+                                    Order = Index.Types.IndexField.Types.Order.Descending,
+                                    ArrayConfig = Index.Types.IndexField.Types.ArrayConfig.Unspecified,
+                                },
+                            },
+                            State = Index.Types.State.Ready,
+                        },
+                    },
+                    UsesAncestorConfig = true,
+                    AncestorField = "ancestor_field038fd22b",
+                    Reverting = true,
+                },
             };
             mockGrpcClient.Setup(x => x.GetFieldAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Field>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
