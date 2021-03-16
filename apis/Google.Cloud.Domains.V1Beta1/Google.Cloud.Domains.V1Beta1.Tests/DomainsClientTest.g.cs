@@ -18,6 +18,7 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -43,7 +44,25 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             {
                 RegisterParameters =
                 {
-                    new RegisterParameters(),
+                    new RegisterParameters
+                    {
+                        DomainName = "domain_nameea17a44f",
+                        Availability = RegisterParameters.Types.Availability.Available,
+                        SupportedPrivacy =
+                        {
+                            ContactPrivacy.PublicContactData,
+                        },
+                        DomainNotices =
+                        {
+                            DomainNotice.HstsPreloaded,
+                        },
+                        YearlyPrice = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SearchDomains(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -67,7 +86,25 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             {
                 RegisterParameters =
                 {
-                    new RegisterParameters(),
+                    new RegisterParameters
+                    {
+                        DomainName = "domain_nameea17a44f",
+                        Availability = RegisterParameters.Types.Availability.Available,
+                        SupportedPrivacy =
+                        {
+                            ContactPrivacy.PublicContactData,
+                        },
+                        DomainNotices =
+                        {
+                            DomainNotice.HstsPreloaded,
+                        },
+                        YearlyPrice = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SearchDomainsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchDomainsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -93,7 +130,25 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             {
                 RegisterParameters =
                 {
-                    new RegisterParameters(),
+                    new RegisterParameters
+                    {
+                        DomainName = "domain_nameea17a44f",
+                        Availability = RegisterParameters.Types.Availability.Available,
+                        SupportedPrivacy =
+                        {
+                            ContactPrivacy.PublicContactData,
+                        },
+                        DomainNotices =
+                        {
+                            DomainNotice.HstsPreloaded,
+                        },
+                        YearlyPrice = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SearchDomains(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -117,7 +172,25 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             {
                 RegisterParameters =
                 {
-                    new RegisterParameters(),
+                    new RegisterParameters
+                    {
+                        DomainName = "domain_nameea17a44f",
+                        Availability = RegisterParameters.Types.Availability.Available,
+                        SupportedPrivacy =
+                        {
+                            ContactPrivacy.PublicContactData,
+                        },
+                        DomainNotices =
+                        {
+                            DomainNotice.HstsPreloaded,
+                        },
+                        YearlyPrice = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SearchDomainsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchDomainsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -143,7 +216,25 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             {
                 RegisterParameters =
                 {
-                    new RegisterParameters(),
+                    new RegisterParameters
+                    {
+                        DomainName = "domain_nameea17a44f",
+                        Availability = RegisterParameters.Types.Availability.Available,
+                        SupportedPrivacy =
+                        {
+                            ContactPrivacy.PublicContactData,
+                        },
+                        DomainNotices =
+                        {
+                            DomainNotice.HstsPreloaded,
+                        },
+                        YearlyPrice = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SearchDomains(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -167,7 +258,25 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             {
                 RegisterParameters =
                 {
-                    new RegisterParameters(),
+                    new RegisterParameters
+                    {
+                        DomainName = "domain_nameea17a44f",
+                        Availability = RegisterParameters.Types.Availability.Available,
+                        SupportedPrivacy =
+                        {
+                            ContactPrivacy.PublicContactData,
+                        },
+                        DomainNotices =
+                        {
+                            DomainNotice.HstsPreloaded,
+                        },
+                        YearlyPrice = new gt::Money
+                        {
+                            CurrencyCode = "currency_code7f81e352",
+                            Units = 1040752433522641849L,
+                            Nanos = 985689544,
+                        },
+                    },
                 },
             };
             mockGrpcClient.Setup(x => x.SearchDomainsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SearchDomainsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -191,7 +300,25 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             };
             RetrieveRegisterParametersResponse expectedResponse = new RetrieveRegisterParametersResponse
             {
-                RegisterParameters = new RegisterParameters(),
+                RegisterParameters = new RegisterParameters
+                {
+                    DomainName = "domain_nameea17a44f",
+                    Availability = RegisterParameters.Types.Availability.Available,
+                    SupportedPrivacy =
+                    {
+                        ContactPrivacy.PublicContactData,
+                    },
+                    DomainNotices =
+                    {
+                        DomainNotice.HstsPreloaded,
+                    },
+                    YearlyPrice = new gt::Money
+                    {
+                        CurrencyCode = "currency_code7f81e352",
+                        Units = 1040752433522641849L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.RetrieveRegisterParameters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
@@ -212,7 +339,25 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             };
             RetrieveRegisterParametersResponse expectedResponse = new RetrieveRegisterParametersResponse
             {
-                RegisterParameters = new RegisterParameters(),
+                RegisterParameters = new RegisterParameters
+                {
+                    DomainName = "domain_nameea17a44f",
+                    Availability = RegisterParameters.Types.Availability.Available,
+                    SupportedPrivacy =
+                    {
+                        ContactPrivacy.PublicContactData,
+                    },
+                    DomainNotices =
+                    {
+                        DomainNotice.HstsPreloaded,
+                    },
+                    YearlyPrice = new gt::Money
+                    {
+                        CurrencyCode = "currency_code7f81e352",
+                        Units = 1040752433522641849L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.RetrieveRegisterParametersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetrieveRegisterParametersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
@@ -235,7 +380,25 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             };
             RetrieveRegisterParametersResponse expectedResponse = new RetrieveRegisterParametersResponse
             {
-                RegisterParameters = new RegisterParameters(),
+                RegisterParameters = new RegisterParameters
+                {
+                    DomainName = "domain_nameea17a44f",
+                    Availability = RegisterParameters.Types.Availability.Available,
+                    SupportedPrivacy =
+                    {
+                        ContactPrivacy.PublicContactData,
+                    },
+                    DomainNotices =
+                    {
+                        DomainNotice.HstsPreloaded,
+                    },
+                    YearlyPrice = new gt::Money
+                    {
+                        CurrencyCode = "currency_code7f81e352",
+                        Units = 1040752433522641849L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.RetrieveRegisterParameters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
@@ -256,7 +419,25 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             };
             RetrieveRegisterParametersResponse expectedResponse = new RetrieveRegisterParametersResponse
             {
-                RegisterParameters = new RegisterParameters(),
+                RegisterParameters = new RegisterParameters
+                {
+                    DomainName = "domain_nameea17a44f",
+                    Availability = RegisterParameters.Types.Availability.Available,
+                    SupportedPrivacy =
+                    {
+                        ContactPrivacy.PublicContactData,
+                    },
+                    DomainNotices =
+                    {
+                        DomainNotice.HstsPreloaded,
+                    },
+                    YearlyPrice = new gt::Money
+                    {
+                        CurrencyCode = "currency_code7f81e352",
+                        Units = 1040752433522641849L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.RetrieveRegisterParametersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetrieveRegisterParametersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
@@ -279,7 +460,25 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             };
             RetrieveRegisterParametersResponse expectedResponse = new RetrieveRegisterParametersResponse
             {
-                RegisterParameters = new RegisterParameters(),
+                RegisterParameters = new RegisterParameters
+                {
+                    DomainName = "domain_nameea17a44f",
+                    Availability = RegisterParameters.Types.Availability.Available,
+                    SupportedPrivacy =
+                    {
+                        ContactPrivacy.PublicContactData,
+                    },
+                    DomainNotices =
+                    {
+                        DomainNotice.HstsPreloaded,
+                    },
+                    YearlyPrice = new gt::Money
+                    {
+                        CurrencyCode = "currency_code7f81e352",
+                        Units = 1040752433522641849L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.RetrieveRegisterParameters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
@@ -300,7 +499,25 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             };
             RetrieveRegisterParametersResponse expectedResponse = new RetrieveRegisterParametersResponse
             {
-                RegisterParameters = new RegisterParameters(),
+                RegisterParameters = new RegisterParameters
+                {
+                    DomainName = "domain_nameea17a44f",
+                    Availability = RegisterParameters.Types.Availability.Available,
+                    SupportedPrivacy =
+                    {
+                        ContactPrivacy.PublicContactData,
+                    },
+                    DomainNotices =
+                    {
+                        DomainNotice.HstsPreloaded,
+                    },
+                    YearlyPrice = new gt::Money
+                    {
+                        CurrencyCode = "currency_code7f81e352",
+                        Units = 1040752433522641849L,
+                        Nanos = 985689544,
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.RetrieveRegisterParametersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetrieveRegisterParametersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
@@ -324,8 +541,16 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             {
                 RegistrationName = RegistrationName.FromProjectLocationRegistration("[PROJECT]", "[LOCATION]", "[REGISTRATION]"),
                 DomainName = "domain_nameea17a44f",
-                CreateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Registration.Types.State.Unspecified,
                 Issues =
                 {
@@ -338,10 +563,228 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                ManagementSettings = new ManagementSettings(),
-                DnsSettings = new DnsSettings(),
-                ContactSettings = new ContactSettings(),
-                PendingContactSettings = new ContactSettings(),
+                ManagementSettings = new ManagementSettings
+                {
+                    RenewalMethod = ManagementSettings.Types.RenewalMethod.ManualRenewal,
+                    TransferLockState = TransferLockState.Locked,
+                },
+                DnsSettings = new DnsSettings
+                {
+                    CustomDns = new DnsSettings.Types.CustomDns
+                    {
+                        NameServers =
+                        {
+                            "name_servers0cf60382",
+                        },
+                        DsRecords =
+                        {
+                            new DnsSettings.Types.DsRecord
+                            {
+                                KeyTag = 95837116,
+                                Algorithm = DnsSettings.Types.DsRecord.Types.Algorithm.Ecc,
+                                DigestType = DnsSettings.Types.DsRecord.Types.DigestType.Sha256,
+                                Digest = "digest96770fc1",
+                            },
+                        },
+                    },
+                    GoogleDomainsDns = new DnsSettings.Types.GoogleDomainsDns
+                    {
+                        NameServers =
+                        {
+                            "name_servers0cf60382",
+                        },
+                        DsState = DnsSettings.Types.DsState.DsRecordsPublished,
+                        DsRecords =
+                        {
+                            new DnsSettings.Types.DsRecord
+                            {
+                                KeyTag = 95837116,
+                                Algorithm = DnsSettings.Types.DsRecord.Types.Algorithm.Ecc,
+                                DigestType = DnsSettings.Types.DsRecord.Types.DigestType.Sha256,
+                                Digest = "digest96770fc1",
+                            },
+                        },
+                    },
+                    GlueRecords =
+                    {
+                        new DnsSettings.Types.GlueRecord
+                        {
+                            HostName = "host_name01d12cde",
+                            Ipv4Addresses =
+                            {
+                                "ipv4_addresses46965872",
+                            },
+                            Ipv6Addresses =
+                            {
+                                "ipv6_addresses6e6e5fd1",
+                            },
+                        },
+                    },
+                },
+                ContactSettings = new ContactSettings
+                {
+                    Privacy = ContactPrivacy.PublicContactData,
+                    RegistrantContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    AdminContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    TechnicalContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                },
+                PendingContactSettings = new ContactSettings
+                {
+                    Privacy = ContactPrivacy.PublicContactData,
+                    RegistrantContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    AdminContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    TechnicalContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                },
                 SupportedPrivacy =
                 {
                     ContactPrivacy.PublicContactData,
@@ -367,8 +810,16 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             {
                 RegistrationName = RegistrationName.FromProjectLocationRegistration("[PROJECT]", "[LOCATION]", "[REGISTRATION]"),
                 DomainName = "domain_nameea17a44f",
-                CreateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Registration.Types.State.Unspecified,
                 Issues =
                 {
@@ -381,10 +832,228 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                ManagementSettings = new ManagementSettings(),
-                DnsSettings = new DnsSettings(),
-                ContactSettings = new ContactSettings(),
-                PendingContactSettings = new ContactSettings(),
+                ManagementSettings = new ManagementSettings
+                {
+                    RenewalMethod = ManagementSettings.Types.RenewalMethod.ManualRenewal,
+                    TransferLockState = TransferLockState.Locked,
+                },
+                DnsSettings = new DnsSettings
+                {
+                    CustomDns = new DnsSettings.Types.CustomDns
+                    {
+                        NameServers =
+                        {
+                            "name_servers0cf60382",
+                        },
+                        DsRecords =
+                        {
+                            new DnsSettings.Types.DsRecord
+                            {
+                                KeyTag = 95837116,
+                                Algorithm = DnsSettings.Types.DsRecord.Types.Algorithm.Ecc,
+                                DigestType = DnsSettings.Types.DsRecord.Types.DigestType.Sha256,
+                                Digest = "digest96770fc1",
+                            },
+                        },
+                    },
+                    GoogleDomainsDns = new DnsSettings.Types.GoogleDomainsDns
+                    {
+                        NameServers =
+                        {
+                            "name_servers0cf60382",
+                        },
+                        DsState = DnsSettings.Types.DsState.DsRecordsPublished,
+                        DsRecords =
+                        {
+                            new DnsSettings.Types.DsRecord
+                            {
+                                KeyTag = 95837116,
+                                Algorithm = DnsSettings.Types.DsRecord.Types.Algorithm.Ecc,
+                                DigestType = DnsSettings.Types.DsRecord.Types.DigestType.Sha256,
+                                Digest = "digest96770fc1",
+                            },
+                        },
+                    },
+                    GlueRecords =
+                    {
+                        new DnsSettings.Types.GlueRecord
+                        {
+                            HostName = "host_name01d12cde",
+                            Ipv4Addresses =
+                            {
+                                "ipv4_addresses46965872",
+                            },
+                            Ipv6Addresses =
+                            {
+                                "ipv6_addresses6e6e5fd1",
+                            },
+                        },
+                    },
+                },
+                ContactSettings = new ContactSettings
+                {
+                    Privacy = ContactPrivacy.PublicContactData,
+                    RegistrantContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    AdminContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    TechnicalContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                },
+                PendingContactSettings = new ContactSettings
+                {
+                    Privacy = ContactPrivacy.PublicContactData,
+                    RegistrantContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    AdminContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    TechnicalContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                },
                 SupportedPrivacy =
                 {
                     ContactPrivacy.PublicContactData,
@@ -412,8 +1081,16 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             {
                 RegistrationName = RegistrationName.FromProjectLocationRegistration("[PROJECT]", "[LOCATION]", "[REGISTRATION]"),
                 DomainName = "domain_nameea17a44f",
-                CreateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Registration.Types.State.Unspecified,
                 Issues =
                 {
@@ -426,10 +1103,228 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                ManagementSettings = new ManagementSettings(),
-                DnsSettings = new DnsSettings(),
-                ContactSettings = new ContactSettings(),
-                PendingContactSettings = new ContactSettings(),
+                ManagementSettings = new ManagementSettings
+                {
+                    RenewalMethod = ManagementSettings.Types.RenewalMethod.ManualRenewal,
+                    TransferLockState = TransferLockState.Locked,
+                },
+                DnsSettings = new DnsSettings
+                {
+                    CustomDns = new DnsSettings.Types.CustomDns
+                    {
+                        NameServers =
+                        {
+                            "name_servers0cf60382",
+                        },
+                        DsRecords =
+                        {
+                            new DnsSettings.Types.DsRecord
+                            {
+                                KeyTag = 95837116,
+                                Algorithm = DnsSettings.Types.DsRecord.Types.Algorithm.Ecc,
+                                DigestType = DnsSettings.Types.DsRecord.Types.DigestType.Sha256,
+                                Digest = "digest96770fc1",
+                            },
+                        },
+                    },
+                    GoogleDomainsDns = new DnsSettings.Types.GoogleDomainsDns
+                    {
+                        NameServers =
+                        {
+                            "name_servers0cf60382",
+                        },
+                        DsState = DnsSettings.Types.DsState.DsRecordsPublished,
+                        DsRecords =
+                        {
+                            new DnsSettings.Types.DsRecord
+                            {
+                                KeyTag = 95837116,
+                                Algorithm = DnsSettings.Types.DsRecord.Types.Algorithm.Ecc,
+                                DigestType = DnsSettings.Types.DsRecord.Types.DigestType.Sha256,
+                                Digest = "digest96770fc1",
+                            },
+                        },
+                    },
+                    GlueRecords =
+                    {
+                        new DnsSettings.Types.GlueRecord
+                        {
+                            HostName = "host_name01d12cde",
+                            Ipv4Addresses =
+                            {
+                                "ipv4_addresses46965872",
+                            },
+                            Ipv6Addresses =
+                            {
+                                "ipv6_addresses6e6e5fd1",
+                            },
+                        },
+                    },
+                },
+                ContactSettings = new ContactSettings
+                {
+                    Privacy = ContactPrivacy.PublicContactData,
+                    RegistrantContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    AdminContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    TechnicalContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                },
+                PendingContactSettings = new ContactSettings
+                {
+                    Privacy = ContactPrivacy.PublicContactData,
+                    RegistrantContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    AdminContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    TechnicalContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                },
                 SupportedPrivacy =
                 {
                     ContactPrivacy.PublicContactData,
@@ -455,8 +1350,16 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             {
                 RegistrationName = RegistrationName.FromProjectLocationRegistration("[PROJECT]", "[LOCATION]", "[REGISTRATION]"),
                 DomainName = "domain_nameea17a44f",
-                CreateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Registration.Types.State.Unspecified,
                 Issues =
                 {
@@ -469,10 +1372,228 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                ManagementSettings = new ManagementSettings(),
-                DnsSettings = new DnsSettings(),
-                ContactSettings = new ContactSettings(),
-                PendingContactSettings = new ContactSettings(),
+                ManagementSettings = new ManagementSettings
+                {
+                    RenewalMethod = ManagementSettings.Types.RenewalMethod.ManualRenewal,
+                    TransferLockState = TransferLockState.Locked,
+                },
+                DnsSettings = new DnsSettings
+                {
+                    CustomDns = new DnsSettings.Types.CustomDns
+                    {
+                        NameServers =
+                        {
+                            "name_servers0cf60382",
+                        },
+                        DsRecords =
+                        {
+                            new DnsSettings.Types.DsRecord
+                            {
+                                KeyTag = 95837116,
+                                Algorithm = DnsSettings.Types.DsRecord.Types.Algorithm.Ecc,
+                                DigestType = DnsSettings.Types.DsRecord.Types.DigestType.Sha256,
+                                Digest = "digest96770fc1",
+                            },
+                        },
+                    },
+                    GoogleDomainsDns = new DnsSettings.Types.GoogleDomainsDns
+                    {
+                        NameServers =
+                        {
+                            "name_servers0cf60382",
+                        },
+                        DsState = DnsSettings.Types.DsState.DsRecordsPublished,
+                        DsRecords =
+                        {
+                            new DnsSettings.Types.DsRecord
+                            {
+                                KeyTag = 95837116,
+                                Algorithm = DnsSettings.Types.DsRecord.Types.Algorithm.Ecc,
+                                DigestType = DnsSettings.Types.DsRecord.Types.DigestType.Sha256,
+                                Digest = "digest96770fc1",
+                            },
+                        },
+                    },
+                    GlueRecords =
+                    {
+                        new DnsSettings.Types.GlueRecord
+                        {
+                            HostName = "host_name01d12cde",
+                            Ipv4Addresses =
+                            {
+                                "ipv4_addresses46965872",
+                            },
+                            Ipv6Addresses =
+                            {
+                                "ipv6_addresses6e6e5fd1",
+                            },
+                        },
+                    },
+                },
+                ContactSettings = new ContactSettings
+                {
+                    Privacy = ContactPrivacy.PublicContactData,
+                    RegistrantContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    AdminContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    TechnicalContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                },
+                PendingContactSettings = new ContactSettings
+                {
+                    Privacy = ContactPrivacy.PublicContactData,
+                    RegistrantContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    AdminContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    TechnicalContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                },
                 SupportedPrivacy =
                 {
                     ContactPrivacy.PublicContactData,
@@ -500,8 +1621,16 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             {
                 RegistrationName = RegistrationName.FromProjectLocationRegistration("[PROJECT]", "[LOCATION]", "[REGISTRATION]"),
                 DomainName = "domain_nameea17a44f",
-                CreateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Registration.Types.State.Unspecified,
                 Issues =
                 {
@@ -514,10 +1643,228 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                ManagementSettings = new ManagementSettings(),
-                DnsSettings = new DnsSettings(),
-                ContactSettings = new ContactSettings(),
-                PendingContactSettings = new ContactSettings(),
+                ManagementSettings = new ManagementSettings
+                {
+                    RenewalMethod = ManagementSettings.Types.RenewalMethod.ManualRenewal,
+                    TransferLockState = TransferLockState.Locked,
+                },
+                DnsSettings = new DnsSettings
+                {
+                    CustomDns = new DnsSettings.Types.CustomDns
+                    {
+                        NameServers =
+                        {
+                            "name_servers0cf60382",
+                        },
+                        DsRecords =
+                        {
+                            new DnsSettings.Types.DsRecord
+                            {
+                                KeyTag = 95837116,
+                                Algorithm = DnsSettings.Types.DsRecord.Types.Algorithm.Ecc,
+                                DigestType = DnsSettings.Types.DsRecord.Types.DigestType.Sha256,
+                                Digest = "digest96770fc1",
+                            },
+                        },
+                    },
+                    GoogleDomainsDns = new DnsSettings.Types.GoogleDomainsDns
+                    {
+                        NameServers =
+                        {
+                            "name_servers0cf60382",
+                        },
+                        DsState = DnsSettings.Types.DsState.DsRecordsPublished,
+                        DsRecords =
+                        {
+                            new DnsSettings.Types.DsRecord
+                            {
+                                KeyTag = 95837116,
+                                Algorithm = DnsSettings.Types.DsRecord.Types.Algorithm.Ecc,
+                                DigestType = DnsSettings.Types.DsRecord.Types.DigestType.Sha256,
+                                Digest = "digest96770fc1",
+                            },
+                        },
+                    },
+                    GlueRecords =
+                    {
+                        new DnsSettings.Types.GlueRecord
+                        {
+                            HostName = "host_name01d12cde",
+                            Ipv4Addresses =
+                            {
+                                "ipv4_addresses46965872",
+                            },
+                            Ipv6Addresses =
+                            {
+                                "ipv6_addresses6e6e5fd1",
+                            },
+                        },
+                    },
+                },
+                ContactSettings = new ContactSettings
+                {
+                    Privacy = ContactPrivacy.PublicContactData,
+                    RegistrantContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    AdminContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    TechnicalContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                },
+                PendingContactSettings = new ContactSettings
+                {
+                    Privacy = ContactPrivacy.PublicContactData,
+                    RegistrantContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    AdminContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    TechnicalContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                },
                 SupportedPrivacy =
                 {
                     ContactPrivacy.PublicContactData,
@@ -543,8 +1890,16 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
             {
                 RegistrationName = RegistrationName.FromProjectLocationRegistration("[PROJECT]", "[LOCATION]", "[REGISTRATION]"),
                 DomainName = "domain_nameea17a44f",
-                CreateTime = new wkt::Timestamp(),
-                ExpireTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
+                ExpireTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 State = Registration.Types.State.Unspecified,
                 Issues =
                 {
@@ -557,10 +1912,228 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                         "value60c16320"
                     },
                 },
-                ManagementSettings = new ManagementSettings(),
-                DnsSettings = new DnsSettings(),
-                ContactSettings = new ContactSettings(),
-                PendingContactSettings = new ContactSettings(),
+                ManagementSettings = new ManagementSettings
+                {
+                    RenewalMethod = ManagementSettings.Types.RenewalMethod.ManualRenewal,
+                    TransferLockState = TransferLockState.Locked,
+                },
+                DnsSettings = new DnsSettings
+                {
+                    CustomDns = new DnsSettings.Types.CustomDns
+                    {
+                        NameServers =
+                        {
+                            "name_servers0cf60382",
+                        },
+                        DsRecords =
+                        {
+                            new DnsSettings.Types.DsRecord
+                            {
+                                KeyTag = 95837116,
+                                Algorithm = DnsSettings.Types.DsRecord.Types.Algorithm.Ecc,
+                                DigestType = DnsSettings.Types.DsRecord.Types.DigestType.Sha256,
+                                Digest = "digest96770fc1",
+                            },
+                        },
+                    },
+                    GoogleDomainsDns = new DnsSettings.Types.GoogleDomainsDns
+                    {
+                        NameServers =
+                        {
+                            "name_servers0cf60382",
+                        },
+                        DsState = DnsSettings.Types.DsState.DsRecordsPublished,
+                        DsRecords =
+                        {
+                            new DnsSettings.Types.DsRecord
+                            {
+                                KeyTag = 95837116,
+                                Algorithm = DnsSettings.Types.DsRecord.Types.Algorithm.Ecc,
+                                DigestType = DnsSettings.Types.DsRecord.Types.DigestType.Sha256,
+                                Digest = "digest96770fc1",
+                            },
+                        },
+                    },
+                    GlueRecords =
+                    {
+                        new DnsSettings.Types.GlueRecord
+                        {
+                            HostName = "host_name01d12cde",
+                            Ipv4Addresses =
+                            {
+                                "ipv4_addresses46965872",
+                            },
+                            Ipv6Addresses =
+                            {
+                                "ipv6_addresses6e6e5fd1",
+                            },
+                        },
+                    },
+                },
+                ContactSettings = new ContactSettings
+                {
+                    Privacy = ContactPrivacy.PublicContactData,
+                    RegistrantContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    AdminContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    TechnicalContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                },
+                PendingContactSettings = new ContactSettings
+                {
+                    Privacy = ContactPrivacy.PublicContactData,
+                    RegistrantContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    AdminContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                    TechnicalContact = new ContactSettings.Types.Contact
+                    {
+                        PostalAddress = new gt::PostalAddress
+                        {
+                            Revision = -1171785291,
+                            RegionCode = "region_code72561d46",
+                            LanguageCode = "language_code2f6c7160",
+                            PostalCode = "postal_code51d301e6",
+                            SortingCode = "sorting_codeab47cbcd",
+                            AdministrativeArea = "administrative_area5d9f9eab",
+                            Locality = "locality2082e309",
+                            Sublocality = "sublocality1a785e24",
+                            AddressLines =
+                            {
+                                "address_lines4ab5c702",
+                            },
+                            Recipients =
+                            {
+                                "recipients9bf62a97",
+                            },
+                            Organization = "organization8c94c1b4",
+                        },
+                        Email = "email7cf5830c",
+                        PhoneNumber = "phone_number9ebac341",
+                        FaxNumber = "fax_number37e1f392",
+                    },
+                },
                 SupportedPrivacy =
                 {
                     ContactPrivacy.PublicContactData,
