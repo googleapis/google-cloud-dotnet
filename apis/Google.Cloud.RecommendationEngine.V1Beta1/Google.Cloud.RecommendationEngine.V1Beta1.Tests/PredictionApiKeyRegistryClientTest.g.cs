@@ -34,7 +34,10 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             CreatePredictionApiKeyRegistrationRequest request = new CreatePredictionApiKeyRegistrationRequest
             {
                 ParentAsEventStoreName = EventStoreName.FromProjectLocationCatalogEventStore("[PROJECT]", "[LOCATION]", "[CATALOG]", "[EVENT_STORE]"),
-                PredictionApiKeyRegistration = new PredictionApiKeyRegistration(),
+                PredictionApiKeyRegistration = new PredictionApiKeyRegistration
+                {
+                    ApiKey = "api_key30288039",
+                },
             };
             PredictionApiKeyRegistration expectedResponse = new PredictionApiKeyRegistration
             {
@@ -54,7 +57,10 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             CreatePredictionApiKeyRegistrationRequest request = new CreatePredictionApiKeyRegistrationRequest
             {
                 ParentAsEventStoreName = EventStoreName.FromProjectLocationCatalogEventStore("[PROJECT]", "[LOCATION]", "[CATALOG]", "[EVENT_STORE]"),
-                PredictionApiKeyRegistration = new PredictionApiKeyRegistration(),
+                PredictionApiKeyRegistration = new PredictionApiKeyRegistration
+                {
+                    ApiKey = "api_key30288039",
+                },
             };
             PredictionApiKeyRegistration expectedResponse = new PredictionApiKeyRegistration
             {
@@ -76,7 +82,10 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             CreatePredictionApiKeyRegistrationRequest request = new CreatePredictionApiKeyRegistrationRequest
             {
                 ParentAsEventStoreName = EventStoreName.FromProjectLocationCatalogEventStore("[PROJECT]", "[LOCATION]", "[CATALOG]", "[EVENT_STORE]"),
-                PredictionApiKeyRegistration = new PredictionApiKeyRegistration(),
+                PredictionApiKeyRegistration = new PredictionApiKeyRegistration
+                {
+                    ApiKey = "api_key30288039",
+                },
             };
             PredictionApiKeyRegistration expectedResponse = new PredictionApiKeyRegistration
             {
@@ -96,7 +105,10 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             CreatePredictionApiKeyRegistrationRequest request = new CreatePredictionApiKeyRegistrationRequest
             {
                 ParentAsEventStoreName = EventStoreName.FromProjectLocationCatalogEventStore("[PROJECT]", "[LOCATION]", "[CATALOG]", "[EVENT_STORE]"),
-                PredictionApiKeyRegistration = new PredictionApiKeyRegistration(),
+                PredictionApiKeyRegistration = new PredictionApiKeyRegistration
+                {
+                    ApiKey = "api_key30288039",
+                },
             };
             PredictionApiKeyRegistration expectedResponse = new PredictionApiKeyRegistration
             {
@@ -118,7 +130,10 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             CreatePredictionApiKeyRegistrationRequest request = new CreatePredictionApiKeyRegistrationRequest
             {
                 ParentAsEventStoreName = EventStoreName.FromProjectLocationCatalogEventStore("[PROJECT]", "[LOCATION]", "[CATALOG]", "[EVENT_STORE]"),
-                PredictionApiKeyRegistration = new PredictionApiKeyRegistration(),
+                PredictionApiKeyRegistration = new PredictionApiKeyRegistration
+                {
+                    ApiKey = "api_key30288039",
+                },
             };
             PredictionApiKeyRegistration expectedResponse = new PredictionApiKeyRegistration
             {
@@ -138,7 +153,10 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             CreatePredictionApiKeyRegistrationRequest request = new CreatePredictionApiKeyRegistrationRequest
             {
                 ParentAsEventStoreName = EventStoreName.FromProjectLocationCatalogEventStore("[PROJECT]", "[LOCATION]", "[CATALOG]", "[EVENT_STORE]"),
-                PredictionApiKeyRegistration = new PredictionApiKeyRegistration(),
+                PredictionApiKeyRegistration = new PredictionApiKeyRegistration
+                {
+                    ApiKey = "api_key30288039",
+                },
             };
             PredictionApiKeyRegistration expectedResponse = new PredictionApiKeyRegistration
             {

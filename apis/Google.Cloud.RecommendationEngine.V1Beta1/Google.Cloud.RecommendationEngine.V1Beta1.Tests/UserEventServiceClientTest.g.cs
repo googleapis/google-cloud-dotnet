@@ -38,15 +38,253 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             WriteUserEventRequest request = new WriteUserEventRequest
             {
                 ParentAsEventStoreName = EventStoreName.FromProjectLocationCatalogEventStore("[PROJECT]", "[LOCATION]", "[CATALOG]", "[EVENT_STORE]"),
-                UserEvent = new UserEvent(),
+                UserEvent = new UserEvent
+                {
+                    EventType = "event_type1436d01c",
+                    UserInfo = new UserInfo
+                    {
+                        VisitorId = "visitor_id25f1c2bf",
+                        UserId = "user_idd41a70e8",
+                        IpAddress = "ip_address46a72553",
+                        UserAgent = "user_agent707c6483",
+                        DirectUserRequest = true,
+                    },
+                    EventDetail = new EventDetail
+                    {
+                        Uri = "uri3db70593",
+                        PageViewId = "page_view_id77a7ed70",
+                        ExperimentIds =
+                        {
+                            "experiment_ids9777ca1b",
+                        },
+                        RecommendationToken = "recommendation_token2a33f3e2",
+                        EventAttributes = new FeatureMap
+                        {
+                            CategoricalFeatures =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FeatureMap.Types.StringList
+                                    {
+                                        Value = { "value60c16320", },
+                                    }
+                                },
+                            },
+                            NumericalFeatures =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FeatureMap.Types.FloatList
+                                    {
+                                        Value = { -7.291809E+17F, },
+                                    }
+                                },
+                            },
+                        },
+                        ReferrerUri = "referrer_uri4d3a0115",
+                    },
+                    ProductEventDetail = new ProductEventDetail
+                    {
+                        SearchQuery = "search_query6ef02091",
+                        PageCategories =
+                        {
+                            new CatalogItem.Types.CategoryHierarchy
+                            {
+                                Categories =
+                                {
+                                    "categoriesb4ccb5b0",
+                                },
+                            },
+                        },
+                        ProductDetails =
+                        {
+                            new ProductDetail
+                            {
+                                Id = "id74b70bb8",
+                                CurrencyCode = "currency_code7f81e352",
+                                OriginalPrice = 8.0793406E+17F,
+                                DisplayPrice = -6.3182856E+16F,
+                                StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                                Quantity = 1261051170,
+                                AvailableQuantity = 719656040,
+                                ItemAttributes = new FeatureMap
+                                {
+                                    CategoricalFeatures =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new FeatureMap.Types.StringList
+                                            {
+                                                Value = { "value60c16320", },
+                                            }
+                                        },
+                                    },
+                                    NumericalFeatures =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new FeatureMap.Types.FloatList
+                                            {
+                                                Value = { -7.291809E+17F, },
+                                            }
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                        ListId = "list_id20e8a34d",
+                        CartId = "cart_idf7834dc4",
+                        PurchaseTransaction = new PurchaseTransaction
+                        {
+                            Id = "id74b70bb8",
+                            Revenue = -7.227312E+16F,
+                            Taxes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    -7.291809E+17F
+                                },
+                            },
+                            Costs =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    -7.291809E+17F
+                                },
+                            },
+                            CurrencyCode = "currency_code7f81e352",
+                        },
+                    },
+                    EventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EventSource = UserEvent.Types.EventSource.Automl,
+                },
             };
             UserEvent expectedResponse = new UserEvent
             {
                 EventType = "event_type1436d01c",
-                UserInfo = new UserInfo(),
-                EventDetail = new EventDetail(),
-                ProductEventDetail = new ProductEventDetail(),
-                EventTime = new wkt::Timestamp(),
+                UserInfo = new UserInfo
+                {
+                    VisitorId = "visitor_id25f1c2bf",
+                    UserId = "user_idd41a70e8",
+                    IpAddress = "ip_address46a72553",
+                    UserAgent = "user_agent707c6483",
+                    DirectUserRequest = true,
+                },
+                EventDetail = new EventDetail
+                {
+                    Uri = "uri3db70593",
+                    PageViewId = "page_view_id77a7ed70",
+                    ExperimentIds =
+                    {
+                        "experiment_ids9777ca1b",
+                    },
+                    RecommendationToken = "recommendation_token2a33f3e2",
+                    EventAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    ReferrerUri = "referrer_uri4d3a0115",
+                },
+                ProductEventDetail = new ProductEventDetail
+                {
+                    SearchQuery = "search_query6ef02091",
+                    PageCategories =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    ProductDetails =
+                    {
+                        new ProductDetail
+                        {
+                            Id = "id74b70bb8",
+                            CurrencyCode = "currency_code7f81e352",
+                            OriginalPrice = 8.0793406E+17F,
+                            DisplayPrice = -6.3182856E+16F,
+                            StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                            Quantity = 1261051170,
+                            AvailableQuantity = 719656040,
+                            ItemAttributes = new FeatureMap
+                            {
+                                CategoricalFeatures =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new FeatureMap.Types.StringList
+                                        {
+                                            Value = { "value60c16320", },
+                                        }
+                                    },
+                                },
+                                NumericalFeatures =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new FeatureMap.Types.FloatList
+                                        {
+                                            Value = { -7.291809E+17F, },
+                                        }
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    ListId = "list_id20e8a34d",
+                    CartId = "cart_idf7834dc4",
+                    PurchaseTransaction = new PurchaseTransaction
+                    {
+                        Id = "id74b70bb8",
+                        Revenue = -7.227312E+16F,
+                        Taxes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                    },
+                },
+                EventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EventSource = UserEvent.Types.EventSource.Automl,
             };
             mockGrpcClient.Setup(x => x.WriteUserEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -64,15 +302,253 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             WriteUserEventRequest request = new WriteUserEventRequest
             {
                 ParentAsEventStoreName = EventStoreName.FromProjectLocationCatalogEventStore("[PROJECT]", "[LOCATION]", "[CATALOG]", "[EVENT_STORE]"),
-                UserEvent = new UserEvent(),
+                UserEvent = new UserEvent
+                {
+                    EventType = "event_type1436d01c",
+                    UserInfo = new UserInfo
+                    {
+                        VisitorId = "visitor_id25f1c2bf",
+                        UserId = "user_idd41a70e8",
+                        IpAddress = "ip_address46a72553",
+                        UserAgent = "user_agent707c6483",
+                        DirectUserRequest = true,
+                    },
+                    EventDetail = new EventDetail
+                    {
+                        Uri = "uri3db70593",
+                        PageViewId = "page_view_id77a7ed70",
+                        ExperimentIds =
+                        {
+                            "experiment_ids9777ca1b",
+                        },
+                        RecommendationToken = "recommendation_token2a33f3e2",
+                        EventAttributes = new FeatureMap
+                        {
+                            CategoricalFeatures =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FeatureMap.Types.StringList
+                                    {
+                                        Value = { "value60c16320", },
+                                    }
+                                },
+                            },
+                            NumericalFeatures =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FeatureMap.Types.FloatList
+                                    {
+                                        Value = { -7.291809E+17F, },
+                                    }
+                                },
+                            },
+                        },
+                        ReferrerUri = "referrer_uri4d3a0115",
+                    },
+                    ProductEventDetail = new ProductEventDetail
+                    {
+                        SearchQuery = "search_query6ef02091",
+                        PageCategories =
+                        {
+                            new CatalogItem.Types.CategoryHierarchy
+                            {
+                                Categories =
+                                {
+                                    "categoriesb4ccb5b0",
+                                },
+                            },
+                        },
+                        ProductDetails =
+                        {
+                            new ProductDetail
+                            {
+                                Id = "id74b70bb8",
+                                CurrencyCode = "currency_code7f81e352",
+                                OriginalPrice = 8.0793406E+17F,
+                                DisplayPrice = -6.3182856E+16F,
+                                StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                                Quantity = 1261051170,
+                                AvailableQuantity = 719656040,
+                                ItemAttributes = new FeatureMap
+                                {
+                                    CategoricalFeatures =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new FeatureMap.Types.StringList
+                                            {
+                                                Value = { "value60c16320", },
+                                            }
+                                        },
+                                    },
+                                    NumericalFeatures =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new FeatureMap.Types.FloatList
+                                            {
+                                                Value = { -7.291809E+17F, },
+                                            }
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                        ListId = "list_id20e8a34d",
+                        CartId = "cart_idf7834dc4",
+                        PurchaseTransaction = new PurchaseTransaction
+                        {
+                            Id = "id74b70bb8",
+                            Revenue = -7.227312E+16F,
+                            Taxes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    -7.291809E+17F
+                                },
+                            },
+                            Costs =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    -7.291809E+17F
+                                },
+                            },
+                            CurrencyCode = "currency_code7f81e352",
+                        },
+                    },
+                    EventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EventSource = UserEvent.Types.EventSource.Automl,
+                },
             };
             UserEvent expectedResponse = new UserEvent
             {
                 EventType = "event_type1436d01c",
-                UserInfo = new UserInfo(),
-                EventDetail = new EventDetail(),
-                ProductEventDetail = new ProductEventDetail(),
-                EventTime = new wkt::Timestamp(),
+                UserInfo = new UserInfo
+                {
+                    VisitorId = "visitor_id25f1c2bf",
+                    UserId = "user_idd41a70e8",
+                    IpAddress = "ip_address46a72553",
+                    UserAgent = "user_agent707c6483",
+                    DirectUserRequest = true,
+                },
+                EventDetail = new EventDetail
+                {
+                    Uri = "uri3db70593",
+                    PageViewId = "page_view_id77a7ed70",
+                    ExperimentIds =
+                    {
+                        "experiment_ids9777ca1b",
+                    },
+                    RecommendationToken = "recommendation_token2a33f3e2",
+                    EventAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    ReferrerUri = "referrer_uri4d3a0115",
+                },
+                ProductEventDetail = new ProductEventDetail
+                {
+                    SearchQuery = "search_query6ef02091",
+                    PageCategories =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    ProductDetails =
+                    {
+                        new ProductDetail
+                        {
+                            Id = "id74b70bb8",
+                            CurrencyCode = "currency_code7f81e352",
+                            OriginalPrice = 8.0793406E+17F,
+                            DisplayPrice = -6.3182856E+16F,
+                            StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                            Quantity = 1261051170,
+                            AvailableQuantity = 719656040,
+                            ItemAttributes = new FeatureMap
+                            {
+                                CategoricalFeatures =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new FeatureMap.Types.StringList
+                                        {
+                                            Value = { "value60c16320", },
+                                        }
+                                    },
+                                },
+                                NumericalFeatures =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new FeatureMap.Types.FloatList
+                                        {
+                                            Value = { -7.291809E+17F, },
+                                        }
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    ListId = "list_id20e8a34d",
+                    CartId = "cart_idf7834dc4",
+                    PurchaseTransaction = new PurchaseTransaction
+                    {
+                        Id = "id74b70bb8",
+                        Revenue = -7.227312E+16F,
+                        Taxes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                    },
+                },
+                EventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EventSource = UserEvent.Types.EventSource.Automl,
             };
             mockGrpcClient.Setup(x => x.WriteUserEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -92,15 +568,253 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             WriteUserEventRequest request = new WriteUserEventRequest
             {
                 ParentAsEventStoreName = EventStoreName.FromProjectLocationCatalogEventStore("[PROJECT]", "[LOCATION]", "[CATALOG]", "[EVENT_STORE]"),
-                UserEvent = new UserEvent(),
+                UserEvent = new UserEvent
+                {
+                    EventType = "event_type1436d01c",
+                    UserInfo = new UserInfo
+                    {
+                        VisitorId = "visitor_id25f1c2bf",
+                        UserId = "user_idd41a70e8",
+                        IpAddress = "ip_address46a72553",
+                        UserAgent = "user_agent707c6483",
+                        DirectUserRequest = true,
+                    },
+                    EventDetail = new EventDetail
+                    {
+                        Uri = "uri3db70593",
+                        PageViewId = "page_view_id77a7ed70",
+                        ExperimentIds =
+                        {
+                            "experiment_ids9777ca1b",
+                        },
+                        RecommendationToken = "recommendation_token2a33f3e2",
+                        EventAttributes = new FeatureMap
+                        {
+                            CategoricalFeatures =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FeatureMap.Types.StringList
+                                    {
+                                        Value = { "value60c16320", },
+                                    }
+                                },
+                            },
+                            NumericalFeatures =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FeatureMap.Types.FloatList
+                                    {
+                                        Value = { -7.291809E+17F, },
+                                    }
+                                },
+                            },
+                        },
+                        ReferrerUri = "referrer_uri4d3a0115",
+                    },
+                    ProductEventDetail = new ProductEventDetail
+                    {
+                        SearchQuery = "search_query6ef02091",
+                        PageCategories =
+                        {
+                            new CatalogItem.Types.CategoryHierarchy
+                            {
+                                Categories =
+                                {
+                                    "categoriesb4ccb5b0",
+                                },
+                            },
+                        },
+                        ProductDetails =
+                        {
+                            new ProductDetail
+                            {
+                                Id = "id74b70bb8",
+                                CurrencyCode = "currency_code7f81e352",
+                                OriginalPrice = 8.0793406E+17F,
+                                DisplayPrice = -6.3182856E+16F,
+                                StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                                Quantity = 1261051170,
+                                AvailableQuantity = 719656040,
+                                ItemAttributes = new FeatureMap
+                                {
+                                    CategoricalFeatures =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new FeatureMap.Types.StringList
+                                            {
+                                                Value = { "value60c16320", },
+                                            }
+                                        },
+                                    },
+                                    NumericalFeatures =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new FeatureMap.Types.FloatList
+                                            {
+                                                Value = { -7.291809E+17F, },
+                                            }
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                        ListId = "list_id20e8a34d",
+                        CartId = "cart_idf7834dc4",
+                        PurchaseTransaction = new PurchaseTransaction
+                        {
+                            Id = "id74b70bb8",
+                            Revenue = -7.227312E+16F,
+                            Taxes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    -7.291809E+17F
+                                },
+                            },
+                            Costs =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    -7.291809E+17F
+                                },
+                            },
+                            CurrencyCode = "currency_code7f81e352",
+                        },
+                    },
+                    EventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EventSource = UserEvent.Types.EventSource.Automl,
+                },
             };
             UserEvent expectedResponse = new UserEvent
             {
                 EventType = "event_type1436d01c",
-                UserInfo = new UserInfo(),
-                EventDetail = new EventDetail(),
-                ProductEventDetail = new ProductEventDetail(),
-                EventTime = new wkt::Timestamp(),
+                UserInfo = new UserInfo
+                {
+                    VisitorId = "visitor_id25f1c2bf",
+                    UserId = "user_idd41a70e8",
+                    IpAddress = "ip_address46a72553",
+                    UserAgent = "user_agent707c6483",
+                    DirectUserRequest = true,
+                },
+                EventDetail = new EventDetail
+                {
+                    Uri = "uri3db70593",
+                    PageViewId = "page_view_id77a7ed70",
+                    ExperimentIds =
+                    {
+                        "experiment_ids9777ca1b",
+                    },
+                    RecommendationToken = "recommendation_token2a33f3e2",
+                    EventAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    ReferrerUri = "referrer_uri4d3a0115",
+                },
+                ProductEventDetail = new ProductEventDetail
+                {
+                    SearchQuery = "search_query6ef02091",
+                    PageCategories =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    ProductDetails =
+                    {
+                        new ProductDetail
+                        {
+                            Id = "id74b70bb8",
+                            CurrencyCode = "currency_code7f81e352",
+                            OriginalPrice = 8.0793406E+17F,
+                            DisplayPrice = -6.3182856E+16F,
+                            StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                            Quantity = 1261051170,
+                            AvailableQuantity = 719656040,
+                            ItemAttributes = new FeatureMap
+                            {
+                                CategoricalFeatures =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new FeatureMap.Types.StringList
+                                        {
+                                            Value = { "value60c16320", },
+                                        }
+                                    },
+                                },
+                                NumericalFeatures =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new FeatureMap.Types.FloatList
+                                        {
+                                            Value = { -7.291809E+17F, },
+                                        }
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    ListId = "list_id20e8a34d",
+                    CartId = "cart_idf7834dc4",
+                    PurchaseTransaction = new PurchaseTransaction
+                    {
+                        Id = "id74b70bb8",
+                        Revenue = -7.227312E+16F,
+                        Taxes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                    },
+                },
+                EventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EventSource = UserEvent.Types.EventSource.Automl,
             };
             mockGrpcClient.Setup(x => x.WriteUserEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -118,15 +832,253 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             WriteUserEventRequest request = new WriteUserEventRequest
             {
                 ParentAsEventStoreName = EventStoreName.FromProjectLocationCatalogEventStore("[PROJECT]", "[LOCATION]", "[CATALOG]", "[EVENT_STORE]"),
-                UserEvent = new UserEvent(),
+                UserEvent = new UserEvent
+                {
+                    EventType = "event_type1436d01c",
+                    UserInfo = new UserInfo
+                    {
+                        VisitorId = "visitor_id25f1c2bf",
+                        UserId = "user_idd41a70e8",
+                        IpAddress = "ip_address46a72553",
+                        UserAgent = "user_agent707c6483",
+                        DirectUserRequest = true,
+                    },
+                    EventDetail = new EventDetail
+                    {
+                        Uri = "uri3db70593",
+                        PageViewId = "page_view_id77a7ed70",
+                        ExperimentIds =
+                        {
+                            "experiment_ids9777ca1b",
+                        },
+                        RecommendationToken = "recommendation_token2a33f3e2",
+                        EventAttributes = new FeatureMap
+                        {
+                            CategoricalFeatures =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FeatureMap.Types.StringList
+                                    {
+                                        Value = { "value60c16320", },
+                                    }
+                                },
+                            },
+                            NumericalFeatures =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FeatureMap.Types.FloatList
+                                    {
+                                        Value = { -7.291809E+17F, },
+                                    }
+                                },
+                            },
+                        },
+                        ReferrerUri = "referrer_uri4d3a0115",
+                    },
+                    ProductEventDetail = new ProductEventDetail
+                    {
+                        SearchQuery = "search_query6ef02091",
+                        PageCategories =
+                        {
+                            new CatalogItem.Types.CategoryHierarchy
+                            {
+                                Categories =
+                                {
+                                    "categoriesb4ccb5b0",
+                                },
+                            },
+                        },
+                        ProductDetails =
+                        {
+                            new ProductDetail
+                            {
+                                Id = "id74b70bb8",
+                                CurrencyCode = "currency_code7f81e352",
+                                OriginalPrice = 8.0793406E+17F,
+                                DisplayPrice = -6.3182856E+16F,
+                                StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                                Quantity = 1261051170,
+                                AvailableQuantity = 719656040,
+                                ItemAttributes = new FeatureMap
+                                {
+                                    CategoricalFeatures =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new FeatureMap.Types.StringList
+                                            {
+                                                Value = { "value60c16320", },
+                                            }
+                                        },
+                                    },
+                                    NumericalFeatures =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new FeatureMap.Types.FloatList
+                                            {
+                                                Value = { -7.291809E+17F, },
+                                            }
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                        ListId = "list_id20e8a34d",
+                        CartId = "cart_idf7834dc4",
+                        PurchaseTransaction = new PurchaseTransaction
+                        {
+                            Id = "id74b70bb8",
+                            Revenue = -7.227312E+16F,
+                            Taxes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    -7.291809E+17F
+                                },
+                            },
+                            Costs =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    -7.291809E+17F
+                                },
+                            },
+                            CurrencyCode = "currency_code7f81e352",
+                        },
+                    },
+                    EventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EventSource = UserEvent.Types.EventSource.Automl,
+                },
             };
             UserEvent expectedResponse = new UserEvent
             {
                 EventType = "event_type1436d01c",
-                UserInfo = new UserInfo(),
-                EventDetail = new EventDetail(),
-                ProductEventDetail = new ProductEventDetail(),
-                EventTime = new wkt::Timestamp(),
+                UserInfo = new UserInfo
+                {
+                    VisitorId = "visitor_id25f1c2bf",
+                    UserId = "user_idd41a70e8",
+                    IpAddress = "ip_address46a72553",
+                    UserAgent = "user_agent707c6483",
+                    DirectUserRequest = true,
+                },
+                EventDetail = new EventDetail
+                {
+                    Uri = "uri3db70593",
+                    PageViewId = "page_view_id77a7ed70",
+                    ExperimentIds =
+                    {
+                        "experiment_ids9777ca1b",
+                    },
+                    RecommendationToken = "recommendation_token2a33f3e2",
+                    EventAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    ReferrerUri = "referrer_uri4d3a0115",
+                },
+                ProductEventDetail = new ProductEventDetail
+                {
+                    SearchQuery = "search_query6ef02091",
+                    PageCategories =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    ProductDetails =
+                    {
+                        new ProductDetail
+                        {
+                            Id = "id74b70bb8",
+                            CurrencyCode = "currency_code7f81e352",
+                            OriginalPrice = 8.0793406E+17F,
+                            DisplayPrice = -6.3182856E+16F,
+                            StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                            Quantity = 1261051170,
+                            AvailableQuantity = 719656040,
+                            ItemAttributes = new FeatureMap
+                            {
+                                CategoricalFeatures =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new FeatureMap.Types.StringList
+                                        {
+                                            Value = { "value60c16320", },
+                                        }
+                                    },
+                                },
+                                NumericalFeatures =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new FeatureMap.Types.FloatList
+                                        {
+                                            Value = { -7.291809E+17F, },
+                                        }
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    ListId = "list_id20e8a34d",
+                    CartId = "cart_idf7834dc4",
+                    PurchaseTransaction = new PurchaseTransaction
+                    {
+                        Id = "id74b70bb8",
+                        Revenue = -7.227312E+16F,
+                        Taxes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                    },
+                },
+                EventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EventSource = UserEvent.Types.EventSource.Automl,
             };
             mockGrpcClient.Setup(x => x.WriteUserEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -146,15 +1098,253 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             WriteUserEventRequest request = new WriteUserEventRequest
             {
                 ParentAsEventStoreName = EventStoreName.FromProjectLocationCatalogEventStore("[PROJECT]", "[LOCATION]", "[CATALOG]", "[EVENT_STORE]"),
-                UserEvent = new UserEvent(),
+                UserEvent = new UserEvent
+                {
+                    EventType = "event_type1436d01c",
+                    UserInfo = new UserInfo
+                    {
+                        VisitorId = "visitor_id25f1c2bf",
+                        UserId = "user_idd41a70e8",
+                        IpAddress = "ip_address46a72553",
+                        UserAgent = "user_agent707c6483",
+                        DirectUserRequest = true,
+                    },
+                    EventDetail = new EventDetail
+                    {
+                        Uri = "uri3db70593",
+                        PageViewId = "page_view_id77a7ed70",
+                        ExperimentIds =
+                        {
+                            "experiment_ids9777ca1b",
+                        },
+                        RecommendationToken = "recommendation_token2a33f3e2",
+                        EventAttributes = new FeatureMap
+                        {
+                            CategoricalFeatures =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FeatureMap.Types.StringList
+                                    {
+                                        Value = { "value60c16320", },
+                                    }
+                                },
+                            },
+                            NumericalFeatures =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FeatureMap.Types.FloatList
+                                    {
+                                        Value = { -7.291809E+17F, },
+                                    }
+                                },
+                            },
+                        },
+                        ReferrerUri = "referrer_uri4d3a0115",
+                    },
+                    ProductEventDetail = new ProductEventDetail
+                    {
+                        SearchQuery = "search_query6ef02091",
+                        PageCategories =
+                        {
+                            new CatalogItem.Types.CategoryHierarchy
+                            {
+                                Categories =
+                                {
+                                    "categoriesb4ccb5b0",
+                                },
+                            },
+                        },
+                        ProductDetails =
+                        {
+                            new ProductDetail
+                            {
+                                Id = "id74b70bb8",
+                                CurrencyCode = "currency_code7f81e352",
+                                OriginalPrice = 8.0793406E+17F,
+                                DisplayPrice = -6.3182856E+16F,
+                                StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                                Quantity = 1261051170,
+                                AvailableQuantity = 719656040,
+                                ItemAttributes = new FeatureMap
+                                {
+                                    CategoricalFeatures =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new FeatureMap.Types.StringList
+                                            {
+                                                Value = { "value60c16320", },
+                                            }
+                                        },
+                                    },
+                                    NumericalFeatures =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new FeatureMap.Types.FloatList
+                                            {
+                                                Value = { -7.291809E+17F, },
+                                            }
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                        ListId = "list_id20e8a34d",
+                        CartId = "cart_idf7834dc4",
+                        PurchaseTransaction = new PurchaseTransaction
+                        {
+                            Id = "id74b70bb8",
+                            Revenue = -7.227312E+16F,
+                            Taxes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    -7.291809E+17F
+                                },
+                            },
+                            Costs =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    -7.291809E+17F
+                                },
+                            },
+                            CurrencyCode = "currency_code7f81e352",
+                        },
+                    },
+                    EventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EventSource = UserEvent.Types.EventSource.Automl,
+                },
             };
             UserEvent expectedResponse = new UserEvent
             {
                 EventType = "event_type1436d01c",
-                UserInfo = new UserInfo(),
-                EventDetail = new EventDetail(),
-                ProductEventDetail = new ProductEventDetail(),
-                EventTime = new wkt::Timestamp(),
+                UserInfo = new UserInfo
+                {
+                    VisitorId = "visitor_id25f1c2bf",
+                    UserId = "user_idd41a70e8",
+                    IpAddress = "ip_address46a72553",
+                    UserAgent = "user_agent707c6483",
+                    DirectUserRequest = true,
+                },
+                EventDetail = new EventDetail
+                {
+                    Uri = "uri3db70593",
+                    PageViewId = "page_view_id77a7ed70",
+                    ExperimentIds =
+                    {
+                        "experiment_ids9777ca1b",
+                    },
+                    RecommendationToken = "recommendation_token2a33f3e2",
+                    EventAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    ReferrerUri = "referrer_uri4d3a0115",
+                },
+                ProductEventDetail = new ProductEventDetail
+                {
+                    SearchQuery = "search_query6ef02091",
+                    PageCategories =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    ProductDetails =
+                    {
+                        new ProductDetail
+                        {
+                            Id = "id74b70bb8",
+                            CurrencyCode = "currency_code7f81e352",
+                            OriginalPrice = 8.0793406E+17F,
+                            DisplayPrice = -6.3182856E+16F,
+                            StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                            Quantity = 1261051170,
+                            AvailableQuantity = 719656040,
+                            ItemAttributes = new FeatureMap
+                            {
+                                CategoricalFeatures =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new FeatureMap.Types.StringList
+                                        {
+                                            Value = { "value60c16320", },
+                                        }
+                                    },
+                                },
+                                NumericalFeatures =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new FeatureMap.Types.FloatList
+                                        {
+                                            Value = { -7.291809E+17F, },
+                                        }
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    ListId = "list_id20e8a34d",
+                    CartId = "cart_idf7834dc4",
+                    PurchaseTransaction = new PurchaseTransaction
+                    {
+                        Id = "id74b70bb8",
+                        Revenue = -7.227312E+16F,
+                        Taxes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                    },
+                },
+                EventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EventSource = UserEvent.Types.EventSource.Automl,
             };
             mockGrpcClient.Setup(x => x.WriteUserEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -172,15 +1362,253 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             WriteUserEventRequest request = new WriteUserEventRequest
             {
                 ParentAsEventStoreName = EventStoreName.FromProjectLocationCatalogEventStore("[PROJECT]", "[LOCATION]", "[CATALOG]", "[EVENT_STORE]"),
-                UserEvent = new UserEvent(),
+                UserEvent = new UserEvent
+                {
+                    EventType = "event_type1436d01c",
+                    UserInfo = new UserInfo
+                    {
+                        VisitorId = "visitor_id25f1c2bf",
+                        UserId = "user_idd41a70e8",
+                        IpAddress = "ip_address46a72553",
+                        UserAgent = "user_agent707c6483",
+                        DirectUserRequest = true,
+                    },
+                    EventDetail = new EventDetail
+                    {
+                        Uri = "uri3db70593",
+                        PageViewId = "page_view_id77a7ed70",
+                        ExperimentIds =
+                        {
+                            "experiment_ids9777ca1b",
+                        },
+                        RecommendationToken = "recommendation_token2a33f3e2",
+                        EventAttributes = new FeatureMap
+                        {
+                            CategoricalFeatures =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FeatureMap.Types.StringList
+                                    {
+                                        Value = { "value60c16320", },
+                                    }
+                                },
+                            },
+                            NumericalFeatures =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    new FeatureMap.Types.FloatList
+                                    {
+                                        Value = { -7.291809E+17F, },
+                                    }
+                                },
+                            },
+                        },
+                        ReferrerUri = "referrer_uri4d3a0115",
+                    },
+                    ProductEventDetail = new ProductEventDetail
+                    {
+                        SearchQuery = "search_query6ef02091",
+                        PageCategories =
+                        {
+                            new CatalogItem.Types.CategoryHierarchy
+                            {
+                                Categories =
+                                {
+                                    "categoriesb4ccb5b0",
+                                },
+                            },
+                        },
+                        ProductDetails =
+                        {
+                            new ProductDetail
+                            {
+                                Id = "id74b70bb8",
+                                CurrencyCode = "currency_code7f81e352",
+                                OriginalPrice = 8.0793406E+17F,
+                                DisplayPrice = -6.3182856E+16F,
+                                StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                                Quantity = 1261051170,
+                                AvailableQuantity = 719656040,
+                                ItemAttributes = new FeatureMap
+                                {
+                                    CategoricalFeatures =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new FeatureMap.Types.StringList
+                                            {
+                                                Value = { "value60c16320", },
+                                            }
+                                        },
+                                    },
+                                    NumericalFeatures =
+                                    {
+                                        {
+                                            "key8a0b6e3c",
+                                            new FeatureMap.Types.FloatList
+                                            {
+                                                Value = { -7.291809E+17F, },
+                                            }
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                        ListId = "list_id20e8a34d",
+                        CartId = "cart_idf7834dc4",
+                        PurchaseTransaction = new PurchaseTransaction
+                        {
+                            Id = "id74b70bb8",
+                            Revenue = -7.227312E+16F,
+                            Taxes =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    -7.291809E+17F
+                                },
+                            },
+                            Costs =
+                            {
+                                {
+                                    "key8a0b6e3c",
+                                    -7.291809E+17F
+                                },
+                            },
+                            CurrencyCode = "currency_code7f81e352",
+                        },
+                    },
+                    EventTime = new wkt::Timestamp
+                    {
+                        Seconds = -2106654494186127752L,
+                        Nanos = 985689544,
+                    },
+                    EventSource = UserEvent.Types.EventSource.Automl,
+                },
             };
             UserEvent expectedResponse = new UserEvent
             {
                 EventType = "event_type1436d01c",
-                UserInfo = new UserInfo(),
-                EventDetail = new EventDetail(),
-                ProductEventDetail = new ProductEventDetail(),
-                EventTime = new wkt::Timestamp(),
+                UserInfo = new UserInfo
+                {
+                    VisitorId = "visitor_id25f1c2bf",
+                    UserId = "user_idd41a70e8",
+                    IpAddress = "ip_address46a72553",
+                    UserAgent = "user_agent707c6483",
+                    DirectUserRequest = true,
+                },
+                EventDetail = new EventDetail
+                {
+                    Uri = "uri3db70593",
+                    PageViewId = "page_view_id77a7ed70",
+                    ExperimentIds =
+                    {
+                        "experiment_ids9777ca1b",
+                    },
+                    RecommendationToken = "recommendation_token2a33f3e2",
+                    EventAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    ReferrerUri = "referrer_uri4d3a0115",
+                },
+                ProductEventDetail = new ProductEventDetail
+                {
+                    SearchQuery = "search_query6ef02091",
+                    PageCategories =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    ProductDetails =
+                    {
+                        new ProductDetail
+                        {
+                            Id = "id74b70bb8",
+                            CurrencyCode = "currency_code7f81e352",
+                            OriginalPrice = 8.0793406E+17F,
+                            DisplayPrice = -6.3182856E+16F,
+                            StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                            Quantity = 1261051170,
+                            AvailableQuantity = 719656040,
+                            ItemAttributes = new FeatureMap
+                            {
+                                CategoricalFeatures =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new FeatureMap.Types.StringList
+                                        {
+                                            Value = { "value60c16320", },
+                                        }
+                                    },
+                                },
+                                NumericalFeatures =
+                                {
+                                    {
+                                        "key8a0b6e3c",
+                                        new FeatureMap.Types.FloatList
+                                        {
+                                            Value = { -7.291809E+17F, },
+                                        }
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    ListId = "list_id20e8a34d",
+                    CartId = "cart_idf7834dc4",
+                    PurchaseTransaction = new PurchaseTransaction
+                    {
+                        Id = "id74b70bb8",
+                        Revenue = -7.227312E+16F,
+                        Taxes =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                    },
+                },
+                EventTime = new wkt::Timestamp
+                {
+                    Seconds = -2106654494186127752L,
+                    Nanos = 985689544,
+                },
                 EventSource = UserEvent.Types.EventSource.Automl,
             };
             mockGrpcClient.Setup(x => x.WriteUserEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UserEvent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -208,7 +1636,14 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             {
                 ContentType = "content_type085be0ea",
                 Data = proto::ByteString.CopyFromUtf8("data387f778d"),
-                Extensions = { new wkt::Any(), },
+                Extensions =
+                {
+                    new wkt::Any
+                    {
+                        TypeUrl = "type_urlfde5623b",
+                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CollectUserEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
@@ -233,7 +1668,14 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             {
                 ContentType = "content_type085be0ea",
                 Data = proto::ByteString.CopyFromUtf8("data387f778d"),
-                Extensions = { new wkt::Any(), },
+                Extensions =
+                {
+                    new wkt::Any
+                    {
+                        TypeUrl = "type_urlfde5623b",
+                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CollectUserEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::HttpBody>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
@@ -260,7 +1702,14 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             {
                 ContentType = "content_type085be0ea",
                 Data = proto::ByteString.CopyFromUtf8("data387f778d"),
-                Extensions = { new wkt::Any(), },
+                Extensions =
+                {
+                    new wkt::Any
+                    {
+                        TypeUrl = "type_urlfde5623b",
+                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CollectUserEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
@@ -285,7 +1734,14 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             {
                 ContentType = "content_type085be0ea",
                 Data = proto::ByteString.CopyFromUtf8("data387f778d"),
-                Extensions = { new wkt::Any(), },
+                Extensions =
+                {
+                    new wkt::Any
+                    {
+                        TypeUrl = "type_urlfde5623b",
+                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CollectUserEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::HttpBody>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
@@ -312,7 +1768,14 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             {
                 ContentType = "content_type085be0ea",
                 Data = proto::ByteString.CopyFromUtf8("data387f778d"),
-                Extensions = { new wkt::Any(), },
+                Extensions =
+                {
+                    new wkt::Any
+                    {
+                        TypeUrl = "type_urlfde5623b",
+                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CollectUserEvent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);
@@ -337,7 +1800,14 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             {
                 ContentType = "content_type085be0ea",
                 Data = proto::ByteString.CopyFromUtf8("data387f778d"),
-                Extensions = { new wkt::Any(), },
+                Extensions =
+                {
+                    new wkt::Any
+                    {
+                        TypeUrl = "type_urlfde5623b",
+                        Value = proto::ByteString.CopyFromUtf8("value60c16320"),
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CollectUserEventAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::HttpBody>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             UserEventServiceClient client = new UserEventServiceClientImpl(mockGrpcClient.Object, null);

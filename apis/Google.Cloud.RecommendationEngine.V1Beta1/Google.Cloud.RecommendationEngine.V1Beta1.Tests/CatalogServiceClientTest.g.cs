@@ -36,22 +36,156 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             CreateCatalogItemRequest request = new CreateCatalogItemRequest
             {
                 ParentAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
-                CatalogItem = new CatalogItem(),
+                CatalogItem = new CatalogItem
+                {
+                    Id = "id74b70bb8",
+                    CategoryHierarchies =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    ItemAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    LanguageCode = "language_code2f6c7160",
+                    Tags = { "tags52c47ad5", },
+                    ItemGroupId = "item_group_id08a4c0f5",
+                    ProductMetadata = new ProductCatalogItem
+                    {
+                        ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                        {
+                            DisplayPrice = -6.3182856E+16F,
+                            OriginalPrice = 8.0793406E+17F,
+                        },
+                        PriceRange = new ProductCatalogItem.Types.PriceRange
+                        {
+                            Min = -3.8618023E+17F,
+                            Max = 1.0232447E+18F,
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                        StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                        AvailableQuantity = -5728584605105843096L,
+                        CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                        Images =
+                        {
+                            new Image
+                            {
+                                Uri = "uri3db70593",
+                                Height = 669136308,
+                                Width = -1507414294,
+                            },
+                        },
+                    },
+                },
             };
             CatalogItem expectedResponse = new CatalogItem
             {
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -68,22 +202,156 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             CreateCatalogItemRequest request = new CreateCatalogItemRequest
             {
                 ParentAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
-                CatalogItem = new CatalogItem(),
+                CatalogItem = new CatalogItem
+                {
+                    Id = "id74b70bb8",
+                    CategoryHierarchies =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    ItemAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    LanguageCode = "language_code2f6c7160",
+                    Tags = { "tags52c47ad5", },
+                    ItemGroupId = "item_group_id08a4c0f5",
+                    ProductMetadata = new ProductCatalogItem
+                    {
+                        ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                        {
+                            DisplayPrice = -6.3182856E+16F,
+                            OriginalPrice = 8.0793406E+17F,
+                        },
+                        PriceRange = new ProductCatalogItem.Types.PriceRange
+                        {
+                            Min = -3.8618023E+17F,
+                            Max = 1.0232447E+18F,
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                        StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                        AvailableQuantity = -5728584605105843096L,
+                        CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                        Images =
+                        {
+                            new Image
+                            {
+                                Uri = "uri3db70593",
+                                Height = 669136308,
+                                Width = -1507414294,
+                            },
+                        },
+                    },
+                },
             };
             CatalogItem expectedResponse = new CatalogItem
             {
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -102,22 +370,156 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             CreateCatalogItemRequest request = new CreateCatalogItemRequest
             {
                 ParentAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
-                CatalogItem = new CatalogItem(),
+                CatalogItem = new CatalogItem
+                {
+                    Id = "id74b70bb8",
+                    CategoryHierarchies =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    ItemAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    LanguageCode = "language_code2f6c7160",
+                    Tags = { "tags52c47ad5", },
+                    ItemGroupId = "item_group_id08a4c0f5",
+                    ProductMetadata = new ProductCatalogItem
+                    {
+                        ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                        {
+                            DisplayPrice = -6.3182856E+16F,
+                            OriginalPrice = 8.0793406E+17F,
+                        },
+                        PriceRange = new ProductCatalogItem.Types.PriceRange
+                        {
+                            Min = -3.8618023E+17F,
+                            Max = 1.0232447E+18F,
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                        StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                        AvailableQuantity = -5728584605105843096L,
+                        CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                        Images =
+                        {
+                            new Image
+                            {
+                                Uri = "uri3db70593",
+                                Height = 669136308,
+                                Width = -1507414294,
+                            },
+                        },
+                    },
+                },
             };
             CatalogItem expectedResponse = new CatalogItem
             {
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -134,22 +536,156 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             CreateCatalogItemRequest request = new CreateCatalogItemRequest
             {
                 ParentAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
-                CatalogItem = new CatalogItem(),
+                CatalogItem = new CatalogItem
+                {
+                    Id = "id74b70bb8",
+                    CategoryHierarchies =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    ItemAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    LanguageCode = "language_code2f6c7160",
+                    Tags = { "tags52c47ad5", },
+                    ItemGroupId = "item_group_id08a4c0f5",
+                    ProductMetadata = new ProductCatalogItem
+                    {
+                        ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                        {
+                            DisplayPrice = -6.3182856E+16F,
+                            OriginalPrice = 8.0793406E+17F,
+                        },
+                        PriceRange = new ProductCatalogItem.Types.PriceRange
+                        {
+                            Min = -3.8618023E+17F,
+                            Max = 1.0232447E+18F,
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                        StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                        AvailableQuantity = -5728584605105843096L,
+                        CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                        Images =
+                        {
+                            new Image
+                            {
+                                Uri = "uri3db70593",
+                                Height = 669136308,
+                                Width = -1507414294,
+                            },
+                        },
+                    },
+                },
             };
             CatalogItem expectedResponse = new CatalogItem
             {
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -168,22 +704,156 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             CreateCatalogItemRequest request = new CreateCatalogItemRequest
             {
                 ParentAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
-                CatalogItem = new CatalogItem(),
+                CatalogItem = new CatalogItem
+                {
+                    Id = "id74b70bb8",
+                    CategoryHierarchies =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    ItemAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    LanguageCode = "language_code2f6c7160",
+                    Tags = { "tags52c47ad5", },
+                    ItemGroupId = "item_group_id08a4c0f5",
+                    ProductMetadata = new ProductCatalogItem
+                    {
+                        ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                        {
+                            DisplayPrice = -6.3182856E+16F,
+                            OriginalPrice = 8.0793406E+17F,
+                        },
+                        PriceRange = new ProductCatalogItem.Types.PriceRange
+                        {
+                            Min = -3.8618023E+17F,
+                            Max = 1.0232447E+18F,
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                        StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                        AvailableQuantity = -5728584605105843096L,
+                        CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                        Images =
+                        {
+                            new Image
+                            {
+                                Uri = "uri3db70593",
+                                Height = 669136308,
+                                Width = -1507414294,
+                            },
+                        },
+                    },
+                },
             };
             CatalogItem expectedResponse = new CatalogItem
             {
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -200,22 +870,156 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             CreateCatalogItemRequest request = new CreateCatalogItemRequest
             {
                 ParentAsCatalogName = CatalogName.FromProjectLocationCatalog("[PROJECT]", "[LOCATION]", "[CATALOG]"),
-                CatalogItem = new CatalogItem(),
+                CatalogItem = new CatalogItem
+                {
+                    Id = "id74b70bb8",
+                    CategoryHierarchies =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    ItemAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    LanguageCode = "language_code2f6c7160",
+                    Tags = { "tags52c47ad5", },
+                    ItemGroupId = "item_group_id08a4c0f5",
+                    ProductMetadata = new ProductCatalogItem
+                    {
+                        ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                        {
+                            DisplayPrice = -6.3182856E+16F,
+                            OriginalPrice = 8.0793406E+17F,
+                        },
+                        PriceRange = new ProductCatalogItem.Types.PriceRange
+                        {
+                            Min = -3.8618023E+17F,
+                            Max = 1.0232447E+18F,
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                        StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                        AvailableQuantity = -5728584605105843096L,
+                        CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                        Images =
+                        {
+                            new Image
+                            {
+                                Uri = "uri3db70593",
+                                Height = 669136308,
+                                Width = -1507414294,
+                            },
+                        },
+                    },
+                },
             };
             CatalogItem expectedResponse = new CatalogItem
             {
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -240,15 +1044,75 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -271,15 +1135,75 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -304,15 +1228,75 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -335,15 +1319,75 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -368,15 +1412,75 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -399,15 +1503,75 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -426,23 +1590,160 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             UpdateCatalogItemRequest request = new UpdateCatalogItemRequest
             {
                 CatalogItemPathName = CatalogItemPathName.FromProjectLocationCatalogCatalogItemPath("[PROJECT]", "[LOCATION]", "[CATALOG]", "[CATALOG_ITEM_PATH]"),
-                CatalogItem = new CatalogItem(),
-                UpdateMask = new wkt::FieldMask(),
+                CatalogItem = new CatalogItem
+                {
+                    Id = "id74b70bb8",
+                    CategoryHierarchies =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    ItemAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    LanguageCode = "language_code2f6c7160",
+                    Tags = { "tags52c47ad5", },
+                    ItemGroupId = "item_group_id08a4c0f5",
+                    ProductMetadata = new ProductCatalogItem
+                    {
+                        ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                        {
+                            DisplayPrice = -6.3182856E+16F,
+                            OriginalPrice = 8.0793406E+17F,
+                        },
+                        PriceRange = new ProductCatalogItem.Types.PriceRange
+                        {
+                            Min = -3.8618023E+17F,
+                            Max = 1.0232447E+18F,
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                        StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                        AvailableQuantity = -5728584605105843096L,
+                        CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                        Images =
+                        {
+                            new Image
+                            {
+                                Uri = "uri3db70593",
+                                Height = 669136308,
+                                Width = -1507414294,
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CatalogItem expectedResponse = new CatalogItem
             {
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -459,23 +1760,160 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             UpdateCatalogItemRequest request = new UpdateCatalogItemRequest
             {
                 CatalogItemPathName = CatalogItemPathName.FromProjectLocationCatalogCatalogItemPath("[PROJECT]", "[LOCATION]", "[CATALOG]", "[CATALOG_ITEM_PATH]"),
-                CatalogItem = new CatalogItem(),
-                UpdateMask = new wkt::FieldMask(),
+                CatalogItem = new CatalogItem
+                {
+                    Id = "id74b70bb8",
+                    CategoryHierarchies =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    ItemAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    LanguageCode = "language_code2f6c7160",
+                    Tags = { "tags52c47ad5", },
+                    ItemGroupId = "item_group_id08a4c0f5",
+                    ProductMetadata = new ProductCatalogItem
+                    {
+                        ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                        {
+                            DisplayPrice = -6.3182856E+16F,
+                            OriginalPrice = 8.0793406E+17F,
+                        },
+                        PriceRange = new ProductCatalogItem.Types.PriceRange
+                        {
+                            Min = -3.8618023E+17F,
+                            Max = 1.0232447E+18F,
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                        StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                        AvailableQuantity = -5728584605105843096L,
+                        CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                        Images =
+                        {
+                            new Image
+                            {
+                                Uri = "uri3db70593",
+                                Height = 669136308,
+                                Width = -1507414294,
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CatalogItem expectedResponse = new CatalogItem
             {
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -494,23 +1932,160 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             UpdateCatalogItemRequest request = new UpdateCatalogItemRequest
             {
                 CatalogItemPathName = CatalogItemPathName.FromProjectLocationCatalogCatalogItemPath("[PROJECT]", "[LOCATION]", "[CATALOG]", "[CATALOG_ITEM_PATH]"),
-                CatalogItem = new CatalogItem(),
-                UpdateMask = new wkt::FieldMask(),
+                CatalogItem = new CatalogItem
+                {
+                    Id = "id74b70bb8",
+                    CategoryHierarchies =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    ItemAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    LanguageCode = "language_code2f6c7160",
+                    Tags = { "tags52c47ad5", },
+                    ItemGroupId = "item_group_id08a4c0f5",
+                    ProductMetadata = new ProductCatalogItem
+                    {
+                        ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                        {
+                            DisplayPrice = -6.3182856E+16F,
+                            OriginalPrice = 8.0793406E+17F,
+                        },
+                        PriceRange = new ProductCatalogItem.Types.PriceRange
+                        {
+                            Min = -3.8618023E+17F,
+                            Max = 1.0232447E+18F,
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                        StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                        AvailableQuantity = -5728584605105843096L,
+                        CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                        Images =
+                        {
+                            new Image
+                            {
+                                Uri = "uri3db70593",
+                                Height = 669136308,
+                                Width = -1507414294,
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CatalogItem expectedResponse = new CatalogItem
             {
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -527,23 +2102,160 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             UpdateCatalogItemRequest request = new UpdateCatalogItemRequest
             {
                 CatalogItemPathName = CatalogItemPathName.FromProjectLocationCatalogCatalogItemPath("[PROJECT]", "[LOCATION]", "[CATALOG]", "[CATALOG_ITEM_PATH]"),
-                CatalogItem = new CatalogItem(),
-                UpdateMask = new wkt::FieldMask(),
+                CatalogItem = new CatalogItem
+                {
+                    Id = "id74b70bb8",
+                    CategoryHierarchies =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    ItemAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    LanguageCode = "language_code2f6c7160",
+                    Tags = { "tags52c47ad5", },
+                    ItemGroupId = "item_group_id08a4c0f5",
+                    ProductMetadata = new ProductCatalogItem
+                    {
+                        ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                        {
+                            DisplayPrice = -6.3182856E+16F,
+                            OriginalPrice = 8.0793406E+17F,
+                        },
+                        PriceRange = new ProductCatalogItem.Types.PriceRange
+                        {
+                            Min = -3.8618023E+17F,
+                            Max = 1.0232447E+18F,
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                        StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                        AvailableQuantity = -5728584605105843096L,
+                        CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                        Images =
+                        {
+                            new Image
+                            {
+                                Uri = "uri3db70593",
+                                Height = 669136308,
+                                Width = -1507414294,
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CatalogItem expectedResponse = new CatalogItem
             {
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -562,23 +2274,160 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             UpdateCatalogItemRequest request = new UpdateCatalogItemRequest
             {
                 CatalogItemPathName = CatalogItemPathName.FromProjectLocationCatalogCatalogItemPath("[PROJECT]", "[LOCATION]", "[CATALOG]", "[CATALOG_ITEM_PATH]"),
-                CatalogItem = new CatalogItem(),
-                UpdateMask = new wkt::FieldMask(),
+                CatalogItem = new CatalogItem
+                {
+                    Id = "id74b70bb8",
+                    CategoryHierarchies =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    ItemAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    LanguageCode = "language_code2f6c7160",
+                    Tags = { "tags52c47ad5", },
+                    ItemGroupId = "item_group_id08a4c0f5",
+                    ProductMetadata = new ProductCatalogItem
+                    {
+                        ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                        {
+                            DisplayPrice = -6.3182856E+16F,
+                            OriginalPrice = 8.0793406E+17F,
+                        },
+                        PriceRange = new ProductCatalogItem.Types.PriceRange
+                        {
+                            Min = -3.8618023E+17F,
+                            Max = 1.0232447E+18F,
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                        StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                        AvailableQuantity = -5728584605105843096L,
+                        CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                        Images =
+                        {
+                            new Image
+                            {
+                                Uri = "uri3db70593",
+                                Height = 669136308,
+                                Width = -1507414294,
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CatalogItem expectedResponse = new CatalogItem
             {
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCatalogItem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
@@ -595,23 +2444,160 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Tests
             UpdateCatalogItemRequest request = new UpdateCatalogItemRequest
             {
                 CatalogItemPathName = CatalogItemPathName.FromProjectLocationCatalogCatalogItemPath("[PROJECT]", "[LOCATION]", "[CATALOG]", "[CATALOG_ITEM_PATH]"),
-                CatalogItem = new CatalogItem(),
-                UpdateMask = new wkt::FieldMask(),
+                CatalogItem = new CatalogItem
+                {
+                    Id = "id74b70bb8",
+                    CategoryHierarchies =
+                    {
+                        new CatalogItem.Types.CategoryHierarchy
+                        {
+                            Categories =
+                            {
+                                "categoriesb4ccb5b0",
+                            },
+                        },
+                    },
+                    Title = "title17dbd3d5",
+                    Description = "description2cf9da67",
+                    ItemAttributes = new FeatureMap
+                    {
+                        CategoricalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.StringList
+                                {
+                                    Value = { "value60c16320", },
+                                }
+                            },
+                        },
+                        NumericalFeatures =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                new FeatureMap.Types.FloatList
+                                {
+                                    Value = { -7.291809E+17F, },
+                                }
+                            },
+                        },
+                    },
+                    LanguageCode = "language_code2f6c7160",
+                    Tags = { "tags52c47ad5", },
+                    ItemGroupId = "item_group_id08a4c0f5",
+                    ProductMetadata = new ProductCatalogItem
+                    {
+                        ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                        {
+                            DisplayPrice = -6.3182856E+16F,
+                            OriginalPrice = 8.0793406E+17F,
+                        },
+                        PriceRange = new ProductCatalogItem.Types.PriceRange
+                        {
+                            Min = -3.8618023E+17F,
+                            Max = 1.0232447E+18F,
+                        },
+                        Costs =
+                        {
+                            {
+                                "key8a0b6e3c",
+                                -7.291809E+17F
+                            },
+                        },
+                        CurrencyCode = "currency_code7f81e352",
+                        StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                        AvailableQuantity = -5728584605105843096L,
+                        CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                        Images =
+                        {
+                            new Image
+                            {
+                                Uri = "uri3db70593",
+                                Height = 669136308,
+                                Width = -1507414294,
+                            },
+                        },
+                    },
+                },
+                UpdateMask = new wkt::FieldMask
+                {
+                    Paths = { "paths012c8713", },
+                },
             };
             CatalogItem expectedResponse = new CatalogItem
             {
                 Id = "id74b70bb8",
                 CategoryHierarchies =
                 {
-                    new CatalogItem.Types.CategoryHierarchy(),
+                    new CatalogItem.Types.CategoryHierarchy
+                    {
+                        Categories =
+                        {
+                            "categoriesb4ccb5b0",
+                        },
+                    },
                 },
                 Title = "title17dbd3d5",
                 Description = "description2cf9da67",
-                ItemAttributes = new FeatureMap(),
+                ItemAttributes = new FeatureMap
+                {
+                    CategoricalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.StringList
+                            {
+                                Value = { "value60c16320", },
+                            }
+                        },
+                    },
+                    NumericalFeatures =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            new FeatureMap.Types.FloatList
+                            {
+                                Value = { -7.291809E+17F, },
+                            }
+                        },
+                    },
+                },
                 LanguageCode = "language_code2f6c7160",
                 Tags = { "tags52c47ad5", },
                 ItemGroupId = "item_group_id08a4c0f5",
-                ProductMetadata = new ProductCatalogItem(),
+                ProductMetadata = new ProductCatalogItem
+                {
+                    ExactPrice = new ProductCatalogItem.Types.ExactPrice
+                    {
+                        DisplayPrice = -6.3182856E+16F,
+                        OriginalPrice = 8.0793406E+17F,
+                    },
+                    PriceRange = new ProductCatalogItem.Types.PriceRange
+                    {
+                        Min = -3.8618023E+17F,
+                        Max = 1.0232447E+18F,
+                    },
+                    Costs =
+                    {
+                        {
+                            "key8a0b6e3c",
+                            -7.291809E+17F
+                        },
+                    },
+                    CurrencyCode = "currency_code7f81e352",
+                    StockState = ProductCatalogItem.Types.StockState.OutOfStock,
+                    AvailableQuantity = -5728584605105843096L,
+                    CanonicalProductUri = "canonical_product_uri41ad3ef3",
+                    Images =
+                    {
+                        new Image
+                        {
+                            Uri = "uri3db70593",
+                            Height = 669136308,
+                            Width = -1507414294,
+                        },
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateCatalogItemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CatalogItem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CatalogServiceClient client = new CatalogServiceClientImpl(mockGrpcClient.Object, null);
