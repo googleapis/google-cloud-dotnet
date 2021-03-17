@@ -807,6 +807,25 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Channel.V1"
     },
     {
+      "ServiceDirectory": "google/cloud/clouddms/v1",
+      "Name": "datamigration.googleapis.com",
+      "Title": "Database Migration API",
+      "Description": "Manage Cloud Database Migration Service resources on Google Cloud Platform.",
+      "ServiceConfigFile": "google/cloud/clouddms/v1/datamigration_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.clouddms.v1",
+      "PackageFromProtos": "google.cloud.clouddms.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/clouddms/v1",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Clouddms.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/datacatalog/v1",
       "Name": "datacatalog.googleapis.com",
       "Title": "Google Cloud Data Catalog API",
