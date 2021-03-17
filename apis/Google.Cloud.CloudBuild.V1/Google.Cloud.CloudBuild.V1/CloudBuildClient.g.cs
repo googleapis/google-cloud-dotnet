@@ -60,6 +60,7 @@ namespace Google.Cloud.CloudBuild.V1
             UpdateBuildTriggerSettings = existing.UpdateBuildTriggerSettings;
             RunBuildTriggerSettings = existing.RunBuildTriggerSettings;
             RunBuildTriggerOperationsSettings = existing.RunBuildTriggerOperationsSettings.Clone();
+            ReceiveTriggerWebhookSettings = existing.ReceiveTriggerWebhookSettings;
             CreateWorkerPoolSettings = existing.CreateWorkerPoolSettings;
             GetWorkerPoolSettings = existing.GetWorkerPoolSettings;
             DeleteWorkerPoolSettings = existing.DeleteWorkerPoolSettings;
@@ -270,6 +271,18 @@ namespace Google.Cloud.CloudBuild.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudBuildClient.ReceiveTriggerWebhook</c> and <c>CloudBuildClient.ReceiveTriggerWebhookAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReceiveTriggerWebhookSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1634,7 +1647,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// Required. ID of the trigger.
         /// </param>
         /// <param name="source">
-        /// Required. Source to build against this trigger.
+        /// Source to build against this trigger.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1643,7 +1656,7 @@ namespace Google.Cloud.CloudBuild.V1
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                 TriggerId = gax::GaxPreconditions.CheckNotNullOrEmpty(triggerId, nameof(triggerId)),
-                Source = gax::GaxPreconditions.CheckNotNull(source, nameof(source)),
+                Source = source,
             }, callSettings);
 
         /// <summary>
@@ -1656,7 +1669,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// Required. ID of the trigger.
         /// </param>
         /// <param name="source">
-        /// Required. Source to build against this trigger.
+        /// Source to build against this trigger.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1665,7 +1678,7 @@ namespace Google.Cloud.CloudBuild.V1
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                 TriggerId = gax::GaxPreconditions.CheckNotNullOrEmpty(triggerId, nameof(triggerId)),
-                Source = gax::GaxPreconditions.CheckNotNull(source, nameof(source)),
+                Source = source,
             }, callSettings);
 
         /// <summary>
@@ -1678,12 +1691,42 @@ namespace Google.Cloud.CloudBuild.V1
         /// Required. ID of the trigger.
         /// </param>
         /// <param name="source">
-        /// Required. Source to build against this trigger.
+        /// Source to build against this trigger.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Build, BuildOperationMetadata>> RunBuildTriggerAsync(string projectId, string triggerId, RepoSource source, st::CancellationToken cancellationToken) =>
             RunBuildTriggerAsync(projectId, triggerId, source, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// ReceiveTriggerWebhook [Experimental] is called when the API receives a
+        /// webhook request targeted at a specific trigger.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReceiveTriggerWebhookResponse ReceiveTriggerWebhook(ReceiveTriggerWebhookRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// ReceiveTriggerWebhook [Experimental] is called when the API receives a
+        /// webhook request targeted at a specific trigger.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReceiveTriggerWebhookResponse> ReceiveTriggerWebhookAsync(ReceiveTriggerWebhookRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// ReceiveTriggerWebhook [Experimental] is called when the API receives a
+        /// webhook request targeted at a specific trigger.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReceiveTriggerWebhookResponse> ReceiveTriggerWebhookAsync(ReceiveTriggerWebhookRequest request, st::CancellationToken cancellationToken) =>
+            ReceiveTriggerWebhookAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a `WorkerPool` to run the builds, and returns the new worker pool.
@@ -1886,6 +1929,8 @@ namespace Google.Cloud.CloudBuild.V1
 
         private readonly gaxgrpc::ApiCall<RunBuildTriggerRequest, lro::Operation> _callRunBuildTrigger;
 
+        private readonly gaxgrpc::ApiCall<ReceiveTriggerWebhookRequest, ReceiveTriggerWebhookResponse> _callReceiveTriggerWebhook;
+
         private readonly gaxgrpc::ApiCall<CreateWorkerPoolRequest, WorkerPool> _callCreateWorkerPool;
 
         private readonly gaxgrpc::ApiCall<GetWorkerPoolRequest, WorkerPool> _callGetWorkerPool;
@@ -1942,6 +1987,9 @@ namespace Google.Cloud.CloudBuild.V1
             _callRunBuildTrigger = clientHelper.BuildApiCall<RunBuildTriggerRequest, lro::Operation>(grpcClient.RunBuildTriggerAsync, grpcClient.RunBuildTrigger, effectiveSettings.RunBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger_id", request => request.TriggerId);
             Modify_ApiCall(ref _callRunBuildTrigger);
             Modify_RunBuildTriggerApiCall(ref _callRunBuildTrigger);
+            _callReceiveTriggerWebhook = clientHelper.BuildApiCall<ReceiveTriggerWebhookRequest, ReceiveTriggerWebhookResponse>(grpcClient.ReceiveTriggerWebhookAsync, grpcClient.ReceiveTriggerWebhook, effectiveSettings.ReceiveTriggerWebhookSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger", request => request.Trigger);
+            Modify_ApiCall(ref _callReceiveTriggerWebhook);
+            Modify_ReceiveTriggerWebhookApiCall(ref _callReceiveTriggerWebhook);
             _callCreateWorkerPool = clientHelper.BuildApiCall<CreateWorkerPoolRequest, WorkerPool>(grpcClient.CreateWorkerPoolAsync, grpcClient.CreateWorkerPool, effectiveSettings.CreateWorkerPoolSettings);
             Modify_ApiCall(ref _callCreateWorkerPool);
             Modify_CreateWorkerPoolApiCall(ref _callCreateWorkerPool);
@@ -1984,6 +2032,8 @@ namespace Google.Cloud.CloudBuild.V1
 
         partial void Modify_RunBuildTriggerApiCall(ref gaxgrpc::ApiCall<RunBuildTriggerRequest, lro::Operation> call);
 
+        partial void Modify_ReceiveTriggerWebhookApiCall(ref gaxgrpc::ApiCall<ReceiveTriggerWebhookRequest, ReceiveTriggerWebhookResponse> call);
+
         partial void Modify_CreateWorkerPoolApiCall(ref gaxgrpc::ApiCall<CreateWorkerPoolRequest, WorkerPool> call);
 
         partial void Modify_GetWorkerPoolApiCall(ref gaxgrpc::ApiCall<GetWorkerPoolRequest, WorkerPool> call);
@@ -2020,6 +2070,8 @@ namespace Google.Cloud.CloudBuild.V1
         partial void Modify_UpdateBuildTriggerRequest(ref UpdateBuildTriggerRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RunBuildTriggerRequest(ref RunBuildTriggerRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ReceiveTriggerWebhookRequest(ref ReceiveTriggerWebhookRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateWorkerPoolRequest(ref CreateWorkerPoolRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2394,6 +2446,32 @@ namespace Google.Cloud.CloudBuild.V1
         {
             Modify_RunBuildTriggerRequest(ref request, ref callSettings);
             return new lro::Operation<Build, BuildOperationMetadata>(await _callRunBuildTrigger.Async(request, callSettings).ConfigureAwait(false), RunBuildTriggerOperationsClient);
+        }
+
+        /// <summary>
+        /// ReceiveTriggerWebhook [Experimental] is called when the API receives a
+        /// webhook request targeted at a specific trigger.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReceiveTriggerWebhookResponse ReceiveTriggerWebhook(ReceiveTriggerWebhookRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReceiveTriggerWebhookRequest(ref request, ref callSettings);
+            return _callReceiveTriggerWebhook.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// ReceiveTriggerWebhook [Experimental] is called when the API receives a
+        /// webhook request targeted at a specific trigger.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReceiveTriggerWebhookResponse> ReceiveTriggerWebhookAsync(ReceiveTriggerWebhookRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReceiveTriggerWebhookRequest(ref request, ref callSettings);
+            return _callReceiveTriggerWebhook.Async(request, callSettings);
         }
 
         /// <summary>

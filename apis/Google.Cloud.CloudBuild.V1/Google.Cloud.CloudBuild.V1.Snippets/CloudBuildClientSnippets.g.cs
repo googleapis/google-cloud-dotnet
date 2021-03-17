@@ -16,6 +16,7 @@
 
 namespace Google.Cloud.CloudBuild.V1.Snippets
 {
+    using Google.Api;
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.LongRunning;
@@ -1179,6 +1180,45 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
                 // If it has completed, then access the result
                 Build retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReceiveTriggerWebhook</summary>
+        public void ReceiveTriggerWebhookRequestObject()
+        {
+            // Snippet: ReceiveTriggerWebhook(ReceiveTriggerWebhookRequest, CallSettings)
+            // Create client
+            CloudBuildClient cloudBuildClient = CloudBuildClient.Create();
+            // Initialize request argument(s)
+            ReceiveTriggerWebhookRequest request = new ReceiveTriggerWebhookRequest
+            {
+                Body = new HttpBody(),
+                ProjectId = "",
+                Trigger = "",
+                Secret = "",
+            };
+            // Make the request
+            ReceiveTriggerWebhookResponse response = cloudBuildClient.ReceiveTriggerWebhook(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReceiveTriggerWebhookAsync</summary>
+        public async Task ReceiveTriggerWebhookRequestObjectAsync()
+        {
+            // Snippet: ReceiveTriggerWebhookAsync(ReceiveTriggerWebhookRequest, CallSettings)
+            // Additional: ReceiveTriggerWebhookAsync(ReceiveTriggerWebhookRequest, CancellationToken)
+            // Create client
+            CloudBuildClient cloudBuildClient = await CloudBuildClient.CreateAsync();
+            // Initialize request argument(s)
+            ReceiveTriggerWebhookRequest request = new ReceiveTriggerWebhookRequest
+            {
+                Body = new HttpBody(),
+                ProjectId = "",
+                Trigger = "",
+                Secret = "",
+            };
+            // Make the request
+            ReceiveTriggerWebhookResponse response = await cloudBuildClient.ReceiveTriggerWebhookAsync(request);
             // End snippet
         }
 

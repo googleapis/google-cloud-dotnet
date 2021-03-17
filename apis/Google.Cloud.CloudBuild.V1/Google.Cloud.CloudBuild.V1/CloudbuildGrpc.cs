@@ -3,7 +3,7 @@
 //     source: google/devtools/cloudbuild/v1/cloudbuild.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -54,6 +54,8 @@ namespace Google.Cloud.CloudBuild.V1 {
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest> __Marshaller_google_devtools_cloudbuild_v1_UpdateBuildTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.RunBuildTriggerRequest> __Marshaller_google_devtools_cloudbuild_v1_RunBuildTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.CloudBuild.V1.RunBuildTriggerRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest> __Marshaller_google_devtools_cloudbuild_v1_ReceiveTriggerWebhookRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse> __Marshaller_google_devtools_cloudbuild_v1_ReceiveTriggerWebhookResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest> __Marshaller_google_devtools_cloudbuild_v1_CreateWorkerPoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.WorkerPool> __Marshaller_google_devtools_cloudbuild_v1_WorkerPool = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.CloudBuild.V1.WorkerPool.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest> __Marshaller_google_devtools_cloudbuild_v1_GetWorkerPoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest.Parser.ParseFrom);
@@ -138,6 +140,13 @@ namespace Google.Cloud.CloudBuild.V1 {
         "RunBuildTrigger",
         __Marshaller_google_devtools_cloudbuild_v1_RunBuildTriggerRequest,
         __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest, global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse> __Method_ReceiveTriggerWebhook = new grpc::Method<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest, global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ReceiveTriggerWebhook",
+        __Marshaller_google_devtools_cloudbuild_v1_ReceiveTriggerWebhookRequest,
+        __Marshaller_google_devtools_cloudbuild_v1_ReceiveTriggerWebhookResponse);
 
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest, global::Google.Cloud.CloudBuild.V1.WorkerPool> __Method_CreateWorkerPool = new grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest, global::Google.Cloud.CloudBuild.V1.WorkerPool>(
         grpc::MethodType.Unary,
@@ -347,6 +356,18 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RunBuildTrigger(global::Google.Cloud.CloudBuild.V1.RunBuildTriggerRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// ReceiveTriggerWebhook [Experimental] is called when the API receives a
+      /// webhook request targeted at a specific trigger.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse> ReceiveTriggerWebhook(global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1110,6 +1131,54 @@ namespace Google.Cloud.CloudBuild.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_RunBuildTrigger, null, options, request);
       }
       /// <summary>
+      /// ReceiveTriggerWebhook [Experimental] is called when the API receives a
+      /// webhook request targeted at a specific trigger.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse ReceiveTriggerWebhook(global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReceiveTriggerWebhook(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// ReceiveTriggerWebhook [Experimental] is called when the API receives a
+      /// webhook request targeted at a specific trigger.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse ReceiveTriggerWebhook(global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ReceiveTriggerWebhook, null, options, request);
+      }
+      /// <summary>
+      /// ReceiveTriggerWebhook [Experimental] is called when the API receives a
+      /// webhook request targeted at a specific trigger.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse> ReceiveTriggerWebhookAsync(global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReceiveTriggerWebhookAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// ReceiveTriggerWebhook [Experimental] is called when the API receives a
+      /// webhook request targeted at a specific trigger.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse> ReceiveTriggerWebhookAsync(global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ReceiveTriggerWebhook, null, options, request);
+      }
+      /// <summary>
       /// Creates a `WorkerPool` to run the builds, and returns the new worker pool.
       ///
       /// This API is experimental.
@@ -1392,6 +1461,7 @@ namespace Google.Cloud.CloudBuild.V1 {
           .AddMethod(__Method_DeleteBuildTrigger, serviceImpl.DeleteBuildTrigger)
           .AddMethod(__Method_UpdateBuildTrigger, serviceImpl.UpdateBuildTrigger)
           .AddMethod(__Method_RunBuildTrigger, serviceImpl.RunBuildTrigger)
+          .AddMethod(__Method_ReceiveTriggerWebhook, serviceImpl.ReceiveTriggerWebhook)
           .AddMethod(__Method_CreateWorkerPool, serviceImpl.CreateWorkerPool)
           .AddMethod(__Method_GetWorkerPool, serviceImpl.GetWorkerPool)
           .AddMethod(__Method_DeleteWorkerPool, serviceImpl.DeleteWorkerPool)
@@ -1416,6 +1486,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       serviceBinder.AddMethod(__Method_DeleteBuildTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.DeleteBuildTriggerRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteBuildTrigger));
       serviceBinder.AddMethod(__Method_UpdateBuildTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest, global::Google.Cloud.CloudBuild.V1.BuildTrigger>(serviceImpl.UpdateBuildTrigger));
       serviceBinder.AddMethod(__Method_RunBuildTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.RunBuildTriggerRequest, global::Google.LongRunning.Operation>(serviceImpl.RunBuildTrigger));
+      serviceBinder.AddMethod(__Method_ReceiveTriggerWebhook, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest, global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse>(serviceImpl.ReceiveTriggerWebhook));
       serviceBinder.AddMethod(__Method_CreateWorkerPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest, global::Google.Cloud.CloudBuild.V1.WorkerPool>(serviceImpl.CreateWorkerPool));
       serviceBinder.AddMethod(__Method_GetWorkerPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest, global::Google.Cloud.CloudBuild.V1.WorkerPool>(serviceImpl.GetWorkerPool));
       serviceBinder.AddMethod(__Method_DeleteWorkerPool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteWorkerPool));
