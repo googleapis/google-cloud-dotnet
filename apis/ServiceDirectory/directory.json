@@ -2413,6 +2413,23 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Vision.V1P4Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/vpcaccess/v1",
+      "Name": "vpcaccess.googleapis.com",
+      "Title": "Serverless VPC Access API",
+      "Description": "API for managing VPC access connectors.",
+      "ServiceConfigFile": "google/cloud/vpcaccess/v1/vpcaccess_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.vpcaccess.v1",
+      "PackageFromProtos": "google.cloud.vpcaccess.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Vpcaccess.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/webrisk/v1",
       "Name": "webrisk.googleapis.com",
       "Title": "Web Risk API",
