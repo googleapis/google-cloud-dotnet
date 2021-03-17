@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+using ga = Google.Api;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -78,6 +79,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                AvailableSecrets = new Secrets(),
             };
             mockGrpcClient.Setup(x => x.GetBuild(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -136,6 +138,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                AvailableSecrets = new Secrets(),
             };
             mockGrpcClient.Setup(x => x.GetBuildAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Build>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -195,6 +198,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                AvailableSecrets = new Secrets(),
             };
             mockGrpcClient.Setup(x => x.GetBuild(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -252,6 +256,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                AvailableSecrets = new Secrets(),
             };
             mockGrpcClient.Setup(x => x.GetBuildAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Build>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -312,6 +317,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                AvailableSecrets = new Secrets(),
             };
             mockGrpcClient.Setup(x => x.CancelBuild(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -370,6 +376,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                AvailableSecrets = new Secrets(),
             };
             mockGrpcClient.Setup(x => x.CancelBuildAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Build>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -429,6 +436,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                AvailableSecrets = new Secrets(),
             };
             mockGrpcClient.Setup(x => x.CancelBuild(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -486,6 +494,7 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 QueueTtl = new wkt::Duration(),
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
                 BuildName = BuildName.FromProjectBuild("[PROJECT]", "[BUILD]"),
+                AvailableSecrets = new Secrets(),
             };
             mockGrpcClient.Setup(x => x.CancelBuildAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Build>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1118,6 +1127,48 @@ namespace Google.Cloud.CloudBuild.V1.Tests
             BuildTrigger responseCallSettings = await client.UpdateBuildTriggerAsync(request.ProjectId, request.TriggerId, request.Trigger, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BuildTrigger responseCancellationToken = await client.UpdateBuildTriggerAsync(request.ProjectId, request.TriggerId, request.Trigger, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ReceiveTriggerWebhookRequestObject()
+        {
+            moq::Mock<CloudBuild.CloudBuildClient> mockGrpcClient = new moq::Mock<CloudBuild.CloudBuildClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ReceiveTriggerWebhookRequest request = new ReceiveTriggerWebhookRequest
+            {
+                Body = new ga::HttpBody(),
+                ProjectId = "project_id43ad98b0",
+                Trigger = "trigger098ed0c7",
+                Secret = "secret9422be5e",
+            };
+            ReceiveTriggerWebhookResponse expectedResponse = new ReceiveTriggerWebhookResponse { };
+            mockGrpcClient.Setup(x => x.ReceiveTriggerWebhook(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            ReceiveTriggerWebhookResponse response = client.ReceiveTriggerWebhook(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ReceiveTriggerWebhookRequestObjectAsync()
+        {
+            moq::Mock<CloudBuild.CloudBuildClient> mockGrpcClient = new moq::Mock<CloudBuild.CloudBuildClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ReceiveTriggerWebhookRequest request = new ReceiveTriggerWebhookRequest
+            {
+                Body = new ga::HttpBody(),
+                ProjectId = "project_id43ad98b0",
+                Trigger = "trigger098ed0c7",
+                Secret = "secret9422be5e",
+            };
+            ReceiveTriggerWebhookResponse expectedResponse = new ReceiveTriggerWebhookResponse { };
+            mockGrpcClient.Setup(x => x.ReceiveTriggerWebhookAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ReceiveTriggerWebhookResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
+            ReceiveTriggerWebhookResponse responseCallSettings = await client.ReceiveTriggerWebhookAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ReceiveTriggerWebhookResponse responseCancellationToken = await client.ReceiveTriggerWebhookAsync(request, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
