@@ -1,5 +1,14 @@
 # Version history
 
+# Version 3.6.0, released 2021-03-17
+
+- [Commit 69c83e4](https://github.com/googleapis/google-cloud-dotnet/commit/69c83e4):
+  - fix: retry errors in stream until timeout ([issue 6013](https://github.com/googleapis/google-cloud-dotnet/issues/6013))
+  - Also fixes [issue 5977](https://github.com/googleapis/google-cloud-dotnet/issues/5977)
+- [Commit fa5641d](https://github.com/googleapis/google-cloud-dotnet/commit/fa5641d): fix: retry consecutive retryable errors in sql stream. Fixes [issue 5977](https://github.com/googleapis/google-cloud-dotnet/issues/5977)
+- [Commit a86b6ea](https://github.com/googleapis/google-cloud-dotnet/commit/a86b6ea): feat: add `optimizer_statistics_package` field in `QueryOptions`
+- [Commit ef02e74](https://github.com/googleapis/google-cloud-dotnet/commit/ef02e74): feat: add CMEK fields to backup and database
+
 # Version 3.5.0, released 2021-02-08
 
 - [Commit d5abc62](https://github.com/googleapis/google-cloud-dotnet/commit/d5abc62): feat: add Point In Time Recovery (PITR) support
