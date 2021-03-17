@@ -45,6 +45,7 @@ namespace Google.Cloud.Spanner.V1
             // We don't use the predicate in our code
             retryFilter: ignored => false,
             backoffJitter: RandomJitter);
+        private static readonly TimeSpan DefaultRpcTimeout = TimeSpan.FromHours(1);
 
         private readonly LinkedList<PartialResultSet> _buffer;
         private readonly SpannerClient _client;
@@ -111,10 +112,7 @@ namespace Google.Cloud.Spanner.V1
         private async Task<PartialResultSet> ComputeNextAsync(CancellationToken cancellationToken)
         {
             // The retry state is local to the method as we're not trying to handle callers retrying.
-            // Max 115 consecutive errors is roughly equal to the default timeout of ExecuteStreamingSql (1 hour)
-            // based on the default backoff settings (InitialBackoff: 1 second, MaxBackoff: 32 seconds).
-            RetryState retryState = new RetryState(_client.Settings.Scheduler ?? SystemScheduler.Instance, _retrySettings, maxConsecutiveErrors: 115);
-
+            RetryState retryState = new RetryState(_client.Settings.Clock ?? SystemClock.Instance, _client.Settings.Scheduler ?? SystemScheduler.Instance, _retrySettings, _callSettings);
             while (true)
             {
                 // If we've successfully read to the end of the stream and emptied the buffer, we've read all the responses.
@@ -184,7 +182,7 @@ namespace Google.Cloud.Spanner.V1
                 catch (RpcException e) when (_safeToRetry && retryState.CanRetry(e))
                 {
                     _client.Settings.Logger.Warn($"Exception when reading from result stream. Retrying.", e);
-                    await retryState.RecordErrorAndWaitAsync(e, cancellationToken).ConfigureAwait(false);
+                    await retryState.WaitAsync(e, cancellationToken).ConfigureAwait(false);
 
                     // Clear anything we've received since the previous response that contained a resume token
                     _buffer.Clear();
@@ -201,30 +199,25 @@ namespace Google.Cloud.Spanner.V1
         internal class RetryState
         {
             internal static readonly string RetryInfoKey = (RetryInfo.Descriptor.FullName + "-bin").ToLowerInvariant();
-            private const int DefaultMaxConsecutiveErrors = 1;
 
+            private readonly IClock _clock;
             private readonly IScheduler _scheduler;
             private readonly RetrySettings _retrySettings;
-            private readonly int _maxConsecutiveErrors;
             private IEnumerator<TimeSpan> _retrySettingsBackoffs;
-            // Note that we can't use RetrySettings.MaxAttempts, as our sequence of backoffs is not advanced
-            // when the exception provides the backoff.
-            private int _consecutiveErrors;
+            private readonly CallSettings _callSettings;
+            private DateTime _currentDeadline;
 
-            internal RetryState(IScheduler scheduler, RetrySettings retrySettings)
-                : this(scheduler, retrySettings, DefaultMaxConsecutiveErrors)
+            internal RetryState(IClock clock, IScheduler scheduler, RetrySettings retrySettings, CallSettings callSettings)
             {
-            }
-
-            internal RetryState(IScheduler scheduler, RetrySettings retrySettings, int maxConsecutiveErrors)
-            {
+                _clock = clock;
                 _scheduler = scheduler;
                 _retrySettings = retrySettings;
-                _maxConsecutiveErrors = maxConsecutiveErrors;
+                _callSettings = callSettings;
+
                 Reset();
             }
 
-            internal RetryState Clone() => new RetryState(_scheduler, _retrySettings);
+            internal RetryState Clone() => new RetryState(_clock, _scheduler, _retrySettings, _callSettings);
 
             /// <summary>
             /// Indicates whether the given exception can be retried in the current state.
@@ -232,11 +225,6 @@ namespace Google.Cloud.Spanner.V1
             /// </summary>
             internal bool CanRetry(RpcException exception)
             {
-                if (_consecutiveErrors >= _maxConsecutiveErrors)
-                {
-                    return false;
-                }
-
                 switch (exception.StatusCode)
                 {
                     // TODO: Work out what the Java retriable cases look like in .NET.
@@ -256,11 +244,15 @@ namespace Google.Cloud.Spanner.V1
             /// Updates the state on the basis of the given exception, delaying for as long as is necessary
             /// between retries.
             /// </summary>
-            internal async Task RecordErrorAndWaitAsync(RpcException exception, CancellationToken cancellationToken)
+            internal async Task WaitAsync(RpcException exception, CancellationToken cancellationToken)
             {
-                _consecutiveErrors++;
                 TimeSpan? delayFromException = GetRetryDelay(exception);
-                await _scheduler.Delay(_retrySettings.BackoffJitter.GetDelay(delayFromException ?? _retrySettingsBackoffs.Current), cancellationToken).ConfigureAwait(false);
+                TimeSpan delay = _retrySettings.BackoffJitter.GetDelay(delayFromException ?? _retrySettingsBackoffs.Current);
+                if (_clock.GetCurrentDateTimeUtc() + delay >= _currentDeadline)
+                {
+                    throw new RpcException(new Grpc.Core.Status(StatusCode.DeadlineExceeded, "Streaming call exceeded timeout"));
+                }
+                await _scheduler.Delay(delay, cancellationToken).ConfigureAwait(false);
                 if (delayFromException == null)
                 {
                     _retrySettingsBackoffs.MoveNext();
@@ -273,7 +265,7 @@ namespace Google.Cloud.Spanner.V1
             /// </summary>
             internal void Reset()
             {
-                _consecutiveErrors = 0;
+                _currentDeadline = _callSettings.Expiration.CalculateDeadline(_clock) ?? _clock.GetCurrentDateTimeUtc().Add(DefaultRpcTimeout);
                 _retrySettingsBackoffs = RetryAttempt.CreateRetrySequence(_retrySettings, _scheduler)
                     .Select(attempt => attempt.JitteredBackoff)
                     .GetEnumerator();
