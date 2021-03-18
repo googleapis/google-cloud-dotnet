@@ -1329,7 +1329,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             {
                 ParentAsTransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
                 RequestedTimeRange = new StartManualTransferRunsRequest.Types.TimeRange(),
-                RequestedRunTime = new Timestamp(),
             };
             // Make the request
             StartManualTransferRunsResponse response = dataTransferServiceClient.StartManualTransferRuns(request);
@@ -1348,7 +1347,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             {
                 ParentAsTransferConfigName = TransferConfigName.FromProjectTransferConfig("[PROJECT]", "[TRANSFER_CONFIG]"),
                 RequestedTimeRange = new StartManualTransferRunsRequest.Types.TimeRange(),
-                RequestedRunTime = new Timestamp(),
             };
             // Make the request
             StartManualTransferRunsResponse response = await dataTransferServiceClient.StartManualTransferRunsAsync(request);
