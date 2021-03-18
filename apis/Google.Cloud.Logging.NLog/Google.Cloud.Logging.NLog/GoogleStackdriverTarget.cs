@@ -609,7 +609,7 @@ namespace Google.Cloud.Logging.NLog
                     catch (Exception ex)
                     {
                         InternalLogger.Warn(ex,
-                            "GoogleStackdriver(Name={0}): Exception at BuildLogEntry with Key={1}", Name, combinedProperty.Key);
+                            "GoogleStackdriver(Name={0}): Exception at RenderJsonPayload with Key={1}", Name, combinedProperty.Key);
                         jsonValue = Value.ForString($"<Exception: '{ex.Message}'>");
                     }
 
