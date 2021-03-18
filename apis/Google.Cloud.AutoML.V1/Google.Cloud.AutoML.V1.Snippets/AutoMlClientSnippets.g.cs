@@ -2105,7 +2105,6 @@ namespace Google.Cloud.AutoML.V1.Snippets
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 ImageObjectDetectionModelDeploymentMetadata = new ImageObjectDetectionModelDeploymentMetadata(),
-                ImageClassificationModelDeploymentMetadata = new ImageClassificationModelDeploymentMetadata(),
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = autoMlClient.DeployModel(request);
@@ -2140,7 +2139,6 @@ namespace Google.Cloud.AutoML.V1.Snippets
             {
                 ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
                 ImageObjectDetectionModelDeploymentMetadata = new ImageObjectDetectionModelDeploymentMetadata(),
-                ImageClassificationModelDeploymentMetadata = new ImageClassificationModelDeploymentMetadata(),
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await autoMlClient.DeployModelAsync(request);
