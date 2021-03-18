@@ -575,7 +575,6 @@ namespace Google.Cloud.Channel.V1.Snippets
                 CloudIdentityId = "",
                 AuthToken = "",
                 LanguageCode = "",
-                CustomerName = "",
             };
             // Make the request
             PagedEnumerable<ListTransferableSkusResponse, TransferableSku> response = cloudChannelServiceClient.ListTransferableSkus(request);
@@ -627,7 +626,6 @@ namespace Google.Cloud.Channel.V1.Snippets
                 CloudIdentityId = "",
                 AuthToken = "",
                 LanguageCode = "",
-                CustomerName = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListTransferableSkusResponse, TransferableSku> response = cloudChannelServiceClient.ListTransferableSkusAsync(request);
@@ -677,7 +675,6 @@ namespace Google.Cloud.Channel.V1.Snippets
             {
                 Parent = "",
                 CloudIdentityId = "",
-                CustomerName = "",
                 Sku = "",
                 LanguageCode = "",
             };
@@ -729,7 +726,6 @@ namespace Google.Cloud.Channel.V1.Snippets
             {
                 Parent = "",
                 CloudIdentityId = "",
-                CustomerName = "",
                 Sku = "",
                 LanguageCode = "",
             };
@@ -2007,7 +2003,6 @@ namespace Google.Cloud.Channel.V1.Snippets
             {
                 CustomerAsCustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
                 CreateEntitlementPurchase = new ListPurchasableSkusRequest.Types.CreateEntitlementPurchase(),
-                ChangeOfferPurchase = new ListPurchasableSkusRequest.Types.ChangeOfferPurchase(),
                 LanguageCode = "",
             };
             // Make the request
@@ -2058,7 +2053,6 @@ namespace Google.Cloud.Channel.V1.Snippets
             {
                 CustomerAsCustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
                 CreateEntitlementPurchase = new ListPurchasableSkusRequest.Types.CreateEntitlementPurchase(),
-                ChangeOfferPurchase = new ListPurchasableSkusRequest.Types.ChangeOfferPurchase(),
                 LanguageCode = "",
             };
             // Make the request
@@ -2109,7 +2103,6 @@ namespace Google.Cloud.Channel.V1.Snippets
             {
                 CustomerAsCustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
                 CreateEntitlementPurchase = new ListPurchasableOffersRequest.Types.CreateEntitlementPurchase(),
-                ChangeOfferPurchase = new ListPurchasableOffersRequest.Types.ChangeOfferPurchase(),
                 LanguageCode = "",
             };
             // Make the request
@@ -2160,7 +2153,6 @@ namespace Google.Cloud.Channel.V1.Snippets
             {
                 CustomerAsCustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
                 CreateEntitlementPurchase = new ListPurchasableOffersRequest.Types.CreateEntitlementPurchase(),
-                ChangeOfferPurchase = new ListPurchasableOffersRequest.Types.ChangeOfferPurchase(),
                 LanguageCode = "",
             };
             // Make the request
