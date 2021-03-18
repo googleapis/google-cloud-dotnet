@@ -19,7 +19,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.LongRunning;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
@@ -713,7 +712,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             {
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 AgentUri = "",
-                AgentContent = ByteString.Empty,
                 RestoreOption = RestoreAgentRequest.Types.RestoreOption.Unspecified,
             };
             // Make the request
@@ -749,7 +747,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             {
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 AgentUri = "",
-                AgentContent = ByteString.Empty,
                 RestoreOption = RestoreAgentRequest.Types.RestoreOption.Unspecified,
             };
             // Make the request
