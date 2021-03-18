@@ -32,3 +32,6 @@ Fields:
 - `noVersionHistory`: When set to `true`, the update-history release manager command skips the API.
   This is primarily used for libraries which are part of a bigger ecosystem, where
   another library typically has the version history (e.g. Spanner.Data for all Spanner libraries).
+- `commonResourceConfig`: Path to a file providing additional common
+  resource configuration, augmenting the root `CommonResourcesConfig.json` file. Typically multiple APIs (e.g. all of
+  the Spanner APIs) will refer to the same file in a common package, containing the resource names described in the config file.

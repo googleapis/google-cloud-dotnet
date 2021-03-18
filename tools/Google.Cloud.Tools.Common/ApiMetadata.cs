@@ -137,6 +137,14 @@ namespace Google.Cloud.Tools.Common
         /// </summary>
         public string ReleaseLevelOverride { get; set; }
 
+        /// <summary>
+        /// Path to an API-specific JSON configuration file for resources.
+        /// This augments the default CommonResourcesConfig.json file in the repo root directory.
+        /// Typically a group of APIs (e.g. Bigtable.Admin.V2 and Bigtable.V2) will all have this configuration
+        /// option set to refer to a single file in a common package containing common resource names.
+        /// </summary>
+        public string CommonResourcesConfig { get; set; }
+
         // TODO: Optimize to do this lazily if it's ever an issue
         [JsonIgnore]
         public bool CanHaveGaRelease

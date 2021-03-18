@@ -87,13 +87,17 @@ generate_microgenerator() {
     SERVICE_CONFIG_OPTION=--gapic_opt=grpc-service-config=$GRPC_SERVICE_CONFIG
   fi
 
-  # Defalt to "all resources are common" but allow a per-API config file too.
-  COMMON_RESOURCES_CONFIG=CommonResourcesConfig.json
-  if [[ -f "$API_OUT_DIR/$PACKAGE_ID/CommonResourcesConfig.json" ]]
+  # Default to "all resources are common" but allow a per-API config file too.
+  COMMON_RESOURCES_CONFIG=common-resources-config=CommonResourcesConfig.json
+
+  # Note: defaulting to "x" is pretty horrible, but it's hard to tell the difference
+  # between empty and unspecified otherwise.
+  API_COMMON_RESOURCES_CONFIG=$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE_ID commonResourcesConfig --default=x)
+  if [[ $API_COMMON_RESOURCES_CONFIG != "" && $API_COMMON_RESOURCES_CONFIG != "x" ]]
   then
-    COMMON_RESOURCES_CONFIG=$API_OUT_DIR/$PACKAGE_ID/CommonResourcesConfig.json
+    COMMON_RESOURCES_CONFIG=$COMMON_RESOURCES_CONFIG,common-resources-config=$API_COMMON_RESOURCES_CONFIG
   fi
-  COMMON_RESOURCES_OPTION=--gapic_opt=common-resources-config=$COMMON_RESOURCES_CONFIG
+  COMMON_RESOURCES_OPTION=--gapic_opt=$COMMON_RESOURCES_CONFIG
   
   # Only specify common resource protos for GCP APIs
   COMMON_RESOURCES_PROTO=
