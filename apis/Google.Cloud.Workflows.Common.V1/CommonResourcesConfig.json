@@ -1,0 +1,10 @@
+{
+  "common_resources": [
+    {
+      "type": "workflows.googleapis.com/Workflow",
+      "csharp_package_name": "Google.Cloud.Workflows.Common.V1",
+      "csharp_namespace": "Google.Cloud.Workflows.Common.V1",
+      "csharp_class_name":  "WorkflowName"
+    }
+  ]
+}
