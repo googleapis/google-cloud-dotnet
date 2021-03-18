@@ -3190,7 +3190,6 @@ namespace Google.Cloud.Dlp.V2.Snippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 InspectJob = new InspectJobConfig(),
-                RiskJob = new RiskAnalysisJobConfig(),
                 JobId = "",
                 LocationId = "",
             };
@@ -3211,7 +3210,6 @@ namespace Google.Cloud.Dlp.V2.Snippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 InspectJob = new InspectJobConfig(),
-                RiskJob = new RiskAnalysisJobConfig(),
                 JobId = "",
                 LocationId = "",
             };

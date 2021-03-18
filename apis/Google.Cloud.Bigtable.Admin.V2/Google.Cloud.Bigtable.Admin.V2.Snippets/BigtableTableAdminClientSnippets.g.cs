@@ -908,7 +908,6 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             {
                 TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKeyPrefix = ByteString.Empty,
-                DeleteAllDataFromTable = false,
             };
             // Make the request
             bigtableTableAdminClient.DropRowRange(request);
@@ -927,7 +926,6 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             {
                 TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKeyPrefix = ByteString.Empty,
-                DeleteAllDataFromTable = false,
             };
             // Make the request
             await bigtableTableAdminClient.DropRowRangeAsync(request);

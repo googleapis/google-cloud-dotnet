@@ -1292,11 +1292,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Create client
             DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
             // Initialize request argument(s)
-            LookupEntryRequest request = new LookupEntryRequest
-            {
-                LinkedResource = "",
-                SqlResource = "",
-            };
+            LookupEntryRequest request = new LookupEntryRequest { LinkedResource = "", };
             // Make the request
             Entry response = dataCatalogClient.LookupEntry(request);
             // End snippet
@@ -1310,11 +1306,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Create client
             DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
             // Initialize request argument(s)
-            LookupEntryRequest request = new LookupEntryRequest
-            {
-                LinkedResource = "",
-                SqlResource = "",
-            };
+            LookupEntryRequest request = new LookupEntryRequest { LinkedResource = "", };
             // Make the request
             Entry response = await dataCatalogClient.LookupEntryAsync(request);
             // End snippet

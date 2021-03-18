@@ -18,7 +18,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
 {
     using Google.Api.Gax;
     using Google.LongRunning;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
@@ -832,7 +831,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 GcsUri = "",
-                Content = ByteString.Empty,
             };
             // Make the request
             Operation<ImportTestCasesResponse, ImportTestCasesMetadata> response = testCasesClient.ImportTestCases(request);
@@ -867,7 +865,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             {
                 ParentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 GcsUri = "",
-                Content = ByteString.Empty,
             };
             // Make the request
             Operation<ImportTestCasesResponse, ImportTestCasesMetadata> response = await testCasesClient.ImportTestCasesAsync(request);

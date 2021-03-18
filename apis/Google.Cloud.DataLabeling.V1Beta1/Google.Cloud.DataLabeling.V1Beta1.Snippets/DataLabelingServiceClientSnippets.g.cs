@@ -1754,9 +1754,6 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Snippets
                 BasicConfig = new HumanAnnotationConfig(),
                 Feature = LabelImageRequest.Types.Feature.Unspecified,
                 ImageClassificationConfig = new ImageClassificationConfig(),
-                BoundingPolyConfig = new BoundingPolyConfig(),
-                PolylineConfig = new PolylineConfig(),
-                SegmentationConfig = new SegmentationConfig(),
             };
             // Make the request
             Operation<AnnotatedDataset, LabelOperationMetadata> response = dataLabelingServiceClient.LabelImage(request);
@@ -1793,9 +1790,6 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Snippets
                 BasicConfig = new HumanAnnotationConfig(),
                 Feature = LabelImageRequest.Types.Feature.Unspecified,
                 ImageClassificationConfig = new ImageClassificationConfig(),
-                BoundingPolyConfig = new BoundingPolyConfig(),
-                PolylineConfig = new PolylineConfig(),
-                SegmentationConfig = new SegmentationConfig(),
             };
             // Make the request
             Operation<AnnotatedDataset, LabelOperationMetadata> response = await dataLabelingServiceClient.LabelImageAsync(request);
@@ -1957,9 +1951,6 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Snippets
                 BasicConfig = new HumanAnnotationConfig(),
                 Feature = LabelVideoRequest.Types.Feature.Unspecified,
                 VideoClassificationConfig = new VideoClassificationConfig(),
-                ObjectDetectionConfig = new ObjectDetectionConfig(),
-                ObjectTrackingConfig = new ObjectTrackingConfig(),
-                EventConfig = new EventConfig(),
             };
             // Make the request
             Operation<AnnotatedDataset, LabelOperationMetadata> response = dataLabelingServiceClient.LabelVideo(request);
@@ -1996,9 +1987,6 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Snippets
                 BasicConfig = new HumanAnnotationConfig(),
                 Feature = LabelVideoRequest.Types.Feature.Unspecified,
                 VideoClassificationConfig = new VideoClassificationConfig(),
-                ObjectDetectionConfig = new ObjectDetectionConfig(),
-                ObjectTrackingConfig = new ObjectTrackingConfig(),
-                EventConfig = new EventConfig(),
             };
             // Make the request
             Operation<AnnotatedDataset, LabelOperationMetadata> response = await dataLabelingServiceClient.LabelVideoAsync(request);
@@ -2159,7 +2147,6 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Snippets
                 ParentAsDatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
                 BasicConfig = new HumanAnnotationConfig(),
                 TextClassificationConfig = new TextClassificationConfig(),
-                TextEntityExtractionConfig = new TextEntityExtractionConfig(),
                 Feature = LabelTextRequest.Types.Feature.Unspecified,
             };
             // Make the request
@@ -2196,7 +2183,6 @@ namespace Google.Cloud.DataLabeling.V1Beta1.Snippets
                 ParentAsDatasetName = DatasetName.FromProjectDataset("[PROJECT]", "[DATASET]"),
                 BasicConfig = new HumanAnnotationConfig(),
                 TextClassificationConfig = new TextClassificationConfig(),
-                TextEntityExtractionConfig = new TextEntityExtractionConfig(),
                 Feature = LabelTextRequest.Types.Feature.Unspecified,
             };
             // Make the request

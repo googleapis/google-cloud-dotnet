@@ -103,7 +103,6 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 ReadOptions = new ReadOptions(),
                 PartitionId = new PartitionId(),
                 Query = new Query(),
-                GqlQuery = new GqlQuery(),
                 ProjectId = "",
             };
             // Make the request
@@ -124,7 +123,6 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 ReadOptions = new ReadOptions(),
                 PartitionId = new PartitionId(),
                 Query = new Query(),
-                GqlQuery = new GqlQuery(),
                 ProjectId = "",
             };
             // Make the request
