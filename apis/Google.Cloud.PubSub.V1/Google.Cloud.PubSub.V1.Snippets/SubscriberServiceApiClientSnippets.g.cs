@@ -1663,7 +1663,6 @@ namespace Google.Cloud.PubSub.V1.Snippets
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 Time = new Timestamp(),
-                SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
             };
             // Make the request
             SeekResponse response = subscriberServiceApiClient.Seek(request);
@@ -1682,7 +1681,6 @@ namespace Google.Cloud.PubSub.V1.Snippets
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
                 Time = new Timestamp(),
-                SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
             };
             // Make the request
             SeekResponse response = await subscriberServiceApiClient.SeekAsync(request);
