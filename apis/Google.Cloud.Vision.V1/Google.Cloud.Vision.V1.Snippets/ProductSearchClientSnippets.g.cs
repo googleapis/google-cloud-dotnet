@@ -2464,7 +2464,6 @@ namespace Google.Cloud.Vision.V1.Snippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ProductSetPurgeConfig = new ProductSetPurgeConfig(),
-                DeleteOrphanProducts = false,
                 Force = false,
             };
             // Make the request
@@ -2500,7 +2499,6 @@ namespace Google.Cloud.Vision.V1.Snippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ProductSetPurgeConfig = new ProductSetPurgeConfig(),
-                DeleteOrphanProducts = false,
                 Force = false,
             };
             // Make the request

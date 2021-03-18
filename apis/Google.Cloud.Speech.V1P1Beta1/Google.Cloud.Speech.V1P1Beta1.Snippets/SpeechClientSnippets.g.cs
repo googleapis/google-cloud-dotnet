@@ -18,7 +18,6 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
 {
     using Google.Api.Gax.Grpc;
     using Google.LongRunning;
-    using Google.Protobuf;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -251,7 +250,6 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
                 StreamingRecognizeRequest request = new StreamingRecognizeRequest
                 {
                     StreamingConfig = new StreamingRecognitionConfig(),
-                    AudioContent = ByteString.Empty,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);

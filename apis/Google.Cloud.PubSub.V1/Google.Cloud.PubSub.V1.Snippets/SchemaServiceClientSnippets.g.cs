@@ -683,7 +683,6 @@ namespace Google.Cloud.PubSub.V1.Snippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
-                Schema = new Schema(),
                 Message = ByteString.Empty,
                 Encoding = Encoding.Unspecified,
             };
@@ -704,7 +703,6 @@ namespace Google.Cloud.PubSub.V1.Snippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
-                Schema = new Schema(),
                 Message = ByteString.Empty,
                 Encoding = Encoding.Unspecified,
             };

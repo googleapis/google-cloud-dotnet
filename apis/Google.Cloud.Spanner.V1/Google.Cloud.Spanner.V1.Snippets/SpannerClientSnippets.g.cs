@@ -1002,7 +1002,6 @@ namespace Google.Cloud.Spanner.V1.Snippets
             {
                 SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = ByteString.Empty,
-                SingleUseTransaction = new TransactionOptions(),
                 Mutations = { new Mutation(), },
                 ReturnCommitStats = false,
             };
@@ -1023,7 +1022,6 @@ namespace Google.Cloud.Spanner.V1.Snippets
             {
                 SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 TransactionId = ByteString.Empty,
-                SingleUseTransaction = new TransactionOptions(),
                 Mutations = { new Mutation(), },
                 ReturnCommitStats = false,
             };

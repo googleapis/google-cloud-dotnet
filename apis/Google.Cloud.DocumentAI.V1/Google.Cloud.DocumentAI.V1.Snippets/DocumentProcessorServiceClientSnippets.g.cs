@@ -34,7 +34,6 @@ namespace Google.Cloud.DocumentAI.V1.Snippets
                 ProcessorName = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
                 SkipHumanReview = false,
                 InlineDocument = new Document(),
-                RawDocument = new RawDocument(),
             };
             // Make the request
             ProcessResponse response = documentProcessorServiceClient.ProcessDocument(request);
@@ -54,7 +53,6 @@ namespace Google.Cloud.DocumentAI.V1.Snippets
                 ProcessorName = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
                 SkipHumanReview = false,
                 InlineDocument = new Document(),
-                RawDocument = new RawDocument(),
             };
             // Make the request
             ProcessResponse response = await documentProcessorServiceClient.ProcessDocumentAsync(request);
