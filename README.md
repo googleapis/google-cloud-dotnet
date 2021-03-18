@@ -56,7 +56,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Dialogflow.Cx.V3](https://googleapis.dev/dotnet/Google.Cloud.Dialogflow.Cx.V3/1.0.0) | 1.0.0 | [Dialogflow](https://cloud.google.com/dialogflow/cx/docs) |
 | [Google.Cloud.Dialogflow.V2](https://googleapis.dev/dotnet/Google.Cloud.Dialogflow.V2/3.1.0) | 3.1.0 | [Google Cloud Dialogflow](https://cloud.google.com/dialogflow-enterprise/) |
 | [Google.Cloud.Dlp.V2](https://googleapis.dev/dotnet/Google.Cloud.Dlp.V2/3.1.0) | 3.1.0 | [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/) |
-| [Google.Cloud.DocumentAI.V1Beta2](https://googleapis.dev/dotnet/Google.Cloud.DocumentAI.V1Beta2/1.0.0-beta02) | 1.0.0-beta02 | [Cloud Document AI](https://cloud.google.com/solutions/document-ai) |
+| [Google.Cloud.DocumentAI.V1Beta2](https://googleapis.dev/dotnet/Google.Cloud.DocumentAI.V1Beta2/1.0.0-beta02) | 1.0.0-beta02 | [Cloud Document AI (V1Beta2 API)](https://cloud.google.com/solutions/document-ai) |
 | [Google.Cloud.Domains.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Domains.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud Domains](https://cloud.google.com/domains/) |
 | [Google.Cloud.ErrorReporting.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.ErrorReporting.V1Beta1/2.0.0-beta03) | 2.0.0-beta03 | [Google Cloud Error Reporting](https://cloud.google.com/error-reporting/) |
 | [Google.Cloud.Firestore.Admin.V1](https://googleapis.dev/dotnet/Google.Cloud.Firestore.Admin.V1/2.1.0) | 2.1.0 | [Firestore Administration (e.g. index management)](https://firebase.google.com) |
