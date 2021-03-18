@@ -67,6 +67,10 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
                 KmsSettings = new Workload.Types.KMSSettings(),
+                ResourceSettings =
+                {
+                    new Workload.Types.ResourceSettings(),
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -114,6 +118,10 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
                 KmsSettings = new Workload.Types.KMSSettings(),
+                ResourceSettings =
+                {
+                    new Workload.Types.ResourceSettings(),
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -163,6 +171,10 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
                 KmsSettings = new Workload.Types.KMSSettings(),
+                ResourceSettings =
+                {
+                    new Workload.Types.ResourceSettings(),
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -210,6 +222,10 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
                 KmsSettings = new Workload.Types.KMSSettings(),
+                ResourceSettings =
+                {
+                    new Workload.Types.ResourceSettings(),
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -359,6 +375,10 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
                 KmsSettings = new Workload.Types.KMSSettings(),
+                ResourceSettings =
+                {
+                    new Workload.Types.ResourceSettings(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -405,6 +425,10 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
                 KmsSettings = new Workload.Types.KMSSettings(),
+                ResourceSettings =
+                {
+                    new Workload.Types.ResourceSettings(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -453,6 +477,10 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
                 KmsSettings = new Workload.Types.KMSSettings(),
+                ResourceSettings =
+                {
+                    new Workload.Types.ResourceSettings(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -499,6 +527,10 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
                 KmsSettings = new Workload.Types.KMSSettings(),
+                ResourceSettings =
+                {
+                    new Workload.Types.ResourceSettings(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -547,6 +579,10 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
                 KmsSettings = new Workload.Types.KMSSettings(),
+                ResourceSettings =
+                {
+                    new Workload.Types.ResourceSettings(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -593,6 +629,10 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
 #pragma warning restore CS0612
                 ProvisionedResourcesParent = "provisioned_resources_parent4d000dc9",
                 KmsSettings = new Workload.Types.KMSSettings(),
+                ResourceSettings =
+                {
+                    new Workload.Types.ResourceSettings(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
