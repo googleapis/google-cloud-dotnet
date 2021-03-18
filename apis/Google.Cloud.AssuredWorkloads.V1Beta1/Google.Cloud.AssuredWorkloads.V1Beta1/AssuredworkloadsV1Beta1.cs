@@ -50,7 +50,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             "EhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJInQKFUxpc3RX",
             "b3JrbG9hZHNSZXNwb25zZRJCCgl3b3JrbG9hZHMYASADKAsyLy5nb29nbGUu",
             "Y2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkEhcKD25l",
-            "eHRfcGFnZV90b2tlbhgCIAEoCSKNEQoIV29ya2xvYWQSEQoEbmFtZRgBIAEo",
+            "eHRfcGFnZV90b2tlbhgCIAEoCSL7EgoIV29ya2xvYWQSEQoEbmFtZRgBIAEo",
             "CUID4EEBEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECElQKCXJlc291cmNl",
             "cxgDIAMoCzI8Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0",
             "YTEuV29ya2xvYWQuUmVzb3VyY2VJbmZvQgPgQQMSYwoRY29tcGxpYW5jZV9y",
@@ -72,74 +72,79 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             "YWRzLnYxYmV0YTEuV29ya2xvYWQuTGFiZWxzRW50cnlCA+BBARIpChxwcm92",
             "aXNpb25lZF9yZXNvdXJjZXNfcGFyZW50GA0gASgJQgPgQQQSVgoMa21zX3Nl",
             "dHRpbmdzGA4gASgLMjsuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMu",
-            "djFiZXRhMS5Xb3JrbG9hZC5LTVNTZXR0aW5nc0ID4EEEGucBCgxSZXNvdXJj",
-            "ZUluZm8SEwoLcmVzb3VyY2VfaWQYASABKAMSYAoNcmVzb3VyY2VfdHlwZRgC",
-            "IAEoDjJJLmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEu",
-            "V29ya2xvYWQuUmVzb3VyY2VJbmZvLlJlc291cmNlVHlwZSJgCgxSZXNvdXJj",
-            "ZVR5cGUSHQoZUkVTT1VSQ0VfVFlQRV9VTlNQRUNJRklFRBAAEhQKEENPTlNV",
-            "TUVSX1BST0pFQ1QQARIbChdFTkNSWVBUSU9OX0tFWVNfUFJPSkVDVBACGo8B",
-            "CgtLTVNTZXR0aW5ncxJBChJuZXh0X3JvdGF0aW9uX3RpbWUYASABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgngQQLgQQTgQQUSPQoPcm90YXRp",
-            "b25fcGVyaW9kGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgng",
-            "QQLgQQTgQQUabwoLSUw0U2V0dGluZ3MSXAoMa21zX3NldHRpbmdzGAEgASgL",
-            "MjsuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3Jr",
-            "bG9hZC5LTVNTZXR0aW5nc0IJ4EEC4EEE4EEFOgIYARpwCgxDSklTU2V0dGlu",
-            "Z3MSXAoMa21zX3NldHRpbmdzGAEgASgLMjsuZ29vZ2xlLmNsb3VkLmFzc3Vy",
-            "ZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5LTVNTZXR0aW5nc0IJ4EEC",
-            "4EEE4EEFOgIYARp3ChNGZWRyYW1wSGlnaFNldHRpbmdzElwKDGttc19zZXR0",
-            "aW5ncxgBIAEoCzI7Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYx",
-            "YmV0YTEuV29ya2xvYWQuS01TU2V0dGluZ3NCCeBBAuBBBOBBBToCGAEaewoX",
-            "RmVkcmFtcE1vZGVyYXRlU2V0dGluZ3MSXAoMa21zX3NldHRpbmdzGAEgASgL",
-            "MjsuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3Jr",
-            "bG9hZC5LTVNTZXR0aW5nc0IJ4EEC4EEE4EEFOgIYARotCgtMYWJlbHNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIogBChBDb21wbGlh",
-            "bmNlUmVnaW1lEiEKHUNPTVBMSUFOQ0VfUkVHSU1FX1VOU1BFQ0lGSUVEEAAS",
-            "BwoDSUw0EAESCAoEQ0pJUxACEhAKDEZFRFJBTVBfSElHSBADEhQKEEZFRFJB",
-            "TVBfTU9ERVJBVEUQBBIWChJVU19SRUdJT05BTF9BQ0NFU1MQBTp16kFyCihh",
-            "c3N1cmVkd29ya2xvYWRzLmdvb2dsZWFwaXMuY29tL1dvcmtsb2FkEkZvcmdh",
-            "bml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L3dvcmtsb2Fkcy97d29ya2xvYWR9QhwKGmNvbXBsaWFuY2VfcmVnaW1lX3Nl",
-            "dHRpbmdzIukBCh9DcmVhdGVXb3JrbG9hZE9wZXJhdGlvbk1ldGFkYXRhEjQK",
-            "C2NyZWF0ZV90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEBEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EEBEhMKBnBhcmVudBgD",
-            "IAEoCUID4EEBEmAKEWNvbXBsaWFuY2VfcmVnaW1lGAQgASgOMkAuZ29vZ2xl",
-            "LmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5Db21w",
-            "bGlhbmNlUmVnaW1lQgPgQQEyowkKF0Fzc3VyZWRXb3JrbG9hZHNTZXJ2aWNl",
-            "EvkBCg5DcmVhdGVXb3JrbG9hZBI8Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29y",
-            "a2xvYWRzLnYxYmV0YTEuQ3JlYXRlV29ya2xvYWRSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiKJAYLT5JMCQyI3L3YxYmV0YTEve3Bh",
-            "cmVudD1vcmdhbml6YXRpb25zLyovbG9jYXRpb25zLyp9L3dvcmtsb2FkczoI",
-            "d29ya2xvYWTaQQ9wYXJlbnQsd29ya2xvYWTKQSsKCFdvcmtsb2FkEh9DcmVh",
-            "dGVXb3JrbG9hZE9wZXJhdGlvbk1ldGFkYXRhEuoBCg5VcGRhdGVXb3JrbG9h",
-            "ZBI8Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuVXBk",
-            "YXRlV29ya2xvYWRSZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3Jr",
-            "bG9hZHMudjFiZXRhMS5Xb3JrbG9hZCJpgtPkkwJMMkAvdjFiZXRhMS97d29y",
-            "a2xvYWQubmFtZT1vcmdhbml6YXRpb25zLyovbG9jYXRpb25zLyovd29ya2xv",
-            "YWRzLyp9Ogh3b3JrbG9hZNpBFHdvcmtsb2FkLHVwZGF0ZV9tYXNrEq4BCg5E",
-            "ZWxldGVXb3JrbG9hZBI8Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRz",
-            "LnYxYmV0YTEuRGVsZXRlV29ya2xvYWRSZXF1ZXN0GhYuZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5IkaC0+STAjkqNy92MWJldGExL3tuYW1lPW9yZ2FuaXphdGlv",
-            "bnMvKi9sb2NhdGlvbnMvKi93b3JrbG9hZHMvKn3aQQRuYW1lEsEBCgtHZXRX",
-            "b3JrbG9hZBI5Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0",
-            "YTEuR2V0V29ya2xvYWRSZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLmFzc3VyZWR3",
-            "b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZCJGgtPkkwI5EjcvdjFiZXRhMS97",
-            "bmFtZT1vcmdhbml6YXRpb25zLyovbG9jYXRpb25zLyovd29ya2xvYWRzLyp9",
-            "2kEEbmFtZRLUAQoNTGlzdFdvcmtsb2FkcxI7Lmdvb2dsZS5jbG91ZC5hc3N1",
-            "cmVkd29ya2xvYWRzLnYxYmV0YTEuTGlzdFdvcmtsb2Fkc1JlcXVlc3QaPC5n",
-            "b29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLkxpc3RXb3Jr",
-            "bG9hZHNSZXNwb25zZSJIgtPkkwI5EjcvdjFiZXRhMS97cGFyZW50PW9yZ2Fu",
-            "aXphdGlvbnMvKi9sb2NhdGlvbnMvKn0vd29ya2xvYWRz2kEGcGFyZW50GlPK",
-            "QR9hc3N1cmVkd29ya2xvYWRzLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUL2AgopY29t",
-            "Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTFCFUFzc3Vy",
-            "ZWR3b3JrbG9hZHNQcm90b1ABWlVnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2Nsb3VkL2Fzc3VyZWR3b3JrbG9hZHMvdjFiZXRhMTth",
-            "c3N1cmVkd29ya2xvYWRzqgIlR29vZ2xlLkNsb3VkLkFzc3VyZWRXb3JrbG9h",
-            "ZHMuVjFCZXRhMcoCJUdvb2dsZVxDbG91ZFxBc3N1cmVkV29ya2xvYWRzXFYx",
-            "YmV0YTHqAihHb29nbGU6OkNsb3VkOjpBc3N1cmVkV29ya2xvYWRzOjpWMWJl",
-            "dGEx6kFdCihhc3N1cmVkd29ya2xvYWRzLmdvb2dsZWFwaXMuY29tL0xvY2F0",
-            "aW9uEjFvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259YgZwcm90bzM="));
+            "djFiZXRhMS5Xb3JrbG9hZC5LTVNTZXR0aW5nc0ID4EEEEmAKEXJlc291cmNl",
+            "X3NldHRpbmdzGA8gAygLMkAuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9h",
+            "ZHMudjFiZXRhMS5Xb3JrbG9hZC5SZXNvdXJjZVNldHRpbmdzQgPgQQQa5wEK",
+            "DFJlc291cmNlSW5mbxITCgtyZXNvdXJjZV9pZBgBIAEoAxJgCg1yZXNvdXJj",
+            "ZV90eXBlGAIgASgOMkkuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMu",
+            "djFiZXRhMS5Xb3JrbG9hZC5SZXNvdXJjZUluZm8uUmVzb3VyY2VUeXBlImAK",
+            "DFJlc291cmNlVHlwZRIdChlSRVNPVVJDRV9UWVBFX1VOU1BFQ0lGSUVEEAAS",
+            "FAoQQ09OU1VNRVJfUFJPSkVDVBABEhsKF0VOQ1JZUFRJT05fS0VZU19QUk9K",
+            "RUNUEAIajwEKC0tNU1NldHRpbmdzEkEKEm5leHRfcm90YXRpb25fdGltZRgB",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCCeBBAuBBBOBBBRI9",
+            "Cg9yb3RhdGlvbl9wZXJpb2QYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
+            "YXRpb25CCeBBAuBBBOBBBRpvCgtJTDRTZXR0aW5ncxJcCgxrbXNfc2V0dGlu",
+            "Z3MYASABKAsyOy5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJl",
+            "dGExLldvcmtsb2FkLktNU1NldHRpbmdzQgngQQLgQQTgQQU6AhgBGnAKDENK",
+            "SVNTZXR0aW5ncxJcCgxrbXNfc2V0dGluZ3MYASABKAsyOy5nb29nbGUuY2xv",
+            "dWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLktNU1NldHRp",
+            "bmdzQgngQQLgQQTgQQU6AhgBGncKE0ZlZHJhbXBIaWdoU2V0dGluZ3MSXAoM",
+            "a21zX3NldHRpbmdzGAEgASgLMjsuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3Jr",
+            "bG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5LTVNTZXR0aW5nc0IJ4EEC4EEE4EEF",
+            "OgIYARp7ChdGZWRyYW1wTW9kZXJhdGVTZXR0aW5ncxJcCgxrbXNfc2V0dGlu",
+            "Z3MYASABKAsyOy5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJl",
+            "dGExLldvcmtsb2FkLktNU1NldHRpbmdzQgngQQLgQQTgQQU6AhgBGokBChBS",
+            "ZXNvdXJjZVNldHRpbmdzEhMKC3Jlc291cmNlX2lkGAEgASgJEmAKDXJlc291",
+            "cmNlX3R5cGUYAiABKA4ySS5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fk",
+            "cy52MWJldGExLldvcmtsb2FkLlJlc291cmNlSW5mby5SZXNvdXJjZVR5cGUa",
+            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "ASKIAQoQQ29tcGxpYW5jZVJlZ2ltZRIhCh1DT01QTElBTkNFX1JFR0lNRV9V",
+            "TlNQRUNJRklFRBAAEgcKA0lMNBABEggKBENKSVMQAhIQCgxGRURSQU1QX0hJ",
+            "R0gQAxIUChBGRURSQU1QX01PREVSQVRFEAQSFgoSVVNfUkVHSU9OQUxfQUND",
+            "RVNTEAU6depBcgooYXNzdXJlZHdvcmtsb2Fkcy5nb29nbGVhcGlzLmNvbS9X",
+            "b3JrbG9hZBJGb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS93b3JrbG9hZHMve3dvcmtsb2FkfUIcChpjb21wbGlh",
+            "bmNlX3JlZ2ltZV9zZXR0aW5ncyLpAQofQ3JlYXRlV29ya2xvYWRPcGVyYXRp",
+            "b25NZXRhZGF0YRI0CgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBARIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BB",
+            "ARITCgZwYXJlbnQYAyABKAlCA+BBARJgChFjb21wbGlhbmNlX3JlZ2ltZRgE",
+            "IAEoDjJALmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEu",
+            "V29ya2xvYWQuQ29tcGxpYW5jZVJlZ2ltZUID4EEBMqMJChdBc3N1cmVkV29y",
+            "a2xvYWRzU2VydmljZRL5AQoOQ3JlYXRlV29ya2xvYWQSPC5nb29nbGUuY2xv",
+            "dWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLkNyZWF0ZVdvcmtsb2FkUmVx",
+            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iiQGC0+STAkMi",
+            "Ny92MWJldGExL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8q",
+            "fS93b3JrbG9hZHM6CHdvcmtsb2Fk2kEPcGFyZW50LHdvcmtsb2FkykErCghX",
+            "b3JrbG9hZBIfQ3JlYXRlV29ya2xvYWRPcGVyYXRpb25NZXRhZGF0YRLqAQoO",
+            "VXBkYXRlV29ya2xvYWQSPC5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fk",
+            "cy52MWJldGExLlVwZGF0ZVdvcmtsb2FkUmVxdWVzdBovLmdvb2dsZS5jbG91",
+            "ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQiaYLT5JMCTDJA",
+            "L3YxYmV0YTEve3dvcmtsb2FkLm5hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0",
+            "aW9ucy8qL3dvcmtsb2Fkcy8qfToId29ya2xvYWTaQRR3b3JrbG9hZCx1cGRh",
+            "dGVfbWFzaxKuAQoORGVsZXRlV29ya2xvYWQSPC5nb29nbGUuY2xvdWQuYXNz",
+            "dXJlZHdvcmtsb2Fkcy52MWJldGExLkRlbGV0ZVdvcmtsb2FkUmVxdWVzdBoW",
+            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJGgtPkkwI5KjcvdjFiZXRhMS97bmFt",
+            "ZT1vcmdhbml6YXRpb25zLyovbG9jYXRpb25zLyovd29ya2xvYWRzLyp92kEE",
+            "bmFtZRLBAQoLR2V0V29ya2xvYWQSOS5nb29nbGUuY2xvdWQuYXNzdXJlZHdv",
+            "cmtsb2Fkcy52MWJldGExLkdldFdvcmtsb2FkUmVxdWVzdBovLmdvb2dsZS5j",
+            "bG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQiRoLT5JMC",
+            "ORI3L3YxYmV0YTEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8q",
+            "L3dvcmtsb2Fkcy8qfdpBBG5hbWUS1AEKDUxpc3RXb3JrbG9hZHMSOy5nb29n",
+            "bGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLkxpc3RXb3JrbG9h",
+            "ZHNSZXF1ZXN0GjwuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFi",
+            "ZXRhMS5MaXN0V29ya2xvYWRzUmVzcG9uc2UiSILT5JMCORI3L3YxYmV0YTEv",
+            "e3BhcmVudD1vcmdhbml6YXRpb25zLyovbG9jYXRpb25zLyp9L3dvcmtsb2Fk",
+            "c9pBBnBhcmVudBpTykEfYXNzdXJlZHdvcmtsb2Fkcy5nb29nbGVhcGlzLmNv",
+            "bdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
+            "dGZvcm1C9gIKKWNvbS5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52",
+            "MWJldGExQhVBc3N1cmVkd29ya2xvYWRzUHJvdG9QAVpVZ29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9hc3N1cmVkd29ya2xv",
+            "YWRzL3YxYmV0YTE7YXNzdXJlZHdvcmtsb2Fkc6oCJUdvb2dsZS5DbG91ZC5B",
+            "c3N1cmVkV29ya2xvYWRzLlYxQmV0YTHKAiVHb29nbGVcQ2xvdWRcQXNzdXJl",
+            "ZFdvcmtsb2Fkc1xWMWJldGEx6gIoR29vZ2xlOjpDbG91ZDo6QXNzdXJlZFdv",
+            "cmtsb2Fkczo6VjFiZXRhMepBXQooYXNzdXJlZHdvcmtsb2Fkcy5nb29nbGVh",
+            "cGlzLmNvbS9Mb2NhdGlvbhIxb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9u",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -149,12 +154,13 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.GetWorkloadRequest), global::Google.Cloud.AssuredWorkloads.V1Beta1.GetWorkloadRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest), global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse), global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse.Parser, new[]{ "Workloads", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Parser, new[]{ "Name", "DisplayName", "Resources", "ComplianceRegime", "CreateTime", "BillingAccount", "Il4Settings", "CjisSettings", "FedrampHighSettings", "FedrampModerateSettings", "Etag", "Labels", "ProvisionedResourcesParent", "KmsSettings" }, new[]{ "ComplianceRegimeSettings" }, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ComplianceRegime) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Parser, new[]{ "ResourceId", "ResourceType" }, null, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Parser, new[]{ "Name", "DisplayName", "Resources", "ComplianceRegime", "CreateTime", "BillingAccount", "Il4Settings", "CjisSettings", "FedrampHighSettings", "FedrampModerateSettings", "Etag", "Labels", "ProvisionedResourcesParent", "KmsSettings", "ResourceSettings" }, new[]{ "ComplianceRegimeSettings" }, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ComplianceRegime) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Parser, new[]{ "ResourceId", "ResourceType" }, null, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KMSSettings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KMSSettings.Parser, new[]{ "NextRotationTime", "RotationPeriod" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.IL4Settings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.IL4Settings.Parser, new[]{ "KmsSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.CJISSettings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.CJISSettings.Parser, new[]{ "KmsSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.FedrampHighSettings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.FedrampHighSettings.Parser, new[]{ "KmsSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.FedrampModerateSettings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.FedrampModerateSettings.Parser, new[]{ "KmsSettings" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceSettings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceSettings.Parser, new[]{ "ResourceId", "ResourceType" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadOperationMetadata), global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadOperationMetadata.Parser, new[]{ "CreateTime", "DisplayName", "Parent", "ComplianceRegime" }, null, null, null, null)
           }));
@@ -1620,6 +1626,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       labels_ = other.labels_.Clone();
       provisionedResourcesParent_ = other.provisionedResourcesParent_;
       kmsSettings_ = other.kmsSettings_ != null ? other.kmsSettings_.Clone() : null;
+      resourceSettings_ = other.resourceSettings_.Clone();
       switch (other.ComplianceRegimeSettingsCase) {
         case ComplianceRegimeSettingsOneofCase.Il4Settings:
           Il4Settings = other.Il4Settings.Clone();
@@ -1869,6 +1876,21 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "resource_settings" field.</summary>
+    public const int ResourceSettingsFieldNumber = 15;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceSettings> _repeated_resourceSettings_codec
+        = pb::FieldCodec.ForMessage(122, global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceSettings.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceSettings> resourceSettings_ = new pbc::RepeatedField<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceSettings>();
+    /// <summary>
+    /// Input only. Resource properties that are used to customize workload resources.
+    /// These properties (such as custom project id) will be used to create
+    /// workload resources if possible. This field is optional.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceSettings> ResourceSettings {
+      get { return resourceSettings_; }
+    }
+
     private object complianceRegimeSettings_;
     /// <summary>Enum of possible cases for the "compliance_regime_settings" oneof.</summary>
     public enum ComplianceRegimeSettingsOneofCase {
@@ -1917,6 +1939,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       if (!Labels.Equals(other.Labels)) return false;
       if (ProvisionedResourcesParent != other.ProvisionedResourcesParent) return false;
       if (!object.Equals(KmsSettings, other.KmsSettings)) return false;
+      if(!resourceSettings_.Equals(other.resourceSettings_)) return false;
       if (ComplianceRegimeSettingsCase != other.ComplianceRegimeSettingsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1938,6 +1961,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       hash ^= Labels.GetHashCode();
       if (ProvisionedResourcesParent.Length != 0) hash ^= ProvisionedResourcesParent.GetHashCode();
       if (kmsSettings_ != null) hash ^= KmsSettings.GetHashCode();
+      hash ^= resourceSettings_.GetHashCode();
       hash ^= (int) complianceRegimeSettingsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2005,6 +2029,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         output.WriteRawTag(114);
         output.WriteMessage(KmsSettings);
       }
+      resourceSettings_.WriteTo(output, _repeated_resourceSettings_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2064,6 +2089,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         output.WriteRawTag(114);
         output.WriteMessage(KmsSettings);
       }
+      resourceSettings_.WriteTo(ref output, _repeated_resourceSettings_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2111,6 +2137,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       if (kmsSettings_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(KmsSettings);
       }
+      size += resourceSettings_.CalculateSize(_repeated_resourceSettings_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2154,6 +2181,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         }
         KmsSettings.MergeFrom(other.KmsSettings);
       }
+      resourceSettings_.Add(other.resourceSettings_);
       switch (other.ComplianceRegimeSettingsCase) {
         case ComplianceRegimeSettingsOneofCase.Il4Settings:
           if (Il4Settings == null) {
@@ -2277,6 +2305,10 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             input.ReadMessage(KmsSettings);
             break;
           }
+          case 122: {
+            resourceSettings_.AddEntriesFrom(input, _repeated_resourceSettings_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2371,6 +2403,10 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
               KmsSettings = new global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KMSSettings();
             }
             input.ReadMessage(KmsSettings);
+            break;
+          }
+          case 122: {
+            resourceSettings_.AddEntriesFrom(ref input, _repeated_resourceSettings_codec);
             break;
           }
         }
@@ -3636,6 +3672,227 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
                   KmsSettings = new global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KMSSettings();
                 }
                 input.ReadMessage(KmsSettings);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Represent the custom settings for the resources to be created.
+      /// </summary>
+      public sealed partial class ResourceSettings : pb::IMessage<ResourceSettings>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ResourceSettings> _parser = new pb::MessageParser<ResourceSettings>(() => new ResourceSettings());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<ResourceSettings> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Descriptor.NestedTypes[6]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ResourceSettings() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ResourceSettings(ResourceSettings other) : this() {
+          resourceId_ = other.resourceId_;
+          resourceType_ = other.resourceType_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ResourceSettings Clone() {
+          return new ResourceSettings(this);
+        }
+
+        /// <summary>Field number for the "resource_id" field.</summary>
+        public const int ResourceIdFieldNumber = 1;
+        private string resourceId_ = "";
+        /// <summary>
+        /// Resource identifier.
+        /// For a project this represents project_id. If the project is already
+        /// taken, the workload creation will fail.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string ResourceId {
+          get { return resourceId_; }
+          set {
+            resourceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "resource_type" field.</summary>
+        public const int ResourceTypeFieldNumber = 2;
+        private global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType resourceType_ = global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType.Unspecified;
+        /// <summary>
+        /// Indicates the type of resource. This field should be specified to
+        /// correspond the id to the right project type (CONSUMER_PROJECT or
+        /// ENCRYPTION_KEYS_PROJECT)
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType ResourceType {
+          get { return resourceType_; }
+          set {
+            resourceType_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as ResourceSettings);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(ResourceSettings other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ResourceId != other.ResourceId) return false;
+          if (ResourceType != other.ResourceType) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ResourceId.Length != 0) hash ^= ResourceId.GetHashCode();
+          if (ResourceType != global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType.Unspecified) hash ^= ResourceType.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ResourceId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ResourceId);
+          }
+          if (ResourceType != global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) ResourceType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ResourceId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ResourceId);
+          }
+          if (ResourceType != global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) ResourceType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (ResourceId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ResourceId);
+          }
+          if (ResourceType != global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ResourceType);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(ResourceSettings other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ResourceId.Length != 0) {
+            ResourceId = other.ResourceId;
+          }
+          if (other.ResourceType != global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType.Unspecified) {
+            ResourceType = other.ResourceType;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ResourceId = input.ReadString();
+                break;
+              }
+              case 16: {
+                ResourceType = (global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ResourceId = input.ReadString();
+                break;
+              }
+              case 16: {
+                ResourceType = (global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType) input.ReadEnum();
                 break;
               }
             }
