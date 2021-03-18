@@ -48,6 +48,9 @@ then the `projectId="PROJECT_ID"` configuration setting can be omitted; it will 
 - `ServiceContextVersion` - Configures the "version" in "serviceContext" when sending a JSON payload. (Defaults to the `FileVersion` of the entry assembly.)
 - `EnableJsonLayout` - Uses NLog's native JSON layout to format JSON payloads, completely replacing the default layout.
 - `JsonConverter` or `JsonConverterTypeName`/`JsonConverterMethodName` - Configures a custom conversion for individual values within a JSON payload.
+- `TraceId` - The trace ID to associate to log entries. Ex: `06796866738c859f2f19b7cfb3214824`. See [Google Logging V2 LogEntry reference docs](https://cloud.google.com/logging/docs/reference/v2/rpc/google.logging.v2#google.logging.v2.LogEntry) for more information.
+- `SpanId` - The span ID within the trace associated with the log entry. Trace API v2 uses a 16-character hexadecimal encoding of an 8-byte array, ex: `000000000000004a`.  See [Google Logging V2 LogEntry reference docs](https://cloud.google.com/logging/docs/reference/v2/rpc/google.logging.v2#google.logging.v2.LogEntry) for more information.
+- `TraceSampled` - The sampling decision of the trace associated with the log entry.  See [Google Logging V2 LogEntry reference docs](https://cloud.google.com/logging/docs/reference/v2/rpc/google.logging.v2#google.logging.v2.LogEntry) for more information.
 
 ## Sending JsonPayload
 
