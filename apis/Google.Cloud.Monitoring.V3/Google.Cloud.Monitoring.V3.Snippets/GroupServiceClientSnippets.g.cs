@@ -36,8 +36,6 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             ListGroupsRequest request = new ListGroupsRequest
             {
                 ChildrenOfGroupAsGroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
-                AncestorsOfGroupAsGroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
-                DescendantsOfGroupAsGroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
                 ProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
@@ -87,8 +85,6 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             ListGroupsRequest request = new ListGroupsRequest
             {
                 ChildrenOfGroupAsGroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
-                AncestorsOfGroupAsGroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
-                DescendantsOfGroupAsGroupName = GroupName.FromProjectGroup("[PROJECT]", "[GROUP]"),
                 ProjectName = ProjectName.FromProject("[PROJECT]"),
             };
             // Make the request
