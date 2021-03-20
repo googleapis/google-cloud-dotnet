@@ -996,7 +996,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
                 IntentBatchUri = "",
-                IntentBatchInline = new IntentBatch(),
                 LanguageCode = "",
                 UpdateMask = new FieldMask(),
                 IntentView = IntentView.Unspecified,
@@ -1034,7 +1033,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
                 IntentBatchUri = "",
-                IntentBatchInline = new IntentBatch(),
                 LanguageCode = "",
                 UpdateMask = new FieldMask(),
                 IntentView = IntentView.Unspecified,

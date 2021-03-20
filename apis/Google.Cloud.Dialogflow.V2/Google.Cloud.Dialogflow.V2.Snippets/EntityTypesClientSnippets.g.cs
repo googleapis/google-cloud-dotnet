@@ -984,7 +984,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
                 EntityTypeBatchUri = "",
-                EntityTypeBatchInline = new EntityTypeBatch(),
                 LanguageCode = "",
                 UpdateMask = new FieldMask(),
             };
@@ -1021,7 +1020,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             {
                 ParentAsAgentName = AgentName.FromProject("[PROJECT]"),
                 EntityTypeBatchUri = "",
-                EntityTypeBatchInline = new EntityTypeBatch(),
                 LanguageCode = "",
                 UpdateMask = new FieldMask(),
             };

@@ -19,7 +19,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.LongRunning;
-    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
@@ -919,7 +918,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 AgentUri = "",
-                AgentContent = ByteString.Empty,
             };
             // Make the request
             Operation<Empty, Struct> response = agentsClient.ImportAgent(request);
@@ -954,7 +952,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 AgentUri = "",
-                AgentContent = ByteString.Empty,
             };
             // Make the request
             Operation<Empty, Struct> response = await agentsClient.ImportAgentAsync(request);
@@ -988,7 +985,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 AgentUri = "",
-                AgentContent = ByteString.Empty,
             };
             // Make the request
             Operation<Empty, Struct> response = agentsClient.RestoreAgent(request);
@@ -1023,7 +1019,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 AgentUri = "",
-                AgentContent = ByteString.Empty,
             };
             // Make the request
             Operation<Empty, Struct> response = await agentsClient.RestoreAgentAsync(request);
