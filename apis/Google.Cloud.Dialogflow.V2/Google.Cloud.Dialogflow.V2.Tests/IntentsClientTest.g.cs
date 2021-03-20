@@ -77,6 +77,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.GetIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -134,6 +136,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.GetIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -191,6 +195,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.GetIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -246,6 +252,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.GetIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -303,6 +311,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.GetIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -358,6 +368,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.GetIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -416,6 +428,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.GetIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -472,6 +486,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.GetIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -530,6 +546,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.GetIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -586,6 +604,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.GetIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -646,6 +666,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.CreateIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -704,6 +726,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.CreateIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -762,6 +786,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.CreateIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -818,6 +844,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.CreateIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -876,6 +904,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.CreateIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -932,6 +962,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.CreateIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -991,6 +1023,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.CreateIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -1048,6 +1082,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.CreateIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -1107,6 +1143,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.CreateIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -1164,6 +1202,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.CreateIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -1224,6 +1264,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.UpdateIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -1282,6 +1324,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.UpdateIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -1340,6 +1384,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.UpdateIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -1396,6 +1442,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.UpdateIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -1455,6 +1503,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.UpdateIntent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);
@@ -1512,6 +1562,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                     new Intent.Types.FollowupIntentInfo(),
                 },
                 MlDisabled = false,
+                LiveAgentHandoff = false,
+                EndInteraction = false,
             };
             mockGrpcClient.Setup(x => x.UpdateIntentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Intent>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IntentsClient client = new IntentsClientImpl(mockGrpcClient.Object, null);

@@ -32,7 +32,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             "GAEgAygJEg0KBWJvb3N0GAIgASgCIpIBCg5TcGVlY2hXb3JkSW5mbxIMCgR3",
             "b3JkGAMgASgJEi8KDHN0YXJ0X29mZnNldBgBIAEoCzIZLmdvb2dsZS5wcm90",
             "b2J1Zi5EdXJhdGlvbhItCgplbmRfb2Zmc2V0GAIgASgLMhkuZ29vZ2xlLnBy",
-            "b3RvYnVmLkR1cmF0aW9uEhIKCmNvbmZpZGVuY2UYBCABKAIi7wIKEElucHV0",
+            "b3RvYnVmLkR1cmF0aW9uEhIKCmNvbmZpZGVuY2UYBCABKAIimwMKEElucHV0",
             "QXVkaW9Db25maWcSQQoOYXVkaW9fZW5jb2RpbmcYASABKA4yKS5nb29nbGUu",
             "Y2xvdWQuZGlhbG9nZmxvdy52Mi5BdWRpb0VuY29kaW5nEhkKEXNhbXBsZV9y",
             "YXRlX2hlcnR6GAIgASgFEhUKDWxhbmd1YWdlX2NvZGUYAyABKAkSGAoQZW5h",
@@ -41,46 +41,50 @@ namespace Google.Cloud.Dialogflow.V2 {
             "b2dmbG93LnYyLlNwZWVjaENvbnRleHQSDQoFbW9kZWwYByABKAkSRQoNbW9k",
             "ZWxfdmFyaWFudBgKIAEoDjIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
             "LlNwZWVjaE1vZGVsVmFyaWFudBIYChBzaW5nbGVfdXR0ZXJhbmNlGAggASgI",
-            "ImYKFFZvaWNlU2VsZWN0aW9uUGFyYW1zEgwKBG5hbWUYASABKAkSQAoLc3Nt",
-            "bF9nZW5kZXIYAiABKA4yKy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5T",
-            "c21sVm9pY2VHZW5kZXIiswEKFlN5bnRoZXNpemVTcGVlY2hDb25maWcSFQoN",
-            "c3BlYWtpbmdfcmF0ZRgBIAEoARINCgVwaXRjaBgCIAEoARIWCg52b2x1bWVf",
-            "Z2Fpbl9kYhgDIAEoARIaChJlZmZlY3RzX3Byb2ZpbGVfaWQYBSADKAkSPwoF",
-            "dm9pY2UYBCABKAsyMC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5Wb2lj",
-            "ZVNlbGVjdGlvblBhcmFtcyLSAQoRT3V0cHV0QXVkaW9Db25maWcSTAoOYXVk",
-            "aW9fZW5jb2RpbmcYASABKA4yLy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
-            "Mi5PdXRwdXRBdWRpb0VuY29kaW5nQgPgQQISGQoRc2FtcGxlX3JhdGVfaGVy",
-            "dHoYAiABKAUSVAoYc3ludGhlc2l6ZV9zcGVlY2hfY29uZmlnGAMgASgLMjIu",
-            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3ludGhlc2l6ZVNwZWVjaENv",
-            "bmZpZyr7AQoNQXVkaW9FbmNvZGluZxIeChpBVURJT19FTkNPRElOR19VTlNQ",
-            "RUNJRklFRBAAEhwKGEFVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEhcKE0FV",
-            "RElPX0VOQ09ESU5HX0ZMQUMQAhIYChRBVURJT19FTkNPRElOR19NVUxBVxAD",
-            "EhYKEkFVRElPX0VOQ09ESU5HX0FNUhAEEhkKFUFVRElPX0VOQ09ESU5HX0FN",
-            "Ul9XQhAFEhsKF0FVRElPX0VOQ09ESU5HX09HR19PUFVTEAYSKQolQVVESU9f",
-            "RU5DT0RJTkdfU1BFRVhfV0lUSF9IRUFERVJfQllURRAHKnYKElNwZWVjaE1v",
-            "ZGVsVmFyaWFudBIkCiBTUEVFQ0hfTU9ERUxfVkFSSUFOVF9VTlNQRUNJRklF",
-            "RBAAEhYKElVTRV9CRVNUX0FWQUlMQUJMRRABEhAKDFVTRV9TVEFOREFSRBAC",
-            "EhAKDFVTRV9FTkhBTkNFRBADKo0BCg9Tc21sVm9pY2VHZW5kZXISIQodU1NN",
-            "TF9WT0lDRV9HRU5ERVJfVU5TUEVDSUZJRUQQABIaChZTU01MX1ZPSUNFX0dF",
-            "TkRFUl9NQUxFEAESHAoYU1NNTF9WT0lDRV9HRU5ERVJfRkVNQUxFEAISHQoZ",
-            "U1NNTF9WT0lDRV9HRU5ERVJfTkVVVFJBTBADKqQBChNPdXRwdXRBdWRpb0Vu",
-            "Y29kaW5nEiUKIU9VVFBVVF9BVURJT19FTkNPRElOR19VTlNQRUNJRklFRBAA",
-            "EiMKH09VVFBVVF9BVURJT19FTkNPRElOR19MSU5FQVJfMTYQARIdChlPVVRQ",
-            "VVRfQVVESU9fRU5DT0RJTkdfTVAzEAISIgoeT1VUUFVUX0FVRElPX0VOQ09E",
-            "SU5HX09HR19PUFVTEANCnwEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy52MkIQQXVkaW9Db25maWdQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RpYWxvZ2Zsb3cvdjI7ZGlhbG9n",
-            "Zmxvd/gBAaICAkRGqgIaR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJiBnBy",
-            "b3RvMw=="));
+            "EioKImRpc2FibGVfbm9fc3BlZWNoX3JlY29nbml6ZWRfZXZlbnQYDiABKAgi",
+            "ZgoUVm9pY2VTZWxlY3Rpb25QYXJhbXMSDAoEbmFtZRgBIAEoCRJACgtzc21s",
+            "X2dlbmRlchgCIAEoDjIrLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlNz",
+            "bWxWb2ljZUdlbmRlciKzAQoWU3ludGhlc2l6ZVNwZWVjaENvbmZpZxIVCg1z",
+            "cGVha2luZ19yYXRlGAEgASgBEg0KBXBpdGNoGAIgASgBEhYKDnZvbHVtZV9n",
+            "YWluX2RiGAMgASgBEhoKEmVmZmVjdHNfcHJvZmlsZV9pZBgFIAMoCRI/CgV2",
+            "b2ljZRgEIAEoCzIwLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlZvaWNl",
+            "U2VsZWN0aW9uUGFyYW1zItIBChFPdXRwdXRBdWRpb0NvbmZpZxJMCg5hdWRp",
+            "b19lbmNvZGluZxgBIAEoDjIvLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
+            "Lk91dHB1dEF1ZGlvRW5jb2RpbmdCA+BBAhIZChFzYW1wbGVfcmF0ZV9oZXJ0",
+            "ehgCIAEoBRJUChhzeW50aGVzaXplX3NwZWVjaF9jb25maWcYAyABKAsyMi5n",
+            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TeW50aGVzaXplU3BlZWNoQ29u",
+            "ZmlnImcKElNwZWVjaFRvVGV4dENvbmZpZxJRChRzcGVlY2hfbW9kZWxfdmFy",
+            "aWFudBgBIAEoDjIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlNwZWVj",
+            "aE1vZGVsVmFyaWFudEID4EEBKvsBCg1BdWRpb0VuY29kaW5nEh4KGkFVRElP",
+            "X0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAASHAoYQVVESU9fRU5DT0RJTkdfTElO",
+            "RUFSXzE2EAESFwoTQVVESU9fRU5DT0RJTkdfRkxBQxACEhgKFEFVRElPX0VO",
+            "Q09ESU5HX01VTEFXEAMSFgoSQVVESU9fRU5DT0RJTkdfQU1SEAQSGQoVQVVE",
+            "SU9fRU5DT0RJTkdfQU1SX1dCEAUSGwoXQVVESU9fRU5DT0RJTkdfT0dHX09Q",
+            "VVMQBhIpCiVBVURJT19FTkNPRElOR19TUEVFWF9XSVRIX0hFQURFUl9CWVRF",
+            "EAcqdgoSU3BlZWNoTW9kZWxWYXJpYW50EiQKIFNQRUVDSF9NT0RFTF9WQVJJ",
+            "QU5UX1VOU1BFQ0lGSUVEEAASFgoSVVNFX0JFU1RfQVZBSUxBQkxFEAESEAoM",
+            "VVNFX1NUQU5EQVJEEAISEAoMVVNFX0VOSEFOQ0VEEAMqjQEKD1NzbWxWb2lj",
+            "ZUdlbmRlchIhCh1TU01MX1ZPSUNFX0dFTkRFUl9VTlNQRUNJRklFRBAAEhoK",
+            "FlNTTUxfVk9JQ0VfR0VOREVSX01BTEUQARIcChhTU01MX1ZPSUNFX0dFTkRF",
+            "Ul9GRU1BTEUQAhIdChlTU01MX1ZPSUNFX0dFTkRFUl9ORVVUUkFMEAMqpAEK",
+            "E091dHB1dEF1ZGlvRW5jb2RpbmcSJQohT1VUUFVUX0FVRElPX0VOQ09ESU5H",
+            "X1VOU1BFQ0lGSUVEEAASIwofT1VUUFVUX0FVRElPX0VOQ09ESU5HX0xJTkVB",
+            "Ul8xNhABEh0KGU9VVFBVVF9BVURJT19FTkNPRElOR19NUDMQAhIiCh5PVVRQ",
+            "VVRfQVVESU9fRU5DT0RJTkdfT0dHX09QVVMQA0KfAQoeY29tLmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LnYyQhBBdWRpb0NvbmZpZ1Byb3RvUAFaRGdvb2ds",
+            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9n",
+            "Zmxvdy92MjtkaWFsb2dmbG93+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlh",
+            "bG9nZmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechContext), global::Google.Cloud.Dialogflow.V2.SpeechContext.Parser, new[]{ "Phrases", "Boost" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechWordInfo), global::Google.Cloud.Dialogflow.V2.SpeechWordInfo.Parser, new[]{ "Word", "StartOffset", "EndOffset", "Confidence" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.InputAudioConfig), global::Google.Cloud.Dialogflow.V2.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "LanguageCode", "EnableWordInfo", "PhraseHints", "SpeechContexts", "Model", "ModelVariant", "SingleUtterance" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.InputAudioConfig), global::Google.Cloud.Dialogflow.V2.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "LanguageCode", "EnableWordInfo", "PhraseHints", "SpeechContexts", "Model", "ModelVariant", "SingleUtterance", "DisableNoSpeechRecognizedEvent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams), global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams.Parser, new[]{ "Name", "SsmlGender" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig), global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig.Parser, new[]{ "SpeakingRate", "Pitch", "VolumeGainDb", "EffectsProfileId", "Voice" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioConfig), global::Google.Cloud.Dialogflow.V2.OutputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "SynthesizeSpeechConfig" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioConfig), global::Google.Cloud.Dialogflow.V2.OutputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "SynthesizeSpeechConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig), global::Google.Cloud.Dialogflow.V2.SpeechToTextConfig.Parser, new[]{ "SpeechModelVariant" }, null, null, null, null)
           }));
     }
     #endregion
@@ -841,6 +845,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       model_ = other.model_;
       modelVariant_ = other.modelVariant_;
       singleUtterance_ = other.singleUtterance_;
+      disableNoSpeechRecognizedEvent_ = other.disableNoSpeechRecognizedEvent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1017,6 +1022,23 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
     }
 
+    /// <summary>Field number for the "disable_no_speech_recognized_event" field.</summary>
+    public const int DisableNoSpeechRecognizedEventFieldNumber = 14;
+    private bool disableNoSpeechRecognizedEvent_;
+    /// <summary>
+    /// Only used in [Participants.AnalyzeContent][google.cloud.dialogflow.v2.Participants.AnalyzeContent] and
+    /// [Participants.StreamingAnalyzeContent][google.cloud.dialogflow.v2.Participants.StreamingAnalyzeContent].
+    /// If `false` and recognition doesn't return any result, trigger
+    /// `NO_SPEECH_RECOGNIZED` event to Dialogflow agent.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool DisableNoSpeechRecognizedEvent {
+      get { return disableNoSpeechRecognizedEvent_; }
+      set {
+        disableNoSpeechRecognizedEvent_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as InputAudioConfig);
@@ -1039,6 +1061,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (Model != other.Model) return false;
       if (ModelVariant != other.ModelVariant) return false;
       if (SingleUtterance != other.SingleUtterance) return false;
+      if (DisableNoSpeechRecognizedEvent != other.DisableNoSpeechRecognizedEvent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1054,6 +1077,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (Model.Length != 0) hash ^= Model.GetHashCode();
       if (ModelVariant != global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified) hash ^= ModelVariant.GetHashCode();
       if (SingleUtterance != false) hash ^= SingleUtterance.GetHashCode();
+      if (DisableNoSpeechRecognizedEvent != false) hash ^= DisableNoSpeechRecognizedEvent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1100,6 +1124,10 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(104);
         output.WriteBool(EnableWordInfo);
       }
+      if (DisableNoSpeechRecognizedEvent != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(DisableNoSpeechRecognizedEvent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1139,6 +1167,10 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(104);
         output.WriteBool(EnableWordInfo);
       }
+      if (DisableNoSpeechRecognizedEvent != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(DisableNoSpeechRecognizedEvent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1169,6 +1201,9 @@ namespace Google.Cloud.Dialogflow.V2 {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModelVariant);
       }
       if (SingleUtterance != false) {
+        size += 1 + 1;
+      }
+      if (DisableNoSpeechRecognizedEvent != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -1204,6 +1239,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.SingleUtterance != false) {
         SingleUtterance = other.SingleUtterance;
+      }
+      if (other.DisableNoSpeechRecognizedEvent != false) {
+        DisableNoSpeechRecognizedEvent = other.DisableNoSpeechRecognizedEvent;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1255,6 +1293,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             EnableWordInfo = input.ReadBool();
             break;
           }
+          case 112: {
+            DisableNoSpeechRecognizedEvent = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1303,6 +1345,10 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 104: {
             EnableWordInfo = input.ReadBool();
+            break;
+          }
+          case 112: {
+            DisableNoSpeechRecognizedEvent = input.ReadBool();
             break;
           }
         }
@@ -2143,6 +2189,187 @@ namespace Google.Cloud.Dialogflow.V2 {
               SynthesizeSpeechConfig = new global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig();
             }
             input.ReadMessage(SynthesizeSpeechConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Configures speech transcription for [ConversationProfile][google.cloud.dialogflow.v2.ConversationProfile].
+  /// </summary>
+  public sealed partial class SpeechToTextConfig : pb::IMessage<SpeechToTextConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SpeechToTextConfig> _parser = new pb::MessageParser<SpeechToTextConfig>(() => new SpeechToTextConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SpeechToTextConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpeechToTextConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpeechToTextConfig(SpeechToTextConfig other) : this() {
+      speechModelVariant_ = other.speechModelVariant_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SpeechToTextConfig Clone() {
+      return new SpeechToTextConfig(this);
+    }
+
+    /// <summary>Field number for the "speech_model_variant" field.</summary>
+    public const int SpeechModelVariantFieldNumber = 1;
+    private global::Google.Cloud.Dialogflow.V2.SpeechModelVariant speechModelVariant_ = global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified;
+    /// <summary>
+    /// Optional. The speech model used in speech to text.
+    /// `SPEECH_MODEL_VARIANT_UNSPECIFIED`, `USE_BEST_AVAILABLE` will be treated as
+    /// `USE_ENHANCED`. It can be overridden in [AnalyzeContentRequest][google.cloud.dialogflow.v2.AnalyzeContentRequest] and
+    /// [StreamingAnalyzeContentRequest][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest] request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dialogflow.V2.SpeechModelVariant SpeechModelVariant {
+      get { return speechModelVariant_; }
+      set {
+        speechModelVariant_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SpeechToTextConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SpeechToTextConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SpeechModelVariant != other.SpeechModelVariant) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SpeechModelVariant != global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified) hash ^= SpeechModelVariant.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (SpeechModelVariant != global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) SpeechModelVariant);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SpeechModelVariant != global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) SpeechModelVariant);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (SpeechModelVariant != global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SpeechModelVariant);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SpeechToTextConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SpeechModelVariant != global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified) {
+        SpeechModelVariant = other.SpeechModelVariant;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            SpeechModelVariant = (global::Google.Cloud.Dialogflow.V2.SpeechModelVariant) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            SpeechModelVariant = (global::Google.Cloud.Dialogflow.V2.SpeechModelVariant) input.ReadEnum();
             break;
           }
         }
