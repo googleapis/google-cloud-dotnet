@@ -1,5 +1,13 @@
 # Version history
 
+# Version 3.3.0, released 2021-03-22
+
+- [Commit 9ed450c](https://github.com/googleapis/google-cloud-dotnet/commit/9ed450c): refactor: Extract RenderJsonPayload from BuildLogEntry in GoogleStackdriverTarget
+- [Commit f553511](https://github.com/googleapis/google-cloud-dotnet/commit/f553511): docs: Add documentation for trace related config options in GoogleStackdriverTarget
+- [Commit d94c27b](https://github.com/googleapis/google-cloud-dotnet/commit/d94c27b): docs: Clarify XML doc for GoogleStackdriverTarget trace related options
+- [Commit 0da1f45](https://github.com/googleapis/google-cloud-dotnet/commit/0da1f45): test: Add more unit tests around log and trace correlation
+- Commits [a106579](https://github.com/googleapis/google-cloud-dotnet/commit/a106579) and [858f161](https://github.com/googleapis/google-cloud-dotnet/commit/858f161): feat: Add support for trace information to be included with log entries
+
 # Version 3.2.0, released 2020-12-07
 
 - [Commit a0f7730](https://github.com/googleapis/google-cloud-dotnet/commit/a0f7730): docs: Move NLog configuration into docs directory and expand it
