@@ -25,93 +25,98 @@ namespace Google.Cloud.Monitoring.V3 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvbW9uaXRvcmluZy92My9zZXJ2aWNlLnByb3RvEhRnb29nbGUu",
-            "bW9uaXRvcmluZy52MxojZ29vZ2xlL2FwaS9tb25pdG9yZWRfcmVzb3VyY2Uu",
-            "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aHmdvb2dsZS9wcm90",
-            "b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90bxohZ29vZ2xlL3R5cGUvY2FsZW5kYXJfcGVyaW9kLnByb3RvIpcH",
-            "CgdTZXJ2aWNlEgwKBG5hbWUYASABKAkSFAoMZGlzcGxheV9uYW1lGAIgASgJ",
-            "EjYKBmN1c3RvbRgGIAEoCzIkLmdvb2dsZS5tb25pdG9yaW5nLnYzLlNlcnZp",
-            "Y2UuQ3VzdG9tSAASPQoKYXBwX2VuZ2luZRgHIAEoCzInLmdvb2dsZS5tb25p",
-            "dG9yaW5nLnYzLlNlcnZpY2UuQXBwRW5naW5lSAASRwoPY2xvdWRfZW5kcG9p",
-            "bnRzGAggASgLMiwuZ29vZ2xlLm1vbml0b3JpbmcudjMuU2VydmljZS5DbG91",
-            "ZEVuZHBvaW50c0gAEkcKDWNsdXN0ZXJfaXN0aW8YCSABKAsyKi5nb29nbGUu",
-            "bW9uaXRvcmluZy52My5TZXJ2aWNlLkNsdXN0ZXJJc3Rpb0ICGAFIABI9Cgpt",
-            "ZXNoX2lzdGlvGAogASgLMicuZ29vZ2xlLm1vbml0b3JpbmcudjMuU2Vydmlj",
-            "ZS5NZXNoSXN0aW9IABI6Cgl0ZWxlbWV0cnkYDSABKAsyJy5nb29nbGUubW9u",
-            "aXRvcmluZy52My5TZXJ2aWNlLlRlbGVtZXRyeRoICgZDdXN0b20aHgoJQXBw",
-            "RW5naW5lEhEKCW1vZHVsZV9pZBgBIAEoCRohCg5DbG91ZEVuZHBvaW50cxIP",
-            "CgdzZXJ2aWNlGAEgASgJGmsKDENsdXN0ZXJJc3RpbxIQCghsb2NhdGlvbhgB",
-            "IAEoCRIUCgxjbHVzdGVyX25hbWUYAiABKAkSGQoRc2VydmljZV9uYW1lc3Bh",
-            "Y2UYAyABKAkSFAoMc2VydmljZV9uYW1lGAQgASgJOgIYARpOCglNZXNoSXN0",
-            "aW8SEAoIbWVzaF91aWQYASABKAkSGQoRc2VydmljZV9uYW1lc3BhY2UYAyAB",
-            "KAkSFAoMc2VydmljZV9uYW1lGAQgASgJGiIKCVRlbGVtZXRyeRIVCg1yZXNv",
-            "dXJjZV9uYW1lGAEgASgJOqcB6kGjAQohbW9uaXRvcmluZy5nb29nbGVhcGlz",
-            "LmNvbS9TZXJ2aWNlEiVwcm9qZWN0cy97cHJvamVjdH0vc2VydmljZXMve3Nl",
-            "cnZpY2V9Ei9vcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L3NlcnZpY2Vz",
-            "L3tzZXJ2aWNlfRIjZm9sZGVycy97Zm9sZGVyfS9zZXJ2aWNlcy97c2Vydmlj",
-            "ZX0SASpCDAoKaWRlbnRpZmllciKRBQoVU2VydmljZUxldmVsT2JqZWN0aXZl",
-            "EgwKBG5hbWUYASABKAkSFAoMZGlzcGxheV9uYW1lGAsgASgJEkwKF3NlcnZp",
-            "Y2VfbGV2ZWxfaW5kaWNhdG9yGAMgASgLMisuZ29vZ2xlLm1vbml0b3Jpbmcu",
-            "djMuU2VydmljZUxldmVsSW5kaWNhdG9yEgwKBGdvYWwYBCABKAESMwoOcm9s",
-            "bGluZ19wZXJpb2QYBSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25I",
-            "ABI2Cg9jYWxlbmRhcl9wZXJpb2QYBiABKA4yGy5nb29nbGUudHlwZS5DYWxl",
-            "bmRhclBlcmlvZEgAIjQKBFZpZXcSFAoQVklFV19VTlNQRUNJRklFRBAAEggK",
-            "BEZVTEwQAhIMCghFWFBMSUNJVBABOsoC6kHGAgovbW9uaXRvcmluZy5nb29n",
-            "bGVhcGlzLmNvbS9TZXJ2aWNlTGV2ZWxPYmplY3RpdmUSVnByb2plY3RzL3tw",
-            "cm9qZWN0fS9zZXJ2aWNlcy97c2VydmljZX0vc2VydmljZUxldmVsT2JqZWN0",
-            "aXZlcy97c2VydmljZV9sZXZlbF9vYmplY3RpdmV9EmBvcmdhbml6YXRpb25z",
-            "L3tvcmdhbml6YXRpb259L3NlcnZpY2VzL3tzZXJ2aWNlfS9zZXJ2aWNlTGV2",
-            "ZWxPYmplY3RpdmVzL3tzZXJ2aWNlX2xldmVsX29iamVjdGl2ZX0SVGZvbGRl",
-            "cnMve2ZvbGRlcn0vc2VydmljZXMve3NlcnZpY2V9L3NlcnZpY2VMZXZlbE9i",
-            "amVjdGl2ZXMve3NlcnZpY2VfbGV2ZWxfb2JqZWN0aXZlfRIBKiABQggKBnBl",
-            "cmlvZCLUAQoVU2VydmljZUxldmVsSW5kaWNhdG9yEjMKCWJhc2ljX3NsaRgE",
-            "IAEoCzIeLmdvb2dsZS5tb25pdG9yaW5nLnYzLkJhc2ljU2xpSAASPgoNcmVx",
-            "dWVzdF9iYXNlZBgBIAEoCzIlLmdvb2dsZS5tb25pdG9yaW5nLnYzLlJlcXVl",
-            "c3RCYXNlZFNsaUgAEj4KDXdpbmRvd3NfYmFzZWQYAiABKAsyJS5nb29nbGUu",
-            "bW9uaXRvcmluZy52My5XaW5kb3dzQmFzZWRTbGlIAEIGCgR0eXBlIrYCCghC",
-            "YXNpY1NsaRIOCgZtZXRob2QYByADKAkSEAoIbG9jYXRpb24YCCADKAkSDwoH",
-            "dmVyc2lvbhgJIAMoCRJLCgxhdmFpbGFiaWxpdHkYAiABKAsyMy5nb29nbGUu",
-            "bW9uaXRvcmluZy52My5CYXNpY1NsaS5BdmFpbGFiaWxpdHlDcml0ZXJpYUgA",
-            "EkEKB2xhdGVuY3kYAyABKAsyLi5nb29nbGUubW9uaXRvcmluZy52My5CYXNp",
-            "Y1NsaS5MYXRlbmN5Q3JpdGVyaWFIABoWChRBdmFpbGFiaWxpdHlDcml0ZXJp",
-            "YRo/Cg9MYXRlbmN5Q3JpdGVyaWESLAoJdGhyZXNob2xkGAMgASgLMhkuZ29v",
-            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uQg4KDHNsaV9jcml0ZXJpYSIhCgVSYW5n",
-            "ZRILCgNtaW4YASABKAESCwoDbWF4GAIgASgBIqEBCg9SZXF1ZXN0QmFzZWRT",
-            "bGkSQQoQZ29vZF90b3RhbF9yYXRpbxgBIAEoCzIlLmdvb2dsZS5tb25pdG9y",
-            "aW5nLnYzLlRpbWVTZXJpZXNSYXRpb0gAEkEKEGRpc3RyaWJ1dGlvbl9jdXQY",
-            "AyABKAsyJS5nb29nbGUubW9uaXRvcmluZy52My5EaXN0cmlidXRpb25DdXRI",
-            "AEIICgZtZXRob2QiaAoPVGltZVNlcmllc1JhdGlvEhsKE2dvb2Rfc2Vydmlj",
-            "ZV9maWx0ZXIYBCABKAkSGgoSYmFkX3NlcnZpY2VfZmlsdGVyGAUgASgJEhwK",
-            "FHRvdGFsX3NlcnZpY2VfZmlsdGVyGAYgASgJIloKD0Rpc3RyaWJ1dGlvbkN1",
-            "dBIbChNkaXN0cmlidXRpb25fZmlsdGVyGAQgASgJEioKBXJhbmdlGAUgASgL",
-            "MhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuUmFuZ2UigwUKD1dpbmRvd3NCYXNl",
-            "ZFNsaRIgChZnb29kX2JhZF9tZXRyaWNfZmlsdGVyGAUgASgJSAASYAoaZ29v",
-            "ZF90b3RhbF9yYXRpb190aHJlc2hvbGQYAiABKAsyOi5nb29nbGUubW9uaXRv",
-            "cmluZy52My5XaW5kb3dzQmFzZWRTbGkuUGVyZm9ybWFuY2VUaHJlc2hvbGRI",
-            "ABJRChRtZXRyaWNfbWVhbl9pbl9yYW5nZRgGIAEoCzIxLmdvb2dsZS5tb25p",
-            "dG9yaW5nLnYzLldpbmRvd3NCYXNlZFNsaS5NZXRyaWNSYW5nZUgAElAKE21l",
-            "dHJpY19zdW1faW5fcmFuZ2UYByABKAsyMS5nb29nbGUubW9uaXRvcmluZy52",
-            "My5XaW5kb3dzQmFzZWRTbGkuTWV0cmljUmFuZ2VIABIwCg13aW5kb3dfcGVy",
-            "aW9kGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uGrABChRQZXJm",
-            "b3JtYW5jZVRocmVzaG9sZBI8CgtwZXJmb3JtYW5jZRgBIAEoCzIlLmdvb2ds",
-            "ZS5tb25pdG9yaW5nLnYzLlJlcXVlc3RCYXNlZFNsaUgAEj8KFWJhc2ljX3Ns",
-            "aV9wZXJmb3JtYW5jZRgDIAEoCzIeLmdvb2dsZS5tb25pdG9yaW5nLnYzLkJh",
-            "c2ljU2xpSAASEQoJdGhyZXNob2xkGAIgASgBQgYKBHR5cGUaTgoLTWV0cmlj",
-            "UmFuZ2USEwoLdGltZV9zZXJpZXMYASABKAkSKgoFcmFuZ2UYBCABKAsyGy5n",
-            "b29nbGUubW9uaXRvcmluZy52My5SYW5nZUISChB3aW5kb3dfY3JpdGVyaW9u",
-            "Qs4BChhjb20uZ29vZ2xlLm1vbml0b3JpbmcudjNCFlNlcnZpY2VNb25pdG9y",
-            "aW5nUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
-            "YXBpcy9tb25pdG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29nbGUuQ2xvdWQu",
-            "TW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9yaW5nXFYz6gId",
-            "R29vZ2xlOjpDbG91ZDo6TW9uaXRvcmluZzo6VjNiBnByb3RvMw=="));
+            "bW9uaXRvcmluZy52MxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoeZ29v",
+            "Z2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYv",
+            "dGltZXN0YW1wLnByb3RvGiFnb29nbGUvdHlwZS9jYWxlbmRhcl9wZXJpb2Qu",
+            "cHJvdG8i0ggKB1NlcnZpY2USDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25h",
+            "bWUYAiABKAkSNgoGY3VzdG9tGAYgASgLMiQuZ29vZ2xlLm1vbml0b3Jpbmcu",
+            "djMuU2VydmljZS5DdXN0b21IABI9CgphcHBfZW5naW5lGAcgASgLMicuZ29v",
+            "Z2xlLm1vbml0b3JpbmcudjMuU2VydmljZS5BcHBFbmdpbmVIABJHCg9jbG91",
+            "ZF9lbmRwb2ludHMYCCABKAsyLC5nb29nbGUubW9uaXRvcmluZy52My5TZXJ2",
+            "aWNlLkNsb3VkRW5kcG9pbnRzSAASQwoNY2x1c3Rlcl9pc3RpbxgJIAEoCzIq",
+            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlNlcnZpY2UuQ2x1c3RlcklzdGlvSAAS",
+            "PQoKbWVzaF9pc3RpbxgKIAEoCzInLmdvb2dsZS5tb25pdG9yaW5nLnYzLlNl",
+            "cnZpY2UuTWVzaElzdGlvSAASVgoXaXN0aW9fY2Fub25pY2FsX3NlcnZpY2UY",
+            "CyABKAsyMy5nb29nbGUubW9uaXRvcmluZy52My5TZXJ2aWNlLklzdGlvQ2Fu",
+            "b25pY2FsU2VydmljZUgAEjoKCXRlbGVtZXRyeRgNIAEoCzInLmdvb2dsZS5t",
+            "b25pdG9yaW5nLnYzLlNlcnZpY2UuVGVsZW1ldHJ5GggKBkN1c3RvbRoeCglB",
+            "cHBFbmdpbmUSEQoJbW9kdWxlX2lkGAEgASgJGiEKDkNsb3VkRW5kcG9pbnRz",
+            "Eg8KB3NlcnZpY2UYASABKAkaZwoMQ2x1c3RlcklzdGlvEhAKCGxvY2F0aW9u",
+            "GAEgASgJEhQKDGNsdXN0ZXJfbmFtZRgCIAEoCRIZChFzZXJ2aWNlX25hbWVz",
+            "cGFjZRgDIAEoCRIUCgxzZXJ2aWNlX25hbWUYBCABKAkaTgoJTWVzaElzdGlv",
+            "EhAKCG1lc2hfdWlkGAEgASgJEhkKEXNlcnZpY2VfbmFtZXNwYWNlGAMgASgJ",
+            "EhQKDHNlcnZpY2VfbmFtZRgEIAEoCRppChVJc3Rpb0Nhbm9uaWNhbFNlcnZp",
+            "Y2USEAoIbWVzaF91aWQYASABKAkSIwobY2Fub25pY2FsX3NlcnZpY2VfbmFt",
+            "ZXNwYWNlGAMgASgJEhkKEWNhbm9uaWNhbF9zZXJ2aWNlGAQgASgJGiIKCVRl",
+            "bGVtZXRyeRIVCg1yZXNvdXJjZV9uYW1lGAEgASgJOqcB6kGjAQohbW9uaXRv",
+            "cmluZy5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlEiVwcm9qZWN0cy97cHJvamVj",
+            "dH0vc2VydmljZXMve3NlcnZpY2V9Ei9vcmdhbml6YXRpb25zL3tvcmdhbml6",
+            "YXRpb259L3NlcnZpY2VzL3tzZXJ2aWNlfRIjZm9sZGVycy97Zm9sZGVyfS9z",
+            "ZXJ2aWNlcy97c2VydmljZX0SASpCDAoKaWRlbnRpZmllciKRBQoVU2Vydmlj",
+            "ZUxldmVsT2JqZWN0aXZlEgwKBG5hbWUYASABKAkSFAoMZGlzcGxheV9uYW1l",
+            "GAsgASgJEkwKF3NlcnZpY2VfbGV2ZWxfaW5kaWNhdG9yGAMgASgLMisuZ29v",
+            "Z2xlLm1vbml0b3JpbmcudjMuU2VydmljZUxldmVsSW5kaWNhdG9yEgwKBGdv",
+            "YWwYBCABKAESMwoOcm9sbGluZ19wZXJpb2QYBSABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb25IABI2Cg9jYWxlbmRhcl9wZXJpb2QYBiABKA4yGy5n",
+            "b29nbGUudHlwZS5DYWxlbmRhclBlcmlvZEgAIjQKBFZpZXcSFAoQVklFV19V",
+            "TlNQRUNJRklFRBAAEggKBEZVTEwQAhIMCghFWFBMSUNJVBABOsoC6kHGAgov",
+            "bW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlTGV2ZWxPYmplY3Rp",
+            "dmUSVnByb2plY3RzL3twcm9qZWN0fS9zZXJ2aWNlcy97c2VydmljZX0vc2Vy",
+            "dmljZUxldmVsT2JqZWN0aXZlcy97c2VydmljZV9sZXZlbF9vYmplY3RpdmV9",
+            "EmBvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L3NlcnZpY2VzL3tzZXJ2",
+            "aWNlfS9zZXJ2aWNlTGV2ZWxPYmplY3RpdmVzL3tzZXJ2aWNlX2xldmVsX29i",
+            "amVjdGl2ZX0SVGZvbGRlcnMve2ZvbGRlcn0vc2VydmljZXMve3NlcnZpY2V9",
+            "L3NlcnZpY2VMZXZlbE9iamVjdGl2ZXMve3NlcnZpY2VfbGV2ZWxfb2JqZWN0",
+            "aXZlfRIBKiABQggKBnBlcmlvZCLUAQoVU2VydmljZUxldmVsSW5kaWNhdG9y",
+            "EjMKCWJhc2ljX3NsaRgEIAEoCzIeLmdvb2dsZS5tb25pdG9yaW5nLnYzLkJh",
+            "c2ljU2xpSAASPgoNcmVxdWVzdF9iYXNlZBgBIAEoCzIlLmdvb2dsZS5tb25p",
+            "dG9yaW5nLnYzLlJlcXVlc3RCYXNlZFNsaUgAEj4KDXdpbmRvd3NfYmFzZWQY",
+            "AiABKAsyJS5nb29nbGUubW9uaXRvcmluZy52My5XaW5kb3dzQmFzZWRTbGlI",
+            "AEIGCgR0eXBlIrYCCghCYXNpY1NsaRIOCgZtZXRob2QYByADKAkSEAoIbG9j",
+            "YXRpb24YCCADKAkSDwoHdmVyc2lvbhgJIAMoCRJLCgxhdmFpbGFiaWxpdHkY",
+            "AiABKAsyMy5nb29nbGUubW9uaXRvcmluZy52My5CYXNpY1NsaS5BdmFpbGFi",
+            "aWxpdHlDcml0ZXJpYUgAEkEKB2xhdGVuY3kYAyABKAsyLi5nb29nbGUubW9u",
+            "aXRvcmluZy52My5CYXNpY1NsaS5MYXRlbmN5Q3JpdGVyaWFIABoWChRBdmFp",
+            "bGFiaWxpdHlDcml0ZXJpYRo/Cg9MYXRlbmN5Q3JpdGVyaWESLAoJdGhyZXNo",
+            "b2xkGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQg4KDHNsaV9j",
+            "cml0ZXJpYSIhCgVSYW5nZRILCgNtaW4YASABKAESCwoDbWF4GAIgASgBIqEB",
+            "Cg9SZXF1ZXN0QmFzZWRTbGkSQQoQZ29vZF90b3RhbF9yYXRpbxgBIAEoCzIl",
+            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlRpbWVTZXJpZXNSYXRpb0gAEkEKEGRp",
+            "c3RyaWJ1dGlvbl9jdXQYAyABKAsyJS5nb29nbGUubW9uaXRvcmluZy52My5E",
+            "aXN0cmlidXRpb25DdXRIAEIICgZtZXRob2QiaAoPVGltZVNlcmllc1JhdGlv",
+            "EhsKE2dvb2Rfc2VydmljZV9maWx0ZXIYBCABKAkSGgoSYmFkX3NlcnZpY2Vf",
+            "ZmlsdGVyGAUgASgJEhwKFHRvdGFsX3NlcnZpY2VfZmlsdGVyGAYgASgJIloK",
+            "D0Rpc3RyaWJ1dGlvbkN1dBIbChNkaXN0cmlidXRpb25fZmlsdGVyGAQgASgJ",
+            "EioKBXJhbmdlGAUgASgLMhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuUmFuZ2Ui",
+            "gwUKD1dpbmRvd3NCYXNlZFNsaRIgChZnb29kX2JhZF9tZXRyaWNfZmlsdGVy",
+            "GAUgASgJSAASYAoaZ29vZF90b3RhbF9yYXRpb190aHJlc2hvbGQYAiABKAsy",
+            "Oi5nb29nbGUubW9uaXRvcmluZy52My5XaW5kb3dzQmFzZWRTbGkuUGVyZm9y",
+            "bWFuY2VUaHJlc2hvbGRIABJRChRtZXRyaWNfbWVhbl9pbl9yYW5nZRgGIAEo",
+            "CzIxLmdvb2dsZS5tb25pdG9yaW5nLnYzLldpbmRvd3NCYXNlZFNsaS5NZXRy",
+            "aWNSYW5nZUgAElAKE21ldHJpY19zdW1faW5fcmFuZ2UYByABKAsyMS5nb29n",
+            "bGUubW9uaXRvcmluZy52My5XaW5kb3dzQmFzZWRTbGkuTWV0cmljUmFuZ2VI",
+            "ABIwCg13aW5kb3dfcGVyaW9kGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
+            "cmF0aW9uGrABChRQZXJmb3JtYW5jZVRocmVzaG9sZBI8CgtwZXJmb3JtYW5j",
+            "ZRgBIAEoCzIlLmdvb2dsZS5tb25pdG9yaW5nLnYzLlJlcXVlc3RCYXNlZFNs",
+            "aUgAEj8KFWJhc2ljX3NsaV9wZXJmb3JtYW5jZRgDIAEoCzIeLmdvb2dsZS5t",
+            "b25pdG9yaW5nLnYzLkJhc2ljU2xpSAASEQoJdGhyZXNob2xkGAIgASgBQgYK",
+            "BHR5cGUaTgoLTWV0cmljUmFuZ2USEwoLdGltZV9zZXJpZXMYASABKAkSKgoF",
+            "cmFuZ2UYBCABKAsyGy5nb29nbGUubW9uaXRvcmluZy52My5SYW5nZUISChB3",
+            "aW5kb3dfY3JpdGVyaW9uQs4BChhjb20uZ29vZ2xlLm1vbml0b3JpbmcudjNC",
+            "FlNlcnZpY2VNb25pdG9yaW5nUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcv",
+            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9tb25pdG9yaW5nL3YzO21vbml0b3Jpbmeq",
+            "AhpHb29nbGUuQ2xvdWQuTW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxN",
+            "b25pdG9yaW5nXFYz6gIdR29vZ2xlOjpDbG91ZDo6TW9uaXRvcmluZzo6VjNi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.CalendarPeriodReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.CalendarPeriodReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service), global::Google.Cloud.Monitoring.V3.Service.Parser, new[]{ "Name", "DisplayName", "Custom", "AppEngine", "CloudEndpoints", "ClusterIstio", "MeshIstio", "Telemetry" }, new[]{ "Identifier" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.Custom), global::Google.Cloud.Monitoring.V3.Service.Types.Custom.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service), global::Google.Cloud.Monitoring.V3.Service.Parser, new[]{ "Name", "DisplayName", "Custom", "AppEngine", "CloudEndpoints", "ClusterIstio", "MeshIstio", "IstioCanonicalService", "Telemetry" }, new[]{ "Identifier" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.Custom), global::Google.Cloud.Monitoring.V3.Service.Types.Custom.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.AppEngine), global::Google.Cloud.Monitoring.V3.Service.Types.AppEngine.Parser, new[]{ "ModuleId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.CloudEndpoints), global::Google.Cloud.Monitoring.V3.Service.Types.CloudEndpoints.Parser, new[]{ "Service" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.ClusterIstio), global::Google.Cloud.Monitoring.V3.Service.Types.ClusterIstio.Parser, new[]{ "Location", "ClusterName", "ServiceNamespace", "ServiceName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.MeshIstio), global::Google.Cloud.Monitoring.V3.Service.Types.MeshIstio.Parser, new[]{ "MeshUid", "ServiceNamespace", "ServiceName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.IstioCanonicalService), global::Google.Cloud.Monitoring.V3.Service.Types.IstioCanonicalService.Parser, new[]{ "MeshUid", "CanonicalServiceNamespace", "CanonicalService" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.Telemetry), global::Google.Cloud.Monitoring.V3.Service.Types.Telemetry.Parser, new[]{ "ResourceName" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ServiceLevelObjective), global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Parser, new[]{ "Name", "DisplayName", "ServiceLevelIndicator", "Goal", "RollingPeriod", "CalendarPeriod" }, new[]{ "Period" }, new[]{ typeof(global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ServiceLevelIndicator), global::Google.Cloud.Monitoring.V3.ServiceLevelIndicator.Parser, new[]{ "BasicSli", "RequestBased", "WindowsBased" }, new[]{ "Type" }, null, null, null),
@@ -183,6 +188,9 @@ namespace Google.Cloud.Monitoring.V3 {
           break;
         case IdentifierOneofCase.MeshIstio:
           MeshIstio = other.MeshIstio.Clone();
+          break;
+        case IdentifierOneofCase.IstioCanonicalService:
+          IstioCanonicalService = other.IstioCanonicalService.Clone();
           break;
       }
 
@@ -271,7 +279,6 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// Type used for Istio services that live in a Kubernetes cluster.
     /// </summary>
-    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Monitoring.V3.Service.Types.ClusterIstio ClusterIstio {
       get { return identifierCase_ == IdentifierOneofCase.ClusterIstio ? (global::Google.Cloud.Monitoring.V3.Service.Types.ClusterIstio) identifier_ : null; }
@@ -292,6 +299,22 @@ namespace Google.Cloud.Monitoring.V3 {
       set {
         identifier_ = value;
         identifierCase_ = value == null ? IdentifierOneofCase.None : IdentifierOneofCase.MeshIstio;
+      }
+    }
+
+    /// <summary>Field number for the "istio_canonical_service" field.</summary>
+    public const int IstioCanonicalServiceFieldNumber = 11;
+    /// <summary>
+    /// Type used for canonical services scoped to an Istio mesh.
+    /// Metrics for Istio are
+    /// [documented here](https://istio.io/latest/docs/reference/config/metrics/)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Monitoring.V3.Service.Types.IstioCanonicalService IstioCanonicalService {
+      get { return identifierCase_ == IdentifierOneofCase.IstioCanonicalService ? (global::Google.Cloud.Monitoring.V3.Service.Types.IstioCanonicalService) identifier_ : null; }
+      set {
+        identifier_ = value;
+        identifierCase_ = value == null ? IdentifierOneofCase.None : IdentifierOneofCase.IstioCanonicalService;
       }
     }
 
@@ -318,6 +341,7 @@ namespace Google.Cloud.Monitoring.V3 {
       CloudEndpoints = 8,
       ClusterIstio = 9,
       MeshIstio = 10,
+      IstioCanonicalService = 11,
     }
     private IdentifierOneofCase identifierCase_ = IdentifierOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -351,6 +375,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (!object.Equals(CloudEndpoints, other.CloudEndpoints)) return false;
       if (!object.Equals(ClusterIstio, other.ClusterIstio)) return false;
       if (!object.Equals(MeshIstio, other.MeshIstio)) return false;
+      if (!object.Equals(IstioCanonicalService, other.IstioCanonicalService)) return false;
       if (!object.Equals(Telemetry, other.Telemetry)) return false;
       if (IdentifierCase != other.IdentifierCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -366,6 +391,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (identifierCase_ == IdentifierOneofCase.CloudEndpoints) hash ^= CloudEndpoints.GetHashCode();
       if (identifierCase_ == IdentifierOneofCase.ClusterIstio) hash ^= ClusterIstio.GetHashCode();
       if (identifierCase_ == IdentifierOneofCase.MeshIstio) hash ^= MeshIstio.GetHashCode();
+      if (identifierCase_ == IdentifierOneofCase.IstioCanonicalService) hash ^= IstioCanonicalService.GetHashCode();
       if (telemetry_ != null) hash ^= Telemetry.GetHashCode();
       hash ^= (int) identifierCase_;
       if (_unknownFields != null) {
@@ -412,6 +438,10 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(82);
         output.WriteMessage(MeshIstio);
       }
+      if (identifierCase_ == IdentifierOneofCase.IstioCanonicalService) {
+        output.WriteRawTag(90);
+        output.WriteMessage(IstioCanonicalService);
+      }
       if (telemetry_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(Telemetry);
@@ -453,6 +483,10 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(82);
         output.WriteMessage(MeshIstio);
       }
+      if (identifierCase_ == IdentifierOneofCase.IstioCanonicalService) {
+        output.WriteRawTag(90);
+        output.WriteMessage(IstioCanonicalService);
+      }
       if (telemetry_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(Telemetry);
@@ -486,6 +520,9 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (identifierCase_ == IdentifierOneofCase.MeshIstio) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MeshIstio);
+      }
+      if (identifierCase_ == IdentifierOneofCase.IstioCanonicalService) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IstioCanonicalService);
       }
       if (telemetry_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Telemetry);
@@ -543,6 +580,12 @@ namespace Google.Cloud.Monitoring.V3 {
             MeshIstio = new global::Google.Cloud.Monitoring.V3.Service.Types.MeshIstio();
           }
           MeshIstio.MergeFrom(other.MeshIstio);
+          break;
+        case IdentifierOneofCase.IstioCanonicalService:
+          if (IstioCanonicalService == null) {
+            IstioCanonicalService = new global::Google.Cloud.Monitoring.V3.Service.Types.IstioCanonicalService();
+          }
+          IstioCanonicalService.MergeFrom(other.IstioCanonicalService);
           break;
       }
 
@@ -611,6 +654,15 @@ namespace Google.Cloud.Monitoring.V3 {
             }
             input.ReadMessage(subBuilder);
             MeshIstio = subBuilder;
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.Monitoring.V3.Service.Types.IstioCanonicalService subBuilder = new global::Google.Cloud.Monitoring.V3.Service.Types.IstioCanonicalService();
+            if (identifierCase_ == IdentifierOneofCase.IstioCanonicalService) {
+              subBuilder.MergeFrom(IstioCanonicalService);
+            }
+            input.ReadMessage(subBuilder);
+            IstioCanonicalService = subBuilder;
             break;
           }
           case 106: {
@@ -685,6 +737,15 @@ namespace Google.Cloud.Monitoring.V3 {
             }
             input.ReadMessage(subBuilder);
             MeshIstio = subBuilder;
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.Monitoring.V3.Service.Types.IstioCanonicalService subBuilder = new global::Google.Cloud.Monitoring.V3.Service.Types.IstioCanonicalService();
+            if (identifierCase_ == IdentifierOneofCase.IstioCanonicalService) {
+              subBuilder.MergeFrom(IstioCanonicalService);
+            }
+            input.ReadMessage(subBuilder);
+            IstioCanonicalService = subBuilder;
             break;
           }
           case 106: {
@@ -1205,9 +1266,9 @@ namespace Google.Cloud.Monitoring.V3 {
 
       /// <summary>
       /// Istio service scoped to a single Kubernetes cluster. Learn more at
-      /// http://istio.io.
+      /// https://istio.io. Clusters running OSS Istio will have their services
+      /// ingested as this type.
       /// </summary>
-      [global::System.ObsoleteAttribute]
       public sealed partial class ClusterIstio : pb::IMessage<ClusterIstio>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1507,7 +1568,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
-      /// Istio service scoped to an Istio mesh
+      /// Istio service scoped to an Istio mesh. Anthos clusters running ASM &lt; 1.6.8
+      /// will have their services ingested as this type.
       /// </summary>
       public sealed partial class MeshIstio : pb::IMessage<MeshIstio>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1766,6 +1828,271 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
+      /// Canonical service scoped to an Istio mesh. Anthos clusters running ASM >=
+      /// 1.6.8 will have their services ingested as this type.
+      /// </summary>
+      public sealed partial class IstioCanonicalService : pb::IMessage<IstioCanonicalService>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<IstioCanonicalService> _parser = new pb::MessageParser<IstioCanonicalService>(() => new IstioCanonicalService());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<IstioCanonicalService> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Monitoring.V3.Service.Descriptor.NestedTypes[5]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public IstioCanonicalService() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public IstioCanonicalService(IstioCanonicalService other) : this() {
+          meshUid_ = other.meshUid_;
+          canonicalServiceNamespace_ = other.canonicalServiceNamespace_;
+          canonicalService_ = other.canonicalService_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public IstioCanonicalService Clone() {
+          return new IstioCanonicalService(this);
+        }
+
+        /// <summary>Field number for the "mesh_uid" field.</summary>
+        public const int MeshUidFieldNumber = 1;
+        private string meshUid_ = "";
+        /// <summary>
+        /// Identifier for the Istio mesh in which this canonical service is defined.
+        /// Corresponds to the `mesh_uid` metric label in
+        /// [Istio metrics](https://cloud.google.com/monitoring/api/metrics_istio).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string MeshUid {
+          get { return meshUid_; }
+          set {
+            meshUid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "canonical_service_namespace" field.</summary>
+        public const int CanonicalServiceNamespaceFieldNumber = 3;
+        private string canonicalServiceNamespace_ = "";
+        /// <summary>
+        /// The namespace of the canonical service underlying this service.
+        /// Corresponds to the `destination_canonical_service_namespace` metric
+        /// label in [Istio
+        /// metrics](https://cloud.google.com/monitoring/api/metrics_istio).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string CanonicalServiceNamespace {
+          get { return canonicalServiceNamespace_; }
+          set {
+            canonicalServiceNamespace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "canonical_service" field.</summary>
+        public const int CanonicalServiceFieldNumber = 4;
+        private string canonicalService_ = "";
+        /// <summary>
+        /// The name of the canonical service underlying this service.
+        /// Corresponds to the `destination_canonical_service_name` metric label in
+        /// label in [Istio
+        /// metrics](https://cloud.google.com/monitoring/api/metrics_istio).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string CanonicalService {
+          get { return canonicalService_; }
+          set {
+            canonicalService_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as IstioCanonicalService);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(IstioCanonicalService other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (MeshUid != other.MeshUid) return false;
+          if (CanonicalServiceNamespace != other.CanonicalServiceNamespace) return false;
+          if (CanonicalService != other.CanonicalService) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (MeshUid.Length != 0) hash ^= MeshUid.GetHashCode();
+          if (CanonicalServiceNamespace.Length != 0) hash ^= CanonicalServiceNamespace.GetHashCode();
+          if (CanonicalService.Length != 0) hash ^= CanonicalService.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (MeshUid.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(MeshUid);
+          }
+          if (CanonicalServiceNamespace.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(CanonicalServiceNamespace);
+          }
+          if (CanonicalService.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(CanonicalService);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (MeshUid.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(MeshUid);
+          }
+          if (CanonicalServiceNamespace.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(CanonicalServiceNamespace);
+          }
+          if (CanonicalService.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(CanonicalService);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (MeshUid.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(MeshUid);
+          }
+          if (CanonicalServiceNamespace.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(CanonicalServiceNamespace);
+          }
+          if (CanonicalService.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(CanonicalService);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(IstioCanonicalService other) {
+          if (other == null) {
+            return;
+          }
+          if (other.MeshUid.Length != 0) {
+            MeshUid = other.MeshUid;
+          }
+          if (other.CanonicalServiceNamespace.Length != 0) {
+            CanonicalServiceNamespace = other.CanonicalServiceNamespace;
+          }
+          if (other.CanonicalService.Length != 0) {
+            CanonicalService = other.CanonicalService;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                MeshUid = input.ReadString();
+                break;
+              }
+              case 26: {
+                CanonicalServiceNamespace = input.ReadString();
+                break;
+              }
+              case 34: {
+                CanonicalService = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                MeshUid = input.ReadString();
+                break;
+              }
+              case 26: {
+                CanonicalServiceNamespace = input.ReadString();
+                break;
+              }
+              case 34: {
+                CanonicalService = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// Configuration for how to query telemetry on a Service.
       /// </summary>
       public sealed partial class Telemetry : pb::IMessage<Telemetry>
@@ -1780,7 +2107,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Monitoring.V3.Service.Descriptor.NestedTypes[5]; }
+          get { return global::Google.Cloud.Monitoring.V3.Service.Descriptor.NestedTypes[6]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

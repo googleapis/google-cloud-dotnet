@@ -46,10 +46,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -76,10 +75,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -107,10 +105,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -136,10 +133,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -167,10 +163,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -196,10 +191,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -227,10 +221,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -256,10 +249,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -287,10 +279,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -316,10 +307,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -347,10 +337,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -376,10 +365,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -406,10 +394,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -434,10 +421,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -464,10 +450,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -492,10 +477,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -522,10 +506,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -550,10 +533,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -580,10 +562,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -608,10 +589,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -639,10 +619,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.UpdateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -668,10 +647,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.UpdateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -698,10 +676,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.UpdateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -726,10 +703,9 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Custom = new Service.Types.Custom(),
                 AppEngine = new Service.Types.AppEngine(),
                 CloudEndpoints = new Service.Types.CloudEndpoints(),
-#pragma warning disable CS0612
                 ClusterIstio = new Service.Types.ClusterIstio(),
-#pragma warning restore CS0612
                 MeshIstio = new Service.Types.MeshIstio(),
+                IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
             };
             mockGrpcClient.Setup(x => x.UpdateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));

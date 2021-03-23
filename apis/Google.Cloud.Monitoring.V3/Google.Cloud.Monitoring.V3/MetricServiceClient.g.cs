@@ -1867,9 +1867,12 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The project, organization or folder on which to execute the request. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
+        /// organizations/[ORGANIZATION_ID]
+        /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
         /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
@@ -1913,9 +1916,12 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The project, organization or folder on which to execute the request. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
+        /// organizations/[ORGANIZATION_ID]
+        /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
         /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
@@ -1959,9 +1965,12 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The project, organization or folder on which to execute the request. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
+        /// organizations/[ORGANIZATION_ID]
+        /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
         /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
@@ -2005,9 +2014,12 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The project, organization or folder on which to execute the request. The
+        /// format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
+        /// organizations/[ORGANIZATION_ID]
+        /// folders/[FOLDER_ID]
         /// </param>
         /// <param name="filter">
         /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
@@ -2040,6 +2052,202 @@ namespace Google.Cloud.Monitoring.V3
             ListTimeSeriesAsync(new ListTimeSeriesRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
+                View = view,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The project, organization or folder on which to execute the request. The
+        /// format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// organizations/[ORGANIZATION_ID]
+        /// folders/[FOLDER_ID]
+        /// </param>
+        /// <param name="filter">
+        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+        /// that specifies which time series should be returned.  The filter must
+        /// specify a single metric type, and can additionally specify metric labels
+        /// and other information. For example:
+        /// 
+        /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
+        /// metric.labels.instance_name = "my-instance-name"
+        /// </param>
+        /// <param name="interval">
+        /// Required. The time interval for which results should be returned. Only time series
+        /// that contain data points in the specified interval are included
+        /// in the response.
+        /// </param>
+        /// <param name="view">
+        /// Required. Specifies which information is returned about the time series.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TimeSeries"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(gagr::OrganizationName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTimeSeries(new ListTimeSeriesRequest
+            {
+                OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
+                View = view,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The project, organization or folder on which to execute the request. The
+        /// format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// organizations/[ORGANIZATION_ID]
+        /// folders/[FOLDER_ID]
+        /// </param>
+        /// <param name="filter">
+        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+        /// that specifies which time series should be returned.  The filter must
+        /// specify a single metric type, and can additionally specify metric labels
+        /// and other information. For example:
+        /// 
+        /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
+        /// metric.labels.instance_name = "my-instance-name"
+        /// </param>
+        /// <param name="interval">
+        /// Required. The time interval for which results should be returned. Only time series
+        /// that contain data points in the specified interval are included
+        /// in the response.
+        /// </param>
+        /// <param name="view">
+        /// Required. Specifies which information is returned about the time series.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(gagr::OrganizationName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTimeSeriesAsync(new ListTimeSeriesRequest
+            {
+                OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
+                View = view,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The project, organization or folder on which to execute the request. The
+        /// format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// organizations/[ORGANIZATION_ID]
+        /// folders/[FOLDER_ID]
+        /// </param>
+        /// <param name="filter">
+        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+        /// that specifies which time series should be returned.  The filter must
+        /// specify a single metric type, and can additionally specify metric labels
+        /// and other information. For example:
+        /// 
+        /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
+        /// metric.labels.instance_name = "my-instance-name"
+        /// </param>
+        /// <param name="interval">
+        /// Required. The time interval for which results should be returned. Only time series
+        /// that contain data points in the specified interval are included
+        /// in the response.
+        /// </param>
+        /// <param name="view">
+        /// Required. Specifies which information is returned about the time series.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TimeSeries"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(gagr::FolderName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTimeSeries(new ListTimeSeriesRequest
+            {
+                FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
+                View = view,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists time series that match a filter. This method does not require a Workspace.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The project, organization or folder on which to execute the request. The
+        /// format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// organizations/[ORGANIZATION_ID]
+        /// folders/[FOLDER_ID]
+        /// </param>
+        /// <param name="filter">
+        /// Required. A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
+        /// that specifies which time series should be returned.  The filter must
+        /// specify a single metric type, and can additionally specify metric labels
+        /// and other information. For example:
+        /// 
+        /// metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
+        /// metric.labels.instance_name = "my-instance-name"
+        /// </param>
+        /// <param name="interval">
+        /// Required. The time interval for which results should be returned. Only time series
+        /// that contain data points in the specified interval are included
+        /// in the response.
+        /// </param>
+        /// <param name="view">
+        /// Required. Specifies which information is returned about the time series.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(gagr::FolderName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListTimeSeriesAsync(new ListTimeSeriesRequest
+            {
+                FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 Interval = gax::GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                 View = view,

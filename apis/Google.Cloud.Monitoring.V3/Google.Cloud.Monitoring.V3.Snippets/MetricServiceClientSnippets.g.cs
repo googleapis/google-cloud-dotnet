@@ -1660,6 +1660,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 OrderBy = "",
                 View = ListTimeSeriesRequest.Types.TimeSeriesView.Full,
                 ProjectName = ProjectName.FromProject("[PROJECT]"),
+                SecondaryAggregation = new Aggregation(),
             };
             // Make the request
             PagedEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeries(request);
@@ -1713,6 +1714,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
                 OrderBy = "",
                 View = ListTimeSeriesRequest.Types.TimeSeriesView.Full,
                 ProjectName = ProjectName.FromProject("[PROJECT]"),
+                SecondaryAggregation = new Aggregation(),
             };
             // Make the request
             PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeriesAsync(request);
@@ -1848,7 +1850,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         }
 
         /// <summary>Snippet for ListTimeSeries</summary>
-        public void ListTimeSeriesResourceNames()
+        public void ListTimeSeriesResourceNames1()
         {
             // Snippet: ListTimeSeries(ProjectName, string, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, string, int?, CallSettings)
             // Create client
@@ -1896,13 +1898,205 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         }
 
         /// <summary>Snippet for ListTimeSeries</summary>
-        public async Task ListTimeSeriesResourceNamesAsync()
+        public async Task ListTimeSeriesResourceNames1Async()
         {
             // Snippet: ListTimeSeriesAsync(ProjectName, string, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, string, int?, CallSettings)
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName name = ProjectName.FromProject("[PROJECT]");
+            string filter = "";
+            TimeInterval interval = new TimeInterval();
+            ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
+            // Make the request
+            PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeriesAsync(name, filter, interval, view);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TimeSeries item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTimeSeriesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TimeSeries item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TimeSeries> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TimeSeries item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTimeSeries</summary>
+        public void ListTimeSeriesResourceNames2()
+        {
+            // Snippet: ListTimeSeries(OrganizationName, string, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, string, int?, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            OrganizationName name = OrganizationName.FromOrganization("[ORGANIZATION]");
+            string filter = "";
+            TimeInterval interval = new TimeInterval();
+            ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
+            // Make the request
+            PagedEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeries(name, filter, interval, view);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TimeSeries item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTimeSeriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TimeSeries item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TimeSeries> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TimeSeries item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTimeSeries</summary>
+        public async Task ListTimeSeriesResourceNames2Async()
+        {
+            // Snippet: ListTimeSeriesAsync(OrganizationName, string, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, string, int?, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName name = OrganizationName.FromOrganization("[ORGANIZATION]");
+            string filter = "";
+            TimeInterval interval = new TimeInterval();
+            ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
+            // Make the request
+            PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeriesAsync(name, filter, interval, view);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((TimeSeries item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTimeSeriesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TimeSeries item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TimeSeries> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TimeSeries item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTimeSeries</summary>
+        public void ListTimeSeriesResourceNames3()
+        {
+            // Snippet: ListTimeSeries(FolderName, string, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, string, int?, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            FolderName name = FolderName.FromFolder("[FOLDER]");
+            string filter = "";
+            TimeInterval interval = new TimeInterval();
+            ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
+            // Make the request
+            PagedEnumerable<ListTimeSeriesResponse, TimeSeries> response = metricServiceClient.ListTimeSeries(name, filter, interval, view);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (TimeSeries item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTimeSeriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (TimeSeries item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TimeSeries> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TimeSeries item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTimeSeries</summary>
+        public async Task ListTimeSeriesResourceNames3Async()
+        {
+            // Snippet: ListTimeSeriesAsync(FolderName, string, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, string, int?, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderName name = FolderName.FromFolder("[FOLDER]");
             string filter = "";
             TimeInterval interval = new TimeInterval();
             ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;

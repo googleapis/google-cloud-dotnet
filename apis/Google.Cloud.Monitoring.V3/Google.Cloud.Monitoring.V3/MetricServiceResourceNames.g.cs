@@ -751,6 +751,554 @@ namespace Google.Cloud.Monitoring.V3
         public static bool operator !=(MonitoredResourceDescriptorName a, MonitoredResourceDescriptorName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>Workspace</c> resource.</summary>
+    public sealed partial class WorkspaceName : gax::IResourceName, sys::IEquatable<WorkspaceName>
+    {
+        /// <summary>The possible contents of <see cref="WorkspaceName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>projects/{project}</c>.</summary>
+            Project = 1,
+
+            /// <summary>A resource name with pattern <c>workspaces/{workspace}</c>.</summary>
+            Workspace = 2,
+        }
+
+        private static gax::PathTemplate s_project = new gax::PathTemplate("projects/{project}");
+
+        private static gax::PathTemplate s_workspace = new gax::PathTemplate("workspaces/{workspace}");
+
+        /// <summary>Creates a <see cref="WorkspaceName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="WorkspaceName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static WorkspaceName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new WorkspaceName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>Creates a <see cref="WorkspaceName"/> with the pattern <c>projects/{project}</c>.</summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="WorkspaceName"/> constructed from the provided ids.</returns>
+        public static WorkspaceName FromProject(string projectId) =>
+            new WorkspaceName(ResourceNameType.Project, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)));
+
+        /// <summary>Creates a <see cref="WorkspaceName"/> with the pattern <c>workspaces/{workspace}</c>.</summary>
+        /// <param name="workspaceId">The <c>Workspace</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="WorkspaceName"/> constructed from the provided ids.</returns>
+        public static WorkspaceName FromWorkspace(string workspaceId) =>
+            new WorkspaceName(ResourceNameType.Workspace, workspaceId: gax::GaxPreconditions.CheckNotNullOrEmpty(workspaceId, nameof(workspaceId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="WorkspaceName"/> with pattern
+        /// <c>projects/{project}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="WorkspaceName"/> with pattern <c>projects/{project}</c>.
+        /// </returns>
+        public static string Format(string projectId) => FormatProject(projectId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="WorkspaceName"/> with pattern
+        /// <c>projects/{project}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="WorkspaceName"/> with pattern <c>projects/{project}</c>.
+        /// </returns>
+        public static string FormatProject(string projectId) =>
+            s_project.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="WorkspaceName"/> with pattern
+        /// <c>workspaces/{workspace}</c>.
+        /// </summary>
+        /// <param name="workspaceId">The <c>Workspace</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="WorkspaceName"/> with pattern <c>workspaces/{workspace}</c>.
+        /// </returns>
+        public static string FormatWorkspace(string workspaceId) =>
+            s_workspace.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(workspaceId, nameof(workspaceId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="WorkspaceName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}</c></description></item>
+        /// <item><description><c>workspaces/{workspace}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="workspaceName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="WorkspaceName"/> if successful.</returns>
+        public static WorkspaceName Parse(string workspaceName) => Parse(workspaceName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="WorkspaceName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}</c></description></item>
+        /// <item><description><c>workspaces/{workspace}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="workspaceName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="WorkspaceName"/> if successful.</returns>
+        public static WorkspaceName Parse(string workspaceName, bool allowUnparsed) =>
+            TryParse(workspaceName, allowUnparsed, out WorkspaceName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="WorkspaceName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}</c></description></item>
+        /// <item><description><c>workspaces/{workspace}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="workspaceName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="WorkspaceName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string workspaceName, out WorkspaceName result) => TryParse(workspaceName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="WorkspaceName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}</c></description></item>
+        /// <item><description><c>workspaces/{workspace}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="workspaceName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="WorkspaceName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string workspaceName, bool allowUnparsed, out WorkspaceName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(workspaceName, nameof(workspaceName));
+            gax::TemplatedResourceName resourceName;
+            if (s_project.TryParseName(workspaceName, out resourceName))
+            {
+                result = FromProject(resourceName[0]);
+                return true;
+            }
+            if (s_workspace.TryParseName(workspaceName, out resourceName))
+            {
+                result = FromWorkspace(resourceName[0]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(workspaceName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private WorkspaceName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string projectId = null, string workspaceId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            ProjectId = projectId;
+            WorkspaceId = workspaceId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="WorkspaceName"/> class from the component parts of pattern
+        /// <c>projects/{project}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        public WorkspaceName(string projectId) : this(ResourceNameType.Project, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Workspace</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string WorkspaceId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.Project: return s_project.Expand(ProjectId);
+                case ResourceNameType.Workspace: return s_workspace.Expand(WorkspaceId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as WorkspaceName);
+
+        /// <inheritdoc/>
+        public bool Equals(WorkspaceName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(WorkspaceName a, WorkspaceName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(WorkspaceName a, WorkspaceName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>TimeSeries</c> resource.</summary>
+    public sealed partial class TimeSeriesName : gax::IResourceName, sys::IEquatable<TimeSeriesName>
+    {
+        /// <summary>The possible contents of <see cref="TimeSeriesName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>projects/{project}/timeSeries/{time_series}</c>.</summary>
+            ProjectTimeSeries = 1,
+
+            /// <summary>
+            /// A resource name with pattern <c>organizations/{organization}/timeSeries/{time_series}</c>.
+            /// </summary>
+            OrganizationTimeSeries = 2,
+
+            /// <summary>A resource name with pattern <c>folders/{folder}/timeSeries/{time_series}</c>.</summary>
+            FolderTimeSeries = 3,
+        }
+
+        private static gax::PathTemplate s_projectTimeSeries = new gax::PathTemplate("projects/{project}/timeSeries/{time_series}");
+
+        private static gax::PathTemplate s_organizationTimeSeries = new gax::PathTemplate("organizations/{organization}/timeSeries/{time_series}");
+
+        private static gax::PathTemplate s_folderTimeSeries = new gax::PathTemplate("folders/{folder}/timeSeries/{time_series}");
+
+        /// <summary>Creates a <see cref="TimeSeriesName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="TimeSeriesName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static TimeSeriesName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new TimeSeriesName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="TimeSeriesName"/> with the pattern <c>projects/{project}/timeSeries/{time_series}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="timeSeriesId">The <c>TimeSeries</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="TimeSeriesName"/> constructed from the provided ids.</returns>
+        public static TimeSeriesName FromProjectTimeSeries(string projectId, string timeSeriesId) =>
+            new TimeSeriesName(ResourceNameType.ProjectTimeSeries, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), timeSeriesId: gax::GaxPreconditions.CheckNotNullOrEmpty(timeSeriesId, nameof(timeSeriesId)));
+
+        /// <summary>
+        /// Creates a <see cref="TimeSeriesName"/> with the pattern
+        /// <c>organizations/{organization}/timeSeries/{time_series}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="timeSeriesId">The <c>TimeSeries</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="TimeSeriesName"/> constructed from the provided ids.</returns>
+        public static TimeSeriesName FromOrganizationTimeSeries(string organizationId, string timeSeriesId) =>
+            new TimeSeriesName(ResourceNameType.OrganizationTimeSeries, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), timeSeriesId: gax::GaxPreconditions.CheckNotNullOrEmpty(timeSeriesId, nameof(timeSeriesId)));
+
+        /// <summary>
+        /// Creates a <see cref="TimeSeriesName"/> with the pattern <c>folders/{folder}/timeSeries/{time_series}</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="timeSeriesId">The <c>TimeSeries</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="TimeSeriesName"/> constructed from the provided ids.</returns>
+        public static TimeSeriesName FromFolderTimeSeries(string folderId, string timeSeriesId) =>
+            new TimeSeriesName(ResourceNameType.FolderTimeSeries, folderId: gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), timeSeriesId: gax::GaxPreconditions.CheckNotNullOrEmpty(timeSeriesId, nameof(timeSeriesId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TimeSeriesName"/> with pattern
+        /// <c>projects/{project}/timeSeries/{time_series}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="timeSeriesId">The <c>TimeSeries</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TimeSeriesName"/> with pattern
+        /// <c>projects/{project}/timeSeries/{time_series}</c>.
+        /// </returns>
+        public static string Format(string projectId, string timeSeriesId) => FormatProjectTimeSeries(projectId, timeSeriesId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TimeSeriesName"/> with pattern
+        /// <c>projects/{project}/timeSeries/{time_series}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="timeSeriesId">The <c>TimeSeries</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TimeSeriesName"/> with pattern
+        /// <c>projects/{project}/timeSeries/{time_series}</c>.
+        /// </returns>
+        public static string FormatProjectTimeSeries(string projectId, string timeSeriesId) =>
+            s_projectTimeSeries.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(timeSeriesId, nameof(timeSeriesId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TimeSeriesName"/> with pattern
+        /// <c>organizations/{organization}/timeSeries/{time_series}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="timeSeriesId">The <c>TimeSeries</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TimeSeriesName"/> with pattern
+        /// <c>organizations/{organization}/timeSeries/{time_series}</c>.
+        /// </returns>
+        public static string FormatOrganizationTimeSeries(string organizationId, string timeSeriesId) =>
+            s_organizationTimeSeries.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(timeSeriesId, nameof(timeSeriesId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TimeSeriesName"/> with pattern
+        /// <c>folders/{folder}/timeSeries/{time_series}</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="timeSeriesId">The <c>TimeSeries</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TimeSeriesName"/> with pattern
+        /// <c>folders/{folder}/timeSeries/{time_series}</c>.
+        /// </returns>
+        public static string FormatFolderTimeSeries(string folderId, string timeSeriesId) =>
+            s_folderTimeSeries.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), gax::GaxPreconditions.CheckNotNullOrEmpty(timeSeriesId, nameof(timeSeriesId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="TimeSeriesName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/timeSeries/{time_series}</c></description></item>
+        /// <item><description><c>organizations/{organization}/timeSeries/{time_series}</c></description></item>
+        /// <item><description><c>folders/{folder}/timeSeries/{time_series}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="timeSeriesName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="TimeSeriesName"/> if successful.</returns>
+        public static TimeSeriesName Parse(string timeSeriesName) => Parse(timeSeriesName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="TimeSeriesName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/timeSeries/{time_series}</c></description></item>
+        /// <item><description><c>organizations/{organization}/timeSeries/{time_series}</c></description></item>
+        /// <item><description><c>folders/{folder}/timeSeries/{time_series}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="timeSeriesName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="TimeSeriesName"/> if successful.</returns>
+        public static TimeSeriesName Parse(string timeSeriesName, bool allowUnparsed) =>
+            TryParse(timeSeriesName, allowUnparsed, out TimeSeriesName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TimeSeriesName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/timeSeries/{time_series}</c></description></item>
+        /// <item><description><c>organizations/{organization}/timeSeries/{time_series}</c></description></item>
+        /// <item><description><c>folders/{folder}/timeSeries/{time_series}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="timeSeriesName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TimeSeriesName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string timeSeriesName, out TimeSeriesName result) =>
+            TryParse(timeSeriesName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TimeSeriesName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/timeSeries/{time_series}</c></description></item>
+        /// <item><description><c>organizations/{organization}/timeSeries/{time_series}</c></description></item>
+        /// <item><description><c>folders/{folder}/timeSeries/{time_series}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="timeSeriesName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TimeSeriesName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string timeSeriesName, bool allowUnparsed, out TimeSeriesName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(timeSeriesName, nameof(timeSeriesName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectTimeSeries.TryParseName(timeSeriesName, out resourceName))
+            {
+                result = FromProjectTimeSeries(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (s_organizationTimeSeries.TryParseName(timeSeriesName, out resourceName))
+            {
+                result = FromOrganizationTimeSeries(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (s_folderTimeSeries.TryParseName(timeSeriesName, out resourceName))
+            {
+                result = FromFolderTimeSeries(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(timeSeriesName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private TimeSeriesName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string folderId = null, string organizationId = null, string projectId = null, string timeSeriesId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            FolderId = folderId;
+            OrganizationId = organizationId;
+            ProjectId = projectId;
+            TimeSeriesId = timeSeriesId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="TimeSeriesName"/> class from the component parts of pattern
+        /// <c>projects/{project}/timeSeries/{time_series}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="timeSeriesId">The <c>TimeSeries</c> ID. Must not be <c>null</c> or empty.</param>
+        public TimeSeriesName(string projectId, string timeSeriesId) : this(ResourceNameType.ProjectTimeSeries, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), timeSeriesId: gax::GaxPreconditions.CheckNotNullOrEmpty(timeSeriesId, nameof(timeSeriesId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Folder</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string FolderId { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>TimeSeries</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string TimeSeriesId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectTimeSeries: return s_projectTimeSeries.Expand(ProjectId, TimeSeriesId);
+                case ResourceNameType.OrganizationTimeSeries: return s_organizationTimeSeries.Expand(OrganizationId, TimeSeriesId);
+                case ResourceNameType.FolderTimeSeries: return s_folderTimeSeries.Expand(FolderId, TimeSeriesId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as TimeSeriesName);
+
+        /// <inheritdoc/>
+        public bool Equals(TimeSeriesName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(TimeSeriesName a, TimeSeriesName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(TimeSeriesName a, TimeSeriesName b) => !(a == b);
+    }
+
     public partial class ListMonitoredResourceDescriptorsRequest
     {
         /// <summary>
@@ -1030,6 +1578,52 @@ namespace Google.Cloud.Monitoring.V3
         public gagr::ProjectName ProjectName
         {
             get => string.IsNullOrEmpty(Name) ? null : gagr::ProjectName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::OrganizationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gagr::OrganizationName OrganizationName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gagr::OrganizationName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gagr::FolderName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gagr::FolderName FolderName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gagr::FolderName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Name))
+                {
+                    return null;
+                }
+                if (gagr::ProjectName.TryParse(Name, out gagr::ProjectName project))
+                {
+                    return project;
+                }
+                if (gagr::OrganizationName.TryParse(Name, out gagr::OrganizationName organization))
+                {
+                    return organization;
+                }
+                if (gagr::FolderName.TryParse(Name, out gagr::FolderName folder))
+                {
+                    return folder;
+                }
+                return gax::UnparsedResourceName.Parse(Name);
+            }
             set => Name = value?.ToString() ?? "";
         }
     }

@@ -31,7 +31,7 @@ namespace Google.Cloud.Monitoring.V3 {
             "bGUvbW9uaXRvcmluZy92My9jb21tb24ucHJvdG8aHmdvb2dsZS9wcm90b2J1",
             "Zi9kdXJhdGlvbi5wcm90byJuCgVQb2ludBI0CghpbnRlcnZhbBgBIAEoCzIi",
             "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlRpbWVJbnRlcnZhbBIvCgV2YWx1ZRgC",
-            "IAEoCzIgLmdvb2dsZS5tb25pdG9yaW5nLnYzLlR5cGVkVmFsdWUiwQIKClRp",
+            "IAEoCzIgLmdvb2dsZS5tb25pdG9yaW5nLnYzLlR5cGVkVmFsdWUizwIKClRp",
             "bWVTZXJpZXMSIgoGbWV0cmljGAEgASgLMhIuZ29vZ2xlLmFwaS5NZXRyaWMS",
             "LwoIcmVzb3VyY2UYAiABKAsyHS5nb29nbGUuYXBpLk1vbml0b3JlZFJlc291",
             "cmNlEjcKCG1ldGFkYXRhGAcgASgLMiUuZ29vZ2xlLmFwaS5Nb25pdG9yZWRS",
@@ -39,41 +39,41 @@ namespace Google.Cloud.Monitoring.V3 {
             "LmFwaS5NZXRyaWNEZXNjcmlwdG9yLk1ldHJpY0tpbmQSOgoKdmFsdWVfdHlw",
             "ZRgEIAEoDjImLmdvb2dsZS5hcGkuTWV0cmljRGVzY3JpcHRvci5WYWx1ZVR5",
             "cGUSKwoGcG9pbnRzGAUgAygLMhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuUG9p",
-            "bnQiwAIKFFRpbWVTZXJpZXNEZXNjcmlwdG9yEjYKEWxhYmVsX2Rlc2NyaXB0",
-            "b3JzGAEgAygLMhsuZ29vZ2xlLmFwaS5MYWJlbERlc2NyaXB0b3ISVQoRcG9p",
-            "bnRfZGVzY3JpcHRvcnMYBSADKAsyOi5nb29nbGUubW9uaXRvcmluZy52My5U",
-            "aW1lU2VyaWVzRGVzY3JpcHRvci5WYWx1ZURlc2NyaXB0b3IamAEKD1ZhbHVl",
-            "RGVzY3JpcHRvchILCgNrZXkYASABKAkSOgoKdmFsdWVfdHlwZRgCIAEoDjIm",
-            "Lmdvb2dsZS5hcGkuTWV0cmljRGVzY3JpcHRvci5WYWx1ZVR5cGUSPAoLbWV0",
-            "cmljX2tpbmQYAyABKA4yJy5nb29nbGUuYXBpLk1ldHJpY0Rlc2NyaXB0b3Iu",
-            "TWV0cmljS2luZCKGAgoOVGltZVNlcmllc0RhdGESNgoMbGFiZWxfdmFsdWVz",
-            "GAEgAygLMiAuZ29vZ2xlLm1vbml0b3JpbmcudjMuTGFiZWxWYWx1ZRJCCgpw",
-            "b2ludF9kYXRhGAIgAygLMi4uZ29vZ2xlLm1vbml0b3JpbmcudjMuVGltZVNl",
-            "cmllc0RhdGEuUG9pbnREYXRhGngKCVBvaW50RGF0YRIwCgZ2YWx1ZXMYASAD",
-            "KAsyIC5nb29nbGUubW9uaXRvcmluZy52My5UeXBlZFZhbHVlEjkKDXRpbWVf",
-            "aW50ZXJ2YWwYAiABKAsyIi5nb29nbGUubW9uaXRvcmluZy52My5UaW1lSW50",
-            "ZXJ2YWwiWgoKTGFiZWxWYWx1ZRIUCgpib29sX3ZhbHVlGAEgASgISAASFQoL",
-            "aW50NjRfdmFsdWUYAiABKANIABIWCgxzdHJpbmdfdmFsdWUYAyABKAlIAEIH",
-            "CgV2YWx1ZSJRCgpRdWVyeUVycm9yEjIKB2xvY2F0b3IYASABKAsyIS5nb29n",
-            "bGUubW9uaXRvcmluZy52My5UZXh0TG9jYXRvchIPCgdtZXNzYWdlGAIgASgJ",
-            "IqACCgtUZXh0TG9jYXRvchIOCgZzb3VyY2UYASABKAkSQgoOc3RhcnRfcG9z",
-            "aXRpb24YAiABKAsyKi5nb29nbGUubW9uaXRvcmluZy52My5UZXh0TG9jYXRv",
-            "ci5Qb3NpdGlvbhJACgxlbmRfcG9zaXRpb24YAyABKAsyKi5nb29nbGUubW9u",
-            "aXRvcmluZy52My5UZXh0TG9jYXRvci5Qb3NpdGlvbhI5Cg5uZXN0ZWRfbG9j",
-            "YXRvchgEIAEoCzIhLmdvb2dsZS5tb25pdG9yaW5nLnYzLlRleHRMb2NhdG9y",
-            "EhYKDm5lc3RpbmdfcmVhc29uGAUgASgJGigKCFBvc2l0aW9uEgwKBGxpbmUY",
-            "ASABKAUSDgoGY29sdW1uGAIgASgFQsMBChhjb20uZ29vZ2xlLm1vbml0b3Jp",
-            "bmcudjNCC01ldHJpY1Byb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvbW9uaXRvcmluZy92Mzttb25pdG9yaW5nqgIaR29v",
-            "Z2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xvdWRcTW9uaXRv",
-            "cmluZ1xWM+oCHUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jpbmc6OlYzYgZwcm90",
-            "bzM="));
+            "bnQSDAoEdW5pdBgIIAEoCSLOAgoUVGltZVNlcmllc0Rlc2NyaXB0b3ISNgoR",
+            "bGFiZWxfZGVzY3JpcHRvcnMYASADKAsyGy5nb29nbGUuYXBpLkxhYmVsRGVz",
+            "Y3JpcHRvchJVChFwb2ludF9kZXNjcmlwdG9ycxgFIAMoCzI6Lmdvb2dsZS5t",
+            "b25pdG9yaW5nLnYzLlRpbWVTZXJpZXNEZXNjcmlwdG9yLlZhbHVlRGVzY3Jp",
+            "cHRvchqmAQoPVmFsdWVEZXNjcmlwdG9yEgsKA2tleRgBIAEoCRI6Cgp2YWx1",
+            "ZV90eXBlGAIgASgOMiYuZ29vZ2xlLmFwaS5NZXRyaWNEZXNjcmlwdG9yLlZh",
+            "bHVlVHlwZRI8CgttZXRyaWNfa2luZBgDIAEoDjInLmdvb2dsZS5hcGkuTWV0",
+            "cmljRGVzY3JpcHRvci5NZXRyaWNLaW5kEgwKBHVuaXQYBCABKAkihgIKDlRp",
+            "bWVTZXJpZXNEYXRhEjYKDGxhYmVsX3ZhbHVlcxgBIAMoCzIgLmdvb2dsZS5t",
+            "b25pdG9yaW5nLnYzLkxhYmVsVmFsdWUSQgoKcG9pbnRfZGF0YRgCIAMoCzIu",
+            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlRpbWVTZXJpZXNEYXRhLlBvaW50RGF0",
+            "YRp4CglQb2ludERhdGESMAoGdmFsdWVzGAEgAygLMiAuZ29vZ2xlLm1vbml0",
+            "b3JpbmcudjMuVHlwZWRWYWx1ZRI5Cg10aW1lX2ludGVydmFsGAIgASgLMiIu",
+            "Z29vZ2xlLm1vbml0b3JpbmcudjMuVGltZUludGVydmFsIloKCkxhYmVsVmFs",
+            "dWUSFAoKYm9vbF92YWx1ZRgBIAEoCEgAEhUKC2ludDY0X3ZhbHVlGAIgASgD",
+            "SAASFgoMc3RyaW5nX3ZhbHVlGAMgASgJSABCBwoFdmFsdWUiUQoKUXVlcnlF",
+            "cnJvchIyCgdsb2NhdG9yGAEgASgLMiEuZ29vZ2xlLm1vbml0b3JpbmcudjMu",
+            "VGV4dExvY2F0b3ISDwoHbWVzc2FnZRgCIAEoCSKgAgoLVGV4dExvY2F0b3IS",
+            "DgoGc291cmNlGAEgASgJEkIKDnN0YXJ0X3Bvc2l0aW9uGAIgASgLMiouZ29v",
+            "Z2xlLm1vbml0b3JpbmcudjMuVGV4dExvY2F0b3IuUG9zaXRpb24SQAoMZW5k",
+            "X3Bvc2l0aW9uGAMgASgLMiouZ29vZ2xlLm1vbml0b3JpbmcudjMuVGV4dExv",
+            "Y2F0b3IuUG9zaXRpb24SOQoObmVzdGVkX2xvY2F0b3IYBCABKAsyIS5nb29n",
+            "bGUubW9uaXRvcmluZy52My5UZXh0TG9jYXRvchIWCg5uZXN0aW5nX3JlYXNv",
+            "bhgFIAEoCRooCghQb3NpdGlvbhIMCgRsaW5lGAEgASgFEg4KBmNvbHVtbhgC",
+            "IAEoBULDAQoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQgtNZXRyaWNQcm90",
+            "b1ABWj5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL21v",
+            "bml0b3JpbmcvdjM7bW9uaXRvcmluZ6oCGkdvb2dsZS5DbG91ZC5Nb25pdG9y",
+            "aW5nLlYzygIaR29vZ2xlXENsb3VkXE1vbml0b3JpbmdcVjPqAh1Hb29nbGU6",
+            "OkNsb3VkOjpNb25pdG9yaW5nOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, global::Google.Api.LabelReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Point), global::Google.Cloud.Monitoring.V3.Point.Parser, new[]{ "Interval", "Value" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeries), global::Google.Cloud.Monitoring.V3.TimeSeries.Parser, new[]{ "Metric", "Resource", "Metadata", "MetricKind", "ValueType", "Points" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor), global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Parser, new[]{ "LabelDescriptors", "PointDescriptors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Types.ValueDescriptor), global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Types.ValueDescriptor.Parser, new[]{ "Key", "ValueType", "MetricKind" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeries), global::Google.Cloud.Monitoring.V3.TimeSeries.Parser, new[]{ "Metric", "Resource", "Metadata", "MetricKind", "ValueType", "Points", "Unit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor), global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Parser, new[]{ "LabelDescriptors", "PointDescriptors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Types.ValueDescriptor), global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Types.ValueDescriptor.Parser, new[]{ "Key", "ValueType", "MetricKind", "Unit" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeriesData), global::Google.Cloud.Monitoring.V3.TimeSeriesData.Parser, new[]{ "LabelValues", "PointData" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeriesData.Types.PointData), global::Google.Cloud.Monitoring.V3.TimeSeriesData.Types.PointData.Parser, new[]{ "Values", "TimeInterval" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.LabelValue), global::Google.Cloud.Monitoring.V3.LabelValue.Parser, new[]{ "BoolValue", "Int64Value", "StringValue" }, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.QueryError), global::Google.Cloud.Monitoring.V3.QueryError.Parser, new[]{ "Locator", "Message" }, null, null, null, null),
@@ -368,6 +368,7 @@ namespace Google.Cloud.Monitoring.V3 {
       metricKind_ = other.metricKind_;
       valueType_ = other.valueType_;
       points_ = other.points_.Clone();
+      unit_ = other.unit_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -411,8 +412,8 @@ namespace Google.Cloud.Monitoring.V3 {
     private global::Google.Api.MonitoredResourceMetadata metadata_;
     /// <summary>
     /// Output only. The associated monitored resource metadata. When reading a
-    /// a timeseries, this field will include metadata labels that are explicitly
-    /// named in the reduction. When creating a timeseries, this field is ignored.
+    /// time series, this field will include metadata labels that are explicitly
+    /// named in the reduction. When creating a time series, this field is ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Api.MonitoredResourceMetadata Metadata {
@@ -483,6 +484,22 @@ namespace Google.Cloud.Monitoring.V3 {
       get { return points_; }
     }
 
+    /// <summary>Field number for the "unit" field.</summary>
+    public const int UnitFieldNumber = 8;
+    private string unit_ = "";
+    /// <summary>
+    /// The units in which the metric value is reported. It is only applicable
+    /// if the `value_type` is `INT64`, `DOUBLE`, or `DISTRIBUTION`. The `unit`
+    /// defines the representation of the stored metric values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Unit {
+      get { return unit_; }
+      set {
+        unit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TimeSeries);
@@ -502,6 +519,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (MetricKind != other.MetricKind) return false;
       if (ValueType != other.ValueType) return false;
       if(!points_.Equals(other.points_)) return false;
+      if (Unit != other.Unit) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -514,6 +532,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (MetricKind != global::Google.Api.MetricDescriptor.Types.MetricKind.Unspecified) hash ^= MetricKind.GetHashCode();
       if (ValueType != global::Google.Api.MetricDescriptor.Types.ValueType.Unspecified) hash ^= ValueType.GetHashCode();
       hash ^= points_.GetHashCode();
+      if (Unit.Length != 0) hash ^= Unit.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -551,6 +570,10 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(58);
         output.WriteMessage(Metadata);
       }
+      if (Unit.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Unit);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -581,6 +604,10 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(58);
         output.WriteMessage(Metadata);
       }
+      if (Unit.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Unit);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -606,6 +633,9 @@ namespace Google.Cloud.Monitoring.V3 {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ValueType);
       }
       size += points_.CalculateSize(_repeated_points_codec);
+      if (Unit.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Unit);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -642,6 +672,9 @@ namespace Google.Cloud.Monitoring.V3 {
         ValueType = other.ValueType;
       }
       points_.Add(other.points_);
+      if (other.Unit.Length != 0) {
+        Unit = other.Unit;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -687,6 +720,10 @@ namespace Google.Cloud.Monitoring.V3 {
               Metadata = new global::Google.Api.MonitoredResourceMetadata();
             }
             input.ReadMessage(Metadata);
+            break;
+          }
+          case 66: {
+            Unit = input.ReadString();
             break;
           }
         }
@@ -736,6 +773,10 @@ namespace Google.Cloud.Monitoring.V3 {
             input.ReadMessage(Metadata);
             break;
           }
+          case 66: {
+            Unit = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -744,7 +785,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  /// A descriptor for the labels and points in a timeseries.
+  /// A descriptor for the labels and points in a time series.
   /// </summary>
   public sealed partial class TimeSeriesDescriptor : pb::IMessage<TimeSeriesDescriptor>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -975,6 +1016,7 @@ namespace Google.Cloud.Monitoring.V3 {
           key_ = other.key_;
           valueType_ = other.valueType_;
           metricKind_ = other.metricKind_;
+          unit_ = other.unit_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1025,6 +1067,23 @@ namespace Google.Cloud.Monitoring.V3 {
           }
         }
 
+        /// <summary>Field number for the "unit" field.</summary>
+        public const int UnitFieldNumber = 4;
+        private string unit_ = "";
+        /// <summary>
+        /// The unit in which `time_series` point values are reported. `unit`
+        /// follows the UCUM format for units as seen in
+        /// https://unitsofmeasure.org/ucum.html.
+        /// `unit` is only valid if `value_type` is INTEGER, DOUBLE, DISTRIBUTION.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Unit {
+          get { return unit_; }
+          set {
+            unit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as ValueDescriptor);
@@ -1041,6 +1100,7 @@ namespace Google.Cloud.Monitoring.V3 {
           if (Key != other.Key) return false;
           if (ValueType != other.ValueType) return false;
           if (MetricKind != other.MetricKind) return false;
+          if (Unit != other.Unit) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1050,6 +1110,7 @@ namespace Google.Cloud.Monitoring.V3 {
           if (Key.Length != 0) hash ^= Key.GetHashCode();
           if (ValueType != global::Google.Api.MetricDescriptor.Types.ValueType.Unspecified) hash ^= ValueType.GetHashCode();
           if (MetricKind != global::Google.Api.MetricDescriptor.Types.MetricKind.Unspecified) hash ^= MetricKind.GetHashCode();
+          if (Unit.Length != 0) hash ^= Unit.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1078,6 +1139,10 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(24);
             output.WriteEnum((int) MetricKind);
           }
+          if (Unit.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Unit);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1099,6 +1164,10 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(24);
             output.WriteEnum((int) MetricKind);
           }
+          if (Unit.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Unit);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1116,6 +1185,9 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           if (MetricKind != global::Google.Api.MetricDescriptor.Types.MetricKind.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MetricKind);
+          }
+          if (Unit.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Unit);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1136,6 +1208,9 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           if (other.MetricKind != global::Google.Api.MetricDescriptor.Types.MetricKind.Unspecified) {
             MetricKind = other.MetricKind;
+          }
+          if (other.Unit.Length != 0) {
+            Unit = other.Unit;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1163,6 +1238,10 @@ namespace Google.Cloud.Monitoring.V3 {
                 MetricKind = (global::Google.Api.MetricDescriptor.Types.MetricKind) input.ReadEnum();
                 break;
               }
+              case 34: {
+                Unit = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -1187,6 +1266,10 @@ namespace Google.Cloud.Monitoring.V3 {
               }
               case 24: {
                 MetricKind = (global::Google.Api.MetricDescriptor.Types.MetricKind) input.ReadEnum();
+                break;
+              }
+              case 34: {
+                Unit = input.ReadString();
                 break;
               }
             }
