@@ -623,6 +623,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 PartitionToken = proto::ByteString.CopyFromUtf8("partition_token1309778b"),
                 Seqno = 4367695630312265944L,
                 QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
+                RequestOptions = new RequestOptions(),
             };
             ResultSet expectedResponse = new ResultSet
             {
@@ -662,6 +663,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 PartitionToken = proto::ByteString.CopyFromUtf8("partition_token1309778b"),
                 Seqno = 4367695630312265944L,
                 QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
+                RequestOptions = new RequestOptions(),
             };
             ResultSet expectedResponse = new ResultSet
             {
@@ -694,6 +696,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     new ExecuteBatchDmlRequest.Types.Statement(),
                 },
                 Seqno = 4367695630312265944L,
+                RequestOptions = new RequestOptions(),
             };
             ExecuteBatchDmlResponse expectedResponse = new ExecuteBatchDmlResponse
             {
@@ -720,6 +723,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     new ExecuteBatchDmlRequest.Types.Statement(),
                 },
                 Seqno = 4367695630312265944L,
+                RequestOptions = new RequestOptions(),
             };
             ExecuteBatchDmlResponse expectedResponse = new ExecuteBatchDmlResponse
             {
@@ -750,6 +754,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Limit = 7494001492025909162L,
                 ResumeToken = proto::ByteString.CopyFromUtf8("resume_tokena048d43b"),
                 PartitionToken = proto::ByteString.CopyFromUtf8("partition_token1309778b"),
+                RequestOptions = new RequestOptions(),
             };
             ResultSet expectedResponse = new ResultSet
             {
@@ -782,6 +787,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Limit = 7494001492025909162L,
                 ResumeToken = proto::ByteString.CopyFromUtf8("resume_tokena048d43b"),
                 PartitionToken = proto::ByteString.CopyFromUtf8("partition_token1309778b"),
+                RequestOptions = new RequestOptions(),
             };
             ResultSet expectedResponse = new ResultSet
             {
@@ -809,6 +815,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             {
                 SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Options = new TransactionOptions(),
+                RequestOptions = new RequestOptions(),
             };
             Transaction expectedResponse = new Transaction
             {
@@ -830,6 +837,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             {
                 SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Options = new TransactionOptions(),
+                RequestOptions = new RequestOptions(),
             };
             Transaction expectedResponse = new Transaction
             {
@@ -944,6 +952,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 SingleUseTransaction = new TransactionOptions(),
                 Mutations = { new Mutation(), },
                 ReturnCommitStats = false,
+                RequestOptions = new RequestOptions(),
             };
             CommitResponse expectedResponse = new CommitResponse
             {
@@ -968,6 +977,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 SingleUseTransaction = new TransactionOptions(),
                 Mutations = { new Mutation(), },
                 ReturnCommitStats = false,
+                RequestOptions = new RequestOptions(),
             };
             CommitResponse expectedResponse = new CommitResponse
             {
