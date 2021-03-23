@@ -83,22 +83,22 @@ in the web results.)
 
 ### Iterate over all resources, ignoring pagination
 
-[!code-cs[](../obj/snippets/Google.Cloud.Docs.PageStreaming.txt#AllResources)]
+[!code-cs[](../obj/snippets/root.PageStreaming.txt#AllResources)]
 
 ### Iterate over all responses, remembering page tokens
 
-[!code-cs[](../obj/snippets/Google.Cloud.Docs.PageStreaming.txt#Responses)]
+[!code-cs[](../obj/snippets/root.PageStreaming.txt#Responses)]
 
 ### Obtain a single "natural" page of results
 
-[!code-cs[](../obj/snippets/Google.Cloud.Docs.PageStreaming.txt#SingleResponse)]
+[!code-cs[](../obj/snippets/root.PageStreaming.txt#SingleResponse)]
 
 ### Display the next fixed-sized page of results
 
 This is typically used in web applications; it will only display a less-than-full
 page if it reaches the end of the data.
 
-[!code-cs[](../obj/snippets/Google.Cloud.Docs.PageStreaming.txt#ReadPage)]
+[!code-cs[](../obj/snippets/root.PageStreaming.txt#ReadPage)]
 
 ## Feedback
 

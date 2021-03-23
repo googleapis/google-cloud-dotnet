@@ -39,19 +39,19 @@ for multiple RPC invocations.
 
 ### Per-RPC (highest priority)
 
-[!code-cs[](../obj/snippets/Google.Cloud.Docs.CallSettings.txt#PerRpc)]
+[!code-cs[](../obj/snippets/root.CallSettings.txt#PerRpc)]
 
 ### Client configuration; client-wide
 
-[!code-cs[](../obj/snippets/Google.Cloud.Docs.CallSettings.txt#ClientWide)]
+[!code-cs[](../obj/snippets/root.CallSettings.txt#ClientWide)]
 
 ### Client configuration; per-RPC-method (lowest priority)
 
-[!code-cs[](../obj/snippets/Google.Cloud.Docs.CallSettings.txt#ClientPerMethod)]
+[!code-cs[](../obj/snippets/root.CallSettings.txt#ClientPerMethod)]
 
 ### Multiple `Callsettings` specified
 
-[!code-cs[](../obj/snippets/Google.Cloud.Docs.CallSettings.txt#Overrides)]
+[!code-cs[](../obj/snippets/root.CallSettings.txt#Overrides)]
 
 ## Defaults
 
