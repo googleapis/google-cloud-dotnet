@@ -152,7 +152,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       ///
       /// Note: Always use agent versions for production traffic
       /// sent to virtual agents. See [Versions and
-      /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+      /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -393,7 +393,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       ///
       /// Note: Always use agent versions for production traffic
       /// sent to virtual agents. See [Versions and
-      /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+      /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -410,7 +410,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       ///
       /// Note: Always use agent versions for production traffic
       /// sent to virtual agents. See [Versions and
-      /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+      /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -425,7 +425,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       ///
       /// Note: Always use agent versions for production traffic
       /// sent to virtual agents. See [Versions and
-      /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+      /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -442,7 +442,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       ///
       /// Note: Always use agent versions for production traffic
       /// sent to virtual agents. See [Versions and
-      /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+      /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
