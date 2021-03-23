@@ -767,7 +767,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -781,7 +781,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -795,7 +795,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -809,7 +809,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
@@ -834,7 +834,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
@@ -859,7 +859,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
@@ -880,7 +880,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
@@ -905,7 +905,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
@@ -930,7 +930,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
@@ -951,7 +951,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
@@ -976,7 +976,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
@@ -1001,7 +1001,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
@@ -1022,7 +1022,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
@@ -1047,7 +1047,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
@@ -1072,7 +1072,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="participant">
         /// Required. The name of the participant this text comes from.
@@ -1531,7 +1531,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1548,7 +1548,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Note: Always use agent versions for production traffic
         /// sent to virtual agents. See [Versions and
-        /// environments(https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
