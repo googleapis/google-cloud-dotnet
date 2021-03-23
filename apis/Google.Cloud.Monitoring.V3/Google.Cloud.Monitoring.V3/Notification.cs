@@ -28,48 +28,51 @@ namespace Google.Cloud.Monitoring.V3 {
             "b2dsZS5tb25pdG9yaW5nLnYzGhZnb29nbGUvYXBpL2xhYmVsLnByb3RvGh1n",
             "b29nbGUvYXBpL2xhdW5jaF9zdGFnZS5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
             "dXJjZS5wcm90bxohZ29vZ2xlL21vbml0b3JpbmcvdjMvY29tbW9uLnByb3Rv",
-            "Gh5nb29nbGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8ipQQKHU5vdGlmaWNh",
-            "dGlvbkNoYW5uZWxEZXNjcmlwdG9yEgwKBG5hbWUYBiABKAkSDAoEdHlwZRgB",
-            "IAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyAB",
-            "KAkSKwoGbGFiZWxzGAQgAygLMhsuZ29vZ2xlLmFwaS5MYWJlbERlc2NyaXB0",
-            "b3ISPgoPc3VwcG9ydGVkX3RpZXJzGAUgAygOMiEuZ29vZ2xlLm1vbml0b3Jp",
-            "bmcudjMuU2VydmljZVRpZXJCAhgBEi0KDGxhdW5jaF9zdGFnZRgHIAEoDjIX",
-            "Lmdvb2dsZS5hcGkuTGF1bmNoU3RhZ2U6oALqQZwCCjdtb25pdG9yaW5nLmdv",
-            "b2dsZWFwaXMuY29tL05vdGlmaWNhdGlvbkNoYW5uZWxEZXNjcmlwdG9yEkZw",
-            "cm9qZWN0cy97cHJvamVjdH0vbm90aWZpY2F0aW9uQ2hhbm5lbERlc2NyaXB0",
-            "b3JzL3tjaGFubmVsX2Rlc2NyaXB0b3J9ElBvcmdhbml6YXRpb25zL3tvcmdh",
-            "bml6YXRpb259L25vdGlmaWNhdGlvbkNoYW5uZWxEZXNjcmlwdG9ycy97Y2hh",
-            "bm5lbF9kZXNjcmlwdG9yfRJEZm9sZGVycy97Zm9sZGVyfS9ub3RpZmljYXRp",
-            "b25DaGFubmVsRGVzY3JpcHRvcnMve2NoYW5uZWxfZGVzY3JpcHRvcn0SASoi",
-            "twYKE05vdGlmaWNhdGlvbkNoYW5uZWwSDAoEdHlwZRgBIAEoCRIMCgRuYW1l",
-            "GAYgASgJEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRITCgtkZXNjcmlwdGlvbhgE",
-            "IAEoCRJFCgZsYWJlbHMYBSADKAsyNS5nb29nbGUubW9uaXRvcmluZy52My5O",
-            "b3RpZmljYXRpb25DaGFubmVsLkxhYmVsc0VudHJ5Ek4KC3VzZXJfbGFiZWxz",
-            "GAggAygLMjkuZ29vZ2xlLm1vbml0b3JpbmcudjMuTm90aWZpY2F0aW9uQ2hh",
-            "bm5lbC5Vc2VyTGFiZWxzRW50cnkSWQoTdmVyaWZpY2F0aW9uX3N0YXR1cxgJ",
-            "IAEoDjI8Lmdvb2dsZS5tb25pdG9yaW5nLnYzLk5vdGlmaWNhdGlvbkNoYW5u",
-            "ZWwuVmVyaWZpY2F0aW9uU3RhdHVzEisKB2VuYWJsZWQYCyABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuQm9vbFZhbHVlGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMQoPVXNlckxhYmVsc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiVwoSVmVyaWZpY2F0aW9u",
-            "U3RhdHVzEiMKH1ZFUklGSUNBVElPTl9TVEFUVVNfVU5TUEVDSUZJRUQQABIO",
-            "CgpVTlZFUklGSUVEEAESDAoIVkVSSUZJRUQQAjr+AepB+gEKLW1vbml0b3Jp",
-            "bmcuZ29vZ2xlYXBpcy5jb20vTm90aWZpY2F0aW9uQ2hhbm5lbBI+cHJvamVj",
-            "dHMve3Byb2plY3R9L25vdGlmaWNhdGlvbkNoYW5uZWxzL3tub3RpZmljYXRp",
-            "b25fY2hhbm5lbH0SSG9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbm90",
-            "aWZpY2F0aW9uQ2hhbm5lbHMve25vdGlmaWNhdGlvbl9jaGFubmVsfRI8Zm9s",
-            "ZGVycy97Zm9sZGVyfS9ub3RpZmljYXRpb25DaGFubmVscy97bm90aWZpY2F0",
-            "aW9uX2NoYW5uZWx9EgEqQskBChhjb20uZ29vZ2xlLm1vbml0b3JpbmcudjNC",
-            "EU5vdGlmaWNhdGlvblByb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvbW9uaXRvcmluZy92Mzttb25pdG9yaW5nqgIaR29v",
-            "Z2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xvdWRcTW9uaXRv",
-            "cmluZ1xWM+oCHUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jpbmc6OlYzYgZwcm90",
-            "bzM="));
+            "Gipnb29nbGUvbW9uaXRvcmluZy92My9tdXRhdGlvbl9yZWNvcmQucHJvdG8a",
+            "Hmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90byKlBAodTm90aWZpY2F0",
+            "aW9uQ2hhbm5lbERlc2NyaXB0b3ISDAoEbmFtZRgGIAEoCRIMCgR0eXBlGAEg",
+            "ASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEo",
+            "CRIrCgZsYWJlbHMYBCADKAsyGy5nb29nbGUuYXBpLkxhYmVsRGVzY3JpcHRv",
+            "chI+Cg9zdXBwb3J0ZWRfdGllcnMYBSADKA4yIS5nb29nbGUubW9uaXRvcmlu",
+            "Zy52My5TZXJ2aWNlVGllckICGAESLQoMbGF1bmNoX3N0YWdlGAcgASgOMhcu",
+            "Z29vZ2xlLmFwaS5MYXVuY2hTdGFnZTqgAupBnAIKN21vbml0b3JpbmcuZ29v",
+            "Z2xlYXBpcy5jb20vTm90aWZpY2F0aW9uQ2hhbm5lbERlc2NyaXB0b3ISRnBy",
+            "b2plY3RzL3twcm9qZWN0fS9ub3RpZmljYXRpb25DaGFubmVsRGVzY3JpcHRv",
+            "cnMve2NoYW5uZWxfZGVzY3JpcHRvcn0SUG9yZ2FuaXphdGlvbnMve29yZ2Fu",
+            "aXphdGlvbn0vbm90aWZpY2F0aW9uQ2hhbm5lbERlc2NyaXB0b3JzL3tjaGFu",
+            "bmVsX2Rlc2NyaXB0b3J9EkRmb2xkZXJzL3tmb2xkZXJ9L25vdGlmaWNhdGlv",
+            "bkNoYW5uZWxEZXNjcmlwdG9ycy97Y2hhbm5lbF9kZXNjcmlwdG9yfRIBKiK2",
+            "BwoTTm90aWZpY2F0aW9uQ2hhbm5lbBIMCgR0eXBlGAEgASgJEgwKBG5hbWUY",
+            "BiABKAkSFAoMZGlzcGxheV9uYW1lGAMgASgJEhMKC2Rlc2NyaXB0aW9uGAQg",
+            "ASgJEkUKBmxhYmVscxgFIAMoCzI1Lmdvb2dsZS5tb25pdG9yaW5nLnYzLk5v",
+            "dGlmaWNhdGlvbkNoYW5uZWwuTGFiZWxzRW50cnkSTgoLdXNlcl9sYWJlbHMY",
+            "CCADKAsyOS5nb29nbGUubW9uaXRvcmluZy52My5Ob3RpZmljYXRpb25DaGFu",
+            "bmVsLlVzZXJMYWJlbHNFbnRyeRJZChN2ZXJpZmljYXRpb25fc3RhdHVzGAkg",
+            "ASgOMjwuZ29vZ2xlLm1vbml0b3JpbmcudjMuTm90aWZpY2F0aW9uQ2hhbm5l",
+            "bC5WZXJpZmljYXRpb25TdGF0dXMSKwoHZW5hYmxlZBgLIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5Cb29sVmFsdWUSPQoPY3JlYXRpb25fcmVjb3JkGAwgASgL",
+            "MiQuZ29vZ2xlLm1vbml0b3JpbmcudjMuTXV0YXRpb25SZWNvcmQSPgoQbXV0",
+            "YXRpb25fcmVjb3JkcxgNIAMoCzIkLmdvb2dsZS5tb25pdG9yaW5nLnYzLk11",
+            "dGF0aW9uUmVjb3JkGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAEaMQoPVXNlckxhYmVsc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoCToCOAEiVwoSVmVyaWZpY2F0aW9uU3RhdHVzEiMK",
+            "H1ZFUklGSUNBVElPTl9TVEFUVVNfVU5TUEVDSUZJRUQQABIOCgpVTlZFUklG",
+            "SUVEEAESDAoIVkVSSUZJRUQQAjr+AepB+gEKLW1vbml0b3JpbmcuZ29vZ2xl",
+            "YXBpcy5jb20vTm90aWZpY2F0aW9uQ2hhbm5lbBI+cHJvamVjdHMve3Byb2pl",
+            "Y3R9L25vdGlmaWNhdGlvbkNoYW5uZWxzL3tub3RpZmljYXRpb25fY2hhbm5l",
+            "bH0SSG9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbm90aWZpY2F0aW9u",
+            "Q2hhbm5lbHMve25vdGlmaWNhdGlvbl9jaGFubmVsfRI8Zm9sZGVycy97Zm9s",
+            "ZGVyfS9ub3RpZmljYXRpb25DaGFubmVscy97bm90aWZpY2F0aW9uX2NoYW5u",
+            "ZWx9EgEqQskBChhjb20uZ29vZ2xlLm1vbml0b3JpbmcudjNCEU5vdGlmaWNh",
+            "dGlvblByb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
+            "ZWFwaXMvbW9uaXRvcmluZy92Mzttb25pdG9yaW5nqgIaR29vZ2xlLkNsb3Vk",
+            "Lk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xvdWRcTW9uaXRvcmluZ1xWM+oC",
+            "HUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jpbmc6OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.LabelReflection.Descriptor, global::Google.Api.LaunchStageReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.LabelReflection.Descriptor, global::Google.Api.LaunchStageReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MutationRecordReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor), global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor.Parser, new[]{ "Name", "Type", "DisplayName", "Description", "Labels", "SupportedTiers", "LaunchStage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.NotificationChannel), global::Google.Cloud.Monitoring.V3.NotificationChannel.Parser, new[]{ "Type", "Name", "DisplayName", "Description", "Labels", "UserLabels", "VerificationStatus", "Enabled" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.NotificationChannel.Types.VerificationStatus) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.NotificationChannel), global::Google.Cloud.Monitoring.V3.NotificationChannel.Parser, new[]{ "Type", "Name", "DisplayName", "Description", "Labels", "UserLabels", "VerificationStatus", "Enabled", "CreationRecord", "MutationRecords" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.NotificationChannel.Types.VerificationStatus) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -147,7 +150,10 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int TypeFieldNumber = 1;
     private string type_ = "";
     /// <summary>
-    /// The type of notification channel, such as "email", "sms", etc.
+    /// The type of notification channel, such as "email" and "sms". To view the
+    /// full list of channels, see
+    /// [Channel
+    /// descriptors](https://cloud.google.com/monitoring/alerts/using-channels-api#ncd).
     /// Notification channel types are globally unique.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -526,6 +532,8 @@ namespace Google.Cloud.Monitoring.V3 {
       userLabels_ = other.userLabels_.Clone();
       verificationStatus_ = other.verificationStatus_;
       Enabled = other.Enabled;
+      creationRecord_ = other.creationRecord_ != null ? other.creationRecord_.Clone() : null;
+      mutationRecords_ = other.mutationRecords_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -690,6 +698,33 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
 
+    /// <summary>Field number for the "creation_record" field.</summary>
+    public const int CreationRecordFieldNumber = 12;
+    private global::Google.Cloud.Monitoring.V3.MutationRecord creationRecord_;
+    /// <summary>
+    /// Record of the creation of this channel.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Monitoring.V3.MutationRecord CreationRecord {
+      get { return creationRecord_; }
+      set {
+        creationRecord_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "mutation_records" field.</summary>
+    public const int MutationRecordsFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Monitoring.V3.MutationRecord> _repeated_mutationRecords_codec
+        = pb::FieldCodec.ForMessage(106, global::Google.Cloud.Monitoring.V3.MutationRecord.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.MutationRecord> mutationRecords_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.MutationRecord>();
+    /// <summary>
+    /// Records of the modification of this channel.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.MutationRecord> MutationRecords {
+      get { return mutationRecords_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as NotificationChannel);
@@ -711,6 +746,8 @@ namespace Google.Cloud.Monitoring.V3 {
       if (!UserLabels.Equals(other.UserLabels)) return false;
       if (VerificationStatus != other.VerificationStatus) return false;
       if (Enabled != other.Enabled) return false;
+      if (!object.Equals(CreationRecord, other.CreationRecord)) return false;
+      if(!mutationRecords_.Equals(other.mutationRecords_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -725,6 +762,8 @@ namespace Google.Cloud.Monitoring.V3 {
       hash ^= UserLabels.GetHashCode();
       if (VerificationStatus != global::Google.Cloud.Monitoring.V3.NotificationChannel.Types.VerificationStatus.Unspecified) hash ^= VerificationStatus.GetHashCode();
       if (enabled_ != null) hash ^= Enabled.GetHashCode();
+      if (creationRecord_ != null) hash ^= CreationRecord.GetHashCode();
+      hash ^= mutationRecords_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -766,6 +805,11 @@ namespace Google.Cloud.Monitoring.V3 {
       if (enabled_ != null) {
         _single_enabled_codec.WriteTagAndValue(output, Enabled);
       }
+      if (creationRecord_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(CreationRecord);
+      }
+      mutationRecords_.WriteTo(output, _repeated_mutationRecords_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -800,6 +844,11 @@ namespace Google.Cloud.Monitoring.V3 {
       if (enabled_ != null) {
         _single_enabled_codec.WriteTagAndValue(ref output, Enabled);
       }
+      if (creationRecord_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(CreationRecord);
+      }
+      mutationRecords_.WriteTo(ref output, _repeated_mutationRecords_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -829,6 +878,10 @@ namespace Google.Cloud.Monitoring.V3 {
       if (enabled_ != null) {
         size += _single_enabled_codec.CalculateSizeWithTag(Enabled);
       }
+      if (creationRecord_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreationRecord);
+      }
+      size += mutationRecords_.CalculateSize(_repeated_mutationRecords_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -862,6 +915,13 @@ namespace Google.Cloud.Monitoring.V3 {
           Enabled = other.Enabled;
         }
       }
+      if (other.creationRecord_ != null) {
+        if (creationRecord_ == null) {
+          CreationRecord = new global::Google.Cloud.Monitoring.V3.MutationRecord();
+        }
+        CreationRecord.MergeFrom(other.CreationRecord);
+      }
+      mutationRecords_.Add(other.mutationRecords_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -911,6 +971,17 @@ namespace Google.Cloud.Monitoring.V3 {
             }
             break;
           }
+          case 98: {
+            if (creationRecord_ == null) {
+              CreationRecord = new global::Google.Cloud.Monitoring.V3.MutationRecord();
+            }
+            input.ReadMessage(CreationRecord);
+            break;
+          }
+          case 106: {
+            mutationRecords_.AddEntriesFrom(input, _repeated_mutationRecords_codec);
+            break;
+          }
         }
       }
     #endif
@@ -958,6 +1029,17 @@ namespace Google.Cloud.Monitoring.V3 {
             if (enabled_ == null || value != false) {
               Enabled = value;
             }
+            break;
+          }
+          case 98: {
+            if (creationRecord_ == null) {
+              CreationRecord = new global::Google.Cloud.Monitoring.V3.MutationRecord();
+            }
+            input.ReadMessage(CreationRecord);
+            break;
+          }
+          case 106: {
+            mutationRecords_.AddEntriesFrom(ref input, _repeated_mutationRecords_codec);
             break;
           }
         }

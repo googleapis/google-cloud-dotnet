@@ -656,6 +656,9 @@ namespace Google.Cloud.Monitoring.V3 {
     ///
     ///      projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
     ///
+    /// `[PROJECT_ID_OR_NUMBER]` is the Workspace host project associated with the
+    /// Uptime check.
+    ///
     /// This field should be omitted when creating the Uptime check configuration;
     /// on create, the resource name is assigned by the server and included in the
     /// response.
@@ -1602,7 +1605,8 @@ namespace Google.Cloud.Monitoring.V3 {
         public const int RequestMethodFieldNumber = 8;
         private global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.RequestMethod requestMethod_ = global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.RequestMethod.MethodUnspecified;
         /// <summary>
-        /// The HTTP request method to use for the check.
+        /// The HTTP request method to use for the check. If set to
+        /// `METHOD_UNSPECIFIED` then `request_method` defaults to `GET`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.RequestMethod RequestMethod {
@@ -1680,7 +1684,7 @@ namespace Google.Cloud.Monitoring.V3 {
         public const int MaskHeadersFieldNumber = 5;
         private bool maskHeaders_;
         /// <summary>
-        /// Boolean specifiying whether to encrypt the header information.
+        /// Boolean specifying whether to encrypt the header information.
         /// Encryption should be specified for any headers related to authentication
         /// that you do not wish to be seen when retrieving the configuration. The
         /// server will be responsible for encrypting the headers.
@@ -1719,7 +1723,14 @@ namespace Google.Cloud.Monitoring.V3 {
         public const int ContentTypeFieldNumber = 9;
         private global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ContentType contentType_ = global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ContentType.TypeUnspecified;
         /// <summary>
-        /// The content type to use for the check.
+        /// The content type header to use for the check. The following
+        /// configurations result in errors:
+        /// 1. Content type is specified in both the `headers` field and the
+        /// `content_type` field.
+        /// 2. Request method is `GET` and `content_type` is not `TYPE_UNSPECIFIED`
+        /// 3. Request method is `POST` and `content_type` is `TYPE_UNSPECIFIED`.
+        /// 4. Request method is `POST` and a "Content-Type" header is provided via
+        /// `headers` field. The `content_type` field should be used instead.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ContentType ContentType {
@@ -1750,11 +1761,14 @@ namespace Google.Cloud.Monitoring.V3 {
         public const int BodyFieldNumber = 10;
         private pb::ByteString body_ = pb::ByteString.Empty;
         /// <summary>
-        /// The request body associated with the HTTP request. If `content_type` is
-        /// `URL_ENCODED`, the body passed in must be URL-encoded. Users can provide
-        /// a `Content-Length` header via the `headers` field or the API will do
-        /// so. The maximum byte size is 1 megabyte. Note: As with all `bytes` fields
-        /// JSON representations are base64 encoded.
+        /// The request body associated with the HTTP POST request. If `content_type`
+        /// is `URL_ENCODED`, the body passed in must be URL-encoded. Users can
+        /// provide a `Content-Length` header via the `headers` field or the API will
+        /// do so. If the `request_method` is `GET` and `body` is not empty, the API
+        /// will return an error. The maximum byte size is 1 megabyte. Note: As with
+        /// all `bytes` fields, JSON representations are base64 encoded. e.g.:
+        /// "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is
+        /// "Zm9vJTI1M0RiYXI=".
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pb::ByteString Body {
@@ -2123,14 +2137,11 @@ namespace Google.Cloud.Monitoring.V3 {
           }
 
           /// <summary>
-          /// Header options corresponding to the Content-Type of the body in HTTP
-          /// requests. Note that a `Content-Type` header cannot be present in the
-          /// `headers` field if this field is specified.
+          /// Header options corresponding to the content type of a HTTP request body.
           /// </summary>
           public enum ContentType {
             /// <summary>
-            /// No content type specified. If the request method is POST, an
-            /// unspecified content type results in a check creation rejection.
+            /// No content type specified.
             /// </summary>
             [pbr::OriginalName("TYPE_UNSPECIFIED")] TypeUnspecified = 0,
             /// <summary>

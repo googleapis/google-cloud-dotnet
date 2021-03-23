@@ -39,49 +39,50 @@ namespace Google.Cloud.Monitoring.V3 {
             "ZXN0EjsKBG5hbWUYBCABKAlCLeBBAvpBJxIlbW9uaXRvcmluZy5nb29nbGVh",
             "cGlzLmNvbS9BbGVydFBvbGljeRIOCgZmaWx0ZXIYBSABKAkSEAoIb3JkZXJf",
             "YnkYBiABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyAB",
-            "KAkibwoZTGlzdEFsZXJ0UG9saWNpZXNSZXNwb25zZRI5Cg5hbGVydF9wb2xp",
-            "Y2llcxgDIAMoCzIhLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5",
-            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKJAQoYVXBkYXRlQWxlcnRQb2xp",
-            "Y3lSZXF1ZXN0Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLkZpZWxkTWFzaxI8CgxhbGVydF9wb2xpY3kYAyABKAsyIS5nb29nbGUu",
-            "bW9uaXRvcmluZy52My5BbGVydFBvbGljeUID4EECIlcKGERlbGV0ZUFsZXJ0",
-            "UG9saWN5UmVxdWVzdBI7CgRuYW1lGAMgASgJQi3gQQL6QScKJW1vbml0b3Jp",
-            "bmcuZ29vZ2xlYXBpcy5jb20vQWxlcnRQb2xpY3kynggKEkFsZXJ0UG9saWN5",
-            "U2VydmljZRKoAQoRTGlzdEFsZXJ0UG9saWNpZXMSLi5nb29nbGUubW9uaXRv",
-            "cmluZy52My5MaXN0QWxlcnRQb2xpY2llc1JlcXVlc3QaLy5nb29nbGUubW9u",
-            "aXRvcmluZy52My5MaXN0QWxlcnRQb2xpY2llc1Jlc3BvbnNlIjKC0+STAiUS",
-            "Iy92My97bmFtZT1wcm9qZWN0cy8qfS9hbGVydFBvbGljaWVz2kEEbmFtZRKW",
-            "AQoOR2V0QWxlcnRQb2xpY3kSKy5nb29nbGUubW9uaXRvcmluZy52My5HZXRB",
+            "KAkigwEKGUxpc3RBbGVydFBvbGljaWVzUmVzcG9uc2USOQoOYWxlcnRfcG9s",
+            "aWNpZXMYAyADKAsyIS5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGlj",
+            "eRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoKdG90YWxfc2l6ZRgEIAEo",
+            "BSKJAQoYVXBkYXRlQWxlcnRQb2xpY3lSZXF1ZXN0Ei8KC3VwZGF0ZV9tYXNr",
+            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxI8CgxhbGVydF9w",
+            "b2xpY3kYAyABKAsyIS5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGlj",
+            "eUID4EECIlcKGERlbGV0ZUFsZXJ0UG9saWN5UmVxdWVzdBI7CgRuYW1lGAMg",
+            "ASgJQi3gQQL6QScKJW1vbml0b3JpbmcuZ29vZ2xlYXBpcy5jb20vQWxlcnRQ",
+            "b2xpY3kynggKEkFsZXJ0UG9saWN5U2VydmljZRKoAQoRTGlzdEFsZXJ0UG9s",
+            "aWNpZXMSLi5nb29nbGUubW9uaXRvcmluZy52My5MaXN0QWxlcnRQb2xpY2ll",
+            "c1JlcXVlc3QaLy5nb29nbGUubW9uaXRvcmluZy52My5MaXN0QWxlcnRQb2xp",
+            "Y2llc1Jlc3BvbnNlIjKC0+STAiUSIy92My97bmFtZT1wcm9qZWN0cy8qfS9h",
+            "bGVydFBvbGljaWVz2kEEbmFtZRKWAQoOR2V0QWxlcnRQb2xpY3kSKy5nb29n",
+            "bGUubW9uaXRvcmluZy52My5HZXRBbGVydFBvbGljeVJlcXVlc3QaIS5nb29n",
+            "bGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeSI0gtPkkwInEiUvdjMve25h",
+            "bWU9cHJvamVjdHMvKi9hbGVydFBvbGljaWVzLyp92kEEbmFtZRK1AQoRQ3Jl",
+            "YXRlQWxlcnRQb2xpY3kSLi5nb29nbGUubW9uaXRvcmluZy52My5DcmVhdGVB",
             "bGVydFBvbGljeVJlcXVlc3QaIS5nb29nbGUubW9uaXRvcmluZy52My5BbGVy",
-            "dFBvbGljeSI0gtPkkwInEiUvdjMve25hbWU9cHJvamVjdHMvKi9hbGVydFBv",
-            "bGljaWVzLyp92kEEbmFtZRK1AQoRQ3JlYXRlQWxlcnRQb2xpY3kSLi5nb29n",
-            "bGUubW9uaXRvcmluZy52My5DcmVhdGVBbGVydFBvbGljeVJlcXVlc3QaIS5n",
-            "b29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeSJNgtPkkwIzIiMvdjMv",
-            "e25hbWU9cHJvamVjdHMvKn0vYWxlcnRQb2xpY2llczoMYWxlcnRfcG9saWN5",
-            "2kERbmFtZSxhbGVydF9wb2xpY3kSkQEKEURlbGV0ZUFsZXJ0UG9saWN5Ei4u",
-            "Z29vZ2xlLm1vbml0b3JpbmcudjMuRGVsZXRlQWxlcnRQb2xpY3lSZXF1ZXN0",
-            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjSC0+STAicqJS92My97bmFtZT1w",
-            "cm9qZWN0cy8qL2FsZXJ0UG9saWNpZXMvKn3aQQRuYW1lEssBChFVcGRhdGVB",
-            "bGVydFBvbGljeRIuLmdvb2dsZS5tb25pdG9yaW5nLnYzLlVwZGF0ZUFsZXJ0",
-            "UG9saWN5UmVxdWVzdBohLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9s",
-            "aWN5ImOC0+STAkIyMi92My97YWxlcnRfcG9saWN5Lm5hbWU9cHJvamVjdHMv",
-            "Ki9hbGVydFBvbGljaWVzLyp9OgxhbGVydF9wb2xpY3naQRh1cGRhdGVfbWFz",
-            "ayxhbGVydF9wb2xpY3kaqQHKQRltb25pdG9yaW5nLmdvb2dsZWFwaXMuY29t",
-            "0kGJAWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
-            "dGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9tb25pdG9y",
-            "aW5nLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbW9uaXRvcmlu",
-            "Zy5yZWFkQskBChhjb20uZ29vZ2xlLm1vbml0b3JpbmcudjNCEUFsZXJ0U2Vy",
-            "dmljZVByb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
-            "ZWFwaXMvbW9uaXRvcmluZy92Mzttb25pdG9yaW5nqgIaR29vZ2xlLkNsb3Vk",
-            "Lk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xvdWRcTW9uaXRvcmluZ1xWM+oC",
-            "HUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jpbmc6OlYzYgZwcm90bzM="));
+            "dFBvbGljeSJNgtPkkwIzIiMvdjMve25hbWU9cHJvamVjdHMvKn0vYWxlcnRQ",
+            "b2xpY2llczoMYWxlcnRfcG9saWN52kERbmFtZSxhbGVydF9wb2xpY3kSkQEK",
+            "EURlbGV0ZUFsZXJ0UG9saWN5Ei4uZ29vZ2xlLm1vbml0b3JpbmcudjMuRGVs",
+            "ZXRlQWxlcnRQb2xpY3lSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "IjSC0+STAicqJS92My97bmFtZT1wcm9qZWN0cy8qL2FsZXJ0UG9saWNpZXMv",
+            "Kn3aQQRuYW1lEssBChFVcGRhdGVBbGVydFBvbGljeRIuLmdvb2dsZS5tb25p",
+            "dG9yaW5nLnYzLlVwZGF0ZUFsZXJ0UG9saWN5UmVxdWVzdBohLmdvb2dsZS5t",
+            "b25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5ImOC0+STAkIyMi92My97YWxlcnRf",
+            "cG9saWN5Lm5hbWU9cHJvamVjdHMvKi9hbGVydFBvbGljaWVzLyp9OgxhbGVy",
+            "dF9wb2xpY3naQRh1cGRhdGVfbWFzayxhbGVydF9wb2xpY3kaqQHKQRltb25p",
+            "dG9yaW5nLmdvb2dsZWFwaXMuY29t0kGJAWh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xl",
+            "YXBpcy5jb20vYXV0aC9tb25pdG9yaW5nLGh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvbW9uaXRvcmluZy5yZWFkQskBChhjb20uZ29vZ2xlLm1v",
+            "bml0b3JpbmcudjNCEUFsZXJ0U2VydmljZVByb3RvUAFaPmdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbW9uaXRvcmluZy92Mzttb25p",
+            "dG9yaW5nqgIaR29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVc",
+            "Q2xvdWRcTW9uaXRvcmluZ1xWM+oCHUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jp",
+            "bmc6OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.AlertReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest), global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest.Parser, new[]{ "Name", "AlertPolicy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest), global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest), global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest.Parser, new[]{ "Name", "Filter", "OrderBy", "PageSize", "PageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse), global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse.Parser, new[]{ "AlertPolicies", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse), global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse.Parser, new[]{ "AlertPolicies", "NextPageToken", "TotalSize" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest), global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest.Parser, new[]{ "UpdateMask", "AlertPolicy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest), global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
@@ -141,10 +142,11 @@ namespace Google.Cloud.Monitoring.V3 {
     ///     projects/[PROJECT_ID_OR_NUMBER]
     ///
     /// Note that this field names the parent container in which the alerting
-    /// policy will be written, not the name of the created policy. The alerting
-    /// policy that is returned will have a name that contains a normalized
-    /// representation of this name as a prefix but adds a suffix of the form
-    /// `/alertPolicies/[ALERT_POLICY_ID]`, identifying the policy in the
+    /// policy will be written, not the name of the created policy. |name| must be
+    /// a host project of a workspace, otherwise INVALID_ARGUMENT error will
+    /// return. The alerting policy that is returned will have a name that contains
+    /// a normalized representation of this name as a prefix but adds a suffix of
+    /// the form `/alertPolicies/[ALERT_POLICY_ID]`, identifying the policy in the
     /// container.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -894,6 +896,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public ListAlertPoliciesResponse(ListAlertPoliciesResponse other) : this() {
       alertPolicies_ = other.alertPolicies_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      totalSize_ = other.totalSize_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -931,6 +934,21 @@ namespace Google.Cloud.Monitoring.V3 {
       }
     }
 
+    /// <summary>Field number for the "total_size" field.</summary>
+    public const int TotalSizeFieldNumber = 4;
+    private int totalSize_;
+    /// <summary>
+    /// The total number of alert policies in all pages. This number is only an
+    /// estimate, and may change in subsequent pages. https://aip.dev/158
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TotalSize {
+      get { return totalSize_; }
+      set {
+        totalSize_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListAlertPoliciesResponse);
@@ -946,6 +964,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if(!alertPolicies_.Equals(other.alertPolicies_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if (TotalSize != other.TotalSize) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -954,6 +973,7 @@ namespace Google.Cloud.Monitoring.V3 {
       int hash = 1;
       hash ^= alertPolicies_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (TotalSize != 0) hash ^= TotalSize.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -975,6 +995,10 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteString(NextPageToken);
       }
       alertPolicies_.WriteTo(output, _repeated_alertPolicies_codec);
+      if (TotalSize != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(TotalSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -989,6 +1013,10 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteString(NextPageToken);
       }
       alertPolicies_.WriteTo(ref output, _repeated_alertPolicies_codec);
+      if (TotalSize != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(TotalSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1001,6 +1029,9 @@ namespace Google.Cloud.Monitoring.V3 {
       size += alertPolicies_.CalculateSize(_repeated_alertPolicies_codec);
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (TotalSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalSize);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1016,6 +1047,9 @@ namespace Google.Cloud.Monitoring.V3 {
       alertPolicies_.Add(other.alertPolicies_);
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
+      }
+      if (other.TotalSize != 0) {
+        TotalSize = other.TotalSize;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1039,6 +1073,10 @@ namespace Google.Cloud.Monitoring.V3 {
             alertPolicies_.AddEntriesFrom(input, _repeated_alertPolicies_codec);
             break;
           }
+          case 32: {
+            TotalSize = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1059,6 +1097,10 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 26: {
             alertPolicies_.AddEntriesFrom(ref input, _repeated_alertPolicies_codec);
+            break;
+          }
+          case 32: {
+            TotalSize = input.ReadInt32();
             break;
           }
         }
