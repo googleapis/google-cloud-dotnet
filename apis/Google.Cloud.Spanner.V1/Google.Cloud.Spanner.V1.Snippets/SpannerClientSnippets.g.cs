@@ -691,6 +691,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 PartitionToken = ByteString.Empty,
                 Seqno = 0L,
                 QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             ResultSet response = spannerClient.ExecuteSql(request);
@@ -723,6 +724,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 PartitionToken = ByteString.Empty,
                 Seqno = 0L,
                 QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             ResultSet response = await spannerClient.ExecuteSqlAsync(request);
@@ -754,6 +756,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 PartitionToken = ByteString.Empty,
                 Seqno = 0L,
                 QueryOptions = new ExecuteSqlRequest.Types.QueryOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request, returning a streaming response
             SpannerClient.ExecuteStreamingSqlStream response = spannerClient.ExecuteStreamingSql(request);
@@ -786,6 +789,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                     new ExecuteBatchDmlRequest.Types.Statement(),
                 },
                 Seqno = 0L,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             ExecuteBatchDmlResponse response = spannerClient.ExecuteBatchDml(request);
@@ -809,6 +813,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                     new ExecuteBatchDmlRequest.Types.Statement(),
                 },
                 Seqno = 0L,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             ExecuteBatchDmlResponse response = await spannerClient.ExecuteBatchDmlAsync(request);
@@ -833,6 +838,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Limit = 0L,
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             ResultSet response = spannerClient.Read(request);
@@ -858,6 +864,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Limit = 0L,
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             ResultSet response = await spannerClient.ReadAsync(request);
@@ -882,6 +889,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Limit = 0L,
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request, returning a streaming response
             SpannerClient.StreamingReadStream response = spannerClient.StreamingRead(request);
@@ -909,6 +917,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             {
                 SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Options = new TransactionOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             Transaction response = spannerClient.BeginTransaction(request);
@@ -927,6 +936,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             {
                 SessionAsSessionName = SessionName.FromProjectInstanceDatabaseSession("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Options = new TransactionOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             Transaction response = await spannerClient.BeginTransactionAsync(request);
@@ -1004,6 +1014,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 TransactionId = ByteString.Empty,
                 Mutations = { new Mutation(), },
                 ReturnCommitStats = false,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             CommitResponse response = spannerClient.Commit(request);
@@ -1024,6 +1035,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 TransactionId = ByteString.Empty,
                 Mutations = { new Mutation(), },
                 ReturnCommitStats = false,
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             CommitResponse response = await spannerClient.CommitAsync(request);
