@@ -74,7 +74,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListKnowledgeBases</summary>
+        /// <summary>Snippet for ListKnowledgeBasesAsync</summary>
         public async Task ListKnowledgeBasesRequestObjectAsync()
         {
             // Snippet: ListKnowledgeBasesAsync(ListKnowledgeBasesRequest, CallSettings)
@@ -167,7 +167,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListKnowledgeBases</summary>
+        /// <summary>Snippet for ListKnowledgeBasesAsync</summary>
         public async Task ListKnowledgeBasesAsync()
         {
             // Snippet: ListKnowledgeBasesAsync(string, string, int?, CallSettings)
@@ -257,7 +257,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListKnowledgeBases</summary>
+        /// <summary>Snippet for ListKnowledgeBasesAsync</summary>
         public async Task ListKnowledgeBasesResourceNames1Async()
         {
             // Snippet: ListKnowledgeBasesAsync(ProjectName, string, int?, CallSettings)
@@ -347,7 +347,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListKnowledgeBases</summary>
+        /// <summary>Snippet for ListKnowledgeBasesAsync</summary>
         public async Task ListKnowledgeBasesResourceNames2Async()
         {
             // Snippet: ListKnowledgeBasesAsync(LocationName, string, int?, CallSettings)

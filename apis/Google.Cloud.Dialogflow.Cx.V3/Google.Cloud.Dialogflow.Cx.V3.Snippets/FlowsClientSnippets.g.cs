@@ -259,7 +259,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListFlows</summary>
+        /// <summary>Snippet for ListFlowsAsync</summary>
         public async Task ListFlowsRequestObjectAsync()
         {
             // Snippet: ListFlowsAsync(ListFlowsRequest, CallSettings)
@@ -353,7 +353,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListFlows</summary>
+        /// <summary>Snippet for ListFlowsAsync</summary>
         public async Task ListFlowsAsync()
         {
             // Snippet: ListFlowsAsync(string, string, int?, CallSettings)
@@ -443,7 +443,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListFlows</summary>
+        /// <summary>Snippet for ListFlowsAsync</summary>
         public async Task ListFlowsResourceNamesAsync()
         {
             // Snippet: ListFlowsAsync(AgentName, string, int?, CallSettings)

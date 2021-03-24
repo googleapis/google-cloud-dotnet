@@ -77,7 +77,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServices</summary>
+        /// <summary>Snippet for ListServicesAsync</summary>
         public async Task ListServicesRequestObjectAsync()
         {
             // Snippet: ListServicesAsync(ListServicesRequest, CallSettings)
@@ -172,7 +172,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServices</summary>
+        /// <summary>Snippet for ListServicesAsync</summary>
         public async Task ListServicesAsync()
         {
             // Snippet: ListServicesAsync(string, string, int?, CallSettings)
@@ -262,7 +262,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServices</summary>
+        /// <summary>Snippet for ListServicesAsync</summary>
         public async Task ListServicesResourceNamesAsync()
         {
             // Snippet: ListServicesAsync(LocationName, string, int?, CallSettings)
@@ -956,7 +956,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMetadataImports</summary>
+        /// <summary>Snippet for ListMetadataImportsAsync</summary>
         public async Task ListMetadataImportsRequestObjectAsync()
         {
             // Snippet: ListMetadataImportsAsync(ListMetadataImportsRequest, CallSettings)
@@ -1051,7 +1051,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMetadataImports</summary>
+        /// <summary>Snippet for ListMetadataImportsAsync</summary>
         public async Task ListMetadataImportsAsync()
         {
             // Snippet: ListMetadataImportsAsync(string, string, int?, CallSettings)
@@ -1141,7 +1141,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMetadataImports</summary>
+        /// <summary>Snippet for ListMetadataImportsAsync</summary>
         public async Task ListMetadataImportsResourceNamesAsync()
         {
             // Snippet: ListMetadataImportsAsync(ServiceName, string, int?, CallSettings)
@@ -1914,7 +1914,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBackups</summary>
+        /// <summary>Snippet for ListBackupsAsync</summary>
         public async Task ListBackupsRequestObjectAsync()
         {
             // Snippet: ListBackupsAsync(ListBackupsRequest, CallSettings)
@@ -2009,7 +2009,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBackups</summary>
+        /// <summary>Snippet for ListBackupsAsync</summary>
         public async Task ListBackupsAsync()
         {
             // Snippet: ListBackupsAsync(string, string, int?, CallSettings)
@@ -2099,7 +2099,7 @@ namespace Google.Cloud.Metastore.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBackups</summary>
+        /// <summary>Snippet for ListBackupsAsync</summary>
         public async Task ListBackupsResourceNamesAsync()
         {
             // Snippet: ListBackupsAsync(ServiceName, string, int?, CallSettings)

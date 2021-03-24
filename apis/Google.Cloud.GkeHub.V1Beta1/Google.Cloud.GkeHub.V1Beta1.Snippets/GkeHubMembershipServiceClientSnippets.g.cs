@@ -77,7 +77,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMemberships</summary>
+        /// <summary>Snippet for ListMembershipsAsync</summary>
         public async Task ListMembershipsRequestObjectAsync()
         {
             // Snippet: ListMembershipsAsync(ListMembershipsRequest, CallSettings)
@@ -172,7 +172,7 @@ namespace Google.Cloud.GkeHub.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMemberships</summary>
+        /// <summary>Snippet for ListMembershipsAsync</summary>
         public async Task ListMembershipsAsync()
         {
             // Snippet: ListMembershipsAsync(string, string, int?, CallSettings)

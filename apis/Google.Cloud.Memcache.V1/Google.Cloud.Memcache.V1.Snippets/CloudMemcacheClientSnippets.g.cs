@@ -78,7 +78,7 @@ namespace Google.Cloud.Memcache.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListInstances</summary>
+        /// <summary>Snippet for ListInstancesAsync</summary>
         public async Task ListInstancesRequestObjectAsync()
         {
             // Snippet: ListInstancesAsync(ListInstancesRequest, CallSettings)
@@ -173,7 +173,7 @@ namespace Google.Cloud.Memcache.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListInstances</summary>
+        /// <summary>Snippet for ListInstancesAsync</summary>
         public async Task ListInstancesAsync()
         {
             // Snippet: ListInstancesAsync(string, string, int?, CallSettings)
@@ -263,7 +263,7 @@ namespace Google.Cloud.Memcache.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListInstances</summary>
+        /// <summary>Snippet for ListInstancesAsync</summary>
         public async Task ListInstancesResourceNamesAsync()
         {
             // Snippet: ListInstancesAsync(LocationName, string, int?, CallSettings)

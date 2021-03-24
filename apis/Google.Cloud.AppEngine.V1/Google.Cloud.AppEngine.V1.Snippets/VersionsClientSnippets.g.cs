@@ -76,7 +76,7 @@ namespace Google.Cloud.AppEngine.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListVersions</summary>
+        /// <summary>Snippet for ListVersionsAsync</summary>
         public async Task ListVersionsRequestObjectAsync()
         {
             // Snippet: ListVersionsAsync(ListVersionsRequest, CallSettings)

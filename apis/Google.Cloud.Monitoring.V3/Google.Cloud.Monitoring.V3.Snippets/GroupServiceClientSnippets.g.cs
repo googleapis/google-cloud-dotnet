@@ -75,7 +75,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGroups</summary>
+        /// <summary>Snippet for ListGroupsAsync</summary>
         public async Task ListGroupsRequestObjectAsync()
         {
             // Snippet: ListGroupsAsync(ListGroupsRequest, CallSettings)
@@ -169,7 +169,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGroups</summary>
+        /// <summary>Snippet for ListGroupsAsync</summary>
         public async Task ListGroupsAsync()
         {
             // Snippet: ListGroupsAsync(string, string, int?, CallSettings)
@@ -259,7 +259,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGroups</summary>
+        /// <summary>Snippet for ListGroupsAsync</summary>
         public async Task ListGroupsResourceNames1Async()
         {
             // Snippet: ListGroupsAsync(ProjectName, string, int?, CallSettings)
@@ -349,7 +349,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGroups</summary>
+        /// <summary>Snippet for ListGroupsAsync</summary>
         public async Task ListGroupsResourceNames2Async()
         {
             // Snippet: ListGroupsAsync(OrganizationName, string, int?, CallSettings)
@@ -439,7 +439,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGroups</summary>
+        /// <summary>Snippet for ListGroupsAsync</summary>
         public async Task ListGroupsResourceNames3Async()
         {
             // Snippet: ListGroupsAsync(FolderName, string, int?, CallSettings)
@@ -529,7 +529,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGroups</summary>
+        /// <summary>Snippet for ListGroupsAsync</summary>
         public async Task ListGroupsResourceNames4Async()
         {
             // Snippet: ListGroupsAsync(IResourceName, string, int?, CallSettings)
@@ -1098,7 +1098,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGroupMembers</summary>
+        /// <summary>Snippet for ListGroupMembersAsync</summary>
         public async Task ListGroupMembersRequestObjectAsync()
         {
             // Snippet: ListGroupMembersAsync(ListGroupMembersRequest, CallSettings)
@@ -1193,7 +1193,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGroupMembers</summary>
+        /// <summary>Snippet for ListGroupMembersAsync</summary>
         public async Task ListGroupMembersAsync()
         {
             // Snippet: ListGroupMembersAsync(string, string, int?, CallSettings)
@@ -1283,7 +1283,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGroupMembers</summary>
+        /// <summary>Snippet for ListGroupMembersAsync</summary>
         public async Task ListGroupMembersResourceNames1Async()
         {
             // Snippet: ListGroupMembersAsync(GroupName, string, int?, CallSettings)
@@ -1373,7 +1373,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGroupMembers</summary>
+        /// <summary>Snippet for ListGroupMembersAsync</summary>
         public async Task ListGroupMembersResourceNames2Async()
         {
             // Snippet: ListGroupMembersAsync(IResourceName, string, int?, CallSettings)

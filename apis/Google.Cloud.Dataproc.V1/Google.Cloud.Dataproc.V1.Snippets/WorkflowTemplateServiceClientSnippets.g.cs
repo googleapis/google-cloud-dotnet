@@ -910,7 +910,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListWorkflowTemplates</summary>
+        /// <summary>Snippet for ListWorkflowTemplatesAsync</summary>
         public async Task ListWorkflowTemplatesRequestObjectAsync()
         {
             // Snippet: ListWorkflowTemplatesAsync(ListWorkflowTemplatesRequest, CallSettings)
@@ -1003,7 +1003,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListWorkflowTemplates</summary>
+        /// <summary>Snippet for ListWorkflowTemplatesAsync</summary>
         public async Task ListWorkflowTemplatesAsync()
         {
             // Snippet: ListWorkflowTemplatesAsync(string, string, int?, CallSettings)
@@ -1093,7 +1093,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListWorkflowTemplates</summary>
+        /// <summary>Snippet for ListWorkflowTemplatesAsync</summary>
         public async Task ListWorkflowTemplatesResourceNames1Async()
         {
             // Snippet: ListWorkflowTemplatesAsync(RegionName, string, int?, CallSettings)
@@ -1183,7 +1183,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListWorkflowTemplates</summary>
+        /// <summary>Snippet for ListWorkflowTemplatesAsync</summary>
         public async Task ListWorkflowTemplatesResourceNames2Async()
         {
             // Snippet: ListWorkflowTemplatesAsync(LocationName, string, int?, CallSettings)

@@ -1060,7 +1060,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListJobs</summary>
+        /// <summary>Snippet for ListJobsAsync</summary>
         public async Task ListJobsRequestObjectAsync()
         {
             // Snippet: ListJobsAsync(ListJobsRequest, CallSettings)
@@ -1156,7 +1156,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListJobs</summary>
+        /// <summary>Snippet for ListJobsAsync</summary>
         public async Task ListJobsAsync()
         {
             // Snippet: ListJobsAsync(string, string, string, int?, CallSettings)
@@ -1248,7 +1248,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListJobs</summary>
+        /// <summary>Snippet for ListJobsAsync</summary>
         public async Task ListJobsResourceNames1Async()
         {
             // Snippet: ListJobsAsync(TenantName, string, string, int?, CallSettings)
@@ -1340,7 +1340,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListJobs</summary>
+        /// <summary>Snippet for ListJobsAsync</summary>
         public async Task ListJobsResourceNames2Async()
         {
             // Snippet: ListJobsAsync(ProjectName, string, string, int?, CallSettings)
@@ -1516,7 +1516,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for SearchJobsForAlert</summary>
+        /// <summary>Snippet for SearchJobsForAlertAsync</summary>
         public async Task SearchJobsForAlertRequestObjectAsync()
         {
             // Snippet: SearchJobsForAlertAsync(SearchJobsRequest, CallSettings)

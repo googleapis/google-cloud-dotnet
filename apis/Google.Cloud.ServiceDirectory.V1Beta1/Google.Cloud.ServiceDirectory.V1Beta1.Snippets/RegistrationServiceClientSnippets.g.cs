@@ -176,7 +176,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNamespaces</summary>
+        /// <summary>Snippet for ListNamespacesAsync</summary>
         public async Task ListNamespacesRequestObjectAsync()
         {
             // Snippet: ListNamespacesAsync(ListNamespacesRequest, CallSettings)
@@ -271,7 +271,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNamespaces</summary>
+        /// <summary>Snippet for ListNamespacesAsync</summary>
         public async Task ListNamespacesAsync()
         {
             // Snippet: ListNamespacesAsync(string, string, int?, CallSettings)
@@ -361,7 +361,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNamespaces</summary>
+        /// <summary>Snippet for ListNamespacesAsync</summary>
         public async Task ListNamespacesResourceNamesAsync()
         {
             // Snippet: ListNamespacesAsync(LocationName, string, int?, CallSettings)
@@ -793,7 +793,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServices</summary>
+        /// <summary>Snippet for ListServicesAsync</summary>
         public async Task ListServicesRequestObjectAsync()
         {
             // Snippet: ListServicesAsync(ListServicesRequest, CallSettings)
@@ -888,7 +888,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServices</summary>
+        /// <summary>Snippet for ListServicesAsync</summary>
         public async Task ListServicesAsync()
         {
             // Snippet: ListServicesAsync(string, string, int?, CallSettings)
@@ -978,7 +978,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServices</summary>
+        /// <summary>Snippet for ListServicesAsync</summary>
         public async Task ListServicesResourceNamesAsync()
         {
             // Snippet: ListServicesAsync(NamespaceName, string, int?, CallSettings)
@@ -1410,7 +1410,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEndpoints</summary>
+        /// <summary>Snippet for ListEndpointsAsync</summary>
         public async Task ListEndpointsRequestObjectAsync()
         {
             // Snippet: ListEndpointsAsync(ListEndpointsRequest, CallSettings)
@@ -1505,7 +1505,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEndpoints</summary>
+        /// <summary>Snippet for ListEndpointsAsync</summary>
         public async Task ListEndpointsAsync()
         {
             // Snippet: ListEndpointsAsync(string, string, int?, CallSettings)
@@ -1595,7 +1595,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEndpoints</summary>
+        /// <summary>Snippet for ListEndpointsAsync</summary>
         public async Task ListEndpointsResourceNamesAsync()
         {
             // Snippet: ListEndpointsAsync(ServiceName, string, int?, CallSettings)

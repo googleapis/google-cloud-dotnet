@@ -76,7 +76,7 @@ namespace Google.Cloud.Functions.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListFunctions</summary>
+        /// <summary>Snippet for ListFunctionsAsync</summary>
         public async Task ListFunctionsRequestObjectAsync()
         {
             // Snippet: ListFunctionsAsync(ListFunctionsRequest, CallSettings)

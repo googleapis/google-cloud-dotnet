@@ -74,7 +74,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotificationChannelDescriptors</summary>
+        /// <summary>Snippet for ListNotificationChannelDescriptorsAsync</summary>
         public async Task ListNotificationChannelDescriptorsRequestObjectAsync()
         {
             // Snippet: ListNotificationChannelDescriptorsAsync(ListNotificationChannelDescriptorsRequest, CallSettings)
@@ -167,7 +167,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotificationChannelDescriptors</summary>
+        /// <summary>Snippet for ListNotificationChannelDescriptorsAsync</summary>
         public async Task ListNotificationChannelDescriptorsAsync()
         {
             // Snippet: ListNotificationChannelDescriptorsAsync(string, string, int?, CallSettings)
@@ -257,7 +257,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotificationChannelDescriptors</summary>
+        /// <summary>Snippet for ListNotificationChannelDescriptorsAsync</summary>
         public async Task ListNotificationChannelDescriptorsResourceNames1Async()
         {
             // Snippet: ListNotificationChannelDescriptorsAsync(ProjectName, string, int?, CallSettings)
@@ -347,7 +347,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotificationChannelDescriptors</summary>
+        /// <summary>Snippet for ListNotificationChannelDescriptorsAsync</summary>
         public async Task ListNotificationChannelDescriptorsResourceNames2Async()
         {
             // Snippet: ListNotificationChannelDescriptorsAsync(OrganizationName, string, int?, CallSettings)
@@ -437,7 +437,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotificationChannelDescriptors</summary>
+        /// <summary>Snippet for ListNotificationChannelDescriptorsAsync</summary>
         public async Task ListNotificationChannelDescriptorsResourceNames3Async()
         {
             // Snippet: ListNotificationChannelDescriptorsAsync(FolderName, string, int?, CallSettings)
@@ -527,7 +527,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotificationChannelDescriptors</summary>
+        /// <summary>Snippet for ListNotificationChannelDescriptorsAsync</summary>
         public async Task ListNotificationChannelDescriptorsResourceNames4Async()
         {
             // Snippet: ListNotificationChannelDescriptorsAsync(IResourceName, string, int?, CallSettings)
@@ -736,7 +736,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotificationChannels</summary>
+        /// <summary>Snippet for ListNotificationChannelsAsync</summary>
         public async Task ListNotificationChannelsRequestObjectAsync()
         {
             // Snippet: ListNotificationChannelsAsync(ListNotificationChannelsRequest, CallSettings)
@@ -831,7 +831,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotificationChannels</summary>
+        /// <summary>Snippet for ListNotificationChannelsAsync</summary>
         public async Task ListNotificationChannelsAsync()
         {
             // Snippet: ListNotificationChannelsAsync(string, string, int?, CallSettings)
@@ -921,7 +921,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotificationChannels</summary>
+        /// <summary>Snippet for ListNotificationChannelsAsync</summary>
         public async Task ListNotificationChannelsResourceNames1Async()
         {
             // Snippet: ListNotificationChannelsAsync(ProjectName, string, int?, CallSettings)
@@ -1011,7 +1011,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotificationChannels</summary>
+        /// <summary>Snippet for ListNotificationChannelsAsync</summary>
         public async Task ListNotificationChannelsResourceNames2Async()
         {
             // Snippet: ListNotificationChannelsAsync(OrganizationName, string, int?, CallSettings)
@@ -1101,7 +1101,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotificationChannels</summary>
+        /// <summary>Snippet for ListNotificationChannelsAsync</summary>
         public async Task ListNotificationChannelsResourceNames3Async()
         {
             // Snippet: ListNotificationChannelsAsync(FolderName, string, int?, CallSettings)
@@ -1191,7 +1191,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotificationChannels</summary>
+        /// <summary>Snippet for ListNotificationChannelsAsync</summary>
         public async Task ListNotificationChannelsResourceNames4Async()
         {
             // Snippet: ListNotificationChannelsAsync(IResourceName, string, int?, CallSettings)

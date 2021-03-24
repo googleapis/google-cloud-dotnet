@@ -1431,7 +1431,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAppProfiles</summary>
+        /// <summary>Snippet for ListAppProfilesAsync</summary>
         public async Task ListAppProfilesRequestObjectAsync()
         {
             // Snippet: ListAppProfilesAsync(ListAppProfilesRequest, CallSettings)
@@ -1524,7 +1524,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAppProfiles</summary>
+        /// <summary>Snippet for ListAppProfilesAsync</summary>
         public async Task ListAppProfilesAsync()
         {
             // Snippet: ListAppProfilesAsync(string, string, int?, CallSettings)
@@ -1614,7 +1614,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAppProfiles</summary>
+        /// <summary>Snippet for ListAppProfilesAsync</summary>
         public async Task ListAppProfilesResourceNamesAsync()
         {
             // Snippet: ListAppProfilesAsync(InstanceName, string, int?, CallSettings)

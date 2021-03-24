@@ -371,7 +371,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServices</summary>
+        /// <summary>Snippet for ListServicesAsync</summary>
         public async Task ListServicesRequestObjectAsync()
         {
             // Snippet: ListServicesAsync(ListServicesRequest, CallSettings)
@@ -465,7 +465,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServices</summary>
+        /// <summary>Snippet for ListServicesAsync</summary>
         public async Task ListServicesAsync()
         {
             // Snippet: ListServicesAsync(string, string, int?, CallSettings)
@@ -555,7 +555,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServices</summary>
+        /// <summary>Snippet for ListServicesAsync</summary>
         public async Task ListServicesResourceNames1Async()
         {
             // Snippet: ListServicesAsync(ProjectName, string, int?, CallSettings)
@@ -645,7 +645,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServices</summary>
+        /// <summary>Snippet for ListServicesAsync</summary>
         public async Task ListServicesResourceNames2Async()
         {
             // Snippet: ListServicesAsync(OrganizationName, string, int?, CallSettings)
@@ -735,7 +735,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServices</summary>
+        /// <summary>Snippet for ListServicesAsync</summary>
         public async Task ListServicesResourceNames3Async()
         {
             // Snippet: ListServicesAsync(FolderName, string, int?, CallSettings)
@@ -825,7 +825,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServices</summary>
+        /// <summary>Snippet for ListServicesAsync</summary>
         public async Task ListServicesResourceNames4Async()
         {
             // Snippet: ListServicesAsync(IResourceName, string, int?, CallSettings)
@@ -1336,7 +1336,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServiceLevelObjectives</summary>
+        /// <summary>Snippet for ListServiceLevelObjectivesAsync</summary>
         public async Task ListServiceLevelObjectivesRequestObjectAsync()
         {
             // Snippet: ListServiceLevelObjectivesAsync(ListServiceLevelObjectivesRequest, CallSettings)
@@ -1431,7 +1431,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServiceLevelObjectives</summary>
+        /// <summary>Snippet for ListServiceLevelObjectivesAsync</summary>
         public async Task ListServiceLevelObjectivesAsync()
         {
             // Snippet: ListServiceLevelObjectivesAsync(string, string, int?, CallSettings)
@@ -1521,7 +1521,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServiceLevelObjectives</summary>
+        /// <summary>Snippet for ListServiceLevelObjectivesAsync</summary>
         public async Task ListServiceLevelObjectivesResourceNames1Async()
         {
             // Snippet: ListServiceLevelObjectivesAsync(ServiceName, string, int?, CallSettings)
@@ -1611,7 +1611,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServiceLevelObjectives</summary>
+        /// <summary>Snippet for ListServiceLevelObjectivesAsync</summary>
         public async Task ListServiceLevelObjectivesResourceNames2Async()
         {
             // Snippet: ListServiceLevelObjectivesAsync(IResourceName, string, int?, CallSettings)

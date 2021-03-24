@@ -76,7 +76,7 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGameServerClusters</summary>
+        /// <summary>Snippet for ListGameServerClustersAsync</summary>
         public async Task ListGameServerClustersRequestObjectAsync()
         {
             // Snippet: ListGameServerClustersAsync(ListGameServerClustersRequest, CallSettings)
@@ -171,7 +171,7 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGameServerClusters</summary>
+        /// <summary>Snippet for ListGameServerClustersAsync</summary>
         public async Task ListGameServerClustersAsync()
         {
             // Snippet: ListGameServerClustersAsync(string, string, int?, CallSettings)
@@ -261,7 +261,7 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGameServerClusters</summary>
+        /// <summary>Snippet for ListGameServerClustersAsync</summary>
         public async Task ListGameServerClustersResourceNamesAsync()
         {
             // Snippet: ListGameServerClustersAsync(RealmName, string, int?, CallSettings)

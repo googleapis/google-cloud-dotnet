@@ -74,7 +74,7 @@ namespace Google.Cloud.AppEngine.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListIngressRules</summary>
+        /// <summary>Snippet for ListIngressRulesAsync</summary>
         public async Task ListIngressRulesRequestObjectAsync()
         {
             // Snippet: ListIngressRulesAsync(ListIngressRulesRequest, CallSettings)

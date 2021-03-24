@@ -75,7 +75,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAnswerRecords</summary>
+        /// <summary>Snippet for ListAnswerRecordsAsync</summary>
         public async Task ListAnswerRecordsRequestObjectAsync()
         {
             // Snippet: ListAnswerRecordsAsync(ListAnswerRecordsRequest, CallSettings)
@@ -169,7 +169,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAnswerRecords</summary>
+        /// <summary>Snippet for ListAnswerRecordsAsync</summary>
         public async Task ListAnswerRecordsAsync()
         {
             // Snippet: ListAnswerRecordsAsync(string, string, int?, CallSettings)
@@ -259,7 +259,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAnswerRecords</summary>
+        /// <summary>Snippet for ListAnswerRecordsAsync</summary>
         public async Task ListAnswerRecordsResourceNames1Async()
         {
             // Snippet: ListAnswerRecordsAsync(ProjectName, string, int?, CallSettings)
@@ -349,7 +349,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAnswerRecords</summary>
+        /// <summary>Snippet for ListAnswerRecordsAsync</summary>
         public async Task ListAnswerRecordsResourceNames2Async()
         {
             // Snippet: ListAnswerRecordsAsync(LocationName, string, int?, CallSettings)

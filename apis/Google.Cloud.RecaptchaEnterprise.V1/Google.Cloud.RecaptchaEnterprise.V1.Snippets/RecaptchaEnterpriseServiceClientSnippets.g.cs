@@ -295,7 +295,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListKeys</summary>
+        /// <summary>Snippet for ListKeysAsync</summary>
         public async Task ListKeysRequestObjectAsync()
         {
             // Snippet: ListKeysAsync(ListKeysRequest, CallSettings)

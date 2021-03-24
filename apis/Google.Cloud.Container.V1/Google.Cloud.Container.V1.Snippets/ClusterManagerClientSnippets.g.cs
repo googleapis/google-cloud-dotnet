@@ -2480,7 +2480,7 @@ namespace Google.Cloud.Container.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListUsableSubnetworks</summary>
+        /// <summary>Snippet for ListUsableSubnetworksAsync</summary>
         public async Task ListUsableSubnetworksRequestObjectAsync()
         {
             // Snippet: ListUsableSubnetworksAsync(ListUsableSubnetworksRequest, CallSettings)

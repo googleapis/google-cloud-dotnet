@@ -73,7 +73,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListExperiments</summary>
+        /// <summary>Snippet for ListExperimentsAsync</summary>
         public async Task ListExperimentsRequestObjectAsync()
         {
             // Snippet: ListExperimentsAsync(ListExperimentsRequest, CallSettings)
@@ -166,7 +166,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListExperiments</summary>
+        /// <summary>Snippet for ListExperimentsAsync</summary>
         public async Task ListExperimentsAsync()
         {
             // Snippet: ListExperimentsAsync(string, string, int?, CallSettings)
@@ -256,7 +256,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListExperiments</summary>
+        /// <summary>Snippet for ListExperimentsAsync</summary>
         public async Task ListExperimentsResourceNamesAsync()
         {
             // Snippet: ListExperimentsAsync(EnvironmentName, string, int?, CallSettings)

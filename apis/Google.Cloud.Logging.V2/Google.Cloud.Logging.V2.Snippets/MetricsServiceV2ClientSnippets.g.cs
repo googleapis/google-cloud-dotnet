@@ -73,7 +73,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListLogMetrics</summary>
+        /// <summary>Snippet for ListLogMetricsAsync</summary>
         public async Task ListLogMetricsRequestObjectAsync()
         {
             // Snippet: ListLogMetricsAsync(ListLogMetricsRequest, CallSettings)
@@ -166,7 +166,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListLogMetrics</summary>
+        /// <summary>Snippet for ListLogMetricsAsync</summary>
         public async Task ListLogMetricsAsync()
         {
             // Snippet: ListLogMetricsAsync(string, string, int?, CallSettings)
@@ -256,7 +256,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListLogMetrics</summary>
+        /// <summary>Snippet for ListLogMetricsAsync</summary>
         public async Task ListLogMetricsResourceNamesAsync()
         {
             // Snippet: ListLogMetricsAsync(ProjectName, string, int?, CallSettings)

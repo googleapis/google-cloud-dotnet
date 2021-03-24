@@ -81,7 +81,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGroupStats</summary>
+        /// <summary>Snippet for ListGroupStatsAsync</summary>
         public async Task ListGroupStatsRequestObjectAsync()
         {
             // Snippet: ListGroupStatsAsync(ListGroupStatsRequest, CallSettings)
@@ -182,7 +182,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGroupStats</summary>
+        /// <summary>Snippet for ListGroupStatsAsync</summary>
         public async Task ListGroupStatsAsync()
         {
             // Snippet: ListGroupStatsAsync(string, QueryTimeRange, string, int?, CallSettings)
@@ -274,7 +274,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGroupStats</summary>
+        /// <summary>Snippet for ListGroupStatsAsync</summary>
         public async Task ListGroupStatsResourceNamesAsync()
         {
             // Snippet: ListGroupStatsAsync(ProjectName, QueryTimeRange, string, int?, CallSettings)
@@ -371,7 +371,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEvents</summary>
+        /// <summary>Snippet for ListEventsAsync</summary>
         public async Task ListEventsRequestObjectAsync()
         {
             // Snippet: ListEventsAsync(ListEventsRequest, CallSettings)
@@ -468,7 +468,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEvents</summary>
+        /// <summary>Snippet for ListEventsAsync</summary>
         public async Task ListEventsAsync()
         {
             // Snippet: ListEventsAsync(string, string, string, int?, CallSettings)
@@ -560,7 +560,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEvents</summary>
+        /// <summary>Snippet for ListEventsAsync</summary>
         public async Task ListEventsResourceNamesAsync()
         {
             // Snippet: ListEventsAsync(ProjectName, string, string, int?, CallSettings)

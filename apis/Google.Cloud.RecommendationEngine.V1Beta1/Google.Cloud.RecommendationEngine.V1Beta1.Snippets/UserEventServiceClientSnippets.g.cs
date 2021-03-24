@@ -273,7 +273,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListUserEvents</summary>
+        /// <summary>Snippet for ListUserEventsAsync</summary>
         public async Task ListUserEventsRequestObjectAsync()
         {
             // Snippet: ListUserEventsAsync(ListUserEventsRequest, CallSettings)
@@ -368,7 +368,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListUserEvents</summary>
+        /// <summary>Snippet for ListUserEventsAsync</summary>
         public async Task ListUserEventsAsync()
         {
             // Snippet: ListUserEventsAsync(string, string, string, int?, CallSettings)
@@ -460,7 +460,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListUserEvents</summary>
+        /// <summary>Snippet for ListUserEventsAsync</summary>
         public async Task ListUserEventsResourceNamesAsync()
         {
             // Snippet: ListUserEventsAsync(EventStoreName, string, string, int?, CallSettings)

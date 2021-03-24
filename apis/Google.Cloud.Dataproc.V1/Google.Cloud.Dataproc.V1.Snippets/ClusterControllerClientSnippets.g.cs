@@ -558,7 +558,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListClusters</summary>
+        /// <summary>Snippet for ListClustersAsync</summary>
         public async Task ListClustersRequestObjectAsync()
         {
             // Snippet: ListClustersAsync(ListClustersRequest, CallSettings)
@@ -654,7 +654,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListClusters</summary>
+        /// <summary>Snippet for ListClustersAsync</summary>
         public async Task ListClusters1Async()
         {
             // Snippet: ListClustersAsync(string, string, string, int?, CallSettings)
@@ -747,7 +747,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListClusters</summary>
+        /// <summary>Snippet for ListClustersAsync</summary>
         public async Task ListClusters2Async()
         {
             // Snippet: ListClustersAsync(string, string, string, string, int?, CallSettings)

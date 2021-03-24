@@ -78,7 +78,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for Predict</summary>
+        /// <summary>Snippet for PredictAsync</summary>
         public async Task PredictRequestObjectAsync()
         {
             // Snippet: PredictAsync(PredictRequest, CallSettings)
@@ -177,7 +177,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for Predict</summary>
+        /// <summary>Snippet for PredictAsync</summary>
         public async Task PredictAsync()
         {
             // Snippet: PredictAsync(string, UserEvent, string, int?, CallSettings)
@@ -269,7 +269,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for Predict</summary>
+        /// <summary>Snippet for PredictAsync</summary>
         public async Task PredictResourceNamesAsync()
         {
             // Snippet: PredictAsync(PlacementName, UserEvent, string, int?, CallSettings)

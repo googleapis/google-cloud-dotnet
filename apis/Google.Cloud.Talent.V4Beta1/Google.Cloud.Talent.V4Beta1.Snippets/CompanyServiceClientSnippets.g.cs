@@ -433,7 +433,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCompanies</summary>
+        /// <summary>Snippet for ListCompaniesAsync</summary>
         public async Task ListCompaniesRequestObjectAsync()
         {
             // Snippet: ListCompaniesAsync(ListCompaniesRequest, CallSettings)
@@ -527,7 +527,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCompanies</summary>
+        /// <summary>Snippet for ListCompaniesAsync</summary>
         public async Task ListCompaniesAsync()
         {
             // Snippet: ListCompaniesAsync(string, string, int?, CallSettings)
@@ -617,7 +617,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCompanies</summary>
+        /// <summary>Snippet for ListCompaniesAsync</summary>
         public async Task ListCompaniesResourceNames1Async()
         {
             // Snippet: ListCompaniesAsync(TenantName, string, int?, CallSettings)
@@ -707,7 +707,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCompanies</summary>
+        /// <summary>Snippet for ListCompaniesAsync</summary>
         public async Task ListCompaniesResourceNames2Async()
         {
             // Snippet: ListCompaniesAsync(ProjectName, string, int?, CallSettings)

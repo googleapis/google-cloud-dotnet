@@ -265,7 +265,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCertificates</summary>
+        /// <summary>Snippet for ListCertificatesAsync</summary>
         public async Task ListCertificatesRequestObjectAsync()
         {
             // Snippet: ListCertificatesAsync(ListCertificatesRequest, CallSettings)
@@ -360,7 +360,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCertificates</summary>
+        /// <summary>Snippet for ListCertificatesAsync</summary>
         public async Task ListCertificatesAsync()
         {
             // Snippet: ListCertificatesAsync(string, string, int?, CallSettings)
@@ -450,7 +450,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCertificates</summary>
+        /// <summary>Snippet for ListCertificatesAsync</summary>
         public async Task ListCertificatesResourceNamesAsync()
         {
             // Snippet: ListCertificatesAsync(CertificateAuthorityName, string, int?, CallSettings)
@@ -1632,7 +1632,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCertificateAuthorities</summary>
+        /// <summary>Snippet for ListCertificateAuthoritiesAsync</summary>
         public async Task ListCertificateAuthoritiesRequestObjectAsync()
         {
             // Snippet: ListCertificateAuthoritiesAsync(ListCertificateAuthoritiesRequest, CallSettings)
@@ -1727,7 +1727,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCertificateAuthorities</summary>
+        /// <summary>Snippet for ListCertificateAuthoritiesAsync</summary>
         public async Task ListCertificateAuthoritiesAsync()
         {
             // Snippet: ListCertificateAuthoritiesAsync(string, string, int?, CallSettings)
@@ -1817,7 +1817,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCertificateAuthorities</summary>
+        /// <summary>Snippet for ListCertificateAuthoritiesAsync</summary>
         public async Task ListCertificateAuthoritiesResourceNamesAsync()
         {
             // Snippet: ListCertificateAuthoritiesAsync(LocationName, string, int?, CallSettings)
@@ -2499,7 +2499,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCertificateRevocationLists</summary>
+        /// <summary>Snippet for ListCertificateRevocationListsAsync</summary>
         public async Task ListCertificateRevocationListsRequestObjectAsync()
         {
             // Snippet: ListCertificateRevocationListsAsync(ListCertificateRevocationListsRequest, CallSettings)
@@ -2594,7 +2594,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCertificateRevocationLists</summary>
+        /// <summary>Snippet for ListCertificateRevocationListsAsync</summary>
         public async Task ListCertificateRevocationListsAsync()
         {
             // Snippet: ListCertificateRevocationListsAsync(string, string, int?, CallSettings)
@@ -2684,7 +2684,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCertificateRevocationLists</summary>
+        /// <summary>Snippet for ListCertificateRevocationListsAsync</summary>
         public async Task ListCertificateRevocationListsResourceNamesAsync()
         {
             // Snippet: ListCertificateRevocationListsAsync(CertificateAuthorityName, string, int?, CallSettings)
@@ -2996,7 +2996,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListReusableConfigs</summary>
+        /// <summary>Snippet for ListReusableConfigsAsync</summary>
         public async Task ListReusableConfigsRequestObjectAsync()
         {
             // Snippet: ListReusableConfigsAsync(ListReusableConfigsRequest, CallSettings)
@@ -3091,7 +3091,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListReusableConfigs</summary>
+        /// <summary>Snippet for ListReusableConfigsAsync</summary>
         public async Task ListReusableConfigsAsync()
         {
             // Snippet: ListReusableConfigsAsync(string, string, int?, CallSettings)
@@ -3181,7 +3181,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListReusableConfigs</summary>
+        /// <summary>Snippet for ListReusableConfigsAsync</summary>
         public async Task ListReusableConfigsResourceNamesAsync()
         {
             // Snippet: ListReusableConfigsAsync(LocationName, string, int?, CallSettings)

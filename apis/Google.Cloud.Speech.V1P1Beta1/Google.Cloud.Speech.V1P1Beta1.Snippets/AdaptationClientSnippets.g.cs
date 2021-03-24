@@ -260,7 +260,7 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPhraseSet</summary>
+        /// <summary>Snippet for ListPhraseSetAsync</summary>
         public async Task ListPhraseSetRequestObjectAsync()
         {
             // Snippet: ListPhraseSetAsync(ListPhraseSetRequest, CallSettings)
@@ -353,7 +353,7 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPhraseSet</summary>
+        /// <summary>Snippet for ListPhraseSetAsync</summary>
         public async Task ListPhraseSetAsync()
         {
             // Snippet: ListPhraseSetAsync(string, string, int?, CallSettings)
@@ -443,7 +443,7 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPhraseSet</summary>
+        /// <summary>Snippet for ListPhraseSetAsync</summary>
         public async Task ListPhraseSetResourceNamesAsync()
         {
             // Snippet: ListPhraseSetAsync(LocationName, string, int?, CallSettings)
@@ -873,7 +873,7 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCustomClasses</summary>
+        /// <summary>Snippet for ListCustomClassesAsync</summary>
         public async Task ListCustomClassesRequestObjectAsync()
         {
             // Snippet: ListCustomClassesAsync(ListCustomClassesRequest, CallSettings)
@@ -966,7 +966,7 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCustomClasses</summary>
+        /// <summary>Snippet for ListCustomClassesAsync</summary>
         public async Task ListCustomClassesAsync()
         {
             // Snippet: ListCustomClassesAsync(string, string, int?, CallSettings)
@@ -1056,7 +1056,7 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCustomClasses</summary>
+        /// <summary>Snippet for ListCustomClassesAsync</summary>
         public async Task ListCustomClassesResourceNamesAsync()
         {
             // Snippet: ListCustomClassesAsync(LocationName, string, int?, CallSettings)

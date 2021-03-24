@@ -74,7 +74,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEntityTypes</summary>
+        /// <summary>Snippet for ListEntityTypesAsync</summary>
         public async Task ListEntityTypesRequestObjectAsync()
         {
             // Snippet: ListEntityTypesAsync(ListEntityTypesRequest, CallSettings)
@@ -168,7 +168,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEntityTypes</summary>
+        /// <summary>Snippet for ListEntityTypesAsync</summary>
         public async Task ListEntityTypesAsync()
         {
             // Snippet: ListEntityTypesAsync(string, string, int?, CallSettings)
@@ -258,7 +258,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEntityTypes</summary>
+        /// <summary>Snippet for ListEntityTypesAsync</summary>
         public async Task ListEntityTypesResourceNamesAsync()
         {
             // Snippet: ListEntityTypesAsync(AgentName, string, int?, CallSettings)

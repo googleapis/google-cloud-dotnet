@@ -73,7 +73,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListWebhooks</summary>
+        /// <summary>Snippet for ListWebhooksAsync</summary>
         public async Task ListWebhooksRequestObjectAsync()
         {
             // Snippet: ListWebhooksAsync(ListWebhooksRequest, CallSettings)
@@ -166,7 +166,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListWebhooks</summary>
+        /// <summary>Snippet for ListWebhooksAsync</summary>
         public async Task ListWebhooksAsync()
         {
             // Snippet: ListWebhooksAsync(string, string, int?, CallSettings)
@@ -256,7 +256,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListWebhooks</summary>
+        /// <summary>Snippet for ListWebhooksAsync</summary>
         public async Task ListWebhooksResourceNamesAsync()
         {
             // Snippet: ListWebhooksAsync(AgentName, string, int?, CallSettings)

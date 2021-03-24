@@ -71,7 +71,7 @@ namespace Google.Cloud.Channel.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCustomers</summary>
+        /// <summary>Snippet for ListCustomersAsync</summary>
         public async Task ListCustomersRequestObjectAsync()
         {
             // Snippet: ListCustomersAsync(ListCustomersRequest, CallSettings)
@@ -514,7 +514,7 @@ namespace Google.Cloud.Channel.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEntitlements</summary>
+        /// <summary>Snippet for ListEntitlementsAsync</summary>
         public async Task ListEntitlementsRequestObjectAsync()
         {
             // Snippet: ListEntitlementsAsync(ListEntitlementsRequest, CallSettings)
@@ -613,7 +613,7 @@ namespace Google.Cloud.Channel.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferableSkus</summary>
+        /// <summary>Snippet for ListTransferableSkusAsync</summary>
         public async Task ListTransferableSkusRequestObjectAsync()
         {
             // Snippet: ListTransferableSkusAsync(ListTransferableSkusRequest, CallSettings)
@@ -715,7 +715,7 @@ namespace Google.Cloud.Channel.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferableOffers</summary>
+        /// <summary>Snippet for ListTransferableOffersAsync</summary>
         public async Task ListTransferableOffersRequestObjectAsync()
         {
             // Snippet: ListTransferableOffersAsync(ListTransferableOffersRequest, CallSettings)
@@ -1538,7 +1538,7 @@ namespace Google.Cloud.Channel.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListChannelPartnerLinks</summary>
+        /// <summary>Snippet for ListChannelPartnerLinksAsync</summary>
         public async Task ListChannelPartnerLinksRequestObjectAsync()
         {
             // Snippet: ListChannelPartnerLinksAsync(ListChannelPartnerLinksRequest, CallSettings)
@@ -1743,7 +1743,7 @@ namespace Google.Cloud.Channel.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListProducts</summary>
+        /// <summary>Snippet for ListProductsAsync</summary>
         public async Task ListProductsRequestObjectAsync()
         {
             // Snippet: ListProductsAsync(ListProductsRequest, CallSettings)
@@ -1842,7 +1842,7 @@ namespace Google.Cloud.Channel.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSkus</summary>
+        /// <summary>Snippet for ListSkusAsync</summary>
         public async Task ListSkusRequestObjectAsync()
         {
             // Snippet: ListSkusAsync(ListSkusRequest, CallSettings)
@@ -1942,7 +1942,7 @@ namespace Google.Cloud.Channel.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListOffers</summary>
+        /// <summary>Snippet for ListOffersAsync</summary>
         public async Task ListOffersRequestObjectAsync()
         {
             // Snippet: ListOffersAsync(ListOffersRequest, CallSettings)
@@ -2042,7 +2042,7 @@ namespace Google.Cloud.Channel.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPurchasableSkus</summary>
+        /// <summary>Snippet for ListPurchasableSkusAsync</summary>
         public async Task ListPurchasableSkusRequestObjectAsync()
         {
             // Snippet: ListPurchasableSkusAsync(ListPurchasableSkusRequest, CallSettings)
@@ -2142,7 +2142,7 @@ namespace Google.Cloud.Channel.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPurchasableOffers</summary>
+        /// <summary>Snippet for ListPurchasableOffersAsync</summary>
         public async Task ListPurchasableOffersRequestObjectAsync()
         {
             // Snippet: ListPurchasableOffersAsync(ListPurchasableOffersRequest, CallSettings)
@@ -2307,7 +2307,7 @@ namespace Google.Cloud.Channel.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSubscribers</summary>
+        /// <summary>Snippet for ListSubscribersAsync</summary>
         public async Task ListSubscribersRequestObjectAsync()
         {
             // Snippet: ListSubscribersAsync(ListSubscribersRequest, CallSettings)

@@ -69,7 +69,7 @@ namespace Google.Cloud.AppEngine.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAuthorizedDomains</summary>
+        /// <summary>Snippet for ListAuthorizedDomainsAsync</summary>
         public async Task ListAuthorizedDomainsRequestObjectAsync()
         {
             // Snippet: ListAuthorizedDomainsAsync(ListAuthorizedDomainsRequest, CallSettings)

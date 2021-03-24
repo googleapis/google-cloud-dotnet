@@ -518,7 +518,7 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListIndexes</summary>
+        /// <summary>Snippet for ListIndexesAsync</summary>
         public async Task ListIndexesRequestObjectAsync()
         {
             // Snippet: ListIndexesAsync(ListIndexesRequest, CallSettings)

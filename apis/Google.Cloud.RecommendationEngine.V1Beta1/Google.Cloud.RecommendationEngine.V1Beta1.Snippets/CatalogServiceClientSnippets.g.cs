@@ -255,7 +255,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCatalogItems</summary>
+        /// <summary>Snippet for ListCatalogItemsAsync</summary>
         public async Task ListCatalogItemsRequestObjectAsync()
         {
             // Snippet: ListCatalogItemsAsync(ListCatalogItemsRequest, CallSettings)
@@ -350,7 +350,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCatalogItems</summary>
+        /// <summary>Snippet for ListCatalogItemsAsync</summary>
         public async Task ListCatalogItemsAsync()
         {
             // Snippet: ListCatalogItemsAsync(string, string, string, int?, CallSettings)
@@ -442,7 +442,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCatalogItems</summary>
+        /// <summary>Snippet for ListCatalogItemsAsync</summary>
         public async Task ListCatalogItemsResourceNamesAsync()
         {
             // Snippet: ListCatalogItemsAsync(CatalogName, string, string, int?, CallSettings)

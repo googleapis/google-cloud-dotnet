@@ -166,7 +166,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListJobs</summary>
+        /// <summary>Snippet for ListJobsAsync</summary>
         public async Task ListJobsRequestObjectAsync()
         {
             // Snippet: ListJobsAsync(ListJobsRequest, CallSettings)
@@ -259,7 +259,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListJobs</summary>
+        /// <summary>Snippet for ListJobsAsync</summary>
         public async Task ListJobsAsync()
         {
             // Snippet: ListJobsAsync(string, string, int?, CallSettings)
@@ -349,7 +349,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListJobs</summary>
+        /// <summary>Snippet for ListJobsAsync</summary>
         public async Task ListJobsResourceNamesAsync()
         {
             // Snippet: ListJobsAsync(LocationName, string, int?, CallSettings)
@@ -715,7 +715,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListJobTemplates</summary>
+        /// <summary>Snippet for ListJobTemplatesAsync</summary>
         public async Task ListJobTemplatesRequestObjectAsync()
         {
             // Snippet: ListJobTemplatesAsync(ListJobTemplatesRequest, CallSettings)
@@ -808,7 +808,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListJobTemplates</summary>
+        /// <summary>Snippet for ListJobTemplatesAsync</summary>
         public async Task ListJobTemplatesAsync()
         {
             // Snippet: ListJobTemplatesAsync(string, string, int?, CallSettings)
@@ -898,7 +898,7 @@ namespace Google.Cloud.Video.Transcoder.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListJobTemplates</summary>
+        /// <summary>Snippet for ListJobTemplatesAsync</summary>
         public async Task ListJobTemplatesResourceNamesAsync()
         {
             // Snippet: ListJobTemplatesAsync(LocationName, string, int?, CallSettings)

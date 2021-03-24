@@ -350,7 +350,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListJobs</summary>
+        /// <summary>Snippet for ListJobsAsync</summary>
         public async Task ListJobsRequestObjectAsync()
         {
             // Snippet: ListJobsAsync(ListJobsRequest, CallSettings)
@@ -448,7 +448,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListJobs</summary>
+        /// <summary>Snippet for ListJobsAsync</summary>
         public async Task ListJobs1Async()
         {
             // Snippet: ListJobsAsync(string, string, string, int?, CallSettings)
@@ -541,7 +541,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListJobs</summary>
+        /// <summary>Snippet for ListJobsAsync</summary>
         public async Task ListJobs2Async()
         {
             // Snippet: ListJobsAsync(string, string, string, string, int?, CallSettings)

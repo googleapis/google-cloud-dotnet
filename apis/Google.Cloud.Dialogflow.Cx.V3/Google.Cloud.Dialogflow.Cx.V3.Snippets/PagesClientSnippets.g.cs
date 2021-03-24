@@ -74,7 +74,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPages</summary>
+        /// <summary>Snippet for ListPagesAsync</summary>
         public async Task ListPagesRequestObjectAsync()
         {
             // Snippet: ListPagesAsync(ListPagesRequest, CallSettings)
@@ -168,7 +168,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPages</summary>
+        /// <summary>Snippet for ListPagesAsync</summary>
         public async Task ListPagesAsync()
         {
             // Snippet: ListPagesAsync(string, string, int?, CallSettings)
@@ -258,7 +258,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPages</summary>
+        /// <summary>Snippet for ListPagesAsync</summary>
         public async Task ListPagesResourceNamesAsync()
         {
             // Snippet: ListPagesAsync(FlowName, string, int?, CallSettings)

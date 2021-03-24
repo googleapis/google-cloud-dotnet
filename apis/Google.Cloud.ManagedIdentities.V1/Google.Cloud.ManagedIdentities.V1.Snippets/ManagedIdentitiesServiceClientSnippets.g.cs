@@ -360,7 +360,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDomains</summary>
+        /// <summary>Snippet for ListDomainsAsync</summary>
         public async Task ListDomainsRequestObjectAsync()
         {
             // Snippet: ListDomainsAsync(ListDomainsRequest, CallSettings)
@@ -455,7 +455,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDomains</summary>
+        /// <summary>Snippet for ListDomainsAsync</summary>
         public async Task ListDomainsAsync()
         {
             // Snippet: ListDomainsAsync(string, string, int?, CallSettings)
@@ -545,7 +545,7 @@ namespace Google.Cloud.ManagedIdentities.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDomains</summary>
+        /// <summary>Snippet for ListDomainsAsync</summary>
         public async Task ListDomainsResourceNamesAsync()
         {
             // Snippet: ListDomainsAsync(LocationName, string, int?, CallSettings)

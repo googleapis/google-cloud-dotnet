@@ -77,7 +77,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListHubs</summary>
+        /// <summary>Snippet for ListHubsAsync</summary>
         public async Task ListHubsRequestObjectAsync()
         {
             // Snippet: ListHubsAsync(ListHubsRequest, CallSettings)
@@ -172,7 +172,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListHubs</summary>
+        /// <summary>Snippet for ListHubsAsync</summary>
         public async Task ListHubsAsync()
         {
             // Snippet: ListHubsAsync(string, string, int?, CallSettings)
@@ -262,7 +262,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListHubs</summary>
+        /// <summary>Snippet for ListHubsAsync</summary>
         public async Task ListHubsResourceNamesAsync()
         {
             // Snippet: ListHubsAsync(LocationName, string, int?, CallSettings)
@@ -956,7 +956,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSpokes</summary>
+        /// <summary>Snippet for ListSpokesAsync</summary>
         public async Task ListSpokesRequestObjectAsync()
         {
             // Snippet: ListSpokesAsync(ListSpokesRequest, CallSettings)
@@ -1051,7 +1051,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSpokes</summary>
+        /// <summary>Snippet for ListSpokesAsync</summary>
         public async Task ListSpokesAsync()
         {
             // Snippet: ListSpokesAsync(string, string, int?, CallSettings)
@@ -1141,7 +1141,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Alpha1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSpokes</summary>
+        /// <summary>Snippet for ListSpokesAsync</summary>
         public async Task ListSpokesResourceNamesAsync()
         {
             // Snippet: ListSpokesAsync(LocationName, string, int?, CallSettings)

@@ -74,7 +74,7 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListApprovalRequests</summary>
+        /// <summary>Snippet for ListApprovalRequestsAsync</summary>
         public async Task ListApprovalRequestsRequestObjectAsync()
         {
             // Snippet: ListApprovalRequestsAsync(ListApprovalRequestsMessage, CallSettings)
@@ -168,7 +168,7 @@ namespace Google.Cloud.AccessApproval.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListApprovalRequests</summary>
+        /// <summary>Snippet for ListApprovalRequestsAsync</summary>
         public async Task ListApprovalRequestsAsync()
         {
             // Snippet: ListApprovalRequestsAsync(string, string, int?, CallSettings)

@@ -278,7 +278,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListLogEntries</summary>
+        /// <summary>Snippet for ListLogEntriesAsync</summary>
         public async Task ListLogEntriesRequestObjectAsync()
         {
             // Snippet: ListLogEntriesAsync(ListLogEntriesRequest, CallSettings)
@@ -381,7 +381,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListLogEntries</summary>
+        /// <summary>Snippet for ListLogEntriesAsync</summary>
         public async Task ListLogEntriesAsync()
         {
             // Snippet: ListLogEntriesAsync(IEnumerable<string>, string, string, string, int?, CallSettings)
@@ -481,7 +481,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListLogEntries</summary>
+        /// <summary>Snippet for ListLogEntriesAsync</summary>
         public async Task ListLogEntriesResourceNames1Async()
         {
             // Snippet: ListLogEntriesAsync(IEnumerable<ProjectName>, string, string, string, int?, CallSettings)
@@ -581,7 +581,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListLogEntries</summary>
+        /// <summary>Snippet for ListLogEntriesAsync</summary>
         public async Task ListLogEntriesResourceNames2Async()
         {
             // Snippet: ListLogEntriesAsync(IEnumerable<OrganizationName>, string, string, string, int?, CallSettings)
@@ -681,7 +681,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListLogEntries</summary>
+        /// <summary>Snippet for ListLogEntriesAsync</summary>
         public async Task ListLogEntriesResourceNames3Async()
         {
             // Snippet: ListLogEntriesAsync(IEnumerable<FolderName>, string, string, string, int?, CallSettings)
@@ -781,7 +781,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListLogEntries</summary>
+        /// <summary>Snippet for ListLogEntriesAsync</summary>
         public async Task ListLogEntriesResourceNames4Async()
         {
             // Snippet: ListLogEntriesAsync(IEnumerable<BillingAccountName>, string, string, string, int?, CallSettings)
@@ -876,7 +876,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        /// <summary>Snippet for ListMonitoredResourceDescriptorsAsync</summary>
         public async Task ListMonitoredResourceDescriptorsRequestObjectAsync()
         {
             // Snippet: ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest, CallSettings)
@@ -970,7 +970,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListLogs</summary>
+        /// <summary>Snippet for ListLogsAsync</summary>
         public async Task ListLogsRequestObjectAsync()
         {
             // Snippet: ListLogsAsync(ListLogsRequest, CallSettings)
@@ -1064,7 +1064,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListLogs</summary>
+        /// <summary>Snippet for ListLogsAsync</summary>
         public async Task ListLogsAsync()
         {
             // Snippet: ListLogsAsync(string, string, int?, CallSettings)
@@ -1154,7 +1154,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListLogs</summary>
+        /// <summary>Snippet for ListLogsAsync</summary>
         public async Task ListLogsResourceNames1Async()
         {
             // Snippet: ListLogsAsync(ProjectName, string, int?, CallSettings)
@@ -1244,7 +1244,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListLogs</summary>
+        /// <summary>Snippet for ListLogsAsync</summary>
         public async Task ListLogsResourceNames2Async()
         {
             // Snippet: ListLogsAsync(OrganizationName, string, int?, CallSettings)
@@ -1334,7 +1334,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListLogs</summary>
+        /// <summary>Snippet for ListLogsAsync</summary>
         public async Task ListLogsResourceNames3Async()
         {
             // Snippet: ListLogsAsync(FolderName, string, int?, CallSettings)
@@ -1424,7 +1424,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListLogs</summary>
+        /// <summary>Snippet for ListLogsAsync</summary>
         public async Task ListLogsResourceNames4Async()
         {
             // Snippet: ListLogsAsync(BillingAccountName, string, int?, CallSettings)

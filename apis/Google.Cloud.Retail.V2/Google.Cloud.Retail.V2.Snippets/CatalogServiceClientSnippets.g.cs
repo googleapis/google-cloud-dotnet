@@ -74,7 +74,7 @@ namespace Google.Cloud.Retail.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCatalogs</summary>
+        /// <summary>Snippet for ListCatalogsAsync</summary>
         public async Task ListCatalogsRequestObjectAsync()
         {
             // Snippet: ListCatalogsAsync(ListCatalogsRequest, CallSettings)
@@ -167,7 +167,7 @@ namespace Google.Cloud.Retail.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCatalogs</summary>
+        /// <summary>Snippet for ListCatalogsAsync</summary>
         public async Task ListCatalogsAsync()
         {
             // Snippet: ListCatalogsAsync(string, string, int?, CallSettings)
@@ -257,7 +257,7 @@ namespace Google.Cloud.Retail.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCatalogs</summary>
+        /// <summary>Snippet for ListCatalogsAsync</summary>
         public async Task ListCatalogsResourceNamesAsync()
         {
             // Snippet: ListCatalogsAsync(LocationName, string, int?, CallSettings)

@@ -74,7 +74,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransitionRouteGroups</summary>
+        /// <summary>Snippet for ListTransitionRouteGroupsAsync</summary>
         public async Task ListTransitionRouteGroupsRequestObjectAsync()
         {
             // Snippet: ListTransitionRouteGroupsAsync(ListTransitionRouteGroupsRequest, CallSettings)
@@ -168,7 +168,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransitionRouteGroups</summary>
+        /// <summary>Snippet for ListTransitionRouteGroupsAsync</summary>
         public async Task ListTransitionRouteGroupsAsync()
         {
             // Snippet: ListTransitionRouteGroupsAsync(string, string, int?, CallSettings)
@@ -258,7 +258,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransitionRouteGroups</summary>
+        /// <summary>Snippet for ListTransitionRouteGroupsAsync</summary>
         public async Task ListTransitionRouteGroupsResourceNamesAsync()
         {
             // Snippet: ListTransitionRouteGroupsAsync(FlowName, string, int?, CallSettings)

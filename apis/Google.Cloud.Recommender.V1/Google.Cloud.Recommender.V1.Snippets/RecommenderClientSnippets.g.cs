@@ -74,7 +74,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListInsights</summary>
+        /// <summary>Snippet for ListInsightsAsync</summary>
         public async Task ListInsightsRequestObjectAsync()
         {
             // Snippet: ListInsightsAsync(ListInsightsRequest, CallSettings)
@@ -168,7 +168,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListInsights</summary>
+        /// <summary>Snippet for ListInsightsAsync</summary>
         public async Task ListInsightsAsync()
         {
             // Snippet: ListInsightsAsync(string, string, int?, CallSettings)
@@ -258,7 +258,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListInsights</summary>
+        /// <summary>Snippet for ListInsightsAsync</summary>
         public async Task ListInsightsResourceNamesAsync()
         {
             // Snippet: ListInsightsAsync(InsightTypeName, string, int?, CallSettings)
@@ -538,7 +538,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListRecommendations</summary>
+        /// <summary>Snippet for ListRecommendationsAsync</summary>
         public async Task ListRecommendationsRequestObjectAsync()
         {
             // Snippet: ListRecommendationsAsync(ListRecommendationsRequest, CallSettings)
@@ -632,7 +632,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListRecommendations</summary>
+        /// <summary>Snippet for ListRecommendationsAsync</summary>
         public async Task ListRecommendations1Async()
         {
             // Snippet: ListRecommendationsAsync(string, string, int?, CallSettings)
@@ -722,7 +722,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListRecommendations</summary>
+        /// <summary>Snippet for ListRecommendationsAsync</summary>
         public async Task ListRecommendations1ResourceNamesAsync()
         {
             // Snippet: ListRecommendationsAsync(RecommenderName, string, int?, CallSettings)
@@ -813,7 +813,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListRecommendations</summary>
+        /// <summary>Snippet for ListRecommendationsAsync</summary>
         public async Task ListRecommendations2Async()
         {
             // Snippet: ListRecommendationsAsync(string, string, string, int?, CallSettings)
@@ -905,7 +905,7 @@ namespace Google.Cloud.Recommender.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListRecommendations</summary>
+        /// <summary>Snippet for ListRecommendationsAsync</summary>
         public async Task ListRecommendations2ResourceNamesAsync()
         {
             // Snippet: ListRecommendationsAsync(RecommenderName, string, string, int?, CallSettings)
