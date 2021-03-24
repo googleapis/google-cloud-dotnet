@@ -2977,7 +2977,8 @@
       "ImportDirectories": [
         "google/api",
         "google/iam/v1",
-        "google/protobuf"
+        "google/protobuf",
+        "google/type"
       ],
       "Stable": true,
       "CSharpNamespaceFromProtos": "Google.Iam.Admin.V1"
