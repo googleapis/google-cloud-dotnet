@@ -66,15 +66,16 @@ namespace Google.Cloud.Dialogflow.V2 {
             "VVNFX1NUQU5EQVJEEAISEAoMVVNFX0VOSEFOQ0VEEAMqjQEKD1NzbWxWb2lj",
             "ZUdlbmRlchIhCh1TU01MX1ZPSUNFX0dFTkRFUl9VTlNQRUNJRklFRBAAEhoK",
             "FlNTTUxfVk9JQ0VfR0VOREVSX01BTEUQARIcChhTU01MX1ZPSUNFX0dFTkRF",
-            "Ul9GRU1BTEUQAhIdChlTU01MX1ZPSUNFX0dFTkRFUl9ORVVUUkFMEAMqpAEK",
+            "Ul9GRU1BTEUQAhIdChlTU01MX1ZPSUNFX0dFTkRFUl9ORVVUUkFMEAMq7AEK",
             "E091dHB1dEF1ZGlvRW5jb2RpbmcSJQohT1VUUFVUX0FVRElPX0VOQ09ESU5H",
             "X1VOU1BFQ0lGSUVEEAASIwofT1VUUFVUX0FVRElPX0VOQ09ESU5HX0xJTkVB",
-            "Ul8xNhABEh0KGU9VVFBVVF9BVURJT19FTkNPRElOR19NUDMQAhIiCh5PVVRQ",
-            "VVRfQVVESU9fRU5DT0RJTkdfT0dHX09QVVMQA0KfAQoeY29tLmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LnYyQhBBdWRpb0NvbmZpZ1Byb3RvUAFaRGdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9n",
-            "Zmxvdy92MjtkaWFsb2dmbG93+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlh",
-            "bG9nZmxvdy5WMmIGcHJvdG8z"));
+            "Ul8xNhABEh0KGU9VVFBVVF9BVURJT19FTkNPRElOR19NUDMQAhIlCiFPVVRQ",
+            "VVRfQVVESU9fRU5DT0RJTkdfTVAzXzY0X0tCUFMQBBIiCh5PVVRQVVRfQVVE",
+            "SU9fRU5DT0RJTkdfT0dHX09QVVMQAxIfChtPVVRQVVRfQVVESU9fRU5DT0RJ",
+            "TkdfTVVMQVcQBUKfAQoeY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
+            "QhBBdWRpb0NvbmZpZ1Byb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxvdy92MjtkaWFsb2dmbG93",
+            "+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -243,12 +244,20 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// </summary>
     [pbr::OriginalName("OUTPUT_AUDIO_ENCODING_MP3")] Mp3 = 2,
     /// <summary>
+    /// MP3 audio at 64kbps.
+    /// </summary>
+    [pbr::OriginalName("OUTPUT_AUDIO_ENCODING_MP3_64_KBPS")] Mp364Kbps = 4,
+    /// <summary>
     /// Opus encoded audio wrapped in an ogg container. The result will be a
     /// file which can be played natively on Android, and in browsers (at least
     /// Chrome and Firefox). The quality of the encoding is considerably higher
     /// than MP3 while using approximately the same bitrate.
     /// </summary>
     [pbr::OriginalName("OUTPUT_AUDIO_ENCODING_OGG_OPUS")] OggOpus = 3,
+    /// <summary>
+    /// 8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.
+    /// </summary>
+    [pbr::OriginalName("OUTPUT_AUDIO_ENCODING_MULAW")] Mulaw = 5,
   }
 
   #endregion
