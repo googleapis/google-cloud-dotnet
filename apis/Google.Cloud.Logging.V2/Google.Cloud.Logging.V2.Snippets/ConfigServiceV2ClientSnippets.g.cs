@@ -74,7 +74,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBuckets</summary>
+        /// <summary>Snippet for ListBucketsAsync</summary>
         public async Task ListBucketsRequestObjectAsync()
         {
             // Snippet: ListBucketsAsync(ListBucketsRequest, CallSettings)
@@ -167,7 +167,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBuckets</summary>
+        /// <summary>Snippet for ListBucketsAsync</summary>
         public async Task ListBucketsAsync()
         {
             // Snippet: ListBucketsAsync(string, string, int?, CallSettings)
@@ -257,7 +257,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBuckets</summary>
+        /// <summary>Snippet for ListBucketsAsync</summary>
         public async Task ListBucketsResourceNames1Async()
         {
             // Snippet: ListBucketsAsync(LocationName, string, int?, CallSettings)
@@ -347,7 +347,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBuckets</summary>
+        /// <summary>Snippet for ListBucketsAsync</summary>
         public async Task ListBucketsResourceNames2Async()
         {
             // Snippet: ListBucketsAsync(OrganizationLocationName, string, int?, CallSettings)
@@ -437,7 +437,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBuckets</summary>
+        /// <summary>Snippet for ListBucketsAsync</summary>
         public async Task ListBucketsResourceNames3Async()
         {
             // Snippet: ListBucketsAsync(FolderLocationName, string, int?, CallSettings)
@@ -527,7 +527,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBuckets</summary>
+        /// <summary>Snippet for ListBucketsAsync</summary>
         public async Task ListBucketsResourceNames4Async()
         {
             // Snippet: ListBucketsAsync(BillingAccountLocationName, string, int?, CallSettings)
@@ -790,7 +790,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListViews</summary>
+        /// <summary>Snippet for ListViewsAsync</summary>
         public async Task ListViewsRequestObjectAsync()
         {
             // Snippet: ListViewsAsync(ListViewsRequest, CallSettings)
@@ -880,7 +880,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListViews</summary>
+        /// <summary>Snippet for ListViewsAsync</summary>
         public async Task ListViewsAsync()
         {
             // Snippet: ListViewsAsync(string, string, int?, CallSettings)
@@ -1113,7 +1113,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSinks</summary>
+        /// <summary>Snippet for ListSinksAsync</summary>
         public async Task ListSinksRequestObjectAsync()
         {
             // Snippet: ListSinksAsync(ListSinksRequest, CallSettings)
@@ -1206,7 +1206,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSinks</summary>
+        /// <summary>Snippet for ListSinksAsync</summary>
         public async Task ListSinksAsync()
         {
             // Snippet: ListSinksAsync(string, string, int?, CallSettings)
@@ -1296,7 +1296,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSinks</summary>
+        /// <summary>Snippet for ListSinksAsync</summary>
         public async Task ListSinksResourceNames1Async()
         {
             // Snippet: ListSinksAsync(ProjectName, string, int?, CallSettings)
@@ -1386,7 +1386,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSinks</summary>
+        /// <summary>Snippet for ListSinksAsync</summary>
         public async Task ListSinksResourceNames2Async()
         {
             // Snippet: ListSinksAsync(OrganizationName, string, int?, CallSettings)
@@ -1476,7 +1476,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSinks</summary>
+        /// <summary>Snippet for ListSinksAsync</summary>
         public async Task ListSinksResourceNames3Async()
         {
             // Snippet: ListSinksAsync(FolderName, string, int?, CallSettings)
@@ -1566,7 +1566,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSinks</summary>
+        /// <summary>Snippet for ListSinksAsync</summary>
         public async Task ListSinksResourceNames4Async()
         {
             // Snippet: ListSinksAsync(BillingAccountName, string, int?, CallSettings)
@@ -2174,7 +2174,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListExclusions</summary>
+        /// <summary>Snippet for ListExclusionsAsync</summary>
         public async Task ListExclusionsRequestObjectAsync()
         {
             // Snippet: ListExclusionsAsync(ListExclusionsRequest, CallSettings)
@@ -2267,7 +2267,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListExclusions</summary>
+        /// <summary>Snippet for ListExclusionsAsync</summary>
         public async Task ListExclusionsAsync()
         {
             // Snippet: ListExclusionsAsync(string, string, int?, CallSettings)
@@ -2357,7 +2357,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListExclusions</summary>
+        /// <summary>Snippet for ListExclusionsAsync</summary>
         public async Task ListExclusionsResourceNames1Async()
         {
             // Snippet: ListExclusionsAsync(ProjectName, string, int?, CallSettings)
@@ -2447,7 +2447,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListExclusions</summary>
+        /// <summary>Snippet for ListExclusionsAsync</summary>
         public async Task ListExclusionsResourceNames2Async()
         {
             // Snippet: ListExclusionsAsync(OrganizationName, string, int?, CallSettings)
@@ -2537,7 +2537,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListExclusions</summary>
+        /// <summary>Snippet for ListExclusionsAsync</summary>
         public async Task ListExclusionsResourceNames3Async()
         {
             // Snippet: ListExclusionsAsync(FolderName, string, int?, CallSettings)
@@ -2627,7 +2627,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListExclusions</summary>
+        /// <summary>Snippet for ListExclusionsAsync</summary>
         public async Task ListExclusionsResourceNames4Async()
         {
             // Snippet: ListExclusionsAsync(BillingAccountName, string, int?, CallSettings)

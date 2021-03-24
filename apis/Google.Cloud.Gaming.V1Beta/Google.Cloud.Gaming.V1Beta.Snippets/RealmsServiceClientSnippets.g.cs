@@ -77,7 +77,7 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListRealms</summary>
+        /// <summary>Snippet for ListRealmsAsync</summary>
         public async Task ListRealmsRequestObjectAsync()
         {
             // Snippet: ListRealmsAsync(ListRealmsRequest, CallSettings)
@@ -172,7 +172,7 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListRealms</summary>
+        /// <summary>Snippet for ListRealmsAsync</summary>
         public async Task ListRealmsAsync()
         {
             // Snippet: ListRealmsAsync(string, string, int?, CallSettings)
@@ -262,7 +262,7 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListRealms</summary>
+        /// <summary>Snippet for ListRealmsAsync</summary>
         public async Task ListRealmsResourceNamesAsync()
         {
             // Snippet: ListRealmsAsync(LocationName, string, int?, CallSettings)

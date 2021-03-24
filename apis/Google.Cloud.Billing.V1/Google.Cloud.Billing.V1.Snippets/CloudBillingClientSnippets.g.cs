@@ -160,7 +160,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBillingAccounts</summary>
+        /// <summary>Snippet for ListBillingAccountsAsync</summary>
         public async Task ListBillingAccountsRequestObjectAsync()
         {
             // Snippet: ListBillingAccountsAsync(ListBillingAccountsRequest, CallSettings)
@@ -248,7 +248,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBillingAccounts</summary>
+        /// <summary>Snippet for ListBillingAccountsAsync</summary>
         public async Task ListBillingAccountsAsync()
         {
             // Snippet: ListBillingAccountsAsync(string, int?, CallSettings)
@@ -494,7 +494,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListProjectBillingInfo</summary>
+        /// <summary>Snippet for ListProjectBillingInfoAsync</summary>
         public async Task ListProjectBillingInfoRequestObjectAsync()
         {
             // Snippet: ListProjectBillingInfoAsync(ListProjectBillingInfoRequest, CallSettings)
@@ -587,7 +587,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListProjectBillingInfo</summary>
+        /// <summary>Snippet for ListProjectBillingInfoAsync</summary>
         public async Task ListProjectBillingInfoAsync()
         {
             // Snippet: ListProjectBillingInfoAsync(string, string, int?, CallSettings)
@@ -677,7 +677,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListProjectBillingInfo</summary>
+        /// <summary>Snippet for ListProjectBillingInfoAsync</summary>
         public async Task ListProjectBillingInfoResourceNamesAsync()
         {
             // Snippet: ListProjectBillingInfoAsync(BillingAccountName, string, int?, CallSettings)

@@ -77,7 +77,7 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGameServerDeployments</summary>
+        /// <summary>Snippet for ListGameServerDeploymentsAsync</summary>
         public async Task ListGameServerDeploymentsRequestObjectAsync()
         {
             // Snippet: ListGameServerDeploymentsAsync(ListGameServerDeploymentsRequest, CallSettings)
@@ -172,7 +172,7 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGameServerDeployments</summary>
+        /// <summary>Snippet for ListGameServerDeploymentsAsync</summary>
         public async Task ListGameServerDeploymentsAsync()
         {
             // Snippet: ListGameServerDeploymentsAsync(string, string, int?, CallSettings)
@@ -262,7 +262,7 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGameServerDeployments</summary>
+        /// <summary>Snippet for ListGameServerDeploymentsAsync</summary>
         public async Task ListGameServerDeploymentsResourceNamesAsync()
         {
             // Snippet: ListGameServerDeploymentsAsync(LocationName, string, int?, CallSettings)

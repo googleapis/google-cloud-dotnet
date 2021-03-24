@@ -73,7 +73,7 @@ namespace Google.Cloud.OrgPolicy.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListConstraints</summary>
+        /// <summary>Snippet for ListConstraintsAsync</summary>
         public async Task ListConstraintsRequestObjectAsync()
         {
             // Snippet: ListConstraintsAsync(ListConstraintsRequest, CallSettings)
@@ -166,7 +166,7 @@ namespace Google.Cloud.OrgPolicy.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListConstraints</summary>
+        /// <summary>Snippet for ListConstraintsAsync</summary>
         public async Task ListConstraintsAsync()
         {
             // Snippet: ListConstraintsAsync(string, string, int?, CallSettings)
@@ -256,7 +256,7 @@ namespace Google.Cloud.OrgPolicy.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListConstraints</summary>
+        /// <summary>Snippet for ListConstraintsAsync</summary>
         public async Task ListConstraintsResourceNames1Async()
         {
             // Snippet: ListConstraintsAsync(ProjectName, string, int?, CallSettings)
@@ -346,7 +346,7 @@ namespace Google.Cloud.OrgPolicy.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListConstraints</summary>
+        /// <summary>Snippet for ListConstraintsAsync</summary>
         public async Task ListConstraintsResourceNames2Async()
         {
             // Snippet: ListConstraintsAsync(FolderName, string, int?, CallSettings)
@@ -436,7 +436,7 @@ namespace Google.Cloud.OrgPolicy.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListConstraints</summary>
+        /// <summary>Snippet for ListConstraintsAsync</summary>
         public async Task ListConstraintsResourceNames3Async()
         {
             // Snippet: ListConstraintsAsync(OrganizationName, string, int?, CallSettings)
@@ -529,7 +529,7 @@ namespace Google.Cloud.OrgPolicy.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPolicies</summary>
+        /// <summary>Snippet for ListPoliciesAsync</summary>
         public async Task ListPoliciesRequestObjectAsync()
         {
             // Snippet: ListPoliciesAsync(ListPoliciesRequest, CallSettings)
@@ -622,7 +622,7 @@ namespace Google.Cloud.OrgPolicy.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPolicies</summary>
+        /// <summary>Snippet for ListPoliciesAsync</summary>
         public async Task ListPoliciesAsync()
         {
             // Snippet: ListPoliciesAsync(string, string, int?, CallSettings)
@@ -712,7 +712,7 @@ namespace Google.Cloud.OrgPolicy.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPolicies</summary>
+        /// <summary>Snippet for ListPoliciesAsync</summary>
         public async Task ListPoliciesResourceNames1Async()
         {
             // Snippet: ListPoliciesAsync(ProjectName, string, int?, CallSettings)
@@ -802,7 +802,7 @@ namespace Google.Cloud.OrgPolicy.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPolicies</summary>
+        /// <summary>Snippet for ListPoliciesAsync</summary>
         public async Task ListPoliciesResourceNames2Async()
         {
             // Snippet: ListPoliciesAsync(FolderName, string, int?, CallSettings)
@@ -892,7 +892,7 @@ namespace Google.Cloud.OrgPolicy.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPolicies</summary>
+        /// <summary>Snippet for ListPoliciesAsync</summary>
         public async Task ListPoliciesResourceNames3Async()
         {
             // Snippet: ListPoliciesAsync(OrganizationName, string, int?, CallSettings)

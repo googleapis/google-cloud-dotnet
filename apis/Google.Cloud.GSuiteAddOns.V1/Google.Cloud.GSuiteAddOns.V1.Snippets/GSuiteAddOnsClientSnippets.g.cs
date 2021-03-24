@@ -406,7 +406,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDeployments</summary>
+        /// <summary>Snippet for ListDeploymentsAsync</summary>
         public async Task ListDeploymentsRequestObjectAsync()
         {
             // Snippet: ListDeploymentsAsync(ListDeploymentsRequest, CallSettings)
@@ -499,7 +499,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDeployments</summary>
+        /// <summary>Snippet for ListDeploymentsAsync</summary>
         public async Task ListDeploymentsAsync()
         {
             // Snippet: ListDeploymentsAsync(string, string, int?, CallSettings)
@@ -589,7 +589,7 @@ namespace Google.Cloud.GSuiteAddOns.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDeployments</summary>
+        /// <summary>Snippet for ListDeploymentsAsync</summary>
         public async Task ListDeploymentsResourceNamesAsync()
         {
             // Snippet: ListDeploymentsAsync(ProjectName, string, int?, CallSettings)

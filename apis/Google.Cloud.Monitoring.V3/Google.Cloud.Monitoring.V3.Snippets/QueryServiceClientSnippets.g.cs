@@ -69,7 +69,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for QueryTimeSeries</summary>
+        /// <summary>Snippet for QueryTimeSeriesAsync</summary>
         public async Task QueryTimeSeriesRequestObjectAsync()
         {
             // Snippet: QueryTimeSeriesAsync(QueryTimeSeriesRequest, CallSettings)

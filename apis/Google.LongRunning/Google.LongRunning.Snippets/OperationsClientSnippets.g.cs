@@ -70,7 +70,7 @@ namespace Google.LongRunning.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListOperations</summary>
+        /// <summary>Snippet for ListOperationsAsync</summary>
         public async Task ListOperationsRequestObjectAsync()
         {
             // Snippet: ListOperationsAsync(ListOperationsRequest, CallSettings)
@@ -161,7 +161,7 @@ namespace Google.LongRunning.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListOperations</summary>
+        /// <summary>Snippet for ListOperationsAsync</summary>
         public async Task ListOperationsAsync()
         {
             // Snippet: ListOperationsAsync(string, string, string, int?, CallSettings)

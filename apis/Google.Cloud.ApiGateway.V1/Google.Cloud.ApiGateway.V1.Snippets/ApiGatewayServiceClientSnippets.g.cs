@@ -78,7 +78,7 @@ namespace Google.Cloud.ApiGateway.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGateways</summary>
+        /// <summary>Snippet for ListGatewaysAsync</summary>
         public async Task ListGatewaysRequestObjectAsync()
         {
             // Snippet: ListGatewaysAsync(ListGatewaysRequest, CallSettings)
@@ -173,7 +173,7 @@ namespace Google.Cloud.ApiGateway.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGateways</summary>
+        /// <summary>Snippet for ListGatewaysAsync</summary>
         public async Task ListGatewaysAsync()
         {
             // Snippet: ListGatewaysAsync(string, string, int?, CallSettings)
@@ -263,7 +263,7 @@ namespace Google.Cloud.ApiGateway.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGateways</summary>
+        /// <summary>Snippet for ListGatewaysAsync</summary>
         public async Task ListGatewaysResourceNamesAsync()
         {
             // Snippet: ListGatewaysAsync(LocationName, string, int?, CallSettings)
@@ -951,7 +951,7 @@ namespace Google.Cloud.ApiGateway.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListApis</summary>
+        /// <summary>Snippet for ListApisAsync</summary>
         public async Task ListApisRequestObjectAsync()
         {
             // Snippet: ListApisAsync(ListApisRequest, CallSettings)
@@ -1046,7 +1046,7 @@ namespace Google.Cloud.ApiGateway.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListApis</summary>
+        /// <summary>Snippet for ListApisAsync</summary>
         public async Task ListApisAsync()
         {
             // Snippet: ListApisAsync(string, string, int?, CallSettings)
@@ -1136,7 +1136,7 @@ namespace Google.Cloud.ApiGateway.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListApis</summary>
+        /// <summary>Snippet for ListApisAsync</summary>
         public async Task ListApisResourceNamesAsync()
         {
             // Snippet: ListApisAsync(LocationName, string, int?, CallSettings)
@@ -1824,7 +1824,7 @@ namespace Google.Cloud.ApiGateway.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListApiConfigs</summary>
+        /// <summary>Snippet for ListApiConfigsAsync</summary>
         public async Task ListApiConfigsRequestObjectAsync()
         {
             // Snippet: ListApiConfigsAsync(ListApiConfigsRequest, CallSettings)
@@ -1919,7 +1919,7 @@ namespace Google.Cloud.ApiGateway.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListApiConfigs</summary>
+        /// <summary>Snippet for ListApiConfigsAsync</summary>
         public async Task ListApiConfigsAsync()
         {
             // Snippet: ListApiConfigsAsync(string, string, int?, CallSettings)
@@ -2009,7 +2009,7 @@ namespace Google.Cloud.ApiGateway.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListApiConfigs</summary>
+        /// <summary>Snippet for ListApiConfigsAsync</summary>
         public async Task ListApiConfigsResourceNamesAsync()
         {
             // Snippet: ListApiConfigsAsync(ApiName, string, int?, CallSettings)

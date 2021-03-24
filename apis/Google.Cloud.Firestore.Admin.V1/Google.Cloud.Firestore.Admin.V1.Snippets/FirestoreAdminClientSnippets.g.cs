@@ -265,7 +265,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListIndexes</summary>
+        /// <summary>Snippet for ListIndexesAsync</summary>
         public async Task ListIndexesRequestObjectAsync()
         {
             // Snippet: ListIndexesAsync(ListIndexesRequest, CallSettings)
@@ -359,7 +359,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListIndexes</summary>
+        /// <summary>Snippet for ListIndexesAsync</summary>
         public async Task ListIndexesAsync()
         {
             // Snippet: ListIndexesAsync(string, string, int?, CallSettings)
@@ -449,7 +449,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListIndexes</summary>
+        /// <summary>Snippet for ListIndexesAsync</summary>
         public async Task ListIndexesResourceNamesAsync()
         {
             // Snippet: ListIndexesAsync(CollectionGroupName, string, int?, CallSettings)
@@ -930,7 +930,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListFields</summary>
+        /// <summary>Snippet for ListFieldsAsync</summary>
         public async Task ListFieldsRequestObjectAsync()
         {
             // Snippet: ListFieldsAsync(ListFieldsRequest, CallSettings)
@@ -1024,7 +1024,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListFields</summary>
+        /// <summary>Snippet for ListFieldsAsync</summary>
         public async Task ListFieldsAsync()
         {
             // Snippet: ListFieldsAsync(string, string, int?, CallSettings)
@@ -1114,7 +1114,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListFields</summary>
+        /// <summary>Snippet for ListFieldsAsync</summary>
         public async Task ListFieldsResourceNamesAsync()
         {
             // Snippet: ListFieldsAsync(CollectionGroupName, string, int?, CallSettings)

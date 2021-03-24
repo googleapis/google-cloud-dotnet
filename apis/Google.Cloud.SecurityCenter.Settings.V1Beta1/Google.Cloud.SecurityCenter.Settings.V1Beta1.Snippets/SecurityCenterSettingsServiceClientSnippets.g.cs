@@ -784,7 +784,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDetectors</summary>
+        /// <summary>Snippet for ListDetectorsAsync</summary>
         public async Task ListDetectorsRequestObjectAsync()
         {
             // Snippet: ListDetectorsAsync(ListDetectorsRequest, CallSettings)
@@ -878,7 +878,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDetectors</summary>
+        /// <summary>Snippet for ListDetectorsAsync</summary>
         public async Task ListDetectorsAsync()
         {
             // Snippet: ListDetectorsAsync(string, string, int?, CallSettings)
@@ -968,7 +968,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDetectors</summary>
+        /// <summary>Snippet for ListDetectorsAsync</summary>
         public async Task ListDetectorsResourceNamesAsync()
         {
             // Snippet: ListDetectorsAsync(OrganizationName, string, int?, CallSettings)
@@ -1061,7 +1061,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListComponents</summary>
+        /// <summary>Snippet for ListComponentsAsync</summary>
         public async Task ListComponentsRequestObjectAsync()
         {
             // Snippet: ListComponentsAsync(ListComponentsRequest, CallSettings)
@@ -1154,7 +1154,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListComponents</summary>
+        /// <summary>Snippet for ListComponentsAsync</summary>
         public async Task ListComponentsAsync()
         {
             // Snippet: ListComponentsAsync(string, string, int?, CallSettings)
@@ -1244,7 +1244,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListComponents</summary>
+        /// <summary>Snippet for ListComponentsAsync</summary>
         public async Task ListComponentsResourceNamesAsync()
         {
             // Snippet: ListComponentsAsync(OrganizationName, string, int?, CallSettings)

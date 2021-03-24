@@ -174,7 +174,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListProductSets</summary>
+        /// <summary>Snippet for ListProductSetsAsync</summary>
         public async Task ListProductSetsRequestObjectAsync()
         {
             // Snippet: ListProductSetsAsync(ListProductSetsRequest, CallSettings)
@@ -267,7 +267,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListProductSets</summary>
+        /// <summary>Snippet for ListProductSetsAsync</summary>
         public async Task ListProductSetsAsync()
         {
             // Snippet: ListProductSetsAsync(string, string, int?, CallSettings)
@@ -357,7 +357,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListProductSets</summary>
+        /// <summary>Snippet for ListProductSetsAsync</summary>
         public async Task ListProductSetsResourceNamesAsync()
         {
             // Snippet: ListProductSetsAsync(LocationName, string, int?, CallSettings)
@@ -787,7 +787,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListProducts</summary>
+        /// <summary>Snippet for ListProductsAsync</summary>
         public async Task ListProductsRequestObjectAsync()
         {
             // Snippet: ListProductsAsync(ListProductsRequest, CallSettings)
@@ -880,7 +880,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListProducts</summary>
+        /// <summary>Snippet for ListProductsAsync</summary>
         public async Task ListProductsAsync()
         {
             // Snippet: ListProductsAsync(string, string, int?, CallSettings)
@@ -970,7 +970,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListProducts</summary>
+        /// <summary>Snippet for ListProductsAsync</summary>
         public async Task ListProductsResourceNamesAsync()
         {
             // Snippet: ListProductsAsync(LocationName, string, int?, CallSettings)
@@ -1487,7 +1487,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListReferenceImages</summary>
+        /// <summary>Snippet for ListReferenceImagesAsync</summary>
         public async Task ListReferenceImagesRequestObjectAsync()
         {
             // Snippet: ListReferenceImagesAsync(ListReferenceImagesRequest, CallSettings)
@@ -1580,7 +1580,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListReferenceImages</summary>
+        /// <summary>Snippet for ListReferenceImagesAsync</summary>
         public async Task ListReferenceImagesAsync()
         {
             // Snippet: ListReferenceImagesAsync(string, string, int?, CallSettings)
@@ -1670,7 +1670,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListReferenceImages</summary>
+        /// <summary>Snippet for ListReferenceImagesAsync</summary>
         public async Task ListReferenceImagesResourceNamesAsync()
         {
             // Snippet: ListReferenceImagesAsync(ProductName, string, int?, CallSettings)
@@ -2036,7 +2036,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListProductsInProductSet</summary>
+        /// <summary>Snippet for ListProductsInProductSetAsync</summary>
         public async Task ListProductsInProductSetRequestObjectAsync()
         {
             // Snippet: ListProductsInProductSetAsync(ListProductsInProductSetRequest, CallSettings)
@@ -2129,7 +2129,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListProductsInProductSet</summary>
+        /// <summary>Snippet for ListProductsInProductSetAsync</summary>
         public async Task ListProductsInProductSetAsync()
         {
             // Snippet: ListProductsInProductSetAsync(string, string, int?, CallSettings)
@@ -2219,7 +2219,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListProductsInProductSet</summary>
+        /// <summary>Snippet for ListProductsInProductSetAsync</summary>
         public async Task ListProductsInProductSetResourceNamesAsync()
         {
             // Snippet: ListProductsInProductSetAsync(ProductSetName, string, int?, CallSettings)

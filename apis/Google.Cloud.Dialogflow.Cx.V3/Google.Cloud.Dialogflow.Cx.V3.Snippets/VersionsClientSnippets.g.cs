@@ -75,7 +75,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListVersions</summary>
+        /// <summary>Snippet for ListVersionsAsync</summary>
         public async Task ListVersionsRequestObjectAsync()
         {
             // Snippet: ListVersionsAsync(ListVersionsRequest, CallSettings)
@@ -168,7 +168,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListVersions</summary>
+        /// <summary>Snippet for ListVersionsAsync</summary>
         public async Task ListVersionsAsync()
         {
             // Snippet: ListVersionsAsync(string, string, int?, CallSettings)
@@ -258,7 +258,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListVersions</summary>
+        /// <summary>Snippet for ListVersionsAsync</summary>
         public async Task ListVersionsResourceNamesAsync()
         {
             // Snippet: ListVersionsAsync(FlowName, string, int?, CallSettings)

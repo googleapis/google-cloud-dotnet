@@ -74,7 +74,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListUptimeCheckConfigs</summary>
+        /// <summary>Snippet for ListUptimeCheckConfigsAsync</summary>
         public async Task ListUptimeCheckConfigsRequestObjectAsync()
         {
             // Snippet: ListUptimeCheckConfigsAsync(ListUptimeCheckConfigsRequest, CallSettings)
@@ -167,7 +167,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListUptimeCheckConfigs</summary>
+        /// <summary>Snippet for ListUptimeCheckConfigsAsync</summary>
         public async Task ListUptimeCheckConfigsAsync()
         {
             // Snippet: ListUptimeCheckConfigsAsync(string, string, int?, CallSettings)
@@ -257,7 +257,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListUptimeCheckConfigs</summary>
+        /// <summary>Snippet for ListUptimeCheckConfigsAsync</summary>
         public async Task ListUptimeCheckConfigsResourceNames1Async()
         {
             // Snippet: ListUptimeCheckConfigsAsync(ProjectName, string, int?, CallSettings)
@@ -347,7 +347,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListUptimeCheckConfigs</summary>
+        /// <summary>Snippet for ListUptimeCheckConfigsAsync</summary>
         public async Task ListUptimeCheckConfigsResourceNames2Async()
         {
             // Snippet: ListUptimeCheckConfigsAsync(OrganizationName, string, int?, CallSettings)
@@ -437,7 +437,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListUptimeCheckConfigs</summary>
+        /// <summary>Snippet for ListUptimeCheckConfigsAsync</summary>
         public async Task ListUptimeCheckConfigsResourceNames3Async()
         {
             // Snippet: ListUptimeCheckConfigsAsync(FolderName, string, int?, CallSettings)
@@ -527,7 +527,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListUptimeCheckConfigs</summary>
+        /// <summary>Snippet for ListUptimeCheckConfigsAsync</summary>
         public async Task ListUptimeCheckConfigsResourceNames4Async()
         {
             // Snippet: ListUptimeCheckConfigsAsync(IResourceName, string, int?, CallSettings)
@@ -1087,7 +1087,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListUptimeCheckIps</summary>
+        /// <summary>Snippet for ListUptimeCheckIpsAsync</summary>
         public async Task ListUptimeCheckIpsRequestObjectAsync()
         {
             // Snippet: ListUptimeCheckIpsAsync(ListUptimeCheckIpsRequest, CallSettings)

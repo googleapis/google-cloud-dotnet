@@ -74,7 +74,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListConversationProfiles</summary>
+        /// <summary>Snippet for ListConversationProfilesAsync</summary>
         public async Task ListConversationProfilesRequestObjectAsync()
         {
             // Snippet: ListConversationProfilesAsync(ListConversationProfilesRequest, CallSettings)
@@ -167,7 +167,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListConversationProfiles</summary>
+        /// <summary>Snippet for ListConversationProfilesAsync</summary>
         public async Task ListConversationProfilesAsync()
         {
             // Snippet: ListConversationProfilesAsync(string, string, int?, CallSettings)
@@ -257,7 +257,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListConversationProfiles</summary>
+        /// <summary>Snippet for ListConversationProfilesAsync</summary>
         public async Task ListConversationProfilesResourceNames1Async()
         {
             // Snippet: ListConversationProfilesAsync(ProjectName, string, int?, CallSettings)
@@ -347,7 +347,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListConversationProfiles</summary>
+        /// <summary>Snippet for ListConversationProfilesAsync</summary>
         public async Task ListConversationProfilesResourceNames2Async()
         {
             // Snippet: ListConversationProfilesAsync(LocationName, string, int?, CallSettings)

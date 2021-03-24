@@ -74,7 +74,7 @@ namespace Google.Cloud.AppEngine.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAuthorizedCertificates</summary>
+        /// <summary>Snippet for ListAuthorizedCertificatesAsync</summary>
         public async Task ListAuthorizedCertificatesRequestObjectAsync()
         {
             // Snippet: ListAuthorizedCertificatesAsync(ListAuthorizedCertificatesRequest, CallSettings)

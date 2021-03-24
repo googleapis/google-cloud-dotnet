@@ -75,7 +75,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEnvironments</summary>
+        /// <summary>Snippet for ListEnvironmentsAsync</summary>
         public async Task ListEnvironmentsRequestObjectAsync()
         {
             // Snippet: ListEnvironmentsAsync(ListEnvironmentsRequest, CallSettings)
@@ -168,7 +168,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEnvironments</summary>
+        /// <summary>Snippet for ListEnvironmentsAsync</summary>
         public async Task ListEnvironmentsAsync()
         {
             // Snippet: ListEnvironmentsAsync(string, string, int?, CallSettings)
@@ -258,7 +258,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEnvironments</summary>
+        /// <summary>Snippet for ListEnvironmentsAsync</summary>
         public async Task ListEnvironmentsResourceNamesAsync()
         {
             // Snippet: ListEnvironmentsAsync(AgentName, string, int?, CallSettings)
@@ -842,7 +842,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for LookupEnvironmentHistory</summary>
+        /// <summary>Snippet for LookupEnvironmentHistoryAsync</summary>
         public async Task LookupEnvironmentHistoryRequestObjectAsync()
         {
             // Snippet: LookupEnvironmentHistoryAsync(LookupEnvironmentHistoryRequest, CallSettings)
@@ -935,7 +935,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for LookupEnvironmentHistory</summary>
+        /// <summary>Snippet for LookupEnvironmentHistoryAsync</summary>
         public async Task LookupEnvironmentHistoryAsync()
         {
             // Snippet: LookupEnvironmentHistoryAsync(string, string, int?, CallSettings)
@@ -1025,7 +1025,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for LookupEnvironmentHistory</summary>
+        /// <summary>Snippet for LookupEnvironmentHistoryAsync</summary>
         public async Task LookupEnvironmentHistoryResourceNamesAsync()
         {
             // Snippet: LookupEnvironmentHistoryAsync(EnvironmentName, string, int?, CallSettings)

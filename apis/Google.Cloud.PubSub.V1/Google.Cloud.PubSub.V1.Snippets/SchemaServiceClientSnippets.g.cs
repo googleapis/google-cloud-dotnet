@@ -263,7 +263,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSchemas</summary>
+        /// <summary>Snippet for ListSchemasAsync</summary>
         public async Task ListSchemasRequestObjectAsync()
         {
             // Snippet: ListSchemasAsync(ListSchemasRequest, CallSettings)
@@ -357,7 +357,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSchemas</summary>
+        /// <summary>Snippet for ListSchemasAsync</summary>
         public async Task ListSchemasAsync()
         {
             // Snippet: ListSchemasAsync(string, string, int?, CallSettings)
@@ -447,7 +447,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSchemas</summary>
+        /// <summary>Snippet for ListSchemasAsync</summary>
         public async Task ListSchemasResourceNamesAsync()
         {
             // Snippet: ListSchemasAsync(ProjectName, string, int?, CallSettings)

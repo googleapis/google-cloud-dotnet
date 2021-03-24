@@ -476,7 +476,7 @@ namespace Google.Cloud.Domains.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListRegistrations</summary>
+        /// <summary>Snippet for ListRegistrationsAsync</summary>
         public async Task ListRegistrationsRequestObjectAsync()
         {
             // Snippet: ListRegistrationsAsync(ListRegistrationsRequest, CallSettings)
@@ -570,7 +570,7 @@ namespace Google.Cloud.Domains.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListRegistrations</summary>
+        /// <summary>Snippet for ListRegistrationsAsync</summary>
         public async Task ListRegistrationsAsync()
         {
             // Snippet: ListRegistrationsAsync(string, string, int?, CallSettings)
@@ -660,7 +660,7 @@ namespace Google.Cloud.Domains.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListRegistrations</summary>
+        /// <summary>Snippet for ListRegistrationsAsync</summary>
         public async Task ListRegistrationsResourceNamesAsync()
         {
             // Snippet: ListRegistrationsAsync(LocationName, string, int?, CallSettings)

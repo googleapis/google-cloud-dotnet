@@ -929,7 +929,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GroupAssets</summary>
+        /// <summary>Snippet for GroupAssetsAsync</summary>
         public async Task GroupAssetsRequestObjectAsync()
         {
             // Snippet: GroupAssetsAsync(GroupAssetsRequest, CallSettings)
@@ -1033,7 +1033,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GroupFindings</summary>
+        /// <summary>Snippet for GroupFindingsAsync</summary>
         public async Task GroupFindingsRequestObjectAsync()
         {
             // Snippet: GroupFindingsAsync(GroupFindingsRequest, CallSettings)
@@ -1131,7 +1131,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GroupFindings</summary>
+        /// <summary>Snippet for GroupFindingsAsync</summary>
         public async Task GroupFindingsAsync()
         {
             // Snippet: GroupFindingsAsync(string, string, string, int?, CallSettings)
@@ -1223,7 +1223,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GroupFindings</summary>
+        /// <summary>Snippet for GroupFindingsAsync</summary>
         public async Task GroupFindingsResourceNamesAsync()
         {
             // Snippet: GroupFindingsAsync(SourceName, string, string, int?, CallSettings)
@@ -1322,7 +1322,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAssets</summary>
+        /// <summary>Snippet for ListAssetsAsync</summary>
         public async Task ListAssetsRequestObjectAsync()
         {
             // Snippet: ListAssetsAsync(ListAssetsRequest, CallSettings)
@@ -1420,7 +1420,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAssets</summary>
+        /// <summary>Snippet for ListAssetsAsync</summary>
         public async Task ListAssetsAsync()
         {
             // Snippet: ListAssetsAsync(string, string, int?, CallSettings)
@@ -1510,7 +1510,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAssets</summary>
+        /// <summary>Snippet for ListAssetsAsync</summary>
         public async Task ListAssetsResourceNamesAsync()
         {
             // Snippet: ListAssetsAsync(OrganizationName, string, int?, CallSettings)
@@ -1608,7 +1608,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListFindings</summary>
+        /// <summary>Snippet for ListFindingsAsync</summary>
         public async Task ListFindingsRequestObjectAsync()
         {
             // Snippet: ListFindingsAsync(ListFindingsRequest, CallSettings)
@@ -1706,7 +1706,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListFindings</summary>
+        /// <summary>Snippet for ListFindingsAsync</summary>
         public async Task ListFindingsAsync()
         {
             // Snippet: ListFindingsAsync(string, string, int?, CallSettings)
@@ -1796,7 +1796,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListFindings</summary>
+        /// <summary>Snippet for ListFindingsAsync</summary>
         public async Task ListFindingsResourceNamesAsync()
         {
             // Snippet: ListFindingsAsync(SourceName, string, int?, CallSettings)
@@ -1889,7 +1889,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotificationConfigs</summary>
+        /// <summary>Snippet for ListNotificationConfigsAsync</summary>
         public async Task ListNotificationConfigsRequestObjectAsync()
         {
             // Snippet: ListNotificationConfigsAsync(ListNotificationConfigsRequest, CallSettings)
@@ -1982,7 +1982,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotificationConfigs</summary>
+        /// <summary>Snippet for ListNotificationConfigsAsync</summary>
         public async Task ListNotificationConfigsAsync()
         {
             // Snippet: ListNotificationConfigsAsync(string, string, int?, CallSettings)
@@ -2072,7 +2072,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotificationConfigs</summary>
+        /// <summary>Snippet for ListNotificationConfigsAsync</summary>
         public async Task ListNotificationConfigsResourceNamesAsync()
         {
             // Snippet: ListNotificationConfigsAsync(OrganizationName, string, int?, CallSettings)
@@ -2165,7 +2165,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSources</summary>
+        /// <summary>Snippet for ListSourcesAsync</summary>
         public async Task ListSourcesRequestObjectAsync()
         {
             // Snippet: ListSourcesAsync(ListSourcesRequest, CallSettings)
@@ -2258,7 +2258,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSources</summary>
+        /// <summary>Snippet for ListSourcesAsync</summary>
         public async Task ListSourcesAsync()
         {
             // Snippet: ListSourcesAsync(string, string, int?, CallSettings)
@@ -2348,7 +2348,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSources</summary>
+        /// <summary>Snippet for ListSourcesAsync</summary>
         public async Task ListSourcesResourceNamesAsync()
         {
             // Snippet: ListSourcesAsync(OrganizationName, string, int?, CallSettings)

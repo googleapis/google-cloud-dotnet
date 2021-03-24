@@ -318,7 +318,7 @@ namespace Google.Cloud.Billing.Budgets.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBudgets</summary>
+        /// <summary>Snippet for ListBudgetsAsync</summary>
         public async Task ListBudgetsRequestObjectAsync()
         {
             // Snippet: ListBudgetsAsync(ListBudgetsRequest, CallSettings)
@@ -411,7 +411,7 @@ namespace Google.Cloud.Billing.Budgets.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBudgets</summary>
+        /// <summary>Snippet for ListBudgetsAsync</summary>
         public async Task ListBudgetsAsync()
         {
             // Snippet: ListBudgetsAsync(string, string, int?, CallSettings)
@@ -501,7 +501,7 @@ namespace Google.Cloud.Billing.Budgets.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBudgets</summary>
+        /// <summary>Snippet for ListBudgetsAsync</summary>
         public async Task ListBudgetsResourceNamesAsync()
         {
             // Snippet: ListBudgetsAsync(BillingAccountName, string, int?, CallSettings)

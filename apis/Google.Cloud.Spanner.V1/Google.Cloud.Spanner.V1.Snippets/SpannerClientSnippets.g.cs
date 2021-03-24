@@ -350,7 +350,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSessions</summary>
+        /// <summary>Snippet for ListSessionsAsync</summary>
         public async Task ListSessionsRequestObjectAsync()
         {
             // Snippet: ListSessionsAsync(ListSessionsRequest, CallSettings)
@@ -444,7 +444,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSessions</summary>
+        /// <summary>Snippet for ListSessionsAsync</summary>
         public async Task ListSessionsAsync()
         {
             // Snippet: ListSessionsAsync(string, string, int?, CallSettings)
@@ -534,7 +534,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSessions</summary>
+        /// <summary>Snippet for ListSessionsAsync</summary>
         public async Task ListSessionsResourceNamesAsync()
         {
             // Snippet: ListSessionsAsync(DatabaseName, string, int?, CallSettings)

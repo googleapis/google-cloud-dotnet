@@ -73,7 +73,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListContexts</summary>
+        /// <summary>Snippet for ListContextsAsync</summary>
         public async Task ListContextsRequestObjectAsync()
         {
             // Snippet: ListContextsAsync(ListContextsRequest, CallSettings)
@@ -166,7 +166,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListContexts</summary>
+        /// <summary>Snippet for ListContextsAsync</summary>
         public async Task ListContextsAsync()
         {
             // Snippet: ListContextsAsync(string, string, int?, CallSettings)
@@ -256,7 +256,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListContexts</summary>
+        /// <summary>Snippet for ListContextsAsync</summary>
         public async Task ListContextsResourceNamesAsync()
         {
             // Snippet: ListContextsAsync(SessionName, string, int?, CallSettings)

@@ -75,7 +75,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTestCases</summary>
+        /// <summary>Snippet for ListTestCasesAsync</summary>
         public async Task ListTestCasesRequestObjectAsync()
         {
             // Snippet: ListTestCasesAsync(ListTestCasesRequest, CallSettings)
@@ -169,7 +169,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTestCases</summary>
+        /// <summary>Snippet for ListTestCasesAsync</summary>
         public async Task ListTestCasesAsync()
         {
             // Snippet: ListTestCasesAsync(string, string, int?, CallSettings)
@@ -259,7 +259,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTestCases</summary>
+        /// <summary>Snippet for ListTestCasesAsync</summary>
         public async Task ListTestCasesResourceNamesAsync()
         {
             // Snippet: ListTestCasesAsync(AgentName, string, int?, CallSettings)
@@ -1007,7 +1007,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTestCaseResults</summary>
+        /// <summary>Snippet for ListTestCaseResultsAsync</summary>
         public async Task ListTestCaseResultsRequestObjectAsync()
         {
             // Snippet: ListTestCaseResultsAsync(ListTestCaseResultsRequest, CallSettings)
@@ -1101,7 +1101,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTestCaseResults</summary>
+        /// <summary>Snippet for ListTestCaseResultsAsync</summary>
         public async Task ListTestCaseResultsAsync()
         {
             // Snippet: ListTestCaseResultsAsync(string, string, int?, CallSettings)
@@ -1191,7 +1191,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTestCaseResults</summary>
+        /// <summary>Snippet for ListTestCaseResultsAsync</summary>
         public async Task ListTestCaseResultsResourceNamesAsync()
         {
             // Snippet: ListTestCaseResultsAsync(TestCaseName, string, int?, CallSettings)

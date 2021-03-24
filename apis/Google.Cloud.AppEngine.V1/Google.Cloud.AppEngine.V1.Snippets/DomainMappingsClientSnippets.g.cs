@@ -71,7 +71,7 @@ namespace Google.Cloud.AppEngine.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDomainMappings</summary>
+        /// <summary>Snippet for ListDomainMappingsAsync</summary>
         public async Task ListDomainMappingsRequestObjectAsync()
         {
             // Snippet: ListDomainMappingsAsync(ListDomainMappingsRequest, CallSettings)

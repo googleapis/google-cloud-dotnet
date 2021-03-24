@@ -73,7 +73,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSessionEntityTypes</summary>
+        /// <summary>Snippet for ListSessionEntityTypesAsync</summary>
         public async Task ListSessionEntityTypesRequestObjectAsync()
         {
             // Snippet: ListSessionEntityTypesAsync(ListSessionEntityTypesRequest, CallSettings)
@@ -166,7 +166,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSessionEntityTypes</summary>
+        /// <summary>Snippet for ListSessionEntityTypesAsync</summary>
         public async Task ListSessionEntityTypesAsync()
         {
             // Snippet: ListSessionEntityTypesAsync(string, string, int?, CallSettings)
@@ -256,7 +256,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSessionEntityTypes</summary>
+        /// <summary>Snippet for ListSessionEntityTypesAsync</summary>
         public async Task ListSessionEntityTypesResourceNamesAsync()
         {
             // Snippet: ListSessionEntityTypesAsync(SessionName, string, int?, CallSettings)

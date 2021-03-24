@@ -75,7 +75,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListIntents</summary>
+        /// <summary>Snippet for ListIntentsAsync</summary>
         public async Task ListIntentsRequestObjectAsync()
         {
             // Snippet: ListIntentsAsync(ListIntentsRequest, CallSettings)
@@ -170,7 +170,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListIntents</summary>
+        /// <summary>Snippet for ListIntentsAsync</summary>
         public async Task ListIntentsAsync()
         {
             // Snippet: ListIntentsAsync(string, string, int?, CallSettings)
@@ -260,7 +260,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListIntents</summary>
+        /// <summary>Snippet for ListIntentsAsync</summary>
         public async Task ListIntentsResourceNamesAsync()
         {
             // Snippet: ListIntentsAsync(AgentName, string, int?, CallSettings)

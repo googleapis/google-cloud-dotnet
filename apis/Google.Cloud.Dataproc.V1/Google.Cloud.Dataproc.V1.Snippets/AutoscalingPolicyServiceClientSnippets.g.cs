@@ -342,7 +342,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAutoscalingPolicies</summary>
+        /// <summary>Snippet for ListAutoscalingPoliciesAsync</summary>
         public async Task ListAutoscalingPoliciesRequestObjectAsync()
         {
             // Snippet: ListAutoscalingPoliciesAsync(ListAutoscalingPoliciesRequest, CallSettings)
@@ -435,7 +435,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAutoscalingPolicies</summary>
+        /// <summary>Snippet for ListAutoscalingPoliciesAsync</summary>
         public async Task ListAutoscalingPoliciesAsync()
         {
             // Snippet: ListAutoscalingPoliciesAsync(string, string, int?, CallSettings)
@@ -525,7 +525,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAutoscalingPolicies</summary>
+        /// <summary>Snippet for ListAutoscalingPoliciesAsync</summary>
         public async Task ListAutoscalingPoliciesResourceNames1Async()
         {
             // Snippet: ListAutoscalingPoliciesAsync(LocationName, string, int?, CallSettings)
@@ -615,7 +615,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAutoscalingPolicies</summary>
+        /// <summary>Snippet for ListAutoscalingPoliciesAsync</summary>
         public async Task ListAutoscalingPoliciesResourceNames2Async()
         {
             // Snippet: ListAutoscalingPoliciesAsync(RegionName, string, int?, CallSettings)

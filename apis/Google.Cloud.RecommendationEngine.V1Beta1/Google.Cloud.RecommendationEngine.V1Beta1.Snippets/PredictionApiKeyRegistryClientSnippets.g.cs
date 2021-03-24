@@ -165,7 +165,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPredictionApiKeyRegistrations</summary>
+        /// <summary>Snippet for ListPredictionApiKeyRegistrationsAsync</summary>
         public async Task ListPredictionApiKeyRegistrationsRequestObjectAsync()
         {
             // Snippet: ListPredictionApiKeyRegistrationsAsync(ListPredictionApiKeyRegistrationsRequest, CallSettings)
@@ -258,7 +258,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPredictionApiKeyRegistrations</summary>
+        /// <summary>Snippet for ListPredictionApiKeyRegistrationsAsync</summary>
         public async Task ListPredictionApiKeyRegistrationsAsync()
         {
             // Snippet: ListPredictionApiKeyRegistrationsAsync(string, string, int?, CallSettings)
@@ -348,7 +348,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPredictionApiKeyRegistrations</summary>
+        /// <summary>Snippet for ListPredictionApiKeyRegistrationsAsync</summary>
         public async Task ListPredictionApiKeyRegistrationsResourceNamesAsync()
         {
             // Snippet: ListPredictionApiKeyRegistrationsAsync(EventStoreName, string, int?, CallSettings)

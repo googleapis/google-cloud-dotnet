@@ -157,7 +157,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAccounts</summary>
+        /// <summary>Snippet for ListAccountsAsync</summary>
         public async Task ListAccountsRequestObjectAsync()
         {
             // Snippet: ListAccountsAsync(ListAccountsRequest, CallSettings)
@@ -433,7 +433,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAccountSummaries</summary>
+        /// <summary>Snippet for ListAccountSummariesAsync</summary>
         public async Task ListAccountSummariesRequestObjectAsync()
         {
             // Snippet: ListAccountSummariesAsync(ListAccountSummariesRequest, CallSettings)
@@ -614,7 +614,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListProperties</summary>
+        /// <summary>Snippet for ListPropertiesAsync</summary>
         public async Task ListPropertiesRequestObjectAsync()
         {
             // Snippet: ListPropertiesAsync(ListPropertiesRequest, CallSettings)
@@ -1050,7 +1050,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListUserLinks</summary>
+        /// <summary>Snippet for ListUserLinksAsync</summary>
         public async Task ListUserLinksRequestObjectAsync()
         {
             // Snippet: ListUserLinksAsync(ListUserLinksRequest, CallSettings)
@@ -1143,7 +1143,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListUserLinks</summary>
+        /// <summary>Snippet for ListUserLinksAsync</summary>
         public async Task ListUserLinksAsync()
         {
             // Snippet: ListUserLinksAsync(string, string, int?, CallSettings)
@@ -1233,7 +1233,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListUserLinks</summary>
+        /// <summary>Snippet for ListUserLinksAsync</summary>
         public async Task ListUserLinksResourceNames1Async()
         {
             // Snippet: ListUserLinksAsync(AccountName, string, int?, CallSettings)
@@ -1323,7 +1323,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListUserLinks</summary>
+        /// <summary>Snippet for ListUserLinksAsync</summary>
         public async Task ListUserLinksResourceNames2Async()
         {
             // Snippet: ListUserLinksAsync(PropertyName, string, int?, CallSettings)
@@ -1416,7 +1416,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for AuditUserLinks</summary>
+        /// <summary>Snippet for AuditUserLinksAsync</summary>
         public async Task AuditUserLinksRequestObjectAsync()
         {
             // Snippet: AuditUserLinksAsync(AuditUserLinksRequest, CallSettings)
@@ -2239,7 +2239,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListWebDataStreams</summary>
+        /// <summary>Snippet for ListWebDataStreamsAsync</summary>
         public async Task ListWebDataStreamsRequestObjectAsync()
         {
             // Snippet: ListWebDataStreamsAsync(ListWebDataStreamsRequest, CallSettings)
@@ -2332,7 +2332,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListWebDataStreams</summary>
+        /// <summary>Snippet for ListWebDataStreamsAsync</summary>
         public async Task ListWebDataStreamsAsync()
         {
             // Snippet: ListWebDataStreamsAsync(string, string, int?, CallSettings)
@@ -2422,7 +2422,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListWebDataStreams</summary>
+        /// <summary>Snippet for ListWebDataStreamsAsync</summary>
         public async Task ListWebDataStreamsResourceNamesAsync()
         {
             // Snippet: ListWebDataStreamsAsync(PropertyName, string, int?, CallSettings)
@@ -2846,7 +2846,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListIosAppDataStreams</summary>
+        /// <summary>Snippet for ListIosAppDataStreamsAsync</summary>
         public async Task ListIosAppDataStreamsRequestObjectAsync()
         {
             // Snippet: ListIosAppDataStreamsAsync(ListIosAppDataStreamsRequest, CallSettings)
@@ -2939,7 +2939,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListIosAppDataStreams</summary>
+        /// <summary>Snippet for ListIosAppDataStreamsAsync</summary>
         public async Task ListIosAppDataStreamsAsync()
         {
             // Snippet: ListIosAppDataStreamsAsync(string, string, int?, CallSettings)
@@ -3029,7 +3029,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListIosAppDataStreams</summary>
+        /// <summary>Snippet for ListIosAppDataStreamsAsync</summary>
         public async Task ListIosAppDataStreamsResourceNamesAsync()
         {
             // Snippet: ListIosAppDataStreamsAsync(PropertyName, string, int?, CallSettings)
@@ -3453,7 +3453,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAndroidAppDataStreams</summary>
+        /// <summary>Snippet for ListAndroidAppDataStreamsAsync</summary>
         public async Task ListAndroidAppDataStreamsRequestObjectAsync()
         {
             // Snippet: ListAndroidAppDataStreamsAsync(ListAndroidAppDataStreamsRequest, CallSettings)
@@ -3546,7 +3546,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAndroidAppDataStreams</summary>
+        /// <summary>Snippet for ListAndroidAppDataStreamsAsync</summary>
         public async Task ListAndroidAppDataStreamsAsync()
         {
             // Snippet: ListAndroidAppDataStreamsAsync(string, string, int?, CallSettings)
@@ -3636,7 +3636,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListAndroidAppDataStreams</summary>
+        /// <summary>Snippet for ListAndroidAppDataStreamsAsync</summary>
         public async Task ListAndroidAppDataStreamsResourceNamesAsync()
         {
             // Snippet: ListAndroidAppDataStreamsAsync(PropertyName, string, int?, CallSettings)
@@ -4124,7 +4124,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListFirebaseLinks</summary>
+        /// <summary>Snippet for ListFirebaseLinksAsync</summary>
         public async Task ListFirebaseLinksRequestObjectAsync()
         {
             // Snippet: ListFirebaseLinksAsync(ListFirebaseLinksRequest, CallSettings)
@@ -4217,7 +4217,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListFirebaseLinks</summary>
+        /// <summary>Snippet for ListFirebaseLinksAsync</summary>
         public async Task ListFirebaseLinksAsync()
         {
             // Snippet: ListFirebaseLinksAsync(string, string, int?, CallSettings)
@@ -4307,7 +4307,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListFirebaseLinks</summary>
+        /// <summary>Snippet for ListFirebaseLinksAsync</summary>
         public async Task ListFirebaseLinksResourceNamesAsync()
         {
             // Snippet: ListFirebaseLinksAsync(PropertyName, string, int?, CallSettings)
@@ -4731,7 +4731,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGoogleAdsLinks</summary>
+        /// <summary>Snippet for ListGoogleAdsLinksAsync</summary>
         public async Task ListGoogleAdsLinksRequestObjectAsync()
         {
             // Snippet: ListGoogleAdsLinksAsync(ListGoogleAdsLinksRequest, CallSettings)
@@ -4824,7 +4824,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGoogleAdsLinks</summary>
+        /// <summary>Snippet for ListGoogleAdsLinksAsync</summary>
         public async Task ListGoogleAdsLinksAsync()
         {
             // Snippet: ListGoogleAdsLinksAsync(string, string, int?, CallSettings)
@@ -4914,7 +4914,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListGoogleAdsLinks</summary>
+        /// <summary>Snippet for ListGoogleAdsLinksAsync</summary>
         public async Task ListGoogleAdsLinksResourceNamesAsync()
         {
             // Snippet: ListGoogleAdsLinksAsync(PropertyName, string, int?, CallSettings)

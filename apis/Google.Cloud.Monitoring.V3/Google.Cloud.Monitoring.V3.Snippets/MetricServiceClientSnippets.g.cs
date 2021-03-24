@@ -76,7 +76,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        /// <summary>Snippet for ListMonitoredResourceDescriptorsAsync</summary>
         public async Task ListMonitoredResourceDescriptorsRequestObjectAsync()
         {
             // Snippet: ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest, CallSettings)
@@ -170,7 +170,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        /// <summary>Snippet for ListMonitoredResourceDescriptorsAsync</summary>
         public async Task ListMonitoredResourceDescriptorsAsync()
         {
             // Snippet: ListMonitoredResourceDescriptorsAsync(string, string, int?, CallSettings)
@@ -260,7 +260,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        /// <summary>Snippet for ListMonitoredResourceDescriptorsAsync</summary>
         public async Task ListMonitoredResourceDescriptorsResourceNames1Async()
         {
             // Snippet: ListMonitoredResourceDescriptorsAsync(ProjectName, string, int?, CallSettings)
@@ -350,7 +350,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        /// <summary>Snippet for ListMonitoredResourceDescriptorsAsync</summary>
         public async Task ListMonitoredResourceDescriptorsResourceNames2Async()
         {
             // Snippet: ListMonitoredResourceDescriptorsAsync(OrganizationName, string, int?, CallSettings)
@@ -440,7 +440,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        /// <summary>Snippet for ListMonitoredResourceDescriptorsAsync</summary>
         public async Task ListMonitoredResourceDescriptorsResourceNames3Async()
         {
             // Snippet: ListMonitoredResourceDescriptorsAsync(FolderName, string, int?, CallSettings)
@@ -530,7 +530,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMonitoredResourceDescriptors</summary>
+        /// <summary>Snippet for ListMonitoredResourceDescriptorsAsync</summary>
         public async Task ListMonitoredResourceDescriptorsResourceNames4Async()
         {
             // Snippet: ListMonitoredResourceDescriptorsAsync(IResourceName, string, int?, CallSettings)
@@ -738,7 +738,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMetricDescriptors</summary>
+        /// <summary>Snippet for ListMetricDescriptorsAsync</summary>
         public async Task ListMetricDescriptorsRequestObjectAsync()
         {
             // Snippet: ListMetricDescriptorsAsync(ListMetricDescriptorsRequest, CallSettings)
@@ -832,7 +832,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMetricDescriptors</summary>
+        /// <summary>Snippet for ListMetricDescriptorsAsync</summary>
         public async Task ListMetricDescriptorsAsync()
         {
             // Snippet: ListMetricDescriptorsAsync(string, string, int?, CallSettings)
@@ -922,7 +922,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMetricDescriptors</summary>
+        /// <summary>Snippet for ListMetricDescriptorsAsync</summary>
         public async Task ListMetricDescriptorsResourceNames1Async()
         {
             // Snippet: ListMetricDescriptorsAsync(ProjectName, string, int?, CallSettings)
@@ -1012,7 +1012,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMetricDescriptors</summary>
+        /// <summary>Snippet for ListMetricDescriptorsAsync</summary>
         public async Task ListMetricDescriptorsResourceNames2Async()
         {
             // Snippet: ListMetricDescriptorsAsync(OrganizationName, string, int?, CallSettings)
@@ -1102,7 +1102,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMetricDescriptors</summary>
+        /// <summary>Snippet for ListMetricDescriptorsAsync</summary>
         public async Task ListMetricDescriptorsResourceNames3Async()
         {
             // Snippet: ListMetricDescriptorsAsync(FolderName, string, int?, CallSettings)
@@ -1192,7 +1192,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListMetricDescriptors</summary>
+        /// <summary>Snippet for ListMetricDescriptorsAsync</summary>
         public async Task ListMetricDescriptorsResourceNames4Async()
         {
             // Snippet: ListMetricDescriptorsAsync(IResourceName, string, int?, CallSettings)
@@ -1699,7 +1699,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTimeSeries</summary>
+        /// <summary>Snippet for ListTimeSeriesAsync</summary>
         public async Task ListTimeSeriesRequestObjectAsync()
         {
             // Snippet: ListTimeSeriesAsync(ListTimeSeriesRequest, CallSettings)
@@ -1801,7 +1801,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTimeSeries</summary>
+        /// <summary>Snippet for ListTimeSeriesAsync</summary>
         public async Task ListTimeSeriesAsync()
         {
             // Snippet: ListTimeSeriesAsync(string, string, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, string, int?, CallSettings)
@@ -1897,7 +1897,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTimeSeries</summary>
+        /// <summary>Snippet for ListTimeSeriesAsync</summary>
         public async Task ListTimeSeriesResourceNames1Async()
         {
             // Snippet: ListTimeSeriesAsync(ProjectName, string, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, string, int?, CallSettings)
@@ -1993,7 +1993,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTimeSeries</summary>
+        /// <summary>Snippet for ListTimeSeriesAsync</summary>
         public async Task ListTimeSeriesResourceNames2Async()
         {
             // Snippet: ListTimeSeriesAsync(OrganizationName, string, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, string, int?, CallSettings)
@@ -2089,7 +2089,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTimeSeries</summary>
+        /// <summary>Snippet for ListTimeSeriesAsync</summary>
         public async Task ListTimeSeriesResourceNames3Async()
         {
             // Snippet: ListTimeSeriesAsync(FolderName, string, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, string, int?, CallSettings)

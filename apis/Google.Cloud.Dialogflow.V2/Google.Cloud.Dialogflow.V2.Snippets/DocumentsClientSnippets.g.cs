@@ -74,7 +74,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDocuments</summary>
+        /// <summary>Snippet for ListDocumentsAsync</summary>
         public async Task ListDocumentsRequestObjectAsync()
         {
             // Snippet: ListDocumentsAsync(ListDocumentsRequest, CallSettings)
@@ -167,7 +167,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDocuments</summary>
+        /// <summary>Snippet for ListDocumentsAsync</summary>
         public async Task ListDocumentsAsync()
         {
             // Snippet: ListDocumentsAsync(string, string, int?, CallSettings)
@@ -257,7 +257,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDocuments</summary>
+        /// <summary>Snippet for ListDocumentsAsync</summary>
         public async Task ListDocumentsResourceNamesAsync()
         {
             // Snippet: ListDocumentsAsync(KnowledgeBaseName, string, int?, CallSettings)

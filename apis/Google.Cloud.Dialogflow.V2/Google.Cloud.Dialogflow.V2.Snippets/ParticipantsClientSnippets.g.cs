@@ -253,7 +253,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListParticipants</summary>
+        /// <summary>Snippet for ListParticipantsAsync</summary>
         public async Task ListParticipantsRequestObjectAsync()
         {
             // Snippet: ListParticipantsAsync(ListParticipantsRequest, CallSettings)
@@ -346,7 +346,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListParticipants</summary>
+        /// <summary>Snippet for ListParticipantsAsync</summary>
         public async Task ListParticipantsAsync()
         {
             // Snippet: ListParticipantsAsync(string, string, int?, CallSettings)
@@ -436,7 +436,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListParticipants</summary>
+        /// <summary>Snippet for ListParticipantsAsync</summary>
         public async Task ListParticipantsResourceNamesAsync()
         {
             // Snippet: ListParticipantsAsync(ConversationName, string, int?, CallSettings)

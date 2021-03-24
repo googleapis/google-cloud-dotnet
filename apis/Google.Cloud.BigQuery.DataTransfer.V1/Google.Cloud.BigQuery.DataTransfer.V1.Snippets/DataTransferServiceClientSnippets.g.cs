@@ -161,7 +161,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDataSources</summary>
+        /// <summary>Snippet for ListDataSourcesAsync</summary>
         public async Task ListDataSourcesRequestObjectAsync()
         {
             // Snippet: ListDataSourcesAsync(ListDataSourcesRequest, CallSettings)
@@ -254,7 +254,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDataSources</summary>
+        /// <summary>Snippet for ListDataSourcesAsync</summary>
         public async Task ListDataSourcesAsync()
         {
             // Snippet: ListDataSourcesAsync(string, string, int?, CallSettings)
@@ -344,7 +344,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDataSources</summary>
+        /// <summary>Snippet for ListDataSourcesAsync</summary>
         public async Task ListDataSourcesResourceNames1Async()
         {
             // Snippet: ListDataSourcesAsync(ProjectName, string, int?, CallSettings)
@@ -434,7 +434,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDataSources</summary>
+        /// <summary>Snippet for ListDataSourcesAsync</summary>
         public async Task ListDataSourcesResourceNames2Async()
         {
             // Snippet: ListDataSourcesAsync(LocationName, string, int?, CallSettings)
@@ -900,7 +900,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferConfigs</summary>
+        /// <summary>Snippet for ListTransferConfigsAsync</summary>
         public async Task ListTransferConfigsRequestObjectAsync()
         {
             // Snippet: ListTransferConfigsAsync(ListTransferConfigsRequest, CallSettings)
@@ -994,7 +994,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferConfigs</summary>
+        /// <summary>Snippet for ListTransferConfigsAsync</summary>
         public async Task ListTransferConfigsAsync()
         {
             // Snippet: ListTransferConfigsAsync(string, string, int?, CallSettings)
@@ -1084,7 +1084,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferConfigs</summary>
+        /// <summary>Snippet for ListTransferConfigsAsync</summary>
         public async Task ListTransferConfigsResourceNames1Async()
         {
             // Snippet: ListTransferConfigsAsync(ProjectName, string, int?, CallSettings)
@@ -1174,7 +1174,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferConfigs</summary>
+        /// <summary>Snippet for ListTransferConfigsAsync</summary>
         public async Task ListTransferConfigsResourceNames2Async()
         {
             // Snippet: ListTransferConfigsAsync(LocationName, string, int?, CallSettings)
@@ -1580,7 +1580,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferRuns</summary>
+        /// <summary>Snippet for ListTransferRunsAsync</summary>
         public async Task ListTransferRunsRequestObjectAsync()
         {
             // Snippet: ListTransferRunsAsync(ListTransferRunsRequest, CallSettings)
@@ -1678,7 +1678,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferRuns</summary>
+        /// <summary>Snippet for ListTransferRunsAsync</summary>
         public async Task ListTransferRunsAsync()
         {
             // Snippet: ListTransferRunsAsync(string, string, int?, CallSettings)
@@ -1768,7 +1768,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferRuns</summary>
+        /// <summary>Snippet for ListTransferRunsAsync</summary>
         public async Task ListTransferRunsResourceNamesAsync()
         {
             // Snippet: ListTransferRunsAsync(TransferConfigName, string, int?, CallSettings)
@@ -1865,7 +1865,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferLogs</summary>
+        /// <summary>Snippet for ListTransferLogsAsync</summary>
         public async Task ListTransferLogsRequestObjectAsync()
         {
             // Snippet: ListTransferLogsAsync(ListTransferLogsRequest, CallSettings)
@@ -1962,7 +1962,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferLogs</summary>
+        /// <summary>Snippet for ListTransferLogsAsync</summary>
         public async Task ListTransferLogsAsync()
         {
             // Snippet: ListTransferLogsAsync(string, string, int?, CallSettings)
@@ -2052,7 +2052,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTransferLogs</summary>
+        /// <summary>Snippet for ListTransferLogsAsync</summary>
         public async Task ListTransferLogsResourceNamesAsync()
         {
             // Snippet: ListTransferLogsAsync(RunName, string, int?, CallSettings)

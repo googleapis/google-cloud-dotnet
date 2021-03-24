@@ -273,7 +273,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBuilds</summary>
+        /// <summary>Snippet for ListBuildsAsync</summary>
         public async Task ListBuildsRequestObjectAsync()
         {
             // Snippet: ListBuildsAsync(ListBuildsRequest, CallSettings)
@@ -369,7 +369,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBuilds</summary>
+        /// <summary>Snippet for ListBuildsAsync</summary>
         public async Task ListBuildsAsync()
         {
             // Snippet: ListBuildsAsync(string, string, string, int?, CallSettings)
@@ -784,7 +784,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBuildTriggers</summary>
+        /// <summary>Snippet for ListBuildTriggersAsync</summary>
         public async Task ListBuildTriggersRequestObjectAsync()
         {
             // Snippet: ListBuildTriggersAsync(ListBuildTriggersRequest, CallSettings)
@@ -874,7 +874,7 @@ namespace Google.Cloud.CloudBuild.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBuildTriggers</summary>
+        /// <summary>Snippet for ListBuildTriggersAsync</summary>
         public async Task ListBuildTriggersAsync()
         {
             // Snippet: ListBuildTriggersAsync(string, string, int?, CallSettings)

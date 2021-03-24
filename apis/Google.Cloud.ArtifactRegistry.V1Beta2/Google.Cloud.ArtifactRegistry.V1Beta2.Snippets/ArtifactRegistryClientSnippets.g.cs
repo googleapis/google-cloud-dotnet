@@ -73,7 +73,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListRepositories</summary>
+        /// <summary>Snippet for ListRepositoriesAsync</summary>
         public async Task ListRepositoriesRequestObjectAsync()
         {
             // Snippet: ListRepositoriesAsync(ListRepositoriesRequest, CallSettings)
@@ -163,7 +163,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListRepositories</summary>
+        /// <summary>Snippet for ListRepositoriesAsync</summary>
         public async Task ListRepositoriesAsync()
         {
             // Snippet: ListRepositoriesAsync(string, string, int?, CallSettings)
@@ -621,7 +621,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPackages</summary>
+        /// <summary>Snippet for ListPackagesAsync</summary>
         public async Task ListPackagesRequestObjectAsync()
         {
             // Snippet: ListPackagesAsync(ListPackagesRequest, CallSettings)
@@ -711,7 +711,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPackages</summary>
+        /// <summary>Snippet for ListPackagesAsync</summary>
         public async Task ListPackagesAsync()
         {
             // Snippet: ListPackagesAsync(string, string, int?, CallSettings)
@@ -977,7 +977,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListVersions</summary>
+        /// <summary>Snippet for ListVersionsAsync</summary>
         public async Task ListVersionsRequestObjectAsync()
         {
             // Snippet: ListVersionsAsync(ListVersionsRequest, CallSettings)
@@ -1071,7 +1071,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListVersions</summary>
+        /// <summary>Snippet for ListVersionsAsync</summary>
         public async Task ListVersionsAsync()
         {
             // Snippet: ListVersionsAsync(string, string, int?, CallSettings)
@@ -1353,7 +1353,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListFiles</summary>
+        /// <summary>Snippet for ListFilesAsync</summary>
         public async Task ListFilesRequestObjectAsync()
         {
             // Snippet: ListFilesAsync(ListFilesRequest, CallSettings)
@@ -1447,7 +1447,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListFiles</summary>
+        /// <summary>Snippet for ListFilesAsync</summary>
         public async Task ListFilesAsync()
         {
             // Snippet: ListFilesAsync(string, string, int?, CallSettings)
@@ -1595,7 +1595,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTags</summary>
+        /// <summary>Snippet for ListTagsAsync</summary>
         public async Task ListTagsRequestObjectAsync()
         {
             // Snippet: ListTagsAsync(ListTagsRequest, CallSettings)
@@ -1689,7 +1689,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTags</summary>
+        /// <summary>Snippet for ListTagsAsync</summary>
         public async Task ListTagsAsync()
         {
             // Snippet: ListTagsAsync(string, string, int?, CallSettings)

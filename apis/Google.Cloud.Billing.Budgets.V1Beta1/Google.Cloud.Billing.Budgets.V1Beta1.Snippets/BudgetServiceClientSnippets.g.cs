@@ -177,7 +177,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListBudgets</summary>
+        /// <summary>Snippet for ListBudgetsAsync</summary>
         public async Task ListBudgetsRequestObjectAsync()
         {
             // Snippet: ListBudgetsAsync(ListBudgetsRequest, CallSettings)

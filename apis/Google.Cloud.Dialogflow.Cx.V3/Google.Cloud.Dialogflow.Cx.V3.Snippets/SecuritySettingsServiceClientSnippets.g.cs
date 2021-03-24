@@ -318,7 +318,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSecuritySettings</summary>
+        /// <summary>Snippet for ListSecuritySettingsAsync</summary>
         public async Task ListSecuritySettingsRequestObjectAsync()
         {
             // Snippet: ListSecuritySettingsAsync(ListSecuritySettingsRequest, CallSettings)
@@ -411,7 +411,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSecuritySettings</summary>
+        /// <summary>Snippet for ListSecuritySettingsAsync</summary>
         public async Task ListSecuritySettingsAsync()
         {
             // Snippet: ListSecuritySettingsAsync(string, string, int?, CallSettings)
@@ -501,7 +501,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSecuritySettings</summary>
+        /// <summary>Snippet for ListSecuritySettingsAsync</summary>
         public async Task ListSecuritySettingsResourceNamesAsync()
         {
             // Snippet: ListSecuritySettingsAsync(LocationName, string, int?, CallSettings)

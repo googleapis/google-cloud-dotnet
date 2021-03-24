@@ -405,7 +405,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTopics</summary>
+        /// <summary>Snippet for ListTopicsAsync</summary>
         public async Task ListTopicsRequestObjectAsync()
         {
             // Snippet: ListTopicsAsync(ListTopicsRequest, CallSettings)
@@ -498,7 +498,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTopics</summary>
+        /// <summary>Snippet for ListTopicsAsync</summary>
         public async Task ListTopicsAsync()
         {
             // Snippet: ListTopicsAsync(string, string, int?, CallSettings)
@@ -588,7 +588,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTopics</summary>
+        /// <summary>Snippet for ListTopicsAsync</summary>
         public async Task ListTopicsResourceNamesAsync()
         {
             // Snippet: ListTopicsAsync(ProjectName, string, int?, CallSettings)
@@ -681,7 +681,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTopicSubscriptions</summary>
+        /// <summary>Snippet for ListTopicSubscriptionsAsync</summary>
         public async Task ListTopicSubscriptionsRequestObjectAsync()
         {
             // Snippet: ListTopicSubscriptionsAsync(ListTopicSubscriptionsRequest, CallSettings)
@@ -774,7 +774,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTopicSubscriptions</summary>
+        /// <summary>Snippet for ListTopicSubscriptionsAsync</summary>
         public async Task ListTopicSubscriptionsAsync()
         {
             // Snippet: ListTopicSubscriptionsAsync(string, string, int?, CallSettings)
@@ -864,7 +864,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTopicSubscriptions</summary>
+        /// <summary>Snippet for ListTopicSubscriptionsAsync</summary>
         public async Task ListTopicSubscriptionsResourceNamesAsync()
         {
             // Snippet: ListTopicSubscriptionsAsync(TopicName, string, int?, CallSettings)
@@ -957,7 +957,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTopicSnapshots</summary>
+        /// <summary>Snippet for ListTopicSnapshotsAsync</summary>
         public async Task ListTopicSnapshotsRequestObjectAsync()
         {
             // Snippet: ListTopicSnapshotsAsync(ListTopicSnapshotsRequest, CallSettings)
@@ -1050,7 +1050,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTopicSnapshots</summary>
+        /// <summary>Snippet for ListTopicSnapshotsAsync</summary>
         public async Task ListTopicSnapshotsAsync()
         {
             // Snippet: ListTopicSnapshotsAsync(string, string, int?, CallSettings)
@@ -1140,7 +1140,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTopicSnapshots</summary>
+        /// <summary>Snippet for ListTopicSnapshotsAsync</summary>
         public async Task ListTopicSnapshotsResourceNamesAsync()
         {
             // Snippet: ListTopicSnapshotsAsync(TopicName, string, int?, CallSettings)

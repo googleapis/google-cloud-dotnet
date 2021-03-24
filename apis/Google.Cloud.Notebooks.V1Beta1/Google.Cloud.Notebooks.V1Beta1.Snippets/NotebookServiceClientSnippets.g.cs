@@ -72,7 +72,7 @@ namespace Google.Cloud.Notebooks.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListInstances</summary>
+        /// <summary>Snippet for ListInstancesAsync</summary>
         public async Task ListInstancesRequestObjectAsync()
         {
             // Snippet: ListInstancesAsync(ListInstancesRequest, CallSettings)
@@ -984,7 +984,7 @@ namespace Google.Cloud.Notebooks.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListEnvironments</summary>
+        /// <summary>Snippet for ListEnvironmentsAsync</summary>
         public async Task ListEnvironmentsRequestObjectAsync()
         {
             // Snippet: ListEnvironmentsAsync(ListEnvironmentsRequest, CallSettings)

@@ -75,7 +75,7 @@ namespace Google.Cloud.ServiceManagement.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServices</summary>
+        /// <summary>Snippet for ListServicesAsync</summary>
         public async Task ListServicesRequestObjectAsync()
         {
             // Snippet: ListServicesAsync(ListServicesRequest, CallSettings)
@@ -169,7 +169,7 @@ namespace Google.Cloud.ServiceManagement.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServices</summary>
+        /// <summary>Snippet for ListServicesAsync</summary>
         public async Task ListServicesAsync()
         {
             // Snippet: ListServicesAsync(string, string, string, int?, CallSettings)
@@ -674,7 +674,7 @@ namespace Google.Cloud.ServiceManagement.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServiceConfigs</summary>
+        /// <summary>Snippet for ListServiceConfigsAsync</summary>
         public async Task ListServiceConfigsRequestObjectAsync()
         {
             // Snippet: ListServiceConfigsAsync(ListServiceConfigsRequest, CallSettings)
@@ -764,7 +764,7 @@ namespace Google.Cloud.ServiceManagement.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServiceConfigs</summary>
+        /// <summary>Snippet for ListServiceConfigsAsync</summary>
         public async Task ListServiceConfigsAsync()
         {
             // Snippet: ListServiceConfigsAsync(string, string, int?, CallSettings)
@@ -1122,7 +1122,7 @@ namespace Google.Cloud.ServiceManagement.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServiceRollouts</summary>
+        /// <summary>Snippet for ListServiceRolloutsAsync</summary>
         public async Task ListServiceRolloutsRequestObjectAsync()
         {
             // Snippet: ListServiceRolloutsAsync(ListServiceRolloutsRequest, CallSettings)
@@ -1217,7 +1217,7 @@ namespace Google.Cloud.ServiceManagement.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServiceRollouts</summary>
+        /// <summary>Snippet for ListServiceRolloutsAsync</summary>
         public async Task ListServiceRolloutsAsync()
         {
             // Snippet: ListServiceRolloutsAsync(string, string, string, int?, CallSettings)

@@ -157,7 +157,7 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTables</summary>
+        /// <summary>Snippet for ListTablesAsync</summary>
         public async Task ListTablesRequestObjectAsync()
         {
             // Snippet: ListTablesAsync(ListTablesRequest, CallSettings)
@@ -334,7 +334,7 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListWorkspaces</summary>
+        /// <summary>Snippet for ListWorkspacesAsync</summary>
         public async Task ListWorkspacesRequestObjectAsync()
         {
             // Snippet: ListWorkspacesAsync(ListWorkspacesRequest, CallSettings)
@@ -518,7 +518,7 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListRows</summary>
+        /// <summary>Snippet for ListRowsAsync</summary>
         public async Task ListRowsRequestObjectAsync()
         {
             // Snippet: ListRowsAsync(ListRowsRequest, CallSettings)
@@ -613,7 +613,7 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListRows</summary>
+        /// <summary>Snippet for ListRowsAsync</summary>
         public async Task ListRowsAsync()
         {
             // Snippet: ListRowsAsync(string, string, int?, CallSettings)

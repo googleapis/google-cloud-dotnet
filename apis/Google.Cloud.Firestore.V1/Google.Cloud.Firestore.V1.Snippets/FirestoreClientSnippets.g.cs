@@ -117,7 +117,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListDocuments</summary>
+        /// <summary>Snippet for ListDocumentsAsync</summary>
         public async Task ListDocumentsRequestObjectAsync()
         {
             // Snippet: ListDocumentsAsync(ListDocumentsRequest, CallSettings)
@@ -599,7 +599,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for PartitionQuery</summary>
+        /// <summary>Snippet for PartitionQueryAsync</summary>
         public async Task PartitionQueryRequestObjectAsync()
         {
             // Snippet: PartitionQueryAsync(PartitionQueryRequest, CallSettings)
@@ -794,7 +794,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCollectionIds</summary>
+        /// <summary>Snippet for ListCollectionIdsAsync</summary>
         public async Task ListCollectionIdsRequestObjectAsync()
         {
             // Snippet: ListCollectionIdsAsync(ListCollectionIdsRequest, CallSettings)
@@ -884,7 +884,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCollectionIds</summary>
+        /// <summary>Snippet for ListCollectionIdsAsync</summary>
         public async Task ListCollectionIdsAsync()
         {
             // Snippet: ListCollectionIdsAsync(string, string, int?, CallSettings)

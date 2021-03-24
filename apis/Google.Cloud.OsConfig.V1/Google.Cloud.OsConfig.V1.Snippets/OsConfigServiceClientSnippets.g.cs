@@ -242,7 +242,7 @@ namespace Google.Cloud.OsConfig.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPatchJobs</summary>
+        /// <summary>Snippet for ListPatchJobsAsync</summary>
         public async Task ListPatchJobsRequestObjectAsync()
         {
             // Snippet: ListPatchJobsAsync(ListPatchJobsRequest, CallSettings)
@@ -336,7 +336,7 @@ namespace Google.Cloud.OsConfig.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPatchJobs</summary>
+        /// <summary>Snippet for ListPatchJobsAsync</summary>
         public async Task ListPatchJobsAsync()
         {
             // Snippet: ListPatchJobsAsync(string, string, int?, CallSettings)
@@ -426,7 +426,7 @@ namespace Google.Cloud.OsConfig.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPatchJobs</summary>
+        /// <summary>Snippet for ListPatchJobsAsync</summary>
         public async Task ListPatchJobsResourceNamesAsync()
         {
             // Snippet: ListPatchJobsAsync(ProjectName, string, int?, CallSettings)
@@ -520,7 +520,7 @@ namespace Google.Cloud.OsConfig.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPatchJobInstanceDetails</summary>
+        /// <summary>Snippet for ListPatchJobInstanceDetailsAsync</summary>
         public async Task ListPatchJobInstanceDetailsRequestObjectAsync()
         {
             // Snippet: ListPatchJobInstanceDetailsAsync(ListPatchJobInstanceDetailsRequest, CallSettings)
@@ -614,7 +614,7 @@ namespace Google.Cloud.OsConfig.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPatchJobInstanceDetails</summary>
+        /// <summary>Snippet for ListPatchJobInstanceDetailsAsync</summary>
         public async Task ListPatchJobInstanceDetailsAsync()
         {
             // Snippet: ListPatchJobInstanceDetailsAsync(string, string, int?, CallSettings)
@@ -704,7 +704,7 @@ namespace Google.Cloud.OsConfig.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPatchJobInstanceDetails</summary>
+        /// <summary>Snippet for ListPatchJobInstanceDetailsAsync</summary>
         public async Task ListPatchJobInstanceDetailsResourceNamesAsync()
         {
             // Snippet: ListPatchJobInstanceDetailsAsync(PatchJobName, string, int?, CallSettings)
@@ -983,7 +983,7 @@ namespace Google.Cloud.OsConfig.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPatchDeployments</summary>
+        /// <summary>Snippet for ListPatchDeploymentsAsync</summary>
         public async Task ListPatchDeploymentsRequestObjectAsync()
         {
             // Snippet: ListPatchDeploymentsAsync(ListPatchDeploymentsRequest, CallSettings)
@@ -1076,7 +1076,7 @@ namespace Google.Cloud.OsConfig.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPatchDeployments</summary>
+        /// <summary>Snippet for ListPatchDeploymentsAsync</summary>
         public async Task ListPatchDeploymentsAsync()
         {
             // Snippet: ListPatchDeploymentsAsync(string, string, int?, CallSettings)
@@ -1166,7 +1166,7 @@ namespace Google.Cloud.OsConfig.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListPatchDeployments</summary>
+        /// <summary>Snippet for ListPatchDeploymentsAsync</summary>
         public async Task ListPatchDeploymentsResourceNamesAsync()
         {
             // Snippet: ListPatchDeploymentsAsync(ProjectName, string, int?, CallSettings)

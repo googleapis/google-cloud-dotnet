@@ -70,7 +70,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServices</summary>
+        /// <summary>Snippet for ListServicesAsync</summary>
         public async Task ListServicesRequestObjectAsync()
         {
             // Snippet: ListServicesAsync(ListServicesRequest, CallSettings)
@@ -158,7 +158,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListServices</summary>
+        /// <summary>Snippet for ListServicesAsync</summary>
         public async Task ListServicesAsync()
         {
             // Snippet: ListServicesAsync(string, int?, CallSettings)
@@ -252,7 +252,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSkus</summary>
+        /// <summary>Snippet for ListSkusAsync</summary>
         public async Task ListSkusRequestObjectAsync()
         {
             // Snippet: ListSkusAsync(ListSkusRequest, CallSettings)
@@ -348,7 +348,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSkus</summary>
+        /// <summary>Snippet for ListSkusAsync</summary>
         public async Task ListSkusAsync()
         {
             // Snippet: ListSkusAsync(string, string, int?, CallSettings)
@@ -438,7 +438,7 @@ namespace Google.Cloud.Billing.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSkus</summary>
+        /// <summary>Snippet for ListSkusAsync</summary>
         public async Task ListSkusResourceNamesAsync()
         {
             // Snippet: ListSkusAsync(ServiceName, string, int?, CallSettings)

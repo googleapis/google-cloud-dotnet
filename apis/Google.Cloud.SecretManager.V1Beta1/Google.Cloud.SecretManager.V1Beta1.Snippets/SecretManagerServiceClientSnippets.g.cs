@@ -75,7 +75,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSecrets</summary>
+        /// <summary>Snippet for ListSecretsAsync</summary>
         public async Task ListSecretsRequestObjectAsync()
         {
             // Snippet: ListSecretsAsync(ListSecretsRequest, CallSettings)
@@ -168,7 +168,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSecrets</summary>
+        /// <summary>Snippet for ListSecretsAsync</summary>
         public async Task ListSecretsAsync()
         {
             // Snippet: ListSecretsAsync(string, string, int?, CallSettings)
@@ -258,7 +258,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSecrets</summary>
+        /// <summary>Snippet for ListSecretsAsync</summary>
         public async Task ListSecretsResourceNamesAsync()
         {
             // Snippet: ListSecretsAsync(ProjectName, string, int?, CallSettings)
@@ -781,7 +781,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSecretVersions</summary>
+        /// <summary>Snippet for ListSecretVersionsAsync</summary>
         public async Task ListSecretVersionsRequestObjectAsync()
         {
             // Snippet: ListSecretVersionsAsync(ListSecretVersionsRequest, CallSettings)
@@ -874,7 +874,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSecretVersions</summary>
+        /// <summary>Snippet for ListSecretVersionsAsync</summary>
         public async Task ListSecretVersionsAsync()
         {
             // Snippet: ListSecretVersionsAsync(string, string, int?, CallSettings)
@@ -964,7 +964,7 @@ namespace Google.Cloud.SecretManager.V1Beta1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSecretVersions</summary>
+        /// <summary>Snippet for ListSecretVersionsAsync</summary>
         public async Task ListSecretVersionsResourceNamesAsync()
         {
             // Snippet: ListSecretVersionsAsync(SecretName, string, int?, CallSettings)

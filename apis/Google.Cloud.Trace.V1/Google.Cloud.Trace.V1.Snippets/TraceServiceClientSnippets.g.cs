@@ -78,7 +78,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTraces</summary>
+        /// <summary>Snippet for ListTracesAsync</summary>
         public async Task ListTracesRequestObjectAsync()
         {
             // Snippet: ListTracesAsync(ListTracesRequest, CallSettings)
@@ -176,7 +176,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListTraces</summary>
+        /// <summary>Snippet for ListTracesAsync</summary>
         public async Task ListTracesAsync()
         {
             // Snippet: ListTracesAsync(string, string, int?, CallSettings)

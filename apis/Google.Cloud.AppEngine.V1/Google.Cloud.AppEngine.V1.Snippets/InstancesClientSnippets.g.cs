@@ -71,7 +71,7 @@ namespace Google.Cloud.AppEngine.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListInstances</summary>
+        /// <summary>Snippet for ListInstancesAsync</summary>
         public async Task ListInstancesRequestObjectAsync()
         {
             // Snippet: ListInstancesAsync(ListInstancesRequest, CallSettings)

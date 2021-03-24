@@ -169,7 +169,7 @@ namespace Grafeas.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListOccurrences</summary>
+        /// <summary>Snippet for ListOccurrencesAsync</summary>
         public async Task ListOccurrencesRequestObjectAsync()
         {
             string endpoint = "";
@@ -266,7 +266,7 @@ namespace Grafeas.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListOccurrences</summary>
+        /// <summary>Snippet for ListOccurrencesAsync</summary>
         public async Task ListOccurrencesAsync()
         {
             string endpoint = "";
@@ -360,7 +360,7 @@ namespace Grafeas.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListOccurrences</summary>
+        /// <summary>Snippet for ListOccurrencesAsync</summary>
         public async Task ListOccurrencesResourceNamesAsync()
         {
             string endpoint = "";
@@ -1039,7 +1039,7 @@ namespace Grafeas.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotes</summary>
+        /// <summary>Snippet for ListNotesAsync</summary>
         public async Task ListNotesRequestObjectAsync()
         {
             string endpoint = "";
@@ -1136,7 +1136,7 @@ namespace Grafeas.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotes</summary>
+        /// <summary>Snippet for ListNotesAsync</summary>
         public async Task ListNotesAsync()
         {
             string endpoint = "";
@@ -1230,7 +1230,7 @@ namespace Grafeas.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNotes</summary>
+        /// <summary>Snippet for ListNotesAsync</summary>
         public async Task ListNotesResourceNamesAsync()
         {
             string endpoint = "";
@@ -1729,7 +1729,7 @@ namespace Grafeas.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNoteOccurrences</summary>
+        /// <summary>Snippet for ListNoteOccurrencesAsync</summary>
         public async Task ListNoteOccurrencesRequestObjectAsync()
         {
             string endpoint = "";
@@ -1826,7 +1826,7 @@ namespace Grafeas.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNoteOccurrences</summary>
+        /// <summary>Snippet for ListNoteOccurrencesAsync</summary>
         public async Task ListNoteOccurrencesAsync()
         {
             string endpoint = "";
@@ -1920,7 +1920,7 @@ namespace Grafeas.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListNoteOccurrences</summary>
+        /// <summary>Snippet for ListNoteOccurrencesAsync</summary>
         public async Task ListNoteOccurrencesResourceNamesAsync()
         {
             string endpoint = "";

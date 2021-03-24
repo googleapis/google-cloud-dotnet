@@ -77,7 +77,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListKeyRings</summary>
+        /// <summary>Snippet for ListKeyRingsAsync</summary>
         public async Task ListKeyRingsRequestObjectAsync()
         {
             // Snippet: ListKeyRingsAsync(ListKeyRingsRequest, CallSettings)
@@ -172,7 +172,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListKeyRings</summary>
+        /// <summary>Snippet for ListKeyRingsAsync</summary>
         public async Task ListKeyRingsAsync()
         {
             // Snippet: ListKeyRingsAsync(string, string, int?, CallSettings)
@@ -262,7 +262,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListKeyRings</summary>
+        /// <summary>Snippet for ListKeyRingsAsync</summary>
         public async Task ListKeyRingsResourceNamesAsync()
         {
             // Snippet: ListKeyRingsAsync(LocationName, string, int?, CallSettings)
@@ -358,7 +358,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCryptoKeys</summary>
+        /// <summary>Snippet for ListCryptoKeysAsync</summary>
         public async Task ListCryptoKeysRequestObjectAsync()
         {
             // Snippet: ListCryptoKeysAsync(ListCryptoKeysRequest, CallSettings)
@@ -454,7 +454,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCryptoKeys</summary>
+        /// <summary>Snippet for ListCryptoKeysAsync</summary>
         public async Task ListCryptoKeysAsync()
         {
             // Snippet: ListCryptoKeysAsync(string, string, int?, CallSettings)
@@ -544,7 +544,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCryptoKeys</summary>
+        /// <summary>Snippet for ListCryptoKeysAsync</summary>
         public async Task ListCryptoKeysResourceNamesAsync()
         {
             // Snippet: ListCryptoKeysAsync(KeyRingName, string, int?, CallSettings)
@@ -640,7 +640,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCryptoKeyVersions</summary>
+        /// <summary>Snippet for ListCryptoKeyVersionsAsync</summary>
         public async Task ListCryptoKeyVersionsRequestObjectAsync()
         {
             // Snippet: ListCryptoKeyVersionsAsync(ListCryptoKeyVersionsRequest, CallSettings)
@@ -736,7 +736,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCryptoKeyVersions</summary>
+        /// <summary>Snippet for ListCryptoKeyVersionsAsync</summary>
         public async Task ListCryptoKeyVersionsAsync()
         {
             // Snippet: ListCryptoKeyVersionsAsync(string, string, int?, CallSettings)
@@ -826,7 +826,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListCryptoKeyVersions</summary>
+        /// <summary>Snippet for ListCryptoKeyVersionsAsync</summary>
         public async Task ListCryptoKeyVersionsResourceNamesAsync()
         {
             // Snippet: ListCryptoKeyVersionsAsync(CryptoKeyName, string, int?, CallSettings)
@@ -921,7 +921,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListImportJobs</summary>
+        /// <summary>Snippet for ListImportJobsAsync</summary>
         public async Task ListImportJobsRequestObjectAsync()
         {
             // Snippet: ListImportJobsAsync(ListImportJobsRequest, CallSettings)
@@ -1016,7 +1016,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListImportJobs</summary>
+        /// <summary>Snippet for ListImportJobsAsync</summary>
         public async Task ListImportJobsAsync()
         {
             // Snippet: ListImportJobsAsync(string, string, int?, CallSettings)
@@ -1106,7 +1106,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListImportJobs</summary>
+        /// <summary>Snippet for ListImportJobsAsync</summary>
         public async Task ListImportJobsResourceNamesAsync()
         {
             // Snippet: ListImportJobsAsync(KeyRingName, string, int?, CallSettings)

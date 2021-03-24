@@ -311,7 +311,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for SearchAgents</summary>
+        /// <summary>Snippet for SearchAgentsAsync</summary>
         public async Task SearchAgentsRequestObjectAsync()
         {
             // Snippet: SearchAgentsAsync(SearchAgentsRequest, CallSettings)
@@ -404,7 +404,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for SearchAgents</summary>
+        /// <summary>Snippet for SearchAgentsAsync</summary>
         public async Task SearchAgentsAsync()
         {
             // Snippet: SearchAgentsAsync(string, string, int?, CallSettings)
@@ -494,7 +494,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for SearchAgents</summary>
+        /// <summary>Snippet for SearchAgentsAsync</summary>
         public async Task SearchAgentsResourceNamesAsync()
         {
             // Snippet: SearchAgentsAsync(ProjectName, string, int?, CallSettings)
