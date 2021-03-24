@@ -349,6 +349,23 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.ApiGateway.V1"
     },
     {
+      "ServiceDirectory": "google/cloud/apigeeconnect/v1",
+      "Name": "apigeeconnect.googleapis.com",
+      "Title": "Apigee Connect API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/apigeeconnect/v1/apigeeconnect_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.apigeeconnect.v1",
+      "PackageFromProtos": "google.cloud.apigeeconnect.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Apigeeconnect.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/asset/v1",
       "Name": "cloudasset.googleapis.com",
       "Title": "Cloud Asset API",
