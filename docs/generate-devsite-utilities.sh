@@ -10,8 +10,17 @@ export VSINSTALLDIR=
 if [[ -z "$1" || -z "$2" ]]
 then
   echo 'Please specify utility and version'
-  echo 'Known types: google-apis protobuf common-proto grpc gax'
+  echo 'Known types: google-apis protobuf common-proto grpc gax guides'
   exit 1
+fi
+
+# We use this script as a simple bootstrapper for uploading
+# a Guides package (to avoid near-duplicate Kokoro scripts and configs).
+# Just delegate to the dedicated Guides script, and exit.
+if [[ "$1" == "guides" ]]
+then
+  ./generate-devsite-guides.sh $2 $3
+  exit 0
 fi
 
 if [[ "$3" != "" ]]
