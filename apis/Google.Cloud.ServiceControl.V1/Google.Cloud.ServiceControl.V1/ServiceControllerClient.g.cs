@@ -139,7 +139,7 @@ namespace Google.Cloud.ServiceControl.V1
 
     /// <summary>ServiceController client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// [Google Service Control API](/service-control/overview)
+    /// [Google Service Control API](https://cloud.google.com/service-control/overview)
     /// 
     /// Lets clients check and report operations against a [managed
     /// service](https://cloud.google.com/service-management/reference/rpc/google.api/servicemanagement.v1#google.api.servicemanagement.v1.ManagedService).
@@ -366,7 +366,7 @@ namespace Google.Cloud.ServiceControl.V1
 
     /// <summary>ServiceController client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// [Google Service Control API](/service-control/overview)
+    /// [Google Service Control API](https://cloud.google.com/service-control/overview)
     /// 
     /// Lets clients check and report operations against a [managed
     /// service](https://cloud.google.com/service-management/reference/rpc/google.api/servicemanagement.v1#google.api.servicemanagement.v1.ManagedService).
