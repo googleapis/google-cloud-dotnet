@@ -114,7 +114,12 @@ install_microgenerator() {
       exit 1
   esac
   
-  if [[ "$SYNTHTOOL_CACHE" != "" ]]
+  # If the CSHARP_GENERATOR_DIR env variable is set
+  # we use that as the generator root dir.
+  if [[ "$CSHARP_GENERATOR_DIR" != "" ]]
+  then
+    declare -r GENERATOR_ROOT=$CSHARP_GENERATOR_DIR
+  elif [[ "$SYNTHTOOL_CACHE" != "" ]]
   then
     declare -r GENERATOR_ROOT=$SYNTHTOOL_CACHE/gapic-generator-csharp
   else
@@ -127,8 +132,11 @@ install_microgenerator() {
   then
     echo "Skipping microgenerator fetch/build: already built, and running on Kokoro"
   else
+    if [[ "$CSHARP_GENERATOR_DIR" != "" ]]
+    then
+      echo "Skipping microgenerator fetch: an existing directory for the generator has been specified"
     # TODO: Use a specific tag, or even a NuGet package eventually
-    if [ -d $GENERATOR_ROOT ]
+    elif [ -d $GENERATOR_ROOT ]
     then
       git -C $GENERATOR_ROOT pull -q
     else
