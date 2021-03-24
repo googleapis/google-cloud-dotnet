@@ -14,10 +14,11 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Api.Gax.Testing;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Tests;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Cloud.Spanner.V1.Tests;
 using Grpc.Core;
 using Moq;
 using System;
@@ -25,7 +26,6 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
-using Google.Api.Gax.Testing;
 
 namespace Google.Cloud.Spanner.Data.Tests
 {

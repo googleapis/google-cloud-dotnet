@@ -235,8 +235,7 @@ namespace Google.Cloud.Spanner.Data
         Task<int> ISpannerTransaction.ExecuteMutationsAsync(
             List<Mutation> mutations,
             CancellationToken cancellationToken,
-            int timeoutSeconds // ignored
-            )
+            int timeoutSeconds /* ignored */)
         {
             CheckCompatibleMode(TransactionMode.ReadWrite);
             return ExecuteHelper.WithErrorTranslationAndProfiling(() =>
