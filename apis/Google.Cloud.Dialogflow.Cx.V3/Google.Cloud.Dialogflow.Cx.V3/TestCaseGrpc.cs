@@ -48,6 +48,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ExportTestCasesRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ExportTestCasesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.ExportTestCasesRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListTestCaseResultsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ListTestCaseResultsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.ListTestCaseResultsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListTestCaseResultsResponse> __Marshaller_google_cloud_dialogflow_cx_v3_ListTestCaseResultsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.ListTestCaseResultsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.GetTestCaseResultRequest> __Marshaller_google_cloud_dialogflow_cx_v3_GetTestCaseResultRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.GetTestCaseResultRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.TestCaseResult> __Marshaller_google_cloud_dialogflow_cx_v3_TestCaseResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.TestCaseResult.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListTestCasesRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListTestCasesResponse> __Method_ListTestCases = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListTestCasesRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListTestCasesResponse>(
         grpc::MethodType.Unary,
@@ -125,6 +127,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         "ListTestCaseResults",
         __Marshaller_google_cloud_dialogflow_cx_v3_ListTestCaseResultsRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_ListTestCaseResultsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.GetTestCaseResultRequest, global::Google.Cloud.Dialogflow.Cx.V3.TestCaseResult> __Method_GetTestCaseResult = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.GetTestCaseResultRequest, global::Google.Cloud.Dialogflow.Cx.V3.TestCaseResult>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTestCaseResult",
+        __Marshaller_google_cloud_dialogflow_cx_v3_GetTestCaseResultRequest,
+        __Marshaller_google_cloud_dialogflow_cx_v3_TestCaseResult);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -256,6 +265,17 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.ListTestCaseResultsResponse> ListTestCaseResults(global::Google.Cloud.Dialogflow.Cx.V3.ListTestCaseResultsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a test case result.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.TestCaseResult> GetTestCaseResult(global::Google.Cloud.Dialogflow.Cx.V3.GetTestCaseResultRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -781,6 +801,50 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTestCaseResults, null, options, request);
       }
+      /// <summary>
+      /// Gets a test case result.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.Cx.V3.TestCaseResult GetTestCaseResult(global::Google.Cloud.Dialogflow.Cx.V3.GetTestCaseResultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTestCaseResult(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a test case result.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.Cx.V3.TestCaseResult GetTestCaseResult(global::Google.Cloud.Dialogflow.Cx.V3.GetTestCaseResultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTestCaseResult, null, options, request);
+      }
+      /// <summary>
+      /// Gets a test case result.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.TestCaseResult> GetTestCaseResultAsync(global::Google.Cloud.Dialogflow.Cx.V3.GetTestCaseResultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTestCaseResultAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a test case result.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.TestCaseResult> GetTestCaseResultAsync(global::Google.Cloud.Dialogflow.Cx.V3.GetTestCaseResultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTestCaseResult, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override TestCasesClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -803,7 +867,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           .AddMethod(__Method_CalculateCoverage, serviceImpl.CalculateCoverage)
           .AddMethod(__Method_ImportTestCases, serviceImpl.ImportTestCases)
           .AddMethod(__Method_ExportTestCases, serviceImpl.ExportTestCases)
-          .AddMethod(__Method_ListTestCaseResults, serviceImpl.ListTestCaseResults).Build();
+          .AddMethod(__Method_ListTestCaseResults, serviceImpl.ListTestCaseResults)
+          .AddMethod(__Method_GetTestCaseResult, serviceImpl.GetTestCaseResult).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -823,6 +888,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       serviceBinder.AddMethod(__Method_ImportTestCases, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.ImportTestCasesRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportTestCases));
       serviceBinder.AddMethod(__Method_ExportTestCases, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.ExportTestCasesRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportTestCases));
       serviceBinder.AddMethod(__Method_ListTestCaseResults, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.ListTestCaseResultsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListTestCaseResultsResponse>(serviceImpl.ListTestCaseResults));
+      serviceBinder.AddMethod(__Method_GetTestCaseResult, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.GetTestCaseResultRequest, global::Google.Cloud.Dialogflow.Cx.V3.TestCaseResult>(serviceImpl.GetTestCaseResult));
     }
 
   }

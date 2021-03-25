@@ -1235,5 +1235,92 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for GetTestCaseResult</summary>
+        public void GetTestCaseResultRequestObject()
+        {
+            // Snippet: GetTestCaseResult(GetTestCaseResultRequest, CallSettings)
+            // Create client
+            TestCasesClient testCasesClient = TestCasesClient.Create();
+            // Initialize request argument(s)
+            GetTestCaseResultRequest request = new GetTestCaseResultRequest
+            {
+                TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
+            };
+            // Make the request
+            TestCaseResult response = testCasesClient.GetTestCaseResult(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTestCaseResultAsync</summary>
+        public async Task GetTestCaseResultRequestObjectAsync()
+        {
+            // Snippet: GetTestCaseResultAsync(GetTestCaseResultRequest, CallSettings)
+            // Additional: GetTestCaseResultAsync(GetTestCaseResultRequest, CancellationToken)
+            // Create client
+            TestCasesClient testCasesClient = await TestCasesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetTestCaseResultRequest request = new GetTestCaseResultRequest
+            {
+                TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
+            };
+            // Make the request
+            TestCaseResult response = await testCasesClient.GetTestCaseResultAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTestCaseResult</summary>
+        public void GetTestCaseResult()
+        {
+            // Snippet: GetTestCaseResult(string, CallSettings)
+            // Create client
+            TestCasesClient testCasesClient = TestCasesClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/agents/[AGENT]/testCases/[TEST_CASE]/results/[RESULT]";
+            // Make the request
+            TestCaseResult response = testCasesClient.GetTestCaseResult(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTestCaseResultAsync</summary>
+        public async Task GetTestCaseResultAsync()
+        {
+            // Snippet: GetTestCaseResultAsync(string, CallSettings)
+            // Additional: GetTestCaseResultAsync(string, CancellationToken)
+            // Create client
+            TestCasesClient testCasesClient = await TestCasesClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/agents/[AGENT]/testCases/[TEST_CASE]/results/[RESULT]";
+            // Make the request
+            TestCaseResult response = await testCasesClient.GetTestCaseResultAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTestCaseResult</summary>
+        public void GetTestCaseResultResourceNames()
+        {
+            // Snippet: GetTestCaseResult(TestCaseResultName, CallSettings)
+            // Create client
+            TestCasesClient testCasesClient = TestCasesClient.Create();
+            // Initialize request argument(s)
+            TestCaseResultName name = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]");
+            // Make the request
+            TestCaseResult response = testCasesClient.GetTestCaseResult(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTestCaseResultAsync</summary>
+        public async Task GetTestCaseResultResourceNamesAsync()
+        {
+            // Snippet: GetTestCaseResultAsync(TestCaseResultName, CallSettings)
+            // Additional: GetTestCaseResultAsync(TestCaseResultName, CancellationToken)
+            // Create client
+            TestCasesClient testCasesClient = await TestCasesClient.CreateAsync();
+            // Initialize request argument(s)
+            TestCaseResultName name = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]");
+            // Make the request
+            TestCaseResult response = await testCasesClient.GetTestCaseResultAsync(name);
+            // End snippet
+        }
     }
 }

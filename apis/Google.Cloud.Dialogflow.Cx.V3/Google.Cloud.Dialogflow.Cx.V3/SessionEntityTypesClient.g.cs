@@ -560,9 +560,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a session entity type.
-        /// 
-        /// If the specified session entity type already exists, overrides the
-        /// session entity type.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -572,9 +569,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a session entity type.
-        /// 
-        /// If the specified session entity type already exists, overrides the
-        /// session entity type.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -584,9 +578,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a session entity type.
-        /// 
-        /// If the specified session entity type already exists, overrides the
-        /// session entity type.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -596,9 +587,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a session entity type.
-        /// 
-        /// If the specified session entity type already exists, overrides the
-        /// session entity type.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
@@ -622,9 +610,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a session entity type.
-        /// 
-        /// If the specified session entity type already exists, overrides the
-        /// session entity type.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
@@ -648,9 +633,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a session entity type.
-        /// 
-        /// If the specified session entity type already exists, overrides the
-        /// session entity type.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
@@ -670,9 +652,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a session entity type.
-        /// 
-        /// If the specified session entity type already exists, overrides the
-        /// session entity type.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
@@ -696,9 +675,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a session entity type.
-        /// 
-        /// If the specified session entity type already exists, overrides the
-        /// session entity type.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
@@ -722,9 +698,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a session entity type.
-        /// 
-        /// If the specified session entity type already exists, overrides the
-        /// session entity type.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
@@ -1100,9 +1073,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a session entity type.
-        /// 
-        /// If the specified session entity type already exists, overrides the
-        /// session entity type.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1115,9 +1085,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a session entity type.
-        /// 
-        /// If the specified session entity type already exists, overrides the
-        /// session entity type.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

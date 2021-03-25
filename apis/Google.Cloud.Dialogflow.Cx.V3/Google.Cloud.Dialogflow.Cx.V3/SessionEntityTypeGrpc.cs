@@ -108,9 +108,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
       /// <summary>
       /// Creates a session entity type.
-      ///
-      /// If the specified session entity type already exists, overrides the
-      /// session entity type.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -257,9 +254,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Creates a session entity type.
-      ///
-      /// If the specified session entity type already exists, overrides the
-      /// session entity type.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -272,9 +266,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Creates a session entity type.
-      ///
-      /// If the specified session entity type already exists, overrides the
-      /// session entity type.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -285,9 +276,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Creates a session entity type.
-      ///
-      /// If the specified session entity type already exists, overrides the
-      /// session entity type.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -300,9 +288,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Creates a session entity type.
-      ///
-      /// If the specified session entity type already exists, overrides the
-      /// session entity type.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

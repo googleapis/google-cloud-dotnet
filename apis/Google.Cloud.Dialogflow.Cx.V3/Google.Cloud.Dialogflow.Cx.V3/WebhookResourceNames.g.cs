@@ -580,6 +580,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
     }
 
+    public partial class WebhookRequest
+    {
+        /// <summary>
+        /// <see cref="IntentName"/>-typed view over the <see cref="TriggerIntent"/> resource name property.
+        /// </summary>
+        public IntentName TriggerIntentAsIntentName
+        {
+            get => string.IsNullOrEmpty(TriggerIntent) ? null : IntentName.Parse(TriggerIntent, allowUnparsed: true);
+            set => TriggerIntent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class WebhookResponse
     {
         /// <summary>

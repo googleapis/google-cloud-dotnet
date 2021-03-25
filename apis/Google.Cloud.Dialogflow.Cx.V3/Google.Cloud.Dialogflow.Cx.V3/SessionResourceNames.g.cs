@@ -362,6 +362,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
     }
 
+    public partial class QueryResult
+    {
+        /// <summary>
+        /// <see cref="IntentName"/>-typed view over the <see cref="TriggerIntent"/> resource name property.
+        /// </summary>
+        public IntentName TriggerIntentAsIntentName
+        {
+            get => string.IsNullOrEmpty(TriggerIntent) ? null : IntentName.Parse(TriggerIntent, allowUnparsed: true);
+            set => TriggerIntent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class IntentInput
     {
         /// <summary><see cref="IntentName"/>-typed view over the <see cref="Intent"/> resource name property.</summary>
@@ -381,6 +393,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             get => string.IsNullOrEmpty(Session) ? null : SessionName.Parse(Session, allowUnparsed: true);
             set => Session = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class MatchIntentResponse
+    {
+        /// <summary>
+        /// <see cref="IntentName"/>-typed view over the <see cref="TriggerIntent"/> resource name property.
+        /// </summary>
+        public IntentName TriggerIntentAsIntentName
+        {
+            get => string.IsNullOrEmpty(TriggerIntent) ? null : IntentName.Parse(TriggerIntent, allowUnparsed: true);
+            set => TriggerIntent = value?.ToString() ?? "";
         }
     }
 }
