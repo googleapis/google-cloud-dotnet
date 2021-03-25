@@ -61,6 +61,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             ExportTestCasesSettings = existing.ExportTestCasesSettings;
             ExportTestCasesOperationsSettings = existing.ExportTestCasesOperationsSettings.Clone();
             ListTestCaseResultsSettings = existing.ListTestCaseResultsSettings;
+            GetTestCaseResultSettings = existing.GetTestCaseResultSettings;
             OnCopy(existing);
         }
 
@@ -302,6 +303,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListTestCaseResultsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TestCasesClient.GetTestCaseResult</c> and <c>TestCasesClient.GetTestCaseResultAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetTestCaseResultSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="TestCasesSettings"/> object.</returns>
@@ -1384,6 +1400,123 @@ namespace Google.Cloud.Dialogflow.Cx.V3
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Gets a test case result.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TestCaseResult GetTestCaseResult(GetTestCaseResultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a test case result.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestCaseResult> GetTestCaseResultAsync(GetTestCaseResultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a test case result.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestCaseResult> GetTestCaseResultAsync(GetTestCaseResultRequest request, st::CancellationToken cancellationToken) =>
+            GetTestCaseResultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a test case result.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the testcase.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
+        /// ID&amp;gt;/testCases/&amp;lt;TestCase ID&amp;gt;/results/&amp;lt;TestCaseResult ID&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TestCaseResult GetTestCaseResult(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTestCaseResult(new GetTestCaseResultRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a test case result.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the testcase.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
+        /// ID&amp;gt;/testCases/&amp;lt;TestCase ID&amp;gt;/results/&amp;lt;TestCaseResult ID&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestCaseResult> GetTestCaseResultAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTestCaseResultAsync(new GetTestCaseResultRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a test case result.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the testcase.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
+        /// ID&amp;gt;/testCases/&amp;lt;TestCase ID&amp;gt;/results/&amp;lt;TestCaseResult ID&amp;gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestCaseResult> GetTestCaseResultAsync(string name, st::CancellationToken cancellationToken) =>
+            GetTestCaseResultAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a test case result.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the testcase.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
+        /// ID&amp;gt;/testCases/&amp;lt;TestCase ID&amp;gt;/results/&amp;lt;TestCaseResult ID&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TestCaseResult GetTestCaseResult(TestCaseResultName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTestCaseResult(new GetTestCaseResultRequest
+            {
+                TestCaseResultName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a test case result.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the testcase.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
+        /// ID&amp;gt;/testCases/&amp;lt;TestCase ID&amp;gt;/results/&amp;lt;TestCaseResult ID&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestCaseResult> GetTestCaseResultAsync(TestCaseResultName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTestCaseResultAsync(new GetTestCaseResultRequest
+            {
+                TestCaseResultName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a test case result.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the testcase.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
+        /// ID&amp;gt;/testCases/&amp;lt;TestCase ID&amp;gt;/results/&amp;lt;TestCaseResult ID&amp;gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestCaseResult> GetTestCaseResultAsync(TestCaseResultName name, st::CancellationToken cancellationToken) =>
+            GetTestCaseResultAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>TestCases client wrapper implementation, for convenient use.</summary>
@@ -1414,6 +1547,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         private readonly gaxgrpc::ApiCall<ExportTestCasesRequest, lro::Operation> _callExportTestCases;
 
         private readonly gaxgrpc::ApiCall<ListTestCaseResultsRequest, ListTestCaseResultsResponse> _callListTestCaseResults;
+
+        private readonly gaxgrpc::ApiCall<GetTestCaseResultRequest, TestCaseResult> _callGetTestCaseResult;
 
         /// <summary>
         /// Constructs a client wrapper for the TestCases service, with the specified gRPC client and settings.
@@ -1462,6 +1597,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             _callListTestCaseResults = clientHelper.BuildApiCall<ListTestCaseResultsRequest, ListTestCaseResultsResponse>(grpcClient.ListTestCaseResultsAsync, grpcClient.ListTestCaseResults, effectiveSettings.ListTestCaseResultsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTestCaseResults);
             Modify_ListTestCaseResultsApiCall(ref _callListTestCaseResults);
+            _callGetTestCaseResult = clientHelper.BuildApiCall<GetTestCaseResultRequest, TestCaseResult>(grpcClient.GetTestCaseResultAsync, grpcClient.GetTestCaseResult, effectiveSettings.GetTestCaseResultSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetTestCaseResult);
+            Modify_GetTestCaseResultApiCall(ref _callGetTestCaseResult);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1489,6 +1627,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         partial void Modify_ListTestCaseResultsApiCall(ref gaxgrpc::ApiCall<ListTestCaseResultsRequest, ListTestCaseResultsResponse> call);
 
+        partial void Modify_GetTestCaseResultApiCall(ref gaxgrpc::ApiCall<GetTestCaseResultRequest, TestCaseResult> call);
+
         partial void OnConstruction(TestCases.TestCasesClient grpcClient, TestCasesSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC TestCases client</summary>
@@ -1515,6 +1655,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         partial void Modify_ExportTestCasesRequest(ref ExportTestCasesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListTestCaseResultsRequest(ref ListTestCaseResultsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetTestCaseResultRequest(ref GetTestCaseResultRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Fetches a list of test cases for a given agent.
@@ -1796,6 +1938,30 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Modify_ListTestCaseResultsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTestCaseResultsRequest, ListTestCaseResultsResponse, TestCaseResult>(_callListTestCaseResults, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a test case result.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TestCaseResult GetTestCaseResult(GetTestCaseResultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTestCaseResultRequest(ref request, ref callSettings);
+            return _callGetTestCaseResult.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a test case result.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TestCaseResult> GetTestCaseResultAsync(GetTestCaseResultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTestCaseResultRequest(ref request, ref callSettings);
+            return _callGetTestCaseResult.Async(request, callSettings);
         }
     }
 

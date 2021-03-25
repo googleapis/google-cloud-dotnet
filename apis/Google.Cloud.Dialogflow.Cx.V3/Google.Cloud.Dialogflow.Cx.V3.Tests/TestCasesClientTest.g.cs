@@ -690,5 +690,173 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void GetTestCaseResultRequestObject()
+        {
+            moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetTestCaseResultRequest request = new GetTestCaseResultRequest
+            {
+                TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
+            };
+            TestCaseResult expectedResponse = new TestCaseResult
+            {
+                TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
+                EnvironmentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+                ConversationTurns =
+                {
+                    new ConversationTurn(),
+                },
+                TestResult = TestResult.Failed,
+                TestTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetTestCaseResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCaseResult response = client.GetTestCaseResult(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetTestCaseResultRequestObjectAsync()
+        {
+            moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetTestCaseResultRequest request = new GetTestCaseResultRequest
+            {
+                TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
+            };
+            TestCaseResult expectedResponse = new TestCaseResult
+            {
+                TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
+                EnvironmentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+                ConversationTurns =
+                {
+                    new ConversationTurn(),
+                },
+                TestResult = TestResult.Failed,
+                TestTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetTestCaseResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestCaseResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCaseResult responseCallSettings = await client.GetTestCaseResultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TestCaseResult responseCancellationToken = await client.GetTestCaseResultAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetTestCaseResult()
+        {
+            moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetTestCaseResultRequest request = new GetTestCaseResultRequest
+            {
+                TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
+            };
+            TestCaseResult expectedResponse = new TestCaseResult
+            {
+                TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
+                EnvironmentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+                ConversationTurns =
+                {
+                    new ConversationTurn(),
+                },
+                TestResult = TestResult.Failed,
+                TestTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetTestCaseResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCaseResult response = client.GetTestCaseResult(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetTestCaseResultAsync()
+        {
+            moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetTestCaseResultRequest request = new GetTestCaseResultRequest
+            {
+                TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
+            };
+            TestCaseResult expectedResponse = new TestCaseResult
+            {
+                TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
+                EnvironmentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+                ConversationTurns =
+                {
+                    new ConversationTurn(),
+                },
+                TestResult = TestResult.Failed,
+                TestTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetTestCaseResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestCaseResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCaseResult responseCallSettings = await client.GetTestCaseResultAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TestCaseResult responseCancellationToken = await client.GetTestCaseResultAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetTestCaseResultResourceNames()
+        {
+            moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetTestCaseResultRequest request = new GetTestCaseResultRequest
+            {
+                TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
+            };
+            TestCaseResult expectedResponse = new TestCaseResult
+            {
+                TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
+                EnvironmentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+                ConversationTurns =
+                {
+                    new ConversationTurn(),
+                },
+                TestResult = TestResult.Failed,
+                TestTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetTestCaseResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCaseResult response = client.GetTestCaseResult(request.TestCaseResultName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetTestCaseResultResourceNamesAsync()
+        {
+            moq::Mock<TestCases.TestCasesClient> mockGrpcClient = new moq::Mock<TestCases.TestCasesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetTestCaseResultRequest request = new GetTestCaseResultRequest
+            {
+                TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
+            };
+            TestCaseResult expectedResponse = new TestCaseResult
+            {
+                TestCaseResultName = TestCaseResultName.FromProjectLocationAgentTestCaseResult("[PROJECT]", "[LOCATION]", "[AGENT]", "[TEST_CASE]", "[RESULT]"),
+                EnvironmentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+                ConversationTurns =
+                {
+                    new ConversationTurn(),
+                },
+                TestResult = TestResult.Failed,
+                TestTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetTestCaseResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TestCaseResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
+            TestCaseResult responseCallSettings = await client.GetTestCaseResultAsync(request.TestCaseResultName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TestCaseResult responseCancellationToken = await client.GetTestCaseResultAsync(request.TestCaseResultName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

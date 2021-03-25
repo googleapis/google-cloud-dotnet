@@ -92,7 +92,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             MatchIntentResponse expectedResponse = new MatchIntentResponse
             {
                 Text = "textec51b21c",
-                TriggerIntent = "trigger_intent876a0a41",
+                TriggerIntentAsIntentName = IntentName.FromProjectLocationAgentIntent("[PROJECT]", "[LOCATION]", "[AGENT]", "[INTENT]"),
                 Transcript = "transcript20c5b28b",
                 Matches = { new Match(), },
                 CurrentPage = new Page(),
@@ -118,7 +118,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             MatchIntentResponse expectedResponse = new MatchIntentResponse
             {
                 Text = "textec51b21c",
-                TriggerIntent = "trigger_intent876a0a41",
+                TriggerIntentAsIntentName = IntentName.FromProjectLocationAgentIntent("[PROJECT]", "[LOCATION]", "[AGENT]", "[INTENT]"),
                 Transcript = "transcript20c5b28b",
                 Matches = { new Match(), },
                 CurrentPage = new Page(),

@@ -762,4 +762,16 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetTestCaseResultRequest
+    {
+        /// <summary>
+        /// <see cref="gcdcv::TestCaseResultName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdcv::TestCaseResultName TestCaseResultName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdcv::TestCaseResultName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }
