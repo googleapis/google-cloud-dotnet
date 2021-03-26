@@ -282,12 +282,13 @@ namespace Google.Cloud.Metastore.V1Beta {
             "Y3RzLyovbG9jYXRpb25zLyovc2VydmljZXMvKi9iYWNrdXBzLyp92kEEbmFt",
             "ZcpBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0",
             "YRpMykEYbWV0YXN0b3JlLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cu",
-            "Z29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULOAQohY29tLmdv",
+            "Z29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULuAQohY29tLmdv",
             "b2dsZS5jbG91ZC5tZXRhc3RvcmUudjFiZXRhQg5NZXRhc3RvcmVQcm90b1AB",
             "WkZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
-            "L21ldGFzdG9yZS92MWJldGE7bWV0YXN0b3Jl6kFOCh5jb21wdXRlLmdvb2ds",
-            "ZWFwaXMuY29tL05ldHdvcmsSLHByb2plY3RzL3twcm9qZWN0fS9nbG9iYWwv",
-            "bmV0d29ya3Mve25ldHdvcmt9YgZwcm90bzM="));
+            "L21ldGFzdG9yZS92MWJldGE7bWV0YXN0b3JlygIdR29vZ2xlXENsb3VkXE1l",
+            "dGFzdG9yZVxWMWJldGHqQU4KHmNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vTmV0",
+            "d29yaxIscHJvamVjdHMve3Byb2plY3R9L2dsb2JhbC9uZXR3b3Jrcy97bmV0",
+            "d29ya31iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -411,7 +412,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Immutable. The relative resource name of the metastore service, of the form:
+    /// Immutable. The relative resource name of the metastore service, of the
+    /// form:
     ///
     /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
     /// </summary>
@@ -468,8 +470,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int NetworkFieldNumber = 7;
     private string network_ = "";
     /// <summary>
-    /// Immutable. The relative resource name of the VPC network on which the instance can be
-    /// accessed. It is specified in the following form:
+    /// Immutable. The relative resource name of the VPC network on which the
+    /// instance can be accessed. It is specified in the following form:
     ///
     /// `projects/{project_number}/global/networks/{network_id}`.
     /// </summary>
@@ -527,8 +529,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int StateMessageFieldNumber = 11;
     private string stateMessage_ = "";
     /// <summary>
-    /// Output only. Additional information about the current state of the metastore service, if
-    /// available.
+    /// Output only. Additional information about the current state of the
+    /// metastore service, if available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string StateMessage {
@@ -542,8 +544,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int ArtifactGcsUriFieldNumber = 12;
     private string artifactGcsUri_ = "";
     /// <summary>
-    /// Output only. A Cloud Storage URI (starting with `gs://`) that specifies where artifacts
-    /// related to the metastore service are stored.
+    /// Output only. A Cloud Storage URI (starting with `gs://`) that specifies
+    /// where artifacts related to the metastore service are stored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ArtifactGcsUri {
@@ -601,7 +603,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int UidFieldNumber = 16;
     private string uid_ = "";
     /// <summary>
-    /// Output only. The globally unique resource identifier of the metastore service.
+    /// Output only. The globally unique resource identifier of the metastore
+    /// service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Uid {
@@ -3394,7 +3397,8 @@ namespace Google.Cloud.Metastore.V1Beta {
         public const int TypeFieldNumber = 4;
         private global::Google.Cloud.Metastore.V1Beta.DatabaseDumpSpec.Types.Type type_ = global::Google.Cloud.Metastore.V1Beta.DatabaseDumpSpec.Types.Type.Unspecified;
         /// <summary>
-        /// Optional. The type of the database dump. If unspecified, defaults to `MYSQL`.
+        /// Optional. The type of the database dump. If unspecified, defaults to
+        /// `MYSQL`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Metastore.V1Beta.DatabaseDumpSpec.Types.Type Type {
@@ -3678,8 +3682,9 @@ namespace Google.Cloud.Metastore.V1Beta {
     /// <summary>Field number for the "destination_gcs_uri" field.</summary>
     public const int DestinationGcsUriFieldNumber = 4;
     /// <summary>
-    /// Output only. A Cloud Storage URI of a folder that metadata are exported to, in the
-    /// form of `gs://&lt;bucket_name>/&lt;path_inside_bucket>/&lt;export_folder>`, where
+    /// Output only. A Cloud Storage URI of a folder that metadata are exported
+    /// to, in the form of
+    /// `gs://&lt;bucket_name>/&lt;path_inside_bucket>/&lt;export_folder>`, where
     /// `&lt;export_folder>` is automatically generated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4567,8 +4572,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int BackupFieldNumber = 4;
     private string backup_ = "";
     /// <summary>
-    /// Output only. The relative resource name of the metastore service backup to restore
-    /// from, in the following form:
+    /// Output only. The relative resource name of the metastore service backup to
+    /// restore from, in the following form:
     ///
     /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`
     /// </summary>
@@ -4598,8 +4603,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int DetailsFieldNumber = 6;
     private string details_ = "";
     /// <summary>
-    /// Output only. The restore details containing the revision of the service to be restored
-    /// to, in format of JSON.
+    /// Output only. The restore details containing the revision of the service to
+    /// be restored to, in format of JSON.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Details {
@@ -4922,7 +4927,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Request message for [DataprocMetastore.ListServices][google.cloud.metastore.v1beta.DataprocMetastore.ListServices].
+  /// Request message for
+  /// [DataprocMetastore.ListServices][google.cloud.metastore.v1beta.DataprocMetastore.ListServices].
   /// </summary>
   public sealed partial class ListServicesRequest : pb::IMessage<ListServicesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4970,8 +4976,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The relative resource name of the location of metastore services to
-    /// list, in the following form:
+    /// Required. The relative resource name of the location of metastore services
+    /// to list, in the following form:
     ///
     /// `projects/{project_number}/locations/{location_id}`.
     /// </summary>
@@ -4987,9 +4993,10 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of services to return. The response may contain less
-    /// than the maximum number. If unspecified, no more than 500 services are
-    /// returned. The maximum value is 1000; values above 1000 are changed to 1000.
+    /// Optional. The maximum number of services to return. The response may
+    /// contain less than the maximum number. If unspecified, no more than 500
+    /// services are returned. The maximum value is 1000; values above 1000 are
+    /// changed to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -5003,14 +5010,15 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A page token, received from a previous [DataprocMetastore.ListServices][google.cloud.metastore.v1beta.DataprocMetastore.ListServices]
+    /// Optional. A page token, received from a previous
+    /// [DataprocMetastore.ListServices][google.cloud.metastore.v1beta.DataprocMetastore.ListServices]
     /// call. Provide this token to retrieve the subsequent page.
     ///
     /// To retrieve the first page, supply an empty page token.
     ///
     /// When paginating, other parameters provided to
-    /// [DataprocMetastore.ListServices][google.cloud.metastore.v1beta.DataprocMetastore.ListServices] must match the call that provided the
-    /// page token.
+    /// [DataprocMetastore.ListServices][google.cloud.metastore.v1beta.DataprocMetastore.ListServices]
+    /// must match the call that provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -5270,7 +5278,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Response message for [DataprocMetastore.ListServices][google.cloud.metastore.v1beta.DataprocMetastore.ListServices].
+  /// Response message for
+  /// [DataprocMetastore.ListServices][google.cloud.metastore.v1beta.DataprocMetastore.ListServices].
   /// </summary>
   public sealed partial class ListServicesResponse : pb::IMessage<ListServicesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5505,7 +5514,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Request message for [DataprocMetastore.GetService][google.cloud.metastore.v1beta.DataprocMetastore.GetService].
+  /// Request message for
+  /// [DataprocMetastore.GetService][google.cloud.metastore.v1beta.DataprocMetastore.GetService].
   /// </summary>
   public sealed partial class GetServiceRequest : pb::IMessage<GetServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5549,8 +5559,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The relative resource name of the metastore service to retrieve, in the
-    /// following form:
+    /// Required. The relative resource name of the metastore service to retrieve,
+    /// in the following form:
     ///
     /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
     /// </summary>
@@ -5686,7 +5696,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Request message for [DataprocMetastore.CreateService][google.cloud.metastore.v1beta.DataprocMetastore.CreateService].
+  /// Request message for
+  /// [DataprocMetastore.CreateService][google.cloud.metastore.v1beta.DataprocMetastore.CreateService].
   /// </summary>
   public sealed partial class CreateServiceRequest : pb::IMessage<CreateServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5733,8 +5744,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The relative resource name of the location in which to create a metastore
-    /// service, in the following form:
+    /// Required. The relative resource name of the location in which to create a
+    /// metastore service, in the following form:
     ///
     /// `projects/{project_number}/locations/{location_id}`.
     /// </summary>
@@ -5785,10 +5796,10 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int RequestIdFieldNumber = 4;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-    /// request if it has completed. The server will ignore subsequent requests
-    /// that provide a duplicate request ID for at least 60 minutes after the first
-    /// request.
+    /// Optional. A request ID. Specify a unique request ID to allow the server to
+    /// ignore the request if it has completed. The server will ignore subsequent
+    /// requests that provide a duplicate request ID for at least 60 minutes after
+    /// the first request.
     ///
     /// For example, if an initial request times out, followed by another request
     /// with the same request ID, the server ignores the second request to prevent
@@ -6011,7 +6022,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Request message for [DataprocMetastore.UpdateService][google.cloud.metastore.v1beta.DataprocMetastore.UpdateService].
+  /// Request message for
+  /// [DataprocMetastore.UpdateService][google.cloud.metastore.v1beta.DataprocMetastore.UpdateService].
   /// </summary>
   public sealed partial class UpdateServiceRequest : pb::IMessage<UpdateServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6092,10 +6104,10 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-    /// request if it has completed. The server will ignore subsequent requests
-    /// that provide a duplicate request ID for at least 60 minutes after the first
-    /// request.
+    /// Optional. A request ID. Specify a unique request ID to allow the server to
+    /// ignore the request if it has completed. The server will ignore subsequent
+    /// requests that provide a duplicate request ID for at least 60 minutes after
+    /// the first request.
     ///
     /// For example, if an initial request times out, followed by another request
     /// with the same request ID, the server ignores the second request to prevent
@@ -6303,7 +6315,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Request message for [DataprocMetastore.DeleteService][google.cloud.metastore.v1beta.DataprocMetastore.DeleteService].
+  /// Request message for
+  /// [DataprocMetastore.DeleteService][google.cloud.metastore.v1beta.DataprocMetastore.DeleteService].
   /// </summary>
   public sealed partial class DeleteServiceRequest : pb::IMessage<DeleteServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6348,8 +6361,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The relative resource name of the metastore service to delete, in the
-    /// following form:
+    /// Required. The relative resource name of the metastore service to delete, in
+    /// the following form:
     ///
     /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
     /// </summary>
@@ -6365,10 +6378,10 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-    /// request if it has completed. The server will ignore subsequent requests
-    /// that provide a duplicate request ID for at least 60 minutes after the first
-    /// request.
+    /// Optional. A request ID. Specify a unique request ID to allow the server to
+    /// ignore the request if it has completed. The server will ignore subsequent
+    /// requests that provide a duplicate request ID for at least 60 minutes after
+    /// the first request.
     ///
     /// For example, if an initial request times out, followed by another request
     /// with the same request ID, the server ignores the second request to prevent
@@ -6534,7 +6547,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Request message for [DataprocMetastore.ListMetadataImports][google.cloud.metastore.v1beta.DataprocMetastore.ListMetadataImports].
+  /// Request message for
+  /// [DataprocMetastore.ListMetadataImports][google.cloud.metastore.v1beta.DataprocMetastore.ListMetadataImports].
   /// </summary>
   public sealed partial class ListMetadataImportsRequest : pb::IMessage<ListMetadataImportsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6582,8 +6596,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The relative resource name of the service whose metadata imports to
-    /// list, in the following form:
+    /// Required. The relative resource name of the service whose metadata imports
+    /// to list, in the following form:
     ///
     /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports`.
     /// </summary>
@@ -6599,8 +6613,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of imports to return. The response may contain less
-    /// than the maximum number. If unspecified, no more than 500 imports are
+    /// Optional. The maximum number of imports to return. The response may contain
+    /// less than the maximum number. If unspecified, no more than 500 imports are
     /// returned. The maximum value is 1000; values above 1000 are changed to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6615,14 +6629,15 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A page token, received from a previous [DataprocMetastore.ListServices][google.cloud.metastore.v1beta.DataprocMetastore.ListServices]
+    /// Optional. A page token, received from a previous
+    /// [DataprocMetastore.ListServices][google.cloud.metastore.v1beta.DataprocMetastore.ListServices]
     /// call. Provide this token to retrieve the subsequent page.
     ///
     /// To retrieve the first page, supply an empty page token.
     ///
     /// When paginating, other parameters provided to
-    /// [DataprocMetastore.ListServices][google.cloud.metastore.v1beta.DataprocMetastore.ListServices] must match the call that provided the
-    /// page token.
+    /// [DataprocMetastore.ListServices][google.cloud.metastore.v1beta.DataprocMetastore.ListServices]
+    /// must match the call that provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -6882,7 +6897,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Response message for [DataprocMetastore.ListMetadataImports][google.cloud.metastore.v1beta.DataprocMetastore.ListMetadataImports].
+  /// Response message for
+  /// [DataprocMetastore.ListMetadataImports][google.cloud.metastore.v1beta.DataprocMetastore.ListMetadataImports].
   /// </summary>
   public sealed partial class ListMetadataImportsResponse : pb::IMessage<ListMetadataImportsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7117,7 +7133,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Request message for [DataprocMetastore.GetMetadataImport][google.cloud.metastore.v1beta.DataprocMetastore.GetMetadataImport].
+  /// Request message for
+  /// [DataprocMetastore.GetMetadataImport][google.cloud.metastore.v1beta.DataprocMetastore.GetMetadataImport].
   /// </summary>
   public sealed partial class GetMetadataImportRequest : pb::IMessage<GetMetadataImportRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7161,8 +7178,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The relative resource name of the metadata import to retrieve, in the
-    /// following form:
+    /// Required. The relative resource name of the metadata import to retrieve, in
+    /// the following form:
     ///
     /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
     /// </summary>
@@ -7298,7 +7315,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Request message for [DataprocMetastore.CreateMetadataImport][google.cloud.metastore.v1beta.DataprocMetastore.CreateMetadataImport].
+  /// Request message for
+  /// [DataprocMetastore.CreateMetadataImport][google.cloud.metastore.v1beta.DataprocMetastore.CreateMetadataImport].
   /// </summary>
   public sealed partial class CreateMetadataImportRequest : pb::IMessage<CreateMetadataImportRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7345,8 +7363,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The relative resource name of the service in which to create a metastore
-    /// import, in the following form:
+    /// Required. The relative resource name of the service in which to create a
+    /// metastore import, in the following form:
     ///
     /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
     /// </summary>
@@ -7362,8 +7380,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int MetadataImportIdFieldNumber = 2;
     private string metadataImportId_ = "";
     /// <summary>
-    /// Required. The ID of the metadata import, which is used as the final component of the
-    /// metadata import's name.
+    /// Required. The ID of the metadata import, which is used as the final
+    /// component of the metadata import's name.
     ///
     /// This value must be between 1 and 64 characters long, begin with a letter,
     /// end with a letter or number, and consist of alpha-numeric ASCII characters
@@ -7381,8 +7399,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int MetadataImportFieldNumber = 3;
     private global::Google.Cloud.Metastore.V1Beta.MetadataImport metadataImport_;
     /// <summary>
-    /// Required. The metadata import to create. The `name` field is ignored. The ID of the
-    /// created metadata import must be provided in the request's
+    /// Required. The metadata import to create. The `name` field is ignored. The
+    /// ID of the created metadata import must be provided in the request's
     /// `metadata_import_id` field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7397,10 +7415,10 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int RequestIdFieldNumber = 4;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-    /// request if it has completed. The server will ignore subsequent requests
-    /// that provide a duplicate request ID for at least 60 minutes after the first
-    /// request.
+    /// Optional. A request ID. Specify a unique request ID to allow the server to
+    /// ignore the request if it has completed. The server will ignore subsequent
+    /// requests that provide a duplicate request ID for at least 60 minutes after
+    /// the first request.
     ///
     /// For example, if an initial request times out, followed by another request
     /// with the same request ID, the server ignores the second request to prevent
@@ -7623,7 +7641,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Request message for [DataprocMetastore.UpdateMetadataImport][google.cloud.metastore.v1beta.DataprocMetastore.UpdateMetadataImport].
+  /// Request message for
+  /// [DataprocMetastore.UpdateMetadataImport][google.cloud.metastore.v1beta.DataprocMetastore.UpdateMetadataImport].
   /// </summary>
   public sealed partial class UpdateMetadataImportRequest : pb::IMessage<UpdateMetadataImportRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7704,10 +7723,10 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-    /// request if it has completed. The server will ignore subsequent requests
-    /// that provide a duplicate request ID for at least 60 minutes after the first
-    /// request.
+    /// Optional. A request ID. Specify a unique request ID to allow the server to
+    /// ignore the request if it has completed. The server will ignore subsequent
+    /// requests that provide a duplicate request ID for at least 60 minutes after
+    /// the first request.
     ///
     /// For example, if an initial request times out, followed by another request
     /// with the same request ID, the server ignores the second request to prevent
@@ -7915,7 +7934,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Request message for [DataprocMetastore.ListBackups][google.cloud.metastore.v1beta.DataprocMetastore.ListBackups].
+  /// Request message for
+  /// [DataprocMetastore.ListBackups][google.cloud.metastore.v1beta.DataprocMetastore.ListBackups].
   /// </summary>
   public sealed partial class ListBackupsRequest : pb::IMessage<ListBackupsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7980,8 +8000,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of backups to return. The response may contain less
-    /// than the maximum number. If unspecified, no more than 500 backups are
+    /// Optional. The maximum number of backups to return. The response may contain
+    /// less than the maximum number. If unspecified, no more than 500 backups are
     /// returned. The maximum value is 1000; values above 1000 are changed to 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7996,14 +8016,15 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A page token, received from a previous [DataprocMetastore.ListBackups][google.cloud.metastore.v1beta.DataprocMetastore.ListBackups]
+    /// Optional. A page token, received from a previous
+    /// [DataprocMetastore.ListBackups][google.cloud.metastore.v1beta.DataprocMetastore.ListBackups]
     /// call. Provide this token to retrieve the subsequent page.
     ///
     /// To retrieve the first page, supply an empty page token.
     ///
     /// When paginating, other parameters provided to
-    /// [DataprocMetastore.ListBackups][google.cloud.metastore.v1beta.DataprocMetastore.ListBackups] must match the call that provided the
-    /// page token.
+    /// [DataprocMetastore.ListBackups][google.cloud.metastore.v1beta.DataprocMetastore.ListBackups]
+    /// must match the call that provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -8263,7 +8284,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Response message for [DataprocMetastore.ListBackups][google.cloud.metastore.v1beta.DataprocMetastore.ListBackups].
+  /// Response message for
+  /// [DataprocMetastore.ListBackups][google.cloud.metastore.v1beta.DataprocMetastore.ListBackups].
   /// </summary>
   public sealed partial class ListBackupsResponse : pb::IMessage<ListBackupsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8498,7 +8520,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Request message for [DataprocMetastore.GetBackup][google.cloud.metastore.v1beta.DataprocMetastore.GetBackup].
+  /// Request message for
+  /// [DataprocMetastore.GetBackup][google.cloud.metastore.v1beta.DataprocMetastore.GetBackup].
   /// </summary>
   public sealed partial class GetBackupRequest : pb::IMessage<GetBackupRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8679,7 +8702,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Request message for [DataprocMetastore.CreateBackup][google.cloud.metastore.v1beta.DataprocMetastore.CreateBackup].
+  /// Request message for
+  /// [DataprocMetastore.CreateBackup][google.cloud.metastore.v1beta.DataprocMetastore.CreateBackup].
   /// </summary>
   public sealed partial class CreateBackupRequest : pb::IMessage<CreateBackupRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8726,8 +8750,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The relative resource name of the service in which to create a backup
-    /// of the following form:
+    /// Required. The relative resource name of the service in which to create a
+    /// backup of the following form:
     ///
     /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
     /// </summary>
@@ -8762,8 +8786,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int BackupFieldNumber = 3;
     private global::Google.Cloud.Metastore.V1Beta.Backup backup_;
     /// <summary>
-    /// Required. The backup to create. The `name` field is ignored. The ID of the created
-    /// backup must be provided in the request's `backup_id` field.
+    /// Required. The backup to create. The `name` field is ignored. The ID of the
+    /// created backup must be provided in the request's `backup_id` field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Metastore.V1Beta.Backup Backup {
@@ -8777,10 +8801,10 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int RequestIdFieldNumber = 4;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-    /// request if it has completed. The server will ignore subsequent requests
-    /// that provide a duplicate request ID for at least 60 minutes after the first
-    /// request.
+    /// Optional. A request ID. Specify a unique request ID to allow the server to
+    /// ignore the request if it has completed. The server will ignore subsequent
+    /// requests that provide a duplicate request ID for at least 60 minutes after
+    /// the first request.
     ///
     /// For example, if an initial request times out, followed by another request
     /// with the same request ID, the server ignores the second request to prevent
@@ -9003,7 +9027,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Request message for [DataprocMetastore.DeleteBackup][google.cloud.metastore.v1beta.DataprocMetastore.DeleteBackup].
+  /// Request message for
+  /// [DataprocMetastore.DeleteBackup][google.cloud.metastore.v1beta.DataprocMetastore.DeleteBackup].
   /// </summary>
   public sealed partial class DeleteBackupRequest : pb::IMessage<DeleteBackupRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9065,10 +9090,10 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-    /// request if it has completed. The server will ignore subsequent requests
-    /// that provide a duplicate request ID for at least 60 minutes after the first
-    /// request.
+    /// Optional. A request ID. Specify a unique request ID to allow the server to
+    /// ignore the request if it has completed. The server will ignore subsequent
+    /// requests that provide a duplicate request ID for at least 60 minutes after
+    /// the first request.
     ///
     /// For example, if an initial request times out, followed by another request
     /// with the same request ID, the server ignores the second request to prevent
@@ -9234,7 +9259,8 @@ namespace Google.Cloud.Metastore.V1Beta {
   }
 
   /// <summary>
-  /// Request message for [DataprocMetastore.ExportMetadata][google.cloud.metastore.v1beta.DataprocMetastore.ExportMetadata].
+  /// Request message for
+  /// [DataprocMetastore.ExportMetadata][google.cloud.metastore.v1beta.DataprocMetastore.ExportMetadata].
   /// </summary>
   public sealed partial class ExportMetadataRequest : pb::IMessage<ExportMetadataRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9302,8 +9328,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int ServiceFieldNumber = 1;
     private string service_ = "";
     /// <summary>
-    /// Required. The relative resource name of the metastore service to run export, in the
-    /// following form:
+    /// Required. The relative resource name of the metastore service to run
+    /// export, in the following form:
     ///
     /// `projects/{project_id}/locations/{location_id}/services/{service_id}`
     /// </summary>
@@ -9319,10 +9345,10 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-    /// request if it has completed. The server will ignore subsequent requests
-    /// that provide a duplicate request ID for at least 60 minutes after the first
-    /// request.
+    /// Optional. A request ID. Specify a unique request ID to allow the server to
+    /// ignore the request if it has completed. The server will ignore subsequent
+    /// requests that provide a duplicate request ID for at least 60 minutes after
+    /// the first request.
     ///
     /// For example, if an initial request times out, followed by another request
     /// with the same request ID, the server ignores the second request to prevent
@@ -9344,7 +9370,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int DatabaseDumpTypeFieldNumber = 4;
     private global::Google.Cloud.Metastore.V1Beta.DatabaseDumpSpec.Types.Type databaseDumpType_ = global::Google.Cloud.Metastore.V1Beta.DatabaseDumpSpec.Types.Type.Unspecified;
     /// <summary>
-    /// Optional. The type of the database dump. If unspecified, defaults to `MYSQL`.
+    /// Optional. The type of the database dump. If unspecified, defaults to
+    /// `MYSQL`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Metastore.V1Beta.DatabaseDumpSpec.Types.Type DatabaseDumpType {
@@ -9620,8 +9647,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int ServiceFieldNumber = 1;
     private string service_ = "";
     /// <summary>
-    /// Required. The relative resource name of the metastore service to run restore, in the
-    /// following form:
+    /// Required. The relative resource name of the metastore service to run
+    /// restore, in the following form:
     ///
     /// `projects/{project_id}/locations/{location_id}/services/{service_id}`
     /// </summary>
@@ -9637,8 +9664,8 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int BackupFieldNumber = 2;
     private string backup_ = "";
     /// <summary>
-    /// Required. The relative resource name of the metastore service backup to restore
-    /// from, in the following form:
+    /// Required. The relative resource name of the metastore service backup to
+    /// restore from, in the following form:
     ///
     /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`
     /// </summary>
@@ -9668,10 +9695,10 @@ namespace Google.Cloud.Metastore.V1Beta {
     public const int RequestIdFieldNumber = 4;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. A request ID. Specify a unique request ID to allow the server to ignore the
-    /// request if it has completed. The server will ignore subsequent requests
-    /// that provide a duplicate request ID for at least 60 minutes after the first
-    /// request.
+    /// Optional. A request ID. Specify a unique request ID to allow the server to
+    /// ignore the request if it has completed. The server will ignore subsequent
+    /// requests that provide a duplicate request ID for at least 60 minutes after
+    /// the first request.
     ///
     /// For example, if an initial request times out, followed by another request
     /// with the same request ID, the server ignores the second request to prevent
@@ -10007,8 +10034,9 @@ namespace Google.Cloud.Metastore.V1Beta {
     /// <summary>
     /// Output only. Identifies whether the caller has requested cancellation
     /// of the operation. Operations that have successfully been cancelled
-    /// have [Operation.error][] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-    /// corresponding to `Code.CANCELLED`.
+    /// have [Operation.error][] value with a
+    /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+    /// `Code.CANCELLED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool RequestedCancellation {
