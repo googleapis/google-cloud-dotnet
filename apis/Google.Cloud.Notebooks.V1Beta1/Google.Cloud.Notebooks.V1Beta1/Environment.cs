@@ -44,7 +44,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
             "LmNsb3VkLm5vdGVib29rcy52MWJldGExQhBFbnZpcm9ubWVudFByb3RvUAFa",
             "R2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
             "bm90ZWJvb2tzL3YxYmV0YTE7bm90ZWJvb2tzqgIeR29vZ2xlLkNsb3VkLk5v",
-            "dGVib29rcy5WMUJldGExygIeR29vZ2xlXENsb3VkXE5vdGVib29rc1xWMUJl",
+            "dGVib29rcy5WMUJldGExygIeR29vZ2xlXENsb3VkXE5vdGVib29rc1xWMWJl",
             "dGEx6gIhR29vZ2xlOjpDbG91ZDo6Tm90ZWJvb2tzOjpWMWJldGExYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
