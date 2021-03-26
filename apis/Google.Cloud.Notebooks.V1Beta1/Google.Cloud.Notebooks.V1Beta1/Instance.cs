@@ -230,7 +230,8 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int ProxyUriFieldNumber = 5;
     private string proxyUri_ = "";
     /// <summary>
-    /// Output only. The proxy endpoint that is used to access the Jupyter notebook.
+    /// Output only. The proxy endpoint that is used to access the Jupyter
+    /// notebook.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProxyUri {
@@ -246,7 +247,8 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> instanceOwners_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Input only. The owner of this instance after creation. Format: `alias@example.com`
+    /// Input only. The owner of this instance after creation. Format:
+    /// `alias@example.com`
     ///
     /// Currently supports one owner only. If not specified, all of the service
     /// account users of your VM instance's service account can use
@@ -282,7 +284,8 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int MachineTypeFieldNumber = 8;
     private string machineType_ = "";
     /// <summary>
-    /// Required. The [Compute Engine machine type](https://cloud.google.com/compute/docs/machine-types) of this
+    /// Required. The [Compute Engine machine
+    /// type](https://cloud.google.com/compute/docs/machine-types) of this
     /// instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -360,8 +363,8 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int BootDiskTypeFieldNumber = 13;
     private global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType bootDiskType_ = global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType.Unspecified;
     /// <summary>
-    /// Input only. The type of the boot disk attached to this instance, defaults to
-    /// standard persistent disk (`PD_STANDARD`).
+    /// Input only. The type of the boot disk attached to this instance, defaults
+    /// to standard persistent disk (`PD_STANDARD`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType BootDiskType {
@@ -375,9 +378,9 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int BootDiskSizeGbFieldNumber = 14;
     private long bootDiskSizeGb_;
     /// <summary>
-    /// Input only. The size of the boot disk in GB attached to this instance, up to a maximum
-    /// of 64000&amp;nbsp;GB (64&amp;nbsp;TB). The minimum recommended value is
-    /// 100&amp;nbsp;GB. If not specified, this defaults to 100.
+    /// Input only. The size of the boot disk in GB attached to this instance, up
+    /// to a maximum of 64000&amp;nbsp;GB (64&amp;nbsp;TB). The minimum recommended value
+    /// is 100&amp;nbsp;GB. If not specified, this defaults to 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long BootDiskSizeGb {
@@ -391,8 +394,8 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int DataDiskTypeFieldNumber = 25;
     private global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType dataDiskType_ = global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType.Unspecified;
     /// <summary>
-    /// Input only. The type of the data disk attached to this instance, defaults to
-    /// standard persistent disk (`PD_STANDARD`).
+    /// Input only. The type of the data disk attached to this instance, defaults
+    /// to standard persistent disk (`PD_STANDARD`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType DataDiskType {
@@ -406,10 +409,10 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int DataDiskSizeGbFieldNumber = 26;
     private long dataDiskSizeGb_;
     /// <summary>
-    /// Input only. The size of the data disk in GB attached to this instance, up to a maximum
-    /// of 64000&amp;nbsp;GB (64&amp;nbsp;TB). You can choose the size of the data disk
-    /// based on how big your notebooks and data are. If not specified, this
-    /// defaults to 100.
+    /// Input only. The size of the data disk in GB attached to this instance, up
+    /// to a maximum of 64000&amp;nbsp;GB (64&amp;nbsp;TB). You can choose the size of the
+    /// data disk based on how big your notebooks and data are. If not specified,
+    /// this defaults to 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long DataDiskSizeGb {
@@ -423,7 +426,8 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int NoRemoveDataDiskFieldNumber = 27;
     private bool noRemoveDataDisk_;
     /// <summary>
-    /// Input only. If true, the data disk will not be auto deleted when deleting the instance.
+    /// Input only. If true, the data disk will not be auto deleted when deleting
+    /// the instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool NoRemoveDataDisk {
@@ -437,7 +441,8 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int DiskEncryptionFieldNumber = 15;
     private global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskEncryption diskEncryption_ = global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskEncryption.Unspecified;
     /// <summary>
-    /// Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.
+    /// Input only. Disk encryption method used on the boot and data disks,
+    /// defaults to GMEK.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskEncryption DiskEncryption {
@@ -451,12 +456,12 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     public const int KmsKeyFieldNumber = 16;
     private string kmsKey_ = "";
     /// <summary>
-    /// Input only. The KMS key used to encrypt the disks, only applicable if disk_encryption
-    /// is CMEK.
-    /// Format:
+    /// Input only. The KMS key used to encrypt the disks, only applicable if
+    /// disk_encryption is CMEK. Format:
     /// `projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}`
     ///
-    /// Learn more about [using your own encryption keys]( https://cloud.google.com/kms/docs/quickstart).
+    /// Learn more about [using your own encryption keys](
+    /// https://cloud.google.com/kms/docs/quickstart).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string KmsKey {
