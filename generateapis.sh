@@ -134,6 +134,7 @@ generate_microgenerator() {
   # but it won't generate anything for it.
   $PROTOC \
     --gapic_out=$API_TMP_DIR \
+    --gapic_opt=metadata \
     $SERVICE_CONFIG_OPTION \
     $COMMON_RESOURCES_OPTION \
     --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
