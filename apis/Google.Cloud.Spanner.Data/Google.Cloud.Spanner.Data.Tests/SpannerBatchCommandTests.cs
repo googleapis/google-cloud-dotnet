@@ -13,8 +13,12 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.V1;
+using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Cloud.Spanner.V1.Tests;
 using Google.Protobuf;
+using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -147,6 +151,71 @@ namespace Google.Cloud.Spanner.Data.Tests
                 new SpannerParameterCollection { { "key", SpannerDbType.Int64, 5 } });
 
             Assert.Throws<InvalidOperationException>(() => command.Add("drop database myDatabase"));
+        }
+
+        [Fact]
+        public void CommandPriorityDefaultsToUnspecified()
+        {
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync();
+            SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+            var command = transaction.CreateBatchDmlCommand();
+            Assert.Equal(Priority.Unspecified, command.Priority);
+        }
+
+        [Fact]
+        public void CommandIncludesPriority()
+        {
+            var priority = Priority.High;
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteBatchDmlAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+
+            var command = transaction.CreateBatchDmlCommand();
+            command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
+            command.Priority = priority;
+            command.ExecuteNonQuery();
+            transaction.Commit();
+
+            spannerClientMock.Verify(client => client.ExecuteBatchDmlAsync(
+                It.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                It.IsAny<CallSettings>()), Times.Once());
+        }
+
+        [Fact]
+        public void EphemeralTransactionIncludesPriorityOnBatchDmlAndCommit()
+        {
+            var priority = Priority.Medium;
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteBatchDmlAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateBatchDmlCommand();
+            command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
+            command.Priority = priority;
+            command.ExecuteNonQuery();
+
+            spannerClientMock.Verify(client => client.ExecuteBatchDmlAsync(
+                It.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Verify(client => client.CommitAsync(
+                It.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                It.IsAny<CallSettings>()), Times.Once());
         }
 
         private class FakeSessionPool : SessionPool.ISessionPool

@@ -42,6 +42,7 @@ namespace Google.Cloud.Spanner.Data
             internal IList<SpannerCommand> Commands { get; }
             internal int CommandTimeout { get; }
             internal SpannerBatchCommandType CommandType { get; }
+            internal Priority Priority { get; }
 
             public ExecutableCommand(SpannerBatchCommand command)
             {
@@ -50,6 +51,7 @@ namespace Google.Cloud.Spanner.Data
                 Commands = command.Commands.ToList();
                 CommandTimeout = command.CommandTimeout;
                 CommandType = command.CommandType;
+                Priority = command.Priority;
             }
 
             /// <summary>
@@ -79,7 +81,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
 
-                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, s_readWriteOptions);
+                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, s_readWriteOptions, Priority);
                 ExecuteBatchDmlRequest request = GetExecuteBatchDmlRequest();
                 IEnumerable<long> result = await transaction.ExecuteBatchDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
                 return result.ToList().AsReadOnly();
@@ -87,7 +89,10 @@ namespace Google.Cloud.Spanner.Data
 
             private ExecuteBatchDmlRequest GetExecuteBatchDmlRequest()
             {
-                var request = new ExecuteBatchDmlRequest();
+                var request = new ExecuteBatchDmlRequest
+                {
+                    RequestOptions = BuildRequestOptions()
+                };
                 foreach (var command in Commands)
                 {
                     var statement = new Statement { Sql = command.CommandText };
@@ -97,6 +102,9 @@ namespace Google.Cloud.Spanner.Data
                 }
                 return request;
             }
+
+            private RequestOptions BuildRequestOptions() =>
+                new RequestOptions { Priority = PriorityConverter.ToProto(Priority) };
 
             private void ValidateConnectionAndCommandCount()
             {

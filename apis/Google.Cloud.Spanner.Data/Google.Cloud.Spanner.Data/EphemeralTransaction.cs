@@ -30,11 +30,13 @@ namespace Google.Cloud.Spanner.Data
     {
         private readonly SpannerConnection _connection;
         private readonly TransactionOptions _transactionOptions;
+        private readonly Priority _commitPriority;
 
-        internal EphemeralTransaction(SpannerConnection connection, TransactionOptions transactionOptions)
+        internal EphemeralTransaction(SpannerConnection connection, TransactionOptions transactionOptions, Priority commitPriority)
         {
             _connection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
             _transactionOptions = transactionOptions;
+            _commitPriority = commitPriority;
         }
 
         public Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
@@ -46,6 +48,7 @@ namespace Google.Cloud.Spanner.Data
                 using (var transaction = await _connection.BeginTransactionImplAsync(_transactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
                 {
                     transaction.CommitTimeout = timeoutSeconds;
+                    transaction.CommitPriority = _commitPriority;
                     while (true)
                     {
                         try
@@ -85,6 +88,7 @@ namespace Google.Cloud.Spanner.Data
                 using (var transaction = await _connection.BeginTransactionImplAsync(_transactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
                 {
                     transaction.CommitTimeout = timeoutSeconds;
+                    transaction.CommitPriority = _commitPriority;
 
                     IEnumerable<long> result;
 
@@ -121,6 +125,7 @@ namespace Google.Cloud.Spanner.Data
                     // ExecuteMutations on SpannerTransaction doesnt actually hit the network
                     // until you commit or rollback.
                     transaction.CommitTimeout = timeoutSeconds;
+                    transaction.CommitPriority = _commitPriority;
                     int count = await ((ISpannerTransaction)transaction)
                         .ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds)
                         .ConfigureAwait(false);

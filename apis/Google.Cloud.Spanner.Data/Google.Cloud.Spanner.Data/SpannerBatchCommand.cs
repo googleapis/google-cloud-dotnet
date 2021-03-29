@@ -99,6 +99,11 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// The RPC priority to use for this command. The default priority is Unspecified.
+        /// </summary>
+        public Priority Priority { get; set; }
+
+        /// <summary>
         /// Adds a command to the collection of batch commands to be executed by this <see cref="SpannerBatchCommand"/>.
         /// </summary>
         /// <param name="commandText"> The command text to be added. Must not be null or empty.

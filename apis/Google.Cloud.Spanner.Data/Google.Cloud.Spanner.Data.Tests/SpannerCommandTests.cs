@@ -14,10 +14,11 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Api.Gax.Testing;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Tests;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Cloud.Spanner.V1.Tests;
 using Grpc.Core;
 using Moq;
 using System;
@@ -197,6 +198,266 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void CloneWithPriority()
+        {
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.Priority = Priority.Low;
+            var command2 = (SpannerCommand)command.Clone();
+            Assert.Same(command.SpannerConnection, command2.SpannerConnection);
+            Assert.Equal(command.CommandText, command2.CommandText);
+            Assert.Equal(command.Priority, command2.Priority);
+        }
+
+        [Fact]
+        public void CommandPriorityDefaultsToUnspecified()
+        {
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            Assert.Equal(Priority.Unspecified, command.Priority);
+        }
+
+        [Fact]
+        public void CommitPriorityDefaultsToUnspecified()
+        {
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+            Assert.Equal(Priority.Unspecified, transaction.CommitPriority);
+        }
+
+        [Fact]
+        public void CommandIncludesPriority()
+        {
+            var priority = Priority.High;
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.Priority = priority;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                It.IsAny<CallSettings>()));
+        }
+
+        [Fact]
+        public void CommitIncludesPriority()
+        {
+            var commitPriority = Priority.Medium;
+            var commandPriority = Priority.High;
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSql()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+            transaction.CommitPriority = commitPriority;
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.Transaction = transaction;
+            command.Priority = commandPriority;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+            transaction.Commit();
+
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(commandPriority)),
+                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Verify(client => client.CommitAsync(
+                It.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(commitPriority)),
+                It.IsAny<CallSettings>()), Times.Once());
+        }
+
+        [Fact]
+        public void CommitPriorityCanBeSetAfterCommandExecution()
+        {
+            var priority = Priority.Medium;
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSql()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+
+            // Execute a command on the transaction.
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.Transaction = transaction;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+            // Verify that we can set the commit priority after a command has been executed.
+            transaction.CommitPriority = priority;
+            transaction.Commit();
+
+            spannerClientMock.Verify(client => client.CommitAsync(
+                It.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                It.IsAny<CallSettings>()), Times.Once());
+        }
+
+        [Fact]
+        public void CommitPriorityCannotBeSetForReadOnlyTransaction()
+        {
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginReadOnlyTransaction();
+            Assert.Throws<InvalidOperationException>(() => transaction.CommitPriority = Priority.High);
+        }
+
+        [Fact]
+        public void PriorityCanBeSetToUnspecified()
+        {
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSql()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+            transaction.CommitPriority = Priority.Unspecified;
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.Transaction = transaction;
+            command.Priority = Priority.Unspecified;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+            transaction.Commit();
+
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Unspecified),
+                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Verify(client => client.CommitAsync(
+                It.Is<CommitRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Unspecified),
+                It.IsAny<CallSettings>()), Times.Once());
+        }
+
+        [Fact]
+        public void RunWithRetryableTransactionWithCommitPriority()
+        {
+            var priority = Priority.Low;
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSql()
+                .SetupCommitAsync_Fails(1, StatusCode.Aborted, exceptionRetryDelay: TimeSpan.FromMilliseconds(0))
+                .SetupRollbackAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            connection.Builder.SessionPoolManager.SpannerSettings.Scheduler = new NoOpScheduler();
+
+            connection.RunWithRetriableTransaction(tx =>
+            {
+                tx.CommitPriority = priority;
+                var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+                command.Transaction = tx;
+                using (var reader = command.ExecuteReader())
+                {
+                    Assert.True(reader.HasRows);
+                }
+            });
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Unspecified),
+                It.IsAny<CallSettings>()), Times.Exactly(2));
+            spannerClientMock.Verify(client => client.CommitAsync(
+                It.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                It.IsAny<CallSettings>()), Times.Exactly(2));
+        }
+
+        [Fact]
+        public void MutationCommandIncludesPriority()
+        {
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateInsertCommand("FOO");
+            command.Priority = Priority.High;
+            command.ExecuteNonQuery();
+
+            spannerClientMock.Verify(client => client.CommitAsync(
+                It.Is<CommitRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.High),
+                It.IsAny<CallSettings>()), Times.Once());
+        }
+
+        [Fact]
+        public void PdmlCommandIncludesPriority()
+        {
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSqlForDml(ResultSetStats.RowCountOneofCase.RowCountLowerBound);
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateDmlCommand("DELETE FROM Users WHERE Active=False");
+            command.Priority = Priority.Low;
+            command.ExecutePartitionedUpdate();
+
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Low),
+                It.IsAny<CallSettings>()), Times.Once());
+        }
+
+        [Fact]
+        public void EphemeralTransactionIncludesPriorityOnDmlCommandAndCommit()
+        {
+            var priority = Priority.Medium;
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSqlForDml(ResultSetStats.RowCountOneofCase.RowCountExact)
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateDmlCommand("UPDATE FOO SET BAR=1 WHERE ID=1");
+            command.Priority = priority;
+            command.ExecuteNonQuery();
+
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Verify(client => client.CommitAsync(
+                It.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                It.IsAny<CallSettings>()), Times.Once());
+        }
+
+        [Fact]
         public void ClientCreatedWithEmulatorDetection()
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
@@ -279,7 +540,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 It.IsAny<CallSettings>()), Times.Exactly(3));
         }
 
-        private SpannerConnection BuildSpannerConnection(Mock<SpannerClient> spannerClientMock)
+        internal static SpannerConnection BuildSpannerConnection(Mock<SpannerClient> spannerClientMock)
         {
             var spannerClient = spannerClientMock.Object;
             var sessionPoolOptions = new SessionPoolOptions

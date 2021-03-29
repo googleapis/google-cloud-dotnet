@@ -126,6 +126,23 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
+        private Priority _commitPriority;
+
+        /// <summary>
+        /// The RPC priority to use for the commit RPC of this transaction. This can only be set for read/write transactions.
+        /// This priority is not used for commands that are executed on this transaction. Use <see cref="SpannerCommand.Priority"/>
+        /// to set the priority of commands. The default priority is Unspecified.
+        /// </summary>
+        public Priority CommitPriority 
+        {
+            get => _commitPriority;
+            set
+            {
+                GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "Commit priority cannot be set on a read-only transaction");
+                _commitPriority = value;
+            }
+        }
+
         internal SpannerTransaction(
             SpannerConnection connection,
             TransactionMode mode,
@@ -218,7 +235,7 @@ namespace Google.Cloud.Spanner.Data
         Task<int> ISpannerTransaction.ExecuteMutationsAsync(
             List<Mutation> mutations,
             CancellationToken cancellationToken,
-            int timeoutSeconds)
+            int timeoutSeconds /* ignored */)
         {
             CheckCompatibleMode(TransactionMode.ReadWrite);
             return ExecuteHelper.WithErrorTranslationAndProfiling(() =>
@@ -328,7 +345,7 @@ namespace Google.Cloud.Spanner.Data
         public Task<DateTime> CommitAsync(CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
-            var request = new CommitRequest { Mutations = { _mutations }, ReturnCommitStats = LogCommitStats };
+            var request = new CommitRequest { Mutations = { _mutations }, ReturnCommitStats = LogCommitStats, RequestOptions = BuildCommitRequestOptions() };
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.CommitSettings, CommitTimeout, cancellationToken);
@@ -346,6 +363,8 @@ namespace Google.Cloud.Spanner.Data
             "SpannerTransaction.Commit", SpannerConnection.Logger);
         }
 
+        private RequestOptions BuildCommitRequestOptions() =>
+            new RequestOptions { Priority = PriorityConverter.ToProto(CommitPriority) };
         /// <inheritdoc />
         public override void Rollback() => Task.Run(() => RollbackAsync(default)).WaitWithUnwrappedExceptions();
 

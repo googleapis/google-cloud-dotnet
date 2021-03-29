@@ -224,6 +224,11 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public QueryOptions QueryOptions { get; set; }
 
+        /// <summary>
+        /// The RPC priority to use for this command. The default priority is Unspecified.
+        /// </summary>
+        public Priority Priority { get; set; }
+
         /// <inheritdoc />
         protected override DbConnection DbConnection
         {
@@ -262,7 +267,8 @@ namespace Google.Cloud.Spanner.Data
             DesignTimeVisible = DesignTimeVisible,
             SpannerCommandTextBuilder = SpannerCommandTextBuilder,
             CommandTimeout = CommandTimeout,
-            QueryOptions = QueryOptions
+            QueryOptions = QueryOptions,
+            Priority = Priority
         };
 
         /// <inheritdoc />
