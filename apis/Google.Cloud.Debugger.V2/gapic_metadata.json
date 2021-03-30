@@ -1,0 +1,75 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.devtools.clouddebugger.v2",
+  "libraryPackage": "Google.Cloud.Debugger.V2",
+  "services": {
+    "Controller2": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "Controller2Client",
+          "rpcs": {
+            "RegisterDebuggee": {
+              "methods": [
+                "RegisterDebuggee",
+                "RegisterDebuggeeAsync"
+              ]
+            },
+            "ListActiveBreakpoints": {
+              "methods": [
+                "ListActiveBreakpoints",
+                "ListActiveBreakpointsAsync"
+              ]
+            },
+            "UpdateActiveBreakpoint": {
+              "methods": [
+                "UpdateActiveBreakpoint",
+                "UpdateActiveBreakpointAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Debugger2": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "Debugger2Client",
+          "rpcs": {
+            "SetBreakpoint": {
+              "methods": [
+                "SetBreakpoint",
+                "SetBreakpointAsync"
+              ]
+            },
+            "GetBreakpoint": {
+              "methods": [
+                "GetBreakpoint",
+                "GetBreakpointAsync"
+              ]
+            },
+            "DeleteBreakpoint": {
+              "methods": [
+                "DeleteBreakpoint",
+                "DeleteBreakpointAsync"
+              ]
+            },
+            "ListBreakpoints": {
+              "methods": [
+                "ListBreakpoints",
+                "ListBreakpointsAsync"
+              ]
+            },
+            "ListDebuggees": {
+              "methods": [
+                "ListDebuggees",
+                "ListDebuggeesAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

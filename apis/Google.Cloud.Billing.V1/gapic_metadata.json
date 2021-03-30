@@ -1,0 +1,99 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.billing.v1",
+  "libraryPackage": "Google.Cloud.Billing.V1",
+  "services": {
+    "CloudBilling": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudBillingClient",
+          "rpcs": {
+            "GetBillingAccount": {
+              "methods": [
+                "GetBillingAccount",
+                "GetBillingAccountAsync"
+              ]
+            },
+            "ListBillingAccounts": {
+              "methods": [
+                "ListBillingAccounts",
+                "ListBillingAccountsAsync"
+              ]
+            },
+            "UpdateBillingAccount": {
+              "methods": [
+                "UpdateBillingAccount",
+                "UpdateBillingAccountAsync"
+              ]
+            },
+            "CreateBillingAccount": {
+              "methods": [
+                "CreateBillingAccount",
+                "CreateBillingAccountAsync"
+              ]
+            },
+            "ListProjectBillingInfo": {
+              "methods": [
+                "ListProjectBillingInfo",
+                "ListProjectBillingInfoAsync"
+              ]
+            },
+            "GetProjectBillingInfo": {
+              "methods": [
+                "GetProjectBillingInfo",
+                "GetProjectBillingInfoAsync"
+              ]
+            },
+            "UpdateProjectBillingInfo": {
+              "methods": [
+                "UpdateProjectBillingInfo",
+                "UpdateProjectBillingInfoAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "CloudCatalog": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudCatalogClient",
+          "rpcs": {
+            "ListServices": {
+              "methods": [
+                "ListServices",
+                "ListServicesAsync"
+              ]
+            },
+            "ListSkus": {
+              "methods": [
+                "ListSkus",
+                "ListSkusAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

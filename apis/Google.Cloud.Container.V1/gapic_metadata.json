@@ -1,0 +1,210 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.container.v1",
+  "libraryPackage": "Google.Cloud.Container.V1",
+  "services": {
+    "ClusterManager": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ClusterManagerClient",
+          "rpcs": {
+            "ListClusters": {
+              "methods": [
+                "ListClusters",
+                "ListClustersAsync"
+              ]
+            },
+            "GetCluster": {
+              "methods": [
+                "GetCluster",
+                "GetClusterAsync"
+              ]
+            },
+            "CreateCluster": {
+              "methods": [
+                "CreateCluster",
+                "CreateClusterAsync"
+              ]
+            },
+            "UpdateCluster": {
+              "methods": [
+                "UpdateCluster",
+                "UpdateClusterAsync"
+              ]
+            },
+            "UpdateNodePool": {
+              "methods": [
+                "UpdateNodePool",
+                "UpdateNodePoolAsync"
+              ]
+            },
+            "SetNodePoolAutoscaling": {
+              "methods": [
+                "SetNodePoolAutoscaling",
+                "SetNodePoolAutoscalingAsync"
+              ]
+            },
+            "SetLoggingService": {
+              "methods": [
+                "SetLoggingService",
+                "SetLoggingServiceAsync"
+              ]
+            },
+            "SetMonitoringService": {
+              "methods": [
+                "SetMonitoringService",
+                "SetMonitoringServiceAsync"
+              ]
+            },
+            "SetAddonsConfig": {
+              "methods": [
+                "SetAddonsConfig",
+                "SetAddonsConfigAsync"
+              ]
+            },
+            "SetLocations": {
+              "methods": [
+                "SetLocations",
+                "SetLocationsAsync"
+              ]
+            },
+            "UpdateMaster": {
+              "methods": [
+                "UpdateMaster",
+                "UpdateMasterAsync"
+              ]
+            },
+            "SetMasterAuth": {
+              "methods": [
+                "SetMasterAuth",
+                "SetMasterAuthAsync"
+              ]
+            },
+            "DeleteCluster": {
+              "methods": [
+                "DeleteCluster",
+                "DeleteClusterAsync"
+              ]
+            },
+            "ListOperations": {
+              "methods": [
+                "ListOperations",
+                "ListOperationsAsync"
+              ]
+            },
+            "GetOperation": {
+              "methods": [
+                "GetOperation",
+                "GetOperationAsync"
+              ]
+            },
+            "CancelOperation": {
+              "methods": [
+                "CancelOperation",
+                "CancelOperationAsync"
+              ]
+            },
+            "GetServerConfig": {
+              "methods": [
+                "GetServerConfig",
+                "GetServerConfigAsync"
+              ]
+            },
+            "GetJSONWebKeys": {
+              "methods": [
+                "GetJSONWebKeys",
+                "GetJSONWebKeysAsync"
+              ]
+            },
+            "ListNodePools": {
+              "methods": [
+                "ListNodePools",
+                "ListNodePoolsAsync"
+              ]
+            },
+            "GetNodePool": {
+              "methods": [
+                "GetNodePool",
+                "GetNodePoolAsync"
+              ]
+            },
+            "CreateNodePool": {
+              "methods": [
+                "CreateNodePool",
+                "CreateNodePoolAsync"
+              ]
+            },
+            "DeleteNodePool": {
+              "methods": [
+                "DeleteNodePool",
+                "DeleteNodePoolAsync"
+              ]
+            },
+            "RollbackNodePoolUpgrade": {
+              "methods": [
+                "RollbackNodePoolUpgrade",
+                "RollbackNodePoolUpgradeAsync"
+              ]
+            },
+            "SetNodePoolManagement": {
+              "methods": [
+                "SetNodePoolManagement",
+                "SetNodePoolManagementAsync"
+              ]
+            },
+            "SetLabels": {
+              "methods": [
+                "SetLabels",
+                "SetLabelsAsync"
+              ]
+            },
+            "SetLegacyAbac": {
+              "methods": [
+                "SetLegacyAbac",
+                "SetLegacyAbacAsync"
+              ]
+            },
+            "StartIPRotation": {
+              "methods": [
+                "StartIPRotation",
+                "StartIPRotationAsync"
+              ]
+            },
+            "CompleteIPRotation": {
+              "methods": [
+                "CompleteIPRotation",
+                "CompleteIPRotationAsync"
+              ]
+            },
+            "SetNodePoolSize": {
+              "methods": [
+                "SetNodePoolSize",
+                "SetNodePoolSizeAsync"
+              ]
+            },
+            "SetNetworkPolicy": {
+              "methods": [
+                "SetNetworkPolicy",
+                "SetNetworkPolicyAsync"
+              ]
+            },
+            "SetMaintenancePolicy": {
+              "methods": [
+                "SetMaintenancePolicy",
+                "SetMaintenancePolicyAsync"
+              ]
+            },
+            "ListUsableSubnetworks": {
+              "methods": [
+                "ListUsableSubnetworks",
+                "ListUsableSubnetworksAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

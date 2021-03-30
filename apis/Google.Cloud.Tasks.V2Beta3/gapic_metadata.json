@@ -1,0 +1,114 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.tasks.v2beta3",
+  "libraryPackage": "Google.Cloud.Tasks.V2Beta3",
+  "services": {
+    "CloudTasks": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudTasksClient",
+          "rpcs": {
+            "ListQueues": {
+              "methods": [
+                "ListQueues",
+                "ListQueuesAsync"
+              ]
+            },
+            "GetQueue": {
+              "methods": [
+                "GetQueue",
+                "GetQueueAsync"
+              ]
+            },
+            "CreateQueue": {
+              "methods": [
+                "CreateQueue",
+                "CreateQueueAsync"
+              ]
+            },
+            "UpdateQueue": {
+              "methods": [
+                "UpdateQueue",
+                "UpdateQueueAsync"
+              ]
+            },
+            "DeleteQueue": {
+              "methods": [
+                "DeleteQueue",
+                "DeleteQueueAsync"
+              ]
+            },
+            "PurgeQueue": {
+              "methods": [
+                "PurgeQueue",
+                "PurgeQueueAsync"
+              ]
+            },
+            "PauseQueue": {
+              "methods": [
+                "PauseQueue",
+                "PauseQueueAsync"
+              ]
+            },
+            "ResumeQueue": {
+              "methods": [
+                "ResumeQueue",
+                "ResumeQueueAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "ListTasks": {
+              "methods": [
+                "ListTasks",
+                "ListTasksAsync"
+              ]
+            },
+            "GetTask": {
+              "methods": [
+                "GetTask",
+                "GetTaskAsync"
+              ]
+            },
+            "CreateTask": {
+              "methods": [
+                "CreateTask",
+                "CreateTaskAsync"
+              ]
+            },
+            "DeleteTask": {
+              "methods": [
+                "DeleteTask",
+                "DeleteTaskAsync"
+              ]
+            },
+            "RunTask": {
+              "methods": [
+                "RunTask",
+                "RunTaskAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

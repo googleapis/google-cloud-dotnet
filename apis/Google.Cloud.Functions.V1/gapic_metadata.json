@@ -1,0 +1,84 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.functions.v1",
+  "libraryPackage": "Google.Cloud.Functions.V1",
+  "services": {
+    "CloudFunctionsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudFunctionsServiceClient",
+          "rpcs": {
+            "ListFunctions": {
+              "methods": [
+                "ListFunctions",
+                "ListFunctionsAsync"
+              ]
+            },
+            "GetFunction": {
+              "methods": [
+                "GetFunction",
+                "GetFunctionAsync"
+              ]
+            },
+            "CreateFunction": {
+              "methods": [
+                "CreateFunction",
+                "CreateFunctionAsync"
+              ]
+            },
+            "UpdateFunction": {
+              "methods": [
+                "UpdateFunction",
+                "UpdateFunctionAsync"
+              ]
+            },
+            "DeleteFunction": {
+              "methods": [
+                "DeleteFunction",
+                "DeleteFunctionAsync"
+              ]
+            },
+            "CallFunction": {
+              "methods": [
+                "CallFunction",
+                "CallFunctionAsync"
+              ]
+            },
+            "GenerateUploadUrl": {
+              "methods": [
+                "GenerateUploadUrl",
+                "GenerateUploadUrlAsync"
+              ]
+            },
+            "GenerateDownloadUrl": {
+              "methods": [
+                "GenerateDownloadUrl",
+                "GenerateDownloadUrlAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

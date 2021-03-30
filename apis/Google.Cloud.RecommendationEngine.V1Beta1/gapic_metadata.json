@@ -1,0 +1,135 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.recommendationengine.v1beta1",
+  "libraryPackage": "Google.Cloud.RecommendationEngine.V1Beta1",
+  "services": {
+    "CatalogService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CatalogServiceClient",
+          "rpcs": {
+            "CreateCatalogItem": {
+              "methods": [
+                "CreateCatalogItem",
+                "CreateCatalogItemAsync"
+              ]
+            },
+            "GetCatalogItem": {
+              "methods": [
+                "GetCatalogItem",
+                "GetCatalogItemAsync"
+              ]
+            },
+            "ListCatalogItems": {
+              "methods": [
+                "ListCatalogItems",
+                "ListCatalogItemsAsync"
+              ]
+            },
+            "UpdateCatalogItem": {
+              "methods": [
+                "UpdateCatalogItem",
+                "UpdateCatalogItemAsync"
+              ]
+            },
+            "DeleteCatalogItem": {
+              "methods": [
+                "DeleteCatalogItem",
+                "DeleteCatalogItemAsync"
+              ]
+            },
+            "ImportCatalogItems": {
+              "methods": [
+                "ImportCatalogItems",
+                "ImportCatalogItemsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PredictionApiKeyRegistry": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PredictionApiKeyRegistryClient",
+          "rpcs": {
+            "CreatePredictionApiKeyRegistration": {
+              "methods": [
+                "CreatePredictionApiKeyRegistration",
+                "CreatePredictionApiKeyRegistrationAsync"
+              ]
+            },
+            "ListPredictionApiKeyRegistrations": {
+              "methods": [
+                "ListPredictionApiKeyRegistrations",
+                "ListPredictionApiKeyRegistrationsAsync"
+              ]
+            },
+            "DeletePredictionApiKeyRegistration": {
+              "methods": [
+                "DeletePredictionApiKeyRegistration",
+                "DeletePredictionApiKeyRegistrationAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PredictionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PredictionServiceClient",
+          "rpcs": {
+            "Predict": {
+              "methods": [
+                "Predict",
+                "PredictAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "UserEventService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "UserEventServiceClient",
+          "rpcs": {
+            "WriteUserEvent": {
+              "methods": [
+                "WriteUserEvent",
+                "WriteUserEventAsync"
+              ]
+            },
+            "CollectUserEvent": {
+              "methods": [
+                "CollectUserEvent",
+                "CollectUserEventAsync"
+              ]
+            },
+            "ListUserEvents": {
+              "methods": [
+                "ListUserEvents",
+                "ListUserEventsAsync"
+              ]
+            },
+            "PurgeUserEvents": {
+              "methods": [
+                "PurgeUserEvents",
+                "PurgeUserEventsAsync"
+              ]
+            },
+            "ImportUserEvents": {
+              "methods": [
+                "ImportUserEvents",
+                "ImportUserEventsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

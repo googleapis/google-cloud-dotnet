@@ -1,0 +1,132 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.notebooks.v1beta1",
+  "libraryPackage": "Google.Cloud.Notebooks.V1Beta1",
+  "services": {
+    "NotebookService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "NotebookServiceClient",
+          "rpcs": {
+            "ListInstances": {
+              "methods": [
+                "ListInstances",
+                "ListInstancesAsync"
+              ]
+            },
+            "GetInstance": {
+              "methods": [
+                "GetInstance",
+                "GetInstanceAsync"
+              ]
+            },
+            "CreateInstance": {
+              "methods": [
+                "CreateInstance",
+                "CreateInstanceAsync"
+              ]
+            },
+            "RegisterInstance": {
+              "methods": [
+                "RegisterInstance",
+                "RegisterInstanceAsync"
+              ]
+            },
+            "SetInstanceAccelerator": {
+              "methods": [
+                "SetInstanceAccelerator",
+                "SetInstanceAcceleratorAsync"
+              ]
+            },
+            "SetInstanceMachineType": {
+              "methods": [
+                "SetInstanceMachineType",
+                "SetInstanceMachineTypeAsync"
+              ]
+            },
+            "SetInstanceLabels": {
+              "methods": [
+                "SetInstanceLabels",
+                "SetInstanceLabelsAsync"
+              ]
+            },
+            "DeleteInstance": {
+              "methods": [
+                "DeleteInstance",
+                "DeleteInstanceAsync"
+              ]
+            },
+            "StartInstance": {
+              "methods": [
+                "StartInstance",
+                "StartInstanceAsync"
+              ]
+            },
+            "StopInstance": {
+              "methods": [
+                "StopInstance",
+                "StopInstanceAsync"
+              ]
+            },
+            "ResetInstance": {
+              "methods": [
+                "ResetInstance",
+                "ResetInstanceAsync"
+              ]
+            },
+            "ReportInstanceInfo": {
+              "methods": [
+                "ReportInstanceInfo",
+                "ReportInstanceInfoAsync"
+              ]
+            },
+            "IsInstanceUpgradeable": {
+              "methods": [
+                "IsInstanceUpgradeable",
+                "IsInstanceUpgradeableAsync"
+              ]
+            },
+            "UpgradeInstance": {
+              "methods": [
+                "UpgradeInstance",
+                "UpgradeInstanceAsync"
+              ]
+            },
+            "UpgradeInstanceInternal": {
+              "methods": [
+                "UpgradeInstanceInternal",
+                "UpgradeInstanceInternalAsync"
+              ]
+            },
+            "ListEnvironments": {
+              "methods": [
+                "ListEnvironments",
+                "ListEnvironmentsAsync"
+              ]
+            },
+            "GetEnvironment": {
+              "methods": [
+                "GetEnvironment",
+                "GetEnvironmentAsync"
+              ]
+            },
+            "CreateEnvironment": {
+              "methods": [
+                "CreateEnvironment",
+                "CreateEnvironmentAsync"
+              ]
+            },
+            "DeleteEnvironment": {
+              "methods": [
+                "DeleteEnvironment",
+                "DeleteEnvironmentAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

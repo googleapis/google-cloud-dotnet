@@ -1,0 +1,273 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.bigtable.admin.v2",
+  "libraryPackage": "Google.Cloud.Bigtable.Admin.V2",
+  "services": {
+    "BigtableInstanceAdmin": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "BigtableInstanceAdminClient",
+          "rpcs": {
+            "CreateInstance": {
+              "methods": [
+                "CreateInstance",
+                "CreateInstanceAsync"
+              ]
+            },
+            "GetInstance": {
+              "methods": [
+                "GetInstance",
+                "GetInstanceAsync"
+              ]
+            },
+            "ListInstances": {
+              "methods": [
+                "ListInstances",
+                "ListInstancesAsync"
+              ]
+            },
+            "UpdateInstance": {
+              "methods": [
+                "UpdateInstance",
+                "UpdateInstanceAsync"
+              ]
+            },
+            "PartialUpdateInstance": {
+              "methods": [
+                "PartialUpdateInstance",
+                "PartialUpdateInstanceAsync"
+              ]
+            },
+            "DeleteInstance": {
+              "methods": [
+                "DeleteInstance",
+                "DeleteInstanceAsync"
+              ]
+            },
+            "CreateCluster": {
+              "methods": [
+                "CreateCluster",
+                "CreateClusterAsync"
+              ]
+            },
+            "GetCluster": {
+              "methods": [
+                "GetCluster",
+                "GetClusterAsync"
+              ]
+            },
+            "ListClusters": {
+              "methods": [
+                "ListClusters",
+                "ListClustersAsync"
+              ]
+            },
+            "UpdateCluster": {
+              "methods": [
+                "UpdateCluster",
+                "UpdateClusterAsync"
+              ]
+            },
+            "DeleteCluster": {
+              "methods": [
+                "DeleteCluster",
+                "DeleteClusterAsync"
+              ]
+            },
+            "CreateAppProfile": {
+              "methods": [
+                "CreateAppProfile",
+                "CreateAppProfileAsync"
+              ]
+            },
+            "GetAppProfile": {
+              "methods": [
+                "GetAppProfile",
+                "GetAppProfileAsync"
+              ]
+            },
+            "ListAppProfiles": {
+              "methods": [
+                "ListAppProfiles",
+                "ListAppProfilesAsync"
+              ]
+            },
+            "UpdateAppProfile": {
+              "methods": [
+                "UpdateAppProfile",
+                "UpdateAppProfileAsync"
+              ]
+            },
+            "DeleteAppProfile": {
+              "methods": [
+                "DeleteAppProfile",
+                "DeleteAppProfileAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "BigtableTableAdmin": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "BigtableTableAdminClient",
+          "rpcs": {
+            "CreateTable": {
+              "methods": [
+                "CreateTable",
+                "CreateTableAsync"
+              ]
+            },
+            "CreateTableFromSnapshot": {
+              "methods": [
+                "CreateTableFromSnapshot",
+                "CreateTableFromSnapshotAsync"
+              ]
+            },
+            "ListTables": {
+              "methods": [
+                "ListTables",
+                "ListTablesAsync"
+              ]
+            },
+            "GetTable": {
+              "methods": [
+                "GetTable",
+                "GetTableAsync"
+              ]
+            },
+            "DeleteTable": {
+              "methods": [
+                "DeleteTable",
+                "DeleteTableAsync"
+              ]
+            },
+            "ModifyColumnFamilies": {
+              "methods": [
+                "ModifyColumnFamilies",
+                "ModifyColumnFamiliesAsync"
+              ]
+            },
+            "DropRowRange": {
+              "methods": [
+                "DropRowRange",
+                "DropRowRangeAsync"
+              ]
+            },
+            "GenerateConsistencyToken": {
+              "methods": [
+                "GenerateConsistencyToken",
+                "GenerateConsistencyTokenAsync"
+              ]
+            },
+            "CheckConsistency": {
+              "methods": [
+                "CheckConsistency",
+                "CheckConsistencyAsync"
+              ]
+            },
+            "SnapshotTable": {
+              "methods": [
+                "SnapshotTable",
+                "SnapshotTableAsync"
+              ]
+            },
+            "GetSnapshot": {
+              "methods": [
+                "GetSnapshot",
+                "GetSnapshotAsync"
+              ]
+            },
+            "ListSnapshots": {
+              "methods": [
+                "ListSnapshots",
+                "ListSnapshotsAsync"
+              ]
+            },
+            "DeleteSnapshot": {
+              "methods": [
+                "DeleteSnapshot",
+                "DeleteSnapshotAsync"
+              ]
+            },
+            "CreateBackup": {
+              "methods": [
+                "CreateBackup",
+                "CreateBackupAsync"
+              ]
+            },
+            "GetBackup": {
+              "methods": [
+                "GetBackup",
+                "GetBackupAsync"
+              ]
+            },
+            "UpdateBackup": {
+              "methods": [
+                "UpdateBackup",
+                "UpdateBackupAsync"
+              ]
+            },
+            "DeleteBackup": {
+              "methods": [
+                "DeleteBackup",
+                "DeleteBackupAsync"
+              ]
+            },
+            "ListBackups": {
+              "methods": [
+                "ListBackups",
+                "ListBackupsAsync"
+              ]
+            },
+            "RestoreTable": {
+              "methods": [
+                "RestoreTable",
+                "RestoreTableAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

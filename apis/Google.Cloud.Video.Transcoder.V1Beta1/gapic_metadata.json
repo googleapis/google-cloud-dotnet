@@ -1,0 +1,66 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.video.transcoder.v1beta1",
+  "libraryPackage": "Google.Cloud.Video.Transcoder.V1Beta1",
+  "services": {
+    "TranscoderService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TranscoderServiceClient",
+          "rpcs": {
+            "CreateJob": {
+              "methods": [
+                "CreateJob",
+                "CreateJobAsync"
+              ]
+            },
+            "ListJobs": {
+              "methods": [
+                "ListJobs",
+                "ListJobsAsync"
+              ]
+            },
+            "GetJob": {
+              "methods": [
+                "GetJob",
+                "GetJobAsync"
+              ]
+            },
+            "DeleteJob": {
+              "methods": [
+                "DeleteJob",
+                "DeleteJobAsync"
+              ]
+            },
+            "CreateJobTemplate": {
+              "methods": [
+                "CreateJobTemplate",
+                "CreateJobTemplateAsync"
+              ]
+            },
+            "ListJobTemplates": {
+              "methods": [
+                "ListJobTemplates",
+                "ListJobTemplatesAsync"
+              ]
+            },
+            "GetJobTemplate": {
+              "methods": [
+                "GetJobTemplate",
+                "GetJobTemplateAsync"
+              ]
+            },
+            "DeleteJobTemplate": {
+              "methods": [
+                "DeleteJobTemplate",
+                "DeleteJobTemplateAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

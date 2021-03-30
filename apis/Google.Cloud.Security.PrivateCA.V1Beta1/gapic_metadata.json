@@ -1,0 +1,138 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.security.privateca.v1beta1",
+  "libraryPackage": "Google.Cloud.Security.PrivateCA.V1Beta1",
+  "services": {
+    "CertificateAuthorityService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CertificateAuthorityServiceClient",
+          "rpcs": {
+            "CreateCertificate": {
+              "methods": [
+                "CreateCertificate",
+                "CreateCertificateAsync"
+              ]
+            },
+            "GetCertificate": {
+              "methods": [
+                "GetCertificate",
+                "GetCertificateAsync"
+              ]
+            },
+            "ListCertificates": {
+              "methods": [
+                "ListCertificates",
+                "ListCertificatesAsync"
+              ]
+            },
+            "RevokeCertificate": {
+              "methods": [
+                "RevokeCertificate",
+                "RevokeCertificateAsync"
+              ]
+            },
+            "UpdateCertificate": {
+              "methods": [
+                "UpdateCertificate",
+                "UpdateCertificateAsync"
+              ]
+            },
+            "ActivateCertificateAuthority": {
+              "methods": [
+                "ActivateCertificateAuthority",
+                "ActivateCertificateAuthorityAsync"
+              ]
+            },
+            "CreateCertificateAuthority": {
+              "methods": [
+                "CreateCertificateAuthority",
+                "CreateCertificateAuthorityAsync"
+              ]
+            },
+            "DisableCertificateAuthority": {
+              "methods": [
+                "DisableCertificateAuthority",
+                "DisableCertificateAuthorityAsync"
+              ]
+            },
+            "EnableCertificateAuthority": {
+              "methods": [
+                "EnableCertificateAuthority",
+                "EnableCertificateAuthorityAsync"
+              ]
+            },
+            "FetchCertificateAuthorityCsr": {
+              "methods": [
+                "FetchCertificateAuthorityCsr",
+                "FetchCertificateAuthorityCsrAsync"
+              ]
+            },
+            "GetCertificateAuthority": {
+              "methods": [
+                "GetCertificateAuthority",
+                "GetCertificateAuthorityAsync"
+              ]
+            },
+            "ListCertificateAuthorities": {
+              "methods": [
+                "ListCertificateAuthorities",
+                "ListCertificateAuthoritiesAsync"
+              ]
+            },
+            "RestoreCertificateAuthority": {
+              "methods": [
+                "RestoreCertificateAuthority",
+                "RestoreCertificateAuthorityAsync"
+              ]
+            },
+            "ScheduleDeleteCertificateAuthority": {
+              "methods": [
+                "ScheduleDeleteCertificateAuthority",
+                "ScheduleDeleteCertificateAuthorityAsync"
+              ]
+            },
+            "UpdateCertificateAuthority": {
+              "methods": [
+                "UpdateCertificateAuthority",
+                "UpdateCertificateAuthorityAsync"
+              ]
+            },
+            "GetCertificateRevocationList": {
+              "methods": [
+                "GetCertificateRevocationList",
+                "GetCertificateRevocationListAsync"
+              ]
+            },
+            "ListCertificateRevocationLists": {
+              "methods": [
+                "ListCertificateRevocationLists",
+                "ListCertificateRevocationListsAsync"
+              ]
+            },
+            "UpdateCertificateRevocationList": {
+              "methods": [
+                "UpdateCertificateRevocationList",
+                "UpdateCertificateRevocationListAsync"
+              ]
+            },
+            "GetReusableConfig": {
+              "methods": [
+                "GetReusableConfig",
+                "GetReusableConfigAsync"
+              ]
+            },
+            "ListReusableConfigs": {
+              "methods": [
+                "ListReusableConfigs",
+                "ListReusableConfigsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

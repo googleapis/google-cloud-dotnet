@@ -1,0 +1,72 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.redis.v1beta1",
+  "libraryPackage": "Google.Cloud.Redis.V1Beta1",
+  "services": {
+    "CloudRedis": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudRedisClient",
+          "rpcs": {
+            "ListInstances": {
+              "methods": [
+                "ListInstances",
+                "ListInstancesAsync"
+              ]
+            },
+            "GetInstance": {
+              "methods": [
+                "GetInstance",
+                "GetInstanceAsync"
+              ]
+            },
+            "CreateInstance": {
+              "methods": [
+                "CreateInstance",
+                "CreateInstanceAsync"
+              ]
+            },
+            "UpdateInstance": {
+              "methods": [
+                "UpdateInstance",
+                "UpdateInstanceAsync"
+              ]
+            },
+            "UpgradeInstance": {
+              "methods": [
+                "UpgradeInstance",
+                "UpgradeInstanceAsync"
+              ]
+            },
+            "ImportInstance": {
+              "methods": [
+                "ImportInstance",
+                "ImportInstanceAsync"
+              ]
+            },
+            "ExportInstance": {
+              "methods": [
+                "ExportInstance",
+                "ExportInstanceAsync"
+              ]
+            },
+            "FailoverInstance": {
+              "methods": [
+                "FailoverInstance",
+                "FailoverInstanceAsync"
+              ]
+            },
+            "DeleteInstance": {
+              "methods": [
+                "DeleteInstance",
+                "DeleteInstanceAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

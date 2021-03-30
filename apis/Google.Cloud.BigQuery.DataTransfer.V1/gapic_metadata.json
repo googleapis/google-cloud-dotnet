@@ -1,0 +1,102 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.bigquery.datatransfer.v1",
+  "libraryPackage": "Google.Cloud.BigQuery.DataTransfer.V1",
+  "services": {
+    "DataTransferService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataTransferServiceClient",
+          "rpcs": {
+            "GetDataSource": {
+              "methods": [
+                "GetDataSource",
+                "GetDataSourceAsync"
+              ]
+            },
+            "ListDataSources": {
+              "methods": [
+                "ListDataSources",
+                "ListDataSourcesAsync"
+              ]
+            },
+            "CreateTransferConfig": {
+              "methods": [
+                "CreateTransferConfig",
+                "CreateTransferConfigAsync"
+              ]
+            },
+            "UpdateTransferConfig": {
+              "methods": [
+                "UpdateTransferConfig",
+                "UpdateTransferConfigAsync"
+              ]
+            },
+            "DeleteTransferConfig": {
+              "methods": [
+                "DeleteTransferConfig",
+                "DeleteTransferConfigAsync"
+              ]
+            },
+            "GetTransferConfig": {
+              "methods": [
+                "GetTransferConfig",
+                "GetTransferConfigAsync"
+              ]
+            },
+            "ListTransferConfigs": {
+              "methods": [
+                "ListTransferConfigs",
+                "ListTransferConfigsAsync"
+              ]
+            },
+            "ScheduleTransferRuns": {
+              "methods": [
+                "ScheduleTransferRuns",
+                "ScheduleTransferRunsAsync"
+              ]
+            },
+            "StartManualTransferRuns": {
+              "methods": [
+                "StartManualTransferRuns",
+                "StartManualTransferRunsAsync"
+              ]
+            },
+            "GetTransferRun": {
+              "methods": [
+                "GetTransferRun",
+                "GetTransferRunAsync"
+              ]
+            },
+            "DeleteTransferRun": {
+              "methods": [
+                "DeleteTransferRun",
+                "DeleteTransferRunAsync"
+              ]
+            },
+            "ListTransferRuns": {
+              "methods": [
+                "ListTransferRuns",
+                "ListTransferRunsAsync"
+              ]
+            },
+            "ListTransferLogs": {
+              "methods": [
+                "ListTransferLogs",
+                "ListTransferLogsAsync"
+              ]
+            },
+            "CheckValidCreds": {
+              "methods": [
+                "CheckValidCreds",
+                "CheckValidCredsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

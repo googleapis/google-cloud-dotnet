@@ -1,0 +1,60 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.recaptchaenterprise.v1",
+  "libraryPackage": "Google.Cloud.RecaptchaEnterprise.V1",
+  "services": {
+    "RecaptchaEnterpriseService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RecaptchaEnterpriseServiceClient",
+          "rpcs": {
+            "CreateAssessment": {
+              "methods": [
+                "CreateAssessment",
+                "CreateAssessmentAsync"
+              ]
+            },
+            "AnnotateAssessment": {
+              "methods": [
+                "AnnotateAssessment",
+                "AnnotateAssessmentAsync"
+              ]
+            },
+            "CreateKey": {
+              "methods": [
+                "CreateKey",
+                "CreateKeyAsync"
+              ]
+            },
+            "ListKeys": {
+              "methods": [
+                "ListKeys",
+                "ListKeysAsync"
+              ]
+            },
+            "GetKey": {
+              "methods": [
+                "GetKey",
+                "GetKeyAsync"
+              ]
+            },
+            "UpdateKey": {
+              "methods": [
+                "UpdateKey",
+                "UpdateKeyAsync"
+              ]
+            },
+            "DeleteKey": {
+              "methods": [
+                "DeleteKey",
+                "DeleteKeyAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

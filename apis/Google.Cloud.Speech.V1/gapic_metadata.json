@@ -1,0 +1,36 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.speech.v1",
+  "libraryPackage": "Google.Cloud.Speech.V1",
+  "services": {
+    "Speech": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SpeechClient",
+          "rpcs": {
+            "Recognize": {
+              "methods": [
+                "Recognize",
+                "RecognizeAsync"
+              ]
+            },
+            "LongRunningRecognize": {
+              "methods": [
+                "LongRunningRecognize",
+                "LongRunningRecognizeAsync"
+              ]
+            },
+            "StreamingRecognize": {
+              "methods": [
+                "StreamingRecognize",
+                "StreamingRecognizeAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

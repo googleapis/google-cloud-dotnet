@@ -1,0 +1,66 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.recommender.v1",
+  "libraryPackage": "Google.Cloud.Recommender.V1",
+  "services": {
+    "Recommender": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RecommenderClient",
+          "rpcs": {
+            "ListInsights": {
+              "methods": [
+                "ListInsights",
+                "ListInsightsAsync"
+              ]
+            },
+            "GetInsight": {
+              "methods": [
+                "GetInsight",
+                "GetInsightAsync"
+              ]
+            },
+            "MarkInsightAccepted": {
+              "methods": [
+                "MarkInsightAccepted",
+                "MarkInsightAcceptedAsync"
+              ]
+            },
+            "ListRecommendations": {
+              "methods": [
+                "ListRecommendations",
+                "ListRecommendationsAsync"
+              ]
+            },
+            "GetRecommendation": {
+              "methods": [
+                "GetRecommendation",
+                "GetRecommendationAsync"
+              ]
+            },
+            "MarkRecommendationClaimed": {
+              "methods": [
+                "MarkRecommendationClaimed",
+                "MarkRecommendationClaimedAsync"
+              ]
+            },
+            "MarkRecommendationSucceeded": {
+              "methods": [
+                "MarkRecommendationSucceeded",
+                "MarkRecommendationSucceededAsync"
+              ]
+            },
+            "MarkRecommendationFailed": {
+              "methods": [
+                "MarkRecommendationFailed",
+                "MarkRecommendationFailedAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

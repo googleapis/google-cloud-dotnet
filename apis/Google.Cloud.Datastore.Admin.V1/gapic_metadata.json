@@ -1,0 +1,54 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.datastore.admin.v1",
+  "libraryPackage": "Google.Cloud.Datastore.Admin.V1",
+  "services": {
+    "DatastoreAdmin": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DatastoreAdminClient",
+          "rpcs": {
+            "ExportEntities": {
+              "methods": [
+                "ExportEntities",
+                "ExportEntitiesAsync"
+              ]
+            },
+            "ImportEntities": {
+              "methods": [
+                "ImportEntities",
+                "ImportEntitiesAsync"
+              ]
+            },
+            "CreateIndex": {
+              "methods": [
+                "CreateIndex",
+                "CreateIndexAsync"
+              ]
+            },
+            "DeleteIndex": {
+              "methods": [
+                "DeleteIndex",
+                "DeleteIndexAsync"
+              ]
+            },
+            "GetIndex": {
+              "methods": [
+                "GetIndex",
+                "GetIndexAsync"
+              ]
+            },
+            "ListIndexes": {
+              "methods": [
+                "ListIndexes",
+                "ListIndexesAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

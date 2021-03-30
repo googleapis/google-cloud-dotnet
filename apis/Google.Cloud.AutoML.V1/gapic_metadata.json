@@ -1,0 +1,147 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.automl.v1",
+  "libraryPackage": "Google.Cloud.AutoML.V1",
+  "services": {
+    "PredictionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PredictionServiceClient",
+          "rpcs": {
+            "Predict": {
+              "methods": [
+                "Predict",
+                "PredictAsync"
+              ]
+            },
+            "BatchPredict": {
+              "methods": [
+                "BatchPredict",
+                "BatchPredictAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "AutoMl": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AutoMlClient",
+          "rpcs": {
+            "CreateDataset": {
+              "methods": [
+                "CreateDataset",
+                "CreateDatasetAsync"
+              ]
+            },
+            "GetDataset": {
+              "methods": [
+                "GetDataset",
+                "GetDatasetAsync"
+              ]
+            },
+            "ListDatasets": {
+              "methods": [
+                "ListDatasets",
+                "ListDatasetsAsync"
+              ]
+            },
+            "UpdateDataset": {
+              "methods": [
+                "UpdateDataset",
+                "UpdateDatasetAsync"
+              ]
+            },
+            "DeleteDataset": {
+              "methods": [
+                "DeleteDataset",
+                "DeleteDatasetAsync"
+              ]
+            },
+            "ImportData": {
+              "methods": [
+                "ImportData",
+                "ImportDataAsync"
+              ]
+            },
+            "ExportData": {
+              "methods": [
+                "ExportData",
+                "ExportDataAsync"
+              ]
+            },
+            "GetAnnotationSpec": {
+              "methods": [
+                "GetAnnotationSpec",
+                "GetAnnotationSpecAsync"
+              ]
+            },
+            "CreateModel": {
+              "methods": [
+                "CreateModel",
+                "CreateModelAsync"
+              ]
+            },
+            "GetModel": {
+              "methods": [
+                "GetModel",
+                "GetModelAsync"
+              ]
+            },
+            "ListModels": {
+              "methods": [
+                "ListModels",
+                "ListModelsAsync"
+              ]
+            },
+            "DeleteModel": {
+              "methods": [
+                "DeleteModel",
+                "DeleteModelAsync"
+              ]
+            },
+            "UpdateModel": {
+              "methods": [
+                "UpdateModel",
+                "UpdateModelAsync"
+              ]
+            },
+            "DeployModel": {
+              "methods": [
+                "DeployModel",
+                "DeployModelAsync"
+              ]
+            },
+            "UndeployModel": {
+              "methods": [
+                "UndeployModel",
+                "UndeployModelAsync"
+              ]
+            },
+            "ExportModel": {
+              "methods": [
+                "ExportModel",
+                "ExportModelAsync"
+              ]
+            },
+            "GetModelEvaluation": {
+              "methods": [
+                "GetModelEvaluation",
+                "GetModelEvaluationAsync"
+              ]
+            },
+            "ListModelEvaluations": {
+              "methods": [
+                "ListModelEvaluations",
+                "ListModelEvaluationsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

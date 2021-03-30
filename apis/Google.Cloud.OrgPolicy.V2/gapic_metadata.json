@@ -1,0 +1,60 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.orgpolicy.v2",
+  "libraryPackage": "Google.Cloud.OrgPolicy.V2",
+  "services": {
+    "OrgPolicy": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "OrgPolicyClient",
+          "rpcs": {
+            "ListConstraints": {
+              "methods": [
+                "ListConstraints",
+                "ListConstraintsAsync"
+              ]
+            },
+            "ListPolicies": {
+              "methods": [
+                "ListPolicies",
+                "ListPoliciesAsync"
+              ]
+            },
+            "GetPolicy": {
+              "methods": [
+                "GetPolicy",
+                "GetPolicyAsync"
+              ]
+            },
+            "GetEffectivePolicy": {
+              "methods": [
+                "GetEffectivePolicy",
+                "GetEffectivePolicyAsync"
+              ]
+            },
+            "CreatePolicy": {
+              "methods": [
+                "CreatePolicy",
+                "CreatePolicyAsync"
+              ]
+            },
+            "UpdatePolicy": {
+              "methods": [
+                "UpdatePolicy",
+                "UpdatePolicyAsync"
+              ]
+            },
+            "DeletePolicy": {
+              "methods": [
+                "DeletePolicy",
+                "DeletePolicyAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

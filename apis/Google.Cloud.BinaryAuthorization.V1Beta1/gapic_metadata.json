@@ -1,0 +1,60 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.binaryauthorization.v1beta1",
+  "libraryPackage": "Google.Cloud.BinaryAuthorization.V1Beta1",
+  "services": {
+    "BinauthzManagementServiceV1Beta1": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "BinauthzManagementServiceV1Beta1Client",
+          "rpcs": {
+            "GetPolicy": {
+              "methods": [
+                "GetPolicy",
+                "GetPolicyAsync"
+              ]
+            },
+            "UpdatePolicy": {
+              "methods": [
+                "UpdatePolicy",
+                "UpdatePolicyAsync"
+              ]
+            },
+            "CreateAttestor": {
+              "methods": [
+                "CreateAttestor",
+                "CreateAttestorAsync"
+              ]
+            },
+            "GetAttestor": {
+              "methods": [
+                "GetAttestor",
+                "GetAttestorAsync"
+              ]
+            },
+            "UpdateAttestor": {
+              "methods": [
+                "UpdateAttestor",
+                "UpdateAttestorAsync"
+              ]
+            },
+            "ListAttestors": {
+              "methods": [
+                "ListAttestors",
+                "ListAttestorsAsync"
+              ]
+            },
+            "DeleteAttestor": {
+              "methods": [
+                "DeleteAttestor",
+                "DeleteAttestorAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

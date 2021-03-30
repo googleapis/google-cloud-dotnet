@@ -1,0 +1,132 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.iot.v1",
+  "libraryPackage": "Google.Cloud.Iot.V1",
+  "services": {
+    "DeviceManager": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DeviceManagerClient",
+          "rpcs": {
+            "CreateDeviceRegistry": {
+              "methods": [
+                "CreateDeviceRegistry",
+                "CreateDeviceRegistryAsync"
+              ]
+            },
+            "GetDeviceRegistry": {
+              "methods": [
+                "GetDeviceRegistry",
+                "GetDeviceRegistryAsync"
+              ]
+            },
+            "UpdateDeviceRegistry": {
+              "methods": [
+                "UpdateDeviceRegistry",
+                "UpdateDeviceRegistryAsync"
+              ]
+            },
+            "DeleteDeviceRegistry": {
+              "methods": [
+                "DeleteDeviceRegistry",
+                "DeleteDeviceRegistryAsync"
+              ]
+            },
+            "ListDeviceRegistries": {
+              "methods": [
+                "ListDeviceRegistries",
+                "ListDeviceRegistriesAsync"
+              ]
+            },
+            "CreateDevice": {
+              "methods": [
+                "CreateDevice",
+                "CreateDeviceAsync"
+              ]
+            },
+            "GetDevice": {
+              "methods": [
+                "GetDevice",
+                "GetDeviceAsync"
+              ]
+            },
+            "UpdateDevice": {
+              "methods": [
+                "UpdateDevice",
+                "UpdateDeviceAsync"
+              ]
+            },
+            "DeleteDevice": {
+              "methods": [
+                "DeleteDevice",
+                "DeleteDeviceAsync"
+              ]
+            },
+            "ListDevices": {
+              "methods": [
+                "ListDevices",
+                "ListDevicesAsync"
+              ]
+            },
+            "ModifyCloudToDeviceConfig": {
+              "methods": [
+                "ModifyCloudToDeviceConfig",
+                "ModifyCloudToDeviceConfigAsync"
+              ]
+            },
+            "ListDeviceConfigVersions": {
+              "methods": [
+                "ListDeviceConfigVersions",
+                "ListDeviceConfigVersionsAsync"
+              ]
+            },
+            "ListDeviceStates": {
+              "methods": [
+                "ListDeviceStates",
+                "ListDeviceStatesAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "SendCommandToDevice": {
+              "methods": [
+                "SendCommandToDevice",
+                "SendCommandToDeviceAsync"
+              ]
+            },
+            "BindDeviceToGateway": {
+              "methods": [
+                "BindDeviceToGateway",
+                "BindDeviceToGatewayAsync"
+              ]
+            },
+            "UnbindDeviceFromGateway": {
+              "methods": [
+                "UnbindDeviceFromGateway",
+                "UnbindDeviceFromGatewayAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

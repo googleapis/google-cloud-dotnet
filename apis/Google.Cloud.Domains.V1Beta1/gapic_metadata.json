@@ -1,0 +1,96 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.domains.v1beta1",
+  "libraryPackage": "Google.Cloud.Domains.V1Beta1",
+  "services": {
+    "Domains": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DomainsClient",
+          "rpcs": {
+            "SearchDomains": {
+              "methods": [
+                "SearchDomains",
+                "SearchDomainsAsync"
+              ]
+            },
+            "RetrieveRegisterParameters": {
+              "methods": [
+                "RetrieveRegisterParameters",
+                "RetrieveRegisterParametersAsync"
+              ]
+            },
+            "RegisterDomain": {
+              "methods": [
+                "RegisterDomain",
+                "RegisterDomainAsync"
+              ]
+            },
+            "ListRegistrations": {
+              "methods": [
+                "ListRegistrations",
+                "ListRegistrationsAsync"
+              ]
+            },
+            "GetRegistration": {
+              "methods": [
+                "GetRegistration",
+                "GetRegistrationAsync"
+              ]
+            },
+            "UpdateRegistration": {
+              "methods": [
+                "UpdateRegistration",
+                "UpdateRegistrationAsync"
+              ]
+            },
+            "ConfigureManagementSettings": {
+              "methods": [
+                "ConfigureManagementSettings",
+                "ConfigureManagementSettingsAsync"
+              ]
+            },
+            "ConfigureDnsSettings": {
+              "methods": [
+                "ConfigureDnsSettings",
+                "ConfigureDnsSettingsAsync"
+              ]
+            },
+            "ConfigureContactSettings": {
+              "methods": [
+                "ConfigureContactSettings",
+                "ConfigureContactSettingsAsync"
+              ]
+            },
+            "ExportRegistration": {
+              "methods": [
+                "ExportRegistration",
+                "ExportRegistrationAsync"
+              ]
+            },
+            "DeleteRegistration": {
+              "methods": [
+                "DeleteRegistration",
+                "DeleteRegistrationAsync"
+              ]
+            },
+            "RetrieveAuthorizationCode": {
+              "methods": [
+                "RetrieveAuthorizationCode",
+                "RetrieveAuthorizationCodeAsync"
+              ]
+            },
+            "ResetAuthorizationCode": {
+              "methods": [
+                "ResetAuthorizationCode",
+                "ResetAuthorizationCodeAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

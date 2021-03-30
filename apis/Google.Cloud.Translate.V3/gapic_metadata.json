@@ -1,0 +1,66 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.translation.v3",
+  "libraryPackage": "Google.Cloud.Translate.V3",
+  "services": {
+    "TranslationService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TranslationServiceClient",
+          "rpcs": {
+            "TranslateText": {
+              "methods": [
+                "TranslateText",
+                "TranslateTextAsync"
+              ]
+            },
+            "DetectLanguage": {
+              "methods": [
+                "DetectLanguage",
+                "DetectLanguageAsync"
+              ]
+            },
+            "GetSupportedLanguages": {
+              "methods": [
+                "GetSupportedLanguages",
+                "GetSupportedLanguagesAsync"
+              ]
+            },
+            "BatchTranslateText": {
+              "methods": [
+                "BatchTranslateText",
+                "BatchTranslateTextAsync"
+              ]
+            },
+            "CreateGlossary": {
+              "methods": [
+                "CreateGlossary",
+                "CreateGlossaryAsync"
+              ]
+            },
+            "ListGlossaries": {
+              "methods": [
+                "ListGlossaries",
+                "ListGlossariesAsync"
+              ]
+            },
+            "GetGlossary": {
+              "methods": [
+                "GetGlossary",
+                "GetGlossaryAsync"
+              ]
+            },
+            "DeleteGlossary": {
+              "methods": [
+                "DeleteGlossary",
+                "DeleteGlossaryAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

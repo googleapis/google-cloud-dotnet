@@ -1,0 +1,72 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.osconfig.v1",
+  "libraryPackage": "Google.Cloud.OsConfig.V1",
+  "services": {
+    "OsConfigService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "OsConfigServiceClient",
+          "rpcs": {
+            "ExecutePatchJob": {
+              "methods": [
+                "ExecutePatchJob",
+                "ExecutePatchJobAsync"
+              ]
+            },
+            "GetPatchJob": {
+              "methods": [
+                "GetPatchJob",
+                "GetPatchJobAsync"
+              ]
+            },
+            "CancelPatchJob": {
+              "methods": [
+                "CancelPatchJob",
+                "CancelPatchJobAsync"
+              ]
+            },
+            "ListPatchJobs": {
+              "methods": [
+                "ListPatchJobs",
+                "ListPatchJobsAsync"
+              ]
+            },
+            "ListPatchJobInstanceDetails": {
+              "methods": [
+                "ListPatchJobInstanceDetails",
+                "ListPatchJobInstanceDetailsAsync"
+              ]
+            },
+            "CreatePatchDeployment": {
+              "methods": [
+                "CreatePatchDeployment",
+                "CreatePatchDeploymentAsync"
+              ]
+            },
+            "GetPatchDeployment": {
+              "methods": [
+                "GetPatchDeployment",
+                "GetPatchDeploymentAsync"
+              ]
+            },
+            "ListPatchDeployments": {
+              "methods": [
+                "ListPatchDeployments",
+                "ListPatchDeploymentsAsync"
+              ]
+            },
+            "DeletePatchDeployment": {
+              "methods": [
+                "DeletePatchDeployment",
+                "DeletePatchDeploymentAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

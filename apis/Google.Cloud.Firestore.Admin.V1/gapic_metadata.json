@@ -1,0 +1,72 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.firestore.admin.v1",
+  "libraryPackage": "Google.Cloud.Firestore.Admin.V1",
+  "services": {
+    "FirestoreAdmin": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FirestoreAdminClient",
+          "rpcs": {
+            "CreateIndex": {
+              "methods": [
+                "CreateIndex",
+                "CreateIndexAsync"
+              ]
+            },
+            "ListIndexes": {
+              "methods": [
+                "ListIndexes",
+                "ListIndexesAsync"
+              ]
+            },
+            "GetIndex": {
+              "methods": [
+                "GetIndex",
+                "GetIndexAsync"
+              ]
+            },
+            "DeleteIndex": {
+              "methods": [
+                "DeleteIndex",
+                "DeleteIndexAsync"
+              ]
+            },
+            "GetField": {
+              "methods": [
+                "GetField",
+                "GetFieldAsync"
+              ]
+            },
+            "UpdateField": {
+              "methods": [
+                "UpdateField",
+                "UpdateFieldAsync"
+              ]
+            },
+            "ListFields": {
+              "methods": [
+                "ListFields",
+                "ListFieldsAsync"
+              ]
+            },
+            "ExportDocuments": {
+              "methods": [
+                "ExportDocuments",
+                "ExportDocumentsAsync"
+              ]
+            },
+            "ImportDocuments": {
+              "methods": [
+                "ImportDocuments",
+                "ImportDocumentsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.datacatalog.v1",
+  "libraryPackage": "Google.Cloud.DataCatalog.V1",
+  "services": {
+    "DataCatalog": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataCatalogClient",
+          "rpcs": {
+            "SearchCatalog": {
+              "methods": [
+                "SearchCatalog",
+                "SearchCatalogAsync"
+              ]
+            },
+            "CreateEntryGroup": {
+              "methods": [
+                "CreateEntryGroup",
+                "CreateEntryGroupAsync"
+              ]
+            },
+            "GetEntryGroup": {
+              "methods": [
+                "GetEntryGroup",
+                "GetEntryGroupAsync"
+              ]
+            },
+            "UpdateEntryGroup": {
+              "methods": [
+                "UpdateEntryGroup",
+                "UpdateEntryGroupAsync"
+              ]
+            },
+            "DeleteEntryGroup": {
+              "methods": [
+                "DeleteEntryGroup",
+                "DeleteEntryGroupAsync"
+              ]
+            },
+            "ListEntryGroups": {
+              "methods": [
+                "ListEntryGroups",
+                "ListEntryGroupsAsync"
+              ]
+            },
+            "CreateEntry": {
+              "methods": [
+                "CreateEntry",
+                "CreateEntryAsync"
+              ]
+            },
+            "UpdateEntry": {
+              "methods": [
+                "UpdateEntry",
+                "UpdateEntryAsync"
+              ]
+            },
+            "DeleteEntry": {
+              "methods": [
+                "DeleteEntry",
+                "DeleteEntryAsync"
+              ]
+            },
+            "GetEntry": {
+              "methods": [
+                "GetEntry",
+                "GetEntryAsync"
+              ]
+            },
+            "LookupEntry": {
+              "methods": [
+                "LookupEntry",
+                "LookupEntryAsync"
+              ]
+            },
+            "ListEntries": {
+              "methods": [
+                "ListEntries",
+                "ListEntriesAsync"
+              ]
+            },
+            "CreateTagTemplate": {
+              "methods": [
+                "CreateTagTemplate",
+                "CreateTagTemplateAsync"
+              ]
+            },
+            "GetTagTemplate": {
+              "methods": [
+                "GetTagTemplate",
+                "GetTagTemplateAsync"
+              ]
+            },
+            "UpdateTagTemplate": {
+              "methods": [
+                "UpdateTagTemplate",
+                "UpdateTagTemplateAsync"
+              ]
+            },
+            "DeleteTagTemplate": {
+              "methods": [
+                "DeleteTagTemplate",
+                "DeleteTagTemplateAsync"
+              ]
+            },
+            "CreateTagTemplateField": {
+              "methods": [
+                "CreateTagTemplateField",
+                "CreateTagTemplateFieldAsync"
+              ]
+            },
+            "UpdateTagTemplateField": {
+              "methods": [
+                "UpdateTagTemplateField",
+                "UpdateTagTemplateFieldAsync"
+              ]
+            },
+            "RenameTagTemplateField": {
+              "methods": [
+                "RenameTagTemplateField",
+                "RenameTagTemplateFieldAsync"
+              ]
+            },
+            "RenameTagTemplateFieldEnumValue": {
+              "methods": [
+                "RenameTagTemplateFieldEnumValue",
+                "RenameTagTemplateFieldEnumValueAsync"
+              ]
+            },
+            "DeleteTagTemplateField": {
+              "methods": [
+                "DeleteTagTemplateField",
+                "DeleteTagTemplateFieldAsync"
+              ]
+            },
+            "CreateTag": {
+              "methods": [
+                "CreateTag",
+                "CreateTagAsync"
+              ]
+            },
+            "UpdateTag": {
+              "methods": [
+                "UpdateTag",
+                "UpdateTagAsync"
+              ]
+            },
+            "DeleteTag": {
+              "methods": [
+                "DeleteTag",
+                "DeleteTagAsync"
+              ]
+            },
+            "ListTags": {
+              "methods": [
+                "ListTags",
+                "ListTagsAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PolicyTagManager": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PolicyTagManagerClient",
+          "rpcs": {
+            "CreateTaxonomy": {
+              "methods": [
+                "CreateTaxonomy",
+                "CreateTaxonomyAsync"
+              ]
+            },
+            "DeleteTaxonomy": {
+              "methods": [
+                "DeleteTaxonomy",
+                "DeleteTaxonomyAsync"
+              ]
+            },
+            "UpdateTaxonomy": {
+              "methods": [
+                "UpdateTaxonomy",
+                "UpdateTaxonomyAsync"
+              ]
+            },
+            "ListTaxonomies": {
+              "methods": [
+                "ListTaxonomies",
+                "ListTaxonomiesAsync"
+              ]
+            },
+            "GetTaxonomy": {
+              "methods": [
+                "GetTaxonomy",
+                "GetTaxonomyAsync"
+              ]
+            },
+            "CreatePolicyTag": {
+              "methods": [
+                "CreatePolicyTag",
+                "CreatePolicyTagAsync"
+              ]
+            },
+            "DeletePolicyTag": {
+              "methods": [
+                "DeletePolicyTag",
+                "DeletePolicyTagAsync"
+              ]
+            },
+            "UpdatePolicyTag": {
+              "methods": [
+                "UpdatePolicyTag",
+                "UpdatePolicyTagAsync"
+              ]
+            },
+            "ListPolicyTags": {
+              "methods": [
+                "ListPolicyTags",
+                "ListPolicyTagsAsync"
+              ]
+            },
+            "GetPolicyTag": {
+              "methods": [
+                "GetPolicyTag",
+                "GetPolicyTagAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PolicyTagManagerSerialization": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PolicyTagManagerSerializationClient",
+          "rpcs": {
+            "ImportTaxonomies": {
+              "methods": [
+                "ImportTaxonomies",
+                "ImportTaxonomiesAsync"
+              ]
+            },
+            "ExportTaxonomies": {
+              "methods": [
+                "ExportTaxonomies",
+                "ExportTaxonomiesAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

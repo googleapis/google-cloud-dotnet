@@ -1,0 +1,144 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.devtools.artifactregistry.v1beta2",
+  "libraryPackage": "Google.Cloud.ArtifactRegistry.V1Beta2",
+  "services": {
+    "ArtifactRegistry": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ArtifactRegistryClient",
+          "rpcs": {
+            "ListRepositories": {
+              "methods": [
+                "ListRepositories",
+                "ListRepositoriesAsync"
+              ]
+            },
+            "GetRepository": {
+              "methods": [
+                "GetRepository",
+                "GetRepositoryAsync"
+              ]
+            },
+            "CreateRepository": {
+              "methods": [
+                "CreateRepository",
+                "CreateRepositoryAsync"
+              ]
+            },
+            "UpdateRepository": {
+              "methods": [
+                "UpdateRepository",
+                "UpdateRepositoryAsync"
+              ]
+            },
+            "DeleteRepository": {
+              "methods": [
+                "DeleteRepository",
+                "DeleteRepositoryAsync"
+              ]
+            },
+            "ListPackages": {
+              "methods": [
+                "ListPackages",
+                "ListPackagesAsync"
+              ]
+            },
+            "GetPackage": {
+              "methods": [
+                "GetPackage",
+                "GetPackageAsync"
+              ]
+            },
+            "DeletePackage": {
+              "methods": [
+                "DeletePackage",
+                "DeletePackageAsync"
+              ]
+            },
+            "ListVersions": {
+              "methods": [
+                "ListVersions",
+                "ListVersionsAsync"
+              ]
+            },
+            "GetVersion": {
+              "methods": [
+                "GetVersion",
+                "GetVersionAsync"
+              ]
+            },
+            "DeleteVersion": {
+              "methods": [
+                "DeleteVersion",
+                "DeleteVersionAsync"
+              ]
+            },
+            "ListFiles": {
+              "methods": [
+                "ListFiles",
+                "ListFilesAsync"
+              ]
+            },
+            "GetFile": {
+              "methods": [
+                "GetFile",
+                "GetFileAsync"
+              ]
+            },
+            "ListTags": {
+              "methods": [
+                "ListTags",
+                "ListTagsAsync"
+              ]
+            },
+            "GetTag": {
+              "methods": [
+                "GetTag",
+                "GetTagAsync"
+              ]
+            },
+            "CreateTag": {
+              "methods": [
+                "CreateTag",
+                "CreateTagAsync"
+              ]
+            },
+            "UpdateTag": {
+              "methods": [
+                "UpdateTag",
+                "UpdateTagAsync"
+              ]
+            },
+            "DeleteTag": {
+              "methods": [
+                "DeleteTag",
+                "DeleteTagAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
