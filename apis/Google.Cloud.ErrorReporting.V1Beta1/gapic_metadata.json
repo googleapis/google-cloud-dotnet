@@ -5,27 +5,6 @@
   "protoPackage": "google.devtools.clouderrorreporting.v1beta1",
   "libraryPackage": "Google.Cloud.ErrorReporting.V1Beta1",
   "services": {
-    "ErrorGroupService": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "ErrorGroupServiceClient",
-          "rpcs": {
-            "GetGroup": {
-              "methods": [
-                "GetGroup",
-                "GetGroupAsync"
-              ]
-            },
-            "UpdateGroup": {
-              "methods": [
-                "UpdateGroup",
-                "UpdateGroupAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
     "ErrorStatsService": {
       "clients": {
         "grpc": {
@@ -47,6 +26,27 @@
               "methods": [
                 "DeleteEvents",
                 "DeleteEventsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ErrorGroupService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ErrorGroupServiceClient",
+          "rpcs": {
+            "GetGroup": {
+              "methods": [
+                "GetGroup",
+                "GetGroupAsync"
+              ]
+            },
+            "UpdateGroup": {
+              "methods": [
+                "UpdateGroup",
+                "UpdateGroupAsync"
               ]
             }
           }
