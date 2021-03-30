@@ -29,7 +29,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
             "LnByb3RvGixnb29nbGUvY2xvdWQvYmlncXVlcnkvc3RvcmFnZS92MS9hcnJv",
             "dy5wcm90bxorZ29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L3N0b3JhZ2UvdjEvYXZy",
-            "by5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLnBgoL",
+            "by5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byL4BwoL",
             "UmVhZFNlc3Npb24SEQoEbmFtZRgBIAEoCUID4EEDEjQKC2V4cGlyZV90aW1l",
             "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkYKC2Rh",
             "dGFfZm9ybWF0GAMgASgOMiwuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3Jh",
@@ -45,25 +45,29 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "4EEBEkIKB3N0cmVhbXMYCiADKAsyLC5nb29nbGUuY2xvdWQuYmlncXVlcnku",
             "c3RvcmFnZS52MS5SZWFkU3RyZWFtQgPgQQMaQwoOVGFibGVNb2RpZmllcnMS",
             "MQoNc25hcHNob3RfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXAaRAoQVGFibGVSZWFkT3B0aW9ucxIXCg9zZWxlY3RlZF9maWVsZHMY",
-            "ASADKAkSFwoPcm93X3Jlc3RyaWN0aW9uGAIgASgJOmvqQWgKKmJpZ3F1ZXJ5",
-            "c3RvcmFnZS5nb29nbGVhcGlzLmNvbS9SZWFkU2Vzc2lvbhI6cHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3Nlc3Npb25zL3tzZXNz",
-            "aW9ufUIICgZzY2hlbWEinAEKClJlYWRTdHJlYW0SEQoEbmFtZRgBIAEoCUID",
-            "4EEDOnvqQXgKKWJpZ3F1ZXJ5c3RvcmFnZS5nb29nbGVhcGlzLmNvbS9SZWFk",
-            "U3RyZWFtEktwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vc2Vzc2lvbnMve3Nlc3Npb259L3N0cmVhbXMve3N0cmVhbX0qPgoKRGF0",
-            "YUZvcm1hdBIbChdEQVRBX0ZPUk1BVF9VTlNQRUNJRklFRBAAEggKBEFWUk8Q",
-            "ARIJCgVBUlJPVxACQsQBCiRjb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0",
-            "b3JhZ2UudjFCC1N0cmVhbVByb3RvUAFaR2dvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmlncXVlcnkvc3RvcmFnZS92MTtz",
-            "dG9yYWdlqgIgR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LlN0b3JhZ2UuVjHKAiBH",
-            "b29nbGVcQ2xvdWRcQmlnUXVlcnlcU3RvcmFnZVxWMWIGcHJvdG8z"));
+            "c3RhbXAa1AEKEFRhYmxlUmVhZE9wdGlvbnMSFwoPc2VsZWN0ZWRfZmllbGRz",
+            "GAEgAygJEhcKD3Jvd19yZXN0cmljdGlvbhgCIAEoCRJnChthcnJvd19zZXJp",
+            "YWxpemF0aW9uX29wdGlvbnMYAyABKAsyOy5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkuc3RvcmFnZS52MS5BcnJvd1NlcmlhbGl6YXRpb25PcHRpb25zQgPgQQFI",
+            "AEIlCiNvdXRwdXRfZm9ybWF0X3NlcmlhbGl6YXRpb25fb3B0aW9uczpr6kFo",
+            "CipiaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vUmVhZFNlc3Npb24S",
+            "OnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9zZXNz",
+            "aW9ucy97c2Vzc2lvbn1CCAoGc2NoZW1hIpwBCgpSZWFkU3RyZWFtEhEKBG5h",
+            "bWUYASABKAlCA+BBAzp76kF4CiliaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBp",
+            "cy5jb20vUmVhZFN0cmVhbRJLcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L3Nlc3Npb25zL3tzZXNzaW9ufS9zdHJlYW1zL3tzdHJl",
+            "YW19Kj4KCkRhdGFGb3JtYXQSGwoXREFUQV9GT1JNQVRfVU5TUEVDSUZJRUQQ",
+            "ABIICgRBVlJPEAESCQoFQVJST1cQAkLEAQokY29tLmdvb2dsZS5jbG91ZC5i",
+            "aWdxdWVyeS5zdG9yYWdlLnYxQgtTdHJlYW1Qcm90b1ABWkdnb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2JpZ3F1ZXJ5L3N0",
+            "b3JhZ2UvdjE7c3RvcmFnZaoCIEdvb2dsZS5DbG91ZC5CaWdRdWVyeS5TdG9y",
+            "YWdlLlYxygIgR29vZ2xlXENsb3VkXEJpZ1F1ZXJ5XFN0b3JhZ2VcVjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.ArrowReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.AvroReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.Storage.V1.DataFormat), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Parser, new[]{ "Name", "ExpireTime", "DataFormat", "AvroSchema", "ArrowSchema", "Table", "TableModifiers", "ReadOptions", "Streams" }, new[]{ "Schema" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers.Parser, new[]{ "SnapshotTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Parser, new[]{ "SelectedFields", "RowRestriction" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Parser, new[]{ "SelectedFields", "RowRestriction", "ArrowSerializationOptions" }, new[]{ "OutputFormatSerializationOptions" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadStream), global::Google.Cloud.BigQuery.Storage.V1.ReadStream.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
@@ -166,9 +170,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     public const int ExpireTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
     /// <summary>
-    /// Output only. Time at which the session becomes invalid. After this time, subsequent
-    /// requests to read this Session will return errors. The expire_time is
-    /// automatically assigned and currently cannot be specified or updated.
+    /// Output only. Time at which the session becomes invalid. After this time,
+    /// subsequent requests to read this Session will return errors. The
+    /// expire_time is automatically assigned and currently cannot be specified or
+    /// updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
@@ -239,7 +244,8 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     public const int TableModifiersFieldNumber = 7;
     private global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers tableModifiers_;
     /// <summary>
-    /// Optional. Any modifiers which are applied when reading from the specified table.
+    /// Optional. Any modifiers which are applied when reading from the specified
+    /// table.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers TableModifiers {
@@ -886,6 +892,12 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         public TableReadOptions(TableReadOptions other) : this() {
           selectedFields_ = other.selectedFields_.Clone();
           rowRestriction_ = other.rowRestriction_;
+          switch (other.OutputFormatSerializationOptionsCase) {
+            case OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions:
+              ArrowSerializationOptions = other.ArrowSerializationOptions.Clone();
+              break;
+          }
+
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -922,6 +934,8 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         ///           "nullable_field is not NULL"
         ///           "st_equals(geo_field, st_geofromtext("POINT(2, 2)"))"
         ///           "numeric_field BETWEEN 1.0 AND 5.0"
+        ///
+        /// Restricted to a maximum length for 1 MB.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string RowRestriction {
@@ -929,6 +943,35 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           set {
             rowRestriction_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
+        }
+
+        /// <summary>Field number for the "arrow_serialization_options" field.</summary>
+        public const int ArrowSerializationOptionsFieldNumber = 3;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions ArrowSerializationOptions {
+          get { return outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions ? (global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions) outputFormatSerializationOptions_ : null; }
+          set {
+            outputFormatSerializationOptions_ = value;
+            outputFormatSerializationOptionsCase_ = value == null ? OutputFormatSerializationOptionsOneofCase.None : OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions;
+          }
+        }
+
+        private object outputFormatSerializationOptions_;
+        /// <summary>Enum of possible cases for the "output_format_serialization_options" oneof.</summary>
+        public enum OutputFormatSerializationOptionsOneofCase {
+          None = 0,
+          ArrowSerializationOptions = 3,
+        }
+        private OutputFormatSerializationOptionsOneofCase outputFormatSerializationOptionsCase_ = OutputFormatSerializationOptionsOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public OutputFormatSerializationOptionsOneofCase OutputFormatSerializationOptionsCase {
+          get { return outputFormatSerializationOptionsCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void ClearOutputFormatSerializationOptions() {
+          outputFormatSerializationOptionsCase_ = OutputFormatSerializationOptionsOneofCase.None;
+          outputFormatSerializationOptions_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -946,6 +989,8 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
           if(!selectedFields_.Equals(other.selectedFields_)) return false;
           if (RowRestriction != other.RowRestriction) return false;
+          if (!object.Equals(ArrowSerializationOptions, other.ArrowSerializationOptions)) return false;
+          if (OutputFormatSerializationOptionsCase != other.OutputFormatSerializationOptionsCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -954,6 +999,8 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           int hash = 1;
           hash ^= selectedFields_.GetHashCode();
           if (RowRestriction.Length != 0) hash ^= RowRestriction.GetHashCode();
+          if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions) hash ^= ArrowSerializationOptions.GetHashCode();
+          hash ^= (int) outputFormatSerializationOptionsCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -975,6 +1022,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             output.WriteRawTag(18);
             output.WriteString(RowRestriction);
           }
+          if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ArrowSerializationOptions);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -989,6 +1040,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             output.WriteRawTag(18);
             output.WriteString(RowRestriction);
           }
+          if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ArrowSerializationOptions);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1001,6 +1056,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           size += selectedFields_.CalculateSize(_repeated_selectedFields_codec);
           if (RowRestriction.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(RowRestriction);
+          }
+          if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArrowSerializationOptions);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1017,6 +1075,15 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           if (other.RowRestriction.Length != 0) {
             RowRestriction = other.RowRestriction;
           }
+          switch (other.OutputFormatSerializationOptionsCase) {
+            case OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions:
+              if (ArrowSerializationOptions == null) {
+                ArrowSerializationOptions = new global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions();
+              }
+              ArrowSerializationOptions.MergeFrom(other.ArrowSerializationOptions);
+              break;
+          }
+
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -1039,6 +1106,15 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
                 RowRestriction = input.ReadString();
                 break;
               }
+              case 26: {
+                global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions subBuilder = new global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions();
+                if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions) {
+                  subBuilder.MergeFrom(ArrowSerializationOptions);
+                }
+                input.ReadMessage(subBuilder);
+                ArrowSerializationOptions = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -1059,6 +1135,15 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
               }
               case 18: {
                 RowRestriction = input.ReadString();
+                break;
+              }
+              case 26: {
+                global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions subBuilder = new global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions();
+                if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions) {
+                  subBuilder.MergeFrom(ArrowSerializationOptions);
+                }
+                input.ReadMessage(subBuilder);
+                ArrowSerializationOptions = subBuilder;
                 break;
               }
             }
