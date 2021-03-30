@@ -5,21 +5,6 @@
   "protoPackage": "google.cloud.dataqna.v1alpha",
   "libraryPackage": "Google.Cloud.DataQnA.V1Alpha",
   "services": {
-    "AutoSuggestionService": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "AutoSuggestionServiceClient",
-          "rpcs": {
-            "SuggestQueries": {
-              "methods": [
-                "SuggestQueries",
-                "SuggestQueriesAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
     "QuestionService": {
       "clients": {
         "grpc": {
@@ -53,6 +38,21 @@
               "methods": [
                 "UpdateUserFeedback",
                 "UpdateUserFeedbackAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "AutoSuggestionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AutoSuggestionServiceClient",
+          "rpcs": {
+            "SuggestQueries": {
+              "methods": [
+                "SuggestQueries",
+                "SuggestQueriesAsync"
               ]
             }
           }
