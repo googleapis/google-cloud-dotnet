@@ -172,14 +172,14 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql();
 
-            const string connOptimizerVersion = "1";
-            const string envOptimizerVersion = "2";
+            var cmdOptimizerVersion = "3";
             // Optimizer version set at a command level has higher precedence
             // than version set through the connection or the environment
             // variable.
-            const string cmdOptimizerVersion = "3";
+            const string envOptimizerVersion = "2";
             RunActionWithEnvOptimizerVersion(() =>
             {
+                const string connOptimizerVersion = "1";
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
                 var queryOptions = QueryOptions.Empty.WithOptimizerVersion(connOptimizerVersion);
                 connection.QueryOptions = queryOptions;
