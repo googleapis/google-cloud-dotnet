@@ -28,24 +28,26 @@ namespace Google.Cloud.DataCatalog.V1 {
             "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEaH2dvb2dsZS9hcGkvZmllbGRf",
             "YmVoYXZpb3IucHJvdG8aKGdvb2dsZS9jbG91ZC9kYXRhY2F0YWxvZy92MS9j",
             "b21tb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i",
-            "tAIKE1NlYXJjaENhdGFsb2dSZXN1bHQSSQoSc2VhcmNoX3Jlc3VsdF90eXBl",
+            "gwMKE1NlYXJjaENhdGFsb2dSZXN1bHQSSQoSc2VhcmNoX3Jlc3VsdF90eXBl",
             "GAEgASgOMi0uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlNlYXJjaFJl",
             "c3VsdFR5cGUSHQoVc2VhcmNoX3Jlc3VsdF9zdWJ0eXBlGAIgASgJEh4KFnJl",
             "bGF0aXZlX3Jlc291cmNlX25hbWUYAyABKAkSFwoPbGlua2VkX3Jlc291cmNl",
-            "GAQgASgJEk8KEWludGVncmF0ZWRfc3lzdGVtGAggASgOMi0uZ29vZ2xlLmNs",
-            "b3VkLmRhdGFjYXRhbG9nLnYxLkludGVncmF0ZWRTeXN0ZW1CA+BBA0gAEh8K",
-            "FXVzZXJfc3BlY2lmaWVkX3N5c3RlbRgJIAEoCUgAQggKBnN5c3RlbSpkChBT",
-            "ZWFyY2hSZXN1bHRUeXBlEiIKHlNFQVJDSF9SRVNVTFRfVFlQRV9VTlNQRUNJ",
-            "RklFRBAAEgkKBUVOVFJZEAESEAoMVEFHX1RFTVBMQVRFEAISDwoLRU5UUllf",
-            "R1JPVVAQA0LLAQofY29tLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MVAB",
-            "WkZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
-            "L2RhdGFjYXRhbG9nL3YxO2RhdGFjYXRhbG9n+AEBqgIbR29vZ2xlLkNsb3Vk",
-            "LkRhdGFDYXRhbG9nLlYxygIbR29vZ2xlXENsb3VkXERhdGFDYXRhbG9nXFYx",
-            "6gIeR29vZ2xlOjpDbG91ZDo6RGF0YUNhdGFsb2c6OlYxYgZwcm90bzM="));
+            "GAQgASgJEi8KC21vZGlmeV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcBJPChFpbnRlZ3JhdGVkX3N5c3RlbRgIIAEoDjItLmdvb2ds",
+            "ZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5JbnRlZ3JhdGVkU3lzdGVtQgPgQQNI",
+            "ABIfChV1c2VyX3NwZWNpZmllZF9zeXN0ZW0YCSABKAlIABIcChRmdWxseV9x",
+            "dWFsaWZpZWRfbmFtZRgKIAEoCUIICgZzeXN0ZW0qZAoQU2VhcmNoUmVzdWx0",
+            "VHlwZRIiCh5TRUFSQ0hfUkVTVUxUX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVF",
+            "TlRSWRABEhAKDFRBR19URU1QTEFURRACEg8KC0VOVFJZX0dST1VQEANCywEK",
+            "H2NvbS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjFQAVpGZ29vZ2xlLmdv",
+            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kYXRhY2F0YWxv",
+            "Zy92MTtkYXRhY2F0YWxvZ/gBAaoCG0dvb2dsZS5DbG91ZC5EYXRhQ2F0YWxv",
+            "Zy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoCHkdvb2dsZTo6",
+            "Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DataCatalog.V1.SearchResultType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.SearchCatalogResult), global::Google.Cloud.DataCatalog.V1.SearchCatalogResult.Parser, new[]{ "SearchResultType", "SearchResultSubtype", "RelativeResourceName", "LinkedResource", "IntegratedSystem", "UserSpecifiedSystem" }, new[]{ "System" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.SearchCatalogResult), global::Google.Cloud.DataCatalog.V1.SearchCatalogResult.Parser, new[]{ "SearchResultType", "SearchResultSubtype", "RelativeResourceName", "LinkedResource", "ModifyTime", "IntegratedSystem", "UserSpecifiedSystem", "FullyQualifiedName" }, new[]{ "System" }, null, null, null)
           }));
     }
     #endregion
@@ -114,6 +116,8 @@ namespace Google.Cloud.DataCatalog.V1 {
       searchResultSubtype_ = other.searchResultSubtype_;
       relativeResourceName_ = other.relativeResourceName_;
       linkedResource_ = other.linkedResource_;
+      modifyTime_ = other.modifyTime_ != null ? other.modifyTime_.Clone() : null;
+      fullyQualifiedName_ = other.fullyQualifiedName_;
       switch (other.SystemCase) {
         case SystemOneofCase.IntegratedSystem:
           IntegratedSystem = other.IntegratedSystem;
@@ -199,6 +203,20 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
     }
 
+    /// <summary>Field number for the "modify_time" field.</summary>
+    public const int ModifyTimeFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp modifyTime_;
+    /// <summary>
+    /// Last-modified timestamp of the entry from the managing system.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ModifyTime {
+      get { return modifyTime_; }
+      set {
+        modifyTime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "integrated_system" field.</summary>
     public const int IntegratedSystemFieldNumber = 8;
     /// <summary>
@@ -226,6 +244,28 @@ namespace Google.Cloud.DataCatalog.V1 {
       set {
         system_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         systemCase_ = SystemOneofCase.UserSpecifiedSystem;
+      }
+    }
+
+    /// <summary>Field number for the "fully_qualified_name" field.</summary>
+    public const int FullyQualifiedNameFieldNumber = 10;
+    private string fullyQualifiedName_ = "";
+    /// <summary>
+    /// Fully Qualified Name of the resource.
+    /// There are two main forms of FQNs:
+    /// {system}:{project}.{dot-separated path to resource}
+    ///     for non-regionalized resources
+    /// {system}:{project}.{location id}.{dot-separated path to resource}
+    ///     for regionalized resources
+    /// Examples:
+    /// * dataproc_metastore:projectId.locationId.instanceId.databaseId.tableId
+    /// * bigquery:table.project_id.dataset_id.table_id
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string FullyQualifiedName {
+      get { return fullyQualifiedName_; }
+      set {
+        fullyQualifiedName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -265,8 +305,10 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (SearchResultSubtype != other.SearchResultSubtype) return false;
       if (RelativeResourceName != other.RelativeResourceName) return false;
       if (LinkedResource != other.LinkedResource) return false;
+      if (!object.Equals(ModifyTime, other.ModifyTime)) return false;
       if (IntegratedSystem != other.IntegratedSystem) return false;
       if (UserSpecifiedSystem != other.UserSpecifiedSystem) return false;
+      if (FullyQualifiedName != other.FullyQualifiedName) return false;
       if (SystemCase != other.SystemCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -278,8 +320,10 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (SearchResultSubtype.Length != 0) hash ^= SearchResultSubtype.GetHashCode();
       if (RelativeResourceName.Length != 0) hash ^= RelativeResourceName.GetHashCode();
       if (LinkedResource.Length != 0) hash ^= LinkedResource.GetHashCode();
+      if (modifyTime_ != null) hash ^= ModifyTime.GetHashCode();
       if (systemCase_ == SystemOneofCase.IntegratedSystem) hash ^= IntegratedSystem.GetHashCode();
       if (systemCase_ == SystemOneofCase.UserSpecifiedSystem) hash ^= UserSpecifiedSystem.GetHashCode();
+      if (FullyQualifiedName.Length != 0) hash ^= FullyQualifiedName.GetHashCode();
       hash ^= (int) systemCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -313,6 +357,10 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(34);
         output.WriteString(LinkedResource);
       }
+      if (modifyTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ModifyTime);
+      }
       if (systemCase_ == SystemOneofCase.IntegratedSystem) {
         output.WriteRawTag(64);
         output.WriteEnum((int) IntegratedSystem);
@@ -320,6 +368,10 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (systemCase_ == SystemOneofCase.UserSpecifiedSystem) {
         output.WriteRawTag(74);
         output.WriteString(UserSpecifiedSystem);
+      }
+      if (FullyQualifiedName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(FullyQualifiedName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -346,6 +398,10 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(34);
         output.WriteString(LinkedResource);
       }
+      if (modifyTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ModifyTime);
+      }
       if (systemCase_ == SystemOneofCase.IntegratedSystem) {
         output.WriteRawTag(64);
         output.WriteEnum((int) IntegratedSystem);
@@ -353,6 +409,10 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (systemCase_ == SystemOneofCase.UserSpecifiedSystem) {
         output.WriteRawTag(74);
         output.WriteString(UserSpecifiedSystem);
+      }
+      if (FullyQualifiedName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(FullyQualifiedName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -375,11 +435,17 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (LinkedResource.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LinkedResource);
       }
+      if (modifyTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModifyTime);
+      }
       if (systemCase_ == SystemOneofCase.IntegratedSystem) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IntegratedSystem);
       }
       if (systemCase_ == SystemOneofCase.UserSpecifiedSystem) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserSpecifiedSystem);
+      }
+      if (FullyQualifiedName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FullyQualifiedName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -403,6 +469,15 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       if (other.LinkedResource.Length != 0) {
         LinkedResource = other.LinkedResource;
+      }
+      if (other.modifyTime_ != null) {
+        if (modifyTime_ == null) {
+          ModifyTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ModifyTime.MergeFrom(other.ModifyTime);
+      }
+      if (other.FullyQualifiedName.Length != 0) {
+        FullyQualifiedName = other.FullyQualifiedName;
       }
       switch (other.SystemCase) {
         case SystemOneofCase.IntegratedSystem:
@@ -443,6 +518,13 @@ namespace Google.Cloud.DataCatalog.V1 {
             LinkedResource = input.ReadString();
             break;
           }
+          case 58: {
+            if (modifyTime_ == null) {
+              ModifyTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ModifyTime);
+            break;
+          }
           case 64: {
             system_ = input.ReadEnum();
             systemCase_ = SystemOneofCase.IntegratedSystem;
@@ -450,6 +532,10 @@ namespace Google.Cloud.DataCatalog.V1 {
           }
           case 74: {
             UserSpecifiedSystem = input.ReadString();
+            break;
+          }
+          case 82: {
+            FullyQualifiedName = input.ReadString();
             break;
           }
         }
@@ -482,6 +568,13 @@ namespace Google.Cloud.DataCatalog.V1 {
             LinkedResource = input.ReadString();
             break;
           }
+          case 58: {
+            if (modifyTime_ == null) {
+              ModifyTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ModifyTime);
+            break;
+          }
           case 64: {
             system_ = input.ReadEnum();
             systemCase_ = SystemOneofCase.IntegratedSystem;
@@ -489,6 +582,10 @@ namespace Google.Cloud.DataCatalog.V1 {
           }
           case 74: {
             UserSpecifiedSystem = input.ReadString();
+            break;
+          }
+          case 82: {
+            FullyQualifiedName = input.ReadString();
             break;
           }
         }

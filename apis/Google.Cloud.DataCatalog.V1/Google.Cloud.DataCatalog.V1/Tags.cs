@@ -50,34 +50,35 @@ namespace Google.Cloud.DataCatalog.V1 {
             "bG91ZC5kYXRhY2F0YWxvZy52MS5UYWdUZW1wbGF0ZUZpZWxkOgI4ATpw6kFt",
             "CiZkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9UYWdUZW1wbGF0ZRJDcHJv",
             "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3RhZ1RlbXBs",
-            "YXRlcy97dGFnX3RlbXBsYXRlfSKiAgoQVGFnVGVtcGxhdGVGaWVsZBIRCgRu",
+            "YXRlcy97dGFnX3RlbXBsYXRlfSK3AgoQVGFnVGVtcGxhdGVGaWVsZBIRCgRu",
             "YW1lGAYgASgJQgPgQQMSFAoMZGlzcGxheV9uYW1lGAEgASgJEjkKBHR5cGUY",
             "AiABKAsyJi5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRmllbGRUeXBl",
-            "QgPgQQISEwoLaXNfcmVxdWlyZWQYAyABKAgSDQoFb3JkZXIYBSABKAU6hQHq",
-            "QYEBCitkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbS9UYWdUZW1wbGF0ZUZp",
-            "ZWxkElJwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "dGFnVGVtcGxhdGVzL3t0YWdfdGVtcGxhdGV9L2ZpZWxkcy97ZmllbGR9IpgD",
-            "CglGaWVsZFR5cGUSTgoOcHJpbWl0aXZlX3R5cGUYASABKA4yNC5nb29nbGUu",
-            "Y2xvdWQuZGF0YWNhdGFsb2cudjEuRmllbGRUeXBlLlByaW1pdGl2ZVR5cGVI",
-            "ABJECgllbnVtX3R5cGUYAiABKAsyLy5nb29nbGUuY2xvdWQuZGF0YWNhdGFs",
-            "b2cudjEuRmllbGRUeXBlLkVudW1UeXBlSAAahQEKCEVudW1UeXBlElEKDmFs",
-            "bG93ZWRfdmFsdWVzGAEgAygLMjkuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9n",
-            "LnYxLkZpZWxkVHlwZS5FbnVtVHlwZS5FbnVtVmFsdWUaJgoJRW51bVZhbHVl",
-            "EhkKDGRpc3BsYXlfbmFtZRgBIAEoCUID4EECImAKDVByaW1pdGl2ZVR5cGUS",
-            "HgoaUFJJTUlUSVZFX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZET1VCTEUQARIK",
-            "CgZTVFJJTkcQAhIICgRCT09MEAMSDQoJVElNRVNUQU1QEARCCwoJdHlwZV9k",
-            "ZWNsQssBCh9jb20uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxUAFaRmdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGF0",
-            "YWNhdGFsb2cvdjE7ZGF0YWNhdGFsb2f4AQGqAhtHb29nbGUuQ2xvdWQuRGF0",
-            "YUNhdGFsb2cuVjHKAhtHb29nbGVcQ2xvdWRcRGF0YUNhdGFsb2dcVjHqAh5H",
-            "b29nbGU6OkNsb3VkOjpEYXRhQ2F0YWxvZzo6VjFiBnByb3RvMw=="));
+            "QgPgQQISEwoLaXNfcmVxdWlyZWQYAyABKAgSEwoLZGVzY3JpcHRpb24YBCAB",
+            "KAkSDQoFb3JkZXIYBSABKAU6hQHqQYEBCitkYXRhY2F0YWxvZy5nb29nbGVh",
+            "cGlzLmNvbS9UYWdUZW1wbGF0ZUZpZWxkElJwcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL3tsb2NhdGlvbn0vdGFnVGVtcGxhdGVzL3t0YWdfdGVtcGxh",
+            "dGV9L2ZpZWxkcy97ZmllbGR9IpgDCglGaWVsZFR5cGUSTgoOcHJpbWl0aXZl",
+            "X3R5cGUYASABKA4yNC5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRmll",
+            "bGRUeXBlLlByaW1pdGl2ZVR5cGVIABJECgllbnVtX3R5cGUYAiABKAsyLy5n",
+            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuRmllbGRUeXBlLkVudW1UeXBl",
+            "SAAahQEKCEVudW1UeXBlElEKDmFsbG93ZWRfdmFsdWVzGAEgAygLMjkuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkZpZWxkVHlwZS5FbnVtVHlwZS5F",
+            "bnVtVmFsdWUaJgoJRW51bVZhbHVlEhkKDGRpc3BsYXlfbmFtZRgBIAEoCUID",
+            "4EECImAKDVByaW1pdGl2ZVR5cGUSHgoaUFJJTUlUSVZFX1RZUEVfVU5TUEVD",
+            "SUZJRUQQABIKCgZET1VCTEUQARIKCgZTVFJJTkcQAhIICgRCT09MEAMSDQoJ",
+            "VElNRVNUQU1QEARCCwoJdHlwZV9kZWNsQssBCh9jb20uZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFjYXRhbG9nLnYxUAFaRmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvY2xvdWQvZGF0YWNhdGFsb2cvdjE7ZGF0YWNhdGFsb2f4",
+            "AQGqAhtHb29nbGUuQ2xvdWQuRGF0YUNhdGFsb2cuVjHKAhtHb29nbGVcQ2xv",
+            "dWRcRGF0YUNhdGFsb2dcVjHqAh5Hb29nbGU6OkNsb3VkOjpEYXRhQ2F0YWxv",
+            "Zzo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.Tag), global::Google.Cloud.DataCatalog.V1.Tag.Parser, new[]{ "Name", "Template", "TemplateDisplayName", "Column", "Fields" }, new[]{ "Scope" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagField), global::Google.Cloud.DataCatalog.V1.TagField.Parser, new[]{ "DisplayName", "DoubleValue", "StringValue", "BoolValue", "TimestampValue", "EnumValue", "Order" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagField.Types.EnumValue), global::Google.Cloud.DataCatalog.V1.TagField.Types.EnumValue.Parser, new[]{ "DisplayName" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagTemplate), global::Google.Cloud.DataCatalog.V1.TagTemplate.Parser, new[]{ "Name", "DisplayName", "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagTemplateField), global::Google.Cloud.DataCatalog.V1.TagTemplateField.Parser, new[]{ "Name", "DisplayName", "Type", "IsRequired", "Order" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TagTemplateField), global::Google.Cloud.DataCatalog.V1.TagTemplateField.Parser, new[]{ "Name", "DisplayName", "Type", "IsRequired", "Description", "Order" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.FieldType), global::Google.Cloud.DataCatalog.V1.FieldType.Parser, new[]{ "PrimitiveType", "EnumType" }, new[]{ "TypeDecl" }, new[]{ typeof(global::Google.Cloud.DataCatalog.V1.FieldType.Types.PrimitiveType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType), global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType.Parser, new[]{ "AllowedValues" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType.Types.EnumValue), global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType.Types.EnumValue.Parser, new[]{ "DisplayName" }, null, null, null, null)})})
           }));
     }
@@ -146,10 +147,12 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>
     /// The resource name of the tag in URL format. Example:
     ///
-    /// * projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id}
+    /// `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id}`
     ///
     /// where `tag_id` is a system-generated identifier.
-    /// Note that this Tag may not actually be stored in the location in this name.
+    ///
+    /// Note: The tag itself might not be stored in the location specified in its
+    /// name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -165,7 +168,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>
     /// Required. The resource name of the tag template that this tag uses. Example:
     ///
-    /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}
+    /// `projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}`
     ///
     /// This field cannot be modified after creation.
     /// </summary>
@@ -194,13 +197,11 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "column" field.</summary>
     public const int ColumnFieldNumber = 4;
     /// <summary>
-    /// Resources like Entry can have schemas associated with them. This scope
+    /// Resources like entry can have schemas associated with them. This scope
     /// allows users to attach tags to an individual column based on that schema.
     ///
-    /// For attaching a tag to a nested column, use `.` to separate the column
-    /// names. Example:
-    ///
-    /// * `outer_column.inner_column`
+    /// To attach a tag to a nested column, separate column names with a dot
+    /// (`.`). Example: `column.nested_column`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Column {
@@ -551,6 +552,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int StringValueFieldNumber = 3;
     /// <summary>
     /// Holds the value for a tag field with string type.
+    /// The maximum length is 2000 UTF-8 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string StringValue {
@@ -1183,10 +1185,10 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>
     /// The resource name of the tag template in URL format. Example:
     ///
-    /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}
+    /// `projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}`
     ///
-    /// Note that this TagTemplate and its child resources may not actually be
-    /// stored in the location in this name.
+    /// Note: The tag template itself and its child resources might not be
+    /// stored in the location specified in its name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1200,7 +1202,11 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// The display name for this template. Defaults to an empty string.
+    /// Display name for this template. Defaults to an empty string.
+    ///
+    /// The name must contain only Unicode letters, numbers (0-9), underscores (_),
+    /// dashes (-), spaces ( ), and can't start or end with spaces.
+    /// The maximum length is 200 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DisplayName {
@@ -1427,6 +1433,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       displayName_ = other.displayName_;
       type_ = other.type_ != null ? other.type_.Clone() : null;
       isRequired_ = other.isRequired_;
+      description_ = other.description_;
       order_ = other.order_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1442,10 +1449,14 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>
     /// Output only. The resource name of the tag template field in URL format. Example:
     ///
-    /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template}/fields/{field}
+    /// `projects/{project_id}/locations/{location}/tagTemplates/{tag_template}/fields/{field}`
     ///
-    /// Note that this TagTemplateField may not actually be stored in the location
-    /// in this name.
+    /// Note: The `TagTemplateField` itself might not be stored in the location
+    /// specified in its name.
+    ///
+    /// The name must contain only letters (a-z, A-Z), numbers (0-9),
+    /// or underscores (_), and must start with a letter or underscore.
+    /// The maximum length is 64 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1460,6 +1471,10 @@ namespace Google.Cloud.DataCatalog.V1 {
     private string displayName_ = "";
     /// <summary>
     /// The display name for this field. Defaults to an empty string.
+    ///
+    /// The name must contain only Unicode letters, numbers (0-9), underscores (_),
+    /// dashes (-), spaces ( ), and can't start or end with spaces.
+    /// The maximum length is 200 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DisplayName {
@@ -1497,6 +1512,20 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
     }
 
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 4;
+    private string description_ = "";
+    /// <summary>
+    /// The description for this field. Defaults to an empty string.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "order" field.</summary>
     public const int OrderFieldNumber = 5;
     private int order_;
@@ -1531,6 +1560,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (DisplayName != other.DisplayName) return false;
       if (!object.Equals(Type, other.Type)) return false;
       if (IsRequired != other.IsRequired) return false;
+      if (Description != other.Description) return false;
       if (Order != other.Order) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1542,6 +1572,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (type_ != null) hash ^= Type.GetHashCode();
       if (IsRequired != false) hash ^= IsRequired.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (Order != 0) hash ^= Order.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1570,6 +1601,10 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (IsRequired != false) {
         output.WriteRawTag(24);
         output.WriteBool(IsRequired);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Description);
       }
       if (Order != 0) {
         output.WriteRawTag(40);
@@ -1600,6 +1635,10 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(24);
         output.WriteBool(IsRequired);
       }
+      if (Description.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Description);
+      }
       if (Order != 0) {
         output.WriteRawTag(40);
         output.WriteInt32(Order);
@@ -1629,6 +1668,9 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (IsRequired != false) {
         size += 1 + 1;
       }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
       if (Order != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Order);
       }
@@ -1657,6 +1699,9 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       if (other.IsRequired != false) {
         IsRequired = other.IsRequired;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
       }
       if (other.Order != 0) {
         Order = other.Order;
@@ -1688,6 +1733,10 @@ namespace Google.Cloud.DataCatalog.V1 {
           }
           case 24: {
             IsRequired = input.ReadBool();
+            break;
+          }
+          case 34: {
+            Description = input.ReadString();
             break;
           }
           case 40: {
@@ -1725,6 +1774,10 @@ namespace Google.Cloud.DataCatalog.V1 {
           }
           case 24: {
             IsRequired = input.ReadBool();
+            break;
+          }
+          case 34: {
+            Description = input.ReadString();
             break;
           }
           case 40: {
@@ -2071,12 +2124,15 @@ namespace Google.Cloud.DataCatalog.V1 {
             = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType.Types.EnumValue.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType.Types.EnumValue> allowedValues_ = new pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType.Types.EnumValue>();
         /// <summary>
-        /// Required on create; optional on update. The set of allowed values for
-        /// this enum. This set must not be empty, the display names of the values in
-        /// this set must not be empty and the display names of the values must be
-        /// case-insensitively unique within this set. Currently, enum values can
-        /// only be added to the list of allowed values. Deletion and renaming of
-        /// enum values are not supported. Can have up to 500 allowed values.
+        /// The set of allowed values for this enum.
+        ///
+        /// This set must not be empty and can include up to 100 allowed values.
+        /// The display names of the values in this set must not be empty and must
+        /// be case-insensitively unique within this set.
+        ///
+        /// The order of items in this set is preserved. This field can be used to
+        /// create, remove and reorder enum values. To rename enum values, use the
+        /// `RenameTagTemplateFieldEnumValue` method.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.FieldType.Types.EnumType.Types.EnumValue> AllowedValues {
@@ -2241,6 +2297,10 @@ namespace Google.Cloud.DataCatalog.V1 {
             private string displayName_ = "";
             /// <summary>
             /// Required. The display name of the enum value. Must not be an empty string.
+            ///
+            /// The name must contain only Unicode letters, numbers (0-9), underscores
+            /// (_), dashes (-), spaces ( ), and can't start or end with spaces. The
+            /// maximum length is 200 characters.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public string DisplayName {

@@ -3,7 +3,7 @@
 //     source: google/cloud/datacatalog/v1/datacatalog.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -58,6 +58,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.TagTemplateField> __Marshaller_google_cloud_datacatalog_v1_TagTemplateField = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.TagTemplateField.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.UpdateTagTemplateFieldRequest> __Marshaller_google_cloud_datacatalog_v1_UpdateTagTemplateFieldRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.UpdateTagTemplateFieldRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldRequest> __Marshaller_google_cloud_datacatalog_v1_RenameTagTemplateFieldRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest> __Marshaller_google_cloud_datacatalog_v1_RenameTagTemplateFieldEnumValueRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.DeleteTagTemplateFieldRequest> __Marshaller_google_cloud_datacatalog_v1_DeleteTagTemplateFieldRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.DeleteTagTemplateFieldRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.CreateTagRequest> __Marshaller_google_cloud_datacatalog_v1_CreateTagRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.CreateTagRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.Tag> __Marshaller_google_cloud_datacatalog_v1_Tag = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DataCatalog.V1.Tag.Parser.ParseFrom);
@@ -204,6 +205,13 @@ namespace Google.Cloud.DataCatalog.V1 {
         __Marshaller_google_cloud_datacatalog_v1_RenameTagTemplateFieldRequest,
         __Marshaller_google_cloud_datacatalog_v1_TagTemplateField);
 
+    static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest, global::Google.Cloud.DataCatalog.V1.TagTemplateField> __Method_RenameTagTemplateFieldEnumValue = new grpc::Method<global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest, global::Google.Cloud.DataCatalog.V1.TagTemplateField>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RenameTagTemplateFieldEnumValue",
+        __Marshaller_google_cloud_datacatalog_v1_RenameTagTemplateFieldEnumValueRequest,
+        __Marshaller_google_cloud_datacatalog_v1_TagTemplateField);
+
     static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.DeleteTagTemplateFieldRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTagTemplateField = new grpc::Method<global::Google.Cloud.DataCatalog.V1.DeleteTagTemplateFieldRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -277,7 +285,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// This is a custom method
       /// (https://cloud.google.com/apis/design/custom_methods) and does not return
       /// the complete resource, only the resource identifier and high level
-      /// fields. Clients can subsequentally call `Get` methods.
+      /// fields. Clients can subsequently call `Get` methods.
       ///
       /// Note that Data Catalog search queries do not guarantee full recall. Query
       /// results that match your query may not be returned, even in subsequent
@@ -378,8 +386,8 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
 
       /// <summary>
-      /// Creates an entry. Only entries of 'FILESET' type or user-specified type can
-      /// be created.
+      /// Creates an entry. Only entries of types 'FILESET', 'CLUSTER', 'DATA_STREAM'
+      /// or with a user-specified type can be created.
       ///
       /// Users should enable the Data Catalog API in the project identified by
       /// the `parent` parameter (see [Data Catalog Resource Project]
@@ -567,6 +575,18 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
 
       /// <summary>
+      /// Renames an enum value in a tag template. The enum values have to be unique
+      /// within one enum field.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.TagTemplateField> RenameTagTemplateFieldEnumValue(global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Deletes a field in a tag template and all uses of that field.
       /// Users should enable the Data Catalog API in the project identified by
       /// the `name` parameter (see [Data Catalog Resource Project]
@@ -736,7 +756,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// This is a custom method
       /// (https://cloud.google.com/apis/design/custom_methods) and does not return
       /// the complete resource, only the resource identifier and high level
-      /// fields. Clients can subsequentally call `Get` methods.
+      /// fields. Clients can subsequently call `Get` methods.
       ///
       /// Note that Data Catalog search queries do not guarantee full recall. Query
       /// results that match your query may not be returned, even in subsequent
@@ -763,7 +783,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// This is a custom method
       /// (https://cloud.google.com/apis/design/custom_methods) and does not return
       /// the complete resource, only the resource identifier and high level
-      /// fields. Clients can subsequentally call `Get` methods.
+      /// fields. Clients can subsequently call `Get` methods.
       ///
       /// Note that Data Catalog search queries do not guarantee full recall. Query
       /// results that match your query may not be returned, even in subsequent
@@ -788,7 +808,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// This is a custom method
       /// (https://cloud.google.com/apis/design/custom_methods) and does not return
       /// the complete resource, only the resource identifier and high level
-      /// fields. Clients can subsequentally call `Get` methods.
+      /// fields. Clients can subsequently call `Get` methods.
       ///
       /// Note that Data Catalog search queries do not guarantee full recall. Query
       /// results that match your query may not be returned, even in subsequent
@@ -815,7 +835,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// This is a custom method
       /// (https://cloud.google.com/apis/design/custom_methods) and does not return
       /// the complete resource, only the resource identifier and high level
-      /// fields. Clients can subsequentally call `Get` methods.
+      /// fields. Clients can subsequently call `Get` methods.
       ///
       /// Note that Data Catalog search queries do not guarantee full recall. Query
       /// results that match your query may not be returned, even in subsequent
@@ -1158,8 +1178,8 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListEntryGroups, null, options, request);
       }
       /// <summary>
-      /// Creates an entry. Only entries of 'FILESET' type or user-specified type can
-      /// be created.
+      /// Creates an entry. Only entries of types 'FILESET', 'CLUSTER', 'DATA_STREAM'
+      /// or with a user-specified type can be created.
       ///
       /// Users should enable the Data Catalog API in the project identified by
       /// the `parent` parameter (see [Data Catalog Resource Project]
@@ -1178,8 +1198,8 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CreateEntry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an entry. Only entries of 'FILESET' type or user-specified type can
-      /// be created.
+      /// Creates an entry. Only entries of types 'FILESET', 'CLUSTER', 'DATA_STREAM'
+      /// or with a user-specified type can be created.
       ///
       /// Users should enable the Data Catalog API in the project identified by
       /// the `parent` parameter (see [Data Catalog Resource Project]
@@ -1196,8 +1216,8 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateEntry, null, options, request);
       }
       /// <summary>
-      /// Creates an entry. Only entries of 'FILESET' type or user-specified type can
-      /// be created.
+      /// Creates an entry. Only entries of types 'FILESET', 'CLUSTER', 'DATA_STREAM'
+      /// or with a user-specified type can be created.
       ///
       /// Users should enable the Data Catalog API in the project identified by
       /// the `parent` parameter (see [Data Catalog Resource Project]
@@ -1216,8 +1236,8 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CreateEntryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an entry. Only entries of 'FILESET' type or user-specified type can
-      /// be created.
+      /// Creates an entry. Only entries of types 'FILESET', 'CLUSTER', 'DATA_STREAM'
+      /// or with a user-specified type can be created.
       ///
       /// Users should enable the Data Catalog API in the project identified by
       /// the `parent` parameter (see [Data Catalog Resource Project]
@@ -1914,6 +1934,54 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_RenameTagTemplateField, null, options, request);
       }
       /// <summary>
+      /// Renames an enum value in a tag template. The enum values have to be unique
+      /// within one enum field.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.DataCatalog.V1.TagTemplateField RenameTagTemplateFieldEnumValue(global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RenameTagTemplateFieldEnumValue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Renames an enum value in a tag template. The enum values have to be unique
+      /// within one enum field.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.DataCatalog.V1.TagTemplateField RenameTagTemplateFieldEnumValue(global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RenameTagTemplateFieldEnumValue, null, options, request);
+      }
+      /// <summary>
+      /// Renames an enum value in a tag template. The enum values have to be unique
+      /// within one enum field.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.TagTemplateField> RenameTagTemplateFieldEnumValueAsync(global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RenameTagTemplateFieldEnumValueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Renames an enum value in a tag template. The enum values have to be unique
+      /// within one enum field.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.TagTemplateField> RenameTagTemplateFieldEnumValueAsync(global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RenameTagTemplateFieldEnumValue, null, options, request);
+      }
+      /// <summary>
       /// Deletes a field in a tag template and all uses of that field.
       /// Users should enable the Data Catalog API in the project identified by
       /// the `name` parameter (see [Data Catalog Resource Project]
@@ -2496,6 +2564,7 @@ namespace Google.Cloud.DataCatalog.V1 {
           .AddMethod(__Method_CreateTagTemplateField, serviceImpl.CreateTagTemplateField)
           .AddMethod(__Method_UpdateTagTemplateField, serviceImpl.UpdateTagTemplateField)
           .AddMethod(__Method_RenameTagTemplateField, serviceImpl.RenameTagTemplateField)
+          .AddMethod(__Method_RenameTagTemplateFieldEnumValue, serviceImpl.RenameTagTemplateFieldEnumValue)
           .AddMethod(__Method_DeleteTagTemplateField, serviceImpl.DeleteTagTemplateField)
           .AddMethod(__Method_CreateTag, serviceImpl.CreateTag)
           .AddMethod(__Method_UpdateTag, serviceImpl.UpdateTag)
@@ -2531,6 +2600,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       serviceBinder.AddMethod(__Method_CreateTagTemplateField, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.CreateTagTemplateFieldRequest, global::Google.Cloud.DataCatalog.V1.TagTemplateField>(serviceImpl.CreateTagTemplateField));
       serviceBinder.AddMethod(__Method_UpdateTagTemplateField, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.UpdateTagTemplateFieldRequest, global::Google.Cloud.DataCatalog.V1.TagTemplateField>(serviceImpl.UpdateTagTemplateField));
       serviceBinder.AddMethod(__Method_RenameTagTemplateField, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldRequest, global::Google.Cloud.DataCatalog.V1.TagTemplateField>(serviceImpl.RenameTagTemplateField));
+      serviceBinder.AddMethod(__Method_RenameTagTemplateFieldEnumValue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest, global::Google.Cloud.DataCatalog.V1.TagTemplateField>(serviceImpl.RenameTagTemplateFieldEnumValue));
       serviceBinder.AddMethod(__Method_DeleteTagTemplateField, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.DeleteTagTemplateFieldRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTagTemplateField));
       serviceBinder.AddMethod(__Method_CreateTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.CreateTagRequest, global::Google.Cloud.DataCatalog.V1.Tag>(serviceImpl.CreateTag));
       serviceBinder.AddMethod(__Method_UpdateTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.UpdateTagRequest, global::Google.Cloud.DataCatalog.V1.Tag>(serviceImpl.UpdateTag));

@@ -37,14 +37,15 @@ namespace Google.Cloud.DataCatalog.V1 {
             "IgogZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vRW50cnkiiQEKF0JpZ1F1",
             "ZXJ5RGF0ZVNoYXJkZWRTcGVjEjkKB2RhdGFzZXQYASABKAlCKOBBA/pBIgog",
             "ZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vRW50cnkSGQoMdGFibGVfcHJl",
-            "Zml4GAIgASgJQgPgQQMSGAoLc2hhcmRfY291bnQYAyABKANCA+BBAypbCg9U",
+            "Zml4GAIgASgJQgPgQQMSGAoLc2hhcmRfY291bnQYAyABKANCA+BBAyp7Cg9U",
             "YWJsZVNvdXJjZVR5cGUSIQodVEFCTEVfU09VUkNFX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIRCg1CSUdRVUVSWV9WSUVXEAISEgoOQklHUVVFUllfVEFCTEUQBULL",
-            "AQofY29tLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MVABWkZnb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RhdGFjYXRh",
-            "bG9nL3YxO2RhdGFjYXRhbG9n+AEBqgIbR29vZ2xlLkNsb3VkLkRhdGFDYXRh",
-            "bG9nLlYxygIbR29vZ2xlXENsb3VkXERhdGFDYXRhbG9nXFYx6gIeR29vZ2xl",
-            "OjpDbG91ZDo6RGF0YUNhdGFsb2c6OlYxYgZwcm90bzM="));
+            "RUQQABIRCg1CSUdRVUVSWV9WSUVXEAISEgoOQklHUVVFUllfVEFCTEUQBRIe",
+            "ChpCSUdRVUVSWV9NQVRFUklBTElaRURfVklFVxAHQssBCh9jb20uZ29vZ2xl",
+            "LmNsb3VkLmRhdGFjYXRhbG9nLnYxUAFaRmdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGF0YWNhdGFsb2cvdjE7ZGF0YWNh",
+            "dGFsb2f4AQGqAhtHb29nbGUuQ2xvdWQuRGF0YUNhdGFsb2cuVjHKAhtHb29n",
+            "bGVcQ2xvdWRcRGF0YUNhdGFsb2dcVjHqAh5Hb29nbGU6OkNsb3VkOjpEYXRh",
+            "Q2F0YWxvZzo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DataCatalog.V1.TableSourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -74,6 +75,10 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// BigQuery native table.
     /// </summary>
     [pbr::OriginalName("BIGQUERY_TABLE")] BigqueryTable = 5,
+    /// <summary>
+    /// BigQuery materialized view.
+    /// </summary>
+    [pbr::OriginalName("BIGQUERY_MATERIALIZED_VIEW")] BigqueryMaterializedView = 7,
   }
 
   #endregion

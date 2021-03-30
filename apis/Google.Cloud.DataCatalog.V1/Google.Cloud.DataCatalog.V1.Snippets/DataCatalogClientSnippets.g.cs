@@ -2309,6 +2309,99 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RenameTagTemplateFieldEnumValue</summary>
+        public void RenameTagTemplateFieldEnumValueRequestObject()
+        {
+            // Snippet: RenameTagTemplateFieldEnumValue(RenameTagTemplateFieldEnumValueRequest, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            RenameTagTemplateFieldEnumValueRequest request = new RenameTagTemplateFieldEnumValueRequest
+            {
+                TagTemplateFieldEnumValueName = TagTemplateFieldEnumValueName.FromProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[TAG_TEMPLATE_FIELD_ID]", "[ENUM_VALUE_DISPLAY_NAME]"),
+                NewEnumValueDisplayName = "",
+            };
+            // Make the request
+            TagTemplateField response = dataCatalogClient.RenameTagTemplateFieldEnumValue(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameTagTemplateFieldEnumValueAsync</summary>
+        public async Task RenameTagTemplateFieldEnumValueRequestObjectAsync()
+        {
+            // Snippet: RenameTagTemplateFieldEnumValueAsync(RenameTagTemplateFieldEnumValueRequest, CallSettings)
+            // Additional: RenameTagTemplateFieldEnumValueAsync(RenameTagTemplateFieldEnumValueRequest, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            RenameTagTemplateFieldEnumValueRequest request = new RenameTagTemplateFieldEnumValueRequest
+            {
+                TagTemplateFieldEnumValueName = TagTemplateFieldEnumValueName.FromProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[TAG_TEMPLATE_FIELD_ID]", "[ENUM_VALUE_DISPLAY_NAME]"),
+                NewEnumValueDisplayName = "",
+            };
+            // Make the request
+            TagTemplateField response = await dataCatalogClient.RenameTagTemplateFieldEnumValueAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameTagTemplateFieldEnumValue</summary>
+        public void RenameTagTemplateFieldEnumValue()
+        {
+            // Snippet: RenameTagTemplateFieldEnumValue(string, string, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/tagTemplates/[TAG_TEMPLATE]/fields/[TAG_TEMPLATE_FIELD_ID]/enumValues/[ENUM_VALUE_DISPLAY_NAME]";
+            string newEnumValueDisplayName = "";
+            // Make the request
+            TagTemplateField response = dataCatalogClient.RenameTagTemplateFieldEnumValue(name, newEnumValueDisplayName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameTagTemplateFieldEnumValueAsync</summary>
+        public async Task RenameTagTemplateFieldEnumValueAsync()
+        {
+            // Snippet: RenameTagTemplateFieldEnumValueAsync(string, string, CallSettings)
+            // Additional: RenameTagTemplateFieldEnumValueAsync(string, string, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/tagTemplates/[TAG_TEMPLATE]/fields/[TAG_TEMPLATE_FIELD_ID]/enumValues/[ENUM_VALUE_DISPLAY_NAME]";
+            string newEnumValueDisplayName = "";
+            // Make the request
+            TagTemplateField response = await dataCatalogClient.RenameTagTemplateFieldEnumValueAsync(name, newEnumValueDisplayName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameTagTemplateFieldEnumValue</summary>
+        public void RenameTagTemplateFieldEnumValueResourceNames()
+        {
+            // Snippet: RenameTagTemplateFieldEnumValue(TagTemplateFieldEnumValueName, string, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            TagTemplateFieldEnumValueName name = TagTemplateFieldEnumValueName.FromProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[TAG_TEMPLATE_FIELD_ID]", "[ENUM_VALUE_DISPLAY_NAME]");
+            string newEnumValueDisplayName = "";
+            // Make the request
+            TagTemplateField response = dataCatalogClient.RenameTagTemplateFieldEnumValue(name, newEnumValueDisplayName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RenameTagTemplateFieldEnumValueAsync</summary>
+        public async Task RenameTagTemplateFieldEnumValueResourceNamesAsync()
+        {
+            // Snippet: RenameTagTemplateFieldEnumValueAsync(TagTemplateFieldEnumValueName, string, CallSettings)
+            // Additional: RenameTagTemplateFieldEnumValueAsync(TagTemplateFieldEnumValueName, string, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            TagTemplateFieldEnumValueName name = TagTemplateFieldEnumValueName.FromProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[TAG_TEMPLATE_FIELD_ID]", "[ENUM_VALUE_DISPLAY_NAME]");
+            string newEnumValueDisplayName = "";
+            // Make the request
+            TagTemplateField response = await dataCatalogClient.RenameTagTemplateFieldEnumValueAsync(name, newEnumValueDisplayName);
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteTagTemplateField</summary>
         public void DeleteTagTemplateFieldRequestObject()
         {
