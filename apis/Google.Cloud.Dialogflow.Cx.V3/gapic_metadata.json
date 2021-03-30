@@ -101,63 +101,45 @@
         }
       }
     },
-    "Agents": {
+    "Versions": {
       "clients": {
         "grpc": {
-          "libraryClient": "AgentsClient",
+          "libraryClient": "VersionsClient",
           "rpcs": {
-            "ListAgents": {
+            "ListVersions": {
               "methods": [
-                "ListAgents",
-                "ListAgentsAsync"
+                "ListVersions",
+                "ListVersionsAsync"
               ]
             },
-            "GetAgent": {
+            "GetVersion": {
               "methods": [
-                "GetAgent",
-                "GetAgentAsync"
+                "GetVersion",
+                "GetVersionAsync"
               ]
             },
-            "CreateAgent": {
+            "CreateVersion": {
               "methods": [
-                "CreateAgent",
-                "CreateAgentAsync"
+                "CreateVersion",
+                "CreateVersionAsync"
               ]
             },
-            "UpdateAgent": {
+            "UpdateVersion": {
               "methods": [
-                "UpdateAgent",
-                "UpdateAgentAsync"
+                "UpdateVersion",
+                "UpdateVersionAsync"
               ]
             },
-            "DeleteAgent": {
+            "DeleteVersion": {
               "methods": [
-                "DeleteAgent",
-                "DeleteAgentAsync"
+                "DeleteVersion",
+                "DeleteVersionAsync"
               ]
             },
-            "ExportAgent": {
+            "LoadVersion": {
               "methods": [
-                "ExportAgent",
-                "ExportAgentAsync"
-              ]
-            },
-            "RestoreAgent": {
-              "methods": [
-                "RestoreAgent",
-                "RestoreAgentAsync"
-              ]
-            },
-            "ValidateAgent": {
-              "methods": [
-                "ValidateAgent",
-                "ValidateAgentAsync"
-              ]
-            },
-            "GetAgentValidationResult": {
-              "methods": [
-                "GetAgentValidationResult",
-                "GetAgentValidationResultAsync"
+                "LoadVersion",
+                "LoadVersionAsync"
               ]
             }
           }
@@ -197,6 +179,45 @@
               "methods": [
                 "DeleteEntityType",
                 "DeleteEntityTypeAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SecuritySettingsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SecuritySettingsServiceClient",
+          "rpcs": {
+            "CreateSecuritySettings": {
+              "methods": [
+                "CreateSecuritySettings",
+                "CreateSecuritySettingsAsync"
+              ]
+            },
+            "GetSecuritySettings": {
+              "methods": [
+                "GetSecuritySettings",
+                "GetSecuritySettingsAsync"
+              ]
+            },
+            "UpdateSecuritySettings": {
+              "methods": [
+                "UpdateSecuritySettings",
+                "UpdateSecuritySettingsAsync"
+              ]
+            },
+            "ListSecuritySettings": {
+              "methods": [
+                "ListSecuritySettings",
+                "ListSecuritySettingsAsync"
+              ]
+            },
+            "DeleteSecuritySettings": {
+              "methods": [
+                "DeleteSecuritySettings",
+                "DeleteSecuritySettingsAsync"
               ]
             }
           }
@@ -479,6 +500,108 @@
         }
       }
     },
+    "Webhooks": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "WebhooksClient",
+          "rpcs": {
+            "ListWebhooks": {
+              "methods": [
+                "ListWebhooks",
+                "ListWebhooksAsync"
+              ]
+            },
+            "GetWebhook": {
+              "methods": [
+                "GetWebhook",
+                "GetWebhookAsync"
+              ]
+            },
+            "CreateWebhook": {
+              "methods": [
+                "CreateWebhook",
+                "CreateWebhookAsync"
+              ]
+            },
+            "UpdateWebhook": {
+              "methods": [
+                "UpdateWebhook",
+                "UpdateWebhookAsync"
+              ]
+            },
+            "DeleteWebhook": {
+              "methods": [
+                "DeleteWebhook",
+                "DeleteWebhookAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Agents": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AgentsClient",
+          "rpcs": {
+            "ListAgents": {
+              "methods": [
+                "ListAgents",
+                "ListAgentsAsync"
+              ]
+            },
+            "GetAgent": {
+              "methods": [
+                "GetAgent",
+                "GetAgentAsync"
+              ]
+            },
+            "CreateAgent": {
+              "methods": [
+                "CreateAgent",
+                "CreateAgentAsync"
+              ]
+            },
+            "UpdateAgent": {
+              "methods": [
+                "UpdateAgent",
+                "UpdateAgentAsync"
+              ]
+            },
+            "DeleteAgent": {
+              "methods": [
+                "DeleteAgent",
+                "DeleteAgentAsync"
+              ]
+            },
+            "ExportAgent": {
+              "methods": [
+                "ExportAgent",
+                "ExportAgentAsync"
+              ]
+            },
+            "RestoreAgent": {
+              "methods": [
+                "RestoreAgent",
+                "RestoreAgentAsync"
+              ]
+            },
+            "ValidateAgent": {
+              "methods": [
+                "ValidateAgent",
+                "ValidateAgentAsync"
+              ]
+            },
+            "GetAgentValidationResult": {
+              "methods": [
+                "GetAgentValidationResult",
+                "GetAgentValidationResultAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "Experiments": {
       "clients": {
         "grpc": {
@@ -524,129 +647,6 @@
               "methods": [
                 "StopExperiment",
                 "StopExperimentAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "SecuritySettingsService": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "SecuritySettingsServiceClient",
-          "rpcs": {
-            "CreateSecuritySettings": {
-              "methods": [
-                "CreateSecuritySettings",
-                "CreateSecuritySettingsAsync"
-              ]
-            },
-            "GetSecuritySettings": {
-              "methods": [
-                "GetSecuritySettings",
-                "GetSecuritySettingsAsync"
-              ]
-            },
-            "UpdateSecuritySettings": {
-              "methods": [
-                "UpdateSecuritySettings",
-                "UpdateSecuritySettingsAsync"
-              ]
-            },
-            "ListSecuritySettings": {
-              "methods": [
-                "ListSecuritySettings",
-                "ListSecuritySettingsAsync"
-              ]
-            },
-            "DeleteSecuritySettings": {
-              "methods": [
-                "DeleteSecuritySettings",
-                "DeleteSecuritySettingsAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "Versions": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "VersionsClient",
-          "rpcs": {
-            "ListVersions": {
-              "methods": [
-                "ListVersions",
-                "ListVersionsAsync"
-              ]
-            },
-            "GetVersion": {
-              "methods": [
-                "GetVersion",
-                "GetVersionAsync"
-              ]
-            },
-            "CreateVersion": {
-              "methods": [
-                "CreateVersion",
-                "CreateVersionAsync"
-              ]
-            },
-            "UpdateVersion": {
-              "methods": [
-                "UpdateVersion",
-                "UpdateVersionAsync"
-              ]
-            },
-            "DeleteVersion": {
-              "methods": [
-                "DeleteVersion",
-                "DeleteVersionAsync"
-              ]
-            },
-            "LoadVersion": {
-              "methods": [
-                "LoadVersion",
-                "LoadVersionAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "Webhooks": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "WebhooksClient",
-          "rpcs": {
-            "ListWebhooks": {
-              "methods": [
-                "ListWebhooks",
-                "ListWebhooksAsync"
-              ]
-            },
-            "GetWebhook": {
-              "methods": [
-                "GetWebhook",
-                "GetWebhookAsync"
-              ]
-            },
-            "CreateWebhook": {
-              "methods": [
-                "CreateWebhook",
-                "CreateWebhookAsync"
-              ]
-            },
-            "UpdateWebhook": {
-              "methods": [
-                "UpdateWebhook",
-                "UpdateWebhookAsync"
-              ]
-            },
-            "DeleteWebhook": {
-              "methods": [
-                "DeleteWebhook",
-                "DeleteWebhookAsync"
               ]
             }
           }
