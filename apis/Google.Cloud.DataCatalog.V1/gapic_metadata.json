@@ -5,6 +5,114 @@
   "protoPackage": "google.cloud.datacatalog.v1",
   "libraryPackage": "Google.Cloud.DataCatalog.V1",
   "services": {
+    "PolicyTagManager": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PolicyTagManagerClient",
+          "rpcs": {
+            "CreateTaxonomy": {
+              "methods": [
+                "CreateTaxonomy",
+                "CreateTaxonomyAsync"
+              ]
+            },
+            "DeleteTaxonomy": {
+              "methods": [
+                "DeleteTaxonomy",
+                "DeleteTaxonomyAsync"
+              ]
+            },
+            "UpdateTaxonomy": {
+              "methods": [
+                "UpdateTaxonomy",
+                "UpdateTaxonomyAsync"
+              ]
+            },
+            "ListTaxonomies": {
+              "methods": [
+                "ListTaxonomies",
+                "ListTaxonomiesAsync"
+              ]
+            },
+            "GetTaxonomy": {
+              "methods": [
+                "GetTaxonomy",
+                "GetTaxonomyAsync"
+              ]
+            },
+            "CreatePolicyTag": {
+              "methods": [
+                "CreatePolicyTag",
+                "CreatePolicyTagAsync"
+              ]
+            },
+            "DeletePolicyTag": {
+              "methods": [
+                "DeletePolicyTag",
+                "DeletePolicyTagAsync"
+              ]
+            },
+            "UpdatePolicyTag": {
+              "methods": [
+                "UpdatePolicyTag",
+                "UpdatePolicyTagAsync"
+              ]
+            },
+            "ListPolicyTags": {
+              "methods": [
+                "ListPolicyTags",
+                "ListPolicyTagsAsync"
+              ]
+            },
+            "GetPolicyTag": {
+              "methods": [
+                "GetPolicyTag",
+                "GetPolicyTagAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PolicyTagManagerSerialization": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PolicyTagManagerSerializationClient",
+          "rpcs": {
+            "ImportTaxonomies": {
+              "methods": [
+                "ImportTaxonomies",
+                "ImportTaxonomiesAsync"
+              ]
+            },
+            "ExportTaxonomies": {
+              "methods": [
+                "ExportTaxonomies",
+                "ExportTaxonomiesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "DataCatalog": {
       "clients": {
         "grpc": {
@@ -176,114 +284,6 @@
               "methods": [
                 "TestIamPermissions",
                 "TestIamPermissionsAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "PolicyTagManager": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "PolicyTagManagerClient",
-          "rpcs": {
-            "CreateTaxonomy": {
-              "methods": [
-                "CreateTaxonomy",
-                "CreateTaxonomyAsync"
-              ]
-            },
-            "DeleteTaxonomy": {
-              "methods": [
-                "DeleteTaxonomy",
-                "DeleteTaxonomyAsync"
-              ]
-            },
-            "UpdateTaxonomy": {
-              "methods": [
-                "UpdateTaxonomy",
-                "UpdateTaxonomyAsync"
-              ]
-            },
-            "ListTaxonomies": {
-              "methods": [
-                "ListTaxonomies",
-                "ListTaxonomiesAsync"
-              ]
-            },
-            "GetTaxonomy": {
-              "methods": [
-                "GetTaxonomy",
-                "GetTaxonomyAsync"
-              ]
-            },
-            "CreatePolicyTag": {
-              "methods": [
-                "CreatePolicyTag",
-                "CreatePolicyTagAsync"
-              ]
-            },
-            "DeletePolicyTag": {
-              "methods": [
-                "DeletePolicyTag",
-                "DeletePolicyTagAsync"
-              ]
-            },
-            "UpdatePolicyTag": {
-              "methods": [
-                "UpdatePolicyTag",
-                "UpdatePolicyTagAsync"
-              ]
-            },
-            "ListPolicyTags": {
-              "methods": [
-                "ListPolicyTags",
-                "ListPolicyTagsAsync"
-              ]
-            },
-            "GetPolicyTag": {
-              "methods": [
-                "GetPolicyTag",
-                "GetPolicyTagAsync"
-              ]
-            },
-            "GetIamPolicy": {
-              "methods": [
-                "GetIamPolicy",
-                "GetIamPolicyAsync"
-              ]
-            },
-            "SetIamPolicy": {
-              "methods": [
-                "SetIamPolicy",
-                "SetIamPolicyAsync"
-              ]
-            },
-            "TestIamPermissions": {
-              "methods": [
-                "TestIamPermissions",
-                "TestIamPermissionsAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "PolicyTagManagerSerialization": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "PolicyTagManagerSerializationClient",
-          "rpcs": {
-            "ImportTaxonomies": {
-              "methods": [
-                "ImportTaxonomies",
-                "ImportTaxonomiesAsync"
-              ]
-            },
-            "ExportTaxonomies": {
-              "methods": [
-                "ExportTaxonomies",
-                "ExportTaxonomiesAsync"
               ]
             }
           }
