@@ -5,45 +5,6 @@
   "protoPackage": "google.cloud.dataproc.v1",
   "libraryPackage": "Google.Cloud.Dataproc.V1",
   "services": {
-    "AutoscalingPolicyService": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "AutoscalingPolicyServiceClient",
-          "rpcs": {
-            "CreateAutoscalingPolicy": {
-              "methods": [
-                "CreateAutoscalingPolicy",
-                "CreateAutoscalingPolicyAsync"
-              ]
-            },
-            "UpdateAutoscalingPolicy": {
-              "methods": [
-                "UpdateAutoscalingPolicy",
-                "UpdateAutoscalingPolicyAsync"
-              ]
-            },
-            "GetAutoscalingPolicy": {
-              "methods": [
-                "GetAutoscalingPolicy",
-                "GetAutoscalingPolicyAsync"
-              ]
-            },
-            "ListAutoscalingPolicies": {
-              "methods": [
-                "ListAutoscalingPolicies",
-                "ListAutoscalingPoliciesAsync"
-              ]
-            },
-            "DeleteAutoscalingPolicy": {
-              "methods": [
-                "DeleteAutoscalingPolicy",
-                "DeleteAutoscalingPolicyAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
     "ClusterController": {
       "clients": {
         "grpc": {
@@ -134,6 +95,45 @@
               "methods": [
                 "DeleteJob",
                 "DeleteJobAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "AutoscalingPolicyService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AutoscalingPolicyServiceClient",
+          "rpcs": {
+            "CreateAutoscalingPolicy": {
+              "methods": [
+                "CreateAutoscalingPolicy",
+                "CreateAutoscalingPolicyAsync"
+              ]
+            },
+            "UpdateAutoscalingPolicy": {
+              "methods": [
+                "UpdateAutoscalingPolicy",
+                "UpdateAutoscalingPolicyAsync"
+              ]
+            },
+            "GetAutoscalingPolicy": {
+              "methods": [
+                "GetAutoscalingPolicy",
+                "GetAutoscalingPolicyAsync"
+              ]
+            },
+            "ListAutoscalingPolicies": {
+              "methods": [
+                "ListAutoscalingPolicies",
+                "ListAutoscalingPoliciesAsync"
+              ]
+            },
+            "DeleteAutoscalingPolicy": {
+              "methods": [
+                "DeleteAutoscalingPolicy",
+                "DeleteAutoscalingPolicyAsync"
               ]
             }
           }
