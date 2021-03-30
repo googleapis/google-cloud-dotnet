@@ -42,46 +42,49 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "bnQYASABKAUilwEKC1N0cmVhbVN0YXRzEkgKCHByb2dyZXNzGAIgASgLMjYu",
             "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuU3RyZWFtU3RhdHMu",
             "UHJvZ3Jlc3MaPgoIUHJvZ3Jlc3MSGQoRYXRfcmVzcG9uc2Vfc3RhcnQYASAB",
-            "KAESFwoPYXRfcmVzcG9uc2VfZW5kGAIgASgBIscCChBSZWFkUm93c1Jlc3Bv",
+            "KAESFwoPYXRfcmVzcG9uc2VfZW5kGAIgASgBIucDChBSZWFkUm93c1Jlc3Bv",
             "bnNlEj8KCWF2cm9fcm93cxgDIAEoCzIqLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
             "eS5zdG9yYWdlLnYxLkF2cm9Sb3dzSAASUAoSYXJyb3dfcmVjb3JkX2JhdGNo",
             "GAQgASgLMjIuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuQXJy",
             "b3dSZWNvcmRCYXRjaEgAEhEKCXJvd19jb3VudBgGIAEoAxI8CgVzdGF0cxgC",
             "IAEoCzItLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLlN0cmVh",
             "bVN0YXRzEkcKDnRocm90dGxlX3N0YXRlGAUgASgLMi8uZ29vZ2xlLmNsb3Vk",
-            "LmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuVGhyb3R0bGVTdGF0ZUIGCgRyb3dzImsK",
-            "FlNwbGl0UmVhZFN0cmVhbVJlcXVlc3QSPwoEbmFtZRgBIAEoCUIx4EEC+kEr",
-            "CiliaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vUmVhZFN0cmVhbRIQ",
-            "CghmcmFjdGlvbhgCIAEoASKnAQoXU3BsaXRSZWFkU3RyZWFtUmVzcG9uc2US",
-            "RAoOcHJpbWFyeV9zdHJlYW0YASABKAsyLC5nb29nbGUuY2xvdWQuYmlncXVl",
-            "cnkuc3RvcmFnZS52MS5SZWFkU3RyZWFtEkYKEHJlbWFpbmRlcl9zdHJlYW0Y",
-            "AiABKAsyLC5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5SZWFk",
-            "U3RyZWFtMsYGCgxCaWdRdWVyeVJlYWQS6QEKEUNyZWF0ZVJlYWRTZXNzaW9u",
-            "EjouZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuQ3JlYXRlUmVh",
-            "ZFNlc3Npb25SZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3Jh",
-            "Z2UudjEuUmVhZFNlc3Npb24iaYLT5JMCPCI3L3YxL3tyZWFkX3Nlc3Npb24u",
-            "dGFibGU9cHJvamVjdHMvKi9kYXRhc2V0cy8qL3RhYmxlcy8qfToBKtpBJHBh",
-            "cmVudCxyZWFkX3Nlc3Npb24sbWF4X3N0cmVhbV9jb3VudBLPAQoIUmVhZFJv",
-            "d3MSMS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5SZWFkUm93",
-            "c1JlcXVlc3QaMi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5S",
-            "ZWFkUm93c1Jlc3BvbnNlIlqC0+STAj8SPS92MS97cmVhZF9zdHJlYW09cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9zZXNzaW9ucy8qL3N0cmVhbXMvKn3aQRJy",
-            "ZWFkX3N0cmVhbSxvZmZzZXQwARLGAQoPU3BsaXRSZWFkU3RyZWFtEjguZ29v",
-            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuU3BsaXRSZWFkU3RyZWFt",
-            "UmVxdWVzdBo5Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLlNw",
-            "bGl0UmVhZFN0cmVhbVJlc3BvbnNlIj6C0+STAjgSNi92MS97bmFtZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL3Nlc3Npb25zLyovc3RyZWFtcy8qfRquAcpB",
-            "HmJpZ3F1ZXJ5c3RvcmFnZS5nb29nbGVhcGlzLmNvbdJBiQFodHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2JpZ3F1ZXJ5LGh0dHBzOi8vd3d3Lmdv",
-            "b2dsZWFwaXMuY29tL2F1dGgvYmlncXVlcnkucmVhZG9ubHksaHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKdAgokY29t",
-            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxQgxTdG9yYWdlUHJv",
-            "dG9QAVpHZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
-            "bG91ZC9iaWdxdWVyeS9zdG9yYWdlL3YxO3N0b3JhZ2WqAiBHb29nbGUuQ2xv",
-            "dWQuQmlnUXVlcnkuU3RvcmFnZS5WMcoCIEdvb2dsZVxDbG91ZFxCaWdRdWVy",
-            "eVxTdG9yYWdlXFYx6kFVCh1iaWdxdWVyeS5nb29nbGVhcGlzLmNvbS9UYWJs",
-            "ZRI0cHJvamVjdHMve3Byb2plY3R9L2RhdGFzZXRzL3tkYXRhc2V0fS90YWJs",
-            "ZXMve3RhYmxlfWIGcHJvdG8z"));
+            "LmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuVGhyb3R0bGVTdGF0ZRJICgthdnJvX3Nj",
+            "aGVtYRgHIAEoCzIsLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYx",
+            "LkF2cm9TY2hlbWFCA+BBA0gBEkoKDGFycm93X3NjaGVtYRgIIAEoCzItLmdv",
+            "b2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLkFycm93U2NoZW1hQgPg",
+            "QQNIAUIGCgRyb3dzQggKBnNjaGVtYSJrChZTcGxpdFJlYWRTdHJlYW1SZXF1",
+            "ZXN0Ej8KBG5hbWUYASABKAlCMeBBAvpBKwopYmlncXVlcnlzdG9yYWdlLmdv",
+            "b2dsZWFwaXMuY29tL1JlYWRTdHJlYW0SEAoIZnJhY3Rpb24YAiABKAEipwEK",
+            "F1NwbGl0UmVhZFN0cmVhbVJlc3BvbnNlEkQKDnByaW1hcnlfc3RyZWFtGAEg",
+            "ASgLMiwuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuUmVhZFN0",
+            "cmVhbRJGChByZW1haW5kZXJfc3RyZWFtGAIgASgLMiwuZ29vZ2xlLmNsb3Vk",
+            "LmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuUmVhZFN0cmVhbTLGBgoMQmlnUXVlcnlS",
+            "ZWFkEukBChFDcmVhdGVSZWFkU2Vzc2lvbhI6Lmdvb2dsZS5jbG91ZC5iaWdx",
+            "dWVyeS5zdG9yYWdlLnYxLkNyZWF0ZVJlYWRTZXNzaW9uUmVxdWVzdBotLmdv",
+            "b2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLlJlYWRTZXNzaW9uImmC",
+            "0+STAjwiNy92MS97cmVhZF9zZXNzaW9uLnRhYmxlPXByb2plY3RzLyovZGF0",
+            "YXNldHMvKi90YWJsZXMvKn06ASraQSRwYXJlbnQscmVhZF9zZXNzaW9uLG1h",
+            "eF9zdHJlYW1fY291bnQSzwEKCFJlYWRSb3dzEjEuZ29vZ2xlLmNsb3VkLmJp",
+            "Z3F1ZXJ5LnN0b3JhZ2UudjEuUmVhZFJvd3NSZXF1ZXN0GjIuZ29vZ2xlLmNs",
+            "b3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuUmVhZFJvd3NSZXNwb25zZSJagtPk",
+            "kwI/Ej0vdjEve3JlYWRfc3RyZWFtPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "c2Vzc2lvbnMvKi9zdHJlYW1zLyp92kEScmVhZF9zdHJlYW0sb2Zmc2V0MAES",
+            "xgEKD1NwbGl0UmVhZFN0cmVhbRI4Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5z",
+            "dG9yYWdlLnYxLlNwbGl0UmVhZFN0cmVhbVJlcXVlc3QaOS5nb29nbGUuY2xv",
+            "dWQuYmlncXVlcnkuc3RvcmFnZS52MS5TcGxpdFJlYWRTdHJlYW1SZXNwb25z",
+            "ZSI+gtPkkwI4EjYvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9z",
+            "ZXNzaW9ucy8qL3N0cmVhbXMvKn0argHKQR5iaWdxdWVyeXN0b3JhZ2UuZ29v",
+            "Z2xlYXBpcy5jb23SQYkBaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9iaWdxdWVyeSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Jp",
+            "Z3F1ZXJ5LnJlYWRvbmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
+            "dGgvY2xvdWQtcGxhdGZvcm1CnQIKJGNvbS5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkuc3RvcmFnZS52MUIMU3RvcmFnZVByb3RvUAFaR2dvb2dsZS5nb2xhbmcu",
+            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmlncXVlcnkvc3RvcmFn",
+            "ZS92MTtzdG9yYWdlqgIgR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LlN0b3JhZ2Uu",
+            "VjHKAiBHb29nbGVcQ2xvdWRcQmlnUXVlcnlcU3RvcmFnZVxWMepBVQodYmln",
+            "cXVlcnkuZ29vZ2xlYXBpcy5jb20vVGFibGUSNHByb2plY3RzL3twcm9qZWN0",
+            "fS9kYXRhc2V0cy97ZGF0YXNldH0vdGFibGVzL3t0YWJsZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.ArrowReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.AvroReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.StreamReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -89,7 +92,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadRowsRequest), global::Google.Cloud.BigQuery.Storage.V1.ReadRowsRequest.Parser, new[]{ "ReadStream", "Offset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ThrottleState), global::Google.Cloud.BigQuery.Storage.V1.ThrottleState.Parser, new[]{ "ThrottlePercent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.StreamStats), global::Google.Cloud.BigQuery.Storage.V1.StreamStats.Parser, new[]{ "Progress" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.StreamStats.Types.Progress), global::Google.Cloud.BigQuery.Storage.V1.StreamStats.Types.Progress.Parser, new[]{ "AtResponseStart", "AtResponseEnd" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadRowsResponse), global::Google.Cloud.BigQuery.Storage.V1.ReadRowsResponse.Parser, new[]{ "AvroRows", "ArrowRecordBatch", "RowCount", "Stats", "ThrottleState" }, new[]{ "Rows" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadRowsResponse), global::Google.Cloud.BigQuery.Storage.V1.ReadRowsResponse.Parser, new[]{ "AvroRows", "ArrowRecordBatch", "RowCount", "Stats", "ThrottleState", "AvroSchema", "ArrowSchema" }, new[]{ "Rows", "Schema" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.SplitReadStreamRequest), global::Google.Cloud.BigQuery.Storage.V1.SplitReadStreamRequest.Parser, new[]{ "Name", "Fraction" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.SplitReadStreamResponse), global::Google.Cloud.BigQuery.Storage.V1.SplitReadStreamResponse.Parser, new[]{ "PrimaryStream", "RemainderStream" }, null, null, null, null)
           }));
@@ -1234,6 +1237,15 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           break;
       }
 
+      switch (other.SchemaCase) {
+        case SchemaOneofCase.AvroSchema:
+          AvroSchema = other.AvroSchema.Clone();
+          break;
+        case SchemaOneofCase.ArrowSchema:
+          ArrowSchema = other.ArrowSchema.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1313,6 +1325,34 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
     }
 
+    /// <summary>Field number for the "avro_schema" field.</summary>
+    public const int AvroSchemaFieldNumber = 7;
+    /// <summary>
+    /// Output only. Avro schema.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.BigQuery.Storage.V1.AvroSchema AvroSchema {
+      get { return schemaCase_ == SchemaOneofCase.AvroSchema ? (global::Google.Cloud.BigQuery.Storage.V1.AvroSchema) schema_ : null; }
+      set {
+        schema_ = value;
+        schemaCase_ = value == null ? SchemaOneofCase.None : SchemaOneofCase.AvroSchema;
+      }
+    }
+
+    /// <summary>Field number for the "arrow_schema" field.</summary>
+    public const int ArrowSchemaFieldNumber = 8;
+    /// <summary>
+    /// Output only. Arrow schema.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema ArrowSchema {
+      get { return schemaCase_ == SchemaOneofCase.ArrowSchema ? (global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema) schema_ : null; }
+      set {
+        schema_ = value;
+        schemaCase_ = value == null ? SchemaOneofCase.None : SchemaOneofCase.ArrowSchema;
+      }
+    }
+
     private object rows_;
     /// <summary>Enum of possible cases for the "rows" oneof.</summary>
     public enum RowsOneofCase {
@@ -1330,6 +1370,25 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     public void ClearRows() {
       rowsCase_ = RowsOneofCase.None;
       rows_ = null;
+    }
+
+    private object schema_;
+    /// <summary>Enum of possible cases for the "schema" oneof.</summary>
+    public enum SchemaOneofCase {
+      None = 0,
+      AvroSchema = 7,
+      ArrowSchema = 8,
+    }
+    private SchemaOneofCase schemaCase_ = SchemaOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SchemaOneofCase SchemaCase {
+      get { return schemaCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearSchema() {
+      schemaCase_ = SchemaOneofCase.None;
+      schema_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1350,7 +1409,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (RowCount != other.RowCount) return false;
       if (!object.Equals(Stats, other.Stats)) return false;
       if (!object.Equals(ThrottleState, other.ThrottleState)) return false;
+      if (!object.Equals(AvroSchema, other.AvroSchema)) return false;
+      if (!object.Equals(ArrowSchema, other.ArrowSchema)) return false;
       if (RowsCase != other.RowsCase) return false;
+      if (SchemaCase != other.SchemaCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1362,7 +1424,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (RowCount != 0L) hash ^= RowCount.GetHashCode();
       if (stats_ != null) hash ^= Stats.GetHashCode();
       if (throttleState_ != null) hash ^= ThrottleState.GetHashCode();
+      if (schemaCase_ == SchemaOneofCase.AvroSchema) hash ^= AvroSchema.GetHashCode();
+      if (schemaCase_ == SchemaOneofCase.ArrowSchema) hash ^= ArrowSchema.GetHashCode();
       hash ^= (int) rowsCase_;
+      hash ^= (int) schemaCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1399,6 +1464,14 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(48);
         output.WriteInt64(RowCount);
       }
+      if (schemaCase_ == SchemaOneofCase.AvroSchema) {
+        output.WriteRawTag(58);
+        output.WriteMessage(AvroSchema);
+      }
+      if (schemaCase_ == SchemaOneofCase.ArrowSchema) {
+        output.WriteRawTag(66);
+        output.WriteMessage(ArrowSchema);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1428,6 +1501,14 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(48);
         output.WriteInt64(RowCount);
       }
+      if (schemaCase_ == SchemaOneofCase.AvroSchema) {
+        output.WriteRawTag(58);
+        output.WriteMessage(AvroSchema);
+      }
+      if (schemaCase_ == SchemaOneofCase.ArrowSchema) {
+        output.WriteRawTag(66);
+        output.WriteMessage(ArrowSchema);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1451,6 +1532,12 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
       if (throttleState_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ThrottleState);
+      }
+      if (schemaCase_ == SchemaOneofCase.AvroSchema) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AvroSchema);
+      }
+      if (schemaCase_ == SchemaOneofCase.ArrowSchema) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArrowSchema);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1490,6 +1577,21 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             ArrowRecordBatch = new global::Google.Cloud.BigQuery.Storage.V1.ArrowRecordBatch();
           }
           ArrowRecordBatch.MergeFrom(other.ArrowRecordBatch);
+          break;
+      }
+
+      switch (other.SchemaCase) {
+        case SchemaOneofCase.AvroSchema:
+          if (AvroSchema == null) {
+            AvroSchema = new global::Google.Cloud.BigQuery.Storage.V1.AvroSchema();
+          }
+          AvroSchema.MergeFrom(other.AvroSchema);
+          break;
+        case SchemaOneofCase.ArrowSchema:
+          if (ArrowSchema == null) {
+            ArrowSchema = new global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema();
+          }
+          ArrowSchema.MergeFrom(other.ArrowSchema);
           break;
       }
 
@@ -1543,6 +1645,24 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             RowCount = input.ReadInt64();
             break;
           }
+          case 58: {
+            global::Google.Cloud.BigQuery.Storage.V1.AvroSchema subBuilder = new global::Google.Cloud.BigQuery.Storage.V1.AvroSchema();
+            if (schemaCase_ == SchemaOneofCase.AvroSchema) {
+              subBuilder.MergeFrom(AvroSchema);
+            }
+            input.ReadMessage(subBuilder);
+            AvroSchema = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema subBuilder = new global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema();
+            if (schemaCase_ == SchemaOneofCase.ArrowSchema) {
+              subBuilder.MergeFrom(ArrowSchema);
+            }
+            input.ReadMessage(subBuilder);
+            ArrowSchema = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1591,6 +1711,24 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
           case 48: {
             RowCount = input.ReadInt64();
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.BigQuery.Storage.V1.AvroSchema subBuilder = new global::Google.Cloud.BigQuery.Storage.V1.AvroSchema();
+            if (schemaCase_ == SchemaOneofCase.AvroSchema) {
+              subBuilder.MergeFrom(AvroSchema);
+            }
+            input.ReadMessage(subBuilder);
+            AvroSchema = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema subBuilder = new global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema();
+            if (schemaCase_ == SchemaOneofCase.ArrowSchema) {
+              subBuilder.MergeFrom(ArrowSchema);
+            }
+            input.ReadMessage(subBuilder);
+            ArrowSchema = subBuilder;
             break;
           }
         }
