@@ -5,27 +5,6 @@
   "protoPackage": "google.cloud.automl.v1",
   "libraryPackage": "Google.Cloud.AutoML.V1",
   "services": {
-    "PredictionService": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "PredictionServiceClient",
-          "rpcs": {
-            "Predict": {
-              "methods": [
-                "Predict",
-                "PredictAsync"
-              ]
-            },
-            "BatchPredict": {
-              "methods": [
-                "BatchPredict",
-                "BatchPredictAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
     "AutoMl": {
       "clients": {
         "grpc": {
@@ -137,6 +116,27 @@
               "methods": [
                 "ListModelEvaluations",
                 "ListModelEvaluationsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PredictionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PredictionServiceClient",
+          "rpcs": {
+            "Predict": {
+              "methods": [
+                "Predict",
+                "PredictAsync"
+              ]
+            },
+            "BatchPredict": {
+              "methods": [
+                "BatchPredict",
+                "BatchPredictAsync"
               ]
             }
           }
