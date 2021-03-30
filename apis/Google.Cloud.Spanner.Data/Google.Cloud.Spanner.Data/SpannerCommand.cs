@@ -273,7 +273,7 @@ namespace Google.Cloud.Spanner.Data
             SpannerCommandTextBuilder = SpannerCommandTextBuilder,
             CommandTimeout = CommandTimeout,
             QueryOptions = QueryOptions,
-            Priority = Priority
+            Priority = Priority,
             Tag = Tag
         };
 

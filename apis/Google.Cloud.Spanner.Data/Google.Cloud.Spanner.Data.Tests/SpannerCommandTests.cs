@@ -26,7 +26,6 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
-using Google.Api.Gax.Testing;
 
 namespace Google.Cloud.Spanner.Data.Tests
 {
@@ -173,20 +172,14 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupBatchCreateSessionsAsync()
                 .SetupExecuteStreamingSql();
 
-            var cmdOptimizerVersion = "3";
+            const string connOptimizerVersion = "1";
+            const string envOptimizerVersion = "2";
             // Optimizer version set at a command level has higher precedence
             // than version set through the connection or the environment
             // variable.
-            const string envOptimizerVersion = "2";
+            const string cmdOptimizerVersion = "3";
             RunActionWithEnvOptimizerVersion(() =>
             {
-                var cmdOptimizerVersion = "3";
-                // Optimizer version set at a command level has higher precedence
-                // than version set through the connection or the environment
-                // variable.
-                Mock<SpannerClient> spannerClientMock = SetupExecuteStreamingSql(cmdOptimizerVersion);
-
-                const string connOptimizerVersion = "1";
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
                 var queryOptions = QueryOptions.Empty.WithOptimizerVersion(connOptimizerVersion);
                 connection.QueryOptions = queryOptions;
@@ -746,19 +739,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock.Verify(client => client.ExecuteStreamingSql(
                 It.IsAny<ExecuteSqlRequest>(),
                 It.IsAny<CallSettings>()), Times.Exactly(3));
-        }
-
-        private Mock<SpannerClient> SetupExecuteStreamingSql(string optimizerVersion = "")
-        {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
-            spannerClientMock
-                .SetupBatchCreateSessionsAsync()
-                .Setup(client => client.ExecuteStreamingSql(
-                    It.Is<ExecuteSqlRequest>(request => request.QueryOptions.OptimizerVersion == optimizerVersion),
-                    It.IsAny<CallSettings>()))
-                .Returns<ExecuteSqlRequest, CallSettings>((request, _) => null);
-            return spannerClientMock;
         }
 
         internal static SpannerConnection BuildSpannerConnection(Mock<SpannerClient> spannerClientMock)

@@ -390,10 +390,8 @@ namespace Google.Cloud.Spanner.Data
             "SpannerTransaction.Commit", SpannerConnection.Logger);
         }
         private RequestOptions BuildCommitRequestOptions() =>
-            new RequestOptions { TransactionTag = _tag ?? "" };
+            new RequestOptions { Priority = PriorityConverter.ToProto(CommitPriority), TransactionTag = _tag ?? "" };
 
-        private RequestOptions BuildCommitRequestOptions() =>
-            new RequestOptions { Priority = PriorityConverter.ToProto(CommitPriority) };
         /// <inheritdoc />
         public override void Rollback() => Task.Run(() => RollbackAsync(default)).WaitWithUnwrappedExceptions();
 

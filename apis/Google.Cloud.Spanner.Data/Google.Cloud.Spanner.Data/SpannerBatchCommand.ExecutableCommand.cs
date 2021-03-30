@@ -106,8 +106,7 @@ namespace Google.Cloud.Spanner.Data
             }
 
             private RequestOptions BuildRequestOptions() =>
-                new RequestOptions { Priority = PriorityConverter.ToProto(Priority) };
-                new RequestOptions { RequestTag = Tag ?? "", TransactionTag = Transaction?.Tag ?? "" };
+                new RequestOptions { Priority = PriorityConverter.ToProto(Priority) , RequestTag = Tag ?? "", TransactionTag = Transaction?.Tag ?? "" };
 
             private void ValidateConnectionAndCommandCount()
             {
