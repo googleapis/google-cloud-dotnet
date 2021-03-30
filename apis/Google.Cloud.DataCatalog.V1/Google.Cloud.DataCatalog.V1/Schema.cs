@@ -26,17 +26,17 @@ namespace Google.Cloud.DataCatalog.V1 {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvZGF0YWNhdGFsb2cvdjEvc2NoZW1hLnByb3RvEhtn",
             "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEaH2dvb2dsZS9hcGkvZmllbGRf",
-            "YmVoYXZpb3IucHJvdG8iSQoGU2NoZW1hEj8KB2NvbHVtbnMYAiADKAsyKS5n",
-            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuQ29sdW1uU2NoZW1hQgPgQQIi",
-            "pwEKDENvbHVtblNjaGVtYRITCgZjb2x1bW4YBiABKAlCA+BBAhIRCgR0eXBl",
-            "GAEgASgJQgPgQQISGAoLZGVzY3JpcHRpb24YAiABKAlCA+BBARIRCgRtb2Rl",
-            "GAMgASgJQgPgQQESQgoKc3ViY29sdW1ucxgHIAMoCzIpLmdvb2dsZS5jbG91",
-            "ZC5kYXRhY2F0YWxvZy52MS5Db2x1bW5TY2hlbWFCA+BBAULLAQofY29tLmdv",
-            "b2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MVABWkZnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RhdGFjYXRhbG9nL3YxO2Rh",
-            "dGFjYXRhbG9n+AEBqgIbR29vZ2xlLkNsb3VkLkRhdGFDYXRhbG9nLlYxygIb",
-            "R29vZ2xlXENsb3VkXERhdGFDYXRhbG9nXFYx6gIeR29vZ2xlOjpDbG91ZDo6",
-            "RGF0YUNhdGFsb2c6OlYxYgZwcm90bzM="));
+            "YmVoYXZpb3IucHJvdG8iRAoGU2NoZW1hEjoKB2NvbHVtbnMYAiADKAsyKS5n",
+            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuQ29sdW1uU2NoZW1hIqcBCgxD",
+            "b2x1bW5TY2hlbWESEwoGY29sdW1uGAYgASgJQgPgQQISEQoEdHlwZRgBIAEo",
+            "CUID4EECEhgKC2Rlc2NyaXB0aW9uGAIgASgJQgPgQQESEQoEbW9kZRgDIAEo",
+            "CUID4EEBEkIKCnN1YmNvbHVtbnMYByADKAsyKS5nb29nbGUuY2xvdWQuZGF0",
+            "YWNhdGFsb2cudjEuQ29sdW1uU2NoZW1hQgPgQQFCywEKH2NvbS5nb29nbGUu",
+            "Y2xvdWQuZGF0YWNhdGFsb2cudjFQAVpGZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
+            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kYXRhY2F0YWxvZy92MTtkYXRhY2F0",
+            "YWxvZ/gBAaoCG0dvb2dsZS5DbG91ZC5EYXRhQ2F0YWxvZy5WMcoCG0dvb2ds",
+            "ZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoCHkdvb2dsZTo6Q2xvdWQ6OkRhdGFD",
+            "YXRhbG9nOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -95,8 +95,10 @@ namespace Google.Cloud.DataCatalog.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.DataCatalog.V1.ColumnSchema.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.ColumnSchema> columns_ = new pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.ColumnSchema>();
     /// <summary>
-    /// Required. Schema of columns. A maximum of 10,000 columns and sub-columns can be
-    /// specified.
+    /// The unified GoogleSQL-like schema of columns.
+    ///
+    /// The overall maximum number of columns and nested columns is 10,000.
+    /// The maximum nested depth is 15 levels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.ColumnSchema> Columns {
@@ -267,6 +269,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     private string column_ = "";
     /// <summary>
     /// Required. Name of the column.
+    ///
+    /// Must be a UTF-8 string without dots (.).
+    /// The maximum size is 64 bytes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Column {
@@ -281,6 +286,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     private string type_ = "";
     /// <summary>
     /// Required. Type of the column.
+    ///
+    /// Must be a UTF-8 string with the maximum size of 128 bytes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Type {
@@ -295,6 +302,9 @@ namespace Google.Cloud.DataCatalog.V1 {
     private string description_ = "";
     /// <summary>
     /// Optional. Description of the column. Default value is an empty string.
+    ///
+    /// The description must be a UTF-8 string with the maximum size of 2000
+    /// bytes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {
@@ -308,8 +318,10 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ModeFieldNumber = 3;
     private string mode_ = "";
     /// <summary>
-    /// Optional. A column's mode indicates whether the values in this column are required,
-    /// nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported.
+    /// Optional. A column's mode indicates if values in this column are required,
+    /// nullable, or repeated.
+    ///
+    /// Only `NULLABLE`, `REQUIRED`, and `REPEATED` values are supported.
     /// Default mode is `NULLABLE`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

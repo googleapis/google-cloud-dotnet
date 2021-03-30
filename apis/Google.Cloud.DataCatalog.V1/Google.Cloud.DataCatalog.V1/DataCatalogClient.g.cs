@@ -66,6 +66,7 @@ namespace Google.Cloud.DataCatalog.V1
             CreateTagTemplateFieldSettings = existing.CreateTagTemplateFieldSettings;
             UpdateTagTemplateFieldSettings = existing.UpdateTagTemplateFieldSettings;
             RenameTagTemplateFieldSettings = existing.RenameTagTemplateFieldSettings;
+            RenameTagTemplateFieldEnumValueSettings = existing.RenameTagTemplateFieldEnumValueSettings;
             DeleteTagTemplateFieldSettings = existing.DeleteTagTemplateFieldSettings;
             CreateTagSettings = existing.CreateTagSettings;
             UpdateTagSettings = existing.UpdateTagSettings;
@@ -327,6 +328,19 @@ namespace Google.Cloud.DataCatalog.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataCatalogClient.RenameTagTemplateFieldEnumValue</c> and
+        /// <c>DataCatalogClient.RenameTagTemplateFieldEnumValueAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RenameTagTemplateFieldEnumValueSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DataCatalogClient.DeleteTagTemplateField</c> and <c>DataCatalogClient.DeleteTagTemplateFieldAsync</c>.
         /// </summary>
         /// <remarks>
@@ -577,7 +591,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// This is a custom method
         /// (https://cloud.google.com/apis/design/custom_methods) and does not return
         /// the complete resource, only the resource identifier and high level
-        /// fields. Clients can subsequentally call `Get` methods.
+        /// fields. Clients can subsequently call `Get` methods.
         /// 
         /// Note that Data Catalog search queries do not guarantee full recall. Query
         /// results that match your query may not be returned, even in subsequent
@@ -601,7 +615,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// This is a custom method
         /// (https://cloud.google.com/apis/design/custom_methods) and does not return
         /// the complete resource, only the resource identifier and high level
-        /// fields. Clients can subsequentally call `Get` methods.
+        /// fields. Clients can subsequently call `Get` methods.
         /// 
         /// Note that Data Catalog search queries do not guarantee full recall. Query
         /// results that match your query may not be returned, even in subsequent
@@ -625,7 +639,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// This is a custom method
         /// (https://cloud.google.com/apis/design/custom_methods) and does not return
         /// the complete resource, only the resource identifier and high level
-        /// fields. Clients can subsequentally call `Get` methods.
+        /// fields. Clients can subsequently call `Get` methods.
         /// 
         /// Note that Data Catalog search queries do not guarantee full recall. Query
         /// results that match your query may not be returned, even in subsequent
@@ -643,8 +657,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// return an error in such a case.
         /// </param>
         /// <param name="query">
-        /// Required. The query string in search query syntax. The query must be
-        /// non-empty.
+        /// Optional. The query string in search query syntax. An empty query string will result
+        /// in all data assets (in the specified scope) that the user has access to.
         /// 
         /// Query strings can be simple as "x" or more qualified as:
         /// 
@@ -671,7 +685,7 @@ namespace Google.Cloud.DataCatalog.V1
             SearchCatalog(new SearchCatalogRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNull(scope, nameof(scope)),
-                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+                Query = query ?? "",
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -683,7 +697,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// This is a custom method
         /// (https://cloud.google.com/apis/design/custom_methods) and does not return
         /// the complete resource, only the resource identifier and high level
-        /// fields. Clients can subsequentally call `Get` methods.
+        /// fields. Clients can subsequently call `Get` methods.
         /// 
         /// Note that Data Catalog search queries do not guarantee full recall. Query
         /// results that match your query may not be returned, even in subsequent
@@ -701,8 +715,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// return an error in such a case.
         /// </param>
         /// <param name="query">
-        /// Required. The query string in search query syntax. The query must be
-        /// non-empty.
+        /// Optional. The query string in search query syntax. An empty query string will result
+        /// in all data assets (in the specified scope) that the user has access to.
         /// 
         /// Query strings can be simple as "x" or more qualified as:
         /// 
@@ -729,7 +743,7 @@ namespace Google.Cloud.DataCatalog.V1
             SearchCatalogAsync(new SearchCatalogRequest
             {
                 Scope = gax::GaxPreconditions.CheckNotNull(scope, nameof(scope)),
-                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+                Query = query ?? "",
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -837,17 +851,19 @@ namespace Google.Cloud.DataCatalog.V1
         /// more information).
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project this entry group is in. Example:
+        /// Required. The name of the project this entry group belongs to. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}
+        /// `projects/{project_id}/locations/{location}`
         /// 
-        /// Note that this EntryGroup and its child resources may not actually be
-        /// stored in the location in this name.
+        /// Note: The entry group itself and its child resources might not be
+        /// stored in the location specified in its name.
         /// </param>
         /// <param name="entryGroupId">
-        /// Required. The id of the entry group to create.
-        /// The id must begin with a letter or underscore, contain only English
-        /// letters, numbers and underscores, and be at most 64 characters.
+        /// Required. The ID of the entry group to create.
+        /// 
+        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
+        /// underscores (_), and must start with a letter or underscore.
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="entryGroup">
         /// The entry group to create. Defaults to an empty entry group.
@@ -884,17 +900,19 @@ namespace Google.Cloud.DataCatalog.V1
         /// more information).
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project this entry group is in. Example:
+        /// Required. The name of the project this entry group belongs to. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}
+        /// `projects/{project_id}/locations/{location}`
         /// 
-        /// Note that this EntryGroup and its child resources may not actually be
-        /// stored in the location in this name.
+        /// Note: The entry group itself and its child resources might not be
+        /// stored in the location specified in its name.
         /// </param>
         /// <param name="entryGroupId">
-        /// Required. The id of the entry group to create.
-        /// The id must begin with a letter or underscore, contain only English
-        /// letters, numbers and underscores, and be at most 64 characters.
+        /// Required. The ID of the entry group to create.
+        /// 
+        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
+        /// underscores (_), and must start with a letter or underscore.
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="entryGroup">
         /// The entry group to create. Defaults to an empty entry group.
@@ -931,17 +949,19 @@ namespace Google.Cloud.DataCatalog.V1
         /// more information).
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project this entry group is in. Example:
+        /// Required. The name of the project this entry group belongs to. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}
+        /// `projects/{project_id}/locations/{location}`
         /// 
-        /// Note that this EntryGroup and its child resources may not actually be
-        /// stored in the location in this name.
+        /// Note: The entry group itself and its child resources might not be
+        /// stored in the location specified in its name.
         /// </param>
         /// <param name="entryGroupId">
-        /// Required. The id of the entry group to create.
-        /// The id must begin with a letter or underscore, contain only English
-        /// letters, numbers and underscores, and be at most 64 characters.
+        /// Required. The ID of the entry group to create.
+        /// 
+        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
+        /// underscores (_), and must start with a letter or underscore.
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="entryGroup">
         /// The entry group to create. Defaults to an empty entry group.
@@ -973,17 +993,19 @@ namespace Google.Cloud.DataCatalog.V1
         /// more information).
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project this entry group is in. Example:
+        /// Required. The name of the project this entry group belongs to. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}
+        /// `projects/{project_id}/locations/{location}`
         /// 
-        /// Note that this EntryGroup and its child resources may not actually be
-        /// stored in the location in this name.
+        /// Note: The entry group itself and its child resources might not be
+        /// stored in the location specified in its name.
         /// </param>
         /// <param name="entryGroupId">
-        /// Required. The id of the entry group to create.
-        /// The id must begin with a letter or underscore, contain only English
-        /// letters, numbers and underscores, and be at most 64 characters.
+        /// Required. The ID of the entry group to create.
+        /// 
+        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
+        /// underscores (_), and must start with a letter or underscore.
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="entryGroup">
         /// The entry group to create. Defaults to an empty entry group.
@@ -1020,17 +1042,19 @@ namespace Google.Cloud.DataCatalog.V1
         /// more information).
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project this entry group is in. Example:
+        /// Required. The name of the project this entry group belongs to. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}
+        /// `projects/{project_id}/locations/{location}`
         /// 
-        /// Note that this EntryGroup and its child resources may not actually be
-        /// stored in the location in this name.
+        /// Note: The entry group itself and its child resources might not be
+        /// stored in the location specified in its name.
         /// </param>
         /// <param name="entryGroupId">
-        /// Required. The id of the entry group to create.
-        /// The id must begin with a letter or underscore, contain only English
-        /// letters, numbers and underscores, and be at most 64 characters.
+        /// Required. The ID of the entry group to create.
+        /// 
+        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
+        /// underscores (_), and must start with a letter or underscore.
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="entryGroup">
         /// The entry group to create. Defaults to an empty entry group.
@@ -1067,17 +1091,19 @@ namespace Google.Cloud.DataCatalog.V1
         /// more information).
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project this entry group is in. Example:
+        /// Required. The name of the project this entry group belongs to. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}
+        /// `projects/{project_id}/locations/{location}`
         /// 
-        /// Note that this EntryGroup and its child resources may not actually be
-        /// stored in the location in this name.
+        /// Note: The entry group itself and its child resources might not be
+        /// stored in the location specified in its name.
         /// </param>
         /// <param name="entryGroupId">
-        /// Required. The id of the entry group to create.
-        /// The id must begin with a letter or underscore, contain only English
-        /// letters, numbers and underscores, and be at most 64 characters.
+        /// Required. The ID of the entry group to create.
+        /// 
+        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
+        /// underscores (_), and must start with a letter or underscore.
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="entryGroup">
         /// The entry group to create. Defaults to an empty entry group.
@@ -1405,8 +1431,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The updated entry group. "name" field must be set.
         /// </param>
         /// <param name="updateMask">
-        /// The fields to update on the entry group. If absent or empty, all modifiable
-        /// fields are updated.
+        /// Names of fields whose values to overwrite on an entry group.
+        /// 
+        /// If this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the
+        /// request body, their values are emptied.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1428,8 +1457,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The updated entry group. "name" field must be set.
         /// </param>
         /// <param name="updateMask">
-        /// The fields to update on the entry group. If absent or empty, all modifiable
-        /// fields are updated.
+        /// Names of fields whose values to overwrite on an entry group.
+        /// 
+        /// If this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the
+        /// request body, their values are emptied.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1451,8 +1483,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The updated entry group. "name" field must be set.
         /// </param>
         /// <param name="updateMask">
-        /// The fields to update on the entry group. If absent or empty, all modifiable
-        /// fields are updated.
+        /// Names of fields whose values to overwrite on an entry group.
+        /// 
+        /// If this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the
+        /// request body, their values are emptied.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1628,8 +1663,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Lists entry groups.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the location that contains the entry groups, which
-        /// can be provided in URL format. Example:
+        /// Required. The name of the location that contains the entry groups, which can be
+        /// provided in URL format. Example:
         /// 
         /// * projects/{project_id}/locations/{location}
         /// </param>
@@ -1655,8 +1690,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Lists entry groups.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the location that contains the entry groups, which
-        /// can be provided in URL format. Example:
+        /// Required. The name of the location that contains the entry groups, which can be
+        /// provided in URL format. Example:
         /// 
         /// * projects/{project_id}/locations/{location}
         /// </param>
@@ -1682,8 +1717,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Lists entry groups.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the location that contains the entry groups, which
-        /// can be provided in URL format. Example:
+        /// Required. The name of the location that contains the entry groups, which can be
+        /// provided in URL format. Example:
         /// 
         /// * projects/{project_id}/locations/{location}
         /// </param>
@@ -1709,8 +1744,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Lists entry groups.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the location that contains the entry groups, which
-        /// can be provided in URL format. Example:
+        /// Required. The name of the location that contains the entry groups, which can be
+        /// provided in URL format. Example:
         /// 
         /// * projects/{project_id}/locations/{location}
         /// </param>
@@ -1733,8 +1768,8 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an entry. Only entries of 'FILESET' type or user-specified type can
-        /// be created.
+        /// Creates an entry. Only entries of types 'FILESET', 'CLUSTER', 'DATA_STREAM'
+        /// or with a user-specified type can be created.
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
@@ -1750,8 +1785,8 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an entry. Only entries of 'FILESET' type or user-specified type can
-        /// be created.
+        /// Creates an entry. Only entries of types 'FILESET', 'CLUSTER', 'DATA_STREAM'
+        /// or with a user-specified type can be created.
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
@@ -1767,8 +1802,8 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an entry. Only entries of 'FILESET' type or user-specified type can
-        /// be created.
+        /// Creates an entry. Only entries of types 'FILESET', 'CLUSTER', 'DATA_STREAM'
+        /// or with a user-specified type can be created.
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
@@ -1784,8 +1819,8 @@ namespace Google.Cloud.DataCatalog.V1
             CreateEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an entry. Only entries of 'FILESET' type or user-specified type can
-        /// be created.
+        /// Creates an entry. Only entries of types 'FILESET', 'CLUSTER', 'DATA_STREAM'
+        /// or with a user-specified type can be created.
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
@@ -1795,15 +1830,19 @@ namespace Google.Cloud.DataCatalog.V1
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the entry group this entry is in. Example:
+        /// Required. The name of the entry group this entry belongs to. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
+        /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}`
         /// 
-        /// Note that this Entry and its child resources may not actually be stored in
-        /// the location in this name.
+        /// Note: The entry itself and its child resources might not be stored in
+        /// the location specified in its name.
         /// </param>
         /// <param name="entryId">
-        /// Required. The id of the entry to create.
+        /// Required. The ID of the entry to create.
+        /// 
+        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
+        /// and underscores (_).
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="entry">
         /// Required. The entry to create.
@@ -1819,8 +1858,8 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an entry. Only entries of 'FILESET' type or user-specified type can
-        /// be created.
+        /// Creates an entry. Only entries of types 'FILESET', 'CLUSTER', 'DATA_STREAM'
+        /// or with a user-specified type can be created.
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
@@ -1830,15 +1869,19 @@ namespace Google.Cloud.DataCatalog.V1
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the entry group this entry is in. Example:
+        /// Required. The name of the entry group this entry belongs to. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
+        /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}`
         /// 
-        /// Note that this Entry and its child resources may not actually be stored in
-        /// the location in this name.
+        /// Note: The entry itself and its child resources might not be stored in
+        /// the location specified in its name.
         /// </param>
         /// <param name="entryId">
-        /// Required. The id of the entry to create.
+        /// Required. The ID of the entry to create.
+        /// 
+        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
+        /// and underscores (_).
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="entry">
         /// Required. The entry to create.
@@ -1854,8 +1897,8 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an entry. Only entries of 'FILESET' type or user-specified type can
-        /// be created.
+        /// Creates an entry. Only entries of types 'FILESET', 'CLUSTER', 'DATA_STREAM'
+        /// or with a user-specified type can be created.
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
@@ -1865,15 +1908,19 @@ namespace Google.Cloud.DataCatalog.V1
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the entry group this entry is in. Example:
+        /// Required. The name of the entry group this entry belongs to. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
+        /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}`
         /// 
-        /// Note that this Entry and its child resources may not actually be stored in
-        /// the location in this name.
+        /// Note: The entry itself and its child resources might not be stored in
+        /// the location specified in its name.
         /// </param>
         /// <param name="entryId">
-        /// Required. The id of the entry to create.
+        /// Required. The ID of the entry to create.
+        /// 
+        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
+        /// and underscores (_).
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="entry">
         /// Required. The entry to create.
@@ -1884,8 +1931,8 @@ namespace Google.Cloud.DataCatalog.V1
             CreateEntryAsync(parent, entryId, entry, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an entry. Only entries of 'FILESET' type or user-specified type can
-        /// be created.
+        /// Creates an entry. Only entries of types 'FILESET', 'CLUSTER', 'DATA_STREAM'
+        /// or with a user-specified type can be created.
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
@@ -1895,15 +1942,19 @@ namespace Google.Cloud.DataCatalog.V1
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the entry group this entry is in. Example:
+        /// Required. The name of the entry group this entry belongs to. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
+        /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}`
         /// 
-        /// Note that this Entry and its child resources may not actually be stored in
-        /// the location in this name.
+        /// Note: The entry itself and its child resources might not be stored in
+        /// the location specified in its name.
         /// </param>
         /// <param name="entryId">
-        /// Required. The id of the entry to create.
+        /// Required. The ID of the entry to create.
+        /// 
+        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
+        /// and underscores (_).
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="entry">
         /// Required. The entry to create.
@@ -1919,8 +1970,8 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an entry. Only entries of 'FILESET' type or user-specified type can
-        /// be created.
+        /// Creates an entry. Only entries of types 'FILESET', 'CLUSTER', 'DATA_STREAM'
+        /// or with a user-specified type can be created.
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
@@ -1930,15 +1981,19 @@ namespace Google.Cloud.DataCatalog.V1
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the entry group this entry is in. Example:
+        /// Required. The name of the entry group this entry belongs to. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
+        /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}`
         /// 
-        /// Note that this Entry and its child resources may not actually be stored in
-        /// the location in this name.
+        /// Note: The entry itself and its child resources might not be stored in
+        /// the location specified in its name.
         /// </param>
         /// <param name="entryId">
-        /// Required. The id of the entry to create.
+        /// Required. The ID of the entry to create.
+        /// 
+        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
+        /// and underscores (_).
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="entry">
         /// Required. The entry to create.
@@ -1954,8 +2009,8 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an entry. Only entries of 'FILESET' type or user-specified type can
-        /// be created.
+        /// Creates an entry. Only entries of types 'FILESET', 'CLUSTER', 'DATA_STREAM'
+        /// or with a user-specified type can be created.
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
@@ -1965,15 +2020,19 @@ namespace Google.Cloud.DataCatalog.V1
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the entry group this entry is in. Example:
+        /// Required. The name of the entry group this entry belongs to. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
+        /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}`
         /// 
-        /// Note that this Entry and its child resources may not actually be stored in
-        /// the location in this name.
+        /// Note: The entry itself and its child resources might not be stored in
+        /// the location specified in its name.
         /// </param>
         /// <param name="entryId">
-        /// Required. The id of the entry to create.
+        /// Required. The ID of the entry to create.
+        /// 
+        /// The ID must contain only letters (a-z, A-Z), numbers (0-9),
+        /// and underscores (_).
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="entry">
         /// Required. The entry to create.
@@ -2084,26 +2143,30 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The updated entry. The "name" field must be set.
         /// </param>
         /// <param name="updateMask">
-        /// The fields to update on the entry. If absent or empty, all modifiable
-        /// fields are updated.
+        /// Names of fields whose values to overwrite on an entry.
+        /// 
+        /// If this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the
+        /// request body, their values are emptied.
         /// 
         /// The following fields are modifiable:
+        /// 
         /// * For entries with type `DATA_STREAM`:
         /// * `schema`
-        /// * For entries with type `FILESET`
+        /// * For entries with type `FILESET`:
         /// * `schema`
         /// * `display_name`
         /// * `description`
         /// * `gcs_fileset_spec`
         /// * `gcs_fileset_spec.file_patterns`
-        /// * For entries with `user_specified_type`
+        /// * For entries with `user_specified_type`:
         /// * `schema`
         /// * `display_name`
         /// * `description`
-        /// * user_specified_type
-        /// * user_specified_system
-        /// * linked_resource
-        /// * source_system_timestamps
+        /// * `user_specified_type`
+        /// * `user_specified_system`
+        /// * `linked_resource`
+        /// * `source_system_timestamps`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2125,26 +2188,30 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The updated entry. The "name" field must be set.
         /// </param>
         /// <param name="updateMask">
-        /// The fields to update on the entry. If absent or empty, all modifiable
-        /// fields are updated.
+        /// Names of fields whose values to overwrite on an entry.
+        /// 
+        /// If this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the
+        /// request body, their values are emptied.
         /// 
         /// The following fields are modifiable:
+        /// 
         /// * For entries with type `DATA_STREAM`:
         /// * `schema`
-        /// * For entries with type `FILESET`
+        /// * For entries with type `FILESET`:
         /// * `schema`
         /// * `display_name`
         /// * `description`
         /// * `gcs_fileset_spec`
         /// * `gcs_fileset_spec.file_patterns`
-        /// * For entries with `user_specified_type`
+        /// * For entries with `user_specified_type`:
         /// * `schema`
         /// * `display_name`
         /// * `description`
-        /// * user_specified_type
-        /// * user_specified_system
-        /// * linked_resource
-        /// * source_system_timestamps
+        /// * `user_specified_type`
+        /// * `user_specified_system`
+        /// * `linked_resource`
+        /// * `source_system_timestamps`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2166,26 +2233,30 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The updated entry. The "name" field must be set.
         /// </param>
         /// <param name="updateMask">
-        /// The fields to update on the entry. If absent or empty, all modifiable
-        /// fields are updated.
+        /// Names of fields whose values to overwrite on an entry.
+        /// 
+        /// If this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the
+        /// request body, their values are emptied.
         /// 
         /// The following fields are modifiable:
+        /// 
         /// * For entries with type `DATA_STREAM`:
         /// * `schema`
-        /// * For entries with type `FILESET`
+        /// * For entries with type `FILESET`:
         /// * `schema`
         /// * `display_name`
         /// * `description`
         /// * `gcs_fileset_spec`
         /// * `gcs_fileset_spec.file_patterns`
-        /// * For entries with `user_specified_type`
+        /// * For entries with `user_specified_type`:
         /// * `schema`
         /// * `display_name`
         /// * `description`
-        /// * user_specified_type
-        /// * user_specified_system
-        /// * linked_resource
-        /// * source_system_timestamps
+        /// * `user_specified_type`
+        /// * `user_specified_system`
+        /// * `linked_resource`
+        /// * `source_system_timestamps`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2694,7 +2765,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/us-central1
         /// </param>
         /// <param name="tagTemplateId">
-        /// Required. The id of the tag template to create.
+        /// Required. The ID of the tag template to create.
+        /// 
+        /// The ID must contain only lowercase letters (a-z), numbers (0-9),
+        /// or underscores (_), and must start with a letter or underscore.
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="tagTemplate">
         /// Required. The tag template to create.
@@ -2725,7 +2800,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/us-central1
         /// </param>
         /// <param name="tagTemplateId">
-        /// Required. The id of the tag template to create.
+        /// Required. The ID of the tag template to create.
+        /// 
+        /// The ID must contain only lowercase letters (a-z), numbers (0-9),
+        /// or underscores (_), and must start with a letter or underscore.
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="tagTemplate">
         /// Required. The tag template to create.
@@ -2756,7 +2835,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/us-central1
         /// </param>
         /// <param name="tagTemplateId">
-        /// Required. The id of the tag template to create.
+        /// Required. The ID of the tag template to create.
+        /// 
+        /// The ID must contain only lowercase letters (a-z), numbers (0-9),
+        /// or underscores (_), and must start with a letter or underscore.
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="tagTemplate">
         /// Required. The tag template to create.
@@ -2782,7 +2865,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/us-central1
         /// </param>
         /// <param name="tagTemplateId">
-        /// Required. The id of the tag template to create.
+        /// Required. The ID of the tag template to create.
+        /// 
+        /// The ID must contain only lowercase letters (a-z), numbers (0-9),
+        /// or underscores (_), and must start with a letter or underscore.
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="tagTemplate">
         /// Required. The tag template to create.
@@ -2813,7 +2900,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/us-central1
         /// </param>
         /// <param name="tagTemplateId">
-        /// Required. The id of the tag template to create.
+        /// Required. The ID of the tag template to create.
+        /// 
+        /// The ID must contain only lowercase letters (a-z), numbers (0-9),
+        /// or underscores (_), and must start with a letter or underscore.
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="tagTemplate">
         /// Required. The tag template to create.
@@ -2844,7 +2935,11 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/us-central1
         /// </param>
         /// <param name="tagTemplateId">
-        /// Required. The id of the tag template to create.
+        /// Required. The ID of the tag template to create.
+        /// 
+        /// The ID must contain only lowercase letters (a-z), numbers (0-9),
+        /// or underscores (_), and must start with a letter or underscore.
+        /// The maximum size is 64 bytes when encoded in UTF-8.
         /// </param>
         /// <param name="tagTemplate">
         /// Required. The tag template to create.
@@ -3086,13 +3181,12 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The template to update. The "name" field must be set.
         /// </param>
         /// <param name="updateMask">
-        /// The field mask specifies the parts of the template to overwrite.
+        /// Names of fields whose values to overwrite on a tag template. Currently,
+        /// only `display_name` can be overwritten.
         /// 
-        /// Allowed fields:
-        /// 
-        /// * `display_name`
-        /// 
-        /// If absent or empty, all of the allowed fields above will be updated.
+        /// In general, if this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the
+        /// request body, their values are emptied.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3116,13 +3210,12 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The template to update. The "name" field must be set.
         /// </param>
         /// <param name="updateMask">
-        /// The field mask specifies the parts of the template to overwrite.
+        /// Names of fields whose values to overwrite on a tag template. Currently,
+        /// only `display_name` can be overwritten.
         /// 
-        /// Allowed fields:
-        /// 
-        /// * `display_name`
-        /// 
-        /// If absent or empty, all of the allowed fields above will be updated.
+        /// In general, if this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the
+        /// request body, their values are emptied.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3146,13 +3239,12 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The template to update. The "name" field must be set.
         /// </param>
         /// <param name="updateMask">
-        /// The field mask specifies the parts of the template to overwrite.
+        /// Names of fields whose values to overwrite on a tag template. Currently,
+        /// only `display_name` can be overwritten.
         /// 
-        /// Allowed fields:
-        /// 
-        /// * `display_name`
-        /// 
-        /// If absent or empty, all of the allowed fields above will be updated.
+        /// In general, if this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the
+        /// request body, their values are emptied.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3402,7 +3494,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="tagTemplateFieldId">
         /// Required. The ID of the tag template field to create.
-        /// Field ids can contain letters (both uppercase and lowercase), numbers
+        /// 
+        /// Note: Adding a required field to an existing template is *not* allowed.
+        /// 
+        /// Field IDs can contain letters (both uppercase and lowercase), numbers
         /// (0-9), underscores (_) and dashes (-). Field IDs must be at least 1
         /// character long and at most 128 characters long. Field IDs must also be
         /// unique within their template.
@@ -3437,7 +3532,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="tagTemplateFieldId">
         /// Required. The ID of the tag template field to create.
-        /// Field ids can contain letters (both uppercase and lowercase), numbers
+        /// 
+        /// Note: Adding a required field to an existing template is *not* allowed.
+        /// 
+        /// Field IDs can contain letters (both uppercase and lowercase), numbers
         /// (0-9), underscores (_) and dashes (-). Field IDs must be at least 1
         /// character long and at most 128 characters long. Field IDs must also be
         /// unique within their template.
@@ -3472,7 +3570,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="tagTemplateFieldId">
         /// Required. The ID of the tag template field to create.
-        /// Field ids can contain letters (both uppercase and lowercase), numbers
+        /// 
+        /// Note: Adding a required field to an existing template is *not* allowed.
+        /// 
+        /// Field IDs can contain letters (both uppercase and lowercase), numbers
         /// (0-9), underscores (_) and dashes (-). Field IDs must be at least 1
         /// character long and at most 128 characters long. Field IDs must also be
         /// unique within their template.
@@ -3502,7 +3603,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="tagTemplateFieldId">
         /// Required. The ID of the tag template field to create.
-        /// Field ids can contain letters (both uppercase and lowercase), numbers
+        /// 
+        /// Note: Adding a required field to an existing template is *not* allowed.
+        /// 
+        /// Field IDs can contain letters (both uppercase and lowercase), numbers
         /// (0-9), underscores (_) and dashes (-). Field IDs must be at least 1
         /// character long and at most 128 characters long. Field IDs must also be
         /// unique within their template.
@@ -3537,7 +3641,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="tagTemplateFieldId">
         /// Required. The ID of the tag template field to create.
-        /// Field ids can contain letters (both uppercase and lowercase), numbers
+        /// 
+        /// Note: Adding a required field to an existing template is *not* allowed.
+        /// 
+        /// Field IDs can contain letters (both uppercase and lowercase), numbers
         /// (0-9), underscores (_) and dashes (-). Field IDs must be at least 1
         /// character long and at most 128 characters long. Field IDs must also be
         /// unique within their template.
@@ -3572,7 +3679,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="tagTemplateFieldId">
         /// Required. The ID of the tag template field to create.
-        /// Field ids can contain letters (both uppercase and lowercase), numbers
+        /// 
+        /// Note: Adding a required field to an existing template is *not* allowed.
+        /// 
+        /// Field IDs can contain letters (both uppercase and lowercase), numbers
         /// (0-9), underscores (_) and dashes (-). Field IDs must be at least 1
         /// character long and at most 128 characters long. Field IDs must also be
         /// unique within their template.
@@ -3776,20 +3886,22 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The template to update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. The field mask specifies the parts of the template to be updated.
-        /// Allowed fields:
+        /// Optional. Names of fields whose values to overwrite on an individual field of a tag
+        /// template. The following fields are modifiable:
         /// 
         /// * `display_name`
         /// * `type.enum_type`
         /// * `is_required`
         /// 
-        /// If `update_mask` is not set or empty, all of the allowed fields above will
-        /// be updated.
+        /// If this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the request
+        /// body, their values are emptied with one exception: when updating an enum
+        /// type, the provided values are merged with the existing values. Therefore,
+        /// enum values can only be added, existing enum values cannot be deleted or
+        /// renamed.
         /// 
-        /// When updating an enum type, the provided values will be merged with the
-        /// existing values. Therefore, enum values can only be added, existing enum
-        /// values cannot be deleted nor renamed. Updating a template field from
-        /// optional to required is NOT allowed.
+        /// Additionally, updating a template field from optional to required is
+        /// *not* allowed.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3817,20 +3929,22 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The template to update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. The field mask specifies the parts of the template to be updated.
-        /// Allowed fields:
+        /// Optional. Names of fields whose values to overwrite on an individual field of a tag
+        /// template. The following fields are modifiable:
         /// 
         /// * `display_name`
         /// * `type.enum_type`
         /// * `is_required`
         /// 
-        /// If `update_mask` is not set or empty, all of the allowed fields above will
-        /// be updated.
+        /// If this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the request
+        /// body, their values are emptied with one exception: when updating an enum
+        /// type, the provided values are merged with the existing values. Therefore,
+        /// enum values can only be added, existing enum values cannot be deleted or
+        /// renamed.
         /// 
-        /// When updating an enum type, the provided values will be merged with the
-        /// existing values. Therefore, enum values can only be added, existing enum
-        /// values cannot be deleted nor renamed. Updating a template field from
-        /// optional to required is NOT allowed.
+        /// Additionally, updating a template field from optional to required is
+        /// *not* allowed.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3858,20 +3972,22 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The template to update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. The field mask specifies the parts of the template to be updated.
-        /// Allowed fields:
+        /// Optional. Names of fields whose values to overwrite on an individual field of a tag
+        /// template. The following fields are modifiable:
         /// 
         /// * `display_name`
         /// * `type.enum_type`
         /// * `is_required`
         /// 
-        /// If `update_mask` is not set or empty, all of the allowed fields above will
-        /// be updated.
+        /// If this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the request
+        /// body, their values are emptied with one exception: when updating an enum
+        /// type, the provided values are merged with the existing values. Therefore,
+        /// enum values can only be added, existing enum values cannot be deleted or
+        /// renamed.
         /// 
-        /// When updating an enum type, the provided values will be merged with the
-        /// existing values. Therefore, enum values can only be added, existing enum
-        /// values cannot be deleted nor renamed. Updating a template field from
-        /// optional to required is NOT allowed.
+        /// Additionally, updating a template field from optional to required is
+        /// *not* allowed.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3894,20 +4010,22 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The template to update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. The field mask specifies the parts of the template to be updated.
-        /// Allowed fields:
+        /// Optional. Names of fields whose values to overwrite on an individual field of a tag
+        /// template. The following fields are modifiable:
         /// 
         /// * `display_name`
         /// * `type.enum_type`
         /// * `is_required`
         /// 
-        /// If `update_mask` is not set or empty, all of the allowed fields above will
-        /// be updated.
+        /// If this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the request
+        /// body, their values are emptied with one exception: when updating an enum
+        /// type, the provided values are merged with the existing values. Therefore,
+        /// enum values can only be added, existing enum values cannot be deleted or
+        /// renamed.
         /// 
-        /// When updating an enum type, the provided values will be merged with the
-        /// existing values. Therefore, enum values can only be added, existing enum
-        /// values cannot be deleted nor renamed. Updating a template field from
-        /// optional to required is NOT allowed.
+        /// Additionally, updating a template field from optional to required is
+        /// *not* allowed.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3935,20 +4053,22 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The template to update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. The field mask specifies the parts of the template to be updated.
-        /// Allowed fields:
+        /// Optional. Names of fields whose values to overwrite on an individual field of a tag
+        /// template. The following fields are modifiable:
         /// 
         /// * `display_name`
         /// * `type.enum_type`
         /// * `is_required`
         /// 
-        /// If `update_mask` is not set or empty, all of the allowed fields above will
-        /// be updated.
+        /// If this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the request
+        /// body, their values are emptied with one exception: when updating an enum
+        /// type, the provided values are merged with the existing values. Therefore,
+        /// enum values can only be added, existing enum values cannot be deleted or
+        /// renamed.
         /// 
-        /// When updating an enum type, the provided values will be merged with the
-        /// existing values. Therefore, enum values can only be added, existing enum
-        /// values cannot be deleted nor renamed. Updating a template field from
-        /// optional to required is NOT allowed.
+        /// Additionally, updating a template field from optional to required is
+        /// *not* allowed.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3976,20 +4096,22 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The template to update.
         /// </param>
         /// <param name="updateMask">
-        /// Optional. The field mask specifies the parts of the template to be updated.
-        /// Allowed fields:
+        /// Optional. Names of fields whose values to overwrite on an individual field of a tag
+        /// template. The following fields are modifiable:
         /// 
         /// * `display_name`
         /// * `type.enum_type`
         /// * `is_required`
         /// 
-        /// If `update_mask` is not set or empty, all of the allowed fields above will
-        /// be updated.
+        /// If this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the request
+        /// body, their values are emptied with one exception: when updating an enum
+        /// type, the provided values are merged with the existing values. Therefore,
+        /// enum values can only be added, existing enum values cannot be deleted or
+        /// renamed.
         /// 
-        /// When updating an enum type, the provided values will be merged with the
-        /// existing values. Therefore, enum values can only be added, existing enum
-        /// values cannot be deleted nor renamed. Updating a template field from
-        /// optional to required is NOT allowed.
+        /// Additionally, updating a template field from optional to required is
+        /// *not* allowed.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4048,8 +4170,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example,
-        /// `my_new_field`.
+        /// Required. The new ID of this tag template field. For example, `my_new_field`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4073,8 +4194,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example,
-        /// `my_new_field`.
+        /// Required. The new ID of this tag template field. For example, `my_new_field`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4098,8 +4218,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example,
-        /// `my_new_field`.
+        /// Required. The new ID of this tag template field. For example, `my_new_field`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4119,8 +4238,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example,
-        /// `my_new_field`.
+        /// Required. The new ID of this tag template field. For example, `my_new_field`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4144,8 +4262,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example,
-        /// `my_new_field`.
+        /// Required. The new ID of this tag template field. For example, `my_new_field`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4169,13 +4286,160 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example,
-        /// `my_new_field`.
+        /// Required. The new ID of this tag template field. For example, `my_new_field`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldAsync(TagTemplateFieldName name, string newTagTemplateFieldId, st::CancellationToken cancellationToken) =>
             RenameTagTemplateFieldAsync(name, newTagTemplateFieldId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Renames an enum value in a tag template. The enum values have to be unique
+        /// within one enum field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TagTemplateField RenameTagTemplateFieldEnumValue(RenameTagTemplateFieldEnumValueRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Renames an enum value in a tag template. The enum values have to be unique
+        /// within one enum field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldEnumValueAsync(RenameTagTemplateFieldEnumValueRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Renames an enum value in a tag template. The enum values have to be unique
+        /// within one enum field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldEnumValueAsync(RenameTagTemplateFieldEnumValueRequest request, st::CancellationToken cancellationToken) =>
+            RenameTagTemplateFieldEnumValueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Renames an enum value in a tag template. The enum values have to be unique
+        /// within one enum field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the enum field value. Example:
+        /// 
+        /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}
+        /// </param>
+        /// <param name="newEnumValueDisplayName">
+        /// Required. The new display name of the enum value. For example, `my_new_enum_value`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TagTemplateField RenameTagTemplateFieldEnumValue(string name, string newEnumValueDisplayName, gaxgrpc::CallSettings callSettings = null) =>
+            RenameTagTemplateFieldEnumValue(new RenameTagTemplateFieldEnumValueRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                NewEnumValueDisplayName = gax::GaxPreconditions.CheckNotNullOrEmpty(newEnumValueDisplayName, nameof(newEnumValueDisplayName)),
+            }, callSettings);
+
+        /// <summary>
+        /// Renames an enum value in a tag template. The enum values have to be unique
+        /// within one enum field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the enum field value. Example:
+        /// 
+        /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}
+        /// </param>
+        /// <param name="newEnumValueDisplayName">
+        /// Required. The new display name of the enum value. For example, `my_new_enum_value`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldEnumValueAsync(string name, string newEnumValueDisplayName, gaxgrpc::CallSettings callSettings = null) =>
+            RenameTagTemplateFieldEnumValueAsync(new RenameTagTemplateFieldEnumValueRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                NewEnumValueDisplayName = gax::GaxPreconditions.CheckNotNullOrEmpty(newEnumValueDisplayName, nameof(newEnumValueDisplayName)),
+            }, callSettings);
+
+        /// <summary>
+        /// Renames an enum value in a tag template. The enum values have to be unique
+        /// within one enum field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the enum field value. Example:
+        /// 
+        /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}
+        /// </param>
+        /// <param name="newEnumValueDisplayName">
+        /// Required. The new display name of the enum value. For example, `my_new_enum_value`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldEnumValueAsync(string name, string newEnumValueDisplayName, st::CancellationToken cancellationToken) =>
+            RenameTagTemplateFieldEnumValueAsync(name, newEnumValueDisplayName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Renames an enum value in a tag template. The enum values have to be unique
+        /// within one enum field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the enum field value. Example:
+        /// 
+        /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}
+        /// </param>
+        /// <param name="newEnumValueDisplayName">
+        /// Required. The new display name of the enum value. For example, `my_new_enum_value`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TagTemplateField RenameTagTemplateFieldEnumValue(TagTemplateFieldEnumValueName name, string newEnumValueDisplayName, gaxgrpc::CallSettings callSettings = null) =>
+            RenameTagTemplateFieldEnumValue(new RenameTagTemplateFieldEnumValueRequest
+            {
+                TagTemplateFieldEnumValueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                NewEnumValueDisplayName = gax::GaxPreconditions.CheckNotNullOrEmpty(newEnumValueDisplayName, nameof(newEnumValueDisplayName)),
+            }, callSettings);
+
+        /// <summary>
+        /// Renames an enum value in a tag template. The enum values have to be unique
+        /// within one enum field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the enum field value. Example:
+        /// 
+        /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}
+        /// </param>
+        /// <param name="newEnumValueDisplayName">
+        /// Required. The new display name of the enum value. For example, `my_new_enum_value`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldEnumValueAsync(TagTemplateFieldEnumValueName name, string newEnumValueDisplayName, gaxgrpc::CallSettings callSettings = null) =>
+            RenameTagTemplateFieldEnumValueAsync(new RenameTagTemplateFieldEnumValueRequest
+            {
+                TagTemplateFieldEnumValueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                NewEnumValueDisplayName = gax::GaxPreconditions.CheckNotNullOrEmpty(newEnumValueDisplayName, nameof(newEnumValueDisplayName)),
+            }, callSettings);
+
+        /// <summary>
+        /// Renames an enum value in a tag template. The enum values have to be unique
+        /// within one enum field.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the enum field value. Example:
+        /// 
+        /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}
+        /// </param>
+        /// <param name="newEnumValueDisplayName">
+        /// Required. The new display name of the enum value. For example, `my_new_enum_value`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldEnumValueAsync(TagTemplateFieldEnumValueName name, string newEnumValueDisplayName, st::CancellationToken cancellationToken) =>
+            RenameTagTemplateFieldEnumValueAsync(name, newEnumValueDisplayName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a field in a tag template and all uses of that field.
@@ -4419,13 +4683,13 @@ namespace Google.Cloud.DataCatalog.V1
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the resource to attach this tag to. Tags can be
-        /// attached to Entries. Example:
+        /// Required. The name of the resource to attach this tag to. Tags can be attached to
+        /// entries. An entry can have up to 1000 attached tags. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+        /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}`
         /// 
-        /// Note that this Tag and its child resources may not actually be stored in
-        /// the location in this name.
+        /// Note: The tag and its child resources might not be stored in
+        /// the location specified in its name.
         /// </param>
         /// <param name="tag">
         /// Required. The tag to create.
@@ -4449,13 +4713,13 @@ namespace Google.Cloud.DataCatalog.V1
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the resource to attach this tag to. Tags can be
-        /// attached to Entries. Example:
+        /// Required. The name of the resource to attach this tag to. Tags can be attached to
+        /// entries. An entry can have up to 1000 attached tags. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+        /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}`
         /// 
-        /// Note that this Tag and its child resources may not actually be stored in
-        /// the location in this name.
+        /// Note: The tag and its child resources might not be stored in
+        /// the location specified in its name.
         /// </param>
         /// <param name="tag">
         /// Required. The tag to create.
@@ -4479,13 +4743,13 @@ namespace Google.Cloud.DataCatalog.V1
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the resource to attach this tag to. Tags can be
-        /// attached to Entries. Example:
+        /// Required. The name of the resource to attach this tag to. Tags can be attached to
+        /// entries. An entry can have up to 1000 attached tags. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+        /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}`
         /// 
-        /// Note that this Tag and its child resources may not actually be stored in
-        /// the location in this name.
+        /// Note: The tag and its child resources might not be stored in
+        /// the location specified in its name.
         /// </param>
         /// <param name="tag">
         /// Required. The tag to create.
@@ -4505,13 +4769,13 @@ namespace Google.Cloud.DataCatalog.V1
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the resource to attach this tag to. Tags can be
-        /// attached to Entries. Example:
+        /// Required. The name of the resource to attach this tag to. Tags can be attached to
+        /// entries. An entry can have up to 1000 attached tags. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+        /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}`
         /// 
-        /// Note that this Tag and its child resources may not actually be stored in
-        /// the location in this name.
+        /// Note: The tag and its child resources might not be stored in
+        /// the location specified in its name.
         /// </param>
         /// <param name="tag">
         /// Required. The tag to create.
@@ -4535,13 +4799,13 @@ namespace Google.Cloud.DataCatalog.V1
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the resource to attach this tag to. Tags can be
-        /// attached to Entries. Example:
+        /// Required. The name of the resource to attach this tag to. Tags can be attached to
+        /// entries. An entry can have up to 1000 attached tags. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+        /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}`
         /// 
-        /// Note that this Tag and its child resources may not actually be stored in
-        /// the location in this name.
+        /// Note: The tag and its child resources might not be stored in
+        /// the location specified in its name.
         /// </param>
         /// <param name="tag">
         /// Required. The tag to create.
@@ -4565,13 +4829,13 @@ namespace Google.Cloud.DataCatalog.V1
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the resource to attach this tag to. Tags can be
-        /// attached to Entries. Example:
+        /// Required. The name of the resource to attach this tag to. Tags can be attached to
+        /// entries. An entry can have up to 1000 attached tags. Example:
         /// 
-        /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
+        /// `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}`
         /// 
-        /// Note that this Tag and its child resources may not actually be stored in
-        /// the location in this name.
+        /// Note: The tag and its child resources might not be stored in
+        /// the location specified in its name.
         /// </param>
         /// <param name="tag">
         /// Required. The tag to create.
@@ -4654,8 +4918,12 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The updated tag. The "name" field must be set.
         /// </param>
         /// <param name="updateMask">
-        /// The fields to update on the Tag. If absent or empty, all modifiable fields
-        /// are updated. Currently the only modifiable field is the field `fields`.
+        /// Names of fields whose values to overwrite on a tag. Currently, a tag has
+        /// the only modifiable field with the name `fields`.
+        /// 
+        /// In general, if this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the
+        /// request body, their values are emptied.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4673,8 +4941,12 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The updated tag. The "name" field must be set.
         /// </param>
         /// <param name="updateMask">
-        /// The fields to update on the Tag. If absent or empty, all modifiable fields
-        /// are updated. Currently the only modifiable field is the field `fields`.
+        /// Names of fields whose values to overwrite on a tag. Currently, a tag has
+        /// the only modifiable field with the name `fields`.
+        /// 
+        /// In general, if this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the
+        /// request body, their values are emptied.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4692,8 +4964,12 @@ namespace Google.Cloud.DataCatalog.V1
         /// Required. The updated tag. The "name" field must be set.
         /// </param>
         /// <param name="updateMask">
-        /// The fields to update on the Tag. If absent or empty, all modifiable fields
-        /// are updated. Currently the only modifiable field is the field `fields`.
+        /// Names of fields whose values to overwrite on a tag. Currently, a tag has
+        /// the only modifiable field with the name `fields`.
+        /// 
+        /// In general, if this parameter is absent or empty, all modifiable fields
+        /// are overwritten. If such fields are non-required and omitted in the
+        /// request body, their values are emptied.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4839,8 +5115,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Lists the tags on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Data Catalog resource to list the tags of. The
-        /// resource could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
+        /// Required. The name of the Data Catalog resource to list the tags of. The resource
+        /// could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
         /// [EntryGroup][google.cloud.datacatalog.v1.EntryGroup].
         /// 
         /// Examples:
@@ -4870,8 +5146,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Lists the tags on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Data Catalog resource to list the tags of. The
-        /// resource could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
+        /// Required. The name of the Data Catalog resource to list the tags of. The resource
+        /// could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
         /// [EntryGroup][google.cloud.datacatalog.v1.EntryGroup].
         /// 
         /// Examples:
@@ -4901,8 +5177,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Lists the tags on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Data Catalog resource to list the tags of. The
-        /// resource could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
+        /// Required. The name of the Data Catalog resource to list the tags of. The resource
+        /// could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
         /// [EntryGroup][google.cloud.datacatalog.v1.EntryGroup].
         /// 
         /// Examples:
@@ -4932,8 +5208,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Lists the tags on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Data Catalog resource to list the tags of. The
-        /// resource could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
+        /// Required. The name of the Data Catalog resource to list the tags of. The resource
+        /// could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
         /// [EntryGroup][google.cloud.datacatalog.v1.EntryGroup].
         /// 
         /// Examples:
@@ -5582,6 +5858,8 @@ namespace Google.Cloud.DataCatalog.V1
 
         private readonly gaxgrpc::ApiCall<RenameTagTemplateFieldRequest, TagTemplateField> _callRenameTagTemplateField;
 
+        private readonly gaxgrpc::ApiCall<RenameTagTemplateFieldEnumValueRequest, TagTemplateField> _callRenameTagTemplateFieldEnumValue;
+
         private readonly gaxgrpc::ApiCall<DeleteTagTemplateFieldRequest, wkt::Empty> _callDeleteTagTemplateField;
 
         private readonly gaxgrpc::ApiCall<CreateTagRequest, Tag> _callCreateTag;
@@ -5665,6 +5943,9 @@ namespace Google.Cloud.DataCatalog.V1
             _callRenameTagTemplateField = clientHelper.BuildApiCall<RenameTagTemplateFieldRequest, TagTemplateField>(grpcClient.RenameTagTemplateFieldAsync, grpcClient.RenameTagTemplateField, effectiveSettings.RenameTagTemplateFieldSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRenameTagTemplateField);
             Modify_RenameTagTemplateFieldApiCall(ref _callRenameTagTemplateField);
+            _callRenameTagTemplateFieldEnumValue = clientHelper.BuildApiCall<RenameTagTemplateFieldEnumValueRequest, TagTemplateField>(grpcClient.RenameTagTemplateFieldEnumValueAsync, grpcClient.RenameTagTemplateFieldEnumValue, effectiveSettings.RenameTagTemplateFieldEnumValueSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRenameTagTemplateFieldEnumValue);
+            Modify_RenameTagTemplateFieldEnumValueApiCall(ref _callRenameTagTemplateFieldEnumValue);
             _callDeleteTagTemplateField = clientHelper.BuildApiCall<DeleteTagTemplateFieldRequest, wkt::Empty>(grpcClient.DeleteTagTemplateFieldAsync, grpcClient.DeleteTagTemplateField, effectiveSettings.DeleteTagTemplateFieldSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTagTemplateField);
             Modify_DeleteTagTemplateFieldApiCall(ref _callDeleteTagTemplateField);
@@ -5732,6 +6013,8 @@ namespace Google.Cloud.DataCatalog.V1
 
         partial void Modify_RenameTagTemplateFieldApiCall(ref gaxgrpc::ApiCall<RenameTagTemplateFieldRequest, TagTemplateField> call);
 
+        partial void Modify_RenameTagTemplateFieldEnumValueApiCall(ref gaxgrpc::ApiCall<RenameTagTemplateFieldEnumValueRequest, TagTemplateField> call);
+
         partial void Modify_DeleteTagTemplateFieldApiCall(ref gaxgrpc::ApiCall<DeleteTagTemplateFieldRequest, wkt::Empty> call);
 
         partial void Modify_CreateTagApiCall(ref gaxgrpc::ApiCall<CreateTagRequest, Tag> call);
@@ -5791,6 +6074,8 @@ namespace Google.Cloud.DataCatalog.V1
 
         partial void Modify_RenameTagTemplateFieldRequest(ref RenameTagTemplateFieldRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_RenameTagTemplateFieldEnumValueRequest(ref RenameTagTemplateFieldEnumValueRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteTagTemplateFieldRequest(ref DeleteTagTemplateFieldRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateTagRequest(ref CreateTagRequest request, ref gaxgrpc::CallSettings settings);
@@ -5814,7 +6099,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// This is a custom method
         /// (https://cloud.google.com/apis/design/custom_methods) and does not return
         /// the complete resource, only the resource identifier and high level
-        /// fields. Clients can subsequentally call `Get` methods.
+        /// fields. Clients can subsequently call `Get` methods.
         /// 
         /// Note that Data Catalog search queries do not guarantee full recall. Query
         /// results that match your query may not be returned, even in subsequent
@@ -5841,7 +6126,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// This is a custom method
         /// (https://cloud.google.com/apis/design/custom_methods) and does not return
         /// the complete resource, only the resource identifier and high level
-        /// fields. Clients can subsequentally call `Get` methods.
+        /// fields. Clients can subsequently call `Get` methods.
         /// 
         /// Note that Data Catalog search queries do not guarantee full recall. Query
         /// results that match your query may not be returned, even in subsequent
@@ -6034,8 +6319,8 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Creates an entry. Only entries of 'FILESET' type or user-specified type can
-        /// be created.
+        /// Creates an entry. Only entries of types 'FILESET', 'CLUSTER', 'DATA_STREAM'
+        /// or with a user-specified type can be created.
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
@@ -6054,8 +6339,8 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Creates an entry. Only entries of 'FILESET' type or user-specified type can
-        /// be created.
+        /// Creates an entry. Only entries of types 'FILESET', 'CLUSTER', 'DATA_STREAM'
+        /// or with a user-specified type can be created.
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
@@ -6435,6 +6720,32 @@ namespace Google.Cloud.DataCatalog.V1
         {
             Modify_RenameTagTemplateFieldRequest(ref request, ref callSettings);
             return _callRenameTagTemplateField.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Renames an enum value in a tag template. The enum values have to be unique
+        /// within one enum field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TagTemplateField RenameTagTemplateFieldEnumValue(RenameTagTemplateFieldEnumValueRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RenameTagTemplateFieldEnumValueRequest(ref request, ref callSettings);
+            return _callRenameTagTemplateFieldEnumValue.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Renames an enum value in a tag template. The enum values have to be unique
+        /// within one enum field.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TagTemplateField> RenameTagTemplateFieldEnumValueAsync(RenameTagTemplateFieldEnumValueRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RenameTagTemplateFieldEnumValueRequest(ref request, ref callSettings);
+            return _callRenameTagTemplateFieldEnumValue.Async(request, callSettings);
         }
 
         /// <summary>

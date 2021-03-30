@@ -516,6 +516,322 @@ namespace Google.Cloud.DataCatalog.V1
         public static bool operator !=(EntryGroupName a, EntryGroupName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>TagTemplateFieldEnumValue</c> resource.</summary>
+    public sealed partial class TagTemplateFieldEnumValueName : gax::IResourceName, sys::IEquatable<TagTemplateFieldEnumValueName>
+    {
+        /// <summary>The possible contents of <see cref="TagTemplateFieldEnumValueName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/locations/{location}/tagTemplates/{tag_template}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}</c>
+            /// .
+            /// </summary>
+            ProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationTagTemplateTagTemplateFieldEnumValueDisplayName = new gax::PathTemplate("projects/{project}/locations/{location}/tagTemplates/{tag_template}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}");
+
+        /// <summary>
+        /// Creates a <see cref="TagTemplateFieldEnumValueName"/> containing an unparsed resource name.
+        /// </summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="TagTemplateFieldEnumValueName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static TagTemplateFieldEnumValueName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new TagTemplateFieldEnumValueName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="TagTemplateFieldEnumValueName"/> with the pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/tagTemplates/{tag_template}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tagTemplateId">The <c>TagTemplate</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tagTemplateFieldId">The <c>TagTemplateField</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="enumValueDisplayNameId">
+        /// The <c>EnumValueDisplayName</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// A new instance of <see cref="TagTemplateFieldEnumValueName"/> constructed from the provided ids.
+        /// </returns>
+        public static TagTemplateFieldEnumValueName FromProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName(string projectId, string locationId, string tagTemplateId, string tagTemplateFieldId, string enumValueDisplayNameId) =>
+            new TagTemplateFieldEnumValueName(ResourceNameType.ProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), tagTemplateId: gax::GaxPreconditions.CheckNotNullOrEmpty(tagTemplateId, nameof(tagTemplateId)), tagTemplateFieldId: gax::GaxPreconditions.CheckNotNullOrEmpty(tagTemplateFieldId, nameof(tagTemplateFieldId)), enumValueDisplayNameId: gax::GaxPreconditions.CheckNotNullOrEmpty(enumValueDisplayNameId, nameof(enumValueDisplayNameId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TagTemplateFieldEnumValueName"/> with
+        /// pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/tagTemplates/{tag_template}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tagTemplateId">The <c>TagTemplate</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tagTemplateFieldId">The <c>TagTemplateField</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="enumValueDisplayNameId">
+        /// The <c>EnumValueDisplayName</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="TagTemplateFieldEnumValueName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/tagTemplates/{tag_template}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}</c>
+        /// .
+        /// </returns>
+        public static string Format(string projectId, string locationId, string tagTemplateId, string tagTemplateFieldId, string enumValueDisplayNameId) =>
+            FormatProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName(projectId, locationId, tagTemplateId, tagTemplateFieldId, enumValueDisplayNameId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TagTemplateFieldEnumValueName"/> with
+        /// pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/tagTemplates/{tag_template}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tagTemplateId">The <c>TagTemplate</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tagTemplateFieldId">The <c>TagTemplateField</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="enumValueDisplayNameId">
+        /// The <c>EnumValueDisplayName</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="TagTemplateFieldEnumValueName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/tagTemplates/{tag_template}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName(string projectId, string locationId, string tagTemplateId, string tagTemplateFieldId, string enumValueDisplayNameId) =>
+            s_projectLocationTagTemplateTagTemplateFieldEnumValueDisplayName.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(tagTemplateId, nameof(tagTemplateId)), gax::GaxPreconditions.CheckNotNullOrEmpty(tagTemplateFieldId, nameof(tagTemplateFieldId)), gax::GaxPreconditions.CheckNotNullOrEmpty(enumValueDisplayNameId, nameof(enumValueDisplayNameId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="TagTemplateFieldEnumValueName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/tagTemplates/{tag_template}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="tagTemplateFieldEnumValueName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <returns>The parsed <see cref="TagTemplateFieldEnumValueName"/> if successful.</returns>
+        public static TagTemplateFieldEnumValueName Parse(string tagTemplateFieldEnumValueName) =>
+            Parse(tagTemplateFieldEnumValueName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="TagTemplateFieldEnumValueName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/tagTemplates/{tag_template}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="tagTemplateFieldEnumValueName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="TagTemplateFieldEnumValueName"/> if successful.</returns>
+        public static TagTemplateFieldEnumValueName Parse(string tagTemplateFieldEnumValueName, bool allowUnparsed) =>
+            TryParse(tagTemplateFieldEnumValueName, allowUnparsed, out TagTemplateFieldEnumValueName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TagTemplateFieldEnumValueName"/>
+        /// instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/tagTemplates/{tag_template}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="tagTemplateFieldEnumValueName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TagTemplateFieldEnumValueName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string tagTemplateFieldEnumValueName, out TagTemplateFieldEnumValueName result) =>
+            TryParse(tagTemplateFieldEnumValueName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TagTemplateFieldEnumValueName"/>
+        /// instance; optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/tagTemplates/{tag_template}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="tagTemplateFieldEnumValueName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TagTemplateFieldEnumValueName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string tagTemplateFieldEnumValueName, bool allowUnparsed, out TagTemplateFieldEnumValueName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(tagTemplateFieldEnumValueName, nameof(tagTemplateFieldEnumValueName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationTagTemplateTagTemplateFieldEnumValueDisplayName.TryParseName(tagTemplateFieldEnumValueName, out resourceName))
+            {
+                result = FromProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(tagTemplateFieldEnumValueName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private TagTemplateFieldEnumValueName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string enumValueDisplayNameId = null, string locationId = null, string projectId = null, string tagTemplateId = null, string tagTemplateFieldId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            EnumValueDisplayNameId = enumValueDisplayNameId;
+            LocationId = locationId;
+            ProjectId = projectId;
+            TagTemplateId = tagTemplateId;
+            TagTemplateFieldId = tagTemplateFieldId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="TagTemplateFieldEnumValueName"/> class from the component parts of
+        /// pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/tagTemplates/{tag_template}/fields/{tag_template_field_id}/enumValues/{enum_value_display_name}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tagTemplateId">The <c>TagTemplate</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tagTemplateFieldId">The <c>TagTemplateField</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="enumValueDisplayNameId">
+        /// The <c>EnumValueDisplayName</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        public TagTemplateFieldEnumValueName(string projectId, string locationId, string tagTemplateId, string tagTemplateFieldId, string enumValueDisplayNameId) : this(ResourceNameType.ProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), tagTemplateId: gax::GaxPreconditions.CheckNotNullOrEmpty(tagTemplateId, nameof(tagTemplateId)), tagTemplateFieldId: gax::GaxPreconditions.CheckNotNullOrEmpty(tagTemplateFieldId, nameof(tagTemplateFieldId)), enumValueDisplayNameId: gax::GaxPreconditions.CheckNotNullOrEmpty(enumValueDisplayNameId, nameof(enumValueDisplayNameId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>EnumValueDisplayName</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
+        /// resource name.
+        /// </summary>
+        public string EnumValueDisplayNameId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>TagTemplate</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string TagTemplateId { get; }
+
+        /// <summary>
+        /// The <c>TagTemplateField</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string TagTemplateFieldId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName: return s_projectLocationTagTemplateTagTemplateFieldEnumValueDisplayName.Expand(ProjectId, LocationId, TagTemplateId, TagTemplateFieldId, EnumValueDisplayNameId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as TagTemplateFieldEnumValueName);
+
+        /// <inheritdoc/>
+        public bool Equals(TagTemplateFieldEnumValueName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(TagTemplateFieldEnumValueName a, TagTemplateFieldEnumValueName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(TagTemplateFieldEnumValueName a, TagTemplateFieldEnumValueName b) => !(a == b);
+    }
+
     public partial class CreateEntryGroupRequest
     {
         /// <summary>
@@ -714,6 +1030,19 @@ namespace Google.Cloud.DataCatalog.V1
         public gcdv::TagTemplateFieldName TagTemplateFieldName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::TagTemplateFieldName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RenameTagTemplateFieldEnumValueRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::TagTemplateFieldEnumValueName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcdv::TagTemplateFieldEnumValueName TagTemplateFieldEnumValueName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::TagTemplateFieldEnumValueName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
