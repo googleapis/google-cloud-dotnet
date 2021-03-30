@@ -100,7 +100,7 @@ namespace Google.Cloud.ApiGateway.V1 {
             "aWdhdGV3YXkudjFQAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
             "Z2xlYXBpcy9jbG91ZC9hcGlnYXRld2F5L3YxO2FwaWdhdGV3YXmqAhpHb29n",
             "bGUuQ2xvdWQuQXBpR2F0ZXdheS5WMcoCGkdvb2dsZVxDbG91ZFxBcGlHYXRl",
-            "d2F5XFYx6gIdR29vZ2xlOjpDbG91ZDo6QVBJR2F0ZXdheTo6VjFiBnByb3Rv",
+            "d2F5XFYx6gIdR29vZ2xlOjpDbG91ZDo6QXBpR2F0ZXdheTo6VjFiBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.ApiGateway.V1.ApigatewayReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
