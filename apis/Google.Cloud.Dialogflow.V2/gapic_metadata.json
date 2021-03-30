@@ -5,63 +5,84 @@
   "protoPackage": "google.cloud.dialogflow.v2",
   "libraryPackage": "Google.Cloud.Dialogflow.V2",
   "services": {
-    "Agents": {
+    "EntityTypes": {
       "clients": {
         "grpc": {
-          "libraryClient": "AgentsClient",
+          "libraryClient": "EntityTypesClient",
           "rpcs": {
-            "GetAgent": {
+            "ListEntityTypes": {
               "methods": [
-                "GetAgent",
-                "GetAgentAsync"
+                "ListEntityTypes",
+                "ListEntityTypesAsync"
               ]
             },
-            "SetAgent": {
+            "GetEntityType": {
               "methods": [
-                "SetAgent",
-                "SetAgentAsync"
+                "GetEntityType",
+                "GetEntityTypeAsync"
               ]
             },
-            "DeleteAgent": {
+            "CreateEntityType": {
               "methods": [
-                "DeleteAgent",
-                "DeleteAgentAsync"
+                "CreateEntityType",
+                "CreateEntityTypeAsync"
               ]
             },
-            "SearchAgents": {
+            "UpdateEntityType": {
               "methods": [
-                "SearchAgents",
-                "SearchAgentsAsync"
+                "UpdateEntityType",
+                "UpdateEntityTypeAsync"
               ]
             },
-            "TrainAgent": {
+            "DeleteEntityType": {
               "methods": [
-                "TrainAgent",
-                "TrainAgentAsync"
+                "DeleteEntityType",
+                "DeleteEntityTypeAsync"
               ]
             },
-            "ExportAgent": {
+            "BatchUpdateEntityTypes": {
               "methods": [
-                "ExportAgent",
-                "ExportAgentAsync"
+                "BatchUpdateEntityTypes",
+                "BatchUpdateEntityTypesAsync"
               ]
             },
-            "ImportAgent": {
+            "BatchDeleteEntityTypes": {
               "methods": [
-                "ImportAgent",
-                "ImportAgentAsync"
+                "BatchDeleteEntityTypes",
+                "BatchDeleteEntityTypesAsync"
               ]
             },
-            "RestoreAgent": {
+            "BatchCreateEntities": {
               "methods": [
-                "RestoreAgent",
-                "RestoreAgentAsync"
+                "BatchCreateEntities",
+                "BatchCreateEntitiesAsync"
               ]
             },
-            "GetValidationResult": {
+            "BatchUpdateEntities": {
               "methods": [
-                "GetValidationResult",
-                "GetValidationResultAsync"
+                "BatchUpdateEntities",
+                "BatchUpdateEntitiesAsync"
+              ]
+            },
+            "BatchDeleteEntities": {
+              "methods": [
+                "BatchDeleteEntities",
+                "BatchDeleteEntitiesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Environments": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "EnvironmentsClient",
+          "rpcs": {
+            "ListEnvironments": {
+              "methods": [
+                "ListEnvironments",
+                "ListEnvironmentsAsync"
               ]
             }
           }
@@ -158,75 +179,6 @@
               "methods": [
                 "BatchDeleteIntents",
                 "BatchDeleteIntentsAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "EntityTypes": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "EntityTypesClient",
-          "rpcs": {
-            "ListEntityTypes": {
-              "methods": [
-                "ListEntityTypes",
-                "ListEntityTypesAsync"
-              ]
-            },
-            "GetEntityType": {
-              "methods": [
-                "GetEntityType",
-                "GetEntityTypeAsync"
-              ]
-            },
-            "CreateEntityType": {
-              "methods": [
-                "CreateEntityType",
-                "CreateEntityTypeAsync"
-              ]
-            },
-            "UpdateEntityType": {
-              "methods": [
-                "UpdateEntityType",
-                "UpdateEntityTypeAsync"
-              ]
-            },
-            "DeleteEntityType": {
-              "methods": [
-                "DeleteEntityType",
-                "DeleteEntityTypeAsync"
-              ]
-            },
-            "BatchUpdateEntityTypes": {
-              "methods": [
-                "BatchUpdateEntityTypes",
-                "BatchUpdateEntityTypesAsync"
-              ]
-            },
-            "BatchDeleteEntityTypes": {
-              "methods": [
-                "BatchDeleteEntityTypes",
-                "BatchDeleteEntityTypesAsync"
-              ]
-            },
-            "BatchCreateEntities": {
-              "methods": [
-                "BatchCreateEntities",
-                "BatchCreateEntitiesAsync"
-              ]
-            },
-            "BatchUpdateEntities": {
-              "methods": [
-                "BatchUpdateEntities",
-                "BatchUpdateEntitiesAsync"
-              ]
-            },
-            "BatchDeleteEntities": {
-              "methods": [
-                "BatchDeleteEntities",
-                "BatchDeleteEntitiesAsync"
               ]
             }
           }
@@ -344,27 +296,6 @@
         }
       }
     },
-    "AnswerRecords": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "AnswerRecordsClient",
-          "rpcs": {
-            "ListAnswerRecords": {
-              "methods": [
-                "ListAnswerRecords",
-                "ListAnswerRecordsAsync"
-              ]
-            },
-            "UpdateAnswerRecord": {
-              "methods": [
-                "UpdateAnswerRecord",
-                "UpdateAnswerRecordAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
     "Conversations": {
       "clients": {
         "grpc": {
@@ -404,39 +335,63 @@
         }
       }
     },
-    "ConversationProfiles": {
+    "Agents": {
       "clients": {
         "grpc": {
-          "libraryClient": "ConversationProfilesClient",
+          "libraryClient": "AgentsClient",
           "rpcs": {
-            "ListConversationProfiles": {
+            "GetAgent": {
               "methods": [
-                "ListConversationProfiles",
-                "ListConversationProfilesAsync"
+                "GetAgent",
+                "GetAgentAsync"
               ]
             },
-            "GetConversationProfile": {
+            "SetAgent": {
               "methods": [
-                "GetConversationProfile",
-                "GetConversationProfileAsync"
+                "SetAgent",
+                "SetAgentAsync"
               ]
             },
-            "CreateConversationProfile": {
+            "DeleteAgent": {
               "methods": [
-                "CreateConversationProfile",
-                "CreateConversationProfileAsync"
+                "DeleteAgent",
+                "DeleteAgentAsync"
               ]
             },
-            "UpdateConversationProfile": {
+            "SearchAgents": {
               "methods": [
-                "UpdateConversationProfile",
-                "UpdateConversationProfileAsync"
+                "SearchAgents",
+                "SearchAgentsAsync"
               ]
             },
-            "DeleteConversationProfile": {
+            "TrainAgent": {
               "methods": [
-                "DeleteConversationProfile",
-                "DeleteConversationProfileAsync"
+                "TrainAgent",
+                "TrainAgentAsync"
+              ]
+            },
+            "ExportAgent": {
+              "methods": [
+                "ExportAgent",
+                "ExportAgentAsync"
+              ]
+            },
+            "ImportAgent": {
+              "methods": [
+                "ImportAgent",
+                "ImportAgentAsync"
+              ]
+            },
+            "RestoreAgent": {
+              "methods": [
+                "RestoreAgent",
+                "RestoreAgentAsync"
+              ]
+            },
+            "GetValidationResult": {
+              "methods": [
+                "GetValidationResult",
+                "GetValidationResultAsync"
               ]
             }
           }
@@ -488,15 +443,60 @@
         }
       }
     },
-    "Environments": {
+    "ConversationProfiles": {
       "clients": {
         "grpc": {
-          "libraryClient": "EnvironmentsClient",
+          "libraryClient": "ConversationProfilesClient",
           "rpcs": {
-            "ListEnvironments": {
+            "ListConversationProfiles": {
               "methods": [
-                "ListEnvironments",
-                "ListEnvironmentsAsync"
+                "ListConversationProfiles",
+                "ListConversationProfilesAsync"
+              ]
+            },
+            "GetConversationProfile": {
+              "methods": [
+                "GetConversationProfile",
+                "GetConversationProfileAsync"
+              ]
+            },
+            "CreateConversationProfile": {
+              "methods": [
+                "CreateConversationProfile",
+                "CreateConversationProfileAsync"
+              ]
+            },
+            "UpdateConversationProfile": {
+              "methods": [
+                "UpdateConversationProfile",
+                "UpdateConversationProfileAsync"
+              ]
+            },
+            "DeleteConversationProfile": {
+              "methods": [
+                "DeleteConversationProfile",
+                "DeleteConversationProfileAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "AnswerRecords": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AnswerRecordsClient",
+          "rpcs": {
+            "ListAnswerRecords": {
+              "methods": [
+                "ListAnswerRecords",
+                "ListAnswerRecordsAsync"
+              ]
+            },
+            "UpdateAnswerRecord": {
+              "methods": [
+                "UpdateAnswerRecord",
+                "UpdateAnswerRecordAsync"
               ]
             }
           }
