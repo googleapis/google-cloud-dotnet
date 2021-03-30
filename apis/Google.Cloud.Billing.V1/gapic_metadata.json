@@ -5,6 +5,27 @@
   "protoPackage": "google.cloud.billing.v1",
   "libraryPackage": "Google.Cloud.Billing.V1",
   "services": {
+    "CloudCatalog": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudCatalogClient",
+          "rpcs": {
+            "ListServices": {
+              "methods": [
+                "ListServices",
+                "ListServicesAsync"
+              ]
+            },
+            "ListSkus": {
+              "methods": [
+                "ListSkus",
+                "ListSkusAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "CloudBilling": {
       "clients": {
         "grpc": {
@@ -68,27 +89,6 @@
               "methods": [
                 "TestIamPermissions",
                 "TestIamPermissionsAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "CloudCatalog": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "CloudCatalogClient",
-          "rpcs": {
-            "ListServices": {
-              "methods": [
-                "ListServices",
-                "ListServicesAsync"
-              ]
-            },
-            "ListSkus": {
-              "methods": [
-                "ListSkus",
-                "ListSkusAsync"
               ]
             }
           }
