@@ -10,18 +10,6 @@
         "grpc": {
           "libraryClient": "WorkflowsClient",
           "rpcs": {
-            "ListWorkflows": {
-              "methods": [
-                "ListWorkflows",
-                "ListWorkflowsAsync"
-              ]
-            },
-            "GetWorkflow": {
-              "methods": [
-                "GetWorkflow",
-                "GetWorkflowAsync"
-              ]
-            },
             "CreateWorkflow": {
               "methods": [
                 "CreateWorkflow",
@@ -32,6 +20,18 @@
               "methods": [
                 "DeleteWorkflow",
                 "DeleteWorkflowAsync"
+              ]
+            },
+            "GetWorkflow": {
+              "methods": [
+                "GetWorkflow",
+                "GetWorkflowAsync"
+              ]
+            },
+            "ListWorkflows": {
+              "methods": [
+                "ListWorkflows",
+                "ListWorkflowsAsync"
               ]
             },
             "UpdateWorkflow": {

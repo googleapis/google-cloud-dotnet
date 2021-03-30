@@ -10,58 +10,16 @@
         "grpc": {
           "libraryClient": "TablesServiceClient",
           "rpcs": {
-            "GetTable": {
-              "methods": [
-                "GetTable",
-                "GetTableAsync"
-              ]
-            },
-            "ListTables": {
-              "methods": [
-                "ListTables",
-                "ListTablesAsync"
-              ]
-            },
-            "GetWorkspace": {
-              "methods": [
-                "GetWorkspace",
-                "GetWorkspaceAsync"
-              ]
-            },
-            "ListWorkspaces": {
-              "methods": [
-                "ListWorkspaces",
-                "ListWorkspacesAsync"
-              ]
-            },
-            "GetRow": {
-              "methods": [
-                "GetRow",
-                "GetRowAsync"
-              ]
-            },
-            "ListRows": {
-              "methods": [
-                "ListRows",
-                "ListRowsAsync"
-              ]
-            },
-            "CreateRow": {
-              "methods": [
-                "CreateRow",
-                "CreateRowAsync"
-              ]
-            },
             "BatchCreateRows": {
               "methods": [
                 "BatchCreateRows",
                 "BatchCreateRowsAsync"
               ]
             },
-            "UpdateRow": {
+            "BatchDeleteRows": {
               "methods": [
-                "UpdateRow",
-                "UpdateRowAsync"
+                "BatchDeleteRows",
+                "BatchDeleteRowsAsync"
               ]
             },
             "BatchUpdateRows": {
@@ -70,16 +28,58 @@
                 "BatchUpdateRowsAsync"
               ]
             },
+            "CreateRow": {
+              "methods": [
+                "CreateRow",
+                "CreateRowAsync"
+              ]
+            },
             "DeleteRow": {
               "methods": [
                 "DeleteRow",
                 "DeleteRowAsync"
               ]
             },
-            "BatchDeleteRows": {
+            "GetRow": {
               "methods": [
-                "BatchDeleteRows",
-                "BatchDeleteRowsAsync"
+                "GetRow",
+                "GetRowAsync"
+              ]
+            },
+            "GetTable": {
+              "methods": [
+                "GetTable",
+                "GetTableAsync"
+              ]
+            },
+            "GetWorkspace": {
+              "methods": [
+                "GetWorkspace",
+                "GetWorkspaceAsync"
+              ]
+            },
+            "ListRows": {
+              "methods": [
+                "ListRows",
+                "ListRowsAsync"
+              ]
+            },
+            "ListTables": {
+              "methods": [
+                "ListTables",
+                "ListTablesAsync"
+              ]
+            },
+            "ListWorkspaces": {
+              "methods": [
+                "ListWorkspaces",
+                "ListWorkspacesAsync"
+              ]
+            },
+            "UpdateRow": {
+              "methods": [
+                "UpdateRow",
+                "UpdateRowAsync"
               ]
             }
           }

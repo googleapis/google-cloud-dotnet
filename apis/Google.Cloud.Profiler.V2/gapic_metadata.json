@@ -10,16 +10,16 @@
         "grpc": {
           "libraryClient": "ProfilerServiceClient",
           "rpcs": {
-            "CreateProfile": {
-              "methods": [
-                "CreateProfile",
-                "CreateProfileAsync"
-              ]
-            },
             "CreateOfflineProfile": {
               "methods": [
                 "CreateOfflineProfile",
                 "CreateOfflineProfileAsync"
+              ]
+            },
+            "CreateProfile": {
+              "methods": [
+                "CreateProfile",
+                "CreateProfileAsync"
               ]
             },
             "UpdateProfile": {

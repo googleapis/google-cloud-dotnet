@@ -5,60 +5,27 @@
   "protoPackage": "google.cloud.speech.v1p1beta1",
   "libraryPackage": "Google.Cloud.Speech.V1P1Beta1",
   "services": {
-    "Speech": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "SpeechClient",
-          "rpcs": {
-            "Recognize": {
-              "methods": [
-                "Recognize",
-                "RecognizeAsync"
-              ]
-            },
-            "LongRunningRecognize": {
-              "methods": [
-                "LongRunningRecognize",
-                "LongRunningRecognizeAsync"
-              ]
-            },
-            "StreamingRecognize": {
-              "methods": [
-                "StreamingRecognize",
-                "StreamingRecognizeAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
     "Adaptation": {
       "clients": {
         "grpc": {
           "libraryClient": "AdaptationClient",
           "rpcs": {
+            "CreateCustomClass": {
+              "methods": [
+                "CreateCustomClass",
+                "CreateCustomClassAsync"
+              ]
+            },
             "CreatePhraseSet": {
               "methods": [
                 "CreatePhraseSet",
                 "CreatePhraseSetAsync"
               ]
             },
-            "GetPhraseSet": {
+            "DeleteCustomClass": {
               "methods": [
-                "GetPhraseSet",
-                "GetPhraseSetAsync"
-              ]
-            },
-            "ListPhraseSet": {
-              "methods": [
-                "ListPhraseSet",
-                "ListPhraseSetAsync"
-              ]
-            },
-            "UpdatePhraseSet": {
-              "methods": [
-                "UpdatePhraseSet",
-                "UpdatePhraseSetAsync"
+                "DeleteCustomClass",
+                "DeleteCustomClassAsync"
               ]
             },
             "DeletePhraseSet": {
@@ -67,16 +34,16 @@
                 "DeletePhraseSetAsync"
               ]
             },
-            "CreateCustomClass": {
-              "methods": [
-                "CreateCustomClass",
-                "CreateCustomClassAsync"
-              ]
-            },
             "GetCustomClass": {
               "methods": [
                 "GetCustomClass",
                 "GetCustomClassAsync"
+              ]
+            },
+            "GetPhraseSet": {
+              "methods": [
+                "GetPhraseSet",
+                "GetPhraseSetAsync"
               ]
             },
             "ListCustomClasses": {
@@ -85,16 +52,49 @@
                 "ListCustomClassesAsync"
               ]
             },
+            "ListPhraseSet": {
+              "methods": [
+                "ListPhraseSet",
+                "ListPhraseSetAsync"
+              ]
+            },
             "UpdateCustomClass": {
               "methods": [
                 "UpdateCustomClass",
                 "UpdateCustomClassAsync"
               ]
             },
-            "DeleteCustomClass": {
+            "UpdatePhraseSet": {
               "methods": [
-                "DeleteCustomClass",
-                "DeleteCustomClassAsync"
+                "UpdatePhraseSet",
+                "UpdatePhraseSetAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Speech": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SpeechClient",
+          "rpcs": {
+            "LongRunningRecognize": {
+              "methods": [
+                "LongRunningRecognize",
+                "LongRunningRecognizeAsync"
+              ]
+            },
+            "Recognize": {
+              "methods": [
+                "Recognize",
+                "RecognizeAsync"
+              ]
+            },
+            "StreamingRecognize": {
+              "methods": [
+                "StreamingRecognize",
+                "StreamingRecognizeAsync"
               ]
             }
           }

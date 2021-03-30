@@ -10,46 +10,10 @@
         "grpc": {
           "libraryClient": "DomainsClient",
           "rpcs": {
-            "SearchDomains": {
+            "ConfigureContactSettings": {
               "methods": [
-                "SearchDomains",
-                "SearchDomainsAsync"
-              ]
-            },
-            "RetrieveRegisterParameters": {
-              "methods": [
-                "RetrieveRegisterParameters",
-                "RetrieveRegisterParametersAsync"
-              ]
-            },
-            "RegisterDomain": {
-              "methods": [
-                "RegisterDomain",
-                "RegisterDomainAsync"
-              ]
-            },
-            "ListRegistrations": {
-              "methods": [
-                "ListRegistrations",
-                "ListRegistrationsAsync"
-              ]
-            },
-            "GetRegistration": {
-              "methods": [
-                "GetRegistration",
-                "GetRegistrationAsync"
-              ]
-            },
-            "UpdateRegistration": {
-              "methods": [
-                "UpdateRegistration",
-                "UpdateRegistrationAsync"
-              ]
-            },
-            "ConfigureManagementSettings": {
-              "methods": [
-                "ConfigureManagementSettings",
-                "ConfigureManagementSettingsAsync"
+                "ConfigureContactSettings",
+                "ConfigureContactSettingsAsync"
               ]
             },
             "ConfigureDnsSettings": {
@@ -58,16 +22,10 @@
                 "ConfigureDnsSettingsAsync"
               ]
             },
-            "ConfigureContactSettings": {
+            "ConfigureManagementSettings": {
               "methods": [
-                "ConfigureContactSettings",
-                "ConfigureContactSettingsAsync"
-              ]
-            },
-            "ExportRegistration": {
-              "methods": [
-                "ExportRegistration",
-                "ExportRegistrationAsync"
+                "ConfigureManagementSettings",
+                "ConfigureManagementSettingsAsync"
               ]
             },
             "DeleteRegistration": {
@@ -76,16 +34,58 @@
                 "DeleteRegistrationAsync"
               ]
             },
-            "RetrieveAuthorizationCode": {
+            "ExportRegistration": {
               "methods": [
-                "RetrieveAuthorizationCode",
-                "RetrieveAuthorizationCodeAsync"
+                "ExportRegistration",
+                "ExportRegistrationAsync"
+              ]
+            },
+            "GetRegistration": {
+              "methods": [
+                "GetRegistration",
+                "GetRegistrationAsync"
+              ]
+            },
+            "ListRegistrations": {
+              "methods": [
+                "ListRegistrations",
+                "ListRegistrationsAsync"
+              ]
+            },
+            "RegisterDomain": {
+              "methods": [
+                "RegisterDomain",
+                "RegisterDomainAsync"
               ]
             },
             "ResetAuthorizationCode": {
               "methods": [
                 "ResetAuthorizationCode",
                 "ResetAuthorizationCodeAsync"
+              ]
+            },
+            "RetrieveAuthorizationCode": {
+              "methods": [
+                "RetrieveAuthorizationCode",
+                "RetrieveAuthorizationCodeAsync"
+              ]
+            },
+            "RetrieveRegisterParameters": {
+              "methods": [
+                "RetrieveRegisterParameters",
+                "RetrieveRegisterParametersAsync"
+              ]
+            },
+            "SearchDomains": {
+              "methods": [
+                "SearchDomains",
+                "SearchDomainsAsync"
+              ]
+            },
+            "UpdateRegistration": {
+              "methods": [
+                "UpdateRegistration",
+                "UpdateRegistrationAsync"
               ]
             }
           }

@@ -10,46 +10,10 @@
         "grpc": {
           "libraryClient": "DataprocMetastoreClient",
           "rpcs": {
-            "ListServices": {
+            "CreateBackup": {
               "methods": [
-                "ListServices",
-                "ListServicesAsync"
-              ]
-            },
-            "GetService": {
-              "methods": [
-                "GetService",
-                "GetServiceAsync"
-              ]
-            },
-            "CreateService": {
-              "methods": [
-                "CreateService",
-                "CreateServiceAsync"
-              ]
-            },
-            "UpdateService": {
-              "methods": [
-                "UpdateService",
-                "UpdateServiceAsync"
-              ]
-            },
-            "DeleteService": {
-              "methods": [
-                "DeleteService",
-                "DeleteServiceAsync"
-              ]
-            },
-            "ListMetadataImports": {
-              "methods": [
-                "ListMetadataImports",
-                "ListMetadataImportsAsync"
-              ]
-            },
-            "GetMetadataImport": {
-              "methods": [
-                "GetMetadataImport",
-                "GetMetadataImportAsync"
+                "CreateBackup",
+                "CreateBackupAsync"
               ]
             },
             "CreateMetadataImport": {
@@ -58,10 +22,22 @@
                 "CreateMetadataImportAsync"
               ]
             },
-            "UpdateMetadataImport": {
+            "CreateService": {
               "methods": [
-                "UpdateMetadataImport",
-                "UpdateMetadataImportAsync"
+                "CreateService",
+                "CreateServiceAsync"
+              ]
+            },
+            "DeleteBackup": {
+              "methods": [
+                "DeleteBackup",
+                "DeleteBackupAsync"
+              ]
+            },
+            "DeleteService": {
+              "methods": [
+                "DeleteService",
+                "DeleteServiceAsync"
               ]
             },
             "ExportMetadata": {
@@ -70,10 +46,22 @@
                 "ExportMetadataAsync"
               ]
             },
-            "RestoreService": {
+            "GetBackup": {
               "methods": [
-                "RestoreService",
-                "RestoreServiceAsync"
+                "GetBackup",
+                "GetBackupAsync"
+              ]
+            },
+            "GetMetadataImport": {
+              "methods": [
+                "GetMetadataImport",
+                "GetMetadataImportAsync"
+              ]
+            },
+            "GetService": {
+              "methods": [
+                "GetService",
+                "GetServiceAsync"
               ]
             },
             "ListBackups": {
@@ -82,22 +70,34 @@
                 "ListBackupsAsync"
               ]
             },
-            "GetBackup": {
+            "ListMetadataImports": {
               "methods": [
-                "GetBackup",
-                "GetBackupAsync"
+                "ListMetadataImports",
+                "ListMetadataImportsAsync"
               ]
             },
-            "CreateBackup": {
+            "ListServices": {
               "methods": [
-                "CreateBackup",
-                "CreateBackupAsync"
+                "ListServices",
+                "ListServicesAsync"
               ]
             },
-            "DeleteBackup": {
+            "RestoreService": {
               "methods": [
-                "DeleteBackup",
-                "DeleteBackupAsync"
+                "RestoreService",
+                "RestoreServiceAsync"
+              ]
+            },
+            "UpdateMetadataImport": {
+              "methods": [
+                "UpdateMetadataImport",
+                "UpdateMetadataImportAsync"
+              ]
+            },
+            "UpdateService": {
+              "methods": [
+                "UpdateService",
+                "UpdateServiceAsync"
               ]
             }
           }

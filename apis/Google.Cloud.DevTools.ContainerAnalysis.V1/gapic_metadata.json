@@ -10,28 +10,28 @@
         "grpc": {
           "libraryClient": "ContainerAnalysisClient",
           "rpcs": {
-            "SetIamPolicy": {
-              "methods": [
-                "SetIamPolicy",
-                "SetIamPolicyAsync"
-              ]
-            },
             "GetIamPolicy": {
               "methods": [
                 "GetIamPolicy",
                 "GetIamPolicyAsync"
               ]
             },
-            "TestIamPermissions": {
-              "methods": [
-                "TestIamPermissions",
-                "TestIamPermissionsAsync"
-              ]
-            },
             "GetVulnerabilityOccurrencesSummary": {
               "methods": [
                 "GetVulnerabilityOccurrencesSummary",
                 "GetVulnerabilityOccurrencesSummaryAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             }
           }

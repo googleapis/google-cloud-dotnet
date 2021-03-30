@@ -16,34 +16,28 @@
                 "CreateConnectionAsync"
               ]
             },
-            "GetConnection": {
-              "methods": [
-                "GetConnection",
-                "GetConnectionAsync"
-              ]
-            },
-            "ListConnections": {
-              "methods": [
-                "ListConnections",
-                "ListConnectionsAsync"
-              ]
-            },
-            "UpdateConnection": {
-              "methods": [
-                "UpdateConnection",
-                "UpdateConnectionAsync"
-              ]
-            },
             "DeleteConnection": {
               "methods": [
                 "DeleteConnection",
                 "DeleteConnectionAsync"
               ]
             },
+            "GetConnection": {
+              "methods": [
+                "GetConnection",
+                "GetConnectionAsync"
+              ]
+            },
             "GetIamPolicy": {
               "methods": [
                 "GetIamPolicy",
                 "GetIamPolicyAsync"
+              ]
+            },
+            "ListConnections": {
+              "methods": [
+                "ListConnections",
+                "ListConnectionsAsync"
               ]
             },
             "SetIamPolicy": {
@@ -56,6 +50,12 @@
               "methods": [
                 "TestIamPermissions",
                 "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateConnection": {
+              "methods": [
+                "UpdateConnection",
+                "UpdateConnectionAsync"
               ]
             }
           }

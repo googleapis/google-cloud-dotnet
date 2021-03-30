@@ -10,34 +10,10 @@
         "grpc": {
           "libraryClient": "ReservationServiceClient",
           "rpcs": {
-            "CreateReservation": {
+            "CreateAssignment": {
               "methods": [
-                "CreateReservation",
-                "CreateReservationAsync"
-              ]
-            },
-            "ListReservations": {
-              "methods": [
-                "ListReservations",
-                "ListReservationsAsync"
-              ]
-            },
-            "GetReservation": {
-              "methods": [
-                "GetReservation",
-                "GetReservationAsync"
-              ]
-            },
-            "DeleteReservation": {
-              "methods": [
-                "DeleteReservation",
-                "DeleteReservationAsync"
-              ]
-            },
-            "UpdateReservation": {
-              "methods": [
-                "UpdateReservation",
-                "UpdateReservationAsync"
+                "CreateAssignment",
+                "CreateAssignmentAsync"
               ]
             },
             "CreateCapacityCommitment": {
@@ -46,52 +22,10 @@
                 "CreateCapacityCommitmentAsync"
               ]
             },
-            "ListCapacityCommitments": {
+            "CreateReservation": {
               "methods": [
-                "ListCapacityCommitments",
-                "ListCapacityCommitmentsAsync"
-              ]
-            },
-            "GetCapacityCommitment": {
-              "methods": [
-                "GetCapacityCommitment",
-                "GetCapacityCommitmentAsync"
-              ]
-            },
-            "DeleteCapacityCommitment": {
-              "methods": [
-                "DeleteCapacityCommitment",
-                "DeleteCapacityCommitmentAsync"
-              ]
-            },
-            "UpdateCapacityCommitment": {
-              "methods": [
-                "UpdateCapacityCommitment",
-                "UpdateCapacityCommitmentAsync"
-              ]
-            },
-            "SplitCapacityCommitment": {
-              "methods": [
-                "SplitCapacityCommitment",
-                "SplitCapacityCommitmentAsync"
-              ]
-            },
-            "MergeCapacityCommitments": {
-              "methods": [
-                "MergeCapacityCommitments",
-                "MergeCapacityCommitmentsAsync"
-              ]
-            },
-            "CreateAssignment": {
-              "methods": [
-                "CreateAssignment",
-                "CreateAssignmentAsync"
-              ]
-            },
-            "ListAssignments": {
-              "methods": [
-                "ListAssignments",
-                "ListAssignmentsAsync"
+                "CreateReservation",
+                "CreateReservationAsync"
               ]
             },
             "DeleteAssignment": {
@@ -100,16 +34,16 @@
                 "DeleteAssignmentAsync"
               ]
             },
-            "SearchAssignments": {
+            "DeleteCapacityCommitment": {
               "methods": [
-                "SearchAssignments",
-                "SearchAssignmentsAsync"
+                "DeleteCapacityCommitment",
+                "DeleteCapacityCommitmentAsync"
               ]
             },
-            "MoveAssignment": {
+            "DeleteReservation": {
               "methods": [
-                "MoveAssignment",
-                "MoveAssignmentAsync"
+                "DeleteReservation",
+                "DeleteReservationAsync"
               ]
             },
             "GetBiReservation": {
@@ -118,10 +52,76 @@
                 "GetBiReservationAsync"
               ]
             },
+            "GetCapacityCommitment": {
+              "methods": [
+                "GetCapacityCommitment",
+                "GetCapacityCommitmentAsync"
+              ]
+            },
+            "GetReservation": {
+              "methods": [
+                "GetReservation",
+                "GetReservationAsync"
+              ]
+            },
+            "ListAssignments": {
+              "methods": [
+                "ListAssignments",
+                "ListAssignmentsAsync"
+              ]
+            },
+            "ListCapacityCommitments": {
+              "methods": [
+                "ListCapacityCommitments",
+                "ListCapacityCommitmentsAsync"
+              ]
+            },
+            "ListReservations": {
+              "methods": [
+                "ListReservations",
+                "ListReservationsAsync"
+              ]
+            },
+            "MergeCapacityCommitments": {
+              "methods": [
+                "MergeCapacityCommitments",
+                "MergeCapacityCommitmentsAsync"
+              ]
+            },
+            "MoveAssignment": {
+              "methods": [
+                "MoveAssignment",
+                "MoveAssignmentAsync"
+              ]
+            },
+            "SearchAssignments": {
+              "methods": [
+                "SearchAssignments",
+                "SearchAssignmentsAsync"
+              ]
+            },
+            "SplitCapacityCommitment": {
+              "methods": [
+                "SplitCapacityCommitment",
+                "SplitCapacityCommitmentAsync"
+              ]
+            },
             "UpdateBiReservation": {
               "methods": [
                 "UpdateBiReservation",
                 "UpdateBiReservationAsync"
+              ]
+            },
+            "UpdateCapacityCommitment": {
+              "methods": [
+                "UpdateCapacityCommitment",
+                "UpdateCapacityCommitmentAsync"
+              ]
+            },
+            "UpdateReservation": {
+              "methods": [
+                "UpdateReservation",
+                "UpdateReservationAsync"
               ]
             }
           }

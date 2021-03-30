@@ -10,40 +10,10 @@
         "grpc": {
           "libraryClient": "InstanceAdminClient",
           "rpcs": {
-            "ListInstanceConfigs": {
-              "methods": [
-                "ListInstanceConfigs",
-                "ListInstanceConfigsAsync"
-              ]
-            },
-            "GetInstanceConfig": {
-              "methods": [
-                "GetInstanceConfig",
-                "GetInstanceConfigAsync"
-              ]
-            },
-            "ListInstances": {
-              "methods": [
-                "ListInstances",
-                "ListInstancesAsync"
-              ]
-            },
-            "GetInstance": {
-              "methods": [
-                "GetInstance",
-                "GetInstanceAsync"
-              ]
-            },
             "CreateInstance": {
               "methods": [
                 "CreateInstance",
                 "CreateInstanceAsync"
-              ]
-            },
-            "UpdateInstance": {
-              "methods": [
-                "UpdateInstance",
-                "UpdateInstanceAsync"
               ]
             },
             "DeleteInstance": {
@@ -52,22 +22,52 @@
                 "DeleteInstanceAsync"
               ]
             },
-            "SetIamPolicy": {
-              "methods": [
-                "SetIamPolicy",
-                "SetIamPolicyAsync"
-              ]
-            },
             "GetIamPolicy": {
               "methods": [
                 "GetIamPolicy",
                 "GetIamPolicyAsync"
               ]
             },
+            "GetInstance": {
+              "methods": [
+                "GetInstance",
+                "GetInstanceAsync"
+              ]
+            },
+            "GetInstanceConfig": {
+              "methods": [
+                "GetInstanceConfig",
+                "GetInstanceConfigAsync"
+              ]
+            },
+            "ListInstanceConfigs": {
+              "methods": [
+                "ListInstanceConfigs",
+                "ListInstanceConfigsAsync"
+              ]
+            },
+            "ListInstances": {
+              "methods": [
+                "ListInstances",
+                "ListInstancesAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
             "TestIamPermissions": {
               "methods": [
                 "TestIamPermissions",
                 "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateInstance": {
+              "methods": [
+                "UpdateInstance",
+                "UpdateInstanceAsync"
               ]
             }
           }

@@ -10,10 +10,10 @@
         "grpc": {
           "libraryClient": "DatabaseAdminClient",
           "rpcs": {
-            "ListDatabases": {
+            "CreateBackup": {
               "methods": [
-                "ListDatabases",
-                "ListDatabasesAsync"
+                "CreateBackup",
+                "CreateBackupAsync"
               ]
             },
             "CreateDatabase": {
@@ -22,16 +22,10 @@
                 "CreateDatabaseAsync"
               ]
             },
-            "GetDatabase": {
+            "DeleteBackup": {
               "methods": [
-                "GetDatabase",
-                "GetDatabaseAsync"
-              ]
-            },
-            "UpdateDatabaseDdl": {
-              "methods": [
-                "UpdateDatabaseDdl",
-                "UpdateDatabaseDdlAsync"
+                "DeleteBackup",
+                "DeleteBackupAsync"
               ]
             },
             "DropDatabase": {
@@ -40,16 +34,22 @@
                 "DropDatabaseAsync"
               ]
             },
+            "GetBackup": {
+              "methods": [
+                "GetBackup",
+                "GetBackupAsync"
+              ]
+            },
+            "GetDatabase": {
+              "methods": [
+                "GetDatabase",
+                "GetDatabaseAsync"
+              ]
+            },
             "GetDatabaseDdl": {
               "methods": [
                 "GetDatabaseDdl",
                 "GetDatabaseDdlAsync"
-              ]
-            },
-            "SetIamPolicy": {
-              "methods": [
-                "SetIamPolicy",
-                "SetIamPolicyAsync"
               ]
             },
             "GetIamPolicy": {
@@ -58,34 +58,10 @@
                 "GetIamPolicyAsync"
               ]
             },
-            "TestIamPermissions": {
+            "ListBackupOperations": {
               "methods": [
-                "TestIamPermissions",
-                "TestIamPermissionsAsync"
-              ]
-            },
-            "CreateBackup": {
-              "methods": [
-                "CreateBackup",
-                "CreateBackupAsync"
-              ]
-            },
-            "GetBackup": {
-              "methods": [
-                "GetBackup",
-                "GetBackupAsync"
-              ]
-            },
-            "UpdateBackup": {
-              "methods": [
-                "UpdateBackup",
-                "UpdateBackupAsync"
-              ]
-            },
-            "DeleteBackup": {
-              "methods": [
-                "DeleteBackup",
-                "DeleteBackupAsync"
+                "ListBackupOperations",
+                "ListBackupOperationsAsync"
               ]
             },
             "ListBackups": {
@@ -94,22 +70,46 @@
                 "ListBackupsAsync"
               ]
             },
-            "RestoreDatabase": {
-              "methods": [
-                "RestoreDatabase",
-                "RestoreDatabaseAsync"
-              ]
-            },
             "ListDatabaseOperations": {
               "methods": [
                 "ListDatabaseOperations",
                 "ListDatabaseOperationsAsync"
               ]
             },
-            "ListBackupOperations": {
+            "ListDatabases": {
               "methods": [
-                "ListBackupOperations",
-                "ListBackupOperationsAsync"
+                "ListDatabases",
+                "ListDatabasesAsync"
+              ]
+            },
+            "RestoreDatabase": {
+              "methods": [
+                "RestoreDatabase",
+                "RestoreDatabaseAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateBackup": {
+              "methods": [
+                "UpdateBackup",
+                "UpdateBackupAsync"
+              ]
+            },
+            "UpdateDatabaseDdl": {
+              "methods": [
+                "UpdateDatabaseDdl",
+                "UpdateDatabaseDdlAsync"
               ]
             }
           }

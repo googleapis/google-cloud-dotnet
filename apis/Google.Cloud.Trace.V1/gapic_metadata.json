@@ -10,16 +10,16 @@
         "grpc": {
           "libraryClient": "TraceServiceClient",
           "rpcs": {
-            "ListTraces": {
-              "methods": [
-                "ListTraces",
-                "ListTracesAsync"
-              ]
-            },
             "GetTrace": {
               "methods": [
                 "GetTrace",
                 "GetTraceAsync"
+              ]
+            },
+            "ListTraces": {
+              "methods": [
+                "ListTraces",
+                "ListTracesAsync"
               ]
             },
             "PatchTraces": {

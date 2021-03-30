@@ -10,100 +10,10 @@
         "grpc": {
           "libraryClient": "AnalyticsAdminServiceClient",
           "rpcs": {
-            "GetAccount": {
-              "methods": [
-                "GetAccount",
-                "GetAccountAsync"
-              ]
-            },
-            "ListAccounts": {
-              "methods": [
-                "ListAccounts",
-                "ListAccountsAsync"
-              ]
-            },
-            "DeleteAccount": {
-              "methods": [
-                "DeleteAccount",
-                "DeleteAccountAsync"
-              ]
-            },
-            "UpdateAccount": {
-              "methods": [
-                "UpdateAccount",
-                "UpdateAccountAsync"
-              ]
-            },
-            "ProvisionAccountTicket": {
-              "methods": [
-                "ProvisionAccountTicket",
-                "ProvisionAccountTicketAsync"
-              ]
-            },
-            "ListAccountSummaries": {
-              "methods": [
-                "ListAccountSummaries",
-                "ListAccountSummariesAsync"
-              ]
-            },
-            "GetProperty": {
-              "methods": [
-                "GetProperty",
-                "GetPropertyAsync"
-              ]
-            },
-            "ListProperties": {
-              "methods": [
-                "ListProperties",
-                "ListPropertiesAsync"
-              ]
-            },
-            "CreateProperty": {
-              "methods": [
-                "CreateProperty",
-                "CreatePropertyAsync"
-              ]
-            },
-            "DeleteProperty": {
-              "methods": [
-                "DeleteProperty",
-                "DeletePropertyAsync"
-              ]
-            },
-            "UpdateProperty": {
-              "methods": [
-                "UpdateProperty",
-                "UpdatePropertyAsync"
-              ]
-            },
-            "GetUserLink": {
-              "methods": [
-                "GetUserLink",
-                "GetUserLinkAsync"
-              ]
-            },
-            "BatchGetUserLinks": {
-              "methods": [
-                "BatchGetUserLinks",
-                "BatchGetUserLinksAsync"
-              ]
-            },
-            "ListUserLinks": {
-              "methods": [
-                "ListUserLinks",
-                "ListUserLinksAsync"
-              ]
-            },
             "AuditUserLinks": {
               "methods": [
                 "AuditUserLinks",
                 "AuditUserLinksAsync"
-              ]
-            },
-            "CreateUserLink": {
-              "methods": [
-                "CreateUserLink",
-                "CreateUserLinkAsync"
               ]
             },
             "BatchCreateUserLinks": {
@@ -112,10 +22,16 @@
                 "BatchCreateUserLinksAsync"
               ]
             },
-            "UpdateUserLink": {
+            "BatchDeleteUserLinks": {
               "methods": [
-                "UpdateUserLink",
-                "UpdateUserLinkAsync"
+                "BatchDeleteUserLinks",
+                "BatchDeleteUserLinksAsync"
+              ]
+            },
+            "BatchGetUserLinks": {
+              "methods": [
+                "BatchGetUserLinks",
+                "BatchGetUserLinksAsync"
               ]
             },
             "BatchUpdateUserLinks": {
@@ -124,118 +40,10 @@
                 "BatchUpdateUserLinksAsync"
               ]
             },
-            "DeleteUserLink": {
-              "methods": [
-                "DeleteUserLink",
-                "DeleteUserLinkAsync"
-              ]
-            },
-            "BatchDeleteUserLinks": {
-              "methods": [
-                "BatchDeleteUserLinks",
-                "BatchDeleteUserLinksAsync"
-              ]
-            },
-            "GetWebDataStream": {
-              "methods": [
-                "GetWebDataStream",
-                "GetWebDataStreamAsync"
-              ]
-            },
-            "DeleteWebDataStream": {
-              "methods": [
-                "DeleteWebDataStream",
-                "DeleteWebDataStreamAsync"
-              ]
-            },
-            "UpdateWebDataStream": {
-              "methods": [
-                "UpdateWebDataStream",
-                "UpdateWebDataStreamAsync"
-              ]
-            },
-            "CreateWebDataStream": {
-              "methods": [
-                "CreateWebDataStream",
-                "CreateWebDataStreamAsync"
-              ]
-            },
-            "ListWebDataStreams": {
-              "methods": [
-                "ListWebDataStreams",
-                "ListWebDataStreamsAsync"
-              ]
-            },
-            "GetIosAppDataStream": {
-              "methods": [
-                "GetIosAppDataStream",
-                "GetIosAppDataStreamAsync"
-              ]
-            },
-            "DeleteIosAppDataStream": {
-              "methods": [
-                "DeleteIosAppDataStream",
-                "DeleteIosAppDataStreamAsync"
-              ]
-            },
-            "UpdateIosAppDataStream": {
-              "methods": [
-                "UpdateIosAppDataStream",
-                "UpdateIosAppDataStreamAsync"
-              ]
-            },
-            "CreateIosAppDataStream": {
-              "methods": [
-                "CreateIosAppDataStream",
-                "CreateIosAppDataStreamAsync"
-              ]
-            },
-            "ListIosAppDataStreams": {
-              "methods": [
-                "ListIosAppDataStreams",
-                "ListIosAppDataStreamsAsync"
-              ]
-            },
-            "GetAndroidAppDataStream": {
-              "methods": [
-                "GetAndroidAppDataStream",
-                "GetAndroidAppDataStreamAsync"
-              ]
-            },
-            "DeleteAndroidAppDataStream": {
-              "methods": [
-                "DeleteAndroidAppDataStream",
-                "DeleteAndroidAppDataStreamAsync"
-              ]
-            },
-            "UpdateAndroidAppDataStream": {
-              "methods": [
-                "UpdateAndroidAppDataStream",
-                "UpdateAndroidAppDataStreamAsync"
-              ]
-            },
             "CreateAndroidAppDataStream": {
               "methods": [
                 "CreateAndroidAppDataStream",
                 "CreateAndroidAppDataStreamAsync"
-              ]
-            },
-            "ListAndroidAppDataStreams": {
-              "methods": [
-                "ListAndroidAppDataStreams",
-                "ListAndroidAppDataStreamsAsync"
-              ]
-            },
-            "GetEnhancedMeasurementSettings": {
-              "methods": [
-                "GetEnhancedMeasurementSettings",
-                "GetEnhancedMeasurementSettingsAsync"
-              ]
-            },
-            "UpdateEnhancedMeasurementSettings": {
-              "methods": [
-                "UpdateEnhancedMeasurementSettings",
-                "UpdateEnhancedMeasurementSettingsAsync"
               ]
             },
             "CreateFirebaseLink": {
@@ -244,10 +52,46 @@
                 "CreateFirebaseLinkAsync"
               ]
             },
-            "UpdateFirebaseLink": {
+            "CreateGoogleAdsLink": {
               "methods": [
-                "UpdateFirebaseLink",
-                "UpdateFirebaseLinkAsync"
+                "CreateGoogleAdsLink",
+                "CreateGoogleAdsLinkAsync"
+              ]
+            },
+            "CreateIosAppDataStream": {
+              "methods": [
+                "CreateIosAppDataStream",
+                "CreateIosAppDataStreamAsync"
+              ]
+            },
+            "CreateProperty": {
+              "methods": [
+                "CreateProperty",
+                "CreatePropertyAsync"
+              ]
+            },
+            "CreateUserLink": {
+              "methods": [
+                "CreateUserLink",
+                "CreateUserLinkAsync"
+              ]
+            },
+            "CreateWebDataStream": {
+              "methods": [
+                "CreateWebDataStream",
+                "CreateWebDataStreamAsync"
+              ]
+            },
+            "DeleteAccount": {
+              "methods": [
+                "DeleteAccount",
+                "DeleteAccountAsync"
+              ]
+            },
+            "DeleteAndroidAppDataStream": {
+              "methods": [
+                "DeleteAndroidAppDataStream",
+                "DeleteAndroidAppDataStreamAsync"
               ]
             },
             "DeleteFirebaseLink": {
@@ -256,10 +100,58 @@
                 "DeleteFirebaseLinkAsync"
               ]
             },
-            "ListFirebaseLinks": {
+            "DeleteGoogleAdsLink": {
               "methods": [
-                "ListFirebaseLinks",
-                "ListFirebaseLinksAsync"
+                "DeleteGoogleAdsLink",
+                "DeleteGoogleAdsLinkAsync"
+              ]
+            },
+            "DeleteIosAppDataStream": {
+              "methods": [
+                "DeleteIosAppDataStream",
+                "DeleteIosAppDataStreamAsync"
+              ]
+            },
+            "DeleteProperty": {
+              "methods": [
+                "DeleteProperty",
+                "DeletePropertyAsync"
+              ]
+            },
+            "DeleteUserLink": {
+              "methods": [
+                "DeleteUserLink",
+                "DeleteUserLinkAsync"
+              ]
+            },
+            "DeleteWebDataStream": {
+              "methods": [
+                "DeleteWebDataStream",
+                "DeleteWebDataStreamAsync"
+              ]
+            },
+            "GetAccount": {
+              "methods": [
+                "GetAccount",
+                "GetAccountAsync"
+              ]
+            },
+            "GetAndroidAppDataStream": {
+              "methods": [
+                "GetAndroidAppDataStream",
+                "GetAndroidAppDataStreamAsync"
+              ]
+            },
+            "GetDataSharingSettings": {
+              "methods": [
+                "GetDataSharingSettings",
+                "GetDataSharingSettingsAsync"
+              ]
+            },
+            "GetEnhancedMeasurementSettings": {
+              "methods": [
+                "GetEnhancedMeasurementSettings",
+                "GetEnhancedMeasurementSettingsAsync"
               ]
             },
             "GetGlobalSiteTag": {
@@ -268,22 +160,52 @@
                 "GetGlobalSiteTagAsync"
               ]
             },
-            "CreateGoogleAdsLink": {
+            "GetIosAppDataStream": {
               "methods": [
-                "CreateGoogleAdsLink",
-                "CreateGoogleAdsLinkAsync"
+                "GetIosAppDataStream",
+                "GetIosAppDataStreamAsync"
               ]
             },
-            "UpdateGoogleAdsLink": {
+            "GetProperty": {
               "methods": [
-                "UpdateGoogleAdsLink",
-                "UpdateGoogleAdsLinkAsync"
+                "GetProperty",
+                "GetPropertyAsync"
               ]
             },
-            "DeleteGoogleAdsLink": {
+            "GetUserLink": {
               "methods": [
-                "DeleteGoogleAdsLink",
-                "DeleteGoogleAdsLinkAsync"
+                "GetUserLink",
+                "GetUserLinkAsync"
+              ]
+            },
+            "GetWebDataStream": {
+              "methods": [
+                "GetWebDataStream",
+                "GetWebDataStreamAsync"
+              ]
+            },
+            "ListAccountSummaries": {
+              "methods": [
+                "ListAccountSummaries",
+                "ListAccountSummariesAsync"
+              ]
+            },
+            "ListAccounts": {
+              "methods": [
+                "ListAccounts",
+                "ListAccountsAsync"
+              ]
+            },
+            "ListAndroidAppDataStreams": {
+              "methods": [
+                "ListAndroidAppDataStreams",
+                "ListAndroidAppDataStreamsAsync"
+              ]
+            },
+            "ListFirebaseLinks": {
+              "methods": [
+                "ListFirebaseLinks",
+                "ListFirebaseLinksAsync"
               ]
             },
             "ListGoogleAdsLinks": {
@@ -292,10 +214,88 @@
                 "ListGoogleAdsLinksAsync"
               ]
             },
-            "GetDataSharingSettings": {
+            "ListIosAppDataStreams": {
               "methods": [
-                "GetDataSharingSettings",
-                "GetDataSharingSettingsAsync"
+                "ListIosAppDataStreams",
+                "ListIosAppDataStreamsAsync"
+              ]
+            },
+            "ListProperties": {
+              "methods": [
+                "ListProperties",
+                "ListPropertiesAsync"
+              ]
+            },
+            "ListUserLinks": {
+              "methods": [
+                "ListUserLinks",
+                "ListUserLinksAsync"
+              ]
+            },
+            "ListWebDataStreams": {
+              "methods": [
+                "ListWebDataStreams",
+                "ListWebDataStreamsAsync"
+              ]
+            },
+            "ProvisionAccountTicket": {
+              "methods": [
+                "ProvisionAccountTicket",
+                "ProvisionAccountTicketAsync"
+              ]
+            },
+            "UpdateAccount": {
+              "methods": [
+                "UpdateAccount",
+                "UpdateAccountAsync"
+              ]
+            },
+            "UpdateAndroidAppDataStream": {
+              "methods": [
+                "UpdateAndroidAppDataStream",
+                "UpdateAndroidAppDataStreamAsync"
+              ]
+            },
+            "UpdateEnhancedMeasurementSettings": {
+              "methods": [
+                "UpdateEnhancedMeasurementSettings",
+                "UpdateEnhancedMeasurementSettingsAsync"
+              ]
+            },
+            "UpdateFirebaseLink": {
+              "methods": [
+                "UpdateFirebaseLink",
+                "UpdateFirebaseLinkAsync"
+              ]
+            },
+            "UpdateGoogleAdsLink": {
+              "methods": [
+                "UpdateGoogleAdsLink",
+                "UpdateGoogleAdsLinkAsync"
+              ]
+            },
+            "UpdateIosAppDataStream": {
+              "methods": [
+                "UpdateIosAppDataStream",
+                "UpdateIosAppDataStreamAsync"
+              ]
+            },
+            "UpdateProperty": {
+              "methods": [
+                "UpdateProperty",
+                "UpdatePropertyAsync"
+              ]
+            },
+            "UpdateUserLink": {
+              "methods": [
+                "UpdateUserLink",
+                "UpdateUserLinkAsync"
+              ]
+            },
+            "UpdateWebDataStream": {
+              "methods": [
+                "UpdateWebDataStream",
+                "UpdateWebDataStreamAsync"
               ]
             }
           }

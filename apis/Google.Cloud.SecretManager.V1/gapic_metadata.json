@@ -10,16 +10,10 @@
         "grpc": {
           "libraryClient": "SecretManagerServiceClient",
           "rpcs": {
-            "ListSecrets": {
+            "AccessSecretVersion": {
               "methods": [
-                "ListSecrets",
-                "ListSecretsAsync"
-              ]
-            },
-            "CreateSecret": {
-              "methods": [
-                "CreateSecret",
-                "CreateSecretAsync"
+                "AccessSecretVersion",
+                "AccessSecretVersionAsync"
               ]
             },
             "AddSecretVersion": {
@@ -28,16 +22,10 @@
                 "AddSecretVersionAsync"
               ]
             },
-            "GetSecret": {
+            "CreateSecret": {
               "methods": [
-                "GetSecret",
-                "GetSecretAsync"
-              ]
-            },
-            "UpdateSecret": {
-              "methods": [
-                "UpdateSecret",
-                "UpdateSecretAsync"
+                "CreateSecret",
+                "CreateSecretAsync"
               ]
             },
             "DeleteSecret": {
@@ -46,22 +34,10 @@
                 "DeleteSecretAsync"
               ]
             },
-            "ListSecretVersions": {
+            "DestroySecretVersion": {
               "methods": [
-                "ListSecretVersions",
-                "ListSecretVersionsAsync"
-              ]
-            },
-            "GetSecretVersion": {
-              "methods": [
-                "GetSecretVersion",
-                "GetSecretVersionAsync"
-              ]
-            },
-            "AccessSecretVersion": {
-              "methods": [
-                "AccessSecretVersion",
-                "AccessSecretVersionAsync"
+                "DestroySecretVersion",
+                "DestroySecretVersionAsync"
               ]
             },
             "DisableSecretVersion": {
@@ -76,10 +52,34 @@
                 "EnableSecretVersionAsync"
               ]
             },
-            "DestroySecretVersion": {
+            "GetIamPolicy": {
               "methods": [
-                "DestroySecretVersion",
-                "DestroySecretVersionAsync"
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetSecret": {
+              "methods": [
+                "GetSecret",
+                "GetSecretAsync"
+              ]
+            },
+            "GetSecretVersion": {
+              "methods": [
+                "GetSecretVersion",
+                "GetSecretVersionAsync"
+              ]
+            },
+            "ListSecretVersions": {
+              "methods": [
+                "ListSecretVersions",
+                "ListSecretVersionsAsync"
+              ]
+            },
+            "ListSecrets": {
+              "methods": [
+                "ListSecrets",
+                "ListSecretsAsync"
               ]
             },
             "SetIamPolicy": {
@@ -88,16 +88,16 @@
                 "SetIamPolicyAsync"
               ]
             },
-            "GetIamPolicy": {
-              "methods": [
-                "GetIamPolicy",
-                "GetIamPolicyAsync"
-              ]
-            },
             "TestIamPermissions": {
               "methods": [
                 "TestIamPermissions",
                 "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateSecret": {
+              "methods": [
+                "UpdateSecret",
+                "UpdateSecretAsync"
               ]
             }
           }

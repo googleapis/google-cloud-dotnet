@@ -10,22 +10,16 @@
         "grpc": {
           "libraryClient": "AccessApprovalServiceClient",
           "rpcs": {
-            "ListApprovalRequests": {
-              "methods": [
-                "ListApprovalRequests",
-                "ListApprovalRequestsAsync"
-              ]
-            },
-            "GetApprovalRequest": {
-              "methods": [
-                "GetApprovalRequest",
-                "GetApprovalRequestAsync"
-              ]
-            },
             "ApproveApprovalRequest": {
               "methods": [
                 "ApproveApprovalRequest",
                 "ApproveApprovalRequestAsync"
+              ]
+            },
+            "DeleteAccessApprovalSettings": {
+              "methods": [
+                "DeleteAccessApprovalSettings",
+                "DeleteAccessApprovalSettingsAsync"
               ]
             },
             "DismissApprovalRequest": {
@@ -40,16 +34,22 @@
                 "GetAccessApprovalSettingsAsync"
               ]
             },
+            "GetApprovalRequest": {
+              "methods": [
+                "GetApprovalRequest",
+                "GetApprovalRequestAsync"
+              ]
+            },
+            "ListApprovalRequests": {
+              "methods": [
+                "ListApprovalRequests",
+                "ListApprovalRequestsAsync"
+              ]
+            },
             "UpdateAccessApprovalSettings": {
               "methods": [
                 "UpdateAccessApprovalSettings",
                 "UpdateAccessApprovalSettingsAsync"
-              ]
-            },
-            "DeleteAccessApprovalSettings": {
-              "methods": [
-                "DeleteAccessApprovalSettings",
-                "DeleteAccessApprovalSettingsAsync"
               ]
             }
           }

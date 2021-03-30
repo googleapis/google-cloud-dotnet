@@ -16,10 +16,10 @@
                 "CreateBudgetAsync"
               ]
             },
-            "UpdateBudget": {
+            "DeleteBudget": {
               "methods": [
-                "UpdateBudget",
-                "UpdateBudgetAsync"
+                "DeleteBudget",
+                "DeleteBudgetAsync"
               ]
             },
             "GetBudget": {
@@ -34,10 +34,10 @@
                 "ListBudgetsAsync"
               ]
             },
-            "DeleteBudget": {
+            "UpdateBudget": {
               "methods": [
-                "DeleteBudget",
-                "DeleteBudgetAsync"
+                "UpdateBudget",
+                "UpdateBudgetAsync"
               ]
             }
           }

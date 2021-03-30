@@ -10,64 +10,10 @@
         "grpc": {
           "libraryClient": "SpannerClient",
           "rpcs": {
-            "CreateSession": {
-              "methods": [
-                "CreateSession",
-                "CreateSessionAsync"
-              ]
-            },
             "BatchCreateSessions": {
               "methods": [
                 "BatchCreateSessions",
                 "BatchCreateSessionsAsync"
-              ]
-            },
-            "GetSession": {
-              "methods": [
-                "GetSession",
-                "GetSessionAsync"
-              ]
-            },
-            "ListSessions": {
-              "methods": [
-                "ListSessions",
-                "ListSessionsAsync"
-              ]
-            },
-            "DeleteSession": {
-              "methods": [
-                "DeleteSession",
-                "DeleteSessionAsync"
-              ]
-            },
-            "ExecuteSql": {
-              "methods": [
-                "ExecuteSql",
-                "ExecuteSqlAsync"
-              ]
-            },
-            "ExecuteStreamingSql": {
-              "methods": [
-                "ExecuteStreamingSql",
-                "ExecuteStreamingSqlAsync"
-              ]
-            },
-            "ExecuteBatchDml": {
-              "methods": [
-                "ExecuteBatchDml",
-                "ExecuteBatchDmlAsync"
-              ]
-            },
-            "Read": {
-              "methods": [
-                "Read",
-                "ReadAsync"
-              ]
-            },
-            "StreamingRead": {
-              "methods": [
-                "StreamingRead",
-                "StreamingReadAsync"
               ]
             },
             "BeginTransaction": {
@@ -82,10 +28,46 @@
                 "CommitAsync"
               ]
             },
-            "Rollback": {
+            "CreateSession": {
               "methods": [
-                "Rollback",
-                "RollbackAsync"
+                "CreateSession",
+                "CreateSessionAsync"
+              ]
+            },
+            "DeleteSession": {
+              "methods": [
+                "DeleteSession",
+                "DeleteSessionAsync"
+              ]
+            },
+            "ExecuteBatchDml": {
+              "methods": [
+                "ExecuteBatchDml",
+                "ExecuteBatchDmlAsync"
+              ]
+            },
+            "ExecuteSql": {
+              "methods": [
+                "ExecuteSql",
+                "ExecuteSqlAsync"
+              ]
+            },
+            "ExecuteStreamingSql": {
+              "methods": [
+                "ExecuteStreamingSql",
+                "ExecuteStreamingSqlAsync"
+              ]
+            },
+            "GetSession": {
+              "methods": [
+                "GetSession",
+                "GetSessionAsync"
+              ]
+            },
+            "ListSessions": {
+              "methods": [
+                "ListSessions",
+                "ListSessionsAsync"
               ]
             },
             "PartitionQuery": {
@@ -98,6 +80,24 @@
               "methods": [
                 "PartitionRead",
                 "PartitionReadAsync"
+              ]
+            },
+            "Read": {
+              "methods": [
+                "Read",
+                "ReadAsync"
+              ]
+            },
+            "Rollback": {
+              "methods": [
+                "Rollback",
+                "RollbackAsync"
+              ]
+            },
+            "StreamingRead": {
+              "methods": [
+                "StreamingRead",
+                "StreamingReadAsync"
               ]
             }
           }

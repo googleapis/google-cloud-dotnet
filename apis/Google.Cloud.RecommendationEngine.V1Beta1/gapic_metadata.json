@@ -16,10 +16,22 @@
                 "CreateCatalogItemAsync"
               ]
             },
+            "DeleteCatalogItem": {
+              "methods": [
+                "DeleteCatalogItem",
+                "DeleteCatalogItemAsync"
+              ]
+            },
             "GetCatalogItem": {
               "methods": [
                 "GetCatalogItem",
                 "GetCatalogItemAsync"
+              ]
+            },
+            "ImportCatalogItems": {
+              "methods": [
+                "ImportCatalogItems",
+                "ImportCatalogItemsAsync"
               ]
             },
             "ListCatalogItems": {
@@ -32,18 +44,6 @@
               "methods": [
                 "UpdateCatalogItem",
                 "UpdateCatalogItemAsync"
-              ]
-            },
-            "DeleteCatalogItem": {
-              "methods": [
-                "DeleteCatalogItem",
-                "DeleteCatalogItemAsync"
-              ]
-            },
-            "ImportCatalogItems": {
-              "methods": [
-                "ImportCatalogItems",
-                "ImportCatalogItemsAsync"
               ]
             }
           }
@@ -61,16 +61,16 @@
                 "CreatePredictionApiKeyRegistrationAsync"
               ]
             },
-            "ListPredictionApiKeyRegistrations": {
-              "methods": [
-                "ListPredictionApiKeyRegistrations",
-                "ListPredictionApiKeyRegistrationsAsync"
-              ]
-            },
             "DeletePredictionApiKeyRegistration": {
               "methods": [
                 "DeletePredictionApiKeyRegistration",
                 "DeletePredictionApiKeyRegistrationAsync"
+              ]
+            },
+            "ListPredictionApiKeyRegistrations": {
+              "methods": [
+                "ListPredictionApiKeyRegistrations",
+                "ListPredictionApiKeyRegistrationsAsync"
               ]
             }
           }
@@ -97,16 +97,16 @@
         "grpc": {
           "libraryClient": "UserEventServiceClient",
           "rpcs": {
-            "WriteUserEvent": {
-              "methods": [
-                "WriteUserEvent",
-                "WriteUserEventAsync"
-              ]
-            },
             "CollectUserEvent": {
               "methods": [
                 "CollectUserEvent",
                 "CollectUserEventAsync"
+              ]
+            },
+            "ImportUserEvents": {
+              "methods": [
+                "ImportUserEvents",
+                "ImportUserEventsAsync"
               ]
             },
             "ListUserEvents": {
@@ -121,10 +121,10 @@
                 "PurgeUserEventsAsync"
               ]
             },
-            "ImportUserEvents": {
+            "WriteUserEvent": {
               "methods": [
-                "ImportUserEvents",
-                "ImportUserEventsAsync"
+                "WriteUserEvent",
+                "WriteUserEventAsync"
               ]
             }
           }

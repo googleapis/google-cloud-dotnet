@@ -10,34 +10,10 @@
         "grpc": {
           "libraryClient": "GSuiteAddOnsClient",
           "rpcs": {
-            "GetAuthorization": {
-              "methods": [
-                "GetAuthorization",
-                "GetAuthorizationAsync"
-              ]
-            },
             "CreateDeployment": {
               "methods": [
                 "CreateDeployment",
                 "CreateDeploymentAsync"
-              ]
-            },
-            "ReplaceDeployment": {
-              "methods": [
-                "ReplaceDeployment",
-                "ReplaceDeploymentAsync"
-              ]
-            },
-            "GetDeployment": {
-              "methods": [
-                "GetDeployment",
-                "GetDeploymentAsync"
-              ]
-            },
-            "ListDeployments": {
-              "methods": [
-                "ListDeployments",
-                "ListDeploymentsAsync"
               ]
             },
             "DeleteDeployment": {
@@ -46,22 +22,46 @@
                 "DeleteDeploymentAsync"
               ]
             },
-            "InstallDeployment": {
+            "GetAuthorization": {
               "methods": [
-                "InstallDeployment",
-                "InstallDeploymentAsync"
+                "GetAuthorization",
+                "GetAuthorizationAsync"
               ]
             },
-            "UninstallDeployment": {
+            "GetDeployment": {
               "methods": [
-                "UninstallDeployment",
-                "UninstallDeploymentAsync"
+                "GetDeployment",
+                "GetDeploymentAsync"
               ]
             },
             "GetInstallStatus": {
               "methods": [
                 "GetInstallStatus",
                 "GetInstallStatusAsync"
+              ]
+            },
+            "InstallDeployment": {
+              "methods": [
+                "InstallDeployment",
+                "InstallDeploymentAsync"
+              ]
+            },
+            "ListDeployments": {
+              "methods": [
+                "ListDeployments",
+                "ListDeploymentsAsync"
+              ]
+            },
+            "ReplaceDeployment": {
+              "methods": [
+                "ReplaceDeployment",
+                "ReplaceDeploymentAsync"
+              ]
+            },
+            "UninstallDeployment": {
+              "methods": [
+                "UninstallDeployment",
+                "UninstallDeploymentAsync"
               ]
             }
           }

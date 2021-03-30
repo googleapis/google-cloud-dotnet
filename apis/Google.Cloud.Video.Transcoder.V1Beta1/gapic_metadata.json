@@ -16,16 +16,10 @@
                 "CreateJobAsync"
               ]
             },
-            "ListJobs": {
+            "CreateJobTemplate": {
               "methods": [
-                "ListJobs",
-                "ListJobsAsync"
-              ]
-            },
-            "GetJob": {
-              "methods": [
-                "GetJob",
-                "GetJobAsync"
+                "CreateJobTemplate",
+                "CreateJobTemplateAsync"
               ]
             },
             "DeleteJob": {
@@ -34,16 +28,16 @@
                 "DeleteJobAsync"
               ]
             },
-            "CreateJobTemplate": {
+            "DeleteJobTemplate": {
               "methods": [
-                "CreateJobTemplate",
-                "CreateJobTemplateAsync"
+                "DeleteJobTemplate",
+                "DeleteJobTemplateAsync"
               ]
             },
-            "ListJobTemplates": {
+            "GetJob": {
               "methods": [
-                "ListJobTemplates",
-                "ListJobTemplatesAsync"
+                "GetJob",
+                "GetJobAsync"
               ]
             },
             "GetJobTemplate": {
@@ -52,10 +46,16 @@
                 "GetJobTemplateAsync"
               ]
             },
-            "DeleteJobTemplate": {
+            "ListJobTemplates": {
               "methods": [
-                "DeleteJobTemplate",
-                "DeleteJobTemplateAsync"
+                "ListJobTemplates",
+                "ListJobTemplatesAsync"
+              ]
+            },
+            "ListJobs": {
+              "methods": [
+                "ListJobs",
+                "ListJobsAsync"
               ]
             }
           }

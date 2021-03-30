@@ -10,12 +10,6 @@
         "grpc": {
           "libraryClient": "LanguageServiceClient",
           "rpcs": {
-            "AnalyzeSentiment": {
-              "methods": [
-                "AnalyzeSentiment",
-                "AnalyzeSentimentAsync"
-              ]
-            },
             "AnalyzeEntities": {
               "methods": [
                 "AnalyzeEntities",
@@ -28,22 +22,28 @@
                 "AnalyzeEntitySentimentAsync"
               ]
             },
+            "AnalyzeSentiment": {
+              "methods": [
+                "AnalyzeSentiment",
+                "AnalyzeSentimentAsync"
+              ]
+            },
             "AnalyzeSyntax": {
               "methods": [
                 "AnalyzeSyntax",
                 "AnalyzeSyntaxAsync"
               ]
             },
-            "ClassifyText": {
-              "methods": [
-                "ClassifyText",
-                "ClassifyTextAsync"
-              ]
-            },
             "AnnotateText": {
               "methods": [
                 "AnnotateText",
                 "AnnotateTextAsync"
+              ]
+            },
+            "ClassifyText": {
+              "methods": [
+                "ClassifyText",
+                "ClassifyTextAsync"
               ]
             }
           }

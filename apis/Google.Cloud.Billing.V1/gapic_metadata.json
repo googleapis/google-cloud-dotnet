@@ -10,34 +10,22 @@
         "grpc": {
           "libraryClient": "CloudBillingClient",
           "rpcs": {
-            "GetBillingAccount": {
-              "methods": [
-                "GetBillingAccount",
-                "GetBillingAccountAsync"
-              ]
-            },
-            "ListBillingAccounts": {
-              "methods": [
-                "ListBillingAccounts",
-                "ListBillingAccountsAsync"
-              ]
-            },
-            "UpdateBillingAccount": {
-              "methods": [
-                "UpdateBillingAccount",
-                "UpdateBillingAccountAsync"
-              ]
-            },
             "CreateBillingAccount": {
               "methods": [
                 "CreateBillingAccount",
                 "CreateBillingAccountAsync"
               ]
             },
-            "ListProjectBillingInfo": {
+            "GetBillingAccount": {
               "methods": [
-                "ListProjectBillingInfo",
-                "ListProjectBillingInfoAsync"
+                "GetBillingAccount",
+                "GetBillingAccountAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
               ]
             },
             "GetProjectBillingInfo": {
@@ -46,16 +34,16 @@
                 "GetProjectBillingInfoAsync"
               ]
             },
-            "UpdateProjectBillingInfo": {
+            "ListBillingAccounts": {
               "methods": [
-                "UpdateProjectBillingInfo",
-                "UpdateProjectBillingInfoAsync"
+                "ListBillingAccounts",
+                "ListBillingAccountsAsync"
               ]
             },
-            "GetIamPolicy": {
+            "ListProjectBillingInfo": {
               "methods": [
-                "GetIamPolicy",
-                "GetIamPolicyAsync"
+                "ListProjectBillingInfo",
+                "ListProjectBillingInfoAsync"
               ]
             },
             "SetIamPolicy": {
@@ -68,6 +56,18 @@
               "methods": [
                 "TestIamPermissions",
                 "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateBillingAccount": {
+              "methods": [
+                "UpdateBillingAccount",
+                "UpdateBillingAccountAsync"
+              ]
+            },
+            "UpdateProjectBillingInfo": {
+              "methods": [
+                "UpdateProjectBillingInfo",
+                "UpdateProjectBillingInfoAsync"
               ]
             }
           }

@@ -10,24 +10,6 @@
         "grpc": {
           "libraryClient": "TranslationServiceClient",
           "rpcs": {
-            "TranslateText": {
-              "methods": [
-                "TranslateText",
-                "TranslateTextAsync"
-              ]
-            },
-            "DetectLanguage": {
-              "methods": [
-                "DetectLanguage",
-                "DetectLanguageAsync"
-              ]
-            },
-            "GetSupportedLanguages": {
-              "methods": [
-                "GetSupportedLanguages",
-                "GetSupportedLanguagesAsync"
-              ]
-            },
             "BatchTranslateText": {
               "methods": [
                 "BatchTranslateText",
@@ -40,10 +22,16 @@
                 "CreateGlossaryAsync"
               ]
             },
-            "ListGlossaries": {
+            "DeleteGlossary": {
               "methods": [
-                "ListGlossaries",
-                "ListGlossariesAsync"
+                "DeleteGlossary",
+                "DeleteGlossaryAsync"
+              ]
+            },
+            "DetectLanguage": {
+              "methods": [
+                "DetectLanguage",
+                "DetectLanguageAsync"
               ]
             },
             "GetGlossary": {
@@ -52,10 +40,22 @@
                 "GetGlossaryAsync"
               ]
             },
-            "DeleteGlossary": {
+            "GetSupportedLanguages": {
               "methods": [
-                "DeleteGlossary",
-                "DeleteGlossaryAsync"
+                "GetSupportedLanguages",
+                "GetSupportedLanguagesAsync"
+              ]
+            },
+            "ListGlossaries": {
+              "methods": [
+                "ListGlossaries",
+                "ListGlossariesAsync"
+              ]
+            },
+            "TranslateText": {
+              "methods": [
+                "TranslateText",
+                "TranslateTextAsync"
               ]
             }
           }

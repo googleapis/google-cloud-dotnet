@@ -10,28 +10,10 @@
         "grpc": {
           "libraryClient": "GameServerClustersServiceClient",
           "rpcs": {
-            "ListGameServerClusters": {
-              "methods": [
-                "ListGameServerClusters",
-                "ListGameServerClustersAsync"
-              ]
-            },
-            "GetGameServerCluster": {
-              "methods": [
-                "GetGameServerCluster",
-                "GetGameServerClusterAsync"
-              ]
-            },
             "CreateGameServerCluster": {
               "methods": [
                 "CreateGameServerCluster",
                 "CreateGameServerClusterAsync"
-              ]
-            },
-            "PreviewCreateGameServerCluster": {
-              "methods": [
-                "PreviewCreateGameServerCluster",
-                "PreviewCreateGameServerClusterAsync"
               ]
             },
             "DeleteGameServerCluster": {
@@ -40,22 +22,40 @@
                 "DeleteGameServerClusterAsync"
               ]
             },
+            "GetGameServerCluster": {
+              "methods": [
+                "GetGameServerCluster",
+                "GetGameServerClusterAsync"
+              ]
+            },
+            "ListGameServerClusters": {
+              "methods": [
+                "ListGameServerClusters",
+                "ListGameServerClustersAsync"
+              ]
+            },
+            "PreviewCreateGameServerCluster": {
+              "methods": [
+                "PreviewCreateGameServerCluster",
+                "PreviewCreateGameServerClusterAsync"
+              ]
+            },
             "PreviewDeleteGameServerCluster": {
               "methods": [
                 "PreviewDeleteGameServerCluster",
                 "PreviewDeleteGameServerClusterAsync"
               ]
             },
-            "UpdateGameServerCluster": {
-              "methods": [
-                "UpdateGameServerCluster",
-                "UpdateGameServerClusterAsync"
-              ]
-            },
             "PreviewUpdateGameServerCluster": {
               "methods": [
                 "PreviewUpdateGameServerCluster",
                 "PreviewUpdateGameServerClusterAsync"
+              ]
+            },
+            "UpdateGameServerCluster": {
+              "methods": [
+                "UpdateGameServerCluster",
+                "UpdateGameServerClusterAsync"
               ]
             }
           }
@@ -67,18 +67,6 @@
         "grpc": {
           "libraryClient": "GameServerConfigsServiceClient",
           "rpcs": {
-            "ListGameServerConfigs": {
-              "methods": [
-                "ListGameServerConfigs",
-                "ListGameServerConfigsAsync"
-              ]
-            },
-            "GetGameServerConfig": {
-              "methods": [
-                "GetGameServerConfig",
-                "GetGameServerConfigAsync"
-              ]
-            },
             "CreateGameServerConfig": {
               "methods": [
                 "CreateGameServerConfig",
@@ -90,6 +78,18 @@
                 "DeleteGameServerConfig",
                 "DeleteGameServerConfigAsync"
               ]
+            },
+            "GetGameServerConfig": {
+              "methods": [
+                "GetGameServerConfig",
+                "GetGameServerConfigAsync"
+              ]
+            },
+            "ListGameServerConfigs": {
+              "methods": [
+                "ListGameServerConfigs",
+                "ListGameServerConfigsAsync"
+              ]
             }
           }
         }
@@ -100,18 +100,6 @@
         "grpc": {
           "libraryClient": "GameServerDeploymentsServiceClient",
           "rpcs": {
-            "ListGameServerDeployments": {
-              "methods": [
-                "ListGameServerDeployments",
-                "ListGameServerDeploymentsAsync"
-              ]
-            },
-            "GetGameServerDeployment": {
-              "methods": [
-                "GetGameServerDeployment",
-                "GetGameServerDeploymentAsync"
-              ]
-            },
             "CreateGameServerDeployment": {
               "methods": [
                 "CreateGameServerDeployment",
@@ -124,10 +112,16 @@
                 "DeleteGameServerDeploymentAsync"
               ]
             },
-            "UpdateGameServerDeployment": {
+            "FetchDeploymentState": {
               "methods": [
-                "UpdateGameServerDeployment",
-                "UpdateGameServerDeploymentAsync"
+                "FetchDeploymentState",
+                "FetchDeploymentStateAsync"
+              ]
+            },
+            "GetGameServerDeployment": {
+              "methods": [
+                "GetGameServerDeployment",
+                "GetGameServerDeploymentAsync"
               ]
             },
             "GetGameServerDeploymentRollout": {
@@ -136,10 +130,10 @@
                 "GetGameServerDeploymentRolloutAsync"
               ]
             },
-            "UpdateGameServerDeploymentRollout": {
+            "ListGameServerDeployments": {
               "methods": [
-                "UpdateGameServerDeploymentRollout",
-                "UpdateGameServerDeploymentRolloutAsync"
+                "ListGameServerDeployments",
+                "ListGameServerDeploymentsAsync"
               ]
             },
             "PreviewGameServerDeploymentRollout": {
@@ -148,10 +142,16 @@
                 "PreviewGameServerDeploymentRolloutAsync"
               ]
             },
-            "FetchDeploymentState": {
+            "UpdateGameServerDeployment": {
               "methods": [
-                "FetchDeploymentState",
-                "FetchDeploymentStateAsync"
+                "UpdateGameServerDeployment",
+                "UpdateGameServerDeploymentAsync"
+              ]
+            },
+            "UpdateGameServerDeploymentRollout": {
+              "methods": [
+                "UpdateGameServerDeploymentRollout",
+                "UpdateGameServerDeploymentRolloutAsync"
               ]
             }
           }
@@ -163,18 +163,6 @@
         "grpc": {
           "libraryClient": "RealmsServiceClient",
           "rpcs": {
-            "ListRealms": {
-              "methods": [
-                "ListRealms",
-                "ListRealmsAsync"
-              ]
-            },
-            "GetRealm": {
-              "methods": [
-                "GetRealm",
-                "GetRealmAsync"
-              ]
-            },
             "CreateRealm": {
               "methods": [
                 "CreateRealm",
@@ -187,16 +175,28 @@
                 "DeleteRealmAsync"
               ]
             },
-            "UpdateRealm": {
+            "GetRealm": {
               "methods": [
-                "UpdateRealm",
-                "UpdateRealmAsync"
+                "GetRealm",
+                "GetRealmAsync"
+              ]
+            },
+            "ListRealms": {
+              "methods": [
+                "ListRealms",
+                "ListRealmsAsync"
               ]
             },
             "PreviewRealmUpdate": {
               "methods": [
                 "PreviewRealmUpdate",
                 "PreviewRealmUpdateAsync"
+              ]
+            },
+            "UpdateRealm": {
+              "methods": [
+                "UpdateRealm",
+                "UpdateRealmAsync"
               ]
             }
           }

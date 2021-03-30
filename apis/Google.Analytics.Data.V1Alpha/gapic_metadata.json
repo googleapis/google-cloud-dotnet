@@ -10,16 +10,10 @@
         "grpc": {
           "libraryClient": "AlphaAnalyticsDataClient",
           "rpcs": {
-            "RunReport": {
+            "BatchRunPivotReports": {
               "methods": [
-                "RunReport",
-                "RunReportAsync"
-              ]
-            },
-            "RunPivotReport": {
-              "methods": [
-                "RunPivotReport",
-                "RunPivotReportAsync"
+                "BatchRunPivotReports",
+                "BatchRunPivotReportsAsync"
               ]
             },
             "BatchRunReports": {
@@ -28,22 +22,28 @@
                 "BatchRunReportsAsync"
               ]
             },
-            "BatchRunPivotReports": {
-              "methods": [
-                "BatchRunPivotReports",
-                "BatchRunPivotReportsAsync"
-              ]
-            },
             "GetMetadata": {
               "methods": [
                 "GetMetadata",
                 "GetMetadataAsync"
               ]
             },
+            "RunPivotReport": {
+              "methods": [
+                "RunPivotReport",
+                "RunPivotReportAsync"
+              ]
+            },
             "RunRealtimeReport": {
               "methods": [
                 "RunRealtimeReport",
                 "RunRealtimeReportAsync"
+              ]
+            },
+            "RunReport": {
+              "methods": [
+                "RunReport",
+                "RunReportAsync"
               ]
             }
           }

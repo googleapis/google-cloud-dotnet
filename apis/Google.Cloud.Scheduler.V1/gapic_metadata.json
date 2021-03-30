@@ -10,10 +10,16 @@
         "grpc": {
           "libraryClient": "CloudSchedulerClient",
           "rpcs": {
-            "ListJobs": {
+            "CreateJob": {
               "methods": [
-                "ListJobs",
-                "ListJobsAsync"
+                "CreateJob",
+                "CreateJobAsync"
+              ]
+            },
+            "DeleteJob": {
+              "methods": [
+                "DeleteJob",
+                "DeleteJobAsync"
               ]
             },
             "GetJob": {
@@ -22,22 +28,10 @@
                 "GetJobAsync"
               ]
             },
-            "CreateJob": {
+            "ListJobs": {
               "methods": [
-                "CreateJob",
-                "CreateJobAsync"
-              ]
-            },
-            "UpdateJob": {
-              "methods": [
-                "UpdateJob",
-                "UpdateJobAsync"
-              ]
-            },
-            "DeleteJob": {
-              "methods": [
-                "DeleteJob",
-                "DeleteJobAsync"
+                "ListJobs",
+                "ListJobsAsync"
               ]
             },
             "PauseJob": {
@@ -56,6 +50,12 @@
               "methods": [
                 "RunJob",
                 "RunJobAsync"
+              ]
+            },
+            "UpdateJob": {
+              "methods": [
+                "UpdateJob",
+                "UpdateJobAsync"
               ]
             }
           }

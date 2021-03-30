@@ -10,10 +10,16 @@
         "grpc": {
           "libraryClient": "AssetServiceClient",
           "rpcs": {
-            "ExportAssets": {
+            "AnalyzeIamPolicy": {
               "methods": [
-                "ExportAssets",
-                "ExportAssetsAsync"
+                "AnalyzeIamPolicy",
+                "AnalyzeIamPolicyAsync"
+              ]
+            },
+            "AnalyzeIamPolicyLongrunning": {
+              "methods": [
+                "AnalyzeIamPolicyLongrunning",
+                "AnalyzeIamPolicyLongrunningAsync"
               ]
             },
             "BatchGetAssetsHistory": {
@@ -28,6 +34,18 @@
                 "CreateFeedAsync"
               ]
             },
+            "DeleteFeed": {
+              "methods": [
+                "DeleteFeed",
+                "DeleteFeedAsync"
+              ]
+            },
+            "ExportAssets": {
+              "methods": [
+                "ExportAssets",
+                "ExportAssetsAsync"
+              ]
+            },
             "GetFeed": {
               "methods": [
                 "GetFeed",
@@ -40,16 +58,10 @@
                 "ListFeedsAsync"
               ]
             },
-            "UpdateFeed": {
+            "SearchAllIamPolicies": {
               "methods": [
-                "UpdateFeed",
-                "UpdateFeedAsync"
-              ]
-            },
-            "DeleteFeed": {
-              "methods": [
-                "DeleteFeed",
-                "DeleteFeedAsync"
+                "SearchAllIamPolicies",
+                "SearchAllIamPoliciesAsync"
               ]
             },
             "SearchAllResources": {
@@ -58,22 +70,10 @@
                 "SearchAllResourcesAsync"
               ]
             },
-            "SearchAllIamPolicies": {
+            "UpdateFeed": {
               "methods": [
-                "SearchAllIamPolicies",
-                "SearchAllIamPoliciesAsync"
-              ]
-            },
-            "AnalyzeIamPolicy": {
-              "methods": [
-                "AnalyzeIamPolicy",
-                "AnalyzeIamPolicyAsync"
-              ]
-            },
-            "AnalyzeIamPolicyLongrunning": {
-              "methods": [
-                "AnalyzeIamPolicyLongrunning",
-                "AnalyzeIamPolicyLongrunningAsync"
+                "UpdateFeed",
+                "UpdateFeedAsync"
               ]
             }
           }

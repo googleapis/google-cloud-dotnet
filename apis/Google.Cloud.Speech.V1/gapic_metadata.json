@@ -10,16 +10,16 @@
         "grpc": {
           "libraryClient": "SpeechClient",
           "rpcs": {
-            "Recognize": {
-              "methods": [
-                "Recognize",
-                "RecognizeAsync"
-              ]
-            },
             "LongRunningRecognize": {
               "methods": [
                 "LongRunningRecognize",
                 "LongRunningRecognizeAsync"
+              ]
+            },
+            "Recognize": {
+              "methods": [
+                "Recognize",
+                "RecognizeAsync"
               ]
             },
             "StreamingRecognize": {

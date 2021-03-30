@@ -5,144 +5,15 @@
   "protoPackage": "google.cloud.vision.v1",
   "libraryPackage": "Google.Cloud.Vision.V1",
   "services": {
-    "ProductSearch": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "ProductSearchClient",
-          "rpcs": {
-            "CreateProductSet": {
-              "methods": [
-                "CreateProductSet",
-                "CreateProductSetAsync"
-              ]
-            },
-            "ListProductSets": {
-              "methods": [
-                "ListProductSets",
-                "ListProductSetsAsync"
-              ]
-            },
-            "GetProductSet": {
-              "methods": [
-                "GetProductSet",
-                "GetProductSetAsync"
-              ]
-            },
-            "UpdateProductSet": {
-              "methods": [
-                "UpdateProductSet",
-                "UpdateProductSetAsync"
-              ]
-            },
-            "DeleteProductSet": {
-              "methods": [
-                "DeleteProductSet",
-                "DeleteProductSetAsync"
-              ]
-            },
-            "CreateProduct": {
-              "methods": [
-                "CreateProduct",
-                "CreateProductAsync"
-              ]
-            },
-            "ListProducts": {
-              "methods": [
-                "ListProducts",
-                "ListProductsAsync"
-              ]
-            },
-            "GetProduct": {
-              "methods": [
-                "GetProduct",
-                "GetProductAsync"
-              ]
-            },
-            "UpdateProduct": {
-              "methods": [
-                "UpdateProduct",
-                "UpdateProductAsync"
-              ]
-            },
-            "DeleteProduct": {
-              "methods": [
-                "DeleteProduct",
-                "DeleteProductAsync"
-              ]
-            },
-            "CreateReferenceImage": {
-              "methods": [
-                "CreateReferenceImage",
-                "CreateReferenceImageAsync"
-              ]
-            },
-            "DeleteReferenceImage": {
-              "methods": [
-                "DeleteReferenceImage",
-                "DeleteReferenceImageAsync"
-              ]
-            },
-            "ListReferenceImages": {
-              "methods": [
-                "ListReferenceImages",
-                "ListReferenceImagesAsync"
-              ]
-            },
-            "GetReferenceImage": {
-              "methods": [
-                "GetReferenceImage",
-                "GetReferenceImageAsync"
-              ]
-            },
-            "AddProductToProductSet": {
-              "methods": [
-                "AddProductToProductSet",
-                "AddProductToProductSetAsync"
-              ]
-            },
-            "RemoveProductFromProductSet": {
-              "methods": [
-                "RemoveProductFromProductSet",
-                "RemoveProductFromProductSetAsync"
-              ]
-            },
-            "ListProductsInProductSet": {
-              "methods": [
-                "ListProductsInProductSet",
-                "ListProductsInProductSetAsync"
-              ]
-            },
-            "ImportProductSets": {
-              "methods": [
-                "ImportProductSets",
-                "ImportProductSetsAsync"
-              ]
-            },
-            "PurgeProducts": {
-              "methods": [
-                "PurgeProducts",
-                "PurgeProductsAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
     "ImageAnnotator": {
       "clients": {
         "grpc": {
           "libraryClient": "ImageAnnotatorClient",
           "rpcs": {
-            "BatchAnnotateImages": {
+            "AsyncBatchAnnotateFiles": {
               "methods": [
-                "BatchAnnotateImages",
-                "BatchAnnotateImagesAsync"
-              ]
-            },
-            "BatchAnnotateFiles": {
-              "methods": [
-                "BatchAnnotateFiles",
-                "BatchAnnotateFilesAsync"
+                "AsyncBatchAnnotateFiles",
+                "AsyncBatchAnnotateFilesAsync"
               ]
             },
             "AsyncBatchAnnotateImages": {
@@ -151,10 +22,139 @@
                 "AsyncBatchAnnotateImagesAsync"
               ]
             },
-            "AsyncBatchAnnotateFiles": {
+            "BatchAnnotateFiles": {
               "methods": [
-                "AsyncBatchAnnotateFiles",
-                "AsyncBatchAnnotateFilesAsync"
+                "BatchAnnotateFiles",
+                "BatchAnnotateFilesAsync"
+              ]
+            },
+            "BatchAnnotateImages": {
+              "methods": [
+                "BatchAnnotateImages",
+                "BatchAnnotateImagesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ProductSearch": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ProductSearchClient",
+          "rpcs": {
+            "AddProductToProductSet": {
+              "methods": [
+                "AddProductToProductSet",
+                "AddProductToProductSetAsync"
+              ]
+            },
+            "CreateProduct": {
+              "methods": [
+                "CreateProduct",
+                "CreateProductAsync"
+              ]
+            },
+            "CreateProductSet": {
+              "methods": [
+                "CreateProductSet",
+                "CreateProductSetAsync"
+              ]
+            },
+            "CreateReferenceImage": {
+              "methods": [
+                "CreateReferenceImage",
+                "CreateReferenceImageAsync"
+              ]
+            },
+            "DeleteProduct": {
+              "methods": [
+                "DeleteProduct",
+                "DeleteProductAsync"
+              ]
+            },
+            "DeleteProductSet": {
+              "methods": [
+                "DeleteProductSet",
+                "DeleteProductSetAsync"
+              ]
+            },
+            "DeleteReferenceImage": {
+              "methods": [
+                "DeleteReferenceImage",
+                "DeleteReferenceImageAsync"
+              ]
+            },
+            "GetProduct": {
+              "methods": [
+                "GetProduct",
+                "GetProductAsync"
+              ]
+            },
+            "GetProductSet": {
+              "methods": [
+                "GetProductSet",
+                "GetProductSetAsync"
+              ]
+            },
+            "GetReferenceImage": {
+              "methods": [
+                "GetReferenceImage",
+                "GetReferenceImageAsync"
+              ]
+            },
+            "ImportProductSets": {
+              "methods": [
+                "ImportProductSets",
+                "ImportProductSetsAsync"
+              ]
+            },
+            "ListProductSets": {
+              "methods": [
+                "ListProductSets",
+                "ListProductSetsAsync"
+              ]
+            },
+            "ListProducts": {
+              "methods": [
+                "ListProducts",
+                "ListProductsAsync"
+              ]
+            },
+            "ListProductsInProductSet": {
+              "methods": [
+                "ListProductsInProductSet",
+                "ListProductsInProductSetAsync"
+              ]
+            },
+            "ListReferenceImages": {
+              "methods": [
+                "ListReferenceImages",
+                "ListReferenceImagesAsync"
+              ]
+            },
+            "PurgeProducts": {
+              "methods": [
+                "PurgeProducts",
+                "PurgeProductsAsync"
+              ]
+            },
+            "RemoveProductFromProductSet": {
+              "methods": [
+                "RemoveProductFromProductSet",
+                "RemoveProductFromProductSetAsync"
+              ]
+            },
+            "UpdateProduct": {
+              "methods": [
+                "UpdateProduct",
+                "UpdateProductAsync"
+              ]
+            },
+            "UpdateProductSet": {
+              "methods": [
+                "UpdateProductSet",
+                "UpdateProductSetAsync"
               ]
             }
           }

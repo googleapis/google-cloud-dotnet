@@ -10,18 +10,6 @@
         "grpc": {
           "libraryClient": "DatastoreAdminClient",
           "rpcs": {
-            "ExportEntities": {
-              "methods": [
-                "ExportEntities",
-                "ExportEntitiesAsync"
-              ]
-            },
-            "ImportEntities": {
-              "methods": [
-                "ImportEntities",
-                "ImportEntitiesAsync"
-              ]
-            },
             "CreateIndex": {
               "methods": [
                 "CreateIndex",
@@ -34,10 +22,22 @@
                 "DeleteIndexAsync"
               ]
             },
+            "ExportEntities": {
+              "methods": [
+                "ExportEntities",
+                "ExportEntitiesAsync"
+              ]
+            },
             "GetIndex": {
               "methods": [
                 "GetIndex",
                 "GetIndexAsync"
+              ]
+            },
+            "ImportEntities": {
+              "methods": [
+                "ImportEntities",
+                "ImportEntitiesAsync"
               ]
             },
             "ListIndexes": {

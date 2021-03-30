@@ -10,16 +10,10 @@
         "grpc": {
           "libraryClient": "BigtableServiceApiClient",
           "rpcs": {
-            "ReadRows": {
+            "CheckAndMutateRow": {
               "methods": [
-                "ReadRows",
-                "ReadRowsAsync"
-              ]
-            },
-            "SampleRowKeys": {
-              "methods": [
-                "SampleRowKeys",
-                "SampleRowKeysAsync"
+                "CheckAndMutateRow",
+                "CheckAndMutateRowAsync"
               ]
             },
             "MutateRow": {
@@ -34,16 +28,22 @@
                 "MutateRowsAsync"
               ]
             },
-            "CheckAndMutateRow": {
-              "methods": [
-                "CheckAndMutateRow",
-                "CheckAndMutateRowAsync"
-              ]
-            },
             "ReadModifyWriteRow": {
               "methods": [
                 "ReadModifyWriteRow",
                 "ReadModifyWriteRowAsync"
+              ]
+            },
+            "ReadRows": {
+              "methods": [
+                "ReadRows",
+                "ReadRowsAsync"
+              ]
+            },
+            "SampleRowKeys": {
+              "methods": [
+                "SampleRowKeys",
+                "SampleRowKeysAsync"
               ]
             }
           }

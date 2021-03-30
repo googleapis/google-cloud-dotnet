@@ -10,10 +10,10 @@
         "grpc": {
           "libraryClient": "ExecutionsClient",
           "rpcs": {
-            "ListExecutions": {
+            "CancelExecution": {
               "methods": [
-                "ListExecutions",
-                "ListExecutionsAsync"
+                "CancelExecution",
+                "CancelExecutionAsync"
               ]
             },
             "CreateExecution": {
@@ -28,10 +28,10 @@
                 "GetExecutionAsync"
               ]
             },
-            "CancelExecution": {
+            "ListExecutions": {
               "methods": [
-                "CancelExecution",
-                "CancelExecutionAsync"
+                "ListExecutions",
+                "ListExecutionsAsync"
               ]
             }
           }

@@ -10,40 +10,16 @@
         "grpc": {
           "libraryClient": "CertificateAuthorityServiceClient",
           "rpcs": {
-            "CreateCertificate": {
-              "methods": [
-                "CreateCertificate",
-                "CreateCertificateAsync"
-              ]
-            },
-            "GetCertificate": {
-              "methods": [
-                "GetCertificate",
-                "GetCertificateAsync"
-              ]
-            },
-            "ListCertificates": {
-              "methods": [
-                "ListCertificates",
-                "ListCertificatesAsync"
-              ]
-            },
-            "RevokeCertificate": {
-              "methods": [
-                "RevokeCertificate",
-                "RevokeCertificateAsync"
-              ]
-            },
-            "UpdateCertificate": {
-              "methods": [
-                "UpdateCertificate",
-                "UpdateCertificateAsync"
-              ]
-            },
             "ActivateCertificateAuthority": {
               "methods": [
                 "ActivateCertificateAuthority",
                 "ActivateCertificateAuthorityAsync"
+              ]
+            },
+            "CreateCertificate": {
+              "methods": [
+                "CreateCertificate",
+                "CreateCertificateAsync"
               ]
             },
             "CreateCertificateAuthority": {
@@ -70,34 +46,16 @@
                 "FetchCertificateAuthorityCsrAsync"
               ]
             },
+            "GetCertificate": {
+              "methods": [
+                "GetCertificate",
+                "GetCertificateAsync"
+              ]
+            },
             "GetCertificateAuthority": {
               "methods": [
                 "GetCertificateAuthority",
                 "GetCertificateAuthorityAsync"
-              ]
-            },
-            "ListCertificateAuthorities": {
-              "methods": [
-                "ListCertificateAuthorities",
-                "ListCertificateAuthoritiesAsync"
-              ]
-            },
-            "RestoreCertificateAuthority": {
-              "methods": [
-                "RestoreCertificateAuthority",
-                "RestoreCertificateAuthorityAsync"
-              ]
-            },
-            "ScheduleDeleteCertificateAuthority": {
-              "methods": [
-                "ScheduleDeleteCertificateAuthority",
-                "ScheduleDeleteCertificateAuthorityAsync"
-              ]
-            },
-            "UpdateCertificateAuthority": {
-              "methods": [
-                "UpdateCertificateAuthority",
-                "UpdateCertificateAuthorityAsync"
               ]
             },
             "GetCertificateRevocationList": {
@@ -106,28 +64,70 @@
                 "GetCertificateRevocationListAsync"
               ]
             },
-            "ListCertificateRevocationLists": {
-              "methods": [
-                "ListCertificateRevocationLists",
-                "ListCertificateRevocationListsAsync"
-              ]
-            },
-            "UpdateCertificateRevocationList": {
-              "methods": [
-                "UpdateCertificateRevocationList",
-                "UpdateCertificateRevocationListAsync"
-              ]
-            },
             "GetReusableConfig": {
               "methods": [
                 "GetReusableConfig",
                 "GetReusableConfigAsync"
               ]
             },
+            "ListCertificateAuthorities": {
+              "methods": [
+                "ListCertificateAuthorities",
+                "ListCertificateAuthoritiesAsync"
+              ]
+            },
+            "ListCertificateRevocationLists": {
+              "methods": [
+                "ListCertificateRevocationLists",
+                "ListCertificateRevocationListsAsync"
+              ]
+            },
+            "ListCertificates": {
+              "methods": [
+                "ListCertificates",
+                "ListCertificatesAsync"
+              ]
+            },
             "ListReusableConfigs": {
               "methods": [
                 "ListReusableConfigs",
                 "ListReusableConfigsAsync"
+              ]
+            },
+            "RestoreCertificateAuthority": {
+              "methods": [
+                "RestoreCertificateAuthority",
+                "RestoreCertificateAuthorityAsync"
+              ]
+            },
+            "RevokeCertificate": {
+              "methods": [
+                "RevokeCertificate",
+                "RevokeCertificateAsync"
+              ]
+            },
+            "ScheduleDeleteCertificateAuthority": {
+              "methods": [
+                "ScheduleDeleteCertificateAuthority",
+                "ScheduleDeleteCertificateAuthorityAsync"
+              ]
+            },
+            "UpdateCertificate": {
+              "methods": [
+                "UpdateCertificate",
+                "UpdateCertificateAsync"
+              ]
+            },
+            "UpdateCertificateAuthority": {
+              "methods": [
+                "UpdateCertificateAuthority",
+                "UpdateCertificateAuthorityAsync"
+              ]
+            },
+            "UpdateCertificateRevocationList": {
+              "methods": [
+                "UpdateCertificateRevocationList",
+                "UpdateCertificateRevocationListAsync"
               ]
             }
           }

@@ -16,10 +16,10 @@
                 "CreateAutoscalingPolicyAsync"
               ]
             },
-            "UpdateAutoscalingPolicy": {
+            "DeleteAutoscalingPolicy": {
               "methods": [
-                "UpdateAutoscalingPolicy",
-                "UpdateAutoscalingPolicyAsync"
+                "DeleteAutoscalingPolicy",
+                "DeleteAutoscalingPolicyAsync"
               ]
             },
             "GetAutoscalingPolicy": {
@@ -34,10 +34,10 @@
                 "ListAutoscalingPoliciesAsync"
               ]
             },
-            "DeleteAutoscalingPolicy": {
+            "UpdateAutoscalingPolicy": {
               "methods": [
-                "DeleteAutoscalingPolicy",
-                "DeleteAutoscalingPolicyAsync"
+                "UpdateAutoscalingPolicy",
+                "UpdateAutoscalingPolicyAsync"
               ]
             }
           }
@@ -55,16 +55,16 @@
                 "CreateClusterAsync"
               ]
             },
-            "UpdateCluster": {
-              "methods": [
-                "UpdateCluster",
-                "UpdateClusterAsync"
-              ]
-            },
             "DeleteCluster": {
               "methods": [
                 "DeleteCluster",
                 "DeleteClusterAsync"
+              ]
+            },
+            "DiagnoseCluster": {
+              "methods": [
+                "DiagnoseCluster",
+                "DiagnoseClusterAsync"
               ]
             },
             "GetCluster": {
@@ -79,10 +79,10 @@
                 "ListClustersAsync"
               ]
             },
-            "DiagnoseCluster": {
+            "UpdateCluster": {
               "methods": [
-                "DiagnoseCluster",
-                "DiagnoseClusterAsync"
+                "UpdateCluster",
+                "UpdateClusterAsync"
               ]
             }
           }
@@ -94,16 +94,16 @@
         "grpc": {
           "libraryClient": "JobControllerClient",
           "rpcs": {
-            "SubmitJob": {
+            "CancelJob": {
               "methods": [
-                "SubmitJob",
-                "SubmitJobAsync"
+                "CancelJob",
+                "CancelJobAsync"
               ]
             },
-            "SubmitJobAsOperation": {
+            "DeleteJob": {
               "methods": [
-                "SubmitJobAsOperation",
-                "SubmitJobAsOperationAsync"
+                "DeleteJob",
+                "DeleteJobAsync"
               ]
             },
             "GetJob": {
@@ -118,22 +118,22 @@
                 "ListJobsAsync"
               ]
             },
+            "SubmitJob": {
+              "methods": [
+                "SubmitJob",
+                "SubmitJobAsync"
+              ]
+            },
+            "SubmitJobAsOperation": {
+              "methods": [
+                "SubmitJobAsOperation",
+                "SubmitJobAsOperationAsync"
+              ]
+            },
             "UpdateJob": {
               "methods": [
                 "UpdateJob",
                 "UpdateJobAsync"
-              ]
-            },
-            "CancelJob": {
-              "methods": [
-                "CancelJob",
-                "CancelJobAsync"
-              ]
-            },
-            "DeleteJob": {
-              "methods": [
-                "DeleteJob",
-                "DeleteJobAsync"
               ]
             }
           }
@@ -151,16 +151,16 @@
                 "CreateWorkflowTemplateAsync"
               ]
             },
+            "DeleteWorkflowTemplate": {
+              "methods": [
+                "DeleteWorkflowTemplate",
+                "DeleteWorkflowTemplateAsync"
+              ]
+            },
             "GetWorkflowTemplate": {
               "methods": [
                 "GetWorkflowTemplate",
                 "GetWorkflowTemplateAsync"
-              ]
-            },
-            "InstantiateWorkflowTemplate": {
-              "methods": [
-                "InstantiateWorkflowTemplate",
-                "InstantiateWorkflowTemplateAsync"
               ]
             },
             "InstantiateInlineWorkflowTemplate": {
@@ -169,10 +169,10 @@
                 "InstantiateInlineWorkflowTemplateAsync"
               ]
             },
-            "UpdateWorkflowTemplate": {
+            "InstantiateWorkflowTemplate": {
               "methods": [
-                "UpdateWorkflowTemplate",
-                "UpdateWorkflowTemplateAsync"
+                "InstantiateWorkflowTemplate",
+                "InstantiateWorkflowTemplateAsync"
               ]
             },
             "ListWorkflowTemplates": {
@@ -181,10 +181,10 @@
                 "ListWorkflowTemplatesAsync"
               ]
             },
-            "DeleteWorkflowTemplate": {
+            "UpdateWorkflowTemplate": {
               "methods": [
-                "DeleteWorkflowTemplate",
-                "DeleteWorkflowTemplateAsync"
+                "UpdateWorkflowTemplate",
+                "UpdateWorkflowTemplateAsync"
               ]
             }
           }

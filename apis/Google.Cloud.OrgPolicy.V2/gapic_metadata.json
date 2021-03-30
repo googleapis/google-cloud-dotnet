@@ -10,6 +10,30 @@
         "grpc": {
           "libraryClient": "OrgPolicyClient",
           "rpcs": {
+            "CreatePolicy": {
+              "methods": [
+                "CreatePolicy",
+                "CreatePolicyAsync"
+              ]
+            },
+            "DeletePolicy": {
+              "methods": [
+                "DeletePolicy",
+                "DeletePolicyAsync"
+              ]
+            },
+            "GetEffectivePolicy": {
+              "methods": [
+                "GetEffectivePolicy",
+                "GetEffectivePolicyAsync"
+              ]
+            },
+            "GetPolicy": {
+              "methods": [
+                "GetPolicy",
+                "GetPolicyAsync"
+              ]
+            },
             "ListConstraints": {
               "methods": [
                 "ListConstraints",
@@ -22,34 +46,10 @@
                 "ListPoliciesAsync"
               ]
             },
-            "GetPolicy": {
-              "methods": [
-                "GetPolicy",
-                "GetPolicyAsync"
-              ]
-            },
-            "GetEffectivePolicy": {
-              "methods": [
-                "GetEffectivePolicy",
-                "GetEffectivePolicyAsync"
-              ]
-            },
-            "CreatePolicy": {
-              "methods": [
-                "CreatePolicy",
-                "CreatePolicyAsync"
-              ]
-            },
             "UpdatePolicy": {
               "methods": [
                 "UpdatePolicy",
                 "UpdatePolicyAsync"
-              ]
-            },
-            "DeletePolicy": {
-              "methods": [
-                "DeletePolicy",
-                "DeletePolicyAsync"
               ]
             }
           }

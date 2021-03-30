@@ -10,46 +10,10 @@
         "grpc": {
           "libraryClient": "ServiceManagerClient",
           "rpcs": {
-            "ListServices": {
-              "methods": [
-                "ListServices",
-                "ListServicesAsync"
-              ]
-            },
-            "GetService": {
-              "methods": [
-                "GetService",
-                "GetServiceAsync"
-              ]
-            },
             "CreateService": {
               "methods": [
                 "CreateService",
                 "CreateServiceAsync"
-              ]
-            },
-            "DeleteService": {
-              "methods": [
-                "DeleteService",
-                "DeleteServiceAsync"
-              ]
-            },
-            "UndeleteService": {
-              "methods": [
-                "UndeleteService",
-                "UndeleteServiceAsync"
-              ]
-            },
-            "ListServiceConfigs": {
-              "methods": [
-                "ListServiceConfigs",
-                "ListServiceConfigsAsync"
-              ]
-            },
-            "GetServiceConfig": {
-              "methods": [
-                "GetServiceConfig",
-                "GetServiceConfigAsync"
               ]
             },
             "CreateServiceConfig": {
@@ -58,34 +22,22 @@
                 "CreateServiceConfigAsync"
               ]
             },
-            "SubmitConfigSource": {
-              "methods": [
-                "SubmitConfigSource",
-                "SubmitConfigSourceAsync"
-              ]
-            },
-            "ListServiceRollouts": {
-              "methods": [
-                "ListServiceRollouts",
-                "ListServiceRolloutsAsync"
-              ]
-            },
-            "GetServiceRollout": {
-              "methods": [
-                "GetServiceRollout",
-                "GetServiceRolloutAsync"
-              ]
-            },
             "CreateServiceRollout": {
               "methods": [
                 "CreateServiceRollout",
                 "CreateServiceRolloutAsync"
               ]
             },
-            "GenerateConfigReport": {
+            "DeleteService": {
               "methods": [
-                "GenerateConfigReport",
-                "GenerateConfigReportAsync"
+                "DeleteService",
+                "DeleteServiceAsync"
+              ]
+            },
+            "DisableService": {
+              "methods": [
+                "DisableService",
+                "DisableServiceAsync"
               ]
             },
             "EnableService": {
@@ -94,10 +46,58 @@
                 "EnableServiceAsync"
               ]
             },
-            "DisableService": {
+            "GenerateConfigReport": {
               "methods": [
-                "DisableService",
-                "DisableServiceAsync"
+                "GenerateConfigReport",
+                "GenerateConfigReportAsync"
+              ]
+            },
+            "GetService": {
+              "methods": [
+                "GetService",
+                "GetServiceAsync"
+              ]
+            },
+            "GetServiceConfig": {
+              "methods": [
+                "GetServiceConfig",
+                "GetServiceConfigAsync"
+              ]
+            },
+            "GetServiceRollout": {
+              "methods": [
+                "GetServiceRollout",
+                "GetServiceRolloutAsync"
+              ]
+            },
+            "ListServiceConfigs": {
+              "methods": [
+                "ListServiceConfigs",
+                "ListServiceConfigsAsync"
+              ]
+            },
+            "ListServiceRollouts": {
+              "methods": [
+                "ListServiceRollouts",
+                "ListServiceRolloutsAsync"
+              ]
+            },
+            "ListServices": {
+              "methods": [
+                "ListServices",
+                "ListServicesAsync"
+              ]
+            },
+            "SubmitConfigSource": {
+              "methods": [
+                "SubmitConfigSource",
+                "SubmitConfigSourceAsync"
+              ]
+            },
+            "UndeleteService": {
+              "methods": [
+                "UndeleteService",
+                "UndeleteServiceAsync"
               ]
             }
           }

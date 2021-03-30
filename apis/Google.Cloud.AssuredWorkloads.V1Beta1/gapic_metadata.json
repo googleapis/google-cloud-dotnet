@@ -16,12 +16,6 @@
                 "CreateWorkloadAsync"
               ]
             },
-            "UpdateWorkload": {
-              "methods": [
-                "UpdateWorkload",
-                "UpdateWorkloadAsync"
-              ]
-            },
             "DeleteWorkload": {
               "methods": [
                 "DeleteWorkload",
@@ -38,6 +32,12 @@
               "methods": [
                 "ListWorkloads",
                 "ListWorkloadsAsync"
+              ]
+            },
+            "UpdateWorkload": {
+              "methods": [
+                "UpdateWorkload",
+                "UpdateWorkloadAsync"
               ]
             }
           }

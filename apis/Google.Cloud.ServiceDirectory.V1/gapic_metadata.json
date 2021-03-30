@@ -25,34 +25,16 @@
         "grpc": {
           "libraryClient": "RegistrationServiceClient",
           "rpcs": {
+            "CreateEndpoint": {
+              "methods": [
+                "CreateEndpoint",
+                "CreateEndpointAsync"
+              ]
+            },
             "CreateNamespace": {
               "methods": [
                 "CreateNamespace",
                 "CreateNamespaceAsync"
-              ]
-            },
-            "ListNamespaces": {
-              "methods": [
-                "ListNamespaces",
-                "ListNamespacesAsync"
-              ]
-            },
-            "GetNamespace": {
-              "methods": [
-                "GetNamespace",
-                "GetNamespaceAsync"
-              ]
-            },
-            "UpdateNamespace": {
-              "methods": [
-                "UpdateNamespace",
-                "UpdateNamespaceAsync"
-              ]
-            },
-            "DeleteNamespace": {
-              "methods": [
-                "DeleteNamespace",
-                "DeleteNamespaceAsync"
               ]
             },
             "CreateService": {
@@ -61,22 +43,16 @@
                 "CreateServiceAsync"
               ]
             },
-            "ListServices": {
+            "DeleteEndpoint": {
               "methods": [
-                "ListServices",
-                "ListServicesAsync"
+                "DeleteEndpoint",
+                "DeleteEndpointAsync"
               ]
             },
-            "GetService": {
+            "DeleteNamespace": {
               "methods": [
-                "GetService",
-                "GetServiceAsync"
-              ]
-            },
-            "UpdateService": {
-              "methods": [
-                "UpdateService",
-                "UpdateServiceAsync"
+                "DeleteNamespace",
+                "DeleteNamespaceAsync"
               ]
             },
             "DeleteService": {
@@ -85,10 +61,28 @@
                 "DeleteServiceAsync"
               ]
             },
-            "CreateEndpoint": {
+            "GetEndpoint": {
               "methods": [
-                "CreateEndpoint",
-                "CreateEndpointAsync"
+                "GetEndpoint",
+                "GetEndpointAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetNamespace": {
+              "methods": [
+                "GetNamespace",
+                "GetNamespaceAsync"
+              ]
+            },
+            "GetService": {
+              "methods": [
+                "GetService",
+                "GetServiceAsync"
               ]
             },
             "ListEndpoints": {
@@ -97,28 +91,16 @@
                 "ListEndpointsAsync"
               ]
             },
-            "GetEndpoint": {
+            "ListNamespaces": {
               "methods": [
-                "GetEndpoint",
-                "GetEndpointAsync"
+                "ListNamespaces",
+                "ListNamespacesAsync"
               ]
             },
-            "UpdateEndpoint": {
+            "ListServices": {
               "methods": [
-                "UpdateEndpoint",
-                "UpdateEndpointAsync"
-              ]
-            },
-            "DeleteEndpoint": {
-              "methods": [
-                "DeleteEndpoint",
-                "DeleteEndpointAsync"
-              ]
-            },
-            "GetIamPolicy": {
-              "methods": [
-                "GetIamPolicy",
-                "GetIamPolicyAsync"
+                "ListServices",
+                "ListServicesAsync"
               ]
             },
             "SetIamPolicy": {
@@ -131,6 +113,24 @@
               "methods": [
                 "TestIamPermissions",
                 "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateEndpoint": {
+              "methods": [
+                "UpdateEndpoint",
+                "UpdateEndpointAsync"
+              ]
+            },
+            "UpdateNamespace": {
+              "methods": [
+                "UpdateNamespace",
+                "UpdateNamespaceAsync"
+              ]
+            },
+            "UpdateService": {
+              "methods": [
+                "UpdateService",
+                "UpdateServiceAsync"
               ]
             }
           }

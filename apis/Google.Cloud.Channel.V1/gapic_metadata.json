@@ -10,76 +10,22 @@
         "grpc": {
           "libraryClient": "CloudChannelServiceClient",
           "rpcs": {
-            "ListCustomers": {
+            "ActivateEntitlement": {
               "methods": [
-                "ListCustomers",
-                "ListCustomersAsync"
+                "ActivateEntitlement",
+                "ActivateEntitlementAsync"
               ]
             },
-            "GetCustomer": {
+            "CancelEntitlement": {
               "methods": [
-                "GetCustomer",
-                "GetCustomerAsync"
+                "CancelEntitlement",
+                "CancelEntitlementAsync"
               ]
             },
-            "CheckCloudIdentityAccountsExist": {
+            "ChangeOffer": {
               "methods": [
-                "CheckCloudIdentityAccountsExist",
-                "CheckCloudIdentityAccountsExistAsync"
-              ]
-            },
-            "CreateCustomer": {
-              "methods": [
-                "CreateCustomer",
-                "CreateCustomerAsync"
-              ]
-            },
-            "UpdateCustomer": {
-              "methods": [
-                "UpdateCustomer",
-                "UpdateCustomerAsync"
-              ]
-            },
-            "DeleteCustomer": {
-              "methods": [
-                "DeleteCustomer",
-                "DeleteCustomerAsync"
-              ]
-            },
-            "ProvisionCloudIdentity": {
-              "methods": [
-                "ProvisionCloudIdentity",
-                "ProvisionCloudIdentityAsync"
-              ]
-            },
-            "ListEntitlements": {
-              "methods": [
-                "ListEntitlements",
-                "ListEntitlementsAsync"
-              ]
-            },
-            "ListTransferableSkus": {
-              "methods": [
-                "ListTransferableSkus",
-                "ListTransferableSkusAsync"
-              ]
-            },
-            "ListTransferableOffers": {
-              "methods": [
-                "ListTransferableOffers",
-                "ListTransferableOffersAsync"
-              ]
-            },
-            "GetEntitlement": {
-              "methods": [
-                "GetEntitlement",
-                "GetEntitlementAsync"
-              ]
-            },
-            "CreateEntitlement": {
-              "methods": [
-                "CreateEntitlement",
-                "CreateEntitlementAsync"
+                "ChangeOffer",
+                "ChangeOfferAsync"
               ]
             },
             "ChangeParameters": {
@@ -94,10 +40,130 @@
                 "ChangeRenewalSettingsAsync"
               ]
             },
-            "ChangeOffer": {
+            "CheckCloudIdentityAccountsExist": {
               "methods": [
-                "ChangeOffer",
-                "ChangeOfferAsync"
+                "CheckCloudIdentityAccountsExist",
+                "CheckCloudIdentityAccountsExistAsync"
+              ]
+            },
+            "CreateChannelPartnerLink": {
+              "methods": [
+                "CreateChannelPartnerLink",
+                "CreateChannelPartnerLinkAsync"
+              ]
+            },
+            "CreateCustomer": {
+              "methods": [
+                "CreateCustomer",
+                "CreateCustomerAsync"
+              ]
+            },
+            "CreateEntitlement": {
+              "methods": [
+                "CreateEntitlement",
+                "CreateEntitlementAsync"
+              ]
+            },
+            "DeleteCustomer": {
+              "methods": [
+                "DeleteCustomer",
+                "DeleteCustomerAsync"
+              ]
+            },
+            "GetChannelPartnerLink": {
+              "methods": [
+                "GetChannelPartnerLink",
+                "GetChannelPartnerLinkAsync"
+              ]
+            },
+            "GetCustomer": {
+              "methods": [
+                "GetCustomer",
+                "GetCustomerAsync"
+              ]
+            },
+            "GetEntitlement": {
+              "methods": [
+                "GetEntitlement",
+                "GetEntitlementAsync"
+              ]
+            },
+            "ListChannelPartnerLinks": {
+              "methods": [
+                "ListChannelPartnerLinks",
+                "ListChannelPartnerLinksAsync"
+              ]
+            },
+            "ListCustomers": {
+              "methods": [
+                "ListCustomers",
+                "ListCustomersAsync"
+              ]
+            },
+            "ListEntitlements": {
+              "methods": [
+                "ListEntitlements",
+                "ListEntitlementsAsync"
+              ]
+            },
+            "ListOffers": {
+              "methods": [
+                "ListOffers",
+                "ListOffersAsync"
+              ]
+            },
+            "ListProducts": {
+              "methods": [
+                "ListProducts",
+                "ListProductsAsync"
+              ]
+            },
+            "ListPurchasableOffers": {
+              "methods": [
+                "ListPurchasableOffers",
+                "ListPurchasableOffersAsync"
+              ]
+            },
+            "ListPurchasableSkus": {
+              "methods": [
+                "ListPurchasableSkus",
+                "ListPurchasableSkusAsync"
+              ]
+            },
+            "ListSkus": {
+              "methods": [
+                "ListSkus",
+                "ListSkusAsync"
+              ]
+            },
+            "ListSubscribers": {
+              "methods": [
+                "ListSubscribers",
+                "ListSubscribersAsync"
+              ]
+            },
+            "ListTransferableOffers": {
+              "methods": [
+                "ListTransferableOffers",
+                "ListTransferableOffersAsync"
+              ]
+            },
+            "ListTransferableSkus": {
+              "methods": [
+                "ListTransferableSkus",
+                "ListTransferableSkusAsync"
+              ]
+            },
+            "ProvisionCloudIdentity": {
+              "methods": [
+                "ProvisionCloudIdentity",
+                "ProvisionCloudIdentityAsync"
+              ]
+            },
+            "RegisterSubscriber": {
+              "methods": [
+                "RegisterSubscriber",
+                "RegisterSubscriberAsync"
               ]
             },
             "StartPaidService": {
@@ -112,18 +178,6 @@
                 "SuspendEntitlementAsync"
               ]
             },
-            "CancelEntitlement": {
-              "methods": [
-                "CancelEntitlement",
-                "CancelEntitlementAsync"
-              ]
-            },
-            "ActivateEntitlement": {
-              "methods": [
-                "ActivateEntitlement",
-                "ActivateEntitlementAsync"
-              ]
-            },
             "TransferEntitlements": {
               "methods": [
                 "TransferEntitlements",
@@ -136,22 +190,10 @@
                 "TransferEntitlementsToGoogleAsync"
               ]
             },
-            "ListChannelPartnerLinks": {
+            "UnregisterSubscriber": {
               "methods": [
-                "ListChannelPartnerLinks",
-                "ListChannelPartnerLinksAsync"
-              ]
-            },
-            "GetChannelPartnerLink": {
-              "methods": [
-                "GetChannelPartnerLink",
-                "GetChannelPartnerLinkAsync"
-              ]
-            },
-            "CreateChannelPartnerLink": {
-              "methods": [
-                "CreateChannelPartnerLink",
-                "CreateChannelPartnerLinkAsync"
+                "UnregisterSubscriber",
+                "UnregisterSubscriberAsync"
               ]
             },
             "UpdateChannelPartnerLink": {
@@ -160,52 +202,10 @@
                 "UpdateChannelPartnerLinkAsync"
               ]
             },
-            "ListProducts": {
+            "UpdateCustomer": {
               "methods": [
-                "ListProducts",
-                "ListProductsAsync"
-              ]
-            },
-            "ListSkus": {
-              "methods": [
-                "ListSkus",
-                "ListSkusAsync"
-              ]
-            },
-            "ListOffers": {
-              "methods": [
-                "ListOffers",
-                "ListOffersAsync"
-              ]
-            },
-            "ListPurchasableSkus": {
-              "methods": [
-                "ListPurchasableSkus",
-                "ListPurchasableSkusAsync"
-              ]
-            },
-            "ListPurchasableOffers": {
-              "methods": [
-                "ListPurchasableOffers",
-                "ListPurchasableOffersAsync"
-              ]
-            },
-            "RegisterSubscriber": {
-              "methods": [
-                "RegisterSubscriber",
-                "RegisterSubscriberAsync"
-              ]
-            },
-            "UnregisterSubscriber": {
-              "methods": [
-                "UnregisterSubscriber",
-                "UnregisterSubscriberAsync"
-              ]
-            },
-            "ListSubscribers": {
-              "methods": [
-                "ListSubscribers",
-                "ListSubscribersAsync"
+                "UpdateCustomer",
+                "UpdateCustomerAsync"
               ]
             }
           }

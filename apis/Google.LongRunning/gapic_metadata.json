@@ -10,16 +10,10 @@
         "grpc": {
           "libraryClient": "OperationsClient",
           "rpcs": {
-            "ListOperations": {
+            "CancelOperation": {
               "methods": [
-                "ListOperations",
-                "ListOperationsAsync"
-              ]
-            },
-            "GetOperation": {
-              "methods": [
-                "GetOperation",
-                "GetOperationAsync"
+                "CancelOperation",
+                "CancelOperationAsync"
               ]
             },
             "DeleteOperation": {
@@ -28,10 +22,16 @@
                 "DeleteOperationAsync"
               ]
             },
-            "CancelOperation": {
+            "GetOperation": {
               "methods": [
-                "CancelOperation",
-                "CancelOperationAsync"
+                "GetOperation",
+                "GetOperationAsync"
+              ]
+            },
+            "ListOperations": {
+              "methods": [
+                "ListOperations",
+                "ListOperationsAsync"
               ]
             },
             "WaitOperation": {

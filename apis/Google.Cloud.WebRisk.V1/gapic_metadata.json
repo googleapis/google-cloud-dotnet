@@ -16,10 +16,10 @@
                 "ComputeThreatListDiffAsync"
               ]
             },
-            "SearchUris": {
+            "CreateSubmission": {
               "methods": [
-                "SearchUris",
-                "SearchUrisAsync"
+                "CreateSubmission",
+                "CreateSubmissionAsync"
               ]
             },
             "SearchHashes": {
@@ -28,10 +28,10 @@
                 "SearchHashesAsync"
               ]
             },
-            "CreateSubmission": {
+            "SearchUris": {
               "methods": [
-                "CreateSubmission",
-                "CreateSubmissionAsync"
+                "SearchUris",
+                "SearchUrisAsync"
               ]
             }
           }

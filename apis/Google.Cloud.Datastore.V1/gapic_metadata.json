@@ -10,16 +10,10 @@
         "grpc": {
           "libraryClient": "DatastoreClient",
           "rpcs": {
-            "Lookup": {
+            "AllocateIds": {
               "methods": [
-                "Lookup",
-                "LookupAsync"
-              ]
-            },
-            "RunQuery": {
-              "methods": [
-                "RunQuery",
-                "RunQueryAsync"
+                "AllocateIds",
+                "AllocateIdsAsync"
               ]
             },
             "BeginTransaction": {
@@ -34,22 +28,28 @@
                 "CommitAsync"
               ]
             },
-            "Rollback": {
+            "Lookup": {
               "methods": [
-                "Rollback",
-                "RollbackAsync"
-              ]
-            },
-            "AllocateIds": {
-              "methods": [
-                "AllocateIds",
-                "AllocateIdsAsync"
+                "Lookup",
+                "LookupAsync"
               ]
             },
             "ReserveIds": {
               "methods": [
                 "ReserveIds",
                 "ReserveIdsAsync"
+              ]
+            },
+            "Rollback": {
+              "methods": [
+                "Rollback",
+                "RollbackAsync"
+              ]
+            },
+            "RunQuery": {
+              "methods": [
+                "RunQuery",
+                "RunQueryAsync"
               ]
             }
           }
