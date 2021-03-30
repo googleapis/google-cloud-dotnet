@@ -5,33 +5,6 @@
   "protoPackage": "google.devtools.clouddebugger.v2",
   "libraryPackage": "Google.Cloud.Debugger.V2",
   "services": {
-    "Controller2": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "Controller2Client",
-          "rpcs": {
-            "RegisterDebuggee": {
-              "methods": [
-                "RegisterDebuggee",
-                "RegisterDebuggeeAsync"
-              ]
-            },
-            "ListActiveBreakpoints": {
-              "methods": [
-                "ListActiveBreakpoints",
-                "ListActiveBreakpointsAsync"
-              ]
-            },
-            "UpdateActiveBreakpoint": {
-              "methods": [
-                "UpdateActiveBreakpoint",
-                "UpdateActiveBreakpointAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
     "Debugger2": {
       "clients": {
         "grpc": {
@@ -65,6 +38,33 @@
               "methods": [
                 "ListDebuggees",
                 "ListDebuggeesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Controller2": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "Controller2Client",
+          "rpcs": {
+            "RegisterDebuggee": {
+              "methods": [
+                "RegisterDebuggee",
+                "RegisterDebuggeeAsync"
+              ]
+            },
+            "ListActiveBreakpoints": {
+              "methods": [
+                "ListActiveBreakpoints",
+                "ListActiveBreakpointsAsync"
+              ]
+            },
+            "UpdateActiveBreakpoint": {
+              "methods": [
+                "UpdateActiveBreakpoint",
+                "UpdateActiveBreakpointAsync"
               ]
             }
           }
