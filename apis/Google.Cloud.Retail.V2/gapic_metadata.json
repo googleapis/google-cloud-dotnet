@@ -1,0 +1,123 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.retail.v2",
+  "libraryPackage": "Google.Cloud.Retail.V2",
+  "services": {
+    "CatalogService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CatalogServiceClient",
+          "rpcs": {
+            "ListCatalogs": {
+              "methods": [
+                "ListCatalogs",
+                "ListCatalogsAsync"
+              ]
+            },
+            "UpdateCatalog": {
+              "methods": [
+                "UpdateCatalog",
+                "UpdateCatalogAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PredictionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PredictionServiceClient",
+          "rpcs": {
+            "Predict": {
+              "methods": [
+                "Predict",
+                "PredictAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ProductService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ProductServiceClient",
+          "rpcs": {
+            "CreateProduct": {
+              "methods": [
+                "CreateProduct",
+                "CreateProductAsync"
+              ]
+            },
+            "GetProduct": {
+              "methods": [
+                "GetProduct",
+                "GetProductAsync"
+              ]
+            },
+            "UpdateProduct": {
+              "methods": [
+                "UpdateProduct",
+                "UpdateProductAsync"
+              ]
+            },
+            "DeleteProduct": {
+              "methods": [
+                "DeleteProduct",
+                "DeleteProductAsync"
+              ]
+            },
+            "ImportProducts": {
+              "methods": [
+                "ImportProducts",
+                "ImportProductsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "UserEventService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "UserEventServiceClient",
+          "rpcs": {
+            "WriteUserEvent": {
+              "methods": [
+                "WriteUserEvent",
+                "WriteUserEventAsync"
+              ]
+            },
+            "CollectUserEvent": {
+              "methods": [
+                "CollectUserEvent",
+                "CollectUserEventAsync"
+              ]
+            },
+            "PurgeUserEvents": {
+              "methods": [
+                "PurgeUserEvents",
+                "PurgeUserEventsAsync"
+              ]
+            },
+            "ImportUserEvents": {
+              "methods": [
+                "ImportUserEvents",
+                "ImportUserEventsAsync"
+              ]
+            },
+            "RejoinUserEvents": {
+              "methods": [
+                "RejoinUserEvents",
+                "RejoinUserEventsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

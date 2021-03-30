@@ -1,0 +1,96 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.securitycenter.settings.v1beta1",
+  "libraryPackage": "Google.Cloud.SecurityCenter.Settings.V1Beta1",
+  "services": {
+    "SecurityCenterSettingsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SecurityCenterSettingsServiceClient",
+          "rpcs": {
+            "GetServiceAccount": {
+              "methods": [
+                "GetServiceAccount",
+                "GetServiceAccountAsync"
+              ]
+            },
+            "GetSettings": {
+              "methods": [
+                "GetSettings",
+                "GetSettingsAsync"
+              ]
+            },
+            "UpdateSettings": {
+              "methods": [
+                "UpdateSettings",
+                "UpdateSettingsAsync"
+              ]
+            },
+            "ResetSettings": {
+              "methods": [
+                "ResetSettings",
+                "ResetSettingsAsync"
+              ]
+            },
+            "BatchGetSettings": {
+              "methods": [
+                "BatchGetSettings",
+                "BatchGetSettingsAsync"
+              ]
+            },
+            "CalculateEffectiveSettings": {
+              "methods": [
+                "CalculateEffectiveSettings",
+                "CalculateEffectiveSettingsAsync"
+              ]
+            },
+            "BatchCalculateEffectiveSettings": {
+              "methods": [
+                "BatchCalculateEffectiveSettings",
+                "BatchCalculateEffectiveSettingsAsync"
+              ]
+            },
+            "GetComponentSettings": {
+              "methods": [
+                "GetComponentSettings",
+                "GetComponentSettingsAsync"
+              ]
+            },
+            "UpdateComponentSettings": {
+              "methods": [
+                "UpdateComponentSettings",
+                "UpdateComponentSettingsAsync"
+              ]
+            },
+            "ResetComponentSettings": {
+              "methods": [
+                "ResetComponentSettings",
+                "ResetComponentSettingsAsync"
+              ]
+            },
+            "CalculateEffectiveComponentSettings": {
+              "methods": [
+                "CalculateEffectiveComponentSettings",
+                "CalculateEffectiveComponentSettingsAsync"
+              ]
+            },
+            "ListDetectors": {
+              "methods": [
+                "ListDetectors",
+                "ListDetectorsAsync"
+              ]
+            },
+            "ListComponents": {
+              "methods": [
+                "ListComponents",
+                "ListComponentsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

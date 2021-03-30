@@ -1,0 +1,60 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.accessapproval.v1",
+  "libraryPackage": "Google.Cloud.AccessApproval.V1",
+  "services": {
+    "AccessApprovalService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AccessApprovalServiceClient",
+          "rpcs": {
+            "ListApprovalRequests": {
+              "methods": [
+                "ListApprovalRequests",
+                "ListApprovalRequestsAsync"
+              ]
+            },
+            "GetApprovalRequest": {
+              "methods": [
+                "GetApprovalRequest",
+                "GetApprovalRequestAsync"
+              ]
+            },
+            "ApproveApprovalRequest": {
+              "methods": [
+                "ApproveApprovalRequest",
+                "ApproveApprovalRequestAsync"
+              ]
+            },
+            "DismissApprovalRequest": {
+              "methods": [
+                "DismissApprovalRequest",
+                "DismissApprovalRequestAsync"
+              ]
+            },
+            "GetAccessApprovalSettings": {
+              "methods": [
+                "GetAccessApprovalSettings",
+                "GetAccessApprovalSettingsAsync"
+              ]
+            },
+            "UpdateAccessApprovalSettings": {
+              "methods": [
+                "UpdateAccessApprovalSettings",
+                "UpdateAccessApprovalSettingsAsync"
+              ]
+            },
+            "DeleteAccessApprovalSettings": {
+              "methods": [
+                "DeleteAccessApprovalSettings",
+                "DeleteAccessApprovalSettingsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

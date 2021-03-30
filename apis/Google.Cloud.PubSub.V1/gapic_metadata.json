@@ -1,0 +1,222 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.pubsub.v1",
+  "libraryPackage": "Google.Cloud.PubSub.V1",
+  "services": {
+    "SchemaService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SchemaServiceClient",
+          "rpcs": {
+            "CreateSchema": {
+              "methods": [
+                "CreateSchema",
+                "CreateSchemaAsync"
+              ]
+            },
+            "GetSchema": {
+              "methods": [
+                "GetSchema",
+                "GetSchemaAsync"
+              ]
+            },
+            "ListSchemas": {
+              "methods": [
+                "ListSchemas",
+                "ListSchemasAsync"
+              ]
+            },
+            "DeleteSchema": {
+              "methods": [
+                "DeleteSchema",
+                "DeleteSchemaAsync"
+              ]
+            },
+            "ValidateSchema": {
+              "methods": [
+                "ValidateSchema",
+                "ValidateSchemaAsync"
+              ]
+            },
+            "ValidateMessage": {
+              "methods": [
+                "ValidateMessage",
+                "ValidateMessageAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PublisherServiceApi": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PublisherServiceApiClient",
+          "rpcs": {
+            "CreateTopic": {
+              "methods": [
+                "CreateTopic",
+                "CreateTopicAsync"
+              ]
+            },
+            "UpdateTopic": {
+              "methods": [
+                "UpdateTopic",
+                "UpdateTopicAsync"
+              ]
+            },
+            "Publish": {
+              "methods": [
+                "Publish",
+                "PublishAsync"
+              ]
+            },
+            "GetTopic": {
+              "methods": [
+                "GetTopic",
+                "GetTopicAsync"
+              ]
+            },
+            "ListTopics": {
+              "methods": [
+                "ListTopics",
+                "ListTopicsAsync"
+              ]
+            },
+            "ListTopicSubscriptions": {
+              "methods": [
+                "ListTopicSubscriptions",
+                "ListTopicSubscriptionsAsync"
+              ]
+            },
+            "ListTopicSnapshots": {
+              "methods": [
+                "ListTopicSnapshots",
+                "ListTopicSnapshotsAsync"
+              ]
+            },
+            "DeleteTopic": {
+              "methods": [
+                "DeleteTopic",
+                "DeleteTopicAsync"
+              ]
+            },
+            "DetachSubscription": {
+              "methods": [
+                "DetachSubscription",
+                "DetachSubscriptionAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SubscriberServiceApi": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SubscriberServiceApiClient",
+          "rpcs": {
+            "CreateSubscription": {
+              "methods": [
+                "CreateSubscription",
+                "CreateSubscriptionAsync"
+              ]
+            },
+            "GetSubscription": {
+              "methods": [
+                "GetSubscription",
+                "GetSubscriptionAsync"
+              ]
+            },
+            "UpdateSubscription": {
+              "methods": [
+                "UpdateSubscription",
+                "UpdateSubscriptionAsync"
+              ]
+            },
+            "ListSubscriptions": {
+              "methods": [
+                "ListSubscriptions",
+                "ListSubscriptionsAsync"
+              ]
+            },
+            "DeleteSubscription": {
+              "methods": [
+                "DeleteSubscription",
+                "DeleteSubscriptionAsync"
+              ]
+            },
+            "ModifyAckDeadline": {
+              "methods": [
+                "ModifyAckDeadline",
+                "ModifyAckDeadlineAsync"
+              ]
+            },
+            "Acknowledge": {
+              "methods": [
+                "Acknowledge",
+                "AcknowledgeAsync"
+              ]
+            },
+            "Pull": {
+              "methods": [
+                "Pull",
+                "PullAsync"
+              ]
+            },
+            "StreamingPull": {
+              "methods": [
+                "StreamingPull",
+                "StreamingPullAsync"
+              ]
+            },
+            "ModifyPushConfig": {
+              "methods": [
+                "ModifyPushConfig",
+                "ModifyPushConfigAsync"
+              ]
+            },
+            "GetSnapshot": {
+              "methods": [
+                "GetSnapshot",
+                "GetSnapshotAsync"
+              ]
+            },
+            "ListSnapshots": {
+              "methods": [
+                "ListSnapshots",
+                "ListSnapshotsAsync"
+              ]
+            },
+            "CreateSnapshot": {
+              "methods": [
+                "CreateSnapshot",
+                "CreateSnapshotAsync"
+              ]
+            },
+            "UpdateSnapshot": {
+              "methods": [
+                "UpdateSnapshot",
+                "UpdateSnapshotAsync"
+              ]
+            },
+            "DeleteSnapshot": {
+              "methods": [
+                "DeleteSnapshot",
+                "DeleteSnapshotAsync"
+              ]
+            },
+            "Seek": {
+              "methods": [
+                "Seek",
+                "SeekAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

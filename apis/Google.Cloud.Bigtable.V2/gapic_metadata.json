@@ -1,0 +1,54 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.bigtable.v2",
+  "libraryPackage": "Google.Cloud.Bigtable.V2",
+  "services": {
+    "BigtableServiceApi": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "BigtableServiceApiClient",
+          "rpcs": {
+            "ReadRows": {
+              "methods": [
+                "ReadRows",
+                "ReadRowsAsync"
+              ]
+            },
+            "SampleRowKeys": {
+              "methods": [
+                "SampleRowKeys",
+                "SampleRowKeysAsync"
+              ]
+            },
+            "MutateRow": {
+              "methods": [
+                "MutateRow",
+                "MutateRowAsync"
+              ]
+            },
+            "MutateRows": {
+              "methods": [
+                "MutateRows",
+                "MutateRowsAsync"
+              ]
+            },
+            "CheckAndMutateRow": {
+              "methods": [
+                "CheckAndMutateRow",
+                "CheckAndMutateRowAsync"
+              ]
+            },
+            "ReadModifyWriteRow": {
+              "methods": [
+                "ReadModifyWriteRow",
+                "ReadModifyWriteRowAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

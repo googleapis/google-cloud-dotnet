@@ -1,0 +1,72 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.gsuiteaddons.v1",
+  "libraryPackage": "Google.Cloud.GSuiteAddOns.V1",
+  "services": {
+    "GSuiteAddOns": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GSuiteAddOnsClient",
+          "rpcs": {
+            "GetAuthorization": {
+              "methods": [
+                "GetAuthorization",
+                "GetAuthorizationAsync"
+              ]
+            },
+            "CreateDeployment": {
+              "methods": [
+                "CreateDeployment",
+                "CreateDeploymentAsync"
+              ]
+            },
+            "ReplaceDeployment": {
+              "methods": [
+                "ReplaceDeployment",
+                "ReplaceDeploymentAsync"
+              ]
+            },
+            "GetDeployment": {
+              "methods": [
+                "GetDeployment",
+                "GetDeploymentAsync"
+              ]
+            },
+            "ListDeployments": {
+              "methods": [
+                "ListDeployments",
+                "ListDeploymentsAsync"
+              ]
+            },
+            "DeleteDeployment": {
+              "methods": [
+                "DeleteDeployment",
+                "DeleteDeploymentAsync"
+              ]
+            },
+            "InstallDeployment": {
+              "methods": [
+                "InstallDeployment",
+                "InstallDeploymentAsync"
+              ]
+            },
+            "UninstallDeployment": {
+              "methods": [
+                "UninstallDeployment",
+                "UninstallDeploymentAsync"
+              ]
+            },
+            "GetInstallStatus": {
+              "methods": [
+                "GetInstallStatus",
+                "GetInstallStatusAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

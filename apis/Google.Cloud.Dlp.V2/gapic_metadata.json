@@ -1,0 +1,222 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.privacy.dlp.v2",
+  "libraryPackage": "Google.Cloud.Dlp.V2",
+  "services": {
+    "DlpService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DlpServiceClient",
+          "rpcs": {
+            "InspectContent": {
+              "methods": [
+                "InspectContent",
+                "InspectContentAsync"
+              ]
+            },
+            "RedactImage": {
+              "methods": [
+                "RedactImage",
+                "RedactImageAsync"
+              ]
+            },
+            "DeidentifyContent": {
+              "methods": [
+                "DeidentifyContent",
+                "DeidentifyContentAsync"
+              ]
+            },
+            "ReidentifyContent": {
+              "methods": [
+                "ReidentifyContent",
+                "ReidentifyContentAsync"
+              ]
+            },
+            "ListInfoTypes": {
+              "methods": [
+                "ListInfoTypes",
+                "ListInfoTypesAsync"
+              ]
+            },
+            "CreateInspectTemplate": {
+              "methods": [
+                "CreateInspectTemplate",
+                "CreateInspectTemplateAsync"
+              ]
+            },
+            "UpdateInspectTemplate": {
+              "methods": [
+                "UpdateInspectTemplate",
+                "UpdateInspectTemplateAsync"
+              ]
+            },
+            "GetInspectTemplate": {
+              "methods": [
+                "GetInspectTemplate",
+                "GetInspectTemplateAsync"
+              ]
+            },
+            "ListInspectTemplates": {
+              "methods": [
+                "ListInspectTemplates",
+                "ListInspectTemplatesAsync"
+              ]
+            },
+            "DeleteInspectTemplate": {
+              "methods": [
+                "DeleteInspectTemplate",
+                "DeleteInspectTemplateAsync"
+              ]
+            },
+            "CreateDeidentifyTemplate": {
+              "methods": [
+                "CreateDeidentifyTemplate",
+                "CreateDeidentifyTemplateAsync"
+              ]
+            },
+            "UpdateDeidentifyTemplate": {
+              "methods": [
+                "UpdateDeidentifyTemplate",
+                "UpdateDeidentifyTemplateAsync"
+              ]
+            },
+            "GetDeidentifyTemplate": {
+              "methods": [
+                "GetDeidentifyTemplate",
+                "GetDeidentifyTemplateAsync"
+              ]
+            },
+            "ListDeidentifyTemplates": {
+              "methods": [
+                "ListDeidentifyTemplates",
+                "ListDeidentifyTemplatesAsync"
+              ]
+            },
+            "DeleteDeidentifyTemplate": {
+              "methods": [
+                "DeleteDeidentifyTemplate",
+                "DeleteDeidentifyTemplateAsync"
+              ]
+            },
+            "CreateJobTrigger": {
+              "methods": [
+                "CreateJobTrigger",
+                "CreateJobTriggerAsync"
+              ]
+            },
+            "UpdateJobTrigger": {
+              "methods": [
+                "UpdateJobTrigger",
+                "UpdateJobTriggerAsync"
+              ]
+            },
+            "HybridInspectJobTrigger": {
+              "methods": [
+                "HybridInspectJobTrigger",
+                "HybridInspectJobTriggerAsync"
+              ]
+            },
+            "GetJobTrigger": {
+              "methods": [
+                "GetJobTrigger",
+                "GetJobTriggerAsync"
+              ]
+            },
+            "ListJobTriggers": {
+              "methods": [
+                "ListJobTriggers",
+                "ListJobTriggersAsync"
+              ]
+            },
+            "DeleteJobTrigger": {
+              "methods": [
+                "DeleteJobTrigger",
+                "DeleteJobTriggerAsync"
+              ]
+            },
+            "ActivateJobTrigger": {
+              "methods": [
+                "ActivateJobTrigger",
+                "ActivateJobTriggerAsync"
+              ]
+            },
+            "CreateDlpJob": {
+              "methods": [
+                "CreateDlpJob",
+                "CreateDlpJobAsync"
+              ]
+            },
+            "ListDlpJobs": {
+              "methods": [
+                "ListDlpJobs",
+                "ListDlpJobsAsync"
+              ]
+            },
+            "GetDlpJob": {
+              "methods": [
+                "GetDlpJob",
+                "GetDlpJobAsync"
+              ]
+            },
+            "DeleteDlpJob": {
+              "methods": [
+                "DeleteDlpJob",
+                "DeleteDlpJobAsync"
+              ]
+            },
+            "CancelDlpJob": {
+              "methods": [
+                "CancelDlpJob",
+                "CancelDlpJobAsync"
+              ]
+            },
+            "CreateStoredInfoType": {
+              "methods": [
+                "CreateStoredInfoType",
+                "CreateStoredInfoTypeAsync"
+              ]
+            },
+            "UpdateStoredInfoType": {
+              "methods": [
+                "UpdateStoredInfoType",
+                "UpdateStoredInfoTypeAsync"
+              ]
+            },
+            "GetStoredInfoType": {
+              "methods": [
+                "GetStoredInfoType",
+                "GetStoredInfoTypeAsync"
+              ]
+            },
+            "ListStoredInfoTypes": {
+              "methods": [
+                "ListStoredInfoTypes",
+                "ListStoredInfoTypesAsync"
+              ]
+            },
+            "DeleteStoredInfoType": {
+              "methods": [
+                "DeleteStoredInfoType",
+                "DeleteStoredInfoTypeAsync"
+              ]
+            },
+            "HybridInspectDlpJob": {
+              "methods": [
+                "HybridInspectDlpJob",
+                "HybridInspectDlpJobAsync"
+              ]
+            },
+            "FinishDlpJob": {
+              "methods": [
+                "FinishDlpJob",
+                "FinishDlpJobAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

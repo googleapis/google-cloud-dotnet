@@ -1,0 +1,108 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.apigateway.v1",
+  "libraryPackage": "Google.Cloud.ApiGateway.V1",
+  "services": {
+    "ApiGatewayService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ApiGatewayServiceClient",
+          "rpcs": {
+            "ListGateways": {
+              "methods": [
+                "ListGateways",
+                "ListGatewaysAsync"
+              ]
+            },
+            "GetGateway": {
+              "methods": [
+                "GetGateway",
+                "GetGatewayAsync"
+              ]
+            },
+            "CreateGateway": {
+              "methods": [
+                "CreateGateway",
+                "CreateGatewayAsync"
+              ]
+            },
+            "UpdateGateway": {
+              "methods": [
+                "UpdateGateway",
+                "UpdateGatewayAsync"
+              ]
+            },
+            "DeleteGateway": {
+              "methods": [
+                "DeleteGateway",
+                "DeleteGatewayAsync"
+              ]
+            },
+            "ListApis": {
+              "methods": [
+                "ListApis",
+                "ListApisAsync"
+              ]
+            },
+            "GetApi": {
+              "methods": [
+                "GetApi",
+                "GetApiAsync"
+              ]
+            },
+            "CreateApi": {
+              "methods": [
+                "CreateApi",
+                "CreateApiAsync"
+              ]
+            },
+            "UpdateApi": {
+              "methods": [
+                "UpdateApi",
+                "UpdateApiAsync"
+              ]
+            },
+            "DeleteApi": {
+              "methods": [
+                "DeleteApi",
+                "DeleteApiAsync"
+              ]
+            },
+            "ListApiConfigs": {
+              "methods": [
+                "ListApiConfigs",
+                "ListApiConfigsAsync"
+              ]
+            },
+            "GetApiConfig": {
+              "methods": [
+                "GetApiConfig",
+                "GetApiConfigAsync"
+              ]
+            },
+            "CreateApiConfig": {
+              "methods": [
+                "CreateApiConfig",
+                "CreateApiConfigAsync"
+              ]
+            },
+            "UpdateApiConfig": {
+              "methods": [
+                "UpdateApiConfig",
+                "UpdateApiConfigAsync"
+              ]
+            },
+            "DeleteApiConfig": {
+              "methods": [
+                "DeleteApiConfig",
+                "DeleteApiConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

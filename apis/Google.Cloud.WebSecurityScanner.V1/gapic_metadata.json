@@ -1,0 +1,96 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.websecurityscanner.v1",
+  "libraryPackage": "Google.Cloud.WebSecurityScanner.V1",
+  "services": {
+    "WebSecurityScanner": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "WebSecurityScannerClient",
+          "rpcs": {
+            "CreateScanConfig": {
+              "methods": [
+                "CreateScanConfig",
+                "CreateScanConfigAsync"
+              ]
+            },
+            "DeleteScanConfig": {
+              "methods": [
+                "DeleteScanConfig",
+                "DeleteScanConfigAsync"
+              ]
+            },
+            "GetScanConfig": {
+              "methods": [
+                "GetScanConfig",
+                "GetScanConfigAsync"
+              ]
+            },
+            "ListScanConfigs": {
+              "methods": [
+                "ListScanConfigs",
+                "ListScanConfigsAsync"
+              ]
+            },
+            "UpdateScanConfig": {
+              "methods": [
+                "UpdateScanConfig",
+                "UpdateScanConfigAsync"
+              ]
+            },
+            "StartScanRun": {
+              "methods": [
+                "StartScanRun",
+                "StartScanRunAsync"
+              ]
+            },
+            "GetScanRun": {
+              "methods": [
+                "GetScanRun",
+                "GetScanRunAsync"
+              ]
+            },
+            "ListScanRuns": {
+              "methods": [
+                "ListScanRuns",
+                "ListScanRunsAsync"
+              ]
+            },
+            "StopScanRun": {
+              "methods": [
+                "StopScanRun",
+                "StopScanRunAsync"
+              ]
+            },
+            "ListCrawledUrls": {
+              "methods": [
+                "ListCrawledUrls",
+                "ListCrawledUrlsAsync"
+              ]
+            },
+            "GetFinding": {
+              "methods": [
+                "GetFinding",
+                "GetFindingAsync"
+              ]
+            },
+            "ListFindings": {
+              "methods": [
+                "ListFindings",
+                "ListFindingsAsync"
+              ]
+            },
+            "ListFindingTypeStats": {
+              "methods": [
+                "ListFindingTypeStats",
+                "ListFindingTypeStatsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

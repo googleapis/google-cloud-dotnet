@@ -1,0 +1,156 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.kms.v1",
+  "libraryPackage": "Google.Cloud.Kms.V1",
+  "services": {
+    "KeyManagementService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "KeyManagementServiceClient",
+          "rpcs": {
+            "ListKeyRings": {
+              "methods": [
+                "ListKeyRings",
+                "ListKeyRingsAsync"
+              ]
+            },
+            "ListCryptoKeys": {
+              "methods": [
+                "ListCryptoKeys",
+                "ListCryptoKeysAsync"
+              ]
+            },
+            "ListCryptoKeyVersions": {
+              "methods": [
+                "ListCryptoKeyVersions",
+                "ListCryptoKeyVersionsAsync"
+              ]
+            },
+            "ListImportJobs": {
+              "methods": [
+                "ListImportJobs",
+                "ListImportJobsAsync"
+              ]
+            },
+            "GetKeyRing": {
+              "methods": [
+                "GetKeyRing",
+                "GetKeyRingAsync"
+              ]
+            },
+            "GetCryptoKey": {
+              "methods": [
+                "GetCryptoKey",
+                "GetCryptoKeyAsync"
+              ]
+            },
+            "GetCryptoKeyVersion": {
+              "methods": [
+                "GetCryptoKeyVersion",
+                "GetCryptoKeyVersionAsync"
+              ]
+            },
+            "GetPublicKey": {
+              "methods": [
+                "GetPublicKey",
+                "GetPublicKeyAsync"
+              ]
+            },
+            "GetImportJob": {
+              "methods": [
+                "GetImportJob",
+                "GetImportJobAsync"
+              ]
+            },
+            "CreateKeyRing": {
+              "methods": [
+                "CreateKeyRing",
+                "CreateKeyRingAsync"
+              ]
+            },
+            "CreateCryptoKey": {
+              "methods": [
+                "CreateCryptoKey",
+                "CreateCryptoKeyAsync"
+              ]
+            },
+            "CreateCryptoKeyVersion": {
+              "methods": [
+                "CreateCryptoKeyVersion",
+                "CreateCryptoKeyVersionAsync"
+              ]
+            },
+            "ImportCryptoKeyVersion": {
+              "methods": [
+                "ImportCryptoKeyVersion",
+                "ImportCryptoKeyVersionAsync"
+              ]
+            },
+            "CreateImportJob": {
+              "methods": [
+                "CreateImportJob",
+                "CreateImportJobAsync"
+              ]
+            },
+            "UpdateCryptoKey": {
+              "methods": [
+                "UpdateCryptoKey",
+                "UpdateCryptoKeyAsync"
+              ]
+            },
+            "UpdateCryptoKeyVersion": {
+              "methods": [
+                "UpdateCryptoKeyVersion",
+                "UpdateCryptoKeyVersionAsync"
+              ]
+            },
+            "Encrypt": {
+              "methods": [
+                "Encrypt",
+                "EncryptAsync"
+              ]
+            },
+            "Decrypt": {
+              "methods": [
+                "Decrypt",
+                "DecryptAsync"
+              ]
+            },
+            "AsymmetricSign": {
+              "methods": [
+                "AsymmetricSign",
+                "AsymmetricSignAsync"
+              ]
+            },
+            "AsymmetricDecrypt": {
+              "methods": [
+                "AsymmetricDecrypt",
+                "AsymmetricDecryptAsync"
+              ]
+            },
+            "UpdateCryptoKeyPrimaryVersion": {
+              "methods": [
+                "UpdateCryptoKeyPrimaryVersion",
+                "UpdateCryptoKeyPrimaryVersionAsync"
+              ]
+            },
+            "DestroyCryptoKeyVersion": {
+              "methods": [
+                "DestroyCryptoKeyVersion",
+                "DestroyCryptoKeyVersionAsync"
+              ]
+            },
+            "RestoreCryptoKeyVersion": {
+              "methods": [
+                "RestoreCryptoKeyVersion",
+                "RestoreCryptoKeyVersionAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.firestore.v1",
+  "libraryPackage": "Google.Cloud.Firestore.V1",
+  "services": {
+    "Firestore": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FirestoreClient",
+          "rpcs": {
+            "GetDocument": {
+              "methods": [
+                "GetDocument",
+                "GetDocumentAsync"
+              ]
+            },
+            "ListDocuments": {
+              "methods": [
+                "ListDocuments",
+                "ListDocumentsAsync"
+              ]
+            },
+            "UpdateDocument": {
+              "methods": [
+                "UpdateDocument",
+                "UpdateDocumentAsync"
+              ]
+            },
+            "DeleteDocument": {
+              "methods": [
+                "DeleteDocument",
+                "DeleteDocumentAsync"
+              ]
+            },
+            "BatchGetDocuments": {
+              "methods": [
+                "BatchGetDocuments",
+                "BatchGetDocumentsAsync"
+              ]
+            },
+            "BeginTransaction": {
+              "methods": [
+                "BeginTransaction",
+                "BeginTransactionAsync"
+              ]
+            },
+            "Commit": {
+              "methods": [
+                "Commit",
+                "CommitAsync"
+              ]
+            },
+            "Rollback": {
+              "methods": [
+                "Rollback",
+                "RollbackAsync"
+              ]
+            },
+            "RunQuery": {
+              "methods": [
+                "RunQuery",
+                "RunQueryAsync"
+              ]
+            },
+            "PartitionQuery": {
+              "methods": [
+                "PartitionQuery",
+                "PartitionQueryAsync"
+              ]
+            },
+            "Write": {
+              "methods": [
+                "Write",
+                "WriteAsync"
+              ]
+            },
+            "Listen": {
+              "methods": [
+                "Listen",
+                "ListenAsync"
+              ]
+            },
+            "ListCollectionIds": {
+              "methods": [
+                "ListCollectionIds",
+                "ListCollectionIdsAsync"
+              ]
+            },
+            "BatchWrite": {
+              "methods": [
+                "BatchWrite",
+                "BatchWriteAsync"
+              ]
+            },
+            "CreateDocument": {
+              "methods": [
+                "CreateDocument",
+                "CreateDocumentAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

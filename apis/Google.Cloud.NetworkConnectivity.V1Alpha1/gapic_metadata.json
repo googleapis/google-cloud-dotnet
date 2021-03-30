@@ -1,0 +1,78 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.networkconnectivity.v1alpha1",
+  "libraryPackage": "Google.Cloud.NetworkConnectivity.V1Alpha1",
+  "services": {
+    "HubService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "HubServiceClient",
+          "rpcs": {
+            "ListHubs": {
+              "methods": [
+                "ListHubs",
+                "ListHubsAsync"
+              ]
+            },
+            "GetHub": {
+              "methods": [
+                "GetHub",
+                "GetHubAsync"
+              ]
+            },
+            "CreateHub": {
+              "methods": [
+                "CreateHub",
+                "CreateHubAsync"
+              ]
+            },
+            "UpdateHub": {
+              "methods": [
+                "UpdateHub",
+                "UpdateHubAsync"
+              ]
+            },
+            "DeleteHub": {
+              "methods": [
+                "DeleteHub",
+                "DeleteHubAsync"
+              ]
+            },
+            "ListSpokes": {
+              "methods": [
+                "ListSpokes",
+                "ListSpokesAsync"
+              ]
+            },
+            "GetSpoke": {
+              "methods": [
+                "GetSpoke",
+                "GetSpokeAsync"
+              ]
+            },
+            "CreateSpoke": {
+              "methods": [
+                "CreateSpoke",
+                "CreateSpokeAsync"
+              ]
+            },
+            "UpdateSpoke": {
+              "methods": [
+                "UpdateSpoke",
+                "UpdateSpokeAsync"
+              ]
+            },
+            "DeleteSpoke": {
+              "methods": [
+                "DeleteSpoke",
+                "DeleteSpokeAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.gaming.v1",
+  "libraryPackage": "Google.Cloud.Gaming.V1",
+  "services": {
+    "GameServerClustersService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GameServerClustersServiceClient",
+          "rpcs": {
+            "ListGameServerClusters": {
+              "methods": [
+                "ListGameServerClusters",
+                "ListGameServerClustersAsync"
+              ]
+            },
+            "GetGameServerCluster": {
+              "methods": [
+                "GetGameServerCluster",
+                "GetGameServerClusterAsync"
+              ]
+            },
+            "CreateGameServerCluster": {
+              "methods": [
+                "CreateGameServerCluster",
+                "CreateGameServerClusterAsync"
+              ]
+            },
+            "PreviewCreateGameServerCluster": {
+              "methods": [
+                "PreviewCreateGameServerCluster",
+                "PreviewCreateGameServerClusterAsync"
+              ]
+            },
+            "DeleteGameServerCluster": {
+              "methods": [
+                "DeleteGameServerCluster",
+                "DeleteGameServerClusterAsync"
+              ]
+            },
+            "PreviewDeleteGameServerCluster": {
+              "methods": [
+                "PreviewDeleteGameServerCluster",
+                "PreviewDeleteGameServerClusterAsync"
+              ]
+            },
+            "UpdateGameServerCluster": {
+              "methods": [
+                "UpdateGameServerCluster",
+                "UpdateGameServerClusterAsync"
+              ]
+            },
+            "PreviewUpdateGameServerCluster": {
+              "methods": [
+                "PreviewUpdateGameServerCluster",
+                "PreviewUpdateGameServerClusterAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "GameServerConfigsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GameServerConfigsServiceClient",
+          "rpcs": {
+            "ListGameServerConfigs": {
+              "methods": [
+                "ListGameServerConfigs",
+                "ListGameServerConfigsAsync"
+              ]
+            },
+            "GetGameServerConfig": {
+              "methods": [
+                "GetGameServerConfig",
+                "GetGameServerConfigAsync"
+              ]
+            },
+            "CreateGameServerConfig": {
+              "methods": [
+                "CreateGameServerConfig",
+                "CreateGameServerConfigAsync"
+              ]
+            },
+            "DeleteGameServerConfig": {
+              "methods": [
+                "DeleteGameServerConfig",
+                "DeleteGameServerConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "GameServerDeploymentsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GameServerDeploymentsServiceClient",
+          "rpcs": {
+            "ListGameServerDeployments": {
+              "methods": [
+                "ListGameServerDeployments",
+                "ListGameServerDeploymentsAsync"
+              ]
+            },
+            "GetGameServerDeployment": {
+              "methods": [
+                "GetGameServerDeployment",
+                "GetGameServerDeploymentAsync"
+              ]
+            },
+            "CreateGameServerDeployment": {
+              "methods": [
+                "CreateGameServerDeployment",
+                "CreateGameServerDeploymentAsync"
+              ]
+            },
+            "DeleteGameServerDeployment": {
+              "methods": [
+                "DeleteGameServerDeployment",
+                "DeleteGameServerDeploymentAsync"
+              ]
+            },
+            "UpdateGameServerDeployment": {
+              "methods": [
+                "UpdateGameServerDeployment",
+                "UpdateGameServerDeploymentAsync"
+              ]
+            },
+            "GetGameServerDeploymentRollout": {
+              "methods": [
+                "GetGameServerDeploymentRollout",
+                "GetGameServerDeploymentRolloutAsync"
+              ]
+            },
+            "UpdateGameServerDeploymentRollout": {
+              "methods": [
+                "UpdateGameServerDeploymentRollout",
+                "UpdateGameServerDeploymentRolloutAsync"
+              ]
+            },
+            "PreviewGameServerDeploymentRollout": {
+              "methods": [
+                "PreviewGameServerDeploymentRollout",
+                "PreviewGameServerDeploymentRolloutAsync"
+              ]
+            },
+            "FetchDeploymentState": {
+              "methods": [
+                "FetchDeploymentState",
+                "FetchDeploymentStateAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "RealmsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RealmsServiceClient",
+          "rpcs": {
+            "ListRealms": {
+              "methods": [
+                "ListRealms",
+                "ListRealmsAsync"
+              ]
+            },
+            "GetRealm": {
+              "methods": [
+                "GetRealm",
+                "GetRealmAsync"
+              ]
+            },
+            "CreateRealm": {
+              "methods": [
+                "CreateRealm",
+                "CreateRealmAsync"
+              ]
+            },
+            "DeleteRealm": {
+              "methods": [
+                "DeleteRealm",
+                "DeleteRealmAsync"
+              ]
+            },
+            "UpdateRealm": {
+              "methods": [
+                "UpdateRealm",
+                "UpdateRealmAsync"
+              ]
+            },
+            "PreviewRealmUpdate": {
+              "methods": [
+                "PreviewRealmUpdate",
+                "PreviewRealmUpdateAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

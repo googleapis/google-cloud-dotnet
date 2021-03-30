@@ -1,0 +1,90 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.area120.tables.v1alpha1",
+  "libraryPackage": "Google.Area120.Tables.V1Alpha1",
+  "services": {
+    "TablesService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TablesServiceClient",
+          "rpcs": {
+            "GetTable": {
+              "methods": [
+                "GetTable",
+                "GetTableAsync"
+              ]
+            },
+            "ListTables": {
+              "methods": [
+                "ListTables",
+                "ListTablesAsync"
+              ]
+            },
+            "GetWorkspace": {
+              "methods": [
+                "GetWorkspace",
+                "GetWorkspaceAsync"
+              ]
+            },
+            "ListWorkspaces": {
+              "methods": [
+                "ListWorkspaces",
+                "ListWorkspacesAsync"
+              ]
+            },
+            "GetRow": {
+              "methods": [
+                "GetRow",
+                "GetRowAsync"
+              ]
+            },
+            "ListRows": {
+              "methods": [
+                "ListRows",
+                "ListRowsAsync"
+              ]
+            },
+            "CreateRow": {
+              "methods": [
+                "CreateRow",
+                "CreateRowAsync"
+              ]
+            },
+            "BatchCreateRows": {
+              "methods": [
+                "BatchCreateRows",
+                "BatchCreateRowsAsync"
+              ]
+            },
+            "UpdateRow": {
+              "methods": [
+                "UpdateRow",
+                "UpdateRowAsync"
+              ]
+            },
+            "BatchUpdateRows": {
+              "methods": [
+                "BatchUpdateRows",
+                "BatchUpdateRowsAsync"
+              ]
+            },
+            "DeleteRow": {
+              "methods": [
+                "DeleteRow",
+                "DeleteRowAsync"
+              ]
+            },
+            "BatchDeleteRows": {
+              "methods": [
+                "BatchDeleteRows",
+                "BatchDeleteRowsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

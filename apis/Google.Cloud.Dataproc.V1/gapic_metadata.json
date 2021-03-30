@@ -1,0 +1,195 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.dataproc.v1",
+  "libraryPackage": "Google.Cloud.Dataproc.V1",
+  "services": {
+    "AutoscalingPolicyService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AutoscalingPolicyServiceClient",
+          "rpcs": {
+            "CreateAutoscalingPolicy": {
+              "methods": [
+                "CreateAutoscalingPolicy",
+                "CreateAutoscalingPolicyAsync"
+              ]
+            },
+            "UpdateAutoscalingPolicy": {
+              "methods": [
+                "UpdateAutoscalingPolicy",
+                "UpdateAutoscalingPolicyAsync"
+              ]
+            },
+            "GetAutoscalingPolicy": {
+              "methods": [
+                "GetAutoscalingPolicy",
+                "GetAutoscalingPolicyAsync"
+              ]
+            },
+            "ListAutoscalingPolicies": {
+              "methods": [
+                "ListAutoscalingPolicies",
+                "ListAutoscalingPoliciesAsync"
+              ]
+            },
+            "DeleteAutoscalingPolicy": {
+              "methods": [
+                "DeleteAutoscalingPolicy",
+                "DeleteAutoscalingPolicyAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ClusterController": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ClusterControllerClient",
+          "rpcs": {
+            "CreateCluster": {
+              "methods": [
+                "CreateCluster",
+                "CreateClusterAsync"
+              ]
+            },
+            "UpdateCluster": {
+              "methods": [
+                "UpdateCluster",
+                "UpdateClusterAsync"
+              ]
+            },
+            "DeleteCluster": {
+              "methods": [
+                "DeleteCluster",
+                "DeleteClusterAsync"
+              ]
+            },
+            "GetCluster": {
+              "methods": [
+                "GetCluster",
+                "GetClusterAsync"
+              ]
+            },
+            "ListClusters": {
+              "methods": [
+                "ListClusters",
+                "ListClustersAsync"
+              ]
+            },
+            "DiagnoseCluster": {
+              "methods": [
+                "DiagnoseCluster",
+                "DiagnoseClusterAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "JobController": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "JobControllerClient",
+          "rpcs": {
+            "SubmitJob": {
+              "methods": [
+                "SubmitJob",
+                "SubmitJobAsync"
+              ]
+            },
+            "SubmitJobAsOperation": {
+              "methods": [
+                "SubmitJobAsOperation",
+                "SubmitJobAsOperationAsync"
+              ]
+            },
+            "GetJob": {
+              "methods": [
+                "GetJob",
+                "GetJobAsync"
+              ]
+            },
+            "ListJobs": {
+              "methods": [
+                "ListJobs",
+                "ListJobsAsync"
+              ]
+            },
+            "UpdateJob": {
+              "methods": [
+                "UpdateJob",
+                "UpdateJobAsync"
+              ]
+            },
+            "CancelJob": {
+              "methods": [
+                "CancelJob",
+                "CancelJobAsync"
+              ]
+            },
+            "DeleteJob": {
+              "methods": [
+                "DeleteJob",
+                "DeleteJobAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "WorkflowTemplateService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "WorkflowTemplateServiceClient",
+          "rpcs": {
+            "CreateWorkflowTemplate": {
+              "methods": [
+                "CreateWorkflowTemplate",
+                "CreateWorkflowTemplateAsync"
+              ]
+            },
+            "GetWorkflowTemplate": {
+              "methods": [
+                "GetWorkflowTemplate",
+                "GetWorkflowTemplateAsync"
+              ]
+            },
+            "InstantiateWorkflowTemplate": {
+              "methods": [
+                "InstantiateWorkflowTemplate",
+                "InstantiateWorkflowTemplateAsync"
+              ]
+            },
+            "InstantiateInlineWorkflowTemplate": {
+              "methods": [
+                "InstantiateInlineWorkflowTemplate",
+                "InstantiateInlineWorkflowTemplateAsync"
+              ]
+            },
+            "UpdateWorkflowTemplate": {
+              "methods": [
+                "UpdateWorkflowTemplate",
+                "UpdateWorkflowTemplateAsync"
+              ]
+            },
+            "ListWorkflowTemplates": {
+              "methods": [
+                "ListWorkflowTemplates",
+                "ListWorkflowTemplatesAsync"
+              ]
+            },
+            "DeleteWorkflowTemplate": {
+              "methods": [
+                "DeleteWorkflowTemplate",
+                "DeleteWorkflowTemplateAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

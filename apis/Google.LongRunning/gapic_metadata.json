@@ -1,0 +1,48 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.longrunning",
+  "libraryPackage": "Google.LongRunning",
+  "services": {
+    "Operations": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "OperationsClient",
+          "rpcs": {
+            "ListOperations": {
+              "methods": [
+                "ListOperations",
+                "ListOperationsAsync"
+              ]
+            },
+            "GetOperation": {
+              "methods": [
+                "GetOperation",
+                "GetOperationAsync"
+              ]
+            },
+            "DeleteOperation": {
+              "methods": [
+                "DeleteOperation",
+                "DeleteOperationAsync"
+              ]
+            },
+            "CancelOperation": {
+              "methods": [
+                "CancelOperation",
+                "CancelOperationAsync"
+              ]
+            },
+            "WaitOperation": {
+              "methods": [
+                "WaitOperation",
+                "WaitOperationAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

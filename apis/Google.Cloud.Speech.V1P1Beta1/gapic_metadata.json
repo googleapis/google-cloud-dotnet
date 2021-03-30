@@ -1,0 +1,105 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.speech.v1p1beta1",
+  "libraryPackage": "Google.Cloud.Speech.V1P1Beta1",
+  "services": {
+    "Speech": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SpeechClient",
+          "rpcs": {
+            "Recognize": {
+              "methods": [
+                "Recognize",
+                "RecognizeAsync"
+              ]
+            },
+            "LongRunningRecognize": {
+              "methods": [
+                "LongRunningRecognize",
+                "LongRunningRecognizeAsync"
+              ]
+            },
+            "StreamingRecognize": {
+              "methods": [
+                "StreamingRecognize",
+                "StreamingRecognizeAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Adaptation": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AdaptationClient",
+          "rpcs": {
+            "CreatePhraseSet": {
+              "methods": [
+                "CreatePhraseSet",
+                "CreatePhraseSetAsync"
+              ]
+            },
+            "GetPhraseSet": {
+              "methods": [
+                "GetPhraseSet",
+                "GetPhraseSetAsync"
+              ]
+            },
+            "ListPhraseSet": {
+              "methods": [
+                "ListPhraseSet",
+                "ListPhraseSetAsync"
+              ]
+            },
+            "UpdatePhraseSet": {
+              "methods": [
+                "UpdatePhraseSet",
+                "UpdatePhraseSetAsync"
+              ]
+            },
+            "DeletePhraseSet": {
+              "methods": [
+                "DeletePhraseSet",
+                "DeletePhraseSetAsync"
+              ]
+            },
+            "CreateCustomClass": {
+              "methods": [
+                "CreateCustomClass",
+                "CreateCustomClassAsync"
+              ]
+            },
+            "GetCustomClass": {
+              "methods": [
+                "GetCustomClass",
+                "GetCustomClassAsync"
+              ]
+            },
+            "ListCustomClasses": {
+              "methods": [
+                "ListCustomClasses",
+                "ListCustomClassesAsync"
+              ]
+            },
+            "UpdateCustomClass": {
+              "methods": [
+                "UpdateCustomClass",
+                "UpdateCustomClassAsync"
+              ]
+            },
+            "DeleteCustomClass": {
+              "methods": [
+                "DeleteCustomClass",
+                "DeleteCustomClassAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.channel.v1",
+  "libraryPackage": "Google.Cloud.Channel.V1",
+  "services": {
+    "CloudChannelService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudChannelServiceClient",
+          "rpcs": {
+            "ListCustomers": {
+              "methods": [
+                "ListCustomers",
+                "ListCustomersAsync"
+              ]
+            },
+            "GetCustomer": {
+              "methods": [
+                "GetCustomer",
+                "GetCustomerAsync"
+              ]
+            },
+            "CheckCloudIdentityAccountsExist": {
+              "methods": [
+                "CheckCloudIdentityAccountsExist",
+                "CheckCloudIdentityAccountsExistAsync"
+              ]
+            },
+            "CreateCustomer": {
+              "methods": [
+                "CreateCustomer",
+                "CreateCustomerAsync"
+              ]
+            },
+            "UpdateCustomer": {
+              "methods": [
+                "UpdateCustomer",
+                "UpdateCustomerAsync"
+              ]
+            },
+            "DeleteCustomer": {
+              "methods": [
+                "DeleteCustomer",
+                "DeleteCustomerAsync"
+              ]
+            },
+            "ProvisionCloudIdentity": {
+              "methods": [
+                "ProvisionCloudIdentity",
+                "ProvisionCloudIdentityAsync"
+              ]
+            },
+            "ListEntitlements": {
+              "methods": [
+                "ListEntitlements",
+                "ListEntitlementsAsync"
+              ]
+            },
+            "ListTransferableSkus": {
+              "methods": [
+                "ListTransferableSkus",
+                "ListTransferableSkusAsync"
+              ]
+            },
+            "ListTransferableOffers": {
+              "methods": [
+                "ListTransferableOffers",
+                "ListTransferableOffersAsync"
+              ]
+            },
+            "GetEntitlement": {
+              "methods": [
+                "GetEntitlement",
+                "GetEntitlementAsync"
+              ]
+            },
+            "CreateEntitlement": {
+              "methods": [
+                "CreateEntitlement",
+                "CreateEntitlementAsync"
+              ]
+            },
+            "ChangeParameters": {
+              "methods": [
+                "ChangeParameters",
+                "ChangeParametersAsync"
+              ]
+            },
+            "ChangeRenewalSettings": {
+              "methods": [
+                "ChangeRenewalSettings",
+                "ChangeRenewalSettingsAsync"
+              ]
+            },
+            "ChangeOffer": {
+              "methods": [
+                "ChangeOffer",
+                "ChangeOfferAsync"
+              ]
+            },
+            "StartPaidService": {
+              "methods": [
+                "StartPaidService",
+                "StartPaidServiceAsync"
+              ]
+            },
+            "SuspendEntitlement": {
+              "methods": [
+                "SuspendEntitlement",
+                "SuspendEntitlementAsync"
+              ]
+            },
+            "CancelEntitlement": {
+              "methods": [
+                "CancelEntitlement",
+                "CancelEntitlementAsync"
+              ]
+            },
+            "ActivateEntitlement": {
+              "methods": [
+                "ActivateEntitlement",
+                "ActivateEntitlementAsync"
+              ]
+            },
+            "TransferEntitlements": {
+              "methods": [
+                "TransferEntitlements",
+                "TransferEntitlementsAsync"
+              ]
+            },
+            "TransferEntitlementsToGoogle": {
+              "methods": [
+                "TransferEntitlementsToGoogle",
+                "TransferEntitlementsToGoogleAsync"
+              ]
+            },
+            "ListChannelPartnerLinks": {
+              "methods": [
+                "ListChannelPartnerLinks",
+                "ListChannelPartnerLinksAsync"
+              ]
+            },
+            "GetChannelPartnerLink": {
+              "methods": [
+                "GetChannelPartnerLink",
+                "GetChannelPartnerLinkAsync"
+              ]
+            },
+            "CreateChannelPartnerLink": {
+              "methods": [
+                "CreateChannelPartnerLink",
+                "CreateChannelPartnerLinkAsync"
+              ]
+            },
+            "UpdateChannelPartnerLink": {
+              "methods": [
+                "UpdateChannelPartnerLink",
+                "UpdateChannelPartnerLinkAsync"
+              ]
+            },
+            "ListProducts": {
+              "methods": [
+                "ListProducts",
+                "ListProductsAsync"
+              ]
+            },
+            "ListSkus": {
+              "methods": [
+                "ListSkus",
+                "ListSkusAsync"
+              ]
+            },
+            "ListOffers": {
+              "methods": [
+                "ListOffers",
+                "ListOffersAsync"
+              ]
+            },
+            "ListPurchasableSkus": {
+              "methods": [
+                "ListPurchasableSkus",
+                "ListPurchasableSkusAsync"
+              ]
+            },
+            "ListPurchasableOffers": {
+              "methods": [
+                "ListPurchasableOffers",
+                "ListPurchasableOffersAsync"
+              ]
+            },
+            "RegisterSubscriber": {
+              "methods": [
+                "RegisterSubscriber",
+                "RegisterSubscriberAsync"
+              ]
+            },
+            "UnregisterSubscriber": {
+              "methods": [
+                "UnregisterSubscriber",
+                "UnregisterSubscriberAsync"
+              ]
+            },
+            "ListSubscribers": {
+              "methods": [
+                "ListSubscribers",
+                "ListSubscribersAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

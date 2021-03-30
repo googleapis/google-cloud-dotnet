@@ -1,0 +1,36 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.devtools.cloudprofiler.v2",
+  "libraryPackage": "Google.Cloud.Profiler.V2",
+  "services": {
+    "ProfilerService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ProfilerServiceClient",
+          "rpcs": {
+            "CreateProfile": {
+              "methods": [
+                "CreateProfile",
+                "CreateProfileAsync"
+              ]
+            },
+            "CreateOfflineProfile": {
+              "methods": [
+                "CreateOfflineProfile",
+                "CreateOfflineProfileAsync"
+              ]
+            },
+            "UpdateProfile": {
+              "methods": [
+                "UpdateProfile",
+                "UpdateProfileAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

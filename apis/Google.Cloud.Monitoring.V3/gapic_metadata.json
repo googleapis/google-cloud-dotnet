@@ -1,0 +1,348 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.monitoring.v3",
+  "libraryPackage": "Google.Cloud.Monitoring.V3",
+  "services": {
+    "AlertPolicyService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AlertPolicyServiceClient",
+          "rpcs": {
+            "ListAlertPolicies": {
+              "methods": [
+                "ListAlertPolicies",
+                "ListAlertPoliciesAsync"
+              ]
+            },
+            "GetAlertPolicy": {
+              "methods": [
+                "GetAlertPolicy",
+                "GetAlertPolicyAsync"
+              ]
+            },
+            "CreateAlertPolicy": {
+              "methods": [
+                "CreateAlertPolicy",
+                "CreateAlertPolicyAsync"
+              ]
+            },
+            "DeleteAlertPolicy": {
+              "methods": [
+                "DeleteAlertPolicy",
+                "DeleteAlertPolicyAsync"
+              ]
+            },
+            "UpdateAlertPolicy": {
+              "methods": [
+                "UpdateAlertPolicy",
+                "UpdateAlertPolicyAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "GroupService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GroupServiceClient",
+          "rpcs": {
+            "ListGroups": {
+              "methods": [
+                "ListGroups",
+                "ListGroupsAsync"
+              ]
+            },
+            "GetGroup": {
+              "methods": [
+                "GetGroup",
+                "GetGroupAsync"
+              ]
+            },
+            "CreateGroup": {
+              "methods": [
+                "CreateGroup",
+                "CreateGroupAsync"
+              ]
+            },
+            "UpdateGroup": {
+              "methods": [
+                "UpdateGroup",
+                "UpdateGroupAsync"
+              ]
+            },
+            "DeleteGroup": {
+              "methods": [
+                "DeleteGroup",
+                "DeleteGroupAsync"
+              ]
+            },
+            "ListGroupMembers": {
+              "methods": [
+                "ListGroupMembers",
+                "ListGroupMembersAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "MetricService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MetricServiceClient",
+          "rpcs": {
+            "ListMonitoredResourceDescriptors": {
+              "methods": [
+                "ListMonitoredResourceDescriptors",
+                "ListMonitoredResourceDescriptorsAsync"
+              ]
+            },
+            "GetMonitoredResourceDescriptor": {
+              "methods": [
+                "GetMonitoredResourceDescriptor",
+                "GetMonitoredResourceDescriptorAsync"
+              ]
+            },
+            "ListMetricDescriptors": {
+              "methods": [
+                "ListMetricDescriptors",
+                "ListMetricDescriptorsAsync"
+              ]
+            },
+            "GetMetricDescriptor": {
+              "methods": [
+                "GetMetricDescriptor",
+                "GetMetricDescriptorAsync"
+              ]
+            },
+            "CreateMetricDescriptor": {
+              "methods": [
+                "CreateMetricDescriptor",
+                "CreateMetricDescriptorAsync"
+              ]
+            },
+            "DeleteMetricDescriptor": {
+              "methods": [
+                "DeleteMetricDescriptor",
+                "DeleteMetricDescriptorAsync"
+              ]
+            },
+            "ListTimeSeries": {
+              "methods": [
+                "ListTimeSeries",
+                "ListTimeSeriesAsync"
+              ]
+            },
+            "CreateTimeSeries": {
+              "methods": [
+                "CreateTimeSeries",
+                "CreateTimeSeriesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "NotificationChannelService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "NotificationChannelServiceClient",
+          "rpcs": {
+            "ListNotificationChannelDescriptors": {
+              "methods": [
+                "ListNotificationChannelDescriptors",
+                "ListNotificationChannelDescriptorsAsync"
+              ]
+            },
+            "GetNotificationChannelDescriptor": {
+              "methods": [
+                "GetNotificationChannelDescriptor",
+                "GetNotificationChannelDescriptorAsync"
+              ]
+            },
+            "ListNotificationChannels": {
+              "methods": [
+                "ListNotificationChannels",
+                "ListNotificationChannelsAsync"
+              ]
+            },
+            "GetNotificationChannel": {
+              "methods": [
+                "GetNotificationChannel",
+                "GetNotificationChannelAsync"
+              ]
+            },
+            "CreateNotificationChannel": {
+              "methods": [
+                "CreateNotificationChannel",
+                "CreateNotificationChannelAsync"
+              ]
+            },
+            "UpdateNotificationChannel": {
+              "methods": [
+                "UpdateNotificationChannel",
+                "UpdateNotificationChannelAsync"
+              ]
+            },
+            "DeleteNotificationChannel": {
+              "methods": [
+                "DeleteNotificationChannel",
+                "DeleteNotificationChannelAsync"
+              ]
+            },
+            "SendNotificationChannelVerificationCode": {
+              "methods": [
+                "SendNotificationChannelVerificationCode",
+                "SendNotificationChannelVerificationCodeAsync"
+              ]
+            },
+            "GetNotificationChannelVerificationCode": {
+              "methods": [
+                "GetNotificationChannelVerificationCode",
+                "GetNotificationChannelVerificationCodeAsync"
+              ]
+            },
+            "VerifyNotificationChannel": {
+              "methods": [
+                "VerifyNotificationChannel",
+                "VerifyNotificationChannelAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "QueryService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "QueryServiceClient",
+          "rpcs": {
+            "QueryTimeSeries": {
+              "methods": [
+                "QueryTimeSeries",
+                "QueryTimeSeriesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ServiceMonitoringService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ServiceMonitoringServiceClient",
+          "rpcs": {
+            "CreateService": {
+              "methods": [
+                "CreateService",
+                "CreateServiceAsync"
+              ]
+            },
+            "GetService": {
+              "methods": [
+                "GetService",
+                "GetServiceAsync"
+              ]
+            },
+            "ListServices": {
+              "methods": [
+                "ListServices",
+                "ListServicesAsync"
+              ]
+            },
+            "UpdateService": {
+              "methods": [
+                "UpdateService",
+                "UpdateServiceAsync"
+              ]
+            },
+            "DeleteService": {
+              "methods": [
+                "DeleteService",
+                "DeleteServiceAsync"
+              ]
+            },
+            "CreateServiceLevelObjective": {
+              "methods": [
+                "CreateServiceLevelObjective",
+                "CreateServiceLevelObjectiveAsync"
+              ]
+            },
+            "GetServiceLevelObjective": {
+              "methods": [
+                "GetServiceLevelObjective",
+                "GetServiceLevelObjectiveAsync"
+              ]
+            },
+            "ListServiceLevelObjectives": {
+              "methods": [
+                "ListServiceLevelObjectives",
+                "ListServiceLevelObjectivesAsync"
+              ]
+            },
+            "UpdateServiceLevelObjective": {
+              "methods": [
+                "UpdateServiceLevelObjective",
+                "UpdateServiceLevelObjectiveAsync"
+              ]
+            },
+            "DeleteServiceLevelObjective": {
+              "methods": [
+                "DeleteServiceLevelObjective",
+                "DeleteServiceLevelObjectiveAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "UptimeCheckService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "UptimeCheckServiceClient",
+          "rpcs": {
+            "ListUptimeCheckConfigs": {
+              "methods": [
+                "ListUptimeCheckConfigs",
+                "ListUptimeCheckConfigsAsync"
+              ]
+            },
+            "GetUptimeCheckConfig": {
+              "methods": [
+                "GetUptimeCheckConfig",
+                "GetUptimeCheckConfigAsync"
+              ]
+            },
+            "CreateUptimeCheckConfig": {
+              "methods": [
+                "CreateUptimeCheckConfig",
+                "CreateUptimeCheckConfigAsync"
+              ]
+            },
+            "UpdateUptimeCheckConfig": {
+              "methods": [
+                "UpdateUptimeCheckConfig",
+                "UpdateUptimeCheckConfigAsync"
+              ]
+            },
+            "DeleteUptimeCheckConfig": {
+              "methods": [
+                "DeleteUptimeCheckConfig",
+                "DeleteUptimeCheckConfigAsync"
+              ]
+            },
+            "ListUptimeCheckIps": {
+              "methods": [
+                "ListUptimeCheckIps",
+                "ListUptimeCheckIpsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

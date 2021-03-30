@@ -1,0 +1,141 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.servicedirectory.v1",
+  "libraryPackage": "Google.Cloud.ServiceDirectory.V1",
+  "services": {
+    "LookupService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "LookupServiceClient",
+          "rpcs": {
+            "ResolveService": {
+              "methods": [
+                "ResolveService",
+                "ResolveServiceAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "RegistrationService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RegistrationServiceClient",
+          "rpcs": {
+            "CreateNamespace": {
+              "methods": [
+                "CreateNamespace",
+                "CreateNamespaceAsync"
+              ]
+            },
+            "ListNamespaces": {
+              "methods": [
+                "ListNamespaces",
+                "ListNamespacesAsync"
+              ]
+            },
+            "GetNamespace": {
+              "methods": [
+                "GetNamespace",
+                "GetNamespaceAsync"
+              ]
+            },
+            "UpdateNamespace": {
+              "methods": [
+                "UpdateNamespace",
+                "UpdateNamespaceAsync"
+              ]
+            },
+            "DeleteNamespace": {
+              "methods": [
+                "DeleteNamespace",
+                "DeleteNamespaceAsync"
+              ]
+            },
+            "CreateService": {
+              "methods": [
+                "CreateService",
+                "CreateServiceAsync"
+              ]
+            },
+            "ListServices": {
+              "methods": [
+                "ListServices",
+                "ListServicesAsync"
+              ]
+            },
+            "GetService": {
+              "methods": [
+                "GetService",
+                "GetServiceAsync"
+              ]
+            },
+            "UpdateService": {
+              "methods": [
+                "UpdateService",
+                "UpdateServiceAsync"
+              ]
+            },
+            "DeleteService": {
+              "methods": [
+                "DeleteService",
+                "DeleteServiceAsync"
+              ]
+            },
+            "CreateEndpoint": {
+              "methods": [
+                "CreateEndpoint",
+                "CreateEndpointAsync"
+              ]
+            },
+            "ListEndpoints": {
+              "methods": [
+                "ListEndpoints",
+                "ListEndpointsAsync"
+              ]
+            },
+            "GetEndpoint": {
+              "methods": [
+                "GetEndpoint",
+                "GetEndpointAsync"
+              ]
+            },
+            "UpdateEndpoint": {
+              "methods": [
+                "UpdateEndpoint",
+                "UpdateEndpointAsync"
+              ]
+            },
+            "DeleteEndpoint": {
+              "methods": [
+                "DeleteEndpoint",
+                "DeleteEndpointAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

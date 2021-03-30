@@ -1,0 +1,108 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.metastore.v1alpha",
+  "libraryPackage": "Google.Cloud.Metastore.V1Alpha",
+  "services": {
+    "DataprocMetastore": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataprocMetastoreClient",
+          "rpcs": {
+            "ListServices": {
+              "methods": [
+                "ListServices",
+                "ListServicesAsync"
+              ]
+            },
+            "GetService": {
+              "methods": [
+                "GetService",
+                "GetServiceAsync"
+              ]
+            },
+            "CreateService": {
+              "methods": [
+                "CreateService",
+                "CreateServiceAsync"
+              ]
+            },
+            "UpdateService": {
+              "methods": [
+                "UpdateService",
+                "UpdateServiceAsync"
+              ]
+            },
+            "DeleteService": {
+              "methods": [
+                "DeleteService",
+                "DeleteServiceAsync"
+              ]
+            },
+            "ListMetadataImports": {
+              "methods": [
+                "ListMetadataImports",
+                "ListMetadataImportsAsync"
+              ]
+            },
+            "GetMetadataImport": {
+              "methods": [
+                "GetMetadataImport",
+                "GetMetadataImportAsync"
+              ]
+            },
+            "CreateMetadataImport": {
+              "methods": [
+                "CreateMetadataImport",
+                "CreateMetadataImportAsync"
+              ]
+            },
+            "UpdateMetadataImport": {
+              "methods": [
+                "UpdateMetadataImport",
+                "UpdateMetadataImportAsync"
+              ]
+            },
+            "ExportMetadata": {
+              "methods": [
+                "ExportMetadata",
+                "ExportMetadataAsync"
+              ]
+            },
+            "RestoreService": {
+              "methods": [
+                "RestoreService",
+                "RestoreServiceAsync"
+              ]
+            },
+            "ListBackups": {
+              "methods": [
+                "ListBackups",
+                "ListBackupsAsync"
+              ]
+            },
+            "GetBackup": {
+              "methods": [
+                "GetBackup",
+                "GetBackupAsync"
+              ]
+            },
+            "CreateBackup": {
+              "methods": [
+                "CreateBackup",
+                "CreateBackupAsync"
+              ]
+            },
+            "DeleteBackup": {
+              "methods": [
+                "DeleteBackup",
+                "DeleteBackupAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.vision.v1",
+  "libraryPackage": "Google.Cloud.Vision.V1",
+  "services": {
+    "ProductSearch": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ProductSearchClient",
+          "rpcs": {
+            "CreateProductSet": {
+              "methods": [
+                "CreateProductSet",
+                "CreateProductSetAsync"
+              ]
+            },
+            "ListProductSets": {
+              "methods": [
+                "ListProductSets",
+                "ListProductSetsAsync"
+              ]
+            },
+            "GetProductSet": {
+              "methods": [
+                "GetProductSet",
+                "GetProductSetAsync"
+              ]
+            },
+            "UpdateProductSet": {
+              "methods": [
+                "UpdateProductSet",
+                "UpdateProductSetAsync"
+              ]
+            },
+            "DeleteProductSet": {
+              "methods": [
+                "DeleteProductSet",
+                "DeleteProductSetAsync"
+              ]
+            },
+            "CreateProduct": {
+              "methods": [
+                "CreateProduct",
+                "CreateProductAsync"
+              ]
+            },
+            "ListProducts": {
+              "methods": [
+                "ListProducts",
+                "ListProductsAsync"
+              ]
+            },
+            "GetProduct": {
+              "methods": [
+                "GetProduct",
+                "GetProductAsync"
+              ]
+            },
+            "UpdateProduct": {
+              "methods": [
+                "UpdateProduct",
+                "UpdateProductAsync"
+              ]
+            },
+            "DeleteProduct": {
+              "methods": [
+                "DeleteProduct",
+                "DeleteProductAsync"
+              ]
+            },
+            "CreateReferenceImage": {
+              "methods": [
+                "CreateReferenceImage",
+                "CreateReferenceImageAsync"
+              ]
+            },
+            "DeleteReferenceImage": {
+              "methods": [
+                "DeleteReferenceImage",
+                "DeleteReferenceImageAsync"
+              ]
+            },
+            "ListReferenceImages": {
+              "methods": [
+                "ListReferenceImages",
+                "ListReferenceImagesAsync"
+              ]
+            },
+            "GetReferenceImage": {
+              "methods": [
+                "GetReferenceImage",
+                "GetReferenceImageAsync"
+              ]
+            },
+            "AddProductToProductSet": {
+              "methods": [
+                "AddProductToProductSet",
+                "AddProductToProductSetAsync"
+              ]
+            },
+            "RemoveProductFromProductSet": {
+              "methods": [
+                "RemoveProductFromProductSet",
+                "RemoveProductFromProductSetAsync"
+              ]
+            },
+            "ListProductsInProductSet": {
+              "methods": [
+                "ListProductsInProductSet",
+                "ListProductsInProductSetAsync"
+              ]
+            },
+            "ImportProductSets": {
+              "methods": [
+                "ImportProductSets",
+                "ImportProductSetsAsync"
+              ]
+            },
+            "PurgeProducts": {
+              "methods": [
+                "PurgeProducts",
+                "PurgeProductsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ImageAnnotator": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ImageAnnotatorClient",
+          "rpcs": {
+            "BatchAnnotateImages": {
+              "methods": [
+                "BatchAnnotateImages",
+                "BatchAnnotateImagesAsync"
+              ]
+            },
+            "BatchAnnotateFiles": {
+              "methods": [
+                "BatchAnnotateFiles",
+                "BatchAnnotateFilesAsync"
+              ]
+            },
+            "AsyncBatchAnnotateImages": {
+              "methods": [
+                "AsyncBatchAnnotateImages",
+                "AsyncBatchAnnotateImagesAsync"
+              ]
+            },
+            "AsyncBatchAnnotateFiles": {
+              "methods": [
+                "AsyncBatchAnnotateFiles",
+                "AsyncBatchAnnotateFilesAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

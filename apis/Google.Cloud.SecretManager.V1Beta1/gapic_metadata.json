@@ -1,0 +1,108 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.secrets.v1beta1",
+  "libraryPackage": "Google.Cloud.SecretManager.V1Beta1",
+  "services": {
+    "SecretManagerService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SecretManagerServiceClient",
+          "rpcs": {
+            "ListSecrets": {
+              "methods": [
+                "ListSecrets",
+                "ListSecretsAsync"
+              ]
+            },
+            "CreateSecret": {
+              "methods": [
+                "CreateSecret",
+                "CreateSecretAsync"
+              ]
+            },
+            "AddSecretVersion": {
+              "methods": [
+                "AddSecretVersion",
+                "AddSecretVersionAsync"
+              ]
+            },
+            "GetSecret": {
+              "methods": [
+                "GetSecret",
+                "GetSecretAsync"
+              ]
+            },
+            "UpdateSecret": {
+              "methods": [
+                "UpdateSecret",
+                "UpdateSecretAsync"
+              ]
+            },
+            "DeleteSecret": {
+              "methods": [
+                "DeleteSecret",
+                "DeleteSecretAsync"
+              ]
+            },
+            "ListSecretVersions": {
+              "methods": [
+                "ListSecretVersions",
+                "ListSecretVersionsAsync"
+              ]
+            },
+            "GetSecretVersion": {
+              "methods": [
+                "GetSecretVersion",
+                "GetSecretVersionAsync"
+              ]
+            },
+            "AccessSecretVersion": {
+              "methods": [
+                "AccessSecretVersion",
+                "AccessSecretVersionAsync"
+              ]
+            },
+            "DisableSecretVersion": {
+              "methods": [
+                "DisableSecretVersion",
+                "DisableSecretVersionAsync"
+              ]
+            },
+            "EnableSecretVersion": {
+              "methods": [
+                "EnableSecretVersion",
+                "EnableSecretVersionAsync"
+              ]
+            },
+            "DestroySecretVersion": {
+              "methods": [
+                "DestroySecretVersion",
+                "DestroySecretVersionAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

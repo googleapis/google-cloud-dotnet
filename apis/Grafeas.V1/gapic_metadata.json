@@ -1,0 +1,102 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "grafeas.v1",
+  "libraryPackage": "Grafeas.V1",
+  "services": {
+    "Grafeas": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GrafeasClient",
+          "rpcs": {
+            "GetOccurrence": {
+              "methods": [
+                "GetOccurrence",
+                "GetOccurrenceAsync"
+              ]
+            },
+            "ListOccurrences": {
+              "methods": [
+                "ListOccurrences",
+                "ListOccurrencesAsync"
+              ]
+            },
+            "DeleteOccurrence": {
+              "methods": [
+                "DeleteOccurrence",
+                "DeleteOccurrenceAsync"
+              ]
+            },
+            "CreateOccurrence": {
+              "methods": [
+                "CreateOccurrence",
+                "CreateOccurrenceAsync"
+              ]
+            },
+            "BatchCreateOccurrences": {
+              "methods": [
+                "BatchCreateOccurrences",
+                "BatchCreateOccurrencesAsync"
+              ]
+            },
+            "UpdateOccurrence": {
+              "methods": [
+                "UpdateOccurrence",
+                "UpdateOccurrenceAsync"
+              ]
+            },
+            "GetOccurrenceNote": {
+              "methods": [
+                "GetOccurrenceNote",
+                "GetOccurrenceNoteAsync"
+              ]
+            },
+            "GetNote": {
+              "methods": [
+                "GetNote",
+                "GetNoteAsync"
+              ]
+            },
+            "ListNotes": {
+              "methods": [
+                "ListNotes",
+                "ListNotesAsync"
+              ]
+            },
+            "DeleteNote": {
+              "methods": [
+                "DeleteNote",
+                "DeleteNoteAsync"
+              ]
+            },
+            "CreateNote": {
+              "methods": [
+                "CreateNote",
+                "CreateNoteAsync"
+              ]
+            },
+            "BatchCreateNotes": {
+              "methods": [
+                "BatchCreateNotes",
+                "BatchCreateNotesAsync"
+              ]
+            },
+            "UpdateNote": {
+              "methods": [
+                "UpdateNote",
+                "UpdateNoteAsync"
+              ]
+            },
+            "ListNoteOccurrences": {
+              "methods": [
+                "ListNoteOccurrences",
+                "ListNoteOccurrencesAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

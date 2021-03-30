@@ -1,0 +1,66 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.gkehub.v1beta1",
+  "libraryPackage": "Google.Cloud.GkeHub.V1Beta1",
+  "services": {
+    "GkeHubMembershipService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GkeHubMembershipServiceClient",
+          "rpcs": {
+            "ListMemberships": {
+              "methods": [
+                "ListMemberships",
+                "ListMembershipsAsync"
+              ]
+            },
+            "GetMembership": {
+              "methods": [
+                "GetMembership",
+                "GetMembershipAsync"
+              ]
+            },
+            "CreateMembership": {
+              "methods": [
+                "CreateMembership",
+                "CreateMembershipAsync"
+              ]
+            },
+            "DeleteMembership": {
+              "methods": [
+                "DeleteMembership",
+                "DeleteMembershipAsync"
+              ]
+            },
+            "UpdateMembership": {
+              "methods": [
+                "UpdateMembership",
+                "UpdateMembershipAsync"
+              ]
+            },
+            "GenerateConnectManifest": {
+              "methods": [
+                "GenerateConnectManifest",
+                "GenerateConnectManifestAsync"
+              ]
+            },
+            "ValidateExclusivity": {
+              "methods": [
+                "ValidateExclusivity",
+                "ValidateExclusivityAsync"
+              ]
+            },
+            "GenerateExclusivityManifest": {
+              "methods": [
+                "GenerateExclusivityManifest",
+                "GenerateExclusivityManifestAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

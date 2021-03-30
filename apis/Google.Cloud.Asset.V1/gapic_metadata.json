@@ -1,0 +1,84 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.asset.v1",
+  "libraryPackage": "Google.Cloud.Asset.V1",
+  "services": {
+    "AssetService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AssetServiceClient",
+          "rpcs": {
+            "ExportAssets": {
+              "methods": [
+                "ExportAssets",
+                "ExportAssetsAsync"
+              ]
+            },
+            "BatchGetAssetsHistory": {
+              "methods": [
+                "BatchGetAssetsHistory",
+                "BatchGetAssetsHistoryAsync"
+              ]
+            },
+            "CreateFeed": {
+              "methods": [
+                "CreateFeed",
+                "CreateFeedAsync"
+              ]
+            },
+            "GetFeed": {
+              "methods": [
+                "GetFeed",
+                "GetFeedAsync"
+              ]
+            },
+            "ListFeeds": {
+              "methods": [
+                "ListFeeds",
+                "ListFeedsAsync"
+              ]
+            },
+            "UpdateFeed": {
+              "methods": [
+                "UpdateFeed",
+                "UpdateFeedAsync"
+              ]
+            },
+            "DeleteFeed": {
+              "methods": [
+                "DeleteFeed",
+                "DeleteFeedAsync"
+              ]
+            },
+            "SearchAllResources": {
+              "methods": [
+                "SearchAllResources",
+                "SearchAllResourcesAsync"
+              ]
+            },
+            "SearchAllIamPolicies": {
+              "methods": [
+                "SearchAllIamPolicies",
+                "SearchAllIamPoliciesAsync"
+              ]
+            },
+            "AnalyzeIamPolicy": {
+              "methods": [
+                "AnalyzeIamPolicy",
+                "AnalyzeIamPolicyAsync"
+              ]
+            },
+            "AnalyzeIamPolicyLongrunning": {
+              "methods": [
+                "AnalyzeIamPolicyLongrunning",
+                "AnalyzeIamPolicyLongrunningAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

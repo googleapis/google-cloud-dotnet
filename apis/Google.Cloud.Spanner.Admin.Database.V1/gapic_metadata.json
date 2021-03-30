@@ -1,0 +1,120 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.spanner.admin.database.v1",
+  "libraryPackage": "Google.Cloud.Spanner.Admin.Database.V1",
+  "services": {
+    "DatabaseAdmin": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DatabaseAdminClient",
+          "rpcs": {
+            "ListDatabases": {
+              "methods": [
+                "ListDatabases",
+                "ListDatabasesAsync"
+              ]
+            },
+            "CreateDatabase": {
+              "methods": [
+                "CreateDatabase",
+                "CreateDatabaseAsync"
+              ]
+            },
+            "GetDatabase": {
+              "methods": [
+                "GetDatabase",
+                "GetDatabaseAsync"
+              ]
+            },
+            "UpdateDatabaseDdl": {
+              "methods": [
+                "UpdateDatabaseDdl",
+                "UpdateDatabaseDdlAsync"
+              ]
+            },
+            "DropDatabase": {
+              "methods": [
+                "DropDatabase",
+                "DropDatabaseAsync"
+              ]
+            },
+            "GetDatabaseDdl": {
+              "methods": [
+                "GetDatabaseDdl",
+                "GetDatabaseDdlAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "CreateBackup": {
+              "methods": [
+                "CreateBackup",
+                "CreateBackupAsync"
+              ]
+            },
+            "GetBackup": {
+              "methods": [
+                "GetBackup",
+                "GetBackupAsync"
+              ]
+            },
+            "UpdateBackup": {
+              "methods": [
+                "UpdateBackup",
+                "UpdateBackupAsync"
+              ]
+            },
+            "DeleteBackup": {
+              "methods": [
+                "DeleteBackup",
+                "DeleteBackupAsync"
+              ]
+            },
+            "ListBackups": {
+              "methods": [
+                "ListBackups",
+                "ListBackupsAsync"
+              ]
+            },
+            "RestoreDatabase": {
+              "methods": [
+                "RestoreDatabase",
+                "RestoreDatabaseAsync"
+              ]
+            },
+            "ListDatabaseOperations": {
+              "methods": [
+                "ListDatabaseOperations",
+                "ListDatabaseOperationsAsync"
+              ]
+            },
+            "ListBackupOperations": {
+              "methods": [
+                "ListBackupOperations",
+                "ListBackupOperationsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

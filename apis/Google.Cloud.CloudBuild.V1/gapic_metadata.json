@@ -1,0 +1,120 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.devtools.cloudbuild.v1",
+  "libraryPackage": "Google.Cloud.CloudBuild.V1",
+  "services": {
+    "CloudBuild": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudBuildClient",
+          "rpcs": {
+            "CreateBuild": {
+              "methods": [
+                "CreateBuild",
+                "CreateBuildAsync"
+              ]
+            },
+            "GetBuild": {
+              "methods": [
+                "GetBuild",
+                "GetBuildAsync"
+              ]
+            },
+            "ListBuilds": {
+              "methods": [
+                "ListBuilds",
+                "ListBuildsAsync"
+              ]
+            },
+            "CancelBuild": {
+              "methods": [
+                "CancelBuild",
+                "CancelBuildAsync"
+              ]
+            },
+            "RetryBuild": {
+              "methods": [
+                "RetryBuild",
+                "RetryBuildAsync"
+              ]
+            },
+            "CreateBuildTrigger": {
+              "methods": [
+                "CreateBuildTrigger",
+                "CreateBuildTriggerAsync"
+              ]
+            },
+            "GetBuildTrigger": {
+              "methods": [
+                "GetBuildTrigger",
+                "GetBuildTriggerAsync"
+              ]
+            },
+            "ListBuildTriggers": {
+              "methods": [
+                "ListBuildTriggers",
+                "ListBuildTriggersAsync"
+              ]
+            },
+            "DeleteBuildTrigger": {
+              "methods": [
+                "DeleteBuildTrigger",
+                "DeleteBuildTriggerAsync"
+              ]
+            },
+            "UpdateBuildTrigger": {
+              "methods": [
+                "UpdateBuildTrigger",
+                "UpdateBuildTriggerAsync"
+              ]
+            },
+            "RunBuildTrigger": {
+              "methods": [
+                "RunBuildTrigger",
+                "RunBuildTriggerAsync"
+              ]
+            },
+            "ReceiveTriggerWebhook": {
+              "methods": [
+                "ReceiveTriggerWebhook",
+                "ReceiveTriggerWebhookAsync"
+              ]
+            },
+            "CreateWorkerPool": {
+              "methods": [
+                "CreateWorkerPool",
+                "CreateWorkerPoolAsync"
+              ]
+            },
+            "GetWorkerPool": {
+              "methods": [
+                "GetWorkerPool",
+                "GetWorkerPoolAsync"
+              ]
+            },
+            "DeleteWorkerPool": {
+              "methods": [
+                "DeleteWorkerPool",
+                "DeleteWorkerPoolAsync"
+              ]
+            },
+            "UpdateWorkerPool": {
+              "methods": [
+                "UpdateWorkerPool",
+                "UpdateWorkerPoolAsync"
+              ]
+            },
+            "ListWorkerPools": {
+              "methods": [
+                "ListWorkerPools",
+                "ListWorkerPoolsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
