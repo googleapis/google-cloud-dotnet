@@ -10,34 +10,16 @@
         "grpc": {
           "libraryClient": "ManagedIdentitiesServiceClient",
           "rpcs": {
+            "AttachTrust": {
+              "methods": [
+                "AttachTrust",
+                "AttachTrustAsync"
+              ]
+            },
             "CreateMicrosoftAdDomain": {
               "methods": [
                 "CreateMicrosoftAdDomain",
                 "CreateMicrosoftAdDomainAsync"
-              ]
-            },
-            "ResetAdminPassword": {
-              "methods": [
-                "ResetAdminPassword",
-                "ResetAdminPasswordAsync"
-              ]
-            },
-            "ListDomains": {
-              "methods": [
-                "ListDomains",
-                "ListDomainsAsync"
-              ]
-            },
-            "GetDomain": {
-              "methods": [
-                "GetDomain",
-                "GetDomainAsync"
-              ]
-            },
-            "UpdateDomain": {
-              "methods": [
-                "UpdateDomain",
-                "UpdateDomainAsync"
               ]
             },
             "DeleteDomain": {
@@ -46,10 +28,22 @@
                 "DeleteDomainAsync"
               ]
             },
-            "AttachTrust": {
+            "DetachTrust": {
               "methods": [
-                "AttachTrust",
-                "AttachTrustAsync"
+                "DetachTrust",
+                "DetachTrustAsync"
+              ]
+            },
+            "GetDomain": {
+              "methods": [
+                "GetDomain",
+                "GetDomainAsync"
+              ]
+            },
+            "ListDomains": {
+              "methods": [
+                "ListDomains",
+                "ListDomainsAsync"
               ]
             },
             "ReconfigureTrust": {
@@ -58,10 +52,16 @@
                 "ReconfigureTrustAsync"
               ]
             },
-            "DetachTrust": {
+            "ResetAdminPassword": {
               "methods": [
-                "DetachTrust",
-                "DetachTrustAsync"
+                "ResetAdminPassword",
+                "ResetAdminPasswordAsync"
+              ]
+            },
+            "UpdateDomain": {
+              "methods": [
+                "UpdateDomain",
+                "UpdateDomainAsync"
               ]
             },
             "ValidateTrust": {

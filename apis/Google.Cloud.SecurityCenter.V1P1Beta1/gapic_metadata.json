@@ -10,12 +10,6 @@
         "grpc": {
           "libraryClient": "SecurityCenterClient",
           "rpcs": {
-            "CreateSource": {
-              "methods": [
-                "CreateSource",
-                "CreateSourceAsync"
-              ]
-            },
             "CreateFinding": {
               "methods": [
                 "CreateFinding",
@@ -26,6 +20,12 @@
               "methods": [
                 "CreateNotificationConfig",
                 "CreateNotificationConfigAsync"
+              ]
+            },
+            "CreateSource": {
+              "methods": [
+                "CreateSource",
+                "CreateSourceAsync"
               ]
             },
             "DeleteNotificationConfig": {
@@ -136,16 +136,16 @@
                 "UpdateOrganizationSettingsAsync"
               ]
             },
-            "UpdateSource": {
-              "methods": [
-                "UpdateSource",
-                "UpdateSourceAsync"
-              ]
-            },
             "UpdateSecurityMarks": {
               "methods": [
                 "UpdateSecurityMarks",
                 "UpdateSecurityMarksAsync"
+              ]
+            },
+            "UpdateSource": {
+              "methods": [
+                "UpdateSource",
+                "UpdateSourceAsync"
               ]
             }
           }

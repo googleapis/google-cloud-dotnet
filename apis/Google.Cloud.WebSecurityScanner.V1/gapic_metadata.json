@@ -22,28 +22,16 @@
                 "DeleteScanConfigAsync"
               ]
             },
+            "GetFinding": {
+              "methods": [
+                "GetFinding",
+                "GetFindingAsync"
+              ]
+            },
             "GetScanConfig": {
               "methods": [
                 "GetScanConfig",
                 "GetScanConfigAsync"
-              ]
-            },
-            "ListScanConfigs": {
-              "methods": [
-                "ListScanConfigs",
-                "ListScanConfigsAsync"
-              ]
-            },
-            "UpdateScanConfig": {
-              "methods": [
-                "UpdateScanConfig",
-                "UpdateScanConfigAsync"
-              ]
-            },
-            "StartScanRun": {
-              "methods": [
-                "StartScanRun",
-                "StartScanRunAsync"
               ]
             },
             "GetScanRun": {
@@ -52,28 +40,16 @@
                 "GetScanRunAsync"
               ]
             },
-            "ListScanRuns": {
-              "methods": [
-                "ListScanRuns",
-                "ListScanRunsAsync"
-              ]
-            },
-            "StopScanRun": {
-              "methods": [
-                "StopScanRun",
-                "StopScanRunAsync"
-              ]
-            },
             "ListCrawledUrls": {
               "methods": [
                 "ListCrawledUrls",
                 "ListCrawledUrlsAsync"
               ]
             },
-            "GetFinding": {
+            "ListFindingTypeStats": {
               "methods": [
-                "GetFinding",
-                "GetFindingAsync"
+                "ListFindingTypeStats",
+                "ListFindingTypeStatsAsync"
               ]
             },
             "ListFindings": {
@@ -82,10 +58,34 @@
                 "ListFindingsAsync"
               ]
             },
-            "ListFindingTypeStats": {
+            "ListScanConfigs": {
               "methods": [
-                "ListFindingTypeStats",
-                "ListFindingTypeStatsAsync"
+                "ListScanConfigs",
+                "ListScanConfigsAsync"
+              ]
+            },
+            "ListScanRuns": {
+              "methods": [
+                "ListScanRuns",
+                "ListScanRunsAsync"
+              ]
+            },
+            "StartScanRun": {
+              "methods": [
+                "StartScanRun",
+                "StartScanRunAsync"
+              ]
+            },
+            "StopScanRun": {
+              "methods": [
+                "StopScanRun",
+                "StopScanRunAsync"
+              ]
+            },
+            "UpdateScanConfig": {
+              "methods": [
+                "UpdateScanConfig",
+                "UpdateScanConfigAsync"
               ]
             }
           }

@@ -10,16 +10,16 @@
         "grpc": {
           "libraryClient": "Controller2Client",
           "rpcs": {
-            "RegisterDebuggee": {
-              "methods": [
-                "RegisterDebuggee",
-                "RegisterDebuggeeAsync"
-              ]
-            },
             "ListActiveBreakpoints": {
               "methods": [
                 "ListActiveBreakpoints",
                 "ListActiveBreakpointsAsync"
+              ]
+            },
+            "RegisterDebuggee": {
+              "methods": [
+                "RegisterDebuggee",
+                "RegisterDebuggeeAsync"
               ]
             },
             "UpdateActiveBreakpoint": {
@@ -37,22 +37,16 @@
         "grpc": {
           "libraryClient": "Debugger2Client",
           "rpcs": {
-            "SetBreakpoint": {
+            "DeleteBreakpoint": {
               "methods": [
-                "SetBreakpoint",
-                "SetBreakpointAsync"
+                "DeleteBreakpoint",
+                "DeleteBreakpointAsync"
               ]
             },
             "GetBreakpoint": {
               "methods": [
                 "GetBreakpoint",
                 "GetBreakpointAsync"
-              ]
-            },
-            "DeleteBreakpoint": {
-              "methods": [
-                "DeleteBreakpoint",
-                "DeleteBreakpointAsync"
               ]
             },
             "ListBreakpoints": {
@@ -65,6 +59,12 @@
               "methods": [
                 "ListDebuggees",
                 "ListDebuggeesAsync"
+              ]
+            },
+            "SetBreakpoint": {
+              "methods": [
+                "SetBreakpoint",
+                "SetBreakpointAsync"
               ]
             }
           }

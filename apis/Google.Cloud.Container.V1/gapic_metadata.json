@@ -10,16 +10,16 @@
         "grpc": {
           "libraryClient": "ClusterManagerClient",
           "rpcs": {
-            "ListClusters": {
+            "CancelOperation": {
               "methods": [
-                "ListClusters",
-                "ListClustersAsync"
+                "CancelOperation",
+                "CancelOperationAsync"
               ]
             },
-            "GetCluster": {
+            "CompleteIPRotation": {
               "methods": [
-                "GetCluster",
-                "GetClusterAsync"
+                "CompleteIPRotation",
+                "CompleteIPRotationAsync"
               ]
             },
             "CreateCluster": {
@@ -28,58 +28,10 @@
                 "CreateClusterAsync"
               ]
             },
-            "UpdateCluster": {
+            "CreateNodePool": {
               "methods": [
-                "UpdateCluster",
-                "UpdateClusterAsync"
-              ]
-            },
-            "UpdateNodePool": {
-              "methods": [
-                "UpdateNodePool",
-                "UpdateNodePoolAsync"
-              ]
-            },
-            "SetNodePoolAutoscaling": {
-              "methods": [
-                "SetNodePoolAutoscaling",
-                "SetNodePoolAutoscalingAsync"
-              ]
-            },
-            "SetLoggingService": {
-              "methods": [
-                "SetLoggingService",
-                "SetLoggingServiceAsync"
-              ]
-            },
-            "SetMonitoringService": {
-              "methods": [
-                "SetMonitoringService",
-                "SetMonitoringServiceAsync"
-              ]
-            },
-            "SetAddonsConfig": {
-              "methods": [
-                "SetAddonsConfig",
-                "SetAddonsConfigAsync"
-              ]
-            },
-            "SetLocations": {
-              "methods": [
-                "SetLocations",
-                "SetLocationsAsync"
-              ]
-            },
-            "UpdateMaster": {
-              "methods": [
-                "UpdateMaster",
-                "UpdateMasterAsync"
-              ]
-            },
-            "SetMasterAuth": {
-              "methods": [
-                "SetMasterAuth",
-                "SetMasterAuthAsync"
+                "CreateNodePool",
+                "CreateNodePoolAsync"
               ]
             },
             "DeleteCluster": {
@@ -88,28 +40,16 @@
                 "DeleteClusterAsync"
               ]
             },
-            "ListOperations": {
+            "DeleteNodePool": {
               "methods": [
-                "ListOperations",
-                "ListOperationsAsync"
+                "DeleteNodePool",
+                "DeleteNodePoolAsync"
               ]
             },
-            "GetOperation": {
+            "GetCluster": {
               "methods": [
-                "GetOperation",
-                "GetOperationAsync"
-              ]
-            },
-            "CancelOperation": {
-              "methods": [
-                "CancelOperation",
-                "CancelOperationAsync"
-              ]
-            },
-            "GetServerConfig": {
-              "methods": [
-                "GetServerConfig",
-                "GetServerConfigAsync"
+                "GetCluster",
+                "GetClusterAsync"
               ]
             },
             "GetJSONWebKeys": {
@@ -118,28 +58,46 @@
                 "GetJSONWebKeysAsync"
               ]
             },
-            "ListNodePools": {
-              "methods": [
-                "ListNodePools",
-                "ListNodePoolsAsync"
-              ]
-            },
             "GetNodePool": {
               "methods": [
                 "GetNodePool",
                 "GetNodePoolAsync"
               ]
             },
-            "CreateNodePool": {
+            "GetOperation": {
               "methods": [
-                "CreateNodePool",
-                "CreateNodePoolAsync"
+                "GetOperation",
+                "GetOperationAsync"
               ]
             },
-            "DeleteNodePool": {
+            "GetServerConfig": {
               "methods": [
-                "DeleteNodePool",
-                "DeleteNodePoolAsync"
+                "GetServerConfig",
+                "GetServerConfigAsync"
+              ]
+            },
+            "ListClusters": {
+              "methods": [
+                "ListClusters",
+                "ListClustersAsync"
+              ]
+            },
+            "ListNodePools": {
+              "methods": [
+                "ListNodePools",
+                "ListNodePoolsAsync"
+              ]
+            },
+            "ListOperations": {
+              "methods": [
+                "ListOperations",
+                "ListOperationsAsync"
+              ]
+            },
+            "ListUsableSubnetworks": {
+              "methods": [
+                "ListUsableSubnetworks",
+                "ListUsableSubnetworksAsync"
               ]
             },
             "RollbackNodePoolUpgrade": {
@@ -148,10 +106,10 @@
                 "RollbackNodePoolUpgradeAsync"
               ]
             },
-            "SetNodePoolManagement": {
+            "SetAddonsConfig": {
               "methods": [
-                "SetNodePoolManagement",
-                "SetNodePoolManagementAsync"
+                "SetAddonsConfig",
+                "SetAddonsConfigAsync"
               ]
             },
             "SetLabels": {
@@ -166,28 +124,16 @@
                 "SetLegacyAbacAsync"
               ]
             },
-            "StartIPRotation": {
+            "SetLocations": {
               "methods": [
-                "StartIPRotation",
-                "StartIPRotationAsync"
+                "SetLocations",
+                "SetLocationsAsync"
               ]
             },
-            "CompleteIPRotation": {
+            "SetLoggingService": {
               "methods": [
-                "CompleteIPRotation",
-                "CompleteIPRotationAsync"
-              ]
-            },
-            "SetNodePoolSize": {
-              "methods": [
-                "SetNodePoolSize",
-                "SetNodePoolSizeAsync"
-              ]
-            },
-            "SetNetworkPolicy": {
-              "methods": [
-                "SetNetworkPolicy",
-                "SetNetworkPolicyAsync"
+                "SetLoggingService",
+                "SetLoggingServiceAsync"
               ]
             },
             "SetMaintenancePolicy": {
@@ -196,10 +142,64 @@
                 "SetMaintenancePolicyAsync"
               ]
             },
-            "ListUsableSubnetworks": {
+            "SetMasterAuth": {
               "methods": [
-                "ListUsableSubnetworks",
-                "ListUsableSubnetworksAsync"
+                "SetMasterAuth",
+                "SetMasterAuthAsync"
+              ]
+            },
+            "SetMonitoringService": {
+              "methods": [
+                "SetMonitoringService",
+                "SetMonitoringServiceAsync"
+              ]
+            },
+            "SetNetworkPolicy": {
+              "methods": [
+                "SetNetworkPolicy",
+                "SetNetworkPolicyAsync"
+              ]
+            },
+            "SetNodePoolAutoscaling": {
+              "methods": [
+                "SetNodePoolAutoscaling",
+                "SetNodePoolAutoscalingAsync"
+              ]
+            },
+            "SetNodePoolManagement": {
+              "methods": [
+                "SetNodePoolManagement",
+                "SetNodePoolManagementAsync"
+              ]
+            },
+            "SetNodePoolSize": {
+              "methods": [
+                "SetNodePoolSize",
+                "SetNodePoolSizeAsync"
+              ]
+            },
+            "StartIPRotation": {
+              "methods": [
+                "StartIPRotation",
+                "StartIPRotationAsync"
+              ]
+            },
+            "UpdateCluster": {
+              "methods": [
+                "UpdateCluster",
+                "UpdateClusterAsync"
+              ]
+            },
+            "UpdateMaster": {
+              "methods": [
+                "UpdateMaster",
+                "UpdateMasterAsync"
+              ]
+            },
+            "UpdateNodePool": {
+              "methods": [
+                "UpdateNodePool",
+                "UpdateNodePoolAsync"
               ]
             }
           }

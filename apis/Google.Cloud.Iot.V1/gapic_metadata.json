@@ -10,34 +10,10 @@
         "grpc": {
           "libraryClient": "DeviceManagerClient",
           "rpcs": {
-            "CreateDeviceRegistry": {
+            "BindDeviceToGateway": {
               "methods": [
-                "CreateDeviceRegistry",
-                "CreateDeviceRegistryAsync"
-              ]
-            },
-            "GetDeviceRegistry": {
-              "methods": [
-                "GetDeviceRegistry",
-                "GetDeviceRegistryAsync"
-              ]
-            },
-            "UpdateDeviceRegistry": {
-              "methods": [
-                "UpdateDeviceRegistry",
-                "UpdateDeviceRegistryAsync"
-              ]
-            },
-            "DeleteDeviceRegistry": {
-              "methods": [
-                "DeleteDeviceRegistry",
-                "DeleteDeviceRegistryAsync"
-              ]
-            },
-            "ListDeviceRegistries": {
-              "methods": [
-                "ListDeviceRegistries",
-                "ListDeviceRegistriesAsync"
+                "BindDeviceToGateway",
+                "BindDeviceToGatewayAsync"
               ]
             },
             "CreateDevice": {
@@ -46,22 +22,58 @@
                 "CreateDeviceAsync"
               ]
             },
-            "GetDevice": {
+            "CreateDeviceRegistry": {
               "methods": [
-                "GetDevice",
-                "GetDeviceAsync"
-              ]
-            },
-            "UpdateDevice": {
-              "methods": [
-                "UpdateDevice",
-                "UpdateDeviceAsync"
+                "CreateDeviceRegistry",
+                "CreateDeviceRegistryAsync"
               ]
             },
             "DeleteDevice": {
               "methods": [
                 "DeleteDevice",
                 "DeleteDeviceAsync"
+              ]
+            },
+            "DeleteDeviceRegistry": {
+              "methods": [
+                "DeleteDeviceRegistry",
+                "DeleteDeviceRegistryAsync"
+              ]
+            },
+            "GetDevice": {
+              "methods": [
+                "GetDevice",
+                "GetDeviceAsync"
+              ]
+            },
+            "GetDeviceRegistry": {
+              "methods": [
+                "GetDeviceRegistry",
+                "GetDeviceRegistryAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "ListDeviceConfigVersions": {
+              "methods": [
+                "ListDeviceConfigVersions",
+                "ListDeviceConfigVersionsAsync"
+              ]
+            },
+            "ListDeviceRegistries": {
+              "methods": [
+                "ListDeviceRegistries",
+                "ListDeviceRegistriesAsync"
+              ]
+            },
+            "ListDeviceStates": {
+              "methods": [
+                "ListDeviceStates",
+                "ListDeviceStatesAsync"
               ]
             },
             "ListDevices": {
@@ -76,16 +88,10 @@
                 "ModifyCloudToDeviceConfigAsync"
               ]
             },
-            "ListDeviceConfigVersions": {
+            "SendCommandToDevice": {
               "methods": [
-                "ListDeviceConfigVersions",
-                "ListDeviceConfigVersionsAsync"
-              ]
-            },
-            "ListDeviceStates": {
-              "methods": [
-                "ListDeviceStates",
-                "ListDeviceStatesAsync"
+                "SendCommandToDevice",
+                "SendCommandToDeviceAsync"
               ]
             },
             "SetIamPolicy": {
@@ -94,34 +100,28 @@
                 "SetIamPolicyAsync"
               ]
             },
-            "GetIamPolicy": {
-              "methods": [
-                "GetIamPolicy",
-                "GetIamPolicyAsync"
-              ]
-            },
             "TestIamPermissions": {
               "methods": [
                 "TestIamPermissions",
                 "TestIamPermissionsAsync"
               ]
             },
-            "SendCommandToDevice": {
-              "methods": [
-                "SendCommandToDevice",
-                "SendCommandToDeviceAsync"
-              ]
-            },
-            "BindDeviceToGateway": {
-              "methods": [
-                "BindDeviceToGateway",
-                "BindDeviceToGatewayAsync"
-              ]
-            },
             "UnbindDeviceFromGateway": {
               "methods": [
                 "UnbindDeviceFromGateway",
                 "UnbindDeviceFromGatewayAsync"
+              ]
+            },
+            "UpdateDevice": {
+              "methods": [
+                "UpdateDevice",
+                "UpdateDeviceAsync"
+              ]
+            },
+            "UpdateDeviceRegistry": {
+              "methods": [
+                "UpdateDeviceRegistry",
+                "UpdateDeviceRegistryAsync"
               ]
             }
           }

@@ -16,16 +16,16 @@
                 "ComputeThreatListDiffAsync"
               ]
             },
-            "SearchUris": {
-              "methods": [
-                "SearchUris",
-                "SearchUrisAsync"
-              ]
-            },
             "SearchHashes": {
               "methods": [
                 "SearchHashes",
                 "SearchHashesAsync"
+              ]
+            },
+            "SearchUris": {
+              "methods": [
+                "SearchUris",
+                "SearchUrisAsync"
               ]
             }
           }

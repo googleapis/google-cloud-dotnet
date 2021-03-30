@@ -10,40 +10,16 @@
         "grpc": {
           "libraryClient": "CloudRedisClient",
           "rpcs": {
-            "ListInstances": {
-              "methods": [
-                "ListInstances",
-                "ListInstancesAsync"
-              ]
-            },
-            "GetInstance": {
-              "methods": [
-                "GetInstance",
-                "GetInstanceAsync"
-              ]
-            },
             "CreateInstance": {
               "methods": [
                 "CreateInstance",
                 "CreateInstanceAsync"
               ]
             },
-            "UpdateInstance": {
+            "DeleteInstance": {
               "methods": [
-                "UpdateInstance",
-                "UpdateInstanceAsync"
-              ]
-            },
-            "UpgradeInstance": {
-              "methods": [
-                "UpgradeInstance",
-                "UpgradeInstanceAsync"
-              ]
-            },
-            "ImportInstance": {
-              "methods": [
-                "ImportInstance",
-                "ImportInstanceAsync"
+                "DeleteInstance",
+                "DeleteInstanceAsync"
               ]
             },
             "ExportInstance": {
@@ -58,10 +34,34 @@
                 "FailoverInstanceAsync"
               ]
             },
-            "DeleteInstance": {
+            "GetInstance": {
               "methods": [
-                "DeleteInstance",
-                "DeleteInstanceAsync"
+                "GetInstance",
+                "GetInstanceAsync"
+              ]
+            },
+            "ImportInstance": {
+              "methods": [
+                "ImportInstance",
+                "ImportInstanceAsync"
+              ]
+            },
+            "ListInstances": {
+              "methods": [
+                "ListInstances",
+                "ListInstancesAsync"
+              ]
+            },
+            "UpdateInstance": {
+              "methods": [
+                "UpdateInstance",
+                "UpdateInstanceAsync"
+              ]
+            },
+            "UpgradeInstance": {
+              "methods": [
+                "UpgradeInstance",
+                "UpgradeInstanceAsync"
               ]
             }
           }

@@ -10,16 +10,10 @@
         "grpc": {
           "libraryClient": "CloudFunctionsServiceClient",
           "rpcs": {
-            "ListFunctions": {
+            "CallFunction": {
               "methods": [
-                "ListFunctions",
-                "ListFunctionsAsync"
-              ]
-            },
-            "GetFunction": {
-              "methods": [
-                "GetFunction",
-                "GetFunctionAsync"
+                "CallFunction",
+                "CallFunctionAsync"
               ]
             },
             "CreateFunction": {
@@ -28,28 +22,10 @@
                 "CreateFunctionAsync"
               ]
             },
-            "UpdateFunction": {
-              "methods": [
-                "UpdateFunction",
-                "UpdateFunctionAsync"
-              ]
-            },
             "DeleteFunction": {
               "methods": [
                 "DeleteFunction",
                 "DeleteFunctionAsync"
-              ]
-            },
-            "CallFunction": {
-              "methods": [
-                "CallFunction",
-                "CallFunctionAsync"
-              ]
-            },
-            "GenerateUploadUrl": {
-              "methods": [
-                "GenerateUploadUrl",
-                "GenerateUploadUrlAsync"
               ]
             },
             "GenerateDownloadUrl": {
@@ -58,10 +34,16 @@
                 "GenerateDownloadUrlAsync"
               ]
             },
-            "SetIamPolicy": {
+            "GenerateUploadUrl": {
               "methods": [
-                "SetIamPolicy",
-                "SetIamPolicyAsync"
+                "GenerateUploadUrl",
+                "GenerateUploadUrlAsync"
+              ]
+            },
+            "GetFunction": {
+              "methods": [
+                "GetFunction",
+                "GetFunctionAsync"
               ]
             },
             "GetIamPolicy": {
@@ -70,10 +52,28 @@
                 "GetIamPolicyAsync"
               ]
             },
+            "ListFunctions": {
+              "methods": [
+                "ListFunctions",
+                "ListFunctionsAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
             "TestIamPermissions": {
               "methods": [
                 "TestIamPermissions",
                 "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateFunction": {
+              "methods": [
+                "UpdateFunction",
+                "UpdateFunctionAsync"
               ]
             }
           }

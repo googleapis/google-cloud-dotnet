@@ -10,34 +10,10 @@
         "grpc": {
           "libraryClient": "OsConfigServiceClient",
           "rpcs": {
-            "ExecutePatchJob": {
-              "methods": [
-                "ExecutePatchJob",
-                "ExecutePatchJobAsync"
-              ]
-            },
-            "GetPatchJob": {
-              "methods": [
-                "GetPatchJob",
-                "GetPatchJobAsync"
-              ]
-            },
             "CancelPatchJob": {
               "methods": [
                 "CancelPatchJob",
                 "CancelPatchJobAsync"
-              ]
-            },
-            "ListPatchJobs": {
-              "methods": [
-                "ListPatchJobs",
-                "ListPatchJobsAsync"
-              ]
-            },
-            "ListPatchJobInstanceDetails": {
-              "methods": [
-                "ListPatchJobInstanceDetails",
-                "ListPatchJobInstanceDetailsAsync"
               ]
             },
             "CreatePatchDeployment": {
@@ -46,10 +22,28 @@
                 "CreatePatchDeploymentAsync"
               ]
             },
+            "DeletePatchDeployment": {
+              "methods": [
+                "DeletePatchDeployment",
+                "DeletePatchDeploymentAsync"
+              ]
+            },
+            "ExecutePatchJob": {
+              "methods": [
+                "ExecutePatchJob",
+                "ExecutePatchJobAsync"
+              ]
+            },
             "GetPatchDeployment": {
               "methods": [
                 "GetPatchDeployment",
                 "GetPatchDeploymentAsync"
+              ]
+            },
+            "GetPatchJob": {
+              "methods": [
+                "GetPatchJob",
+                "GetPatchJobAsync"
               ]
             },
             "ListPatchDeployments": {
@@ -58,10 +52,16 @@
                 "ListPatchDeploymentsAsync"
               ]
             },
-            "DeletePatchDeployment": {
+            "ListPatchJobInstanceDetails": {
               "methods": [
-                "DeletePatchDeployment",
-                "DeletePatchDeploymentAsync"
+                "ListPatchJobInstanceDetails",
+                "ListPatchJobInstanceDetailsAsync"
+              ]
+            },
+            "ListPatchJobs": {
+              "methods": [
+                "ListPatchJobs",
+                "ListPatchJobsAsync"
               ]
             }
           }

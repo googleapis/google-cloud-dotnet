@@ -10,6 +10,36 @@
         "grpc": {
           "libraryClient": "SecurityCenterSettingsServiceClient",
           "rpcs": {
+            "BatchCalculateEffectiveSettings": {
+              "methods": [
+                "BatchCalculateEffectiveSettings",
+                "BatchCalculateEffectiveSettingsAsync"
+              ]
+            },
+            "BatchGetSettings": {
+              "methods": [
+                "BatchGetSettings",
+                "BatchGetSettingsAsync"
+              ]
+            },
+            "CalculateEffectiveComponentSettings": {
+              "methods": [
+                "CalculateEffectiveComponentSettings",
+                "CalculateEffectiveComponentSettingsAsync"
+              ]
+            },
+            "CalculateEffectiveSettings": {
+              "methods": [
+                "CalculateEffectiveSettings",
+                "CalculateEffectiveSettingsAsync"
+              ]
+            },
+            "GetComponentSettings": {
+              "methods": [
+                "GetComponentSettings",
+                "GetComponentSettingsAsync"
+              ]
+            },
             "GetServiceAccount": {
               "methods": [
                 "GetServiceAccount",
@@ -22,58 +52,10 @@
                 "GetSettingsAsync"
               ]
             },
-            "UpdateSettings": {
+            "ListComponents": {
               "methods": [
-                "UpdateSettings",
-                "UpdateSettingsAsync"
-              ]
-            },
-            "ResetSettings": {
-              "methods": [
-                "ResetSettings",
-                "ResetSettingsAsync"
-              ]
-            },
-            "BatchGetSettings": {
-              "methods": [
-                "BatchGetSettings",
-                "BatchGetSettingsAsync"
-              ]
-            },
-            "CalculateEffectiveSettings": {
-              "methods": [
-                "CalculateEffectiveSettings",
-                "CalculateEffectiveSettingsAsync"
-              ]
-            },
-            "BatchCalculateEffectiveSettings": {
-              "methods": [
-                "BatchCalculateEffectiveSettings",
-                "BatchCalculateEffectiveSettingsAsync"
-              ]
-            },
-            "GetComponentSettings": {
-              "methods": [
-                "GetComponentSettings",
-                "GetComponentSettingsAsync"
-              ]
-            },
-            "UpdateComponentSettings": {
-              "methods": [
-                "UpdateComponentSettings",
-                "UpdateComponentSettingsAsync"
-              ]
-            },
-            "ResetComponentSettings": {
-              "methods": [
-                "ResetComponentSettings",
-                "ResetComponentSettingsAsync"
-              ]
-            },
-            "CalculateEffectiveComponentSettings": {
-              "methods": [
-                "CalculateEffectiveComponentSettings",
-                "CalculateEffectiveComponentSettingsAsync"
+                "ListComponents",
+                "ListComponentsAsync"
               ]
             },
             "ListDetectors": {
@@ -82,10 +64,28 @@
                 "ListDetectorsAsync"
               ]
             },
-            "ListComponents": {
+            "ResetComponentSettings": {
               "methods": [
-                "ListComponents",
-                "ListComponentsAsync"
+                "ResetComponentSettings",
+                "ResetComponentSettingsAsync"
+              ]
+            },
+            "ResetSettings": {
+              "methods": [
+                "ResetSettings",
+                "ResetSettingsAsync"
+              ]
+            },
+            "UpdateComponentSettings": {
+              "methods": [
+                "UpdateComponentSettings",
+                "UpdateComponentSettingsAsync"
+              ]
+            },
+            "UpdateSettings": {
+              "methods": [
+                "UpdateSettings",
+                "UpdateSettingsAsync"
               ]
             }
           }

@@ -10,34 +10,16 @@
         "grpc": {
           "libraryClient": "CloudBuildClient",
           "rpcs": {
-            "CreateBuild": {
-              "methods": [
-                "CreateBuild",
-                "CreateBuildAsync"
-              ]
-            },
-            "GetBuild": {
-              "methods": [
-                "GetBuild",
-                "GetBuildAsync"
-              ]
-            },
-            "ListBuilds": {
-              "methods": [
-                "ListBuilds",
-                "ListBuildsAsync"
-              ]
-            },
             "CancelBuild": {
               "methods": [
                 "CancelBuild",
                 "CancelBuildAsync"
               ]
             },
-            "RetryBuild": {
+            "CreateBuild": {
               "methods": [
-                "RetryBuild",
-                "RetryBuildAsync"
+                "CreateBuild",
+                "CreateBuildAsync"
               ]
             },
             "CreateBuildTrigger": {
@@ -46,16 +28,10 @@
                 "CreateBuildTriggerAsync"
               ]
             },
-            "GetBuildTrigger": {
+            "CreateWorkerPool": {
               "methods": [
-                "GetBuildTrigger",
-                "GetBuildTriggerAsync"
-              ]
-            },
-            "ListBuildTriggers": {
-              "methods": [
-                "ListBuildTriggers",
-                "ListBuildTriggersAsync"
+                "CreateWorkerPool",
+                "CreateWorkerPoolAsync"
               ]
             },
             "DeleteBuildTrigger": {
@@ -64,28 +40,22 @@
                 "DeleteBuildTriggerAsync"
               ]
             },
-            "UpdateBuildTrigger": {
+            "DeleteWorkerPool": {
               "methods": [
-                "UpdateBuildTrigger",
-                "UpdateBuildTriggerAsync"
+                "DeleteWorkerPool",
+                "DeleteWorkerPoolAsync"
               ]
             },
-            "RunBuildTrigger": {
+            "GetBuild": {
               "methods": [
-                "RunBuildTrigger",
-                "RunBuildTriggerAsync"
+                "GetBuild",
+                "GetBuildAsync"
               ]
             },
-            "ReceiveTriggerWebhook": {
+            "GetBuildTrigger": {
               "methods": [
-                "ReceiveTriggerWebhook",
-                "ReceiveTriggerWebhookAsync"
-              ]
-            },
-            "CreateWorkerPool": {
-              "methods": [
-                "CreateWorkerPool",
-                "CreateWorkerPoolAsync"
+                "GetBuildTrigger",
+                "GetBuildTriggerAsync"
               ]
             },
             "GetWorkerPool": {
@@ -94,22 +64,52 @@
                 "GetWorkerPoolAsync"
               ]
             },
-            "DeleteWorkerPool": {
+            "ListBuildTriggers": {
               "methods": [
-                "DeleteWorkerPool",
-                "DeleteWorkerPoolAsync"
+                "ListBuildTriggers",
+                "ListBuildTriggersAsync"
               ]
             },
-            "UpdateWorkerPool": {
+            "ListBuilds": {
               "methods": [
-                "UpdateWorkerPool",
-                "UpdateWorkerPoolAsync"
+                "ListBuilds",
+                "ListBuildsAsync"
               ]
             },
             "ListWorkerPools": {
               "methods": [
                 "ListWorkerPools",
                 "ListWorkerPoolsAsync"
+              ]
+            },
+            "ReceiveTriggerWebhook": {
+              "methods": [
+                "ReceiveTriggerWebhook",
+                "ReceiveTriggerWebhookAsync"
+              ]
+            },
+            "RetryBuild": {
+              "methods": [
+                "RetryBuild",
+                "RetryBuildAsync"
+              ]
+            },
+            "RunBuildTrigger": {
+              "methods": [
+                "RunBuildTrigger",
+                "RunBuildTriggerAsync"
+              ]
+            },
+            "UpdateBuildTrigger": {
+              "methods": [
+                "UpdateBuildTrigger",
+                "UpdateBuildTriggerAsync"
+              ]
+            },
+            "UpdateWorkerPool": {
+              "methods": [
+                "UpdateWorkerPool",
+                "UpdateWorkerPoolAsync"
               ]
             }
           }

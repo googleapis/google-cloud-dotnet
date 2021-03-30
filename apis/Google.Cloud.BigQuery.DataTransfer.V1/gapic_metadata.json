@@ -10,16 +10,10 @@
         "grpc": {
           "libraryClient": "DataTransferServiceClient",
           "rpcs": {
-            "GetDataSource": {
+            "CheckValidCreds": {
               "methods": [
-                "GetDataSource",
-                "GetDataSourceAsync"
-              ]
-            },
-            "ListDataSources": {
-              "methods": [
-                "ListDataSources",
-                "ListDataSourcesAsync"
+                "CheckValidCreds",
+                "CheckValidCredsAsync"
               ]
             },
             "CreateTransferConfig": {
@@ -28,16 +22,22 @@
                 "CreateTransferConfigAsync"
               ]
             },
-            "UpdateTransferConfig": {
-              "methods": [
-                "UpdateTransferConfig",
-                "UpdateTransferConfigAsync"
-              ]
-            },
             "DeleteTransferConfig": {
               "methods": [
                 "DeleteTransferConfig",
                 "DeleteTransferConfigAsync"
+              ]
+            },
+            "DeleteTransferRun": {
+              "methods": [
+                "DeleteTransferRun",
+                "DeleteTransferRunAsync"
+              ]
+            },
+            "GetDataSource": {
+              "methods": [
+                "GetDataSource",
+                "GetDataSourceAsync"
               ]
             },
             "GetTransferConfig": {
@@ -46,10 +46,34 @@
                 "GetTransferConfigAsync"
               ]
             },
+            "GetTransferRun": {
+              "methods": [
+                "GetTransferRun",
+                "GetTransferRunAsync"
+              ]
+            },
+            "ListDataSources": {
+              "methods": [
+                "ListDataSources",
+                "ListDataSourcesAsync"
+              ]
+            },
             "ListTransferConfigs": {
               "methods": [
                 "ListTransferConfigs",
                 "ListTransferConfigsAsync"
+              ]
+            },
+            "ListTransferLogs": {
+              "methods": [
+                "ListTransferLogs",
+                "ListTransferLogsAsync"
+              ]
+            },
+            "ListTransferRuns": {
+              "methods": [
+                "ListTransferRuns",
+                "ListTransferRunsAsync"
               ]
             },
             "ScheduleTransferRuns": {
@@ -64,34 +88,10 @@
                 "StartManualTransferRunsAsync"
               ]
             },
-            "GetTransferRun": {
+            "UpdateTransferConfig": {
               "methods": [
-                "GetTransferRun",
-                "GetTransferRunAsync"
-              ]
-            },
-            "DeleteTransferRun": {
-              "methods": [
-                "DeleteTransferRun",
-                "DeleteTransferRunAsync"
-              ]
-            },
-            "ListTransferRuns": {
-              "methods": [
-                "ListTransferRuns",
-                "ListTransferRunsAsync"
-              ]
-            },
-            "ListTransferLogs": {
-              "methods": [
-                "ListTransferLogs",
-                "ListTransferLogsAsync"
-              ]
-            },
-            "CheckValidCreds": {
-              "methods": [
-                "CheckValidCreds",
-                "CheckValidCredsAsync"
+                "UpdateTransferConfig",
+                "UpdateTransferConfigAsync"
               ]
             }
           }

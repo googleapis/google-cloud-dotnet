@@ -10,46 +10,10 @@
         "grpc": {
           "libraryClient": "HubServiceClient",
           "rpcs": {
-            "ListHubs": {
-              "methods": [
-                "ListHubs",
-                "ListHubsAsync"
-              ]
-            },
-            "GetHub": {
-              "methods": [
-                "GetHub",
-                "GetHubAsync"
-              ]
-            },
             "CreateHub": {
               "methods": [
                 "CreateHub",
                 "CreateHubAsync"
-              ]
-            },
-            "UpdateHub": {
-              "methods": [
-                "UpdateHub",
-                "UpdateHubAsync"
-              ]
-            },
-            "DeleteHub": {
-              "methods": [
-                "DeleteHub",
-                "DeleteHubAsync"
-              ]
-            },
-            "ListSpokes": {
-              "methods": [
-                "ListSpokes",
-                "ListSpokesAsync"
-              ]
-            },
-            "GetSpoke": {
-              "methods": [
-                "GetSpoke",
-                "GetSpokeAsync"
               ]
             },
             "CreateSpoke": {
@@ -58,16 +22,52 @@
                 "CreateSpokeAsync"
               ]
             },
-            "UpdateSpoke": {
+            "DeleteHub": {
               "methods": [
-                "UpdateSpoke",
-                "UpdateSpokeAsync"
+                "DeleteHub",
+                "DeleteHubAsync"
               ]
             },
             "DeleteSpoke": {
               "methods": [
                 "DeleteSpoke",
                 "DeleteSpokeAsync"
+              ]
+            },
+            "GetHub": {
+              "methods": [
+                "GetHub",
+                "GetHubAsync"
+              ]
+            },
+            "GetSpoke": {
+              "methods": [
+                "GetSpoke",
+                "GetSpokeAsync"
+              ]
+            },
+            "ListHubs": {
+              "methods": [
+                "ListHubs",
+                "ListHubsAsync"
+              ]
+            },
+            "ListSpokes": {
+              "methods": [
+                "ListSpokes",
+                "ListSpokesAsync"
+              ]
+            },
+            "UpdateHub": {
+              "methods": [
+                "UpdateHub",
+                "UpdateHubAsync"
+              ]
+            },
+            "UpdateSpoke": {
+              "methods": [
+                "UpdateSpoke",
+                "UpdateSpokeAsync"
               ]
             }
           }

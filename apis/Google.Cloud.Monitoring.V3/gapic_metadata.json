@@ -10,18 +10,6 @@
         "grpc": {
           "libraryClient": "AlertPolicyServiceClient",
           "rpcs": {
-            "ListAlertPolicies": {
-              "methods": [
-                "ListAlertPolicies",
-                "ListAlertPoliciesAsync"
-              ]
-            },
-            "GetAlertPolicy": {
-              "methods": [
-                "GetAlertPolicy",
-                "GetAlertPolicyAsync"
-              ]
-            },
             "CreateAlertPolicy": {
               "methods": [
                 "CreateAlertPolicy",
@@ -32,6 +20,18 @@
               "methods": [
                 "DeleteAlertPolicy",
                 "DeleteAlertPolicyAsync"
+              ]
+            },
+            "GetAlertPolicy": {
+              "methods": [
+                "GetAlertPolicy",
+                "GetAlertPolicyAsync"
+              ]
+            },
+            "ListAlertPolicies": {
+              "methods": [
+                "ListAlertPolicies",
+                "ListAlertPoliciesAsync"
               ]
             },
             "UpdateAlertPolicy": {
@@ -49,28 +49,10 @@
         "grpc": {
           "libraryClient": "GroupServiceClient",
           "rpcs": {
-            "ListGroups": {
-              "methods": [
-                "ListGroups",
-                "ListGroupsAsync"
-              ]
-            },
-            "GetGroup": {
-              "methods": [
-                "GetGroup",
-                "GetGroupAsync"
-              ]
-            },
             "CreateGroup": {
               "methods": [
                 "CreateGroup",
                 "CreateGroupAsync"
-              ]
-            },
-            "UpdateGroup": {
-              "methods": [
-                "UpdateGroup",
-                "UpdateGroupAsync"
               ]
             },
             "DeleteGroup": {
@@ -79,10 +61,28 @@
                 "DeleteGroupAsync"
               ]
             },
+            "GetGroup": {
+              "methods": [
+                "GetGroup",
+                "GetGroupAsync"
+              ]
+            },
             "ListGroupMembers": {
               "methods": [
                 "ListGroupMembers",
                 "ListGroupMembersAsync"
+              ]
+            },
+            "ListGroups": {
+              "methods": [
+                "ListGroups",
+                "ListGroupsAsync"
+              ]
+            },
+            "UpdateGroup": {
+              "methods": [
+                "UpdateGroup",
+                "UpdateGroupAsync"
               ]
             }
           }
@@ -94,10 +94,28 @@
         "grpc": {
           "libraryClient": "MetricServiceClient",
           "rpcs": {
-            "ListMonitoredResourceDescriptors": {
+            "CreateMetricDescriptor": {
               "methods": [
-                "ListMonitoredResourceDescriptors",
-                "ListMonitoredResourceDescriptorsAsync"
+                "CreateMetricDescriptor",
+                "CreateMetricDescriptorAsync"
+              ]
+            },
+            "CreateTimeSeries": {
+              "methods": [
+                "CreateTimeSeries",
+                "CreateTimeSeriesAsync"
+              ]
+            },
+            "DeleteMetricDescriptor": {
+              "methods": [
+                "DeleteMetricDescriptor",
+                "DeleteMetricDescriptorAsync"
+              ]
+            },
+            "GetMetricDescriptor": {
+              "methods": [
+                "GetMetricDescriptor",
+                "GetMetricDescriptorAsync"
               ]
             },
             "GetMonitoredResourceDescriptor": {
@@ -112,34 +130,16 @@
                 "ListMetricDescriptorsAsync"
               ]
             },
-            "GetMetricDescriptor": {
+            "ListMonitoredResourceDescriptors": {
               "methods": [
-                "GetMetricDescriptor",
-                "GetMetricDescriptorAsync"
-              ]
-            },
-            "CreateMetricDescriptor": {
-              "methods": [
-                "CreateMetricDescriptor",
-                "CreateMetricDescriptorAsync"
-              ]
-            },
-            "DeleteMetricDescriptor": {
-              "methods": [
-                "DeleteMetricDescriptor",
-                "DeleteMetricDescriptorAsync"
+                "ListMonitoredResourceDescriptors",
+                "ListMonitoredResourceDescriptorsAsync"
               ]
             },
             "ListTimeSeries": {
               "methods": [
                 "ListTimeSeries",
                 "ListTimeSeriesAsync"
-              ]
-            },
-            "CreateTimeSeries": {
-              "methods": [
-                "CreateTimeSeries",
-                "CreateTimeSeriesAsync"
               ]
             }
           }
@@ -151,40 +151,10 @@
         "grpc": {
           "libraryClient": "NotificationChannelServiceClient",
           "rpcs": {
-            "ListNotificationChannelDescriptors": {
-              "methods": [
-                "ListNotificationChannelDescriptors",
-                "ListNotificationChannelDescriptorsAsync"
-              ]
-            },
-            "GetNotificationChannelDescriptor": {
-              "methods": [
-                "GetNotificationChannelDescriptor",
-                "GetNotificationChannelDescriptorAsync"
-              ]
-            },
-            "ListNotificationChannels": {
-              "methods": [
-                "ListNotificationChannels",
-                "ListNotificationChannelsAsync"
-              ]
-            },
-            "GetNotificationChannel": {
-              "methods": [
-                "GetNotificationChannel",
-                "GetNotificationChannelAsync"
-              ]
-            },
             "CreateNotificationChannel": {
               "methods": [
                 "CreateNotificationChannel",
                 "CreateNotificationChannelAsync"
-              ]
-            },
-            "UpdateNotificationChannel": {
-              "methods": [
-                "UpdateNotificationChannel",
-                "UpdateNotificationChannelAsync"
               ]
             },
             "DeleteNotificationChannel": {
@@ -193,16 +163,46 @@
                 "DeleteNotificationChannelAsync"
               ]
             },
-            "SendNotificationChannelVerificationCode": {
+            "GetNotificationChannel": {
               "methods": [
-                "SendNotificationChannelVerificationCode",
-                "SendNotificationChannelVerificationCodeAsync"
+                "GetNotificationChannel",
+                "GetNotificationChannelAsync"
+              ]
+            },
+            "GetNotificationChannelDescriptor": {
+              "methods": [
+                "GetNotificationChannelDescriptor",
+                "GetNotificationChannelDescriptorAsync"
               ]
             },
             "GetNotificationChannelVerificationCode": {
               "methods": [
                 "GetNotificationChannelVerificationCode",
                 "GetNotificationChannelVerificationCodeAsync"
+              ]
+            },
+            "ListNotificationChannelDescriptors": {
+              "methods": [
+                "ListNotificationChannelDescriptors",
+                "ListNotificationChannelDescriptorsAsync"
+              ]
+            },
+            "ListNotificationChannels": {
+              "methods": [
+                "ListNotificationChannels",
+                "ListNotificationChannelsAsync"
+              ]
+            },
+            "SendNotificationChannelVerificationCode": {
+              "methods": [
+                "SendNotificationChannelVerificationCode",
+                "SendNotificationChannelVerificationCodeAsync"
+              ]
+            },
+            "UpdateNotificationChannel": {
+              "methods": [
+                "UpdateNotificationChannel",
+                "UpdateNotificationChannelAsync"
               ]
             },
             "VerifyNotificationChannel": {
@@ -241,22 +241,10 @@
                 "CreateServiceAsync"
               ]
             },
-            "GetService": {
+            "CreateServiceLevelObjective": {
               "methods": [
-                "GetService",
-                "GetServiceAsync"
-              ]
-            },
-            "ListServices": {
-              "methods": [
-                "ListServices",
-                "ListServicesAsync"
-              ]
-            },
-            "UpdateService": {
-              "methods": [
-                "UpdateService",
-                "UpdateServiceAsync"
+                "CreateServiceLevelObjective",
+                "CreateServiceLevelObjectiveAsync"
               ]
             },
             "DeleteService": {
@@ -265,10 +253,16 @@
                 "DeleteServiceAsync"
               ]
             },
-            "CreateServiceLevelObjective": {
+            "DeleteServiceLevelObjective": {
               "methods": [
-                "CreateServiceLevelObjective",
-                "CreateServiceLevelObjectiveAsync"
+                "DeleteServiceLevelObjective",
+                "DeleteServiceLevelObjectiveAsync"
+              ]
+            },
+            "GetService": {
+              "methods": [
+                "GetService",
+                "GetServiceAsync"
               ]
             },
             "GetServiceLevelObjective": {
@@ -283,16 +277,22 @@
                 "ListServiceLevelObjectivesAsync"
               ]
             },
+            "ListServices": {
+              "methods": [
+                "ListServices",
+                "ListServicesAsync"
+              ]
+            },
+            "UpdateService": {
+              "methods": [
+                "UpdateService",
+                "UpdateServiceAsync"
+              ]
+            },
             "UpdateServiceLevelObjective": {
               "methods": [
                 "UpdateServiceLevelObjective",
                 "UpdateServiceLevelObjectiveAsync"
-              ]
-            },
-            "DeleteServiceLevelObjective": {
-              "methods": [
-                "DeleteServiceLevelObjective",
-                "DeleteServiceLevelObjectiveAsync"
               ]
             }
           }
@@ -304,28 +304,10 @@
         "grpc": {
           "libraryClient": "UptimeCheckServiceClient",
           "rpcs": {
-            "ListUptimeCheckConfigs": {
-              "methods": [
-                "ListUptimeCheckConfigs",
-                "ListUptimeCheckConfigsAsync"
-              ]
-            },
-            "GetUptimeCheckConfig": {
-              "methods": [
-                "GetUptimeCheckConfig",
-                "GetUptimeCheckConfigAsync"
-              ]
-            },
             "CreateUptimeCheckConfig": {
               "methods": [
                 "CreateUptimeCheckConfig",
                 "CreateUptimeCheckConfigAsync"
-              ]
-            },
-            "UpdateUptimeCheckConfig": {
-              "methods": [
-                "UpdateUptimeCheckConfig",
-                "UpdateUptimeCheckConfigAsync"
               ]
             },
             "DeleteUptimeCheckConfig": {
@@ -334,10 +316,28 @@
                 "DeleteUptimeCheckConfigAsync"
               ]
             },
+            "GetUptimeCheckConfig": {
+              "methods": [
+                "GetUptimeCheckConfig",
+                "GetUptimeCheckConfigAsync"
+              ]
+            },
+            "ListUptimeCheckConfigs": {
+              "methods": [
+                "ListUptimeCheckConfigs",
+                "ListUptimeCheckConfigsAsync"
+              ]
+            },
             "ListUptimeCheckIps": {
               "methods": [
                 "ListUptimeCheckIps",
                 "ListUptimeCheckIpsAsync"
+              ]
+            },
+            "UpdateUptimeCheckConfig": {
+              "methods": [
+                "UpdateUptimeCheckConfig",
+                "UpdateUptimeCheckConfigAsync"
               ]
             }
           }

@@ -16,28 +16,28 @@
                 "CreateApplicationAsync"
               ]
             },
-            "GetApplication": {
-              "methods": [
-                "GetApplication",
-                "GetApplicationAsync"
-              ]
-            },
-            "UpdateApplication": {
-              "methods": [
-                "UpdateApplication",
-                "UpdateApplicationAsync"
-              ]
-            },
             "DeleteApplication": {
               "methods": [
                 "DeleteApplication",
                 "DeleteApplicationAsync"
               ]
             },
+            "GetApplication": {
+              "methods": [
+                "GetApplication",
+                "GetApplicationAsync"
+              ]
+            },
             "ListApplications": {
               "methods": [
                 "ListApplications",
                 "ListApplicationsAsync"
+              ]
+            },
+            "UpdateApplication": {
+              "methods": [
+                "UpdateApplication",
+                "UpdateApplicationAsync"
               ]
             }
           }
@@ -55,28 +55,28 @@
                 "CreateCompanyAsync"
               ]
             },
-            "GetCompany": {
-              "methods": [
-                "GetCompany",
-                "GetCompanyAsync"
-              ]
-            },
-            "UpdateCompany": {
-              "methods": [
-                "UpdateCompany",
-                "UpdateCompanyAsync"
-              ]
-            },
             "DeleteCompany": {
               "methods": [
                 "DeleteCompany",
                 "DeleteCompanyAsync"
               ]
             },
+            "GetCompany": {
+              "methods": [
+                "GetCompany",
+                "GetCompanyAsync"
+              ]
+            },
             "ListCompanies": {
               "methods": [
                 "ListCompanies",
                 "ListCompaniesAsync"
+              ]
+            },
+            "UpdateCompany": {
+              "methods": [
+                "UpdateCompany",
+                "UpdateCompanyAsync"
               ]
             }
           }
@@ -118,28 +118,16 @@
         "grpc": {
           "libraryClient": "JobServiceClient",
           "rpcs": {
-            "CreateJob": {
-              "methods": [
-                "CreateJob",
-                "CreateJobAsync"
-              ]
-            },
             "BatchCreateJobs": {
               "methods": [
                 "BatchCreateJobs",
                 "BatchCreateJobsAsync"
               ]
             },
-            "GetJob": {
+            "BatchDeleteJobs": {
               "methods": [
-                "GetJob",
-                "GetJobAsync"
-              ]
-            },
-            "UpdateJob": {
-              "methods": [
-                "UpdateJob",
-                "UpdateJobAsync"
+                "BatchDeleteJobs",
+                "BatchDeleteJobsAsync"
               ]
             },
             "BatchUpdateJobs": {
@@ -148,16 +136,22 @@
                 "BatchUpdateJobsAsync"
               ]
             },
+            "CreateJob": {
+              "methods": [
+                "CreateJob",
+                "CreateJobAsync"
+              ]
+            },
             "DeleteJob": {
               "methods": [
                 "DeleteJob",
                 "DeleteJobAsync"
               ]
             },
-            "BatchDeleteJobs": {
+            "GetJob": {
               "methods": [
-                "BatchDeleteJobs",
-                "BatchDeleteJobsAsync"
+                "GetJob",
+                "GetJobAsync"
               ]
             },
             "ListJobs": {
@@ -177,6 +171,12 @@
                 "SearchJobsForAlert",
                 "SearchJobsForAlertAsync"
               ]
+            },
+            "UpdateJob": {
+              "methods": [
+                "UpdateJob",
+                "UpdateJobAsync"
+              ]
             }
           }
         }
@@ -187,28 +187,10 @@
         "grpc": {
           "libraryClient": "ProfileServiceClient",
           "rpcs": {
-            "ListProfiles": {
-              "methods": [
-                "ListProfiles",
-                "ListProfilesAsync"
-              ]
-            },
             "CreateProfile": {
               "methods": [
                 "CreateProfile",
                 "CreateProfileAsync"
-              ]
-            },
-            "GetProfile": {
-              "methods": [
-                "GetProfile",
-                "GetProfileAsync"
-              ]
-            },
-            "UpdateProfile": {
-              "methods": [
-                "UpdateProfile",
-                "UpdateProfileAsync"
               ]
             },
             "DeleteProfile": {
@@ -217,10 +199,28 @@
                 "DeleteProfileAsync"
               ]
             },
+            "GetProfile": {
+              "methods": [
+                "GetProfile",
+                "GetProfileAsync"
+              ]
+            },
+            "ListProfiles": {
+              "methods": [
+                "ListProfiles",
+                "ListProfilesAsync"
+              ]
+            },
             "SearchProfiles": {
               "methods": [
                 "SearchProfiles",
                 "SearchProfilesAsync"
+              ]
+            },
+            "UpdateProfile": {
+              "methods": [
+                "UpdateProfile",
+                "UpdateProfileAsync"
               ]
             }
           }
@@ -238,28 +238,28 @@
                 "CreateTenantAsync"
               ]
             },
-            "GetTenant": {
-              "methods": [
-                "GetTenant",
-                "GetTenantAsync"
-              ]
-            },
-            "UpdateTenant": {
-              "methods": [
-                "UpdateTenant",
-                "UpdateTenantAsync"
-              ]
-            },
             "DeleteTenant": {
               "methods": [
                 "DeleteTenant",
                 "DeleteTenantAsync"
               ]
             },
+            "GetTenant": {
+              "methods": [
+                "GetTenant",
+                "GetTenantAsync"
+              ]
+            },
             "ListTenants": {
               "methods": [
                 "ListTenants",
                 "ListTenantsAsync"
+              ]
+            },
+            "UpdateTenant": {
+              "methods": [
+                "UpdateTenant",
+                "UpdateTenantAsync"
               ]
             }
           }

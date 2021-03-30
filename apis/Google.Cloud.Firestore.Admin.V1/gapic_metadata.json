@@ -16,40 +16,10 @@
                 "CreateIndexAsync"
               ]
             },
-            "ListIndexes": {
-              "methods": [
-                "ListIndexes",
-                "ListIndexesAsync"
-              ]
-            },
-            "GetIndex": {
-              "methods": [
-                "GetIndex",
-                "GetIndexAsync"
-              ]
-            },
             "DeleteIndex": {
               "methods": [
                 "DeleteIndex",
                 "DeleteIndexAsync"
-              ]
-            },
-            "GetField": {
-              "methods": [
-                "GetField",
-                "GetFieldAsync"
-              ]
-            },
-            "UpdateField": {
-              "methods": [
-                "UpdateField",
-                "UpdateFieldAsync"
-              ]
-            },
-            "ListFields": {
-              "methods": [
-                "ListFields",
-                "ListFieldsAsync"
               ]
             },
             "ExportDocuments": {
@@ -58,10 +28,40 @@
                 "ExportDocumentsAsync"
               ]
             },
+            "GetField": {
+              "methods": [
+                "GetField",
+                "GetFieldAsync"
+              ]
+            },
+            "GetIndex": {
+              "methods": [
+                "GetIndex",
+                "GetIndexAsync"
+              ]
+            },
             "ImportDocuments": {
               "methods": [
                 "ImportDocuments",
                 "ImportDocumentsAsync"
+              ]
+            },
+            "ListFields": {
+              "methods": [
+                "ListFields",
+                "ListFieldsAsync"
+              ]
+            },
+            "ListIndexes": {
+              "methods": [
+                "ListIndexes",
+                "ListIndexesAsync"
+              ]
+            },
+            "UpdateField": {
+              "methods": [
+                "UpdateField",
+                "UpdateFieldAsync"
               ]
             }
           }

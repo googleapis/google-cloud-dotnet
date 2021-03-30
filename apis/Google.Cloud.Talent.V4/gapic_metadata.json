@@ -16,28 +16,28 @@
                 "CreateCompanyAsync"
               ]
             },
-            "GetCompany": {
-              "methods": [
-                "GetCompany",
-                "GetCompanyAsync"
-              ]
-            },
-            "UpdateCompany": {
-              "methods": [
-                "UpdateCompany",
-                "UpdateCompanyAsync"
-              ]
-            },
             "DeleteCompany": {
               "methods": [
                 "DeleteCompany",
                 "DeleteCompanyAsync"
               ]
             },
+            "GetCompany": {
+              "methods": [
+                "GetCompany",
+                "GetCompanyAsync"
+              ]
+            },
             "ListCompanies": {
               "methods": [
                 "ListCompanies",
                 "ListCompaniesAsync"
+              ]
+            },
+            "UpdateCompany": {
+              "methods": [
+                "UpdateCompany",
+                "UpdateCompanyAsync"
               ]
             }
           }
@@ -79,28 +79,16 @@
         "grpc": {
           "libraryClient": "JobServiceClient",
           "rpcs": {
-            "CreateJob": {
-              "methods": [
-                "CreateJob",
-                "CreateJobAsync"
-              ]
-            },
             "BatchCreateJobs": {
               "methods": [
                 "BatchCreateJobs",
                 "BatchCreateJobsAsync"
               ]
             },
-            "GetJob": {
+            "BatchDeleteJobs": {
               "methods": [
-                "GetJob",
-                "GetJobAsync"
-              ]
-            },
-            "UpdateJob": {
-              "methods": [
-                "UpdateJob",
-                "UpdateJobAsync"
+                "BatchDeleteJobs",
+                "BatchDeleteJobsAsync"
               ]
             },
             "BatchUpdateJobs": {
@@ -109,16 +97,22 @@
                 "BatchUpdateJobsAsync"
               ]
             },
+            "CreateJob": {
+              "methods": [
+                "CreateJob",
+                "CreateJobAsync"
+              ]
+            },
             "DeleteJob": {
               "methods": [
                 "DeleteJob",
                 "DeleteJobAsync"
               ]
             },
-            "BatchDeleteJobs": {
+            "GetJob": {
               "methods": [
-                "BatchDeleteJobs",
-                "BatchDeleteJobsAsync"
+                "GetJob",
+                "GetJobAsync"
               ]
             },
             "ListJobs": {
@@ -138,6 +132,12 @@
                 "SearchJobsForAlert",
                 "SearchJobsForAlertAsync"
               ]
+            },
+            "UpdateJob": {
+              "methods": [
+                "UpdateJob",
+                "UpdateJobAsync"
+              ]
             }
           }
         }
@@ -154,28 +154,28 @@
                 "CreateTenantAsync"
               ]
             },
-            "GetTenant": {
-              "methods": [
-                "GetTenant",
-                "GetTenantAsync"
-              ]
-            },
-            "UpdateTenant": {
-              "methods": [
-                "UpdateTenant",
-                "UpdateTenantAsync"
-              ]
-            },
             "DeleteTenant": {
               "methods": [
                 "DeleteTenant",
                 "DeleteTenantAsync"
               ]
             },
+            "GetTenant": {
+              "methods": [
+                "GetTenant",
+                "GetTenantAsync"
+              ]
+            },
             "ListTenants": {
               "methods": [
                 "ListTenants",
                 "ListTenantsAsync"
+              ]
+            },
+            "UpdateTenant": {
+              "methods": [
+                "UpdateTenant",
+                "UpdateTenantAsync"
               ]
             }
           }

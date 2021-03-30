@@ -10,64 +10,16 @@
         "grpc": {
           "libraryClient": "KeyManagementServiceClient",
           "rpcs": {
-            "ListKeyRings": {
+            "AsymmetricDecrypt": {
               "methods": [
-                "ListKeyRings",
-                "ListKeyRingsAsync"
+                "AsymmetricDecrypt",
+                "AsymmetricDecryptAsync"
               ]
             },
-            "ListCryptoKeys": {
+            "AsymmetricSign": {
               "methods": [
-                "ListCryptoKeys",
-                "ListCryptoKeysAsync"
-              ]
-            },
-            "ListCryptoKeyVersions": {
-              "methods": [
-                "ListCryptoKeyVersions",
-                "ListCryptoKeyVersionsAsync"
-              ]
-            },
-            "ListImportJobs": {
-              "methods": [
-                "ListImportJobs",
-                "ListImportJobsAsync"
-              ]
-            },
-            "GetKeyRing": {
-              "methods": [
-                "GetKeyRing",
-                "GetKeyRingAsync"
-              ]
-            },
-            "GetCryptoKey": {
-              "methods": [
-                "GetCryptoKey",
-                "GetCryptoKeyAsync"
-              ]
-            },
-            "GetCryptoKeyVersion": {
-              "methods": [
-                "GetCryptoKeyVersion",
-                "GetCryptoKeyVersionAsync"
-              ]
-            },
-            "GetPublicKey": {
-              "methods": [
-                "GetPublicKey",
-                "GetPublicKeyAsync"
-              ]
-            },
-            "GetImportJob": {
-              "methods": [
-                "GetImportJob",
-                "GetImportJobAsync"
-              ]
-            },
-            "CreateKeyRing": {
-              "methods": [
-                "CreateKeyRing",
-                "CreateKeyRingAsync"
+                "AsymmetricSign",
+                "AsymmetricSignAsync"
               ]
             },
             "CreateCryptoKey": {
@@ -82,34 +34,16 @@
                 "CreateCryptoKeyVersionAsync"
               ]
             },
-            "ImportCryptoKeyVersion": {
-              "methods": [
-                "ImportCryptoKeyVersion",
-                "ImportCryptoKeyVersionAsync"
-              ]
-            },
             "CreateImportJob": {
               "methods": [
                 "CreateImportJob",
                 "CreateImportJobAsync"
               ]
             },
-            "UpdateCryptoKey": {
+            "CreateKeyRing": {
               "methods": [
-                "UpdateCryptoKey",
-                "UpdateCryptoKeyAsync"
-              ]
-            },
-            "UpdateCryptoKeyVersion": {
-              "methods": [
-                "UpdateCryptoKeyVersion",
-                "UpdateCryptoKeyVersionAsync"
-              ]
-            },
-            "Encrypt": {
-              "methods": [
-                "Encrypt",
-                "EncryptAsync"
+                "CreateKeyRing",
+                "CreateKeyRingAsync"
               ]
             },
             "Decrypt": {
@@ -118,16 +52,88 @@
                 "DecryptAsync"
               ]
             },
-            "AsymmetricSign": {
+            "DestroyCryptoKeyVersion": {
               "methods": [
-                "AsymmetricSign",
-                "AsymmetricSignAsync"
+                "DestroyCryptoKeyVersion",
+                "DestroyCryptoKeyVersionAsync"
               ]
             },
-            "AsymmetricDecrypt": {
+            "Encrypt": {
               "methods": [
-                "AsymmetricDecrypt",
-                "AsymmetricDecryptAsync"
+                "Encrypt",
+                "EncryptAsync"
+              ]
+            },
+            "GetCryptoKey": {
+              "methods": [
+                "GetCryptoKey",
+                "GetCryptoKeyAsync"
+              ]
+            },
+            "GetCryptoKeyVersion": {
+              "methods": [
+                "GetCryptoKeyVersion",
+                "GetCryptoKeyVersionAsync"
+              ]
+            },
+            "GetImportJob": {
+              "methods": [
+                "GetImportJob",
+                "GetImportJobAsync"
+              ]
+            },
+            "GetKeyRing": {
+              "methods": [
+                "GetKeyRing",
+                "GetKeyRingAsync"
+              ]
+            },
+            "GetPublicKey": {
+              "methods": [
+                "GetPublicKey",
+                "GetPublicKeyAsync"
+              ]
+            },
+            "ImportCryptoKeyVersion": {
+              "methods": [
+                "ImportCryptoKeyVersion",
+                "ImportCryptoKeyVersionAsync"
+              ]
+            },
+            "ListCryptoKeyVersions": {
+              "methods": [
+                "ListCryptoKeyVersions",
+                "ListCryptoKeyVersionsAsync"
+              ]
+            },
+            "ListCryptoKeys": {
+              "methods": [
+                "ListCryptoKeys",
+                "ListCryptoKeysAsync"
+              ]
+            },
+            "ListImportJobs": {
+              "methods": [
+                "ListImportJobs",
+                "ListImportJobsAsync"
+              ]
+            },
+            "ListKeyRings": {
+              "methods": [
+                "ListKeyRings",
+                "ListKeyRingsAsync"
+              ]
+            },
+            "RestoreCryptoKeyVersion": {
+              "methods": [
+                "RestoreCryptoKeyVersion",
+                "RestoreCryptoKeyVersionAsync"
+              ]
+            },
+            "UpdateCryptoKey": {
+              "methods": [
+                "UpdateCryptoKey",
+                "UpdateCryptoKeyAsync"
               ]
             },
             "UpdateCryptoKeyPrimaryVersion": {
@@ -136,16 +142,10 @@
                 "UpdateCryptoKeyPrimaryVersionAsync"
               ]
             },
-            "DestroyCryptoKeyVersion": {
+            "UpdateCryptoKeyVersion": {
               "methods": [
-                "DestroyCryptoKeyVersion",
-                "DestroyCryptoKeyVersionAsync"
-              ]
-            },
-            "RestoreCryptoKeyVersion": {
-              "methods": [
-                "RestoreCryptoKeyVersion",
-                "RestoreCryptoKeyVersionAsync"
+                "UpdateCryptoKeyVersion",
+                "UpdateCryptoKeyVersionAsync"
               ]
             }
           }

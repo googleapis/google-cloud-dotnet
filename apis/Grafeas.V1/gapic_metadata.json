@@ -10,28 +10,10 @@
         "grpc": {
           "libraryClient": "GrafeasClient",
           "rpcs": {
-            "GetOccurrence": {
+            "BatchCreateNotes": {
               "methods": [
-                "GetOccurrence",
-                "GetOccurrenceAsync"
-              ]
-            },
-            "ListOccurrences": {
-              "methods": [
-                "ListOccurrences",
-                "ListOccurrencesAsync"
-              ]
-            },
-            "DeleteOccurrence": {
-              "methods": [
-                "DeleteOccurrence",
-                "DeleteOccurrenceAsync"
-              ]
-            },
-            "CreateOccurrence": {
-              "methods": [
-                "CreateOccurrence",
-                "CreateOccurrenceAsync"
+                "BatchCreateNotes",
+                "BatchCreateNotesAsync"
               ]
             },
             "BatchCreateOccurrences": {
@@ -40,28 +22,16 @@
                 "BatchCreateOccurrencesAsync"
               ]
             },
-            "UpdateOccurrence": {
+            "CreateNote": {
               "methods": [
-                "UpdateOccurrence",
-                "UpdateOccurrenceAsync"
+                "CreateNote",
+                "CreateNoteAsync"
               ]
             },
-            "GetOccurrenceNote": {
+            "CreateOccurrence": {
               "methods": [
-                "GetOccurrenceNote",
-                "GetOccurrenceNoteAsync"
-              ]
-            },
-            "GetNote": {
-              "methods": [
-                "GetNote",
-                "GetNoteAsync"
-              ]
-            },
-            "ListNotes": {
-              "methods": [
-                "ListNotes",
-                "ListNotesAsync"
+                "CreateOccurrence",
+                "CreateOccurrenceAsync"
               ]
             },
             "DeleteNote": {
@@ -70,16 +40,46 @@
                 "DeleteNoteAsync"
               ]
             },
-            "CreateNote": {
+            "DeleteOccurrence": {
               "methods": [
-                "CreateNote",
-                "CreateNoteAsync"
+                "DeleteOccurrence",
+                "DeleteOccurrenceAsync"
               ]
             },
-            "BatchCreateNotes": {
+            "GetNote": {
               "methods": [
-                "BatchCreateNotes",
-                "BatchCreateNotesAsync"
+                "GetNote",
+                "GetNoteAsync"
+              ]
+            },
+            "GetOccurrence": {
+              "methods": [
+                "GetOccurrence",
+                "GetOccurrenceAsync"
+              ]
+            },
+            "GetOccurrenceNote": {
+              "methods": [
+                "GetOccurrenceNote",
+                "GetOccurrenceNoteAsync"
+              ]
+            },
+            "ListNoteOccurrences": {
+              "methods": [
+                "ListNoteOccurrences",
+                "ListNoteOccurrencesAsync"
+              ]
+            },
+            "ListNotes": {
+              "methods": [
+                "ListNotes",
+                "ListNotesAsync"
+              ]
+            },
+            "ListOccurrences": {
+              "methods": [
+                "ListOccurrences",
+                "ListOccurrencesAsync"
               ]
             },
             "UpdateNote": {
@@ -88,10 +88,10 @@
                 "UpdateNoteAsync"
               ]
             },
-            "ListNoteOccurrences": {
+            "UpdateOccurrence": {
               "methods": [
-                "ListNoteOccurrences",
-                "ListNoteOccurrencesAsync"
+                "UpdateOccurrence",
+                "UpdateOccurrenceAsync"
               ]
             }
           }

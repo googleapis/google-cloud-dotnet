@@ -10,16 +10,10 @@
         "grpc": {
           "libraryClient": "NotebookServiceClient",
           "rpcs": {
-            "ListInstances": {
+            "CreateEnvironment": {
               "methods": [
-                "ListInstances",
-                "ListInstancesAsync"
-              ]
-            },
-            "GetInstance": {
-              "methods": [
-                "GetInstance",
-                "GetInstanceAsync"
+                "CreateEnvironment",
+                "CreateEnvironmentAsync"
               ]
             },
             "CreateInstance": {
@@ -28,10 +22,64 @@
                 "CreateInstanceAsync"
               ]
             },
+            "DeleteEnvironment": {
+              "methods": [
+                "DeleteEnvironment",
+                "DeleteEnvironmentAsync"
+              ]
+            },
+            "DeleteInstance": {
+              "methods": [
+                "DeleteInstance",
+                "DeleteInstanceAsync"
+              ]
+            },
+            "GetEnvironment": {
+              "methods": [
+                "GetEnvironment",
+                "GetEnvironmentAsync"
+              ]
+            },
+            "GetInstance": {
+              "methods": [
+                "GetInstance",
+                "GetInstanceAsync"
+              ]
+            },
+            "IsInstanceUpgradeable": {
+              "methods": [
+                "IsInstanceUpgradeable",
+                "IsInstanceUpgradeableAsync"
+              ]
+            },
+            "ListEnvironments": {
+              "methods": [
+                "ListEnvironments",
+                "ListEnvironmentsAsync"
+              ]
+            },
+            "ListInstances": {
+              "methods": [
+                "ListInstances",
+                "ListInstancesAsync"
+              ]
+            },
             "RegisterInstance": {
               "methods": [
                 "RegisterInstance",
                 "RegisterInstanceAsync"
+              ]
+            },
+            "ReportInstanceInfo": {
+              "methods": [
+                "ReportInstanceInfo",
+                "ReportInstanceInfoAsync"
+              ]
+            },
+            "ResetInstance": {
+              "methods": [
+                "ResetInstance",
+                "ResetInstanceAsync"
               ]
             },
             "SetInstanceAccelerator": {
@@ -40,22 +88,16 @@
                 "SetInstanceAcceleratorAsync"
               ]
             },
-            "SetInstanceMachineType": {
-              "methods": [
-                "SetInstanceMachineType",
-                "SetInstanceMachineTypeAsync"
-              ]
-            },
             "SetInstanceLabels": {
               "methods": [
                 "SetInstanceLabels",
                 "SetInstanceLabelsAsync"
               ]
             },
-            "DeleteInstance": {
+            "SetInstanceMachineType": {
               "methods": [
-                "DeleteInstance",
-                "DeleteInstanceAsync"
+                "SetInstanceMachineType",
+                "SetInstanceMachineTypeAsync"
               ]
             },
             "StartInstance": {
@@ -70,24 +112,6 @@
                 "StopInstanceAsync"
               ]
             },
-            "ResetInstance": {
-              "methods": [
-                "ResetInstance",
-                "ResetInstanceAsync"
-              ]
-            },
-            "ReportInstanceInfo": {
-              "methods": [
-                "ReportInstanceInfo",
-                "ReportInstanceInfoAsync"
-              ]
-            },
-            "IsInstanceUpgradeable": {
-              "methods": [
-                "IsInstanceUpgradeable",
-                "IsInstanceUpgradeableAsync"
-              ]
-            },
             "UpgradeInstance": {
               "methods": [
                 "UpgradeInstance",
@@ -98,30 +122,6 @@
               "methods": [
                 "UpgradeInstanceInternal",
                 "UpgradeInstanceInternalAsync"
-              ]
-            },
-            "ListEnvironments": {
-              "methods": [
-                "ListEnvironments",
-                "ListEnvironmentsAsync"
-              ]
-            },
-            "GetEnvironment": {
-              "methods": [
-                "GetEnvironment",
-                "GetEnvironmentAsync"
-              ]
-            },
-            "CreateEnvironment": {
-              "methods": [
-                "CreateEnvironment",
-                "CreateEnvironmentAsync"
-              ]
-            },
-            "DeleteEnvironment": {
-              "methods": [
-                "DeleteEnvironment",
-                "DeleteEnvironmentAsync"
               ]
             }
           }

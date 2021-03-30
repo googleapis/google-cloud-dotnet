@@ -31,10 +31,10 @@
         "grpc": {
           "libraryClient": "ErrorStatsServiceClient",
           "rpcs": {
-            "ListGroupStats": {
+            "DeleteEvents": {
               "methods": [
-                "ListGroupStats",
-                "ListGroupStatsAsync"
+                "DeleteEvents",
+                "DeleteEventsAsync"
               ]
             },
             "ListEvents": {
@@ -43,10 +43,10 @@
                 "ListEventsAsync"
               ]
             },
-            "DeleteEvents": {
+            "ListGroupStats": {
               "methods": [
-                "DeleteEvents",
-                "DeleteEventsAsync"
+                "ListGroupStats",
+                "ListGroupStatsAsync"
               ]
             }
           }

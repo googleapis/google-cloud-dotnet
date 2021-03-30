@@ -10,28 +10,10 @@
         "grpc": {
           "libraryClient": "RecommenderClient",
           "rpcs": {
-            "ListInsights": {
-              "methods": [
-                "ListInsights",
-                "ListInsightsAsync"
-              ]
-            },
             "GetInsight": {
               "methods": [
                 "GetInsight",
                 "GetInsightAsync"
-              ]
-            },
-            "MarkInsightAccepted": {
-              "methods": [
-                "MarkInsightAccepted",
-                "MarkInsightAcceptedAsync"
-              ]
-            },
-            "ListRecommendations": {
-              "methods": [
-                "ListRecommendations",
-                "ListRecommendationsAsync"
               ]
             },
             "GetRecommendation": {
@@ -40,22 +22,40 @@
                 "GetRecommendationAsync"
               ]
             },
+            "ListInsights": {
+              "methods": [
+                "ListInsights",
+                "ListInsightsAsync"
+              ]
+            },
+            "ListRecommendations": {
+              "methods": [
+                "ListRecommendations",
+                "ListRecommendationsAsync"
+              ]
+            },
+            "MarkInsightAccepted": {
+              "methods": [
+                "MarkInsightAccepted",
+                "MarkInsightAcceptedAsync"
+              ]
+            },
             "MarkRecommendationClaimed": {
               "methods": [
                 "MarkRecommendationClaimed",
                 "MarkRecommendationClaimedAsync"
               ]
             },
-            "MarkRecommendationSucceeded": {
-              "methods": [
-                "MarkRecommendationSucceeded",
-                "MarkRecommendationSucceededAsync"
-              ]
-            },
             "MarkRecommendationFailed": {
               "methods": [
                 "MarkRecommendationFailed",
                 "MarkRecommendationFailedAsync"
+              ]
+            },
+            "MarkRecommendationSucceeded": {
+              "methods": [
+                "MarkRecommendationSucceeded",
+                "MarkRecommendationSucceededAsync"
               ]
             }
           }

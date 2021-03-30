@@ -10,16 +10,16 @@
         "grpc": {
           "libraryClient": "DocumentProcessorServiceClient",
           "rpcs": {
-            "ProcessDocument": {
-              "methods": [
-                "ProcessDocument",
-                "ProcessDocumentAsync"
-              ]
-            },
             "BatchProcessDocuments": {
               "methods": [
                 "BatchProcessDocuments",
                 "BatchProcessDocumentsAsync"
+              ]
+            },
+            "ProcessDocument": {
+              "methods": [
+                "ProcessDocument",
+                "ProcessDocumentAsync"
               ]
             },
             "ReviewDocument": {

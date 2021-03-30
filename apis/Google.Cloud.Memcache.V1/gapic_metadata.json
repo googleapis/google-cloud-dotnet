@@ -10,10 +10,22 @@
         "grpc": {
           "libraryClient": "CloudMemcacheClient",
           "rpcs": {
-            "ListInstances": {
+            "ApplyParameters": {
               "methods": [
-                "ListInstances",
-                "ListInstancesAsync"
+                "ApplyParameters",
+                "ApplyParametersAsync"
+              ]
+            },
+            "CreateInstance": {
+              "methods": [
+                "CreateInstance",
+                "CreateInstanceAsync"
+              ]
+            },
+            "DeleteInstance": {
+              "methods": [
+                "DeleteInstance",
+                "DeleteInstanceAsync"
               ]
             },
             "GetInstance": {
@@ -22,10 +34,10 @@
                 "GetInstanceAsync"
               ]
             },
-            "CreateInstance": {
+            "ListInstances": {
               "methods": [
-                "CreateInstance",
-                "CreateInstanceAsync"
+                "ListInstances",
+                "ListInstancesAsync"
               ]
             },
             "UpdateInstance": {
@@ -38,18 +50,6 @@
               "methods": [
                 "UpdateParameters",
                 "UpdateParametersAsync"
-              ]
-            },
-            "DeleteInstance": {
-              "methods": [
-                "DeleteInstance",
-                "DeleteInstanceAsync"
-              ]
-            },
-            "ApplyParameters": {
-              "methods": [
-                "ApplyParameters",
-                "ApplyParametersAsync"
               ]
             }
           }

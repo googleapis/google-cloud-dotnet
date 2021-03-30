@@ -10,28 +10,16 @@
         "grpc": {
           "libraryClient": "CloudTasksClient",
           "rpcs": {
-            "ListQueues": {
-              "methods": [
-                "ListQueues",
-                "ListQueuesAsync"
-              ]
-            },
-            "GetQueue": {
-              "methods": [
-                "GetQueue",
-                "GetQueueAsync"
-              ]
-            },
             "CreateQueue": {
               "methods": [
                 "CreateQueue",
                 "CreateQueueAsync"
               ]
             },
-            "UpdateQueue": {
+            "CreateTask": {
               "methods": [
-                "UpdateQueue",
-                "UpdateQueueAsync"
+                "CreateTask",
+                "CreateTaskAsync"
               ]
             },
             "DeleteQueue": {
@@ -40,10 +28,40 @@
                 "DeleteQueueAsync"
               ]
             },
-            "PurgeQueue": {
+            "DeleteTask": {
               "methods": [
-                "PurgeQueue",
-                "PurgeQueueAsync"
+                "DeleteTask",
+                "DeleteTaskAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetQueue": {
+              "methods": [
+                "GetQueue",
+                "GetQueueAsync"
+              ]
+            },
+            "GetTask": {
+              "methods": [
+                "GetTask",
+                "GetTaskAsync"
+              ]
+            },
+            "ListQueues": {
+              "methods": [
+                "ListQueues",
+                "ListQueuesAsync"
+              ]
+            },
+            "ListTasks": {
+              "methods": [
+                "ListTasks",
+                "ListTasksAsync"
               ]
             },
             "PauseQueue": {
@@ -52,16 +70,22 @@
                 "PauseQueueAsync"
               ]
             },
+            "PurgeQueue": {
+              "methods": [
+                "PurgeQueue",
+                "PurgeQueueAsync"
+              ]
+            },
             "ResumeQueue": {
               "methods": [
                 "ResumeQueue",
                 "ResumeQueueAsync"
               ]
             },
-            "GetIamPolicy": {
+            "RunTask": {
               "methods": [
-                "GetIamPolicy",
-                "GetIamPolicyAsync"
+                "RunTask",
+                "RunTaskAsync"
               ]
             },
             "SetIamPolicy": {
@@ -76,34 +100,10 @@
                 "TestIamPermissionsAsync"
               ]
             },
-            "ListTasks": {
+            "UpdateQueue": {
               "methods": [
-                "ListTasks",
-                "ListTasksAsync"
-              ]
-            },
-            "GetTask": {
-              "methods": [
-                "GetTask",
-                "GetTaskAsync"
-              ]
-            },
-            "CreateTask": {
-              "methods": [
-                "CreateTask",
-                "CreateTaskAsync"
-              ]
-            },
-            "DeleteTask": {
-              "methods": [
-                "DeleteTask",
-                "DeleteTaskAsync"
-              ]
-            },
-            "RunTask": {
-              "methods": [
-                "RunTask",
-                "RunTaskAsync"
+                "UpdateQueue",
+                "UpdateQueueAsync"
               ]
             }
           }

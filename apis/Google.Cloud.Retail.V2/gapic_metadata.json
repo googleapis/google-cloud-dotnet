@@ -52,28 +52,28 @@
                 "CreateProductAsync"
               ]
             },
-            "GetProduct": {
-              "methods": [
-                "GetProduct",
-                "GetProductAsync"
-              ]
-            },
-            "UpdateProduct": {
-              "methods": [
-                "UpdateProduct",
-                "UpdateProductAsync"
-              ]
-            },
             "DeleteProduct": {
               "methods": [
                 "DeleteProduct",
                 "DeleteProductAsync"
               ]
             },
+            "GetProduct": {
+              "methods": [
+                "GetProduct",
+                "GetProductAsync"
+              ]
+            },
             "ImportProducts": {
               "methods": [
                 "ImportProducts",
                 "ImportProductsAsync"
+              ]
+            },
+            "UpdateProduct": {
+              "methods": [
+                "UpdateProduct",
+                "UpdateProductAsync"
               ]
             }
           }
@@ -85,22 +85,10 @@
         "grpc": {
           "libraryClient": "UserEventServiceClient",
           "rpcs": {
-            "WriteUserEvent": {
-              "methods": [
-                "WriteUserEvent",
-                "WriteUserEventAsync"
-              ]
-            },
             "CollectUserEvent": {
               "methods": [
                 "CollectUserEvent",
                 "CollectUserEventAsync"
-              ]
-            },
-            "PurgeUserEvents": {
-              "methods": [
-                "PurgeUserEvents",
-                "PurgeUserEventsAsync"
               ]
             },
             "ImportUserEvents": {
@@ -109,10 +97,22 @@
                 "ImportUserEventsAsync"
               ]
             },
+            "PurgeUserEvents": {
+              "methods": [
+                "PurgeUserEvents",
+                "PurgeUserEventsAsync"
+              ]
+            },
             "RejoinUserEvents": {
               "methods": [
                 "RejoinUserEvents",
                 "RejoinUserEventsAsync"
+              ]
+            },
+            "WriteUserEvent": {
+              "methods": [
+                "WriteUserEvent",
+                "WriteUserEventAsync"
               ]
             }
           }

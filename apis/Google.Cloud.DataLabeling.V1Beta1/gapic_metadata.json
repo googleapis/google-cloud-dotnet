@@ -10,166 +10,16 @@
         "grpc": {
           "libraryClient": "DataLabelingServiceClient",
           "rpcs": {
-            "CreateDataset": {
-              "methods": [
-                "CreateDataset",
-                "CreateDatasetAsync"
-              ]
-            },
-            "GetDataset": {
-              "methods": [
-                "GetDataset",
-                "GetDatasetAsync"
-              ]
-            },
-            "ListDatasets": {
-              "methods": [
-                "ListDatasets",
-                "ListDatasetsAsync"
-              ]
-            },
-            "DeleteDataset": {
-              "methods": [
-                "DeleteDataset",
-                "DeleteDatasetAsync"
-              ]
-            },
-            "ImportData": {
-              "methods": [
-                "ImportData",
-                "ImportDataAsync"
-              ]
-            },
-            "ExportData": {
-              "methods": [
-                "ExportData",
-                "ExportDataAsync"
-              ]
-            },
-            "GetDataItem": {
-              "methods": [
-                "GetDataItem",
-                "GetDataItemAsync"
-              ]
-            },
-            "ListDataItems": {
-              "methods": [
-                "ListDataItems",
-                "ListDataItemsAsync"
-              ]
-            },
-            "GetAnnotatedDataset": {
-              "methods": [
-                "GetAnnotatedDataset",
-                "GetAnnotatedDatasetAsync"
-              ]
-            },
-            "ListAnnotatedDatasets": {
-              "methods": [
-                "ListAnnotatedDatasets",
-                "ListAnnotatedDatasetsAsync"
-              ]
-            },
-            "DeleteAnnotatedDataset": {
-              "methods": [
-                "DeleteAnnotatedDataset",
-                "DeleteAnnotatedDatasetAsync"
-              ]
-            },
-            "LabelImage": {
-              "methods": [
-                "LabelImage",
-                "LabelImageAsync"
-              ]
-            },
-            "LabelVideo": {
-              "methods": [
-                "LabelVideo",
-                "LabelVideoAsync"
-              ]
-            },
-            "LabelText": {
-              "methods": [
-                "LabelText",
-                "LabelTextAsync"
-              ]
-            },
-            "GetExample": {
-              "methods": [
-                "GetExample",
-                "GetExampleAsync"
-              ]
-            },
-            "ListExamples": {
-              "methods": [
-                "ListExamples",
-                "ListExamplesAsync"
-              ]
-            },
             "CreateAnnotationSpecSet": {
               "methods": [
                 "CreateAnnotationSpecSet",
                 "CreateAnnotationSpecSetAsync"
               ]
             },
-            "GetAnnotationSpecSet": {
+            "CreateDataset": {
               "methods": [
-                "GetAnnotationSpecSet",
-                "GetAnnotationSpecSetAsync"
-              ]
-            },
-            "ListAnnotationSpecSets": {
-              "methods": [
-                "ListAnnotationSpecSets",
-                "ListAnnotationSpecSetsAsync"
-              ]
-            },
-            "DeleteAnnotationSpecSet": {
-              "methods": [
-                "DeleteAnnotationSpecSet",
-                "DeleteAnnotationSpecSetAsync"
-              ]
-            },
-            "CreateInstruction": {
-              "methods": [
-                "CreateInstruction",
-                "CreateInstructionAsync"
-              ]
-            },
-            "GetInstruction": {
-              "methods": [
-                "GetInstruction",
-                "GetInstructionAsync"
-              ]
-            },
-            "ListInstructions": {
-              "methods": [
-                "ListInstructions",
-                "ListInstructionsAsync"
-              ]
-            },
-            "DeleteInstruction": {
-              "methods": [
-                "DeleteInstruction",
-                "DeleteInstructionAsync"
-              ]
-            },
-            "GetEvaluation": {
-              "methods": [
-                "GetEvaluation",
-                "GetEvaluationAsync"
-              ]
-            },
-            "SearchEvaluations": {
-              "methods": [
-                "SearchEvaluations",
-                "SearchEvaluationsAsync"
-              ]
-            },
-            "SearchExampleComparisons": {
-              "methods": [
-                "SearchExampleComparisons",
-                "SearchExampleComparisonsAsync"
+                "CreateDataset",
+                "CreateDatasetAsync"
               ]
             },
             "CreateEvaluationJob": {
@@ -178,16 +28,160 @@
                 "CreateEvaluationJobAsync"
               ]
             },
-            "UpdateEvaluationJob": {
+            "CreateInstruction": {
               "methods": [
-                "UpdateEvaluationJob",
-                "UpdateEvaluationJobAsync"
+                "CreateInstruction",
+                "CreateInstructionAsync"
+              ]
+            },
+            "DeleteAnnotatedDataset": {
+              "methods": [
+                "DeleteAnnotatedDataset",
+                "DeleteAnnotatedDatasetAsync"
+              ]
+            },
+            "DeleteAnnotationSpecSet": {
+              "methods": [
+                "DeleteAnnotationSpecSet",
+                "DeleteAnnotationSpecSetAsync"
+              ]
+            },
+            "DeleteDataset": {
+              "methods": [
+                "DeleteDataset",
+                "DeleteDatasetAsync"
+              ]
+            },
+            "DeleteEvaluationJob": {
+              "methods": [
+                "DeleteEvaluationJob",
+                "DeleteEvaluationJobAsync"
+              ]
+            },
+            "DeleteInstruction": {
+              "methods": [
+                "DeleteInstruction",
+                "DeleteInstructionAsync"
+              ]
+            },
+            "ExportData": {
+              "methods": [
+                "ExportData",
+                "ExportDataAsync"
+              ]
+            },
+            "GetAnnotatedDataset": {
+              "methods": [
+                "GetAnnotatedDataset",
+                "GetAnnotatedDatasetAsync"
+              ]
+            },
+            "GetAnnotationSpecSet": {
+              "methods": [
+                "GetAnnotationSpecSet",
+                "GetAnnotationSpecSetAsync"
+              ]
+            },
+            "GetDataItem": {
+              "methods": [
+                "GetDataItem",
+                "GetDataItemAsync"
+              ]
+            },
+            "GetDataset": {
+              "methods": [
+                "GetDataset",
+                "GetDatasetAsync"
+              ]
+            },
+            "GetEvaluation": {
+              "methods": [
+                "GetEvaluation",
+                "GetEvaluationAsync"
               ]
             },
             "GetEvaluationJob": {
               "methods": [
                 "GetEvaluationJob",
                 "GetEvaluationJobAsync"
+              ]
+            },
+            "GetExample": {
+              "methods": [
+                "GetExample",
+                "GetExampleAsync"
+              ]
+            },
+            "GetInstruction": {
+              "methods": [
+                "GetInstruction",
+                "GetInstructionAsync"
+              ]
+            },
+            "ImportData": {
+              "methods": [
+                "ImportData",
+                "ImportDataAsync"
+              ]
+            },
+            "LabelImage": {
+              "methods": [
+                "LabelImage",
+                "LabelImageAsync"
+              ]
+            },
+            "LabelText": {
+              "methods": [
+                "LabelText",
+                "LabelTextAsync"
+              ]
+            },
+            "LabelVideo": {
+              "methods": [
+                "LabelVideo",
+                "LabelVideoAsync"
+              ]
+            },
+            "ListAnnotatedDatasets": {
+              "methods": [
+                "ListAnnotatedDatasets",
+                "ListAnnotatedDatasetsAsync"
+              ]
+            },
+            "ListAnnotationSpecSets": {
+              "methods": [
+                "ListAnnotationSpecSets",
+                "ListAnnotationSpecSetsAsync"
+              ]
+            },
+            "ListDataItems": {
+              "methods": [
+                "ListDataItems",
+                "ListDataItemsAsync"
+              ]
+            },
+            "ListDatasets": {
+              "methods": [
+                "ListDatasets",
+                "ListDatasetsAsync"
+              ]
+            },
+            "ListEvaluationJobs": {
+              "methods": [
+                "ListEvaluationJobs",
+                "ListEvaluationJobsAsync"
+              ]
+            },
+            "ListExamples": {
+              "methods": [
+                "ListExamples",
+                "ListExamplesAsync"
+              ]
+            },
+            "ListInstructions": {
+              "methods": [
+                "ListInstructions",
+                "ListInstructionsAsync"
               ]
             },
             "PauseEvaluationJob": {
@@ -202,16 +196,22 @@
                 "ResumeEvaluationJobAsync"
               ]
             },
-            "DeleteEvaluationJob": {
+            "SearchEvaluations": {
               "methods": [
-                "DeleteEvaluationJob",
-                "DeleteEvaluationJobAsync"
+                "SearchEvaluations",
+                "SearchEvaluationsAsync"
               ]
             },
-            "ListEvaluationJobs": {
+            "SearchExampleComparisons": {
               "methods": [
-                "ListEvaluationJobs",
-                "ListEvaluationJobsAsync"
+                "SearchExampleComparisons",
+                "SearchExampleComparisonsAsync"
+              ]
+            },
+            "UpdateEvaluationJob": {
+              "methods": [
+                "UpdateEvaluationJob",
+                "UpdateEvaluationJobAsync"
               ]
             }
           }

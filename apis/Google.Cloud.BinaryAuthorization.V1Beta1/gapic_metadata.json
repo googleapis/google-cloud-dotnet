@@ -10,22 +10,16 @@
         "grpc": {
           "libraryClient": "BinauthzManagementServiceV1Beta1Client",
           "rpcs": {
-            "GetPolicy": {
-              "methods": [
-                "GetPolicy",
-                "GetPolicyAsync"
-              ]
-            },
-            "UpdatePolicy": {
-              "methods": [
-                "UpdatePolicy",
-                "UpdatePolicyAsync"
-              ]
-            },
             "CreateAttestor": {
               "methods": [
                 "CreateAttestor",
                 "CreateAttestorAsync"
+              ]
+            },
+            "DeleteAttestor": {
+              "methods": [
+                "DeleteAttestor",
+                "DeleteAttestorAsync"
               ]
             },
             "GetAttestor": {
@@ -34,10 +28,10 @@
                 "GetAttestorAsync"
               ]
             },
-            "UpdateAttestor": {
+            "GetPolicy": {
               "methods": [
-                "UpdateAttestor",
-                "UpdateAttestorAsync"
+                "GetPolicy",
+                "GetPolicyAsync"
               ]
             },
             "ListAttestors": {
@@ -46,10 +40,16 @@
                 "ListAttestorsAsync"
               ]
             },
-            "DeleteAttestor": {
+            "UpdateAttestor": {
               "methods": [
-                "DeleteAttestor",
-                "DeleteAttestorAsync"
+                "UpdateAttestor",
+                "UpdateAttestorAsync"
+              ]
+            },
+            "UpdatePolicy": {
+              "methods": [
+                "UpdatePolicy",
+                "UpdatePolicyAsync"
               ]
             }
           }
