@@ -64,6 +64,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 RowCount = 743251772,
                 Metadata = new ResponseMetaData(),
                 PropertyQuota = new PropertyQuota(),
+                Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.RunReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
@@ -110,6 +111,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 RowCount = 743251772,
                 Metadata = new ResponseMetaData(),
                 PropertyQuota = new PropertyQuota(),
+                Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.RunReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RunReportResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
@@ -150,6 +152,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Aggregates = { new Row(), },
                 Metadata = new ResponseMetaData(),
                 PropertyQuota = new PropertyQuota(),
+                Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.RunPivotReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
@@ -188,6 +191,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Aggregates = { new Row(), },
                 Metadata = new ResponseMetaData(),
                 PropertyQuota = new PropertyQuota(),
+                Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.RunPivotReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RunPivotReportResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
@@ -216,6 +220,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 {
                     new RunReportResponse(),
                 },
+                Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.BatchRunReports(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
@@ -242,6 +247,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 {
                     new RunReportResponse(),
                 },
+                Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.BatchRunReportsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchRunReportsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
@@ -270,6 +276,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 {
                     new RunPivotReportResponse(),
                 },
+                Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.BatchRunPivotReports(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
@@ -296,6 +303,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 {
                     new RunPivotReportResponse(),
                 },
+                Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.BatchRunPivotReportsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchRunPivotReportsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
@@ -506,6 +514,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Minimums = { new Row(), },
                 RowCount = 743251772,
                 PropertyQuota = new PropertyQuota(),
+                Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.RunRealtimeReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
@@ -546,6 +555,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Minimums = { new Row(), },
                 RowCount = 743251772,
                 PropertyQuota = new PropertyQuota(),
+                Kind = "kindf7aa39d9",
             };
             mockGrpcClient.Setup(x => x.RunRealtimeReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RunRealtimeReportResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);

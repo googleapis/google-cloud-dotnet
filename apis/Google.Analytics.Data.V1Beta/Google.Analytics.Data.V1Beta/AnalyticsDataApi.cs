@@ -49,7 +49,7 @@ namespace Google.Analytics.Data.V1Beta {
             "LnYxYmV0YS5PcmRlckJ5EhUKDWN1cnJlbmN5X2NvZGUYCyABKAkSPQoLY29o",
             "b3J0X3NwZWMYDCABKAsyKC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
             "LkNvaG9ydFNwZWMSFwoPa2VlcF9lbXB0eV9yb3dzGA0gASgIEh0KFXJldHVy",
-            "bl9wcm9wZXJ0eV9xdW90YRgOIAEoCCKJBAoRUnVuUmVwb3J0UmVzcG9uc2US",
+            "bl9wcm9wZXJ0eV9xdW90YRgOIAEoCCKXBAoRUnVuUmVwb3J0UmVzcG9uc2US",
             "SAoRZGltZW5zaW9uX2hlYWRlcnMYASADKAsyLS5nb29nbGUuYW5hbHl0aWNz",
             "LmRhdGEudjFiZXRhLkRpbWVuc2lvbkhlYWRlchJCCg5tZXRyaWNfaGVhZGVy",
             "cxgCIAMoCzIqLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0cmlj",
@@ -61,108 +61,110 @@ namespace Google.Analytics.Data.V1Beta {
             "GAcgASgFEkAKCG1ldGFkYXRhGAggASgLMi4uZ29vZ2xlLmFuYWx5dGljcy5k",
             "YXRhLnYxYmV0YS5SZXNwb25zZU1ldGFEYXRhEkMKDnByb3BlcnR5X3F1b3Rh",
             "GAkgASgLMisuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5Qcm9wZXJ0",
-            "eVF1b3RhIq8EChVSdW5QaXZvdFJlcG9ydFJlcXVlc3QSEAoIcHJvcGVydHkY",
-            "ASABKAkSOwoKZGltZW5zaW9ucxgCIAMoCzInLmdvb2dsZS5hbmFseXRpY3Mu",
-            "ZGF0YS52MWJldGEuRGltZW5zaW9uEjUKB21ldHJpY3MYAyADKAsyJC5nb29n",
-            "bGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldHJpYxI8CgtkYXRlX3Jhbmdl",
-            "cxgEIAMoCzInLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuRGF0ZVJh",
-            "bmdlEjMKBnBpdm90cxgFIAMoCzIjLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
-            "MWJldGEuUGl2b3QSSAoQZGltZW5zaW9uX2ZpbHRlchgGIAEoCzIuLmdvb2ds",
-            "ZS5hbmFseXRpY3MuZGF0YS52MWJldGEuRmlsdGVyRXhwcmVzc2lvbhJFCg1t",
-            "ZXRyaWNfZmlsdGVyGAcgASgLMi4uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYx",
-            "YmV0YS5GaWx0ZXJFeHByZXNzaW9uEhUKDWN1cnJlbmN5X2NvZGUYCCABKAkS",
-            "PQoLY29ob3J0X3NwZWMYCSABKAsyKC5nb29nbGUuYW5hbHl0aWNzLmRhdGEu",
-            "djFiZXRhLkNvaG9ydFNwZWMSFwoPa2VlcF9lbXB0eV9yb3dzGAogASgIEh0K",
-            "FXJldHVybl9wcm9wZXJ0eV9xdW90YRgLIAEoCCLXAwoWUnVuUGl2b3RSZXBv",
-            "cnRSZXNwb25zZRJACg1waXZvdF9oZWFkZXJzGAEgAygLMikuZ29vZ2xlLmFu",
-            "YWx5dGljcy5kYXRhLnYxYmV0YS5QaXZvdEhlYWRlchJIChFkaW1lbnNpb25f",
-            "aGVhZGVycxgCIAMoCzItLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEu",
-            "RGltZW5zaW9uSGVhZGVyEkIKDm1ldHJpY19oZWFkZXJzGAMgAygLMiouZ29v",
-            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5NZXRyaWNIZWFkZXISLwoEcm93",
-            "cxgEIAMoCzIhLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUm93EjUK",
-            "CmFnZ3JlZ2F0ZXMYBSADKAsyIS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFi",
-            "ZXRhLlJvdxJACghtZXRhZGF0YRgGIAEoCzIuLmdvb2dsZS5hbmFseXRpY3Mu",
-            "ZGF0YS52MWJldGEuUmVzcG9uc2VNZXRhRGF0YRJDCg5wcm9wZXJ0eV9xdW90",
-            "YRgHIAEoCzIrLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUHJvcGVy",
-            "dHlRdW90YSJsChZCYXRjaFJ1blJlcG9ydHNSZXF1ZXN0EhAKCHByb3BlcnR5",
-            "GAEgASgJEkAKCHJlcXVlc3RzGAIgAygLMi4uZ29vZ2xlLmFuYWx5dGljcy5k",
-            "YXRhLnYxYmV0YS5SdW5SZXBvcnRSZXF1ZXN0IlsKF0JhdGNoUnVuUmVwb3J0",
-            "c1Jlc3BvbnNlEkAKB3JlcG9ydHMYASADKAsyLy5nb29nbGUuYW5hbHl0aWNz",
-            "LmRhdGEudjFiZXRhLlJ1blJlcG9ydFJlc3BvbnNlInYKG0JhdGNoUnVuUGl2",
-            "b3RSZXBvcnRzUmVxdWVzdBIQCghwcm9wZXJ0eRgBIAEoCRJFCghyZXF1ZXN0",
-            "cxgCIAMoCzIzLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUnVuUGl2",
-            "b3RSZXBvcnRSZXF1ZXN0ImsKHEJhdGNoUnVuUGl2b3RSZXBvcnRzUmVzcG9u",
-            "c2USSwoNcGl2b3RfcmVwb3J0cxgBIAMoCzI0Lmdvb2dsZS5hbmFseXRpY3Mu",
-            "ZGF0YS52MWJldGEuUnVuUGl2b3RSZXBvcnRSZXNwb25zZSJRChJHZXRNZXRh",
-            "ZGF0YVJlcXVlc3QSOwoEbmFtZRgBIAEoCUIt4EEC+kEnCiVhbmFseXRpY3Nk",
-            "YXRhLmdvb2dsZWFwaXMuY29tL01ldGFkYXRhIucDChhSdW5SZWFsdGltZVJl",
-            "cG9ydFJlcXVlc3QSEAoIcHJvcGVydHkYASABKAkSOwoKZGltZW5zaW9ucxgC",
-            "IAMoCzInLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuRGltZW5zaW9u",
-            "EjUKB21ldHJpY3MYAyADKAsyJC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFi",
-            "ZXRhLk1ldHJpYxJIChBkaW1lbnNpb25fZmlsdGVyGAQgASgLMi4uZ29vZ2xl",
-            "LmFuYWx5dGljcy5kYXRhLnYxYmV0YS5GaWx0ZXJFeHByZXNzaW9uEkUKDW1l",
-            "dHJpY19maWx0ZXIYBSABKAsyLi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFi",
-            "ZXRhLkZpbHRlckV4cHJlc3Npb24SDQoFbGltaXQYBiABKAMSTAoTbWV0cmlj",
-            "X2FnZ3JlZ2F0aW9ucxgHIAMoDjIvLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
-            "MWJldGEuTWV0cmljQWdncmVnYXRpb24SOAoJb3JkZXJfYnlzGAggAygLMiUu",
-            "Z29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5PcmRlckJ5Eh0KFXJldHVy",
-            "bl9wcm9wZXJ0eV9xdW90YRgJIAEoCCLPAwoZUnVuUmVhbHRpbWVSZXBvcnRS",
-            "ZXNwb25zZRJIChFkaW1lbnNpb25faGVhZGVycxgBIAMoCzItLmdvb2dsZS5h",
-            "bmFseXRpY3MuZGF0YS52MWJldGEuRGltZW5zaW9uSGVhZGVyEkIKDm1ldHJp",
-            "Y19oZWFkZXJzGAIgAygLMiouZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0",
-            "YS5NZXRyaWNIZWFkZXISLwoEcm93cxgDIAMoCzIhLmdvb2dsZS5hbmFseXRp",
-            "Y3MuZGF0YS52MWJldGEuUm93EjEKBnRvdGFscxgEIAMoCzIhLmdvb2dsZS5h",
-            "bmFseXRpY3MuZGF0YS52MWJldGEuUm93EjMKCG1heGltdW1zGAUgAygLMiEu",
-            "Z29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5Sb3cSMwoIbWluaW11bXMY",
-            "BiADKAsyIS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlJvdxIRCgly",
-            "b3dfY291bnQYByABKAUSQwoOcHJvcGVydHlfcXVvdGEYCCABKAsyKy5nb29n",
-            "bGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlByb3BlcnR5UXVvdGEy4wkKEUJl",
-            "dGFBbmFseXRpY3NEYXRhEqIBCglSdW5SZXBvcnQSLi5nb29nbGUuYW5hbHl0",
-            "aWNzLmRhdGEudjFiZXRhLlJ1blJlcG9ydFJlcXVlc3QaLy5nb29nbGUuYW5h",
-            "bHl0aWNzLmRhdGEudjFiZXRhLlJ1blJlcG9ydFJlc3BvbnNlIjSC0+STAi4i",
-            "KS92MWJldGEve3Byb3BlcnR5PXByb3BlcnRpZXMvKn06cnVuUmVwb3J0OgEq",
-            "ErYBCg5SdW5QaXZvdFJlcG9ydBIzLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
-            "MWJldGEuUnVuUGl2b3RSZXBvcnRSZXF1ZXN0GjQuZ29vZ2xlLmFuYWx5dGlj",
-            "cy5kYXRhLnYxYmV0YS5SdW5QaXZvdFJlcG9ydFJlc3BvbnNlIjmC0+STAjMi",
-            "Li92MWJldGEve3Byb3BlcnR5PXByb3BlcnRpZXMvKn06cnVuUGl2b3RSZXBv",
-            "cnQ6ASoSugEKD0JhdGNoUnVuUmVwb3J0cxI0Lmdvb2dsZS5hbmFseXRpY3Mu",
-            "ZGF0YS52MWJldGEuQmF0Y2hSdW5SZXBvcnRzUmVxdWVzdBo1Lmdvb2dsZS5h",
-            "bmFseXRpY3MuZGF0YS52MWJldGEuQmF0Y2hSdW5SZXBvcnRzUmVzcG9uc2Ui",
-            "OoLT5JMCNCIvL3YxYmV0YS97cHJvcGVydHk9cHJvcGVydGllcy8qfTpiYXRj",
-            "aFJ1blJlcG9ydHM6ASoSzgEKFEJhdGNoUnVuUGl2b3RSZXBvcnRzEjkuZ29v",
-            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5CYXRjaFJ1blBpdm90UmVwb3J0",
-            "c1JlcXVlc3QaOi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkJhdGNo",
-            "UnVuUGl2b3RSZXBvcnRzUmVzcG9uc2UiP4LT5JMCOSI0L3YxYmV0YS97cHJv",
-            "cGVydHk9cHJvcGVydGllcy8qfTpiYXRjaFJ1blBpdm90UmVwb3J0czoBKhKc",
-            "AQoLR2V0TWV0YWRhdGESMC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "LkdldE1ldGFkYXRhUmVxdWVzdBomLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
-            "MWJldGEuTWV0YWRhdGEiM4LT5JMCJhIkL3YxYmV0YS97bmFtZT1wcm9wZXJ0",
-            "aWVzLyovbWV0YWRhdGF92kEEbmFtZRLCAQoRUnVuUmVhbHRpbWVSZXBvcnQS",
-            "Ni5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlJ1blJlYWx0aW1lUmVw",
-            "b3J0UmVxdWVzdBo3Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUnVu",
-            "UmVhbHRpbWVSZXBvcnRSZXNwb25zZSI8gtPkkwI2IjEvdjFiZXRhL3twcm9w",
-            "ZXJ0eT1wcm9wZXJ0aWVzLyp9OnJ1blJlYWx0aW1lUmVwb3J0OgEqGn7KQRxh",
-            "bmFseXRpY3NkYXRhLmdvb2dsZWFwaXMuY29t0kFcaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9hbmFseXRpY3MsaHR0cHM6Ly93d3cuZ29vZ2xl",
-            "YXBpcy5jb20vYXV0aC9hbmFseXRpY3MucmVhZG9ubHlCfQogY29tLmdvb2ds",
-            "ZS5hbmFseXRpY3MuZGF0YS52MWJldGFCFUFuYWx5dGljc0RhdGFBcGlQcm90",
-            "b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fu",
-            "YWx5dGljcy9kYXRhL3YxYmV0YTtkYXRhYgZwcm90bzM="));
+            "eVF1b3RhEgwKBGtpbmQYCiABKAkirwQKFVJ1blBpdm90UmVwb3J0UmVxdWVz",
+            "dBIQCghwcm9wZXJ0eRgBIAEoCRI7CgpkaW1lbnNpb25zGAIgAygLMicuZ29v",
+            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5EaW1lbnNpb24SNQoHbWV0cmlj",
+            "cxgDIAMoCzIkLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0cmlj",
+            "EjwKC2RhdGVfcmFuZ2VzGAQgAygLMicuZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
+            "LnYxYmV0YS5EYXRlUmFuZ2USMwoGcGl2b3RzGAUgAygLMiMuZ29vZ2xlLmFu",
+            "YWx5dGljcy5kYXRhLnYxYmV0YS5QaXZvdBJIChBkaW1lbnNpb25fZmlsdGVy",
+            "GAYgASgLMi4uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5GaWx0ZXJF",
+            "eHByZXNzaW9uEkUKDW1ldHJpY19maWx0ZXIYByABKAsyLi5nb29nbGUuYW5h",
+            "bHl0aWNzLmRhdGEudjFiZXRhLkZpbHRlckV4cHJlc3Npb24SFQoNY3VycmVu",
+            "Y3lfY29kZRgIIAEoCRI9Cgtjb2hvcnRfc3BlYxgJIAEoCzIoLmdvb2dsZS5h",
+            "bmFseXRpY3MuZGF0YS52MWJldGEuQ29ob3J0U3BlYxIXCg9rZWVwX2VtcHR5",
+            "X3Jvd3MYCiABKAgSHQoVcmV0dXJuX3Byb3BlcnR5X3F1b3RhGAsgASgIIuUD",
+            "ChZSdW5QaXZvdFJlcG9ydFJlc3BvbnNlEkAKDXBpdm90X2hlYWRlcnMYASAD",
+            "KAsyKS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlBpdm90SGVhZGVy",
+            "EkgKEWRpbWVuc2lvbl9oZWFkZXJzGAIgAygLMi0uZ29vZ2xlLmFuYWx5dGlj",
+            "cy5kYXRhLnYxYmV0YS5EaW1lbnNpb25IZWFkZXISQgoObWV0cmljX2hlYWRl",
+            "cnMYAyADKAsyKi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldHJp",
+            "Y0hlYWRlchIvCgRyb3dzGAQgAygLMiEuZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
+            "LnYxYmV0YS5Sb3cSNQoKYWdncmVnYXRlcxgFIAMoCzIhLmdvb2dsZS5hbmFs",
+            "eXRpY3MuZGF0YS52MWJldGEuUm93EkAKCG1ldGFkYXRhGAYgASgLMi4uZ29v",
+            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5SZXNwb25zZU1ldGFEYXRhEkMK",
+            "DnByb3BlcnR5X3F1b3RhGAcgASgLMisuZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
+            "LnYxYmV0YS5Qcm9wZXJ0eVF1b3RhEgwKBGtpbmQYCCABKAkibAoWQmF0Y2hS",
+            "dW5SZXBvcnRzUmVxdWVzdBIQCghwcm9wZXJ0eRgBIAEoCRJACghyZXF1ZXN0",
+            "cxgCIAMoCzIuLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUnVuUmVw",
+            "b3J0UmVxdWVzdCJpChdCYXRjaFJ1blJlcG9ydHNSZXNwb25zZRJACgdyZXBv",
+            "cnRzGAEgAygLMi8uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5SdW5S",
+            "ZXBvcnRSZXNwb25zZRIMCgRraW5kGAIgASgJInYKG0JhdGNoUnVuUGl2b3RS",
+            "ZXBvcnRzUmVxdWVzdBIQCghwcm9wZXJ0eRgBIAEoCRJFCghyZXF1ZXN0cxgC",
+            "IAMoCzIzLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUnVuUGl2b3RS",
+            "ZXBvcnRSZXF1ZXN0InkKHEJhdGNoUnVuUGl2b3RSZXBvcnRzUmVzcG9uc2US",
+            "SwoNcGl2b3RfcmVwb3J0cxgBIAMoCzI0Lmdvb2dsZS5hbmFseXRpY3MuZGF0",
+            "YS52MWJldGEuUnVuUGl2b3RSZXBvcnRSZXNwb25zZRIMCgRraW5kGAIgASgJ",
+            "IlEKEkdldE1ldGFkYXRhUmVxdWVzdBI7CgRuYW1lGAEgASgJQi3gQQL6QScK",
+            "JWFuYWx5dGljc2RhdGEuZ29vZ2xlYXBpcy5jb20vTWV0YWRhdGEi5wMKGFJ1",
+            "blJlYWx0aW1lUmVwb3J0UmVxdWVzdBIQCghwcm9wZXJ0eRgBIAEoCRI7Cgpk",
+            "aW1lbnNpb25zGAIgAygLMicuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0",
+            "YS5EaW1lbnNpb24SNQoHbWV0cmljcxgDIAMoCzIkLmdvb2dsZS5hbmFseXRp",
+            "Y3MuZGF0YS52MWJldGEuTWV0cmljEkgKEGRpbWVuc2lvbl9maWx0ZXIYBCAB",
+            "KAsyLi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkZpbHRlckV4cHJl",
+            "c3Npb24SRQoNbWV0cmljX2ZpbHRlchgFIAEoCzIuLmdvb2dsZS5hbmFseXRp",
+            "Y3MuZGF0YS52MWJldGEuRmlsdGVyRXhwcmVzc2lvbhINCgVsaW1pdBgGIAEo",
+            "AxJMChNtZXRyaWNfYWdncmVnYXRpb25zGAcgAygOMi8uZ29vZ2xlLmFuYWx5",
+            "dGljcy5kYXRhLnYxYmV0YS5NZXRyaWNBZ2dyZWdhdGlvbhI4CglvcmRlcl9i",
+            "eXMYCCADKAsyJS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk9yZGVy",
+            "QnkSHQoVcmV0dXJuX3Byb3BlcnR5X3F1b3RhGAkgASgIIt0DChlSdW5SZWFs",
+            "dGltZVJlcG9ydFJlc3BvbnNlEkgKEWRpbWVuc2lvbl9oZWFkZXJzGAEgAygL",
+            "Mi0uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5EaW1lbnNpb25IZWFk",
+            "ZXISQgoObWV0cmljX2hlYWRlcnMYAiADKAsyKi5nb29nbGUuYW5hbHl0aWNz",
+            "LmRhdGEudjFiZXRhLk1ldHJpY0hlYWRlchIvCgRyb3dzGAMgAygLMiEuZ29v",
+            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5Sb3cSMQoGdG90YWxzGAQgAygL",
+            "MiEuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5Sb3cSMwoIbWF4aW11",
+            "bXMYBSADKAsyIS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlJvdxIz",
+            "CghtaW5pbXVtcxgGIAMoCzIhLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJl",
+            "dGEuUm93EhEKCXJvd19jb3VudBgHIAEoBRJDCg5wcm9wZXJ0eV9xdW90YRgI",
+            "IAEoCzIrLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUHJvcGVydHlR",
+            "dW90YRIMCgRraW5kGAkgASgJMuMJChFCZXRhQW5hbHl0aWNzRGF0YRKiAQoJ",
+            "UnVuUmVwb3J0Ei4uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5SdW5S",
+            "ZXBvcnRSZXF1ZXN0Gi8uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5S",
+            "dW5SZXBvcnRSZXNwb25zZSI0gtPkkwIuIikvdjFiZXRhL3twcm9wZXJ0eT1w",
+            "cm9wZXJ0aWVzLyp9OnJ1blJlcG9ydDoBKhK2AQoOUnVuUGl2b3RSZXBvcnQS",
+            "My5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlJ1blBpdm90UmVwb3J0",
+            "UmVxdWVzdBo0Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUnVuUGl2",
+            "b3RSZXBvcnRSZXNwb25zZSI5gtPkkwIzIi4vdjFiZXRhL3twcm9wZXJ0eT1w",
+            "cm9wZXJ0aWVzLyp9OnJ1blBpdm90UmVwb3J0OgEqEroBCg9CYXRjaFJ1blJl",
+            "cG9ydHMSNC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkJhdGNoUnVu",
+            "UmVwb3J0c1JlcXVlc3QaNS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
+            "LkJhdGNoUnVuUmVwb3J0c1Jlc3BvbnNlIjqC0+STAjQiLy92MWJldGEve3By",
+            "b3BlcnR5PXByb3BlcnRpZXMvKn06YmF0Y2hSdW5SZXBvcnRzOgEqEs4BChRC",
+            "YXRjaFJ1blBpdm90UmVwb3J0cxI5Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
+            "MWJldGEuQmF0Y2hSdW5QaXZvdFJlcG9ydHNSZXF1ZXN0GjouZ29vZ2xlLmFu",
+            "YWx5dGljcy5kYXRhLnYxYmV0YS5CYXRjaFJ1blBpdm90UmVwb3J0c1Jlc3Bv",
+            "bnNlIj+C0+STAjkiNC92MWJldGEve3Byb3BlcnR5PXByb3BlcnRpZXMvKn06",
+            "YmF0Y2hSdW5QaXZvdFJlcG9ydHM6ASoSnAEKC0dldE1ldGFkYXRhEjAuZ29v",
+            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5HZXRNZXRhZGF0YVJlcXVlc3Qa",
+            "Ji5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldGFkYXRhIjOC0+ST",
+            "AiYSJC92MWJldGEve25hbWU9cHJvcGVydGllcy8qL21ldGFkYXRhfdpBBG5h",
+            "bWUSwgEKEVJ1blJlYWx0aW1lUmVwb3J0EjYuZ29vZ2xlLmFuYWx5dGljcy5k",
+            "YXRhLnYxYmV0YS5SdW5SZWFsdGltZVJlcG9ydFJlcXVlc3QaNy5nb29nbGUu",
+            "YW5hbHl0aWNzLmRhdGEudjFiZXRhLlJ1blJlYWx0aW1lUmVwb3J0UmVzcG9u",
+            "c2UiPILT5JMCNiIxL3YxYmV0YS97cHJvcGVydHk9cHJvcGVydGllcy8qfTpy",
+            "dW5SZWFsdGltZVJlcG9ydDoBKhp+ykEcYW5hbHl0aWNzZGF0YS5nb29nbGVh",
+            "cGlzLmNvbdJBXGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYW5h",
+            "bHl0aWNzLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYW5hbHl0",
+            "aWNzLnJlYWRvbmx5Qn0KIGNvbS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFi",
+            "ZXRhQhVBbmFseXRpY3NEYXRhQXBpUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5v",
+            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hbmFseXRpY3MvZGF0YS92MWJldGE7",
+            "ZGF0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Metadata), global::Google.Analytics.Data.V1Beta.Metadata.Parser, new[]{ "Name", "Dimensions", "Metrics" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunReportRequest), global::Google.Analytics.Data.V1Beta.RunReportRequest.Parser, new[]{ "Property", "Dimensions", "Metrics", "DateRanges", "DimensionFilter", "MetricFilter", "Offset", "Limit", "MetricAggregations", "OrderBys", "CurrencyCode", "CohortSpec", "KeepEmptyRows", "ReturnPropertyQuota" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunReportResponse), global::Google.Analytics.Data.V1Beta.RunReportResponse.Parser, new[]{ "DimensionHeaders", "MetricHeaders", "Rows", "Totals", "Maximums", "Minimums", "RowCount", "Metadata", "PropertyQuota" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunReportResponse), global::Google.Analytics.Data.V1Beta.RunReportResponse.Parser, new[]{ "DimensionHeaders", "MetricHeaders", "Rows", "Totals", "Maximums", "Minimums", "RowCount", "Metadata", "PropertyQuota", "Kind" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunPivotReportRequest), global::Google.Analytics.Data.V1Beta.RunPivotReportRequest.Parser, new[]{ "Property", "Dimensions", "Metrics", "DateRanges", "Pivots", "DimensionFilter", "MetricFilter", "CurrencyCode", "CohortSpec", "KeepEmptyRows", "ReturnPropertyQuota" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunPivotReportResponse), global::Google.Analytics.Data.V1Beta.RunPivotReportResponse.Parser, new[]{ "PivotHeaders", "DimensionHeaders", "MetricHeaders", "Rows", "Aggregates", "Metadata", "PropertyQuota" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunPivotReportResponse), global::Google.Analytics.Data.V1Beta.RunPivotReportResponse.Parser, new[]{ "PivotHeaders", "DimensionHeaders", "MetricHeaders", "Rows", "Aggregates", "Metadata", "PropertyQuota", "Kind" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.BatchRunReportsRequest), global::Google.Analytics.Data.V1Beta.BatchRunReportsRequest.Parser, new[]{ "Property", "Requests" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.BatchRunReportsResponse), global::Google.Analytics.Data.V1Beta.BatchRunReportsResponse.Parser, new[]{ "Reports" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.BatchRunReportsResponse), global::Google.Analytics.Data.V1Beta.BatchRunReportsResponse.Parser, new[]{ "Reports", "Kind" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.BatchRunPivotReportsRequest), global::Google.Analytics.Data.V1Beta.BatchRunPivotReportsRequest.Parser, new[]{ "Property", "Requests" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.BatchRunPivotReportsResponse), global::Google.Analytics.Data.V1Beta.BatchRunPivotReportsResponse.Parser, new[]{ "PivotReports" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.BatchRunPivotReportsResponse), global::Google.Analytics.Data.V1Beta.BatchRunPivotReportsResponse.Parser, new[]{ "PivotReports", "Kind" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.GetMetadataRequest), global::Google.Analytics.Data.V1Beta.GetMetadataRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunRealtimeReportRequest), global::Google.Analytics.Data.V1Beta.RunRealtimeReportRequest.Parser, new[]{ "Property", "Dimensions", "Metrics", "DimensionFilter", "MetricFilter", "Limit", "MetricAggregations", "OrderBys", "ReturnPropertyQuota" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunRealtimeReportResponse), global::Google.Analytics.Data.V1Beta.RunRealtimeReportResponse.Parser, new[]{ "DimensionHeaders", "MetricHeaders", "Rows", "Totals", "Maximums", "Minimums", "RowCount", "PropertyQuota" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunRealtimeReportResponse), global::Google.Analytics.Data.V1Beta.RunRealtimeReportResponse.Parser, new[]{ "DimensionHeaders", "MetricHeaders", "Rows", "Totals", "Maximums", "Minimums", "RowCount", "PropertyQuota", "Kind" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1142,6 +1144,7 @@ namespace Google.Analytics.Data.V1Beta {
       rowCount_ = other.rowCount_;
       metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
       propertyQuota_ = other.propertyQuota_ != null ? other.propertyQuota_.Clone() : null;
+      kind_ = other.kind_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1279,6 +1282,22 @@ namespace Google.Analytics.Data.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "kind" field.</summary>
+    public const int KindFieldNumber = 10;
+    private string kind_ = "";
+    /// <summary>
+    /// Identifies what kind of resource this message is. This `kind` is always the
+    /// fixed string "analyticsData#runReport". Useful to distinguish between
+    /// response types in JSON.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Kind {
+      get { return kind_; }
+      set {
+        kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as RunReportResponse);
@@ -1301,6 +1320,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (RowCount != other.RowCount) return false;
       if (!object.Equals(Metadata, other.Metadata)) return false;
       if (!object.Equals(PropertyQuota, other.PropertyQuota)) return false;
+      if (Kind != other.Kind) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1316,6 +1336,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (RowCount != 0) hash ^= RowCount.GetHashCode();
       if (metadata_ != null) hash ^= Metadata.GetHashCode();
       if (propertyQuota_ != null) hash ^= PropertyQuota.GetHashCode();
+      if (Kind.Length != 0) hash ^= Kind.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1350,6 +1371,10 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(74);
         output.WriteMessage(PropertyQuota);
       }
+      if (Kind.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Kind);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1377,6 +1402,10 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(74);
         output.WriteMessage(PropertyQuota);
       }
+      if (Kind.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Kind);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1400,6 +1429,9 @@ namespace Google.Analytics.Data.V1Beta {
       }
       if (propertyQuota_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PropertyQuota);
+      }
+      if (Kind.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Kind);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1432,6 +1464,9 @@ namespace Google.Analytics.Data.V1Beta {
           PropertyQuota = new global::Google.Analytics.Data.V1Beta.PropertyQuota();
         }
         PropertyQuota.MergeFrom(other.PropertyQuota);
+      }
+      if (other.Kind.Length != 0) {
+        Kind = other.Kind;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1489,6 +1524,10 @@ namespace Google.Analytics.Data.V1Beta {
             input.ReadMessage(PropertyQuota);
             break;
           }
+          case 82: {
+            Kind = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1543,6 +1582,10 @@ namespace Google.Analytics.Data.V1Beta {
               PropertyQuota = new global::Google.Analytics.Data.V1Beta.PropertyQuota();
             }
             input.ReadMessage(PropertyQuota);
+            break;
+          }
+          case 82: {
+            Kind = input.ReadString();
             break;
           }
         }
@@ -2167,6 +2210,7 @@ namespace Google.Analytics.Data.V1Beta {
       aggregates_ = other.aggregates_.Clone();
       metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
       propertyQuota_ = other.propertyQuota_ != null ? other.propertyQuota_.Clone() : null;
+      kind_ = other.kind_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2308,6 +2352,22 @@ namespace Google.Analytics.Data.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "kind" field.</summary>
+    public const int KindFieldNumber = 8;
+    private string kind_ = "";
+    /// <summary>
+    /// Identifies what kind of resource this message is. This `kind` is always the
+    /// fixed string "analyticsData#runPivotReport". Useful to distinguish between
+    /// response types in JSON.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Kind {
+      get { return kind_; }
+      set {
+        kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as RunPivotReportResponse);
@@ -2328,6 +2388,7 @@ namespace Google.Analytics.Data.V1Beta {
       if(!aggregates_.Equals(other.aggregates_)) return false;
       if (!object.Equals(Metadata, other.Metadata)) return false;
       if (!object.Equals(PropertyQuota, other.PropertyQuota)) return false;
+      if (Kind != other.Kind) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2341,6 +2402,7 @@ namespace Google.Analytics.Data.V1Beta {
       hash ^= aggregates_.GetHashCode();
       if (metadata_ != null) hash ^= Metadata.GetHashCode();
       if (propertyQuota_ != null) hash ^= PropertyQuota.GetHashCode();
+      if (Kind.Length != 0) hash ^= Kind.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2370,6 +2432,10 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(58);
         output.WriteMessage(PropertyQuota);
       }
+      if (Kind.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Kind);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2392,6 +2458,10 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(58);
         output.WriteMessage(PropertyQuota);
       }
+      if (Kind.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Kind);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2411,6 +2481,9 @@ namespace Google.Analytics.Data.V1Beta {
       }
       if (propertyQuota_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PropertyQuota);
+      }
+      if (Kind.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Kind);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2439,6 +2512,9 @@ namespace Google.Analytics.Data.V1Beta {
           PropertyQuota = new global::Google.Analytics.Data.V1Beta.PropertyQuota();
         }
         PropertyQuota.MergeFrom(other.PropertyQuota);
+      }
+      if (other.Kind.Length != 0) {
+        Kind = other.Kind;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2488,6 +2564,10 @@ namespace Google.Analytics.Data.V1Beta {
             input.ReadMessage(PropertyQuota);
             break;
           }
+          case 66: {
+            Kind = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2534,6 +2614,10 @@ namespace Google.Analytics.Data.V1Beta {
               PropertyQuota = new global::Google.Analytics.Data.V1Beta.PropertyQuota();
             }
             input.ReadMessage(PropertyQuota);
+            break;
+          }
+          case 66: {
+            Kind = input.ReadString();
             break;
           }
         }
@@ -2791,6 +2875,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BatchRunReportsResponse(BatchRunReportsResponse other) : this() {
       reports_ = other.reports_.Clone();
+      kind_ = other.kind_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2812,6 +2897,22 @@ namespace Google.Analytics.Data.V1Beta {
       get { return reports_; }
     }
 
+    /// <summary>Field number for the "kind" field.</summary>
+    public const int KindFieldNumber = 2;
+    private string kind_ = "";
+    /// <summary>
+    /// Identifies what kind of resource this message is. This `kind` is always the
+    /// fixed string "analyticsData#batchRunReports". Useful to distinguish between
+    /// response types in JSON.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Kind {
+      get { return kind_; }
+      set {
+        kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BatchRunReportsResponse);
@@ -2826,6 +2927,7 @@ namespace Google.Analytics.Data.V1Beta {
         return true;
       }
       if(!reports_.Equals(other.reports_)) return false;
+      if (Kind != other.Kind) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2833,6 +2935,7 @@ namespace Google.Analytics.Data.V1Beta {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= reports_.GetHashCode();
+      if (Kind.Length != 0) hash ^= Kind.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2850,6 +2953,10 @@ namespace Google.Analytics.Data.V1Beta {
       output.WriteRawMessage(this);
     #else
       reports_.WriteTo(output, _repeated_reports_codec);
+      if (Kind.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Kind);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2860,6 +2967,10 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       reports_.WriteTo(ref output, _repeated_reports_codec);
+      if (Kind.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Kind);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2870,6 +2981,9 @@ namespace Google.Analytics.Data.V1Beta {
     public int CalculateSize() {
       int size = 0;
       size += reports_.CalculateSize(_repeated_reports_codec);
+      if (Kind.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Kind);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2882,6 +2996,9 @@ namespace Google.Analytics.Data.V1Beta {
         return;
       }
       reports_.Add(other.reports_);
+      if (other.Kind.Length != 0) {
+        Kind = other.Kind;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2900,6 +3017,10 @@ namespace Google.Analytics.Data.V1Beta {
             reports_.AddEntriesFrom(input, _repeated_reports_codec);
             break;
           }
+          case 18: {
+            Kind = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2916,6 +3037,10 @@ namespace Google.Analytics.Data.V1Beta {
             break;
           case 10: {
             reports_.AddEntriesFrom(ref input, _repeated_reports_codec);
+            break;
+          }
+          case 18: {
+            Kind = input.ReadString();
             break;
           }
         }
@@ -3173,6 +3298,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BatchRunPivotReportsResponse(BatchRunPivotReportsResponse other) : this() {
       pivotReports_ = other.pivotReports_.Clone();
+      kind_ = other.kind_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3194,6 +3320,22 @@ namespace Google.Analytics.Data.V1Beta {
       get { return pivotReports_; }
     }
 
+    /// <summary>Field number for the "kind" field.</summary>
+    public const int KindFieldNumber = 2;
+    private string kind_ = "";
+    /// <summary>
+    /// Identifies what kind of resource this message is. This `kind` is always the
+    /// fixed string "analyticsData#batchRunPivotReports". Useful to distinguish
+    /// between response types in JSON.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Kind {
+      get { return kind_; }
+      set {
+        kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BatchRunPivotReportsResponse);
@@ -3208,6 +3350,7 @@ namespace Google.Analytics.Data.V1Beta {
         return true;
       }
       if(!pivotReports_.Equals(other.pivotReports_)) return false;
+      if (Kind != other.Kind) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3215,6 +3358,7 @@ namespace Google.Analytics.Data.V1Beta {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= pivotReports_.GetHashCode();
+      if (Kind.Length != 0) hash ^= Kind.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3232,6 +3376,10 @@ namespace Google.Analytics.Data.V1Beta {
       output.WriteRawMessage(this);
     #else
       pivotReports_.WriteTo(output, _repeated_pivotReports_codec);
+      if (Kind.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Kind);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3242,6 +3390,10 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       pivotReports_.WriteTo(ref output, _repeated_pivotReports_codec);
+      if (Kind.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Kind);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3252,6 +3404,9 @@ namespace Google.Analytics.Data.V1Beta {
     public int CalculateSize() {
       int size = 0;
       size += pivotReports_.CalculateSize(_repeated_pivotReports_codec);
+      if (Kind.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Kind);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3264,6 +3419,9 @@ namespace Google.Analytics.Data.V1Beta {
         return;
       }
       pivotReports_.Add(other.pivotReports_);
+      if (other.Kind.Length != 0) {
+        Kind = other.Kind;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3282,6 +3440,10 @@ namespace Google.Analytics.Data.V1Beta {
             pivotReports_.AddEntriesFrom(input, _repeated_pivotReports_codec);
             break;
           }
+          case 18: {
+            Kind = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -3298,6 +3460,10 @@ namespace Google.Analytics.Data.V1Beta {
             break;
           case 10: {
             pivotReports_.AddEntriesFrom(ref input, _repeated_pivotReports_codec);
+            break;
+          }
+          case 18: {
+            Kind = input.ReadString();
             break;
           }
         }
@@ -4019,6 +4185,7 @@ namespace Google.Analytics.Data.V1Beta {
       minimums_ = other.minimums_.Clone();
       rowCount_ = other.rowCount_;
       propertyQuota_ = other.propertyQuota_ != null ? other.propertyQuota_.Clone() : null;
+      kind_ = other.kind_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4139,6 +4306,22 @@ namespace Google.Analytics.Data.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "kind" field.</summary>
+    public const int KindFieldNumber = 9;
+    private string kind_ = "";
+    /// <summary>
+    /// Identifies what kind of resource this message is. This `kind` is always the
+    /// fixed string "analyticsData#runRealtimeReport". Useful to distinguish
+    /// between response types in JSON.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Kind {
+      get { return kind_; }
+      set {
+        kind_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as RunRealtimeReportResponse);
@@ -4160,6 +4343,7 @@ namespace Google.Analytics.Data.V1Beta {
       if(!minimums_.Equals(other.minimums_)) return false;
       if (RowCount != other.RowCount) return false;
       if (!object.Equals(PropertyQuota, other.PropertyQuota)) return false;
+      if (Kind != other.Kind) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4174,6 +4358,7 @@ namespace Google.Analytics.Data.V1Beta {
       hash ^= minimums_.GetHashCode();
       if (RowCount != 0) hash ^= RowCount.GetHashCode();
       if (propertyQuota_ != null) hash ^= PropertyQuota.GetHashCode();
+      if (Kind.Length != 0) hash ^= Kind.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4204,6 +4389,10 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(66);
         output.WriteMessage(PropertyQuota);
       }
+      if (Kind.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Kind);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4227,6 +4416,10 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(66);
         output.WriteMessage(PropertyQuota);
       }
+      if (Kind.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Kind);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4247,6 +4440,9 @@ namespace Google.Analytics.Data.V1Beta {
       }
       if (propertyQuota_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PropertyQuota);
+      }
+      if (Kind.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Kind);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4273,6 +4469,9 @@ namespace Google.Analytics.Data.V1Beta {
           PropertyQuota = new global::Google.Analytics.Data.V1Beta.PropertyQuota();
         }
         PropertyQuota.MergeFrom(other.PropertyQuota);
+      }
+      if (other.Kind.Length != 0) {
+        Kind = other.Kind;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4323,6 +4522,10 @@ namespace Google.Analytics.Data.V1Beta {
             input.ReadMessage(PropertyQuota);
             break;
           }
+          case 74: {
+            Kind = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -4370,6 +4573,10 @@ namespace Google.Analytics.Data.V1Beta {
               PropertyQuota = new global::Google.Analytics.Data.V1Beta.PropertyQuota();
             }
             input.ReadMessage(PropertyQuota);
+            break;
+          }
+          case 74: {
+            Kind = input.ReadString();
             break;
           }
         }
