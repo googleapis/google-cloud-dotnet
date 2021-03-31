@@ -43,6 +43,7 @@ namespace Google.Cloud.Spanner.Data
             internal int CommandTimeout { get; }
             internal SpannerBatchCommandType CommandType { get; }
             internal Priority Priority { get; }
+            internal string Tag { get; }
 
             public ExecutableCommand(SpannerBatchCommand command)
             {
@@ -52,6 +53,7 @@ namespace Google.Cloud.Spanner.Data
                 CommandTimeout = command.CommandTimeout;
                 CommandType = command.CommandType;
                 Priority = command.Priority;
+                Tag = command.Tag;
             }
 
             /// <summary>
@@ -104,7 +106,7 @@ namespace Google.Cloud.Spanner.Data
             }
 
             private RequestOptions BuildRequestOptions() =>
-                new RequestOptions { Priority = PriorityConverter.ToProto(Priority) };
+                new RequestOptions { Priority = PriorityConverter.ToProto(Priority) , RequestTag = Tag ?? "", TransactionTag = Transaction?.Tag ?? "" };
 
             private void ValidateConnectionAndCommandCount()
             {

@@ -229,6 +229,11 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public Priority Priority { get; set; }
 
+        /// <summary>
+        /// The statement tag to send to Cloud Spanner for this command.
+        /// </summary>
+        public string Tag { get; set; }
+
         /// <inheritdoc />
         protected override DbConnection DbConnection
         {
@@ -268,7 +273,8 @@ namespace Google.Cloud.Spanner.Data
             SpannerCommandTextBuilder = SpannerCommandTextBuilder,
             CommandTimeout = CommandTimeout,
             QueryOptions = QueryOptions,
-            Priority = Priority
+            Priority = Priority,
+            Tag = Tag
         };
 
         /// <inheritdoc />

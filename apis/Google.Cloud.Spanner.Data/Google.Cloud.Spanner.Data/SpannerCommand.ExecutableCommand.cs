@@ -63,6 +63,7 @@ namespace Google.Cloud.Spanner.Data
             internal SpannerParameterCollection Parameters { get; }
             internal QueryOptions QueryOptions { get; }
             internal Priority Priority { get; }
+            internal string Tag { get; }
 
             public ExecutableCommand(SpannerCommand command)
             {
@@ -74,6 +75,7 @@ namespace Google.Cloud.Spanner.Data
                 Transaction = command._transaction;
                 QueryOptions = command.QueryOptions;
                 Priority = command.Priority;
+                Tag = command.Tag;
             }
 
             // ExecuteScalar is simply implemented in terms of ExecuteReader.
@@ -374,7 +376,7 @@ namespace Google.Cloud.Spanner.Data
             }
 
             private RequestOptions BuildRequestOptions() =>
-                new RequestOptions { Priority = PriorityConverter.ToProto(Priority) };
+                new RequestOptions { Priority = PriorityConverter.ToProto(Priority) , RequestTag = Tag ?? "", TransactionTag = Transaction?.Tag ?? "" };
 
             private ExecuteSqlRequest GetExecuteSqlRequest()
             {

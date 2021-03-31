@@ -218,6 +218,36 @@ namespace Google.Cloud.Spanner.Data.Tests
                 It.IsAny<CallSettings>()), Times.Once());
         }
 
+        [Fact]
+        public void CommandIncludesRequestAndTransactionTag()
+        {
+            var requestTag = "request-tag-1";
+            var transactionTag = "transaction-tag-1";
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteBatchDmlAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+            transaction.Tag = transactionTag;
+
+            var command = transaction.CreateBatchDmlCommand();
+            command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
+            command.Tag = requestTag;
+            command.ExecuteNonQuery();
+            transaction.Commit();
+
+            spannerClientMock.Verify(client => client.ExecuteBatchDmlAsync(
+                It.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.RequestTag == requestTag && request.RequestOptions.TransactionTag == transactionTag),
+                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Verify(client => client.CommitAsync(
+                It.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == transactionTag),
+                It.IsAny<CallSettings>()), Times.Once());
+        }
+
         private class FakeSessionPool : SessionPool.ISessionPool
         {
             public SpannerClient Client => throw new NotImplementedException();

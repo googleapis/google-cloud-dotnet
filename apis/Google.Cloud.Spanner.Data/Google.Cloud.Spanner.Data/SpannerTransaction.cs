@@ -39,6 +39,11 @@ namespace Google.Cloud.Spanner.Data
         private DisposeBehavior _disposeBehavior = DisposeBehavior.ReleaseToPool;
         private bool _disposed = false;
 
+        // Flag indicating whether the transaction has executed at least one statement.
+        // The TransactionTag may no longer be set once the transaction has executed one
+        // or more statements.
+        private bool _hasExecutedStatements = false;
+
         /// <summary>
         /// When executing multiple DML commands in a single transaction, each is given a specific sequence number
         /// to indicate the difference between "apply this DML command twice" and "I'm replaying a request due to a transient failure".
@@ -133,13 +138,30 @@ namespace Google.Cloud.Spanner.Data
         /// This priority is not used for commands that are executed on this transaction. Use <see cref="SpannerCommand.Priority"/>
         /// to set the priority of commands. The default priority is Unspecified.
         /// </summary>
-        public Priority CommitPriority 
+        public Priority CommitPriority
         {
             get => _commitPriority;
             set
             {
                 GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "Commit priority cannot be set on a read-only transaction");
                 _commitPriority = value;
+            }
+        }
+
+        private string _tag;
+
+        /// <summary>
+        /// The transaction tag to use for this transaction. This can only be set for read/write transactions,
+        /// and must be set before any statements are executed on the transaction.
+        /// </summary>
+        public string Tag
+        {
+            get => _tag;
+            set
+            {
+                GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "Transaction tag cannot be set on a read-only transaction");
+                GaxPreconditions.CheckState(!_hasExecutedStatements, "Transaction tag can only be set before any statements have been executed on the transaction");
+                _tag = value;
             }
         }
 
@@ -202,6 +224,7 @@ namespace Google.Cloud.Spanner.Data
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
             GaxPreconditions.CheckState(Mode == TransactionMode.ReadOnly, "You can only call GetPartitions on a read-only transaction.");
+            _hasExecutedStatements = true;
 
             // Calling this method marks the used transaction as "shared" - but does not set
             // DisposeBehavior to any value. This will cause an exception during dispose that tells the developer
@@ -238,6 +261,7 @@ namespace Google.Cloud.Spanner.Data
             int timeoutSeconds /* ignored */)
         {
             CheckCompatibleMode(TransactionMode.ReadWrite);
+            _hasExecutedStatements = true;
             return ExecuteHelper.WithErrorTranslationAndProfiling(() =>
             {
                 var taskCompletionSource = new TaskCompletionSource<int>();
@@ -258,6 +282,7 @@ namespace Google.Cloud.Spanner.Data
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
             CheckCompatibleMode(TransactionMode.ReadOnly);
+            _hasExecutedStatements = true;
             // We're not making any Spanner requests here, so we don't need profiling or error translation.
             var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, cancellationToken);
             return Task.FromResult(_session.ExecuteSqlStreamReader(request, callSettings));
@@ -267,6 +292,7 @@ namespace Google.Cloud.Spanner.Data
         {
             CheckCompatibleMode(TransactionMode.ReadWrite);
             GaxPreconditions.CheckNotNull(request, nameof(request));
+            _hasExecutedStatements = true;
             request.Seqno = Interlocked.Increment(ref _lastDmlSequenceNumber);
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
@@ -303,6 +329,7 @@ namespace Google.Cloud.Spanner.Data
         {
             CheckCompatibleMode(TransactionMode.ReadWrite);
             GaxPreconditions.CheckNotNull(request, nameof(request));
+            _hasExecutedStatements = true;
             request.Seqno = Interlocked.Increment(ref _lastDmlSequenceNumber);
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
@@ -362,9 +389,9 @@ namespace Google.Cloud.Spanner.Data
             },
             "SpannerTransaction.Commit", SpannerConnection.Logger);
         }
-
         private RequestOptions BuildCommitRequestOptions() =>
-            new RequestOptions { Priority = PriorityConverter.ToProto(CommitPriority) };
+            new RequestOptions { Priority = PriorityConverter.ToProto(CommitPriority), TransactionTag = _tag ?? "" };
+
         /// <inheritdoc />
         public override void Rollback() => Task.Run(() => RollbackAsync(default)).WaitWithUnwrappedExceptions();
 
