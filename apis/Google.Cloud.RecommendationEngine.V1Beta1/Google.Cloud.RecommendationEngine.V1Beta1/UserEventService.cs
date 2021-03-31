@@ -165,7 +165,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// <summary>
     /// Required. The resource name of the event_store under which the events are
     /// created. The format is
-    /// "projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}"
+    /// `projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -876,7 +876,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent eventStore resource name, such as
-    /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+    /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -1105,7 +1105,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent eventStore name, such as
-    /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+    /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -1406,7 +1406,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent eventStore resource name, such as
-    /// "projects/*/locations/*/catalogs/default_catalog/eventStores/default_event_store".
+    /// `projects/*/locations/*/catalogs/default_catalog/eventStores/default_event_store`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {

@@ -318,7 +318,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent resource path.
-    /// "projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+    /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -546,7 +546,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent placement resource name such as
-    /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+    /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -1009,7 +1009,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private string name_ = "";
     /// <summary>
     /// Required. The API key to unregister including full resource path.
-    /// "projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&lt;YOUR_API_KEY>"
+    /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&lt;YOUR_API_KEY>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
