@@ -341,7 +341,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent catalog resource name, such as
-        /// "projects/*/locations/global/catalogs/default_catalog".
+        /// `projects/*/locations/global/catalogs/default_catalog`.
         /// </param>
         /// <param name="catalogItem">
         /// Required. The catalog item to create.
@@ -360,7 +360,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent catalog resource name, such as
-        /// "projects/*/locations/global/catalogs/default_catalog".
+        /// `projects/*/locations/global/catalogs/default_catalog`.
         /// </param>
         /// <param name="catalogItem">
         /// Required. The catalog item to create.
@@ -379,7 +379,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent catalog resource name, such as
-        /// "projects/*/locations/global/catalogs/default_catalog".
+        /// `projects/*/locations/global/catalogs/default_catalog`.
         /// </param>
         /// <param name="catalogItem">
         /// Required. The catalog item to create.
@@ -394,7 +394,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent catalog resource name, such as
-        /// "projects/*/locations/global/catalogs/default_catalog".
+        /// `projects/*/locations/global/catalogs/default_catalog`.
         /// </param>
         /// <param name="catalogItem">
         /// Required. The catalog item to create.
@@ -413,7 +413,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent catalog resource name, such as
-        /// "projects/*/locations/global/catalogs/default_catalog".
+        /// `projects/*/locations/global/catalogs/default_catalog`.
         /// </param>
         /// <param name="catalogItem">
         /// Required. The catalog item to create.
@@ -432,7 +432,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent catalog resource name, such as
-        /// "projects/*/locations/global/catalogs/default_catalog".
+        /// `projects/*/locations/global/catalogs/default_catalog`.
         /// </param>
         /// <param name="catalogItem">
         /// Required. The catalog item to create.
@@ -474,7 +474,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -489,7 +489,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -504,7 +504,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -516,7 +516,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -531,7 +531,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -546,7 +546,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -576,7 +576,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent catalog resource name, such as
-        /// "projects/*/locations/global/catalogs/default_catalog".
+        /// `projects/*/locations/global/catalogs/default_catalog`.
         /// </param>
         /// <param name="filter">
         /// Optional. A filter to apply on the list results.
@@ -605,7 +605,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent catalog resource name, such as
-        /// "projects/*/locations/global/catalogs/default_catalog".
+        /// `projects/*/locations/global/catalogs/default_catalog`.
         /// </param>
         /// <param name="filter">
         /// Optional. A filter to apply on the list results.
@@ -634,7 +634,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent catalog resource name, such as
-        /// "projects/*/locations/global/catalogs/default_catalog".
+        /// `projects/*/locations/global/catalogs/default_catalog`.
         /// </param>
         /// <param name="filter">
         /// Optional. A filter to apply on the list results.
@@ -663,7 +663,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent catalog resource name, such as
-        /// "projects/*/locations/global/catalogs/default_catalog".
+        /// `projects/*/locations/global/catalogs/default_catalog`.
         /// </param>
         /// <param name="filter">
         /// Optional. A filter to apply on the list results.
@@ -895,7 +895,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -910,7 +910,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -925,7 +925,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -937,7 +937,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -952,7 +952,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -967,7 +967,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. Full resource name of catalog item, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1052,7 +1052,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// possible for a subset of the items to be successfully updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. "projects/1234/locations/global/catalogs/default_catalog"
+        /// Required. `projects/1234/locations/global/catalogs/default_catalog`
         /// </param>
         /// <param name="requestId">
         /// Optional. Unique identifier provided by client, within the ancestor
@@ -1086,7 +1086,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// possible for a subset of the items to be successfully updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. "projects/1234/locations/global/catalogs/default_catalog"
+        /// Required. `projects/1234/locations/global/catalogs/default_catalog`
         /// </param>
         /// <param name="requestId">
         /// Optional. Unique identifier provided by client, within the ancestor
@@ -1120,7 +1120,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// possible for a subset of the items to be successfully updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. "projects/1234/locations/global/catalogs/default_catalog"
+        /// Required. `projects/1234/locations/global/catalogs/default_catalog`
         /// </param>
         /// <param name="requestId">
         /// Optional. Unique identifier provided by client, within the ancestor
@@ -1148,7 +1148,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// possible for a subset of the items to be successfully updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. "projects/1234/locations/global/catalogs/default_catalog"
+        /// Required. `projects/1234/locations/global/catalogs/default_catalog`
         /// </param>
         /// <param name="requestId">
         /// Optional. Unique identifier provided by client, within the ancestor
@@ -1182,7 +1182,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// possible for a subset of the items to be successfully updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. "projects/1234/locations/global/catalogs/default_catalog"
+        /// Required. `projects/1234/locations/global/catalogs/default_catalog`
         /// </param>
         /// <param name="requestId">
         /// Optional. Unique identifier provided by client, within the ancestor
@@ -1216,7 +1216,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// possible for a subset of the items to be successfully updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. "projects/1234/locations/global/catalogs/default_catalog"
+        /// Required. `projects/1234/locations/global/catalogs/default_catalog`
         /// </param>
         /// <param name="requestId">
         /// Optional. Unique identifier provided by client, within the ancestor

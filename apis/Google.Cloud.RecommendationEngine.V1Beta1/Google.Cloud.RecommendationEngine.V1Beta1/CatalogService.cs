@@ -163,7 +163,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent catalog resource name, such as
-    /// "projects/*/locations/global/catalogs/default_catalog".
+    /// `projects/*/locations/global/catalogs/default_catalog`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -389,7 +389,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private string name_ = "";
     /// <summary>
     /// Required. Full resource name of catalog item, such as
-    /// "projects/*/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id".
+    /// `projects/*/locations/global/catalogs/default_catalog/catalogitems/some_catalog_item_id`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -571,7 +571,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent catalog resource name, such as
-    /// "projects/*/locations/global/catalogs/default_catalog".
+    /// `projects/*/locations/global/catalogs/default_catalog`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -1349,7 +1349,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private string name_ = "";
     /// <summary>
     /// Required. Full resource name of catalog item, such as
-    /// "projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id".
+    /// `projects/*/locations/global/catalogs/default_catalog/catalogItems/some_catalog_item_id`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {

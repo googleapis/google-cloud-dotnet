@@ -285,7 +285,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path.
-        /// "projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="predictionApiKeyRegistration">
         /// Required. The prediction API key registration.
@@ -304,7 +304,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path.
-        /// "projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="predictionApiKeyRegistration">
         /// Required. The prediction API key registration.
@@ -323,7 +323,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path.
-        /// "projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="predictionApiKeyRegistration">
         /// Required. The prediction API key registration.
@@ -338,7 +338,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path.
-        /// "projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="predictionApiKeyRegistration">
         /// Required. The prediction API key registration.
@@ -357,7 +357,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path.
-        /// "projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="predictionApiKeyRegistration">
         /// Required. The prediction API key registration.
@@ -376,7 +376,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path.
-        /// "projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="predictionApiKeyRegistration">
         /// Required. The prediction API key registration.
@@ -409,7 +409,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent placement resource name such as
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -434,7 +434,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent placement resource name such as
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -459,7 +459,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent placement resource name such as
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -484,7 +484,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent placement resource name such as
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -536,7 +536,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The API key to unregister including full resource path.
-        /// "projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;"
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -551,7 +551,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The API key to unregister including full resource path.
-        /// "projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;"
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -566,7 +566,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The API key to unregister including full resource path.
-        /// "projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;"
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -578,7 +578,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The API key to unregister including full resource path.
-        /// "projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;"
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -593,7 +593,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The API key to unregister including full resource path.
-        /// "projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;"
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -608,7 +608,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="name">
         /// Required. The API key to unregister including full resource path.
-        /// "projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;"
+        /// `projects/*/locations/global/catalogs/default_catalog/eventStores/default_event_store/predictionApiKeyRegistrations/&amp;lt;YOUR_API_KEY&amp;gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

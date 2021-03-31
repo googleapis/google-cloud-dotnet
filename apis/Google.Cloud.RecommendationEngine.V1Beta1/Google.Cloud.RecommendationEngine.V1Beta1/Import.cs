@@ -153,8 +153,8 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// <summary>
     /// Required. Google Cloud Storage URIs to input files. URI can be up to
     /// 2000 characters long. URIs can match the full object path (for example,
-    /// gs://bucket/directory/object.json) or a pattern matching one or more
-    /// files, such as gs://bucket/directory/*.json. A request can
+    /// `gs://bucket/directory/object.json`) or a pattern matching one or more
+    /// files, such as `gs://bucket/directory/*.json`. A request can
     /// contain at most 100 files, and each file can be up to 2 GB. See
     /// [Importing catalog information](/recommendations-ai/docs/upload-catalog)
     /// for the expected file format and setup instructions.
@@ -869,7 +869,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. "projects/1234/locations/global/catalogs/default_catalog"
+    /// Required. `projects/1234/locations/global/catalogs/default_catalog`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -1186,7 +1186,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private string parent_ = "";
     /// <summary>
     /// Required.
-    /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+    /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {

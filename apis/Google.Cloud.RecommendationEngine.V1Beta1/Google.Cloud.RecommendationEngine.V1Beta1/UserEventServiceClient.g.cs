@@ -344,7 +344,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent eventStore resource name, such as
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="userEvent">
         /// Required. User event to write.
@@ -363,7 +363,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent eventStore resource name, such as
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="userEvent">
         /// Required. User event to write.
@@ -382,7 +382,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent eventStore resource name, such as
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="userEvent">
         /// Required. User event to write.
@@ -397,7 +397,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent eventStore resource name, such as
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="userEvent">
         /// Required. User event to write.
@@ -416,7 +416,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent eventStore resource name, such as
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="userEvent">
         /// Required. User event to write.
@@ -435,7 +435,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent eventStore resource name, such as
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="userEvent">
         /// Required. User event to write.
@@ -493,7 +493,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent eventStore name, such as
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="userEvent">
         /// Required. URL encoded UserEvent proto.
@@ -529,7 +529,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent eventStore name, such as
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="userEvent">
         /// Required. URL encoded UserEvent proto.
@@ -565,7 +565,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent eventStore name, such as
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="userEvent">
         /// Required. URL encoded UserEvent proto.
@@ -595,7 +595,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent eventStore name, such as
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="userEvent">
         /// Required. URL encoded UserEvent proto.
@@ -631,7 +631,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent eventStore name, such as
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="userEvent">
         /// Required. URL encoded UserEvent proto.
@@ -667,7 +667,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent eventStore name, such as
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="userEvent">
         /// Required. URL encoded UserEvent proto.
@@ -711,7 +711,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent eventStore resource name, such as
-        /// "projects/*/locations/*/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/*/locations/*/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="filter">
         /// Optional. Filtering expression to specify restrictions over
@@ -771,7 +771,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent eventStore resource name, such as
-        /// "projects/*/locations/*/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/*/locations/*/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="filter">
         /// Optional. Filtering expression to specify restrictions over
@@ -831,7 +831,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent eventStore resource name, such as
-        /// "projects/*/locations/*/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/*/locations/*/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="filter">
         /// Optional. Filtering expression to specify restrictions over
@@ -891,7 +891,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent eventStore resource name, such as
-        /// "projects/*/locations/*/catalogs/default_catalog/eventStores/default_event_store".
+        /// `projects/*/locations/*/catalogs/default_catalog/eventStores/default_event_store`.
         /// </param>
         /// <param name="filter">
         /// Optional. Filtering expression to specify restrictions over
@@ -1017,7 +1017,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// <param name="parent">
         /// Required. The resource name of the event_store under which the events are
         /// created. The format is
-        /// "projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}"
+        /// `projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}`
         /// </param>
         /// <param name="filter">
         /// Required. The filter string to specify the events to be deleted. Empty
@@ -1063,7 +1063,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// <param name="parent">
         /// Required. The resource name of the event_store under which the events are
         /// created. The format is
-        /// "projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}"
+        /// `projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}`
         /// </param>
         /// <param name="filter">
         /// Required. The filter string to specify the events to be deleted. Empty
@@ -1109,7 +1109,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// <param name="parent">
         /// Required. The resource name of the event_store under which the events are
         /// created. The format is
-        /// "projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}"
+        /// `projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}`
         /// </param>
         /// <param name="filter">
         /// Required. The filter string to specify the events to be deleted. Empty
@@ -1150,7 +1150,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// <param name="parent">
         /// Required. The resource name of the event_store under which the events are
         /// created. The format is
-        /// "projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}"
+        /// `projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}`
         /// </param>
         /// <param name="filter">
         /// Required. The filter string to specify the events to be deleted. Empty
@@ -1196,7 +1196,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// <param name="parent">
         /// Required. The resource name of the event_store under which the events are
         /// created. The format is
-        /// "projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}"
+        /// `projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}`
         /// </param>
         /// <param name="filter">
         /// Required. The filter string to specify the events to be deleted. Empty
@@ -1242,7 +1242,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// <param name="parent">
         /// Required. The resource name of the event_store under which the events are
         /// created. The format is
-        /// "projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}"
+        /// `projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}`
         /// </param>
         /// <param name="filter">
         /// Required. The filter string to specify the events to be deleted. Empty
@@ -1356,7 +1356,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required.
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
         /// </param>
         /// <param name="requestId">
         /// Optional. Unique identifier provided by client, within the ancestor
@@ -1394,7 +1394,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required.
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
         /// </param>
         /// <param name="requestId">
         /// Optional. Unique identifier provided by client, within the ancestor
@@ -1432,7 +1432,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required.
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
         /// </param>
         /// <param name="requestId">
         /// Optional. Unique identifier provided by client, within the ancestor
@@ -1464,7 +1464,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required.
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
         /// </param>
         /// <param name="requestId">
         /// Optional. Unique identifier provided by client, within the ancestor
@@ -1502,7 +1502,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required.
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
         /// </param>
         /// <param name="requestId">
         /// Optional. Unique identifier provided by client, within the ancestor
@@ -1540,7 +1540,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </summary>
         /// <param name="parent">
         /// Required.
-        /// "projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store"
+        /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
         /// </param>
         /// <param name="requestId">
         /// Optional. Unique identifier provided by client, within the ancestor
