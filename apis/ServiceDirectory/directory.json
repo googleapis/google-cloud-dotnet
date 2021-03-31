@@ -1376,24 +1376,6 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Memcache.V1Beta2"
     },
     {
-      "ServiceDirectory": "google/cloud/metastore/v1",
-      "Name": "metastore.googleapis.com",
-      "Title": "Dataproc Metastore API",
-      "Description": "The Dataproc Metastore API is used to manage the lifecycle and configuration of metastore services.",
-      "ServiceConfigFile": "google/cloud/metastore/v1/metastore_v1.yaml",
-      "Version": "v1",
-      "PackageFromDirectory": "google.cloud.metastore.v1",
-      "PackageFromProtos": "google.cloud.metastore.v1",
-      "ImportDirectories": [
-        "google/api",
-        "google/longrunning",
-        "google/protobuf",
-        "google/type"
-      ],
-      "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Metastore.V1"
-    },
-    {
       "ServiceDirectory": "google/cloud/metastore/v1alpha",
       "Name": "metastore.googleapis.com",
       "Title": "Dataproc Metastore API",
