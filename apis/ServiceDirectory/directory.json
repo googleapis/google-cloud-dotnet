@@ -1808,6 +1808,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.ResourceManager.V2"
     },
     {
+      "ServiceDirectory": "google/cloud/resourcemanager/v3",
+      "Name": "cloudresourcemanager.googleapis.com",
+      "Title": "Cloud Resource Manager API",
+      "Description": "Creates, reads, and updates metadata for Google Cloud Platform resource containers.",
+      "ServiceConfigFile": "google/cloud/resourcemanager/v3/cloudresourcemanager_v3.yaml",
+      "Version": "v3",
+      "PackageFromDirectory": "google.cloud.resourcemanager.v3",
+      "PackageFromProtos": "google.cloud.resourcemanager.v3",
+      "ImportDirectories": [
+        "google/api",
+        "google/iam/v1",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.ResourceManager.V3"
+    },
+    {
       "ServiceDirectory": "google/cloud/resourcesettings/v1",
       "Name": "resourcesettings.googleapis.com",
       "Title": "Resource Settings API",
