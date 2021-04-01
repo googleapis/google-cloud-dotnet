@@ -43,6 +43,23 @@ namespace Google.Cloud.Tools.PostProcessDevSite
     class Program
     {
         /// <summary>
+        /// Packages that should be treated as Cloud packages even though they don't start with Google.Cloud
+        /// </summary>
+        private static readonly HashSet<string> PseudoCloudPackages = new HashSet<string>
+        {
+            // Long-running operations API. Not strictly GCP-specific, but reasonable to host on DevSite.
+            // (A little like GAX.)
+            "Google.LongRunning",
+            // The "interface" for Google.Cloud.DevTools.ContainerAnalysis.V1
+            "Grafeas.V1",
+            // Common types used by Google.Cloud.GSuiteAddOns.V1
+            "Google.Apps.Script.Type",
+            // Actually GCP-specific; should probably have a Google.Cloud prefix, but it's too late now.
+            "Google.Identity.AccessContextManager.V1",
+            "Google.Identity.AccessContextManager.Type"
+        };
+
+        /// <summary>
         /// The package/API ID
         /// </summary>
         private readonly string _apiId;
@@ -81,11 +98,19 @@ namespace Google.Cloud.Tools.PostProcessDevSite
             _apiIds = _apiCatalog.CreateIdHashSet();
         }
 
+        private bool IsCloudPackage => _apiId.StartsWith("Google.Cloud.") || PseudoCloudPackages.Contains(_apiId);
+
         private void Execute()
         {
             if (Directory.Exists(_devSiteRoot))
             {
                 Directory.Delete(_devSiteRoot, recursive: true);
+            }
+            // Non-Cloud packages shouldn't be uploaded to devsite.
+            // This is indicated to later stages by the absence of the devsite output directory.
+            if (!IsCloudPackage)
+            {
+                return;
             }
             Directory.CreateDirectory(_devSiteRoot);
 
