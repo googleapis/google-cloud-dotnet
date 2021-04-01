@@ -1,0 +1,78 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.metastore.v1",
+  "libraryPackage": "Google.Cloud.Metastore.V1",
+  "services": {
+    "DataprocMetastore": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataprocMetastoreClient",
+          "rpcs": {
+            "CreateMetadataImport": {
+              "methods": [
+                "CreateMetadataImport",
+                "CreateMetadataImportAsync"
+              ]
+            },
+            "CreateService": {
+              "methods": [
+                "CreateService",
+                "CreateServiceAsync"
+              ]
+            },
+            "DeleteService": {
+              "methods": [
+                "DeleteService",
+                "DeleteServiceAsync"
+              ]
+            },
+            "ExportMetadata": {
+              "methods": [
+                "ExportMetadata",
+                "ExportMetadataAsync"
+              ]
+            },
+            "GetMetadataImport": {
+              "methods": [
+                "GetMetadataImport",
+                "GetMetadataImportAsync"
+              ]
+            },
+            "GetService": {
+              "methods": [
+                "GetService",
+                "GetServiceAsync"
+              ]
+            },
+            "ListMetadataImports": {
+              "methods": [
+                "ListMetadataImports",
+                "ListMetadataImportsAsync"
+              ]
+            },
+            "ListServices": {
+              "methods": [
+                "ListServices",
+                "ListServicesAsync"
+              ]
+            },
+            "UpdateMetadataImport": {
+              "methods": [
+                "UpdateMetadataImport",
+                "UpdateMetadataImportAsync"
+              ]
+            },
+            "UpdateService": {
+              "methods": [
+                "UpdateService",
+                "UpdateServiceAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
