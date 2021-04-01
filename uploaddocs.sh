@@ -66,12 +66,16 @@ do
     echo "Final upload stage (googleapis.dev)"
     python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $GOOGLEAPIS_DEV_STAGING_BUCKET
 
-    # For DevSite, we've already generated the metadata file, so we just need to do the upload.
-    cd ../devsite
+    # Upload to DevSite, only for Cloud/Cloud-related packages
+    if [[ -d ../devsite ]]
+    then
+      # For DevSite, we've already generated the metadata file, so we just need to do the upload.
+      cd ../devsite
     
-    echo "Final upload stage (DevSite)"
-    python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $DEVSITE_STAGING_BUCKET --destination-prefix docfx
-
+      echo "Final upload stage (DevSite)"
+      python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $DEVSITE_STAGING_BUCKET --destination-prefix docfx
+    fi
+    
     popd > /dev/null
   else
     echo "Skipping $pkg; no documentation generated"
