@@ -1,5 +1,12 @@
 # Version history
 
+# Version 3.7.0, released 2021-04-01
+
+- [Commit 63f54b5](https://github.com/googleapis/google-cloud-dotnet/commit/63f54b5): feat: add support for request and transaction tagging
+- [Commit a7d1b22](https://github.com/googleapis/google-cloud-dotnet/commit/a7d1b22): feat: add support for RPC priority
+- [Commit b40ca4e](https://github.com/googleapis/google-cloud-dotnet/commit/b40ca4e): feat: add tagging request options (proto)
+- [Commit ec9fd53](https://github.com/googleapis/google-cloud-dotnet/commit/ec9fd53): feat: add RPC Priority request options (proto)
+
 # Version 3.6.0, released 2021-03-17
 
 - [Commit 69c83e4](https://github.com/googleapis/google-cloud-dotnet/commit/69c83e4):
