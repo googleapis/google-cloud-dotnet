@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.ServiceManagement.V1 {
   /// <summary>
-  /// [Google Service Management API](/service-management/overview)
+  /// [Google Service Management API](https://cloud.google.com/service-management/overview)
   /// </summary>
   public static partial class ServiceManager
   {
