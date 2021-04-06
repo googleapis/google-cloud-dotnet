@@ -899,7 +899,7 @@
       "productName": "Firestore",
       "productUrl": "https://firebase.google.com/docs/firestore/",
       "listingDescription": "Firestore high-level library",
-      "version": "2.3.0",
+      "version": "2.3.1",
       "type": "other",
       "targetFrameworks": "netstandard2.0;net461",
       "testTargetFrameworks": "netcoreapp2.1;net461",

@@ -1,5 +1,11 @@
 # Version history
 
+# Version 2.3.1, released 2021-04-06
+
+- [Commit 62182ca](https://github.com/googleapis/google-cloud-dotnet/commit/62182ca): fix: Propagate properties in FirestoreDbBuilder when using the emulator. Fixes [issue 6313](https://github.com/googleapis/google-cloud-dotnet/issues/6313)
+
+(No API surface change, as expected in a patch release.)
+
 # Version 2.3.0, released 2020-11-18
 
 No API surface change - just dependencies, and a GA release of the new serialization attribute from 2.3.0-beta01.
