@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using System;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -35,6 +37,38 @@ namespace Google.Cloud.Firestore.IntegrationTests
 
             var storedData = snapshot.GetValue<Timestamp>("Timestamp");
             Assert.Equal(new Timestamp(100, 123456000), storedData);
+        }
+
+        [Fact]
+        public async Task ConverterRegistry()
+        {
+            var db = new FirestoreDbBuilder
+            {
+                ProjectId = _fixture.ProjectId,
+                EmulatorDetection = EmulatorDetection.EmulatorOrProduction,
+                ConverterRegistry = new ConverterRegistry { new GuidConverter() }
+            }.Build();
+            CollectionReference collection = db.Collection("guids");
+            Guid guid = Guid.NewGuid();
+            DocumentReference document = await collection.AddAsync(new { Value = guid });
+            DocumentSnapshot snapshot = await document.GetSnapshotAsync();
+            Guid fetchedGuid = snapshot.GetValue<Guid>("Value");
+            Assert.Equal(fetchedGuid, guid);
+        }
+
+        public class GuidConverter : IFirestoreConverter<Guid>
+        {
+            public object ToFirestore(Guid value) => value.ToString("N");
+
+            public Guid FromFirestore(object value)
+            {
+                switch (value)
+                {
+                    case string guid: return Guid.ParseExact(guid, "N");
+                    case null: throw new ArgumentNullException(nameof(value));
+                    default: throw new ArgumentException($"Unexpected data: {value.GetType()}");
+                }
+            }
         }
     }
 }

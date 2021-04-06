@@ -185,10 +185,15 @@ namespace Google.Cloud.Firestore
             // copied our existing value in here, we'd recurse infinitely (until we overflowed the stack).
             return new FirestoreDbBuilder
             {
+                // Properties used to build the FirestoreClient
                 Endpoint = hostAndPort,
                 Settings = settings,
+                ChannelCredentials = ChannelCredentials.Insecure,
+                // FirestoreDb-specific properties
                 ProjectId = ProjectId,
-                ChannelCredentials = ChannelCredentials.Insecure
+                DatabaseId = DatabaseId,
+                ConverterRegistry = ConverterRegistry,
+                WarningLogger = WarningLogger
             };
         }
     }
