@@ -50,6 +50,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
                 EventHandlers = { new EventHandler(), },
                 NluSettings = new NluSettings(),
+                TransitionRouteGroupsAsTransitionRouteGroupNames =
+                {
+                    TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
+                },
             };
             mockGrpcClient.Setup(x => x.CreateFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
@@ -80,6 +84,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
                 EventHandlers = { new EventHandler(), },
                 NluSettings = new NluSettings(),
+                TransitionRouteGroupsAsTransitionRouteGroupNames =
+                {
+                    TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
+                },
             };
             mockGrpcClient.Setup(x => x.CreateFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Flow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
@@ -111,6 +119,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
                 EventHandlers = { new EventHandler(), },
                 NluSettings = new NluSettings(),
+                TransitionRouteGroupsAsTransitionRouteGroupNames =
+                {
+                    TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
+                },
             };
             mockGrpcClient.Setup(x => x.CreateFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
@@ -140,6 +152,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
                 EventHandlers = { new EventHandler(), },
                 NluSettings = new NluSettings(),
+                TransitionRouteGroupsAsTransitionRouteGroupNames =
+                {
+                    TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
+                },
             };
             mockGrpcClient.Setup(x => x.CreateFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Flow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
@@ -171,6 +187,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
                 EventHandlers = { new EventHandler(), },
                 NluSettings = new NluSettings(),
+                TransitionRouteGroupsAsTransitionRouteGroupNames =
+                {
+                    TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
+                },
             };
             mockGrpcClient.Setup(x => x.CreateFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
@@ -200,6 +220,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
                 EventHandlers = { new EventHandler(), },
                 NluSettings = new NluSettings(),
+                TransitionRouteGroupsAsTransitionRouteGroupNames =
+                {
+                    TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
+                },
             };
             mockGrpcClient.Setup(x => x.CreateFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Flow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
@@ -332,6 +356,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
                 EventHandlers = { new EventHandler(), },
                 NluSettings = new NluSettings(),
+                TransitionRouteGroupsAsTransitionRouteGroupNames =
+                {
+                    TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
+                },
             };
             mockGrpcClient.Setup(x => x.GetFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
@@ -361,6 +389,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
                 EventHandlers = { new EventHandler(), },
                 NluSettings = new NluSettings(),
+                TransitionRouteGroupsAsTransitionRouteGroupNames =
+                {
+                    TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
+                },
             };
             mockGrpcClient.Setup(x => x.GetFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Flow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
@@ -391,6 +423,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
                 EventHandlers = { new EventHandler(), },
                 NluSettings = new NluSettings(),
+                TransitionRouteGroupsAsTransitionRouteGroupNames =
+                {
+                    TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
+                },
             };
             mockGrpcClient.Setup(x => x.GetFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
@@ -419,6 +455,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
                 EventHandlers = { new EventHandler(), },
                 NluSettings = new NluSettings(),
+                TransitionRouteGroupsAsTransitionRouteGroupNames =
+                {
+                    TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
+                },
             };
             mockGrpcClient.Setup(x => x.GetFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Flow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
@@ -449,6 +489,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
                 EventHandlers = { new EventHandler(), },
                 NluSettings = new NluSettings(),
+                TransitionRouteGroupsAsTransitionRouteGroupNames =
+                {
+                    TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
+                },
             };
             mockGrpcClient.Setup(x => x.GetFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
@@ -477,6 +521,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
                 EventHandlers = { new EventHandler(), },
                 NluSettings = new NluSettings(),
+                TransitionRouteGroupsAsTransitionRouteGroupNames =
+                {
+                    TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
+                },
             };
             mockGrpcClient.Setup(x => x.GetFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Flow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
@@ -509,6 +557,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
                 EventHandlers = { new EventHandler(), },
                 NluSettings = new NluSettings(),
+                TransitionRouteGroupsAsTransitionRouteGroupNames =
+                {
+                    TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
@@ -539,6 +591,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
                 EventHandlers = { new EventHandler(), },
                 NluSettings = new NluSettings(),
+                TransitionRouteGroupsAsTransitionRouteGroupNames =
+                {
+                    TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Flow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
@@ -570,6 +626,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
                 EventHandlers = { new EventHandler(), },
                 NluSettings = new NluSettings(),
+                TransitionRouteGroupsAsTransitionRouteGroupNames =
+                {
+                    TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
@@ -599,6 +659,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 },
                 EventHandlers = { new EventHandler(), },
                 NluSettings = new NluSettings(),
+                TransitionRouteGroupsAsTransitionRouteGroupNames =
+                {
+                    TransitionRouteGroupName.FromProjectLocationAgentFlowTransitionRouteGroup("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[TRANSITION_ROUTE_GROUP]"),
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Flow>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);

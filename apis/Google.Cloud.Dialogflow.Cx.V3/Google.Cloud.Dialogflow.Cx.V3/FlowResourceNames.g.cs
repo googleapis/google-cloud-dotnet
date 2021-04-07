@@ -540,6 +540,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             get => string.IsNullOrEmpty(Name) ? null : gcdcv::FlowName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="TransitionRouteGroupName"/>-typed view over the <see cref="TransitionRouteGroups"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<TransitionRouteGroupName> TransitionRouteGroupsAsTransitionRouteGroupNames
+        {
+            get => new gax::ResourceNameList<TransitionRouteGroupName>(TransitionRouteGroups, s => string.IsNullOrEmpty(s) ? null : TransitionRouteGroupName.Parse(s, allowUnparsed: true));
+        }
     }
 
     public partial class CreateFlowRequest

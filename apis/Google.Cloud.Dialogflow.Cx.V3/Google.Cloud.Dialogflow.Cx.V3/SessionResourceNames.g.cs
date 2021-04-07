@@ -362,6 +362,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
     }
 
+    public partial class QueryParameters
+    {
+        /// <summary>
+        /// <see cref="PageName"/>-typed view over the <see cref="CurrentPage"/> resource name property.
+        /// </summary>
+        public PageName CurrentPageAsPageName
+        {
+            get => string.IsNullOrEmpty(CurrentPage) ? null : PageName.Parse(CurrentPage, allowUnparsed: true);
+            set => CurrentPage = value?.ToString() ?? "";
+        }
+    }
+
     public partial class QueryResult
     {
         /// <summary>
