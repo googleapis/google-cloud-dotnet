@@ -73,18 +73,19 @@ namespace Google.Cloud.Channel.V1 {
             "ZW50UGxhbhI2Cg1wYXltZW50X2N5Y2xlGAYgASgLMh8uZ29vZ2xlLmNsb3Vk",
             "LmNoYW5uZWwudjEuUGVyaW9kIkwKDVRyaWFsU2V0dGluZ3MSDQoFdHJpYWwY",
             "ASABKAgSLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wIogBCg9UcmFuc2ZlcmFibGVTa3USSgoUdHJhbnNmZXJfZWxpZ2li",
+            "ZXN0YW1wIr8BCg9UcmFuc2ZlcmFibGVTa3USSgoUdHJhbnNmZXJfZWxpZ2li",
             "aWxpdHkYCSABKAsyLC5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5UcmFuc2Zl",
             "ckVsaWdpYmlsaXR5EikKA3NrdRgLIAEoCzIcLmdvb2dsZS5jbG91ZC5jaGFu",
-            "bmVsLnYxLlNrdSL5AQoTVHJhbnNmZXJFbGlnaWJpbGl0eRITCgtpc19lbGln",
-            "aWJsZRgBIAEoCBITCgtkZXNjcmlwdGlvbhgCIAEoCRJRChRpbmVsaWdpYmls",
-            "aXR5X3JlYXNvbhgDIAEoDjIzLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlRy",
-            "YW5zZmVyRWxpZ2liaWxpdHkuUmVhc29uImUKBlJlYXNvbhIWChJSRUFTT05f",
-            "VU5TUEVDSUZJRUQQABIaChZQRU5ESU5HX1RPU19BQ0NFUFRBTkNFEAESFAoQ",
-            "U0tVX05PVF9FTElHSUJMRRACEhEKDVNLVV9TVVNQRU5ERUQQA0JyChtjb20u",
-            "Z29vZ2xlLmNsb3VkLmNoYW5uZWwudjFCEUVudGl0bGVtZW50c1Byb3RvUAFa",
-            "Pmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
-            "Y2hhbm5lbC92MTtjaGFubmVsYgZwcm90bzM="));
+            "bmVsLnYxLlNrdRI1CgpsZWdhY3lfc2t1GAwgASgLMhwuZ29vZ2xlLmNsb3Vk",
+            "LmNoYW5uZWwudjEuU2t1QgPgQQEi+QEKE1RyYW5zZmVyRWxpZ2liaWxpdHkS",
+            "EwoLaXNfZWxpZ2libGUYASABKAgSEwoLZGVzY3JpcHRpb24YAiABKAkSUQoU",
+            "aW5lbGlnaWJpbGl0eV9yZWFzb24YAyABKA4yMy5nb29nbGUuY2xvdWQuY2hh",
+            "bm5lbC52MS5UcmFuc2ZlckVsaWdpYmlsaXR5LlJlYXNvbiJlCgZSZWFzb24S",
+            "FgoSUkVBU09OX1VOU1BFQ0lGSUVEEAASGgoWUEVORElOR19UT1NfQUNDRVBU",
+            "QU5DRRABEhQKEFNLVV9OT1RfRUxJR0lCTEUQAhIRCg1TS1VfU1VTUEVOREVE",
+            "EANCcgobY29tLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxQhFFbnRpdGxlbWVu",
+            "dHNQcm90b1ABWj5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
+            "cGlzL2Nsb3VkL2NoYW5uZWwvdjE7Y2hhbm5lbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.CommonReflection.Descriptor, global::Google.Cloud.Channel.V1.OffersReflection.Descriptor, global::Google.Cloud.Channel.V1.ProductsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -95,7 +96,7 @@ namespace Google.Cloud.Channel.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.CommitmentSettings), global::Google.Cloud.Channel.V1.CommitmentSettings.Parser, new[]{ "StartTime", "EndTime", "RenewalSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.RenewalSettings), global::Google.Cloud.Channel.V1.RenewalSettings.Parser, new[]{ "EnableRenewal", "ResizeUnitCount", "PaymentPlan", "PaymentCycle" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.TrialSettings), global::Google.Cloud.Channel.V1.TrialSettings.Parser, new[]{ "Trial", "EndTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.TransferableSku), global::Google.Cloud.Channel.V1.TransferableSku.Parser, new[]{ "TransferEligibility", "Sku" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.TransferableSku), global::Google.Cloud.Channel.V1.TransferableSku.Parser, new[]{ "TransferEligibility", "Sku", "LegacySku" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.TransferEligibility), global::Google.Cloud.Channel.V1.TransferEligibility.Parser, new[]{ "IsEligible", "Description", "IneligibilityReason" }, null, new[]{ typeof(global::Google.Cloud.Channel.V1.TransferEligibility.Types.Reason) }, null, null)
           }));
     }
@@ -2367,6 +2368,7 @@ namespace Google.Cloud.Channel.V1 {
     public TransferableSku(TransferableSku other) : this() {
       transferEligibility_ = other.transferEligibility_ != null ? other.transferEligibility_.Clone() : null;
       sku_ = other.sku_ != null ? other.sku_.Clone() : null;
+      legacySku_ = other.legacySku_ != null ? other.legacySku_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2403,6 +2405,20 @@ namespace Google.Cloud.Channel.V1 {
       }
     }
 
+    /// <summary>Field number for the "legacy_sku" field.</summary>
+    public const int LegacySkuFieldNumber = 12;
+    private global::Google.Cloud.Channel.V1.Sku legacySku_;
+    /// <summary>
+    /// Optional. The customer to transfer has an entitlement with the populated legacy SKU.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Channel.V1.Sku LegacySku {
+      get { return legacySku_; }
+      set {
+        legacySku_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TransferableSku);
@@ -2418,6 +2434,7 @@ namespace Google.Cloud.Channel.V1 {
       }
       if (!object.Equals(TransferEligibility, other.TransferEligibility)) return false;
       if (!object.Equals(Sku, other.Sku)) return false;
+      if (!object.Equals(LegacySku, other.LegacySku)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2426,6 +2443,7 @@ namespace Google.Cloud.Channel.V1 {
       int hash = 1;
       if (transferEligibility_ != null) hash ^= TransferEligibility.GetHashCode();
       if (sku_ != null) hash ^= Sku.GetHashCode();
+      if (legacySku_ != null) hash ^= LegacySku.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2450,6 +2468,10 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(Sku);
       }
+      if (legacySku_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(LegacySku);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2467,6 +2489,10 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(Sku);
       }
+      if (legacySku_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(LegacySku);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2481,6 +2507,9 @@ namespace Google.Cloud.Channel.V1 {
       }
       if (sku_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Sku);
+      }
+      if (legacySku_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LegacySku);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2504,6 +2533,12 @@ namespace Google.Cloud.Channel.V1 {
           Sku = new global::Google.Cloud.Channel.V1.Sku();
         }
         Sku.MergeFrom(other.Sku);
+      }
+      if (other.legacySku_ != null) {
+        if (legacySku_ == null) {
+          LegacySku = new global::Google.Cloud.Channel.V1.Sku();
+        }
+        LegacySku.MergeFrom(other.LegacySku);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2533,6 +2568,13 @@ namespace Google.Cloud.Channel.V1 {
             input.ReadMessage(Sku);
             break;
           }
+          case 98: {
+            if (legacySku_ == null) {
+              LegacySku = new global::Google.Cloud.Channel.V1.Sku();
+            }
+            input.ReadMessage(LegacySku);
+            break;
+          }
         }
       }
     #endif
@@ -2559,6 +2601,13 @@ namespace Google.Cloud.Channel.V1 {
               Sku = new global::Google.Cloud.Channel.V1.Sku();
             }
             input.ReadMessage(Sku);
+            break;
+          }
+          case 98: {
+            if (legacySku_ == null) {
+              LegacySku = new global::Google.Cloud.Channel.V1.Sku();
+            }
+            input.ReadMessage(LegacySku);
             break;
           }
         }

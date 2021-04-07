@@ -37,28 +37,29 @@ namespace Google.Cloud.Channel.V1 {
             "Eg4KClNJWkVfMV8xMDAQARIQCgxTSVpFXzEwMV81MDAQAhIRCg1TSVpFXzUw",
             "MV8xMDAwEAMSEgoOU0laRV8xMDAxXzIwMDAQBBISCg5TSVpFXzIwMDFfNTAw",
             "MBAFEhMKD1NJWkVfNTAwMV8xMDAwMBAGEhYKElNJWkVfMTAwMDFfT1JfTU9S",
-            "RRAHIvsCChFDbG91ZElkZW50aXR5SW5mbxJOCg1jdXN0b21lcl90eXBlGAEg",
+            "RRAHIoADChFDbG91ZElkZW50aXR5SW5mbxJOCg1jdXN0b21lcl90eXBlGAEg",
             "ASgOMjcuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuQ2xvdWRJZGVudGl0eUlu",
             "Zm8uQ3VzdG9tZXJUeXBlEhsKDnByaW1hcnlfZG9tYWluGAkgASgJQgPgQQMS",
-            "GgoSaXNfZG9tYWluX3ZlcmlmaWVkGAQgASgIEhcKD2FsdGVybmF0ZV9lbWFp",
-            "bBgGIAEoCRIUCgxwaG9uZV9udW1iZXIYByABKAkSFQoNbGFuZ3VhZ2VfY29k",
-            "ZRgIIAEoCRIeChFhZG1pbl9jb25zb2xlX3VyaRgKIAEoCUID4EEDEjIKCGVk",
-            "dV9kYXRhGBYgASgLMiAuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuRWR1RGF0",
-            "YSJDCgxDdXN0b21lclR5cGUSHQoZQ1VTVE9NRVJfVFlQRV9VTlNQRUNJRklF",
-            "RBAAEgoKBkRPTUFJThABEggKBFRFQU0QAiKDAQoFVmFsdWUSFQoLaW50NjRf",
-            "dmFsdWUYASABKANIABIWCgxzdHJpbmdfdmFsdWUYAiABKAlIABIWCgxkb3Vi",
-            "bGVfdmFsdWUYAyABKAFIABIrCgtwcm90b192YWx1ZRgEIAEoCzIULmdvb2ds",
-            "ZS5wcm90b2J1Zi5BbnlIAEIGCgRraW5kIkMKCUFkbWluVXNlchINCgVlbWFp",
-            "bBgBIAEoCRISCgpnaXZlbl9uYW1lGAIgASgJEhMKC2ZhbWlseV9uYW1lGAMg",
-            "ASgJQmwKG2NvbS5nb29nbGUuY2xvdWQuY2hhbm5lbC52MUILQ29tbW9uUHJv",
-            "dG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
-            "bG91ZC9jaGFubmVsL3YxO2NoYW5uZWxiBnByb3RvMw=="));
+            "HwoSaXNfZG9tYWluX3ZlcmlmaWVkGAQgASgIQgPgQQMSFwoPYWx0ZXJuYXRl",
+            "X2VtYWlsGAYgASgJEhQKDHBob25lX251bWJlchgHIAEoCRIVCg1sYW5ndWFn",
+            "ZV9jb2RlGAggASgJEh4KEWFkbWluX2NvbnNvbGVfdXJpGAogASgJQgPgQQMS",
+            "MgoIZWR1X2RhdGEYFiABKAsyIC5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5F",
+            "ZHVEYXRhIkMKDEN1c3RvbWVyVHlwZRIdChlDVVNUT01FUl9UWVBFX1VOU1BF",
+            "Q0lGSUVEEAASCgoGRE9NQUlOEAESCAoEVEVBTRACIpkBCgVWYWx1ZRIVCgtp",
+            "bnQ2NF92YWx1ZRgBIAEoA0gAEhYKDHN0cmluZ192YWx1ZRgCIAEoCUgAEhYK",
+            "DGRvdWJsZV92YWx1ZRgDIAEoAUgAEisKC3Byb3RvX3ZhbHVlGAQgASgLMhQu",
+            "Z29vZ2xlLnByb3RvYnVmLkFueUgAEhQKCmJvb2xfdmFsdWUYBSABKAhIAEIG",
+            "CgRraW5kIkMKCUFkbWluVXNlchINCgVlbWFpbBgBIAEoCRISCgpnaXZlbl9u",
+            "YW1lGAIgASgJEhMKC2ZhbWlseV9uYW1lGAMgASgJQmwKG2NvbS5nb29nbGUu",
+            "Y2xvdWQuY2hhbm5lbC52MUILQ29tbW9uUHJvdG9QAVo+Z29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9jaGFubmVsL3YxO2No",
+            "YW5uZWxiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.EduData), global::Google.Cloud.Channel.V1.EduData.Parser, new[]{ "InstituteType", "InstituteSize", "Website" }, null, new[]{ typeof(global::Google.Cloud.Channel.V1.EduData.Types.InstituteType), typeof(global::Google.Cloud.Channel.V1.EduData.Types.InstituteSize) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.CloudIdentityInfo), global::Google.Cloud.Channel.V1.CloudIdentityInfo.Parser, new[]{ "CustomerType", "PrimaryDomain", "IsDomainVerified", "AlternateEmail", "PhoneNumber", "LanguageCode", "AdminConsoleUri", "EduData" }, null, new[]{ typeof(global::Google.Cloud.Channel.V1.CloudIdentityInfo.Types.CustomerType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Value), global::Google.Cloud.Channel.V1.Value.Parser, new[]{ "Int64Value", "StringValue", "DoubleValue", "ProtoValue" }, new[]{ "Kind" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Value), global::Google.Cloud.Channel.V1.Value.Parser, new[]{ "Int64Value", "StringValue", "DoubleValue", "ProtoValue", "BoolValue" }, new[]{ "Kind" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.AdminUser), global::Google.Cloud.Channel.V1.AdminUser.Parser, new[]{ "Email", "GivenName", "FamilyName" }, null, null, null, null)
           }));
     }
@@ -465,7 +466,11 @@ namespace Google.Cloud.Channel.V1 {
     public const int IsDomainVerifiedFieldNumber = 4;
     private bool isDomainVerified_;
     /// <summary>
-    /// Whether the domain is verified.
+    /// Output only. Whether the domain is verified.
+    /// This field is not returned for a Customer's cloud_identity_info resource.
+    /// Partners can use the domains.get() method of the Workspace SDK's
+    /// Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in
+    /// to track domain verification of their resolve Workspace customers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool IsDomainVerified {
@@ -915,6 +920,9 @@ namespace Google.Cloud.Channel.V1 {
         case KindOneofCase.ProtoValue:
           ProtoValue = other.ProtoValue.Clone();
           break;
+        case KindOneofCase.BoolValue:
+          BoolValue = other.BoolValue;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -981,6 +989,20 @@ namespace Google.Cloud.Channel.V1 {
       }
     }
 
+    /// <summary>Field number for the "bool_value" field.</summary>
+    public const int BoolValueFieldNumber = 5;
+    /// <summary>
+    /// Represents a boolean value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool BoolValue {
+      get { return kindCase_ == KindOneofCase.BoolValue ? (bool) kind_ : false; }
+      set {
+        kind_ = value;
+        kindCase_ = KindOneofCase.BoolValue;
+      }
+    }
+
     private object kind_;
     /// <summary>Enum of possible cases for the "kind" oneof.</summary>
     public enum KindOneofCase {
@@ -989,6 +1011,7 @@ namespace Google.Cloud.Channel.V1 {
       StringValue = 2,
       DoubleValue = 3,
       ProtoValue = 4,
+      BoolValue = 5,
     }
     private KindOneofCase kindCase_ = KindOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1019,6 +1042,7 @@ namespace Google.Cloud.Channel.V1 {
       if (StringValue != other.StringValue) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(DoubleValue, other.DoubleValue)) return false;
       if (!object.Equals(ProtoValue, other.ProtoValue)) return false;
+      if (BoolValue != other.BoolValue) return false;
       if (KindCase != other.KindCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1030,6 +1054,7 @@ namespace Google.Cloud.Channel.V1 {
       if (kindCase_ == KindOneofCase.StringValue) hash ^= StringValue.GetHashCode();
       if (kindCase_ == KindOneofCase.DoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
       if (kindCase_ == KindOneofCase.ProtoValue) hash ^= ProtoValue.GetHashCode();
+      if (kindCase_ == KindOneofCase.BoolValue) hash ^= BoolValue.GetHashCode();
       hash ^= (int) kindCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1063,6 +1088,10 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(ProtoValue);
       }
+      if (kindCase_ == KindOneofCase.BoolValue) {
+        output.WriteRawTag(40);
+        output.WriteBool(BoolValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1088,6 +1117,10 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(ProtoValue);
       }
+      if (kindCase_ == KindOneofCase.BoolValue) {
+        output.WriteRawTag(40);
+        output.WriteBool(BoolValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1108,6 +1141,9 @@ namespace Google.Cloud.Channel.V1 {
       }
       if (kindCase_ == KindOneofCase.ProtoValue) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProtoValue);
+      }
+      if (kindCase_ == KindOneofCase.BoolValue) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1135,6 +1171,9 @@ namespace Google.Cloud.Channel.V1 {
             ProtoValue = new global::Google.Protobuf.WellKnownTypes.Any();
           }
           ProtoValue.MergeFrom(other.ProtoValue);
+          break;
+        case KindOneofCase.BoolValue:
+          BoolValue = other.BoolValue;
           break;
       }
 
@@ -1173,6 +1212,10 @@ namespace Google.Cloud.Channel.V1 {
             ProtoValue = subBuilder;
             break;
           }
+          case 40: {
+            BoolValue = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1206,6 +1249,10 @@ namespace Google.Cloud.Channel.V1 {
             }
             input.ReadMessage(subBuilder);
             ProtoValue = subBuilder;
+            break;
+          }
+          case 40: {
+            BoolValue = input.ReadBool();
             break;
           }
         }
