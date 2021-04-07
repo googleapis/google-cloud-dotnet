@@ -24,27 +24,25 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Channel.V1 {
   /// <summary>
-  /// CloudChannelService enables Google cloud resellers and distributors to manage
-  /// their customers, channel partners, entitlements and reports.
+  /// CloudChannelService lets Google cloud resellers and distributors manage
+  /// their customers, channel partners, entitlements, and reports.
   ///
   /// Using this service:
-  /// 1. Resellers or distributors can manage a customer entity.
-  /// 2. Distributors can register an authorized reseller in their channel and then
-  ///    enable delegated admin access for the reseller.
-  /// 3. Resellers or distributors can manage entitlements for their customers.
+  /// 1. Resellers and distributors can manage a customer entity.
+  /// 2. Distributors can register an authorized reseller in their channel and
+  ///    provide them with delegated admin access.
+  /// 3. Resellers and distributors can manage customer entitlements.
   ///
-  /// The service primarily exposes the following resources:
-  /// - [Customer][google.cloud.channel.v1.Customer]s: A Customer represents an entity managed by a reseller or
-  /// distributor. A customer typically represents an enterprise. In an n-tier
-  /// resale channel hierarchy, customers are generally represented as leaf nodes.
-  /// Customers primarily have an Entitlement sub-resource discussed below.
+  /// CloudChannelService exposes the following resources:
+  /// - [Customer][google.cloud.channel.v1.Customer]s: An entity—usually an enterprise—managed by a reseller or
+  /// distributor.
   ///
-  /// - [Entitlement][google.cloud.channel.v1.Entitlement]s: An Entitlement represents an entity which provides a
-  /// customer means to start using a service. Entitlements are created or updated
-  /// as a result of a successful fulfillment.
+  /// - [Entitlement][google.cloud.channel.v1.Entitlement]s: An entity that provides a customer with the means to use
+  /// a service. Entitlements are created or updated as a result of a successful
+  /// fulfillment.
   ///
-  /// - [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s: A ChannelPartnerLink is an entity that identifies
-  /// links between distributors and their indirect resellers in a channel.
+  /// - [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s: An entity that identifies links between
+  /// distributors and their indirect resellers in a channel.
   /// </summary>
   public static partial class CloudChannelService
   {
@@ -345,18 +343,16 @@ namespace Google.Cloud.Channel.V1 {
     public abstract partial class CloudChannelServiceBase
     {
       /// <summary>
-      /// List downstream [Customer][google.cloud.channel.v1.Customer]s.
+      /// List [Customer][google.cloud.channel.v1.Customer]s.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// List of [Customer][google.cloud.channel.v1.Customer]s pertaining to the reseller or empty list if
-      /// there are none.
+      /// Return value:
+      /// List of [Customer][google.cloud.channel.v1.Customer]s, or an empty list if there are no customers.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -369,17 +365,16 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the customer resource doesn't exist. Usually
-      /// the result of an invalid name parameter.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer resource doesn't exist. Usually the result of an
+      /// invalid name parameter.
       ///
-      /// Return Value:
-      /// [Customer][google.cloud.channel.v1.Customer] resource if found, error otherwise.
+      /// Return value:
+      /// The [Customer][google.cloud.channel.v1.Customer] resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -390,22 +385,21 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Confirms the existence of Cloud Identity accounts, based on the domain and
-      /// whether the Cloud Identity accounts are owned by the reseller.
+      /// Confirms the existence of Cloud Identity accounts based on the domain and
+      /// if the Cloud Identity accounts are owned by the reseller.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * INVALID_VALUE: Invalid domain value in the request.
       ///
-      /// Return Value:
-      /// List of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain.
-      /// List may be empty.
+      /// Return value:
+      /// A list of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain (may be
+      /// empty)
       ///
-      /// Note: in the v1alpha1 version of the API, a NOT_FOUND error is returned if
+      /// Note: in the v1alpha1 version of the API, a NOT_FOUND error returns if
       /// no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources match the domain.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -420,18 +414,16 @@ namespace Google.Cloud.Channel.V1 {
       /// Creates a new [Customer][google.cloud.channel.v1.Customer] resource under the reseller or distributor
       /// account.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: It can happen in following scenarios -
-      ///     * Missing or invalid required parameters in the request.
-      ///     * Domain field value doesn't match the domain specified in primary
-      ///     email.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT:
+      ///     * Required request parameters are missing or invalid.
+      ///     * Domain field value doesn't match the primary email domain.
       ///
-      /// Return Value:
-      /// If successful, the newly created [Customer][google.cloud.channel.v1.Customer] resource, otherwise
-      /// returns an error.
+      /// Return value:
+      /// The newly created [Customer][google.cloud.channel.v1.Customer] resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -442,21 +434,18 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource belonging to the reseller or
+      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource for the reseller or
       /// distributor.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name
-      /// specified in the request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
       ///
-      /// Return Value:
-      /// If successful, the updated [Customer][google.cloud.channel.v1.Customer] resource, otherwise returns
-      /// an error.
+      /// Return value:
+      /// The updated [Customer][google.cloud.channel.v1.Customer] resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -469,15 +458,13 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the account making the request does not own
+      /// * PERMISSION_DENIED: The account making the request does not own
       /// this customer.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * FAILED_PRECONDITION: If the customer has existing entitlements.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name
-      /// specified in the request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * FAILED_PRECONDITION: The customer has existing entitlements.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -489,25 +476,25 @@ namespace Google.Cloud.Channel.V1 {
 
       /// <summary>
       /// Creates a Cloud Identity for the given customer using the customer's
-      /// information or the information provided here, if present.
+      /// information, or the information provided here.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// *  PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// *  INVALID_ARGUMENT: Missing or invalid required parameters in the request.
-      /// *  NOT_FOUND: If the customer is not found for the reseller.
-      /// *  ALREADY_EXISTS: If the customer's primary email already exists. In this
-      ///    case, retry after changing the customer's primary contact email.
-      /// *  INTERNAL: Any non-user error related to a technical issue in the
-      ///    backend. Contact Cloud Channel support in this case.
-      /// *  UNKNOWN: Any non-user error related to a technical issue in the backend.
-      ///    Contact Cloud Channel support in this case.
+      /// *  PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// *  INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// *  NOT_FOUND: The customer was not found.
+      /// *  ALREADY_EXISTS: The customer's primary email already exists. Retry
+      ///    after changing the customer's primary contact email.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
-      /// CloudChannelOperationsService. The Operation metadata will contain an
+      /// CloudChannelOperationsService. The Operation metadata contains an
       /// instance of [OperationMetadata][google.cloud.channel.v1.OperationMetadata].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -519,16 +506,15 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// List [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a customer.
+      /// Lists [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a customer.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// List of [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to the customer, or empty list if
-      /// there are none.
+      /// Return value:
+      /// A list of the customer's [Entitlement][google.cloud.channel.v1.Entitlement]s.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -539,24 +525,24 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a customer based on Cloud Identity ID or
+      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a customer based on the Cloud Identity ID or
       /// Customer Name in the request.
       ///
-      /// This method is used when a reseller lists the entitlements
-      /// information of a customer that is not owned. The reseller should provide
-      /// the customer's Cloud Identity ID or Customer Name.
+      /// Use this method to list the entitlements information of an
+      /// unowned customer. You should provide the customer's
+      /// Cloud Identity ID or Customer Name.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: Appears because of one of the following -
-      ///     * The customer doesn't belong to the reseller and no auth token.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller and has no auth token.
       ///     * The supplied auth token is invalid.
-      ///     * The reseller account making the request and the queries reseller
-      ///     account are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      ///     * The reseller account making the request is different
+      ///     from the reseller account in the query.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// List of [TransferableSku][google.cloud.channel.v1.TransferableSku] for the given customer.
+      /// Return value:
+      /// A list of the customer's [TransferableSku][google.cloud.channel.v1.TransferableSku].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -570,21 +556,20 @@ namespace Google.Cloud.Channel.V1 {
       /// List [TransferableOffer][google.cloud.channel.v1.TransferableOffer]s of a customer based on Cloud Identity ID or
       /// Customer Name in the request.
       ///
-      /// This method is used when a reseller gets the entitlement
-      /// information of a customer that is not owned. The reseller should provide
-      /// the customer's Cloud Identity ID or Customer Name.
+      /// Use this method when a reseller gets the entitlement information of an
+      /// unowned customer. The reseller should provide the customer's
+      /// Cloud Identity ID or Customer Name.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: Appears because of one of the following:
-      ///     * If the customer doesn't belong to the reseller and no auth token or
-      ///     invalid auth token is supplied.
-      ///     * If the reseller account making the request and the reseller account
-      ///     being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller and has no auth token.
+      ///     * The supplied auth token is invalid.
+      ///     * The reseller account making the request is different
+      ///     from the reseller account in the query.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
+      /// Return value:
       /// List of [TransferableOffer][google.cloud.channel.v1.TransferableOffer] for the given customer and SKU.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -598,16 +583,14 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Returns a requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the entitlement is not found for the customer.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer entitlement was not found.
       ///
-      /// Return Value:
-      /// If found, the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource, otherwise returns
-      /// an error.
+      /// Return value:
+      /// The requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -620,39 +603,36 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Creates an entitlement for a customer.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: It can happen in below scenarios -
-      ///     * Missing or invalid required parameters in the request.
-      ///     * Cannot purchase an entitlement if there is already an entitlement for
-      ///     customer, for a SKU from the same product family.
-      ///     * INVALID_VALUE: Offer passed in isn't valid. Make sure OfferId is
-      ///     valid. If it is valid, then contact Google Channel support for further
-      ///     troubleshooting.
-      /// * NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller.
-      /// * ALREADY_EXISTS: This failure can happen in the following cases:
-      ///     * If the SKU has been already purchased for the customer.
-      ///     * If the customer's primary email already exists. In this case retry
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT:
+      ///     * Required request parameters are missing or invalid.
+      ///     * There is already a customer entitlement for a SKU from the same
+      ///     product family.
+      /// * INVALID_VALUE: Make sure the OfferId is valid. If it is, contact
+      /// Google Channel support for further troubleshooting.
+      /// * NOT_FOUND: The customer or offer resource was not found.
+      /// * ALREADY_EXISTS:
+      ///     * The SKU was already purchased for the customer.
+      ///     * The customer's primary email already exists. Retry
       ///     after changing the customer's primary contact email.
-      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
-      /// following cases:
-      ///     * Purchasing a SKU that requires domain verification and the domain has
-      ///     not been verified.
-      ///     * Purchasing an Add-On SKU like Vault or Drive without purchasing the
-      ///     pre-requisite SKU, such as Google Workspace Business Starter.
-      ///     * Applicable only for developer accounts: reseller and resold domain.
-      ///     Must meet the following domain naming requirements:
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION:
+      ///     * The domain required for purchasing a SKU has not been verified.
+      ///     * A pre-requisite SKU required to purchase an Add-On SKU is missing.
+      ///     For example, Google Workspace Business Starter is required to purchase
+      ///     Vault or Drive.
+      ///     * (Developer accounts only) Reseller and resold domain must meet the
+      ///     following naming requirements:
       ///         * Domain names must start with goog-test.
-      ///         * Resold domain names must include the reseller domain.
+      ///         * Domain names must include the reseller domain.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case.
-      /// * UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -667,26 +647,25 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Change parameters of the entitlement
+      /// Change parameters of the entitlement.
       ///
-      /// An entitlement parameters update is a long-running operation and results in
-      /// updates to the entitlement as a result of fulfillment.
+      /// An entitlement update is a long-running operation and it updates the
+      /// entitlement as a result of fulfillment.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request. For example, if the number of seats being changed to is greater
-      /// than the allowed number of max seats for the resource. Or decreasing seats
-      /// for a commitment based plan.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// For example, the number of seats being changed is greater than the allowed
+      /// number of max seats, or decreasing seats for a commitment based plan.
       /// * NOT_FOUND: Entitlement resource not found.
-      /// * INTERNAL: Any non-user error related to a technical issue
-      /// in the backend. In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -703,24 +682,23 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Updates the renewal settings for an existing customer entitlement.
       ///
-      /// An entitlement update is a long-running operation and results in updates to
-      /// the entitlement as a result of fulfillment.
+      /// An entitlement update is a long-running operation and it updates the
+      /// entitlement as a result of fulfillment.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * NOT_COMMITMENT_PLAN: Renewal Settings are only applicable for a
-      /// commitment plan. Can't enable or disable renewal for non-commitment plans.
-      /// * INTERNAL: Any non user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// commitment plan. Can't enable or disable renewals for non-commitment plans.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      ///   Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -737,22 +715,21 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Updates the Offer for an existing customer entitlement.
       ///
-      /// An entitlement update is a long-running operation and results in updates to
-      /// the entitlement as a result of fulfillment.
+      /// An entitlement update is a long-running operation and it updates the
+      /// entitlement as a result of fulfillment.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Offer or Entitlement resource not found.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -770,24 +747,23 @@ namespace Google.Cloud.Channel.V1 {
       /// Starts paid service for a trial entitlement.
       ///
       /// Starts paid service for a trial entitlement immediately. This method is
-      /// only applicable if a plan has already been set up for a trial entitlement
-      /// but has some trial days remaining.
+      /// only applicable if a plan is set up for a trial entitlement but has some
+      /// trial days remaining.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * FAILED_PRECONDITION/NOT_IN_TRIAL: This method only works for
       /// entitlement on trial plans.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue
-      /// in the backend. In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -803,22 +779,22 @@ namespace Google.Cloud.Channel.V1 {
 
       /// <summary>
       /// Suspends a previously fulfilled entitlement.
+      ///
       /// An entitlement suspension is a long-running operation.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * NOT_ACTIVE: Entitlement is not active.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -834,27 +810,26 @@ namespace Google.Cloud.Channel.V1 {
 
       /// <summary>
       /// Cancels a previously fulfilled entitlement.
+      ///
       /// An entitlement cancellation is a long-running operation.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller or
-      /// if the reseller account making the request and reseller account being
-      /// queried for are different.
-      /// * FAILED_PRECONDITION: If there are any Google Cloud projects linked to the
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * FAILED_PRECONDITION: There are Google Cloud projects linked to the
       /// Google Cloud entitlement's Cloud Billing subaccount.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * DELETION_TYPE_NOT_ALLOWED: Cancel is only allowed for Google Workspace
-      /// add-ons or entitlements for Google Cloud's development platform.
+      /// add-ons, or entitlements for Google Cloud's development platform.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -870,32 +845,29 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Activates a previously suspended entitlement. The entitlement must be in a
-      /// suspended state for it to be activated. Entitlements suspended for pending
-      /// ToS acceptance can't be activated using this method. An entitlement
-      /// activation is a long-running operation and can result in updates to
+      /// Activates a previously suspended entitlement. Entitlements suspended for
+      /// pending ToS acceptance can't be activated using this method.
+      ///
+      /// An entitlement activation is a long-running operation and it updates
       /// the state of the customer entitlement.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller or
-      /// if the reseller account making the request and reseller account being
-      /// queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
-      /// * SUSPENSION_NOT_RESELLER_INITIATED: Can't activate an
-      /// entitlement that is pending TOS acceptance. Only reseller initiated
-      /// suspensions can be activated.
-      /// * NOT_SUSPENDED: Can't activate entitlements that are already in ACTIVE
-      /// state. Can only activate suspended entitlements.
-      /// * INTERNAL: Any non-user error related to a technical issue
-      /// in the backend. In this case, contact Cloud Channel support.
+      /// * SUSPENSION_NOT_RESELLER_INITIATED: Can only activate reseller-initiated
+      /// suspensions and entitlements that have accepted the TOS.
+      /// * NOT_SUSPENDED: Can only activate suspended entitlements not in an ACTIVE
+      /// state.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -912,31 +884,29 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Transfers customer entitlements to new reseller.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
-      /// * NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller.
-      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
-      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
-      /// following cases:
-      ///     * Transferring a SKU that requires domain verification and the domain
-      ///     has not been verified.
-      ///     * Transferring an Add-On SKU like Vault or Drive without transferring
-      ///     the pre-requisite SKU, such as G Suite Basic.
-      ///     * Applicable only for developer accounts: reseller and resold domain
-      ///     must follow the domain naming convention as follows:
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer or offer resource was not found.
+      /// * ALREADY_EXISTS: The SKU was already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION:
+      ///     * The SKU requires domain verification to transfer, but the domain is
+      ///     not verified.
+      ///     * An Add-On SKU (example, Vault or Drive) is missing the
+      ///     pre-requisite SKU (example, G Suite Basic).
+      ///     * (Developer accounts only) Reseller and resold domain must meet the
+      ///     following naming requirements:
       ///         * Domain names must start with goog-test.
-      ///         * Resold domain names must include the reseller domain.
-      ///     * All transferring entitlements must be specified.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      ///         * Domain names must include the reseller domain.
+      ///     * Specify all transferring entitlements.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -951,32 +921,30 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Transfers customer entitlements from current reseller to Google.
+      /// Transfers customer entitlements from their current reseller to Google.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
-      /// * NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller.
-      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
-      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in
-      /// the following cases:
-      ///     * Transferring a SKU that requires domain verification and the domain
-      ///     has not been verified.
-      ///     * Transferring an Add-On SKU like Vault or Drive without purchasing the
-      ///     pre-requisite SKU, such as G Suite Basic.
-      ///     * Applicable only for developer accounts: reseller and resold domain
-      ///     must follow the domain naming convention as follows:
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer or offer resource was not found.
+      /// * ALREADY_EXISTS: The SKU was already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION:
+      ///     * The SKU requires domain verification to transfer, but the domain is
+      ///     not verified.
+      ///     * An Add-On SKU (example, Vault or Drive) is missing the
+      ///     pre-requisite SKU (example, G Suite Basic).
+      ///     * (Developer accounts only) Reseller and resold domain must meet the
+      ///     following naming requirements:
       ///         * Domain names must start with goog-test.
-      ///         * Resold domain names must include the reseller domain.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      ///         * Domain names must include the reseller domain.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -993,18 +961,16 @@ namespace Google.Cloud.Channel.V1 {
 
       /// <summary>
       /// List [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s belonging to a distributor.
-      /// To call this method, you must be a distributor.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// If successful, returns the list of [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources
-      /// for the distributor account, otherwise returns an error.
+      /// Return value:
+      /// The list of the distributor account's [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1016,19 +982,18 @@ namespace Google.Cloud.Channel.V1 {
 
       /// <summary>
       /// Returns a requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
-      /// To call this method, you must be a distributor.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: ChannelPartnerLink resource not found. Results
-      /// due invalid channel partner link name.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: ChannelPartnerLink resource not found because of an
+      /// invalid channel partner link name.
       ///
-      /// Return Value:
-      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if found, otherwise returns an error.
+      /// Return value:
+      /// The [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1039,30 +1004,28 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Initiates a channel partner link between a distributor and a reseller or
+      /// Initiates a channel partner link between a distributor and a reseller, or
       /// between resellers in an n-tier reseller channel.
-      /// To accept the invite, the invited partner should follow the invite_link_uri
-      /// provided in the response. If the link creation is accepted, a valid link is
-      /// set up between the two involved parties.
-      /// To call this method, you must be a distributor.
+      /// Invited partners need to follow the invite_link_uri provided in the
+      /// response to accept. After accepting the invitation, a link is set up
+      /// between the two parties.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * ALREADY_EXISTS: If the ChannelPartnerLink sent in the request already
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * ALREADY_EXISTS: The ChannelPartnerLink sent in the request already
       /// exists.
-      /// * NOT_FOUND: If no Cloud Identity customer exists for domain provided.
+      /// * NOT_FOUND: No Cloud Identity customer exists for provided domain.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Newly created [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if successful,
-      /// otherwise error is returned.
+      /// Return value:
+      /// The new [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1073,28 +1036,27 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Updates a channel partner link. A distributor calls this method to change a
-      /// link's status. For example, suspend a partner link.
-      /// To call this method, you must be a distributor.
+      /// Updates a channel partner link. Distributors call this method to change a
+      /// link's status. For example, to suspend a partner link.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: It can happen in following scenarios -
-      ///     * Missing or invalid required parameters in the request.
-      ///     * Updating link state from invited to active or suspended.
-      ///     * Sending reseller_cloud_identity_id, invite_url or name in update
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT:
+      ///     * Required request parameters are missing or invalid.
+      ///     * Link state cannot change from invited to active or suspended.
+      ///     * Cannot send reseller_cloud_identity_id, invite_url, or name in update
       ///     mask.
       /// * NOT_FOUND: ChannelPartnerLink resource not found.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// If successful, the updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource, otherwise
-      /// returns an error.
+      /// Return value:
+      /// The updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1107,10 +1069,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Lists the Products the reseller is authorized to sell.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1123,10 +1084,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Lists the SKUs for a product the reseller is authorized to sell.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1139,10 +1099,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Lists the Offers the reseller can sell.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1153,16 +1112,15 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Lists the Purchasable SKUs for following cases:
+      /// Lists the following:
       ///
-      /// * SKUs that can be newly purchased for a customer
-      /// * SKUs that can be upgraded/downgraded to, for an entitlement.
+      /// * SKUs that you can purchase for a customer
+      /// * SKUs that you can upgrade or downgrade for an entitlement.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1173,16 +1131,15 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// Lists the Purchasable Offers for the following cases:
+      /// Lists the following:
       ///
-      /// * Offers that can be newly purchased for a customer
-      /// * Offers that can be changed to, for an entitlement.
+      /// * Offers that you can purchase for a customer.
+      /// * Offers that you can change for an entitlement.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1194,24 +1151,22 @@ namespace Google.Cloud.Channel.V1 {
 
       /// <summary>
       /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
-      /// topic created for this Channel Services account. Once you create a
-      /// subscriber, you will get the events as per [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+      /// topic for this Channel Services account. After you create a
+      /// subscriber, you get the events through [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being provided are different, or if the impersonated user
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different, or the impersonated user
       /// is not a super admin.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Topic name with service email address registered if successful,
-      /// otherwise error is returned.
+      /// Return value:
+      /// The topic name with the registered service email address.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1224,26 +1179,25 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Unregisters a service account with subscriber privileges on the Cloud
       /// Pub/Sub topic created for this Channel Services account. If there are no
-      /// more service account left with sunbscriber privileges, the topic will be
-      /// deleted. You can check this by calling ListSubscribers api.
+      /// service accounts left with subscriber privileges, this deletes the topic.
+      /// You can call ListSubscribers to check for these accounts.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being provided are different, or if the impersonated user
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different, or the impersonated user
       /// is not a super admin.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The topic resource doesn't exist.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Topic name from which service email address has been unregistered if
-      /// successful, otherwise error is returned. If the service email was already
-      /// not associated with the topic, the success response will be returned.
+      /// Return value:
+      /// The topic name that unregistered the service email address.
+      /// Returns a success response if the service email address wasn't registered
+      /// with the topic.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1257,22 +1211,20 @@ namespace Google.Cloud.Channel.V1 {
       /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
       /// topic created for this Channel Services account.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being provided are different, or if the account is not
-      /// a super admin.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different, or the impersonated user
+      /// is not a super admin.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The topic resource doesn't exist.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// List of service email addresses if successful, otherwise error is
-      /// returned.
+      /// Return value:
+      /// A list of service email addresses.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1308,18 +1260,16 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
-      /// List downstream [Customer][google.cloud.channel.v1.Customer]s.
+      /// List [Customer][google.cloud.channel.v1.Customer]s.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// List of [Customer][google.cloud.channel.v1.Customer]s pertaining to the reseller or empty list if
-      /// there are none.
+      /// Return value:
+      /// List of [Customer][google.cloud.channel.v1.Customer]s, or an empty list if there are no customers.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1331,18 +1281,16 @@ namespace Google.Cloud.Channel.V1 {
         return ListCustomers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List downstream [Customer][google.cloud.channel.v1.Customer]s.
+      /// List [Customer][google.cloud.channel.v1.Customer]s.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// List of [Customer][google.cloud.channel.v1.Customer]s pertaining to the reseller or empty list if
-      /// there are none.
+      /// Return value:
+      /// List of [Customer][google.cloud.channel.v1.Customer]s, or an empty list if there are no customers.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1352,18 +1300,16 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListCustomers, null, options, request);
       }
       /// <summary>
-      /// List downstream [Customer][google.cloud.channel.v1.Customer]s.
+      /// List [Customer][google.cloud.channel.v1.Customer]s.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// List of [Customer][google.cloud.channel.v1.Customer]s pertaining to the reseller or empty list if
-      /// there are none.
+      /// Return value:
+      /// List of [Customer][google.cloud.channel.v1.Customer]s, or an empty list if there are no customers.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1375,18 +1321,16 @@ namespace Google.Cloud.Channel.V1 {
         return ListCustomersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List downstream [Customer][google.cloud.channel.v1.Customer]s.
+      /// List [Customer][google.cloud.channel.v1.Customer]s.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// List of [Customer][google.cloud.channel.v1.Customer]s pertaining to the reseller or empty list if
-      /// there are none.
+      /// Return value:
+      /// List of [Customer][google.cloud.channel.v1.Customer]s, or an empty list if there are no customers.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1398,17 +1342,16 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the customer resource doesn't exist. Usually
-      /// the result of an invalid name parameter.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer resource doesn't exist. Usually the result of an
+      /// invalid name parameter.
       ///
-      /// Return Value:
-      /// [Customer][google.cloud.channel.v1.Customer] resource if found, error otherwise.
+      /// Return value:
+      /// The [Customer][google.cloud.channel.v1.Customer] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1422,17 +1365,16 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the customer resource doesn't exist. Usually
-      /// the result of an invalid name parameter.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer resource doesn't exist. Usually the result of an
+      /// invalid name parameter.
       ///
-      /// Return Value:
-      /// [Customer][google.cloud.channel.v1.Customer] resource if found, error otherwise.
+      /// Return value:
+      /// The [Customer][google.cloud.channel.v1.Customer] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1444,17 +1386,16 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the customer resource doesn't exist. Usually
-      /// the result of an invalid name parameter.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer resource doesn't exist. Usually the result of an
+      /// invalid name parameter.
       ///
-      /// Return Value:
-      /// [Customer][google.cloud.channel.v1.Customer] resource if found, error otherwise.
+      /// Return value:
+      /// The [Customer][google.cloud.channel.v1.Customer] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1468,17 +1409,16 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Returns a requested [Customer][google.cloud.channel.v1.Customer] resource.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the customer resource doesn't exist. Usually
-      /// the result of an invalid name parameter.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer resource doesn't exist. Usually the result of an
+      /// invalid name parameter.
       ///
-      /// Return Value:
-      /// [Customer][google.cloud.channel.v1.Customer] resource if found, error otherwise.
+      /// Return value:
+      /// The [Customer][google.cloud.channel.v1.Customer] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1488,22 +1428,21 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetCustomer, null, options, request);
       }
       /// <summary>
-      /// Confirms the existence of Cloud Identity accounts, based on the domain and
-      /// whether the Cloud Identity accounts are owned by the reseller.
+      /// Confirms the existence of Cloud Identity accounts based on the domain and
+      /// if the Cloud Identity accounts are owned by the reseller.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * INVALID_VALUE: Invalid domain value in the request.
       ///
-      /// Return Value:
-      /// List of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain.
-      /// List may be empty.
+      /// Return value:
+      /// A list of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain (may be
+      /// empty)
       ///
-      /// Note: in the v1alpha1 version of the API, a NOT_FOUND error is returned if
+      /// Note: in the v1alpha1 version of the API, a NOT_FOUND error returns if
       /// no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources match the domain.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1516,22 +1455,21 @@ namespace Google.Cloud.Channel.V1 {
         return CheckCloudIdentityAccountsExist(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Confirms the existence of Cloud Identity accounts, based on the domain and
-      /// whether the Cloud Identity accounts are owned by the reseller.
+      /// Confirms the existence of Cloud Identity accounts based on the domain and
+      /// if the Cloud Identity accounts are owned by the reseller.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * INVALID_VALUE: Invalid domain value in the request.
       ///
-      /// Return Value:
-      /// List of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain.
-      /// List may be empty.
+      /// Return value:
+      /// A list of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain (may be
+      /// empty)
       ///
-      /// Note: in the v1alpha1 version of the API, a NOT_FOUND error is returned if
+      /// Note: in the v1alpha1 version of the API, a NOT_FOUND error returns if
       /// no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources match the domain.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1542,22 +1480,21 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CheckCloudIdentityAccountsExist, null, options, request);
       }
       /// <summary>
-      /// Confirms the existence of Cloud Identity accounts, based on the domain and
-      /// whether the Cloud Identity accounts are owned by the reseller.
+      /// Confirms the existence of Cloud Identity accounts based on the domain and
+      /// if the Cloud Identity accounts are owned by the reseller.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * INVALID_VALUE: Invalid domain value in the request.
       ///
-      /// Return Value:
-      /// List of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain.
-      /// List may be empty.
+      /// Return value:
+      /// A list of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain (may be
+      /// empty)
       ///
-      /// Note: in the v1alpha1 version of the API, a NOT_FOUND error is returned if
+      /// Note: in the v1alpha1 version of the API, a NOT_FOUND error returns if
       /// no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources match the domain.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1570,22 +1507,21 @@ namespace Google.Cloud.Channel.V1 {
         return CheckCloudIdentityAccountsExistAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Confirms the existence of Cloud Identity accounts, based on the domain and
-      /// whether the Cloud Identity accounts are owned by the reseller.
+      /// Confirms the existence of Cloud Identity accounts based on the domain and
+      /// if the Cloud Identity accounts are owned by the reseller.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * INVALID_VALUE: Invalid domain value in the request.
       ///
-      /// Return Value:
-      /// List of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain.
-      /// List may be empty.
+      /// Return value:
+      /// A list of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain (may be
+      /// empty)
       ///
-      /// Note: in the v1alpha1 version of the API, a NOT_FOUND error is returned if
+      /// Note: in the v1alpha1 version of the API, a NOT_FOUND error returns if
       /// no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources match the domain.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1599,18 +1535,16 @@ namespace Google.Cloud.Channel.V1 {
       /// Creates a new [Customer][google.cloud.channel.v1.Customer] resource under the reseller or distributor
       /// account.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: It can happen in following scenarios -
-      ///     * Missing or invalid required parameters in the request.
-      ///     * Domain field value doesn't match the domain specified in primary
-      ///     email.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT:
+      ///     * Required request parameters are missing or invalid.
+      ///     * Domain field value doesn't match the primary email domain.
       ///
-      /// Return Value:
-      /// If successful, the newly created [Customer][google.cloud.channel.v1.Customer] resource, otherwise
-      /// returns an error.
+      /// Return value:
+      /// The newly created [Customer][google.cloud.channel.v1.Customer] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1625,18 +1559,16 @@ namespace Google.Cloud.Channel.V1 {
       /// Creates a new [Customer][google.cloud.channel.v1.Customer] resource under the reseller or distributor
       /// account.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: It can happen in following scenarios -
-      ///     * Missing or invalid required parameters in the request.
-      ///     * Domain field value doesn't match the domain specified in primary
-      ///     email.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT:
+      ///     * Required request parameters are missing or invalid.
+      ///     * Domain field value doesn't match the primary email domain.
       ///
-      /// Return Value:
-      /// If successful, the newly created [Customer][google.cloud.channel.v1.Customer] resource, otherwise
-      /// returns an error.
+      /// Return value:
+      /// The newly created [Customer][google.cloud.channel.v1.Customer] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1649,18 +1581,16 @@ namespace Google.Cloud.Channel.V1 {
       /// Creates a new [Customer][google.cloud.channel.v1.Customer] resource under the reseller or distributor
       /// account.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: It can happen in following scenarios -
-      ///     * Missing or invalid required parameters in the request.
-      ///     * Domain field value doesn't match the domain specified in primary
-      ///     email.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT:
+      ///     * Required request parameters are missing or invalid.
+      ///     * Domain field value doesn't match the primary email domain.
       ///
-      /// Return Value:
-      /// If successful, the newly created [Customer][google.cloud.channel.v1.Customer] resource, otherwise
-      /// returns an error.
+      /// Return value:
+      /// The newly created [Customer][google.cloud.channel.v1.Customer] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1675,18 +1605,16 @@ namespace Google.Cloud.Channel.V1 {
       /// Creates a new [Customer][google.cloud.channel.v1.Customer] resource under the reseller or distributor
       /// account.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: It can happen in following scenarios -
-      ///     * Missing or invalid required parameters in the request.
-      ///     * Domain field value doesn't match the domain specified in primary
-      ///     email.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT:
+      ///     * Required request parameters are missing or invalid.
+      ///     * Domain field value doesn't match the primary email domain.
       ///
-      /// Return Value:
-      /// If successful, the newly created [Customer][google.cloud.channel.v1.Customer] resource, otherwise
-      /// returns an error.
+      /// Return value:
+      /// The newly created [Customer][google.cloud.channel.v1.Customer] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1696,21 +1624,18 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCustomer, null, options, request);
       }
       /// <summary>
-      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource belonging to the reseller or
+      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource for the reseller or
       /// distributor.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name
-      /// specified in the request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
       ///
-      /// Return Value:
-      /// If successful, the updated [Customer][google.cloud.channel.v1.Customer] resource, otherwise returns
-      /// an error.
+      /// Return value:
+      /// The updated [Customer][google.cloud.channel.v1.Customer] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1722,21 +1647,18 @@ namespace Google.Cloud.Channel.V1 {
         return UpdateCustomer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource belonging to the reseller or
+      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource for the reseller or
       /// distributor.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name
-      /// specified in the request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
       ///
-      /// Return Value:
-      /// If successful, the updated [Customer][google.cloud.channel.v1.Customer] resource, otherwise returns
-      /// an error.
+      /// Return value:
+      /// The updated [Customer][google.cloud.channel.v1.Customer] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1746,21 +1668,18 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCustomer, null, options, request);
       }
       /// <summary>
-      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource belonging to the reseller or
+      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource for the reseller or
       /// distributor.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name
-      /// specified in the request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
       ///
-      /// Return Value:
-      /// If successful, the updated [Customer][google.cloud.channel.v1.Customer] resource, otherwise returns
-      /// an error.
+      /// Return value:
+      /// The updated [Customer][google.cloud.channel.v1.Customer] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1772,21 +1691,18 @@ namespace Google.Cloud.Channel.V1 {
         return UpdateCustomerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource belonging to the reseller or
+      /// Updates an existing [Customer][google.cloud.channel.v1.Customer] resource for the reseller or
       /// distributor.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name
-      /// specified in the request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
       ///
-      /// Return Value:
-      /// If successful, the updated [Customer][google.cloud.channel.v1.Customer] resource, otherwise returns
-      /// an error.
+      /// Return value:
+      /// The updated [Customer][google.cloud.channel.v1.Customer] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1798,15 +1714,13 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the account making the request does not own
+      /// * PERMISSION_DENIED: The account making the request does not own
       /// this customer.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * FAILED_PRECONDITION: If the customer has existing entitlements.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name
-      /// specified in the request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * FAILED_PRECONDITION: The customer has existing entitlements.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1820,15 +1734,13 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the account making the request does not own
+      /// * PERMISSION_DENIED: The account making the request does not own
       /// this customer.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * FAILED_PRECONDITION: If the customer has existing entitlements.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name
-      /// specified in the request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * FAILED_PRECONDITION: The customer has existing entitlements.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1840,15 +1752,13 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the account making the request does not own
+      /// * PERMISSION_DENIED: The account making the request does not own
       /// this customer.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * FAILED_PRECONDITION: If the customer has existing entitlements.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name
-      /// specified in the request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * FAILED_PRECONDITION: The customer has existing entitlements.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1862,15 +1772,13 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Deletes the given [Customer][google.cloud.channel.v1.Customer] permanently and irreversibly.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the account making the request does not own
+      /// * PERMISSION_DENIED: The account making the request does not own
       /// this customer.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * FAILED_PRECONDITION: If the customer has existing entitlements.
-      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name
-      /// specified in the request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * FAILED_PRECONDITION: The customer has existing entitlements.
+      /// * NOT_FOUND: No [Customer][google.cloud.channel.v1.Customer] resource found for the name in the request.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1881,25 +1789,25 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Creates a Cloud Identity for the given customer using the customer's
-      /// information or the information provided here, if present.
+      /// information, or the information provided here.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// *  PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// *  INVALID_ARGUMENT: Missing or invalid required parameters in the request.
-      /// *  NOT_FOUND: If the customer is not found for the reseller.
-      /// *  ALREADY_EXISTS: If the customer's primary email already exists. In this
-      ///    case, retry after changing the customer's primary contact email.
-      /// *  INTERNAL: Any non-user error related to a technical issue in the
-      ///    backend. Contact Cloud Channel support in this case.
-      /// *  UNKNOWN: Any non-user error related to a technical issue in the backend.
-      ///    Contact Cloud Channel support in this case.
+      /// *  PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// *  INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// *  NOT_FOUND: The customer was not found.
+      /// *  ALREADY_EXISTS: The customer's primary email already exists. Retry
+      ///    after changing the customer's primary contact email.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
-      /// CloudChannelOperationsService. The Operation metadata will contain an
+      /// CloudChannelOperationsService. The Operation metadata contains an
       /// instance of [OperationMetadata][google.cloud.channel.v1.OperationMetadata].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1913,25 +1821,25 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Creates a Cloud Identity for the given customer using the customer's
-      /// information or the information provided here, if present.
+      /// information, or the information provided here.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// *  PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// *  INVALID_ARGUMENT: Missing or invalid required parameters in the request.
-      /// *  NOT_FOUND: If the customer is not found for the reseller.
-      /// *  ALREADY_EXISTS: If the customer's primary email already exists. In this
-      ///    case, retry after changing the customer's primary contact email.
-      /// *  INTERNAL: Any non-user error related to a technical issue in the
-      ///    backend. Contact Cloud Channel support in this case.
-      /// *  UNKNOWN: Any non-user error related to a technical issue in the backend.
-      ///    Contact Cloud Channel support in this case.
+      /// *  PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// *  INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// *  NOT_FOUND: The customer was not found.
+      /// *  ALREADY_EXISTS: The customer's primary email already exists. Retry
+      ///    after changing the customer's primary contact email.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
-      /// CloudChannelOperationsService. The Operation metadata will contain an
+      /// CloudChannelOperationsService. The Operation metadata contains an
       /// instance of [OperationMetadata][google.cloud.channel.v1.OperationMetadata].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1943,25 +1851,25 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Creates a Cloud Identity for the given customer using the customer's
-      /// information or the information provided here, if present.
+      /// information, or the information provided here.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// *  PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// *  INVALID_ARGUMENT: Missing or invalid required parameters in the request.
-      /// *  NOT_FOUND: If the customer is not found for the reseller.
-      /// *  ALREADY_EXISTS: If the customer's primary email already exists. In this
-      ///    case, retry after changing the customer's primary contact email.
-      /// *  INTERNAL: Any non-user error related to a technical issue in the
-      ///    backend. Contact Cloud Channel support in this case.
-      /// *  UNKNOWN: Any non-user error related to a technical issue in the backend.
-      ///    Contact Cloud Channel support in this case.
+      /// *  PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// *  INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// *  NOT_FOUND: The customer was not found.
+      /// *  ALREADY_EXISTS: The customer's primary email already exists. Retry
+      ///    after changing the customer's primary contact email.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
-      /// CloudChannelOperationsService. The Operation metadata will contain an
+      /// CloudChannelOperationsService. The Operation metadata contains an
       /// instance of [OperationMetadata][google.cloud.channel.v1.OperationMetadata].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1975,25 +1883,25 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Creates a Cloud Identity for the given customer using the customer's
-      /// information or the information provided here, if present.
+      /// information, or the information provided here.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// *  PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// *  INVALID_ARGUMENT: Missing or invalid required parameters in the request.
-      /// *  NOT_FOUND: If the customer is not found for the reseller.
-      /// *  ALREADY_EXISTS: If the customer's primary email already exists. In this
-      ///    case, retry after changing the customer's primary contact email.
-      /// *  INTERNAL: Any non-user error related to a technical issue in the
-      ///    backend. Contact Cloud Channel support in this case.
-      /// *  UNKNOWN: Any non-user error related to a technical issue in the backend.
-      ///    Contact Cloud Channel support in this case.
+      /// *  PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// *  INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// *  NOT_FOUND: The customer was not found.
+      /// *  ALREADY_EXISTS: The customer's primary email already exists. Retry
+      ///    after changing the customer's primary contact email.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
-      /// CloudChannelOperationsService. The Operation metadata will contain an
+      /// CloudChannelOperationsService. The Operation metadata contains an
       /// instance of [OperationMetadata][google.cloud.channel.v1.OperationMetadata].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2004,16 +1912,15 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ProvisionCloudIdentity, null, options, request);
       }
       /// <summary>
-      /// List [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a customer.
+      /// Lists [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a customer.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// List of [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to the customer, or empty list if
-      /// there are none.
+      /// Return value:
+      /// A list of the customer's [Entitlement][google.cloud.channel.v1.Entitlement]s.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2025,16 +1932,15 @@ namespace Google.Cloud.Channel.V1 {
         return ListEntitlements(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a customer.
+      /// Lists [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a customer.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// List of [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to the customer, or empty list if
-      /// there are none.
+      /// Return value:
+      /// A list of the customer's [Entitlement][google.cloud.channel.v1.Entitlement]s.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2044,16 +1950,15 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListEntitlements, null, options, request);
       }
       /// <summary>
-      /// List [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a customer.
+      /// Lists [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a customer.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// List of [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to the customer, or empty list if
-      /// there are none.
+      /// Return value:
+      /// A list of the customer's [Entitlement][google.cloud.channel.v1.Entitlement]s.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2065,16 +1970,15 @@ namespace Google.Cloud.Channel.V1 {
         return ListEntitlementsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a customer.
+      /// Lists [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to a customer.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// List of [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to the customer, or empty list if
-      /// there are none.
+      /// Return value:
+      /// A list of the customer's [Entitlement][google.cloud.channel.v1.Entitlement]s.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2084,24 +1988,24 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListEntitlements, null, options, request);
       }
       /// <summary>
-      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a customer based on Cloud Identity ID or
+      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a customer based on the Cloud Identity ID or
       /// Customer Name in the request.
       ///
-      /// This method is used when a reseller lists the entitlements
-      /// information of a customer that is not owned. The reseller should provide
-      /// the customer's Cloud Identity ID or Customer Name.
+      /// Use this method to list the entitlements information of an
+      /// unowned customer. You should provide the customer's
+      /// Cloud Identity ID or Customer Name.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: Appears because of one of the following -
-      ///     * The customer doesn't belong to the reseller and no auth token.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller and has no auth token.
       ///     * The supplied auth token is invalid.
-      ///     * The reseller account making the request and the queries reseller
-      ///     account are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      ///     * The reseller account making the request is different
+      ///     from the reseller account in the query.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// List of [TransferableSku][google.cloud.channel.v1.TransferableSku] for the given customer.
+      /// Return value:
+      /// A list of the customer's [TransferableSku][google.cloud.channel.v1.TransferableSku].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2113,24 +2017,24 @@ namespace Google.Cloud.Channel.V1 {
         return ListTransferableSkus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a customer based on Cloud Identity ID or
+      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a customer based on the Cloud Identity ID or
       /// Customer Name in the request.
       ///
-      /// This method is used when a reseller lists the entitlements
-      /// information of a customer that is not owned. The reseller should provide
-      /// the customer's Cloud Identity ID or Customer Name.
+      /// Use this method to list the entitlements information of an
+      /// unowned customer. You should provide the customer's
+      /// Cloud Identity ID or Customer Name.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: Appears because of one of the following -
-      ///     * The customer doesn't belong to the reseller and no auth token.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller and has no auth token.
       ///     * The supplied auth token is invalid.
-      ///     * The reseller account making the request and the queries reseller
-      ///     account are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      ///     * The reseller account making the request is different
+      ///     from the reseller account in the query.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// List of [TransferableSku][google.cloud.channel.v1.TransferableSku] for the given customer.
+      /// Return value:
+      /// A list of the customer's [TransferableSku][google.cloud.channel.v1.TransferableSku].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2140,24 +2044,24 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListTransferableSkus, null, options, request);
       }
       /// <summary>
-      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a customer based on Cloud Identity ID or
+      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a customer based on the Cloud Identity ID or
       /// Customer Name in the request.
       ///
-      /// This method is used when a reseller lists the entitlements
-      /// information of a customer that is not owned. The reseller should provide
-      /// the customer's Cloud Identity ID or Customer Name.
+      /// Use this method to list the entitlements information of an
+      /// unowned customer. You should provide the customer's
+      /// Cloud Identity ID or Customer Name.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: Appears because of one of the following -
-      ///     * The customer doesn't belong to the reseller and no auth token.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller and has no auth token.
       ///     * The supplied auth token is invalid.
-      ///     * The reseller account making the request and the queries reseller
-      ///     account are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      ///     * The reseller account making the request is different
+      ///     from the reseller account in the query.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// List of [TransferableSku][google.cloud.channel.v1.TransferableSku] for the given customer.
+      /// Return value:
+      /// A list of the customer's [TransferableSku][google.cloud.channel.v1.TransferableSku].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2169,24 +2073,24 @@ namespace Google.Cloud.Channel.V1 {
         return ListTransferableSkusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a customer based on Cloud Identity ID or
+      /// List [TransferableSku][google.cloud.channel.v1.TransferableSku]s of a customer based on the Cloud Identity ID or
       /// Customer Name in the request.
       ///
-      /// This method is used when a reseller lists the entitlements
-      /// information of a customer that is not owned. The reseller should provide
-      /// the customer's Cloud Identity ID or Customer Name.
+      /// Use this method to list the entitlements information of an
+      /// unowned customer. You should provide the customer's
+      /// Cloud Identity ID or Customer Name.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: Appears because of one of the following -
-      ///     * The customer doesn't belong to the reseller and no auth token.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller and has no auth token.
       ///     * The supplied auth token is invalid.
-      ///     * The reseller account making the request and the queries reseller
-      ///     account are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      ///     * The reseller account making the request is different
+      ///     from the reseller account in the query.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// List of [TransferableSku][google.cloud.channel.v1.TransferableSku] for the given customer.
+      /// Return value:
+      /// A list of the customer's [TransferableSku][google.cloud.channel.v1.TransferableSku].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2199,21 +2103,20 @@ namespace Google.Cloud.Channel.V1 {
       /// List [TransferableOffer][google.cloud.channel.v1.TransferableOffer]s of a customer based on Cloud Identity ID or
       /// Customer Name in the request.
       ///
-      /// This method is used when a reseller gets the entitlement
-      /// information of a customer that is not owned. The reseller should provide
-      /// the customer's Cloud Identity ID or Customer Name.
+      /// Use this method when a reseller gets the entitlement information of an
+      /// unowned customer. The reseller should provide the customer's
+      /// Cloud Identity ID or Customer Name.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: Appears because of one of the following:
-      ///     * If the customer doesn't belong to the reseller and no auth token or
-      ///     invalid auth token is supplied.
-      ///     * If the reseller account making the request and the reseller account
-      ///     being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller and has no auth token.
+      ///     * The supplied auth token is invalid.
+      ///     * The reseller account making the request is different
+      ///     from the reseller account in the query.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
+      /// Return value:
       /// List of [TransferableOffer][google.cloud.channel.v1.TransferableOffer] for the given customer and SKU.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2229,21 +2132,20 @@ namespace Google.Cloud.Channel.V1 {
       /// List [TransferableOffer][google.cloud.channel.v1.TransferableOffer]s of a customer based on Cloud Identity ID or
       /// Customer Name in the request.
       ///
-      /// This method is used when a reseller gets the entitlement
-      /// information of a customer that is not owned. The reseller should provide
-      /// the customer's Cloud Identity ID or Customer Name.
+      /// Use this method when a reseller gets the entitlement information of an
+      /// unowned customer. The reseller should provide the customer's
+      /// Cloud Identity ID or Customer Name.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: Appears because of one of the following:
-      ///     * If the customer doesn't belong to the reseller and no auth token or
-      ///     invalid auth token is supplied.
-      ///     * If the reseller account making the request and the reseller account
-      ///     being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller and has no auth token.
+      ///     * The supplied auth token is invalid.
+      ///     * The reseller account making the request is different
+      ///     from the reseller account in the query.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
+      /// Return value:
       /// List of [TransferableOffer][google.cloud.channel.v1.TransferableOffer] for the given customer and SKU.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2257,21 +2159,20 @@ namespace Google.Cloud.Channel.V1 {
       /// List [TransferableOffer][google.cloud.channel.v1.TransferableOffer]s of a customer based on Cloud Identity ID or
       /// Customer Name in the request.
       ///
-      /// This method is used when a reseller gets the entitlement
-      /// information of a customer that is not owned. The reseller should provide
-      /// the customer's Cloud Identity ID or Customer Name.
+      /// Use this method when a reseller gets the entitlement information of an
+      /// unowned customer. The reseller should provide the customer's
+      /// Cloud Identity ID or Customer Name.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: Appears because of one of the following:
-      ///     * If the customer doesn't belong to the reseller and no auth token or
-      ///     invalid auth token is supplied.
-      ///     * If the reseller account making the request and the reseller account
-      ///     being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller and has no auth token.
+      ///     * The supplied auth token is invalid.
+      ///     * The reseller account making the request is different
+      ///     from the reseller account in the query.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
+      /// Return value:
       /// List of [TransferableOffer][google.cloud.channel.v1.TransferableOffer] for the given customer and SKU.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2287,21 +2188,20 @@ namespace Google.Cloud.Channel.V1 {
       /// List [TransferableOffer][google.cloud.channel.v1.TransferableOffer]s of a customer based on Cloud Identity ID or
       /// Customer Name in the request.
       ///
-      /// This method is used when a reseller gets the entitlement
-      /// information of a customer that is not owned. The reseller should provide
-      /// the customer's Cloud Identity ID or Customer Name.
+      /// Use this method when a reseller gets the entitlement information of an
+      /// unowned customer. The reseller should provide the customer's
+      /// Cloud Identity ID or Customer Name.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: Appears because of one of the following:
-      ///     * If the customer doesn't belong to the reseller and no auth token or
-      ///     invalid auth token is supplied.
-      ///     * If the reseller account making the request and the reseller account
-      ///     being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller and has no auth token.
+      ///     * The supplied auth token is invalid.
+      ///     * The reseller account making the request is different
+      ///     from the reseller account in the query.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
+      /// Return value:
       /// List of [TransferableOffer][google.cloud.channel.v1.TransferableOffer] for the given customer and SKU.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2314,16 +2214,14 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Returns a requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the entitlement is not found for the customer.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer entitlement was not found.
       ///
-      /// Return Value:
-      /// If found, the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource, otherwise returns
-      /// an error.
+      /// Return value:
+      /// The requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2337,16 +2235,14 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Returns a requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the entitlement is not found for the customer.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer entitlement was not found.
       ///
-      /// Return Value:
-      /// If found, the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource, otherwise returns
-      /// an error.
+      /// Return value:
+      /// The requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2358,16 +2254,14 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Returns a requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the entitlement is not found for the customer.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer entitlement was not found.
       ///
-      /// Return Value:
-      /// If found, the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource, otherwise returns
-      /// an error.
+      /// Return value:
+      /// The requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2381,16 +2275,14 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Returns a requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the entitlement is not found for the customer.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer entitlement was not found.
       ///
-      /// Return Value:
-      /// If found, the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource, otherwise returns
-      /// an error.
+      /// Return value:
+      /// The requested [Entitlement][google.cloud.channel.v1.Entitlement] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2402,39 +2294,36 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Creates an entitlement for a customer.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: It can happen in below scenarios -
-      ///     * Missing or invalid required parameters in the request.
-      ///     * Cannot purchase an entitlement if there is already an entitlement for
-      ///     customer, for a SKU from the same product family.
-      ///     * INVALID_VALUE: Offer passed in isn't valid. Make sure OfferId is
-      ///     valid. If it is valid, then contact Google Channel support for further
-      ///     troubleshooting.
-      /// * NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller.
-      /// * ALREADY_EXISTS: This failure can happen in the following cases:
-      ///     * If the SKU has been already purchased for the customer.
-      ///     * If the customer's primary email already exists. In this case retry
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT:
+      ///     * Required request parameters are missing or invalid.
+      ///     * There is already a customer entitlement for a SKU from the same
+      ///     product family.
+      /// * INVALID_VALUE: Make sure the OfferId is valid. If it is, contact
+      /// Google Channel support for further troubleshooting.
+      /// * NOT_FOUND: The customer or offer resource was not found.
+      /// * ALREADY_EXISTS:
+      ///     * The SKU was already purchased for the customer.
+      ///     * The customer's primary email already exists. Retry
       ///     after changing the customer's primary contact email.
-      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
-      /// following cases:
-      ///     * Purchasing a SKU that requires domain verification and the domain has
-      ///     not been verified.
-      ///     * Purchasing an Add-On SKU like Vault or Drive without purchasing the
-      ///     pre-requisite SKU, such as Google Workspace Business Starter.
-      ///     * Applicable only for developer accounts: reseller and resold domain.
-      ///     Must meet the following domain naming requirements:
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION:
+      ///     * The domain required for purchasing a SKU has not been verified.
+      ///     * A pre-requisite SKU required to purchase an Add-On SKU is missing.
+      ///     For example, Google Workspace Business Starter is required to purchase
+      ///     Vault or Drive.
+      ///     * (Developer accounts only) Reseller and resold domain must meet the
+      ///     following naming requirements:
       ///         * Domain names must start with goog-test.
-      ///         * Resold domain names must include the reseller domain.
+      ///         * Domain names must include the reseller domain.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case.
-      /// * UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2452,39 +2341,36 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Creates an entitlement for a customer.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: It can happen in below scenarios -
-      ///     * Missing or invalid required parameters in the request.
-      ///     * Cannot purchase an entitlement if there is already an entitlement for
-      ///     customer, for a SKU from the same product family.
-      ///     * INVALID_VALUE: Offer passed in isn't valid. Make sure OfferId is
-      ///     valid. If it is valid, then contact Google Channel support for further
-      ///     troubleshooting.
-      /// * NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller.
-      /// * ALREADY_EXISTS: This failure can happen in the following cases:
-      ///     * If the SKU has been already purchased for the customer.
-      ///     * If the customer's primary email already exists. In this case retry
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT:
+      ///     * Required request parameters are missing or invalid.
+      ///     * There is already a customer entitlement for a SKU from the same
+      ///     product family.
+      /// * INVALID_VALUE: Make sure the OfferId is valid. If it is, contact
+      /// Google Channel support for further troubleshooting.
+      /// * NOT_FOUND: The customer or offer resource was not found.
+      /// * ALREADY_EXISTS:
+      ///     * The SKU was already purchased for the customer.
+      ///     * The customer's primary email already exists. Retry
       ///     after changing the customer's primary contact email.
-      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
-      /// following cases:
-      ///     * Purchasing a SKU that requires domain verification and the domain has
-      ///     not been verified.
-      ///     * Purchasing an Add-On SKU like Vault or Drive without purchasing the
-      ///     pre-requisite SKU, such as Google Workspace Business Starter.
-      ///     * Applicable only for developer accounts: reseller and resold domain.
-      ///     Must meet the following domain naming requirements:
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION:
+      ///     * The domain required for purchasing a SKU has not been verified.
+      ///     * A pre-requisite SKU required to purchase an Add-On SKU is missing.
+      ///     For example, Google Workspace Business Starter is required to purchase
+      ///     Vault or Drive.
+      ///     * (Developer accounts only) Reseller and resold domain must meet the
+      ///     following naming requirements:
       ///         * Domain names must start with goog-test.
-      ///         * Resold domain names must include the reseller domain.
+      ///         * Domain names must include the reseller domain.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case.
-      /// * UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2500,39 +2386,36 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Creates an entitlement for a customer.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: It can happen in below scenarios -
-      ///     * Missing or invalid required parameters in the request.
-      ///     * Cannot purchase an entitlement if there is already an entitlement for
-      ///     customer, for a SKU from the same product family.
-      ///     * INVALID_VALUE: Offer passed in isn't valid. Make sure OfferId is
-      ///     valid. If it is valid, then contact Google Channel support for further
-      ///     troubleshooting.
-      /// * NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller.
-      /// * ALREADY_EXISTS: This failure can happen in the following cases:
-      ///     * If the SKU has been already purchased for the customer.
-      ///     * If the customer's primary email already exists. In this case retry
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT:
+      ///     * Required request parameters are missing or invalid.
+      ///     * There is already a customer entitlement for a SKU from the same
+      ///     product family.
+      /// * INVALID_VALUE: Make sure the OfferId is valid. If it is, contact
+      /// Google Channel support for further troubleshooting.
+      /// * NOT_FOUND: The customer or offer resource was not found.
+      /// * ALREADY_EXISTS:
+      ///     * The SKU was already purchased for the customer.
+      ///     * The customer's primary email already exists. Retry
       ///     after changing the customer's primary contact email.
-      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
-      /// following cases:
-      ///     * Purchasing a SKU that requires domain verification and the domain has
-      ///     not been verified.
-      ///     * Purchasing an Add-On SKU like Vault or Drive without purchasing the
-      ///     pre-requisite SKU, such as Google Workspace Business Starter.
-      ///     * Applicable only for developer accounts: reseller and resold domain.
-      ///     Must meet the following domain naming requirements:
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION:
+      ///     * The domain required for purchasing a SKU has not been verified.
+      ///     * A pre-requisite SKU required to purchase an Add-On SKU is missing.
+      ///     For example, Google Workspace Business Starter is required to purchase
+      ///     Vault or Drive.
+      ///     * (Developer accounts only) Reseller and resold domain must meet the
+      ///     following naming requirements:
       ///         * Domain names must start with goog-test.
-      ///         * Resold domain names must include the reseller domain.
+      ///         * Domain names must include the reseller domain.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case.
-      /// * UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2550,39 +2433,36 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Creates an entitlement for a customer.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: It can happen in below scenarios -
-      ///     * Missing or invalid required parameters in the request.
-      ///     * Cannot purchase an entitlement if there is already an entitlement for
-      ///     customer, for a SKU from the same product family.
-      ///     * INVALID_VALUE: Offer passed in isn't valid. Make sure OfferId is
-      ///     valid. If it is valid, then contact Google Channel support for further
-      ///     troubleshooting.
-      /// * NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller.
-      /// * ALREADY_EXISTS: This failure can happen in the following cases:
-      ///     * If the SKU has been already purchased for the customer.
-      ///     * If the customer's primary email already exists. In this case retry
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT:
+      ///     * Required request parameters are missing or invalid.
+      ///     * There is already a customer entitlement for a SKU from the same
+      ///     product family.
+      /// * INVALID_VALUE: Make sure the OfferId is valid. If it is, contact
+      /// Google Channel support for further troubleshooting.
+      /// * NOT_FOUND: The customer or offer resource was not found.
+      /// * ALREADY_EXISTS:
+      ///     * The SKU was already purchased for the customer.
+      ///     * The customer's primary email already exists. Retry
       ///     after changing the customer's primary contact email.
-      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
-      /// following cases:
-      ///     * Purchasing a SKU that requires domain verification and the domain has
-      ///     not been verified.
-      ///     * Purchasing an Add-On SKU like Vault or Drive without purchasing the
-      ///     pre-requisite SKU, such as Google Workspace Business Starter.
-      ///     * Applicable only for developer accounts: reseller and resold domain.
-      ///     Must meet the following domain naming requirements:
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION:
+      ///     * The domain required for purchasing a SKU has not been verified.
+      ///     * A pre-requisite SKU required to purchase an Add-On SKU is missing.
+      ///     For example, Google Workspace Business Starter is required to purchase
+      ///     Vault or Drive.
+      ///     * (Developer accounts only) Reseller and resold domain must meet the
+      ///     following naming requirements:
       ///         * Domain names must start with goog-test.
-      ///         * Resold domain names must include the reseller domain.
+      ///         * Domain names must include the reseller domain.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case.
-      /// * UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2596,26 +2476,25 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateEntitlement, null, options, request);
       }
       /// <summary>
-      /// Change parameters of the entitlement
+      /// Change parameters of the entitlement.
       ///
-      /// An entitlement parameters update is a long-running operation and results in
-      /// updates to the entitlement as a result of fulfillment.
+      /// An entitlement update is a long-running operation and it updates the
+      /// entitlement as a result of fulfillment.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request. For example, if the number of seats being changed to is greater
-      /// than the allowed number of max seats for the resource. Or decreasing seats
-      /// for a commitment based plan.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// For example, the number of seats being changed is greater than the allowed
+      /// number of max seats, or decreasing seats for a commitment based plan.
       /// * NOT_FOUND: Entitlement resource not found.
-      /// * INTERNAL: Any non-user error related to a technical issue
-      /// in the backend. In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2631,26 +2510,25 @@ namespace Google.Cloud.Channel.V1 {
         return ChangeParameters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Change parameters of the entitlement
+      /// Change parameters of the entitlement.
       ///
-      /// An entitlement parameters update is a long-running operation and results in
-      /// updates to the entitlement as a result of fulfillment.
+      /// An entitlement update is a long-running operation and it updates the
+      /// entitlement as a result of fulfillment.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request. For example, if the number of seats being changed to is greater
-      /// than the allowed number of max seats for the resource. Or decreasing seats
-      /// for a commitment based plan.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// For example, the number of seats being changed is greater than the allowed
+      /// number of max seats, or decreasing seats for a commitment based plan.
       /// * NOT_FOUND: Entitlement resource not found.
-      /// * INTERNAL: Any non-user error related to a technical issue
-      /// in the backend. In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2664,26 +2542,25 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ChangeParameters, null, options, request);
       }
       /// <summary>
-      /// Change parameters of the entitlement
+      /// Change parameters of the entitlement.
       ///
-      /// An entitlement parameters update is a long-running operation and results in
-      /// updates to the entitlement as a result of fulfillment.
+      /// An entitlement update is a long-running operation and it updates the
+      /// entitlement as a result of fulfillment.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request. For example, if the number of seats being changed to is greater
-      /// than the allowed number of max seats for the resource. Or decreasing seats
-      /// for a commitment based plan.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// For example, the number of seats being changed is greater than the allowed
+      /// number of max seats, or decreasing seats for a commitment based plan.
       /// * NOT_FOUND: Entitlement resource not found.
-      /// * INTERNAL: Any non-user error related to a technical issue
-      /// in the backend. In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2699,26 +2576,25 @@ namespace Google.Cloud.Channel.V1 {
         return ChangeParametersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Change parameters of the entitlement
+      /// Change parameters of the entitlement.
       ///
-      /// An entitlement parameters update is a long-running operation and results in
-      /// updates to the entitlement as a result of fulfillment.
+      /// An entitlement update is a long-running operation and it updates the
+      /// entitlement as a result of fulfillment.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request. For example, if the number of seats being changed to is greater
-      /// than the allowed number of max seats for the resource. Or decreasing seats
-      /// for a commitment based plan.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// For example, the number of seats being changed is greater than the allowed
+      /// number of max seats, or decreasing seats for a commitment based plan.
       /// * NOT_FOUND: Entitlement resource not found.
-      /// * INTERNAL: Any non-user error related to a technical issue
-      /// in the backend. In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2734,24 +2610,23 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Updates the renewal settings for an existing customer entitlement.
       ///
-      /// An entitlement update is a long-running operation and results in updates to
-      /// the entitlement as a result of fulfillment.
+      /// An entitlement update is a long-running operation and it updates the
+      /// entitlement as a result of fulfillment.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * NOT_COMMITMENT_PLAN: Renewal Settings are only applicable for a
-      /// commitment plan. Can't enable or disable renewal for non-commitment plans.
-      /// * INTERNAL: Any non user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// commitment plan. Can't enable or disable renewals for non-commitment plans.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      ///   Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2769,24 +2644,23 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Updates the renewal settings for an existing customer entitlement.
       ///
-      /// An entitlement update is a long-running operation and results in updates to
-      /// the entitlement as a result of fulfillment.
+      /// An entitlement update is a long-running operation and it updates the
+      /// entitlement as a result of fulfillment.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * NOT_COMMITMENT_PLAN: Renewal Settings are only applicable for a
-      /// commitment plan. Can't enable or disable renewal for non-commitment plans.
-      /// * INTERNAL: Any non user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// commitment plan. Can't enable or disable renewals for non-commitment plans.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      ///   Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2802,24 +2676,23 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Updates the renewal settings for an existing customer entitlement.
       ///
-      /// An entitlement update is a long-running operation and results in updates to
-      /// the entitlement as a result of fulfillment.
+      /// An entitlement update is a long-running operation and it updates the
+      /// entitlement as a result of fulfillment.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * NOT_COMMITMENT_PLAN: Renewal Settings are only applicable for a
-      /// commitment plan. Can't enable or disable renewal for non-commitment plans.
-      /// * INTERNAL: Any non user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// commitment plan. Can't enable or disable renewals for non-commitment plans.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      ///   Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2837,24 +2710,23 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Updates the renewal settings for an existing customer entitlement.
       ///
-      /// An entitlement update is a long-running operation and results in updates to
-      /// the entitlement as a result of fulfillment.
+      /// An entitlement update is a long-running operation and it updates the
+      /// entitlement as a result of fulfillment.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * NOT_COMMITMENT_PLAN: Renewal Settings are only applicable for a
-      /// commitment plan. Can't enable or disable renewal for non-commitment plans.
-      /// * INTERNAL: Any non user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// commitment plan. Can't enable or disable renewals for non-commitment plans.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      ///   Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2870,22 +2742,21 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Updates the Offer for an existing customer entitlement.
       ///
-      /// An entitlement update is a long-running operation and results in updates to
-      /// the entitlement as a result of fulfillment.
+      /// An entitlement update is a long-running operation and it updates the
+      /// entitlement as a result of fulfillment.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Offer or Entitlement resource not found.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2903,22 +2774,21 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Updates the Offer for an existing customer entitlement.
       ///
-      /// An entitlement update is a long-running operation and results in updates to
-      /// the entitlement as a result of fulfillment.
+      /// An entitlement update is a long-running operation and it updates the
+      /// entitlement as a result of fulfillment.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Offer or Entitlement resource not found.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2934,22 +2804,21 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Updates the Offer for an existing customer entitlement.
       ///
-      /// An entitlement update is a long-running operation and results in updates to
-      /// the entitlement as a result of fulfillment.
+      /// An entitlement update is a long-running operation and it updates the
+      /// entitlement as a result of fulfillment.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Offer or Entitlement resource not found.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2967,22 +2836,21 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Updates the Offer for an existing customer entitlement.
       ///
-      /// An entitlement update is a long-running operation and results in updates to
-      /// the entitlement as a result of fulfillment.
+      /// An entitlement update is a long-running operation and it updates the
+      /// entitlement as a result of fulfillment.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Offer or Entitlement resource not found.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2999,24 +2867,23 @@ namespace Google.Cloud.Channel.V1 {
       /// Starts paid service for a trial entitlement.
       ///
       /// Starts paid service for a trial entitlement immediately. This method is
-      /// only applicable if a plan has already been set up for a trial entitlement
-      /// but has some trial days remaining.
+      /// only applicable if a plan is set up for a trial entitlement but has some
+      /// trial days remaining.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * FAILED_PRECONDITION/NOT_IN_TRIAL: This method only works for
       /// entitlement on trial plans.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue
-      /// in the backend. In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3035,24 +2902,23 @@ namespace Google.Cloud.Channel.V1 {
       /// Starts paid service for a trial entitlement.
       ///
       /// Starts paid service for a trial entitlement immediately. This method is
-      /// only applicable if a plan has already been set up for a trial entitlement
-      /// but has some trial days remaining.
+      /// only applicable if a plan is set up for a trial entitlement but has some
+      /// trial days remaining.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * FAILED_PRECONDITION/NOT_IN_TRIAL: This method only works for
       /// entitlement on trial plans.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue
-      /// in the backend. In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3069,24 +2935,23 @@ namespace Google.Cloud.Channel.V1 {
       /// Starts paid service for a trial entitlement.
       ///
       /// Starts paid service for a trial entitlement immediately. This method is
-      /// only applicable if a plan has already been set up for a trial entitlement
-      /// but has some trial days remaining.
+      /// only applicable if a plan is set up for a trial entitlement but has some
+      /// trial days remaining.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * FAILED_PRECONDITION/NOT_IN_TRIAL: This method only works for
       /// entitlement on trial plans.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue
-      /// in the backend. In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3105,24 +2970,23 @@ namespace Google.Cloud.Channel.V1 {
       /// Starts paid service for a trial entitlement.
       ///
       /// Starts paid service for a trial entitlement immediately. This method is
-      /// only applicable if a plan has already been set up for a trial entitlement
-      /// but has some trial days remaining.
+      /// only applicable if a plan is set up for a trial entitlement but has some
+      /// trial days remaining.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * FAILED_PRECONDITION/NOT_IN_TRIAL: This method only works for
       /// entitlement on trial plans.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue
-      /// in the backend. In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3137,22 +3001,22 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Suspends a previously fulfilled entitlement.
+      ///
       /// An entitlement suspension is a long-running operation.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * NOT_ACTIVE: Entitlement is not active.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3169,22 +3033,22 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Suspends a previously fulfilled entitlement.
+      ///
       /// An entitlement suspension is a long-running operation.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * NOT_ACTIVE: Entitlement is not active.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3199,22 +3063,22 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Suspends a previously fulfilled entitlement.
+      ///
       /// An entitlement suspension is a long-running operation.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * NOT_ACTIVE: Entitlement is not active.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3231,22 +3095,22 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Suspends a previously fulfilled entitlement.
+      ///
       /// An entitlement suspension is a long-running operation.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * NOT_ACTIVE: Entitlement is not active.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3261,27 +3125,26 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Cancels a previously fulfilled entitlement.
+      ///
       /// An entitlement cancellation is a long-running operation.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller or
-      /// if the reseller account making the request and reseller account being
-      /// queried for are different.
-      /// * FAILED_PRECONDITION: If there are any Google Cloud projects linked to the
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * FAILED_PRECONDITION: There are Google Cloud projects linked to the
       /// Google Cloud entitlement's Cloud Billing subaccount.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * DELETION_TYPE_NOT_ALLOWED: Cancel is only allowed for Google Workspace
-      /// add-ons or entitlements for Google Cloud's development platform.
+      /// add-ons, or entitlements for Google Cloud's development platform.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -3299,27 +3162,26 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Cancels a previously fulfilled entitlement.
+      ///
       /// An entitlement cancellation is a long-running operation.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller or
-      /// if the reseller account making the request and reseller account being
-      /// queried for are different.
-      /// * FAILED_PRECONDITION: If there are any Google Cloud projects linked to the
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * FAILED_PRECONDITION: There are Google Cloud projects linked to the
       /// Google Cloud entitlement's Cloud Billing subaccount.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * DELETION_TYPE_NOT_ALLOWED: Cancel is only allowed for Google Workspace
-      /// add-ons or entitlements for Google Cloud's development platform.
+      /// add-ons, or entitlements for Google Cloud's development platform.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -3335,27 +3197,26 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Cancels a previously fulfilled entitlement.
+      ///
       /// An entitlement cancellation is a long-running operation.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller or
-      /// if the reseller account making the request and reseller account being
-      /// queried for are different.
-      /// * FAILED_PRECONDITION: If there are any Google Cloud projects linked to the
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * FAILED_PRECONDITION: There are Google Cloud projects linked to the
       /// Google Cloud entitlement's Cloud Billing subaccount.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * DELETION_TYPE_NOT_ALLOWED: Cancel is only allowed for Google Workspace
-      /// add-ons or entitlements for Google Cloud's development platform.
+      /// add-ons, or entitlements for Google Cloud's development platform.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -3373,27 +3234,26 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Cancels a previously fulfilled entitlement.
+      ///
       /// An entitlement cancellation is a long-running operation.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller or
-      /// if the reseller account making the request and reseller account being
-      /// queried for are different.
-      /// * FAILED_PRECONDITION: If there are any Google Cloud projects linked to the
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * FAILED_PRECONDITION: There are Google Cloud projects linked to the
       /// Google Cloud entitlement's Cloud Billing subaccount.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
       /// * DELETION_TYPE_NOT_ALLOWED: Cancel is only allowed for Google Workspace
-      /// add-ons or entitlements for Google Cloud's development platform.
+      /// add-ons, or entitlements for Google Cloud's development platform.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -3408,32 +3268,29 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CancelEntitlement, null, options, request);
       }
       /// <summary>
-      /// Activates a previously suspended entitlement. The entitlement must be in a
-      /// suspended state for it to be activated. Entitlements suspended for pending
-      /// ToS acceptance can't be activated using this method. An entitlement
-      /// activation is a long-running operation and can result in updates to
+      /// Activates a previously suspended entitlement. Entitlements suspended for
+      /// pending ToS acceptance can't be activated using this method.
+      ///
+      /// An entitlement activation is a long-running operation and it updates
       /// the state of the customer entitlement.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller or
-      /// if the reseller account making the request and reseller account being
-      /// queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
-      /// * SUSPENSION_NOT_RESELLER_INITIATED: Can't activate an
-      /// entitlement that is pending TOS acceptance. Only reseller initiated
-      /// suspensions can be activated.
-      /// * NOT_SUSPENDED: Can't activate entitlements that are already in ACTIVE
-      /// state. Can only activate suspended entitlements.
-      /// * INTERNAL: Any non-user error related to a technical issue
-      /// in the backend. In this case, contact Cloud Channel support.
+      /// * SUSPENSION_NOT_RESELLER_INITIATED: Can only activate reseller-initiated
+      /// suspensions and entitlements that have accepted the TOS.
+      /// * NOT_SUSPENDED: Can only activate suspended entitlements not in an ACTIVE
+      /// state.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3449,32 +3306,29 @@ namespace Google.Cloud.Channel.V1 {
         return ActivateEntitlement(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Activates a previously suspended entitlement. The entitlement must be in a
-      /// suspended state for it to be activated. Entitlements suspended for pending
-      /// ToS acceptance can't be activated using this method. An entitlement
-      /// activation is a long-running operation and can result in updates to
+      /// Activates a previously suspended entitlement. Entitlements suspended for
+      /// pending ToS acceptance can't be activated using this method.
+      ///
+      /// An entitlement activation is a long-running operation and it updates
       /// the state of the customer entitlement.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller or
-      /// if the reseller account making the request and reseller account being
-      /// queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
-      /// * SUSPENSION_NOT_RESELLER_INITIATED: Can't activate an
-      /// entitlement that is pending TOS acceptance. Only reseller initiated
-      /// suspensions can be activated.
-      /// * NOT_SUSPENDED: Can't activate entitlements that are already in ACTIVE
-      /// state. Can only activate suspended entitlements.
-      /// * INTERNAL: Any non-user error related to a technical issue
-      /// in the backend. In this case, contact Cloud Channel support.
+      /// * SUSPENSION_NOT_RESELLER_INITIATED: Can only activate reseller-initiated
+      /// suspensions and entitlements that have accepted the TOS.
+      /// * NOT_SUSPENDED: Can only activate suspended entitlements not in an ACTIVE
+      /// state.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3488,32 +3342,29 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ActivateEntitlement, null, options, request);
       }
       /// <summary>
-      /// Activates a previously suspended entitlement. The entitlement must be in a
-      /// suspended state for it to be activated. Entitlements suspended for pending
-      /// ToS acceptance can't be activated using this method. An entitlement
-      /// activation is a long-running operation and can result in updates to
+      /// Activates a previously suspended entitlement. Entitlements suspended for
+      /// pending ToS acceptance can't be activated using this method.
+      ///
+      /// An entitlement activation is a long-running operation and it updates
       /// the state of the customer entitlement.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller or
-      /// if the reseller account making the request and reseller account being
-      /// queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
-      /// * SUSPENSION_NOT_RESELLER_INITIATED: Can't activate an
-      /// entitlement that is pending TOS acceptance. Only reseller initiated
-      /// suspensions can be activated.
-      /// * NOT_SUSPENDED: Can't activate entitlements that are already in ACTIVE
-      /// state. Can only activate suspended entitlements.
-      /// * INTERNAL: Any non-user error related to a technical issue
-      /// in the backend. In this case, contact Cloud Channel support.
+      /// * SUSPENSION_NOT_RESELLER_INITIATED: Can only activate reseller-initiated
+      /// suspensions and entitlements that have accepted the TOS.
+      /// * NOT_SUSPENDED: Can only activate suspended entitlements not in an ACTIVE
+      /// state.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3529,32 +3380,29 @@ namespace Google.Cloud.Channel.V1 {
         return ActivateEntitlementAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Activates a previously suspended entitlement. The entitlement must be in a
-      /// suspended state for it to be activated. Entitlements suspended for pending
-      /// ToS acceptance can't be activated using this method. An entitlement
-      /// activation is a long-running operation and can result in updates to
+      /// Activates a previously suspended entitlement. Entitlements suspended for
+      /// pending ToS acceptance can't be activated using this method.
+      ///
+      /// An entitlement activation is a long-running operation and it updates
       /// the state of the customer entitlement.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller or
-      /// if the reseller account making the request and reseller account being
-      /// queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: Entitlement resource not found.
-      /// * SUSPENSION_NOT_RESELLER_INITIATED: Can't activate an
-      /// entitlement that is pending TOS acceptance. Only reseller initiated
-      /// suspensions can be activated.
-      /// * NOT_SUSPENDED: Can't activate entitlements that are already in ACTIVE
-      /// state. Can only activate suspended entitlements.
-      /// * INTERNAL: Any non-user error related to a technical issue
-      /// in the backend. In this case, contact Cloud Channel support.
+      /// * SUSPENSION_NOT_RESELLER_INITIATED: Can only activate reseller-initiated
+      /// suspensions and entitlements that have accepted the TOS.
+      /// * NOT_SUSPENDED: Can only activate suspended entitlements not in an ACTIVE
+      /// state.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3570,31 +3418,29 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Transfers customer entitlements to new reseller.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
-      /// * NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller.
-      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
-      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
-      /// following cases:
-      ///     * Transferring a SKU that requires domain verification and the domain
-      ///     has not been verified.
-      ///     * Transferring an Add-On SKU like Vault or Drive without transferring
-      ///     the pre-requisite SKU, such as G Suite Basic.
-      ///     * Applicable only for developer accounts: reseller and resold domain
-      ///     must follow the domain naming convention as follows:
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer or offer resource was not found.
+      /// * ALREADY_EXISTS: The SKU was already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION:
+      ///     * The SKU requires domain verification to transfer, but the domain is
+      ///     not verified.
+      ///     * An Add-On SKU (example, Vault or Drive) is missing the
+      ///     pre-requisite SKU (example, G Suite Basic).
+      ///     * (Developer accounts only) Reseller and resold domain must meet the
+      ///     following naming requirements:
       ///         * Domain names must start with goog-test.
-      ///         * Resold domain names must include the reseller domain.
-      ///     * All transferring entitlements must be specified.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      ///         * Domain names must include the reseller domain.
+      ///     * Specify all transferring entitlements.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3612,31 +3458,29 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Transfers customer entitlements to new reseller.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
-      /// * NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller.
-      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
-      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
-      /// following cases:
-      ///     * Transferring a SKU that requires domain verification and the domain
-      ///     has not been verified.
-      ///     * Transferring an Add-On SKU like Vault or Drive without transferring
-      ///     the pre-requisite SKU, such as G Suite Basic.
-      ///     * Applicable only for developer accounts: reseller and resold domain
-      ///     must follow the domain naming convention as follows:
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer or offer resource was not found.
+      /// * ALREADY_EXISTS: The SKU was already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION:
+      ///     * The SKU requires domain verification to transfer, but the domain is
+      ///     not verified.
+      ///     * An Add-On SKU (example, Vault or Drive) is missing the
+      ///     pre-requisite SKU (example, G Suite Basic).
+      ///     * (Developer accounts only) Reseller and resold domain must meet the
+      ///     following naming requirements:
       ///         * Domain names must start with goog-test.
-      ///         * Resold domain names must include the reseller domain.
-      ///     * All transferring entitlements must be specified.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      ///         * Domain names must include the reseller domain.
+      ///     * Specify all transferring entitlements.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3652,31 +3496,29 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Transfers customer entitlements to new reseller.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
-      /// * NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller.
-      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
-      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
-      /// following cases:
-      ///     * Transferring a SKU that requires domain verification and the domain
-      ///     has not been verified.
-      ///     * Transferring an Add-On SKU like Vault or Drive without transferring
-      ///     the pre-requisite SKU, such as G Suite Basic.
-      ///     * Applicable only for developer accounts: reseller and resold domain
-      ///     must follow the domain naming convention as follows:
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer or offer resource was not found.
+      /// * ALREADY_EXISTS: The SKU was already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION:
+      ///     * The SKU requires domain verification to transfer, but the domain is
+      ///     not verified.
+      ///     * An Add-On SKU (example, Vault or Drive) is missing the
+      ///     pre-requisite SKU (example, G Suite Basic).
+      ///     * (Developer accounts only) Reseller and resold domain must meet the
+      ///     following naming requirements:
       ///         * Domain names must start with goog-test.
-      ///         * Resold domain names must include the reseller domain.
-      ///     * All transferring entitlements must be specified.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      ///         * Domain names must include the reseller domain.
+      ///     * Specify all transferring entitlements.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3694,31 +3536,29 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Transfers customer entitlements to new reseller.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
-      /// * NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller.
-      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
-      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
-      /// following cases:
-      ///     * Transferring a SKU that requires domain verification and the domain
-      ///     has not been verified.
-      ///     * Transferring an Add-On SKU like Vault or Drive without transferring
-      ///     the pre-requisite SKU, such as G Suite Basic.
-      ///     * Applicable only for developer accounts: reseller and resold domain
-      ///     must follow the domain naming convention as follows:
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer or offer resource was not found.
+      /// * ALREADY_EXISTS: The SKU was already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION:
+      ///     * The SKU requires domain verification to transfer, but the domain is
+      ///     not verified.
+      ///     * An Add-On SKU (example, Vault or Drive) is missing the
+      ///     pre-requisite SKU (example, G Suite Basic).
+      ///     * (Developer accounts only) Reseller and resold domain must meet the
+      ///     following naming requirements:
       ///         * Domain names must start with goog-test.
-      ///         * Resold domain names must include the reseller domain.
-      ///     * All transferring entitlements must be specified.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      ///         * Domain names must include the reseller domain.
+      ///     * Specify all transferring entitlements.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3732,32 +3572,30 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_TransferEntitlements, null, options, request);
       }
       /// <summary>
-      /// Transfers customer entitlements from current reseller to Google.
+      /// Transfers customer entitlements from their current reseller to Google.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
-      /// * NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller.
-      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
-      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in
-      /// the following cases:
-      ///     * Transferring a SKU that requires domain verification and the domain
-      ///     has not been verified.
-      ///     * Transferring an Add-On SKU like Vault or Drive without purchasing the
-      ///     pre-requisite SKU, such as G Suite Basic.
-      ///     * Applicable only for developer accounts: reseller and resold domain
-      ///     must follow the domain naming convention as follows:
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer or offer resource was not found.
+      /// * ALREADY_EXISTS: The SKU was already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION:
+      ///     * The SKU requires domain verification to transfer, but the domain is
+      ///     not verified.
+      ///     * An Add-On SKU (example, Vault or Drive) is missing the
+      ///     pre-requisite SKU (example, G Suite Basic).
+      ///     * (Developer accounts only) Reseller and resold domain must meet the
+      ///     following naming requirements:
       ///         * Domain names must start with goog-test.
-      ///         * Resold domain names must include the reseller domain.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      ///         * Domain names must include the reseller domain.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -3774,32 +3612,30 @@ namespace Google.Cloud.Channel.V1 {
         return TransferEntitlementsToGoogle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Transfers customer entitlements from current reseller to Google.
+      /// Transfers customer entitlements from their current reseller to Google.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
-      /// * NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller.
-      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
-      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in
-      /// the following cases:
-      ///     * Transferring a SKU that requires domain verification and the domain
-      ///     has not been verified.
-      ///     * Transferring an Add-On SKU like Vault or Drive without purchasing the
-      ///     pre-requisite SKU, such as G Suite Basic.
-      ///     * Applicable only for developer accounts: reseller and resold domain
-      ///     must follow the domain naming convention as follows:
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer or offer resource was not found.
+      /// * ALREADY_EXISTS: The SKU was already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION:
+      ///     * The SKU requires domain verification to transfer, but the domain is
+      ///     not verified.
+      ///     * An Add-On SKU (example, Vault or Drive) is missing the
+      ///     pre-requisite SKU (example, G Suite Basic).
+      ///     * (Developer accounts only) Reseller and resold domain must meet the
+      ///     following naming requirements:
       ///         * Domain names must start with goog-test.
-      ///         * Resold domain names must include the reseller domain.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      ///         * Domain names must include the reseller domain.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -3814,32 +3650,30 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_TransferEntitlementsToGoogle, null, options, request);
       }
       /// <summary>
-      /// Transfers customer entitlements from current reseller to Google.
+      /// Transfers customer entitlements from their current reseller to Google.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
-      /// * NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller.
-      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
-      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in
-      /// the following cases:
-      ///     * Transferring a SKU that requires domain verification and the domain
-      ///     has not been verified.
-      ///     * Transferring an Add-On SKU like Vault or Drive without purchasing the
-      ///     pre-requisite SKU, such as G Suite Basic.
-      ///     * Applicable only for developer accounts: reseller and resold domain
-      ///     must follow the domain naming convention as follows:
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer or offer resource was not found.
+      /// * ALREADY_EXISTS: The SKU was already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION:
+      ///     * The SKU requires domain verification to transfer, but the domain is
+      ///     not verified.
+      ///     * An Add-On SKU (example, Vault or Drive) is missing the
+      ///     pre-requisite SKU (example, G Suite Basic).
+      ///     * (Developer accounts only) Reseller and resold domain must meet the
+      ///     following naming requirements:
       ///         * Domain names must start with goog-test.
-      ///         * Resold domain names must include the reseller domain.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      ///         * Domain names must include the reseller domain.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -3856,32 +3690,30 @@ namespace Google.Cloud.Channel.V1 {
         return TransferEntitlementsToGoogleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Transfers customer entitlements from current reseller to Google.
+      /// Transfers customer entitlements from their current reseller to Google.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
-      /// * NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller.
-      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
-      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in
-      /// the following cases:
-      ///     * Transferring a SKU that requires domain verification and the domain
-      ///     has not been verified.
-      ///     * Transferring an Add-On SKU like Vault or Drive without purchasing the
-      ///     pre-requisite SKU, such as G Suite Basic.
-      ///     * Applicable only for developer accounts: reseller and resold domain
-      ///     must follow the domain naming convention as follows:
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The customer or offer resource was not found.
+      /// * ALREADY_EXISTS: The SKU was already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION:
+      ///     * The SKU requires domain verification to transfer, but the domain is
+      ///     not verified.
+      ///     * An Add-On SKU (example, Vault or Drive) is missing the
+      ///     pre-requisite SKU (example, G Suite Basic).
+      ///     * (Developer accounts only) Reseller and resold domain must meet the
+      ///     following naming requirements:
       ///         * Domain names must start with goog-test.
-      ///         * Resold domain names must include the reseller domain.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      ///         * Domain names must include the reseller domain.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// Please contact Cloud Channel Support in this case.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Long Running Operation ID.
+      /// Return value:
+      /// The ID of a long-running operation.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -3897,18 +3729,16 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// List [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s belonging to a distributor.
-      /// To call this method, you must be a distributor.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// If successful, returns the list of [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources
-      /// for the distributor account, otherwise returns an error.
+      /// Return value:
+      /// The list of the distributor account's [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3921,18 +3751,16 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// List [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s belonging to a distributor.
-      /// To call this method, you must be a distributor.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// If successful, returns the list of [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources
-      /// for the distributor account, otherwise returns an error.
+      /// Return value:
+      /// The list of the distributor account's [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3943,18 +3771,16 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// List [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s belonging to a distributor.
-      /// To call this method, you must be a distributor.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// If successful, returns the list of [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources
-      /// for the distributor account, otherwise returns an error.
+      /// Return value:
+      /// The list of the distributor account's [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3967,18 +3793,16 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// List [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink]s belonging to a distributor.
-      /// To call this method, you must be a distributor.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
-      /// Return Value:
-      /// If successful, returns the list of [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources
-      /// for the distributor account, otherwise returns an error.
+      /// Return value:
+      /// The list of the distributor account's [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3989,19 +3813,18 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Returns a requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
-      /// To call this method, you must be a distributor.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: ChannelPartnerLink resource not found. Results
-      /// due invalid channel partner link name.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: ChannelPartnerLink resource not found because of an
+      /// invalid channel partner link name.
       ///
-      /// Return Value:
-      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if found, otherwise returns an error.
+      /// Return value:
+      /// The [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4014,19 +3837,18 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Returns a requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
-      /// To call this method, you must be a distributor.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: ChannelPartnerLink resource not found. Results
-      /// due invalid channel partner link name.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: ChannelPartnerLink resource not found because of an
+      /// invalid channel partner link name.
       ///
-      /// Return Value:
-      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if found, otherwise returns an error.
+      /// Return value:
+      /// The [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4037,19 +3859,18 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Returns a requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
-      /// To call this method, you must be a distributor.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: ChannelPartnerLink resource not found. Results
-      /// due invalid channel partner link name.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: ChannelPartnerLink resource not found because of an
+      /// invalid channel partner link name.
       ///
-      /// Return Value:
-      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if found, otherwise returns an error.
+      /// Return value:
+      /// The [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4062,19 +3883,18 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Returns a requested [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
-      /// To call this method, you must be a distributor.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: ChannelPartnerLink resource not found. Results
-      /// due invalid channel partner link name.
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: ChannelPartnerLink resource not found because of an
+      /// invalid channel partner link name.
       ///
-      /// Return Value:
-      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if found, otherwise returns an error.
+      /// Return value:
+      /// The [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4084,30 +3904,28 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetChannelPartnerLink, null, options, request);
       }
       /// <summary>
-      /// Initiates a channel partner link between a distributor and a reseller or
+      /// Initiates a channel partner link between a distributor and a reseller, or
       /// between resellers in an n-tier reseller channel.
-      /// To accept the invite, the invited partner should follow the invite_link_uri
-      /// provided in the response. If the link creation is accepted, a valid link is
-      /// set up between the two involved parties.
-      /// To call this method, you must be a distributor.
+      /// Invited partners need to follow the invite_link_uri provided in the
+      /// response to accept. After accepting the invitation, a link is set up
+      /// between the two parties.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * ALREADY_EXISTS: If the ChannelPartnerLink sent in the request already
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * ALREADY_EXISTS: The ChannelPartnerLink sent in the request already
       /// exists.
-      /// * NOT_FOUND: If no Cloud Identity customer exists for domain provided.
+      /// * NOT_FOUND: No Cloud Identity customer exists for provided domain.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Newly created [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if successful,
-      /// otherwise error is returned.
+      /// Return value:
+      /// The new [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4119,30 +3937,28 @@ namespace Google.Cloud.Channel.V1 {
         return CreateChannelPartnerLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Initiates a channel partner link between a distributor and a reseller or
+      /// Initiates a channel partner link between a distributor and a reseller, or
       /// between resellers in an n-tier reseller channel.
-      /// To accept the invite, the invited partner should follow the invite_link_uri
-      /// provided in the response. If the link creation is accepted, a valid link is
-      /// set up between the two involved parties.
-      /// To call this method, you must be a distributor.
+      /// Invited partners need to follow the invite_link_uri provided in the
+      /// response to accept. After accepting the invitation, a link is set up
+      /// between the two parties.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * ALREADY_EXISTS: If the ChannelPartnerLink sent in the request already
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * ALREADY_EXISTS: The ChannelPartnerLink sent in the request already
       /// exists.
-      /// * NOT_FOUND: If no Cloud Identity customer exists for domain provided.
+      /// * NOT_FOUND: No Cloud Identity customer exists for provided domain.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Newly created [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if successful,
-      /// otherwise error is returned.
+      /// Return value:
+      /// The new [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4152,30 +3968,28 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateChannelPartnerLink, null, options, request);
       }
       /// <summary>
-      /// Initiates a channel partner link between a distributor and a reseller or
+      /// Initiates a channel partner link between a distributor and a reseller, or
       /// between resellers in an n-tier reseller channel.
-      /// To accept the invite, the invited partner should follow the invite_link_uri
-      /// provided in the response. If the link creation is accepted, a valid link is
-      /// set up between the two involved parties.
-      /// To call this method, you must be a distributor.
+      /// Invited partners need to follow the invite_link_uri provided in the
+      /// response to accept. After accepting the invitation, a link is set up
+      /// between the two parties.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * ALREADY_EXISTS: If the ChannelPartnerLink sent in the request already
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * ALREADY_EXISTS: The ChannelPartnerLink sent in the request already
       /// exists.
-      /// * NOT_FOUND: If no Cloud Identity customer exists for domain provided.
+      /// * NOT_FOUND: No Cloud Identity customer exists for provided domain.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Newly created [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if successful,
-      /// otherwise error is returned.
+      /// Return value:
+      /// The new [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4187,30 +4001,28 @@ namespace Google.Cloud.Channel.V1 {
         return CreateChannelPartnerLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Initiates a channel partner link between a distributor and a reseller or
+      /// Initiates a channel partner link between a distributor and a reseller, or
       /// between resellers in an n-tier reseller channel.
-      /// To accept the invite, the invited partner should follow the invite_link_uri
-      /// provided in the response. If the link creation is accepted, a valid link is
-      /// set up between the two involved parties.
-      /// To call this method, you must be a distributor.
+      /// Invited partners need to follow the invite_link_uri provided in the
+      /// response to accept. After accepting the invitation, a link is set up
+      /// between the two parties.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * ALREADY_EXISTS: If the ChannelPartnerLink sent in the request already
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * ALREADY_EXISTS: The ChannelPartnerLink sent in the request already
       /// exists.
-      /// * NOT_FOUND: If no Cloud Identity customer exists for domain provided.
+      /// * NOT_FOUND: No Cloud Identity customer exists for provided domain.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Newly created [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if successful,
-      /// otherwise error is returned.
+      /// Return value:
+      /// The new [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4220,28 +4032,27 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateChannelPartnerLink, null, options, request);
       }
       /// <summary>
-      /// Updates a channel partner link. A distributor calls this method to change a
-      /// link's status. For example, suspend a partner link.
-      /// To call this method, you must be a distributor.
+      /// Updates a channel partner link. Distributors call this method to change a
+      /// link's status. For example, to suspend a partner link.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: It can happen in following scenarios -
-      ///     * Missing or invalid required parameters in the request.
-      ///     * Updating link state from invited to active or suspended.
-      ///     * Sending reseller_cloud_identity_id, invite_url or name in update
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT:
+      ///     * Required request parameters are missing or invalid.
+      ///     * Link state cannot change from invited to active or suspended.
+      ///     * Cannot send reseller_cloud_identity_id, invite_url, or name in update
       ///     mask.
       /// * NOT_FOUND: ChannelPartnerLink resource not found.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// If successful, the updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource, otherwise
-      /// returns an error.
+      /// Return value:
+      /// The updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4253,28 +4064,27 @@ namespace Google.Cloud.Channel.V1 {
         return UpdateChannelPartnerLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a channel partner link. A distributor calls this method to change a
-      /// link's status. For example, suspend a partner link.
-      /// To call this method, you must be a distributor.
+      /// Updates a channel partner link. Distributors call this method to change a
+      /// link's status. For example, to suspend a partner link.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: It can happen in following scenarios -
-      ///     * Missing or invalid required parameters in the request.
-      ///     * Updating link state from invited to active or suspended.
-      ///     * Sending reseller_cloud_identity_id, invite_url or name in update
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT:
+      ///     * Required request parameters are missing or invalid.
+      ///     * Link state cannot change from invited to active or suspended.
+      ///     * Cannot send reseller_cloud_identity_id, invite_url, or name in update
       ///     mask.
       /// * NOT_FOUND: ChannelPartnerLink resource not found.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// If successful, the updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource, otherwise
-      /// returns an error.
+      /// Return value:
+      /// The updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4284,28 +4094,27 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateChannelPartnerLink, null, options, request);
       }
       /// <summary>
-      /// Updates a channel partner link. A distributor calls this method to change a
-      /// link's status. For example, suspend a partner link.
-      /// To call this method, you must be a distributor.
+      /// Updates a channel partner link. Distributors call this method to change a
+      /// link's status. For example, to suspend a partner link.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: It can happen in following scenarios -
-      ///     * Missing or invalid required parameters in the request.
-      ///     * Updating link state from invited to active or suspended.
-      ///     * Sending reseller_cloud_identity_id, invite_url or name in update
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT:
+      ///     * Required request parameters are missing or invalid.
+      ///     * Link state cannot change from invited to active or suspended.
+      ///     * Cannot send reseller_cloud_identity_id, invite_url, or name in update
       ///     mask.
       /// * NOT_FOUND: ChannelPartnerLink resource not found.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// If successful, the updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource, otherwise
-      /// returns an error.
+      /// Return value:
+      /// The updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4317,28 +4126,27 @@ namespace Google.Cloud.Channel.V1 {
         return UpdateChannelPartnerLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a channel partner link. A distributor calls this method to change a
-      /// link's status. For example, suspend a partner link.
-      /// To call this method, you must be a distributor.
+      /// Updates a channel partner link. Distributors call this method to change a
+      /// link's status. For example, to suspend a partner link.
+      /// You must be a distributor to call this method.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.
-      /// * INVALID_ARGUMENT: It can happen in following scenarios -
-      ///     * Missing or invalid required parameters in the request.
-      ///     * Updating link state from invited to active or suspended.
-      ///     * Sending reseller_cloud_identity_id, invite_url or name in update
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * INVALID_ARGUMENT:
+      ///     * Required request parameters are missing or invalid.
+      ///     * Link state cannot change from invited to active or suspended.
+      ///     * Cannot send reseller_cloud_identity_id, invite_url, or name in update
       ///     mask.
       /// * NOT_FOUND: ChannelPartnerLink resource not found.
-      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel support.
       /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
-      /// In this case, contact Cloud Channel support.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// If successful, the updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource, otherwise
-      /// returns an error.
+      /// Return value:
+      /// The updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4350,10 +4158,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Lists the Products the reseller is authorized to sell.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4367,10 +4174,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Lists the Products the reseller is authorized to sell.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4382,10 +4188,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Lists the Products the reseller is authorized to sell.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4399,10 +4204,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Lists the Products the reseller is authorized to sell.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4414,10 +4218,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Lists the SKUs for a product the reseller is authorized to sell.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4431,10 +4234,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Lists the SKUs for a product the reseller is authorized to sell.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4446,10 +4248,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Lists the SKUs for a product the reseller is authorized to sell.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4463,10 +4264,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Lists the SKUs for a product the reseller is authorized to sell.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4478,10 +4278,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Lists the Offers the reseller can sell.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4495,10 +4294,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Lists the Offers the reseller can sell.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4510,10 +4308,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Lists the Offers the reseller can sell.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4527,10 +4324,9 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Lists the Offers the reseller can sell.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4540,16 +4336,15 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListOffers, null, options, request);
       }
       /// <summary>
-      /// Lists the Purchasable SKUs for following cases:
+      /// Lists the following:
       ///
-      /// * SKUs that can be newly purchased for a customer
-      /// * SKUs that can be upgraded/downgraded to, for an entitlement.
+      /// * SKUs that you can purchase for a customer
+      /// * SKUs that you can upgrade or downgrade for an entitlement.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4561,16 +4356,15 @@ namespace Google.Cloud.Channel.V1 {
         return ListPurchasableSkus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the Purchasable SKUs for following cases:
+      /// Lists the following:
       ///
-      /// * SKUs that can be newly purchased for a customer
-      /// * SKUs that can be upgraded/downgraded to, for an entitlement.
+      /// * SKUs that you can purchase for a customer
+      /// * SKUs that you can upgrade or downgrade for an entitlement.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4580,16 +4374,15 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListPurchasableSkus, null, options, request);
       }
       /// <summary>
-      /// Lists the Purchasable SKUs for following cases:
+      /// Lists the following:
       ///
-      /// * SKUs that can be newly purchased for a customer
-      /// * SKUs that can be upgraded/downgraded to, for an entitlement.
+      /// * SKUs that you can purchase for a customer
+      /// * SKUs that you can upgrade or downgrade for an entitlement.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4601,16 +4394,15 @@ namespace Google.Cloud.Channel.V1 {
         return ListPurchasableSkusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the Purchasable SKUs for following cases:
+      /// Lists the following:
       ///
-      /// * SKUs that can be newly purchased for a customer
-      /// * SKUs that can be upgraded/downgraded to, for an entitlement.
+      /// * SKUs that you can purchase for a customer
+      /// * SKUs that you can upgrade or downgrade for an entitlement.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4620,16 +4412,15 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListPurchasableSkus, null, options, request);
       }
       /// <summary>
-      /// Lists the Purchasable Offers for the following cases:
+      /// Lists the following:
       ///
-      /// * Offers that can be newly purchased for a customer
-      /// * Offers that can be changed to, for an entitlement.
+      /// * Offers that you can purchase for a customer.
+      /// * Offers that you can change for an entitlement.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4641,16 +4432,15 @@ namespace Google.Cloud.Channel.V1 {
         return ListPurchasableOffers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the Purchasable Offers for the following cases:
+      /// Lists the following:
       ///
-      /// * Offers that can be newly purchased for a customer
-      /// * Offers that can be changed to, for an entitlement.
+      /// * Offers that you can purchase for a customer.
+      /// * Offers that you can change for an entitlement.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4660,16 +4450,15 @@ namespace Google.Cloud.Channel.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListPurchasableOffers, null, options, request);
       }
       /// <summary>
-      /// Lists the Purchasable Offers for the following cases:
+      /// Lists the following:
       ///
-      /// * Offers that can be newly purchased for a customer
-      /// * Offers that can be changed to, for an entitlement.
+      /// * Offers that you can purchase for a customer.
+      /// * Offers that you can change for an entitlement.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4681,16 +4470,15 @@ namespace Google.Cloud.Channel.V1 {
         return ListPurchasableOffersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the Purchasable Offers for the following cases:
+      /// Lists the following:
       ///
-      /// * Offers that can be newly purchased for a customer
-      /// * Offers that can be changed to, for an entitlement.
+      /// * Offers that you can purchase for a customer.
+      /// * Offers that you can change for an entitlement.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4701,24 +4489,22 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
-      /// topic created for this Channel Services account. Once you create a
-      /// subscriber, you will get the events as per [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+      /// topic for this Channel Services account. After you create a
+      /// subscriber, you get the events through [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being provided are different, or if the impersonated user
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different, or the impersonated user
       /// is not a super admin.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Topic name with service email address registered if successful,
-      /// otherwise error is returned.
+      /// Return value:
+      /// The topic name with the registered service email address.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4731,24 +4517,22 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
-      /// topic created for this Channel Services account. Once you create a
-      /// subscriber, you will get the events as per [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+      /// topic for this Channel Services account. After you create a
+      /// subscriber, you get the events through [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being provided are different, or if the impersonated user
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different, or the impersonated user
       /// is not a super admin.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Topic name with service email address registered if successful,
-      /// otherwise error is returned.
+      /// Return value:
+      /// The topic name with the registered service email address.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4759,24 +4543,22 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
-      /// topic created for this Channel Services account. Once you create a
-      /// subscriber, you will get the events as per [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+      /// topic for this Channel Services account. After you create a
+      /// subscriber, you get the events through [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being provided are different, or if the impersonated user
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different, or the impersonated user
       /// is not a super admin.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Topic name with service email address registered if successful,
-      /// otherwise error is returned.
+      /// Return value:
+      /// The topic name with the registered service email address.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4789,24 +4571,22 @@ namespace Google.Cloud.Channel.V1 {
       }
       /// <summary>
       /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
-      /// topic created for this Channel Services account. Once you create a
-      /// subscriber, you will get the events as per [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+      /// topic for this Channel Services account. After you create a
+      /// subscriber, you get the events through [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being provided are different, or if the impersonated user
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different, or the impersonated user
       /// is not a super admin.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Topic name with service email address registered if successful,
-      /// otherwise error is returned.
+      /// Return value:
+      /// The topic name with the registered service email address.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4818,26 +4598,25 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Unregisters a service account with subscriber privileges on the Cloud
       /// Pub/Sub topic created for this Channel Services account. If there are no
-      /// more service account left with sunbscriber privileges, the topic will be
-      /// deleted. You can check this by calling ListSubscribers api.
+      /// service accounts left with subscriber privileges, this deletes the topic.
+      /// You can call ListSubscribers to check for these accounts.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being provided are different, or if the impersonated user
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different, or the impersonated user
       /// is not a super admin.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The topic resource doesn't exist.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Topic name from which service email address has been unregistered if
-      /// successful, otherwise error is returned. If the service email was already
-      /// not associated with the topic, the success response will be returned.
+      /// Return value:
+      /// The topic name that unregistered the service email address.
+      /// Returns a success response if the service email address wasn't registered
+      /// with the topic.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4851,26 +4630,25 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Unregisters a service account with subscriber privileges on the Cloud
       /// Pub/Sub topic created for this Channel Services account. If there are no
-      /// more service account left with sunbscriber privileges, the topic will be
-      /// deleted. You can check this by calling ListSubscribers api.
+      /// service accounts left with subscriber privileges, this deletes the topic.
+      /// You can call ListSubscribers to check for these accounts.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being provided are different, or if the impersonated user
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different, or the impersonated user
       /// is not a super admin.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The topic resource doesn't exist.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Topic name from which service email address has been unregistered if
-      /// successful, otherwise error is returned. If the service email was already
-      /// not associated with the topic, the success response will be returned.
+      /// Return value:
+      /// The topic name that unregistered the service email address.
+      /// Returns a success response if the service email address wasn't registered
+      /// with the topic.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4882,26 +4660,25 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Unregisters a service account with subscriber privileges on the Cloud
       /// Pub/Sub topic created for this Channel Services account. If there are no
-      /// more service account left with sunbscriber privileges, the topic will be
-      /// deleted. You can check this by calling ListSubscribers api.
+      /// service accounts left with subscriber privileges, this deletes the topic.
+      /// You can call ListSubscribers to check for these accounts.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being provided are different, or if the impersonated user
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different, or the impersonated user
       /// is not a super admin.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The topic resource doesn't exist.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Topic name from which service email address has been unregistered if
-      /// successful, otherwise error is returned. If the service email was already
-      /// not associated with the topic, the success response will be returned.
+      /// Return value:
+      /// The topic name that unregistered the service email address.
+      /// Returns a success response if the service email address wasn't registered
+      /// with the topic.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4915,26 +4692,25 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Unregisters a service account with subscriber privileges on the Cloud
       /// Pub/Sub topic created for this Channel Services account. If there are no
-      /// more service account left with sunbscriber privileges, the topic will be
-      /// deleted. You can check this by calling ListSubscribers api.
+      /// service accounts left with subscriber privileges, this deletes the topic.
+      /// You can call ListSubscribers to check for these accounts.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being provided are different, or if the impersonated user
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different, or the impersonated user
       /// is not a super admin.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The topic resource doesn't exist.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// Topic name from which service email address has been unregistered if
-      /// successful, otherwise error is returned. If the service email was already
-      /// not associated with the topic, the success response will be returned.
+      /// Return value:
+      /// The topic name that unregistered the service email address.
+      /// Returns a success response if the service email address wasn't registered
+      /// with the topic.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4947,22 +4723,20 @@ namespace Google.Cloud.Channel.V1 {
       /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
       /// topic created for this Channel Services account.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being provided are different, or if the account is not
-      /// a super admin.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different, or the impersonated user
+      /// is not a super admin.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The topic resource doesn't exist.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// List of service email addresses if successful, otherwise error is
-      /// returned.
+      /// Return value:
+      /// A list of service email addresses.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4977,22 +4751,20 @@ namespace Google.Cloud.Channel.V1 {
       /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
       /// topic created for this Channel Services account.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being provided are different, or if the account is not
-      /// a super admin.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different, or the impersonated user
+      /// is not a super admin.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The topic resource doesn't exist.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// List of service email addresses if successful, otherwise error is
-      /// returned.
+      /// Return value:
+      /// A list of service email addresses.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5005,22 +4777,20 @@ namespace Google.Cloud.Channel.V1 {
       /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
       /// topic created for this Channel Services account.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being provided are different, or if the account is not
-      /// a super admin.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different, or the impersonated user
+      /// is not a super admin.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The topic resource doesn't exist.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// List of service email addresses if successful, otherwise error is
-      /// returned.
+      /// Return value:
+      /// A list of service email addresses.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5035,22 +4805,20 @@ namespace Google.Cloud.Channel.V1 {
       /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
       /// topic created for this Channel Services account.
       ///
-      /// Possible Error Codes:
+      /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being provided are different, or if the account is not
-      /// a super admin.
-      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.
-      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * PERMISSION_DENIED: The reseller account making the request and the
+      /// provided reseller account are different, or the impersonated user
+      /// is not a super admin.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      /// * NOT_FOUND: The topic resource doesn't exist.
       /// * INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.
-      /// * UNKNOWN: Any non-user error related to a technical issue in
-      /// the backend. In this case, contact Cloud Channel support.
+      /// backend. Contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Contact Cloud Channel support.
       ///
-      /// Return Value:
-      /// List of service email addresses if successful, otherwise error is
-      /// returned.
+      /// Return value:
+      /// A list of service email addresses.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
