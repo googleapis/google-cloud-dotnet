@@ -1334,7 +1334,8 @@ namespace Google.Cloud.Firestore.V1 {
             [pbr::OriginalName("SERVER_VALUE_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
             /// The time at which the server processed the request, with millisecond
-            /// precision.
+            /// precision. If used on multiple fields (same or different documents) in
+            /// a transaction, all the fields will get the same server timestamp.
             /// </summary>
             [pbr::OriginalName("REQUEST_TIME")] RequestTime = 1,
           }
