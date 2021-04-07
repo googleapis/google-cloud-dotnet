@@ -83,13 +83,15 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             "b3JSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjWC0+STAigqJi92",
             "MWJldGExL3tuYW1lPXByb2plY3RzLyovYXR0ZXN0b3JzLyp92kEEbmFtZRpW",
             "ykEiYmluYXJ5YXV0aG9yaXphdGlvbi5nb29nbGVhcGlzLmNvbdJBLmh0dHBz",
-            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C5AFa",
-            "W2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
-            "YmluYXJ5YXV0aG9yaXphdGlvbi92MWJldGExO2JpbmFyeWF1dGhvcml6YXRp",
-            "b274AQGqAihHb29nbGUuQ2xvdWQuQmluYXJ5QXV0aG9yaXphdGlvbi5WMUJl",
-            "dGExygIoR29vZ2xlXENsb3VkXEJpbmFyeUF1dGhvcml6YXRpb25cVjFiZXRh",
-            "MeoCK0dvb2dsZTo6Q2xvdWQ6OkJpbmFyeUF1dGhvcml6YXRpb246OlYxYmV0",
-            "YTFiBnByb3RvMw=="));
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CtQIK",
+            "LGNvbS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGEx",
+            "Qh9CaW5hcnlBdXRob3JpemF0aW9uU2VydmljZVByb3RvUAFaW2dvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmluYXJ5YXV0",
+            "aG9yaXphdGlvbi92MWJldGExO2JpbmFyeWF1dGhvcml6YXRpb274AQGqAihH",
+            "b29nbGUuQ2xvdWQuQmluYXJ5QXV0aG9yaXphdGlvbi5WMUJldGExygIoR29v",
+            "Z2xlXENsb3VkXEJpbmFyeUF1dGhvcml6YXRpb25cVjFiZXRhMeoCK0dvb2ds",
+            "ZTo6Q2xvdWQ6OkJpbmFyeUF1dGhvcml6YXRpb246OlYxYmV0YTFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BinaryAuthorization.V1Beta1.ResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -152,8 +154,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [policy][google.cloud.binaryauthorization.v1beta1.Policy] to retrieve,
-    /// in the format `projects/*/policy`.
+    /// Required. The resource name of the
+    /// [policy][google.cloud.binaryauthorization.v1beta1.Policy] to retrieve, in
+    /// the format `projects/*/policy`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -331,9 +334,11 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int PolicyFieldNumber = 1;
     private global::Google.Cloud.BinaryAuthorization.V1Beta1.Policy policy_;
     /// <summary>
-    /// Required. A new or updated [policy][google.cloud.binaryauthorization.v1beta1.Policy] value. The service will
-    /// overwrite the [policy name][google.cloud.binaryauthorization.v1beta1.Policy.name] field with the resource name in
-    /// the request URL, in the format `projects/*/policy`.
+    /// Required. A new or updated
+    /// [policy][google.cloud.binaryauthorization.v1beta1.Policy] value. The
+    /// service will overwrite the [policy
+    /// name][google.cloud.binaryauthorization.v1beta1.Policy.name] field with the
+    /// resource name in the request URL, in the format `projects/*/policy`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.BinaryAuthorization.V1Beta1.Policy Policy {
@@ -522,7 +527,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent of this [attestor][google.cloud.binaryauthorization.v1beta1.Attestor].
+    /// Required. The parent of this
+    /// [attestor][google.cloud.binaryauthorization.v1beta1.Attestor].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -536,7 +542,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int AttestorIdFieldNumber = 2;
     private string attestorId_ = "";
     /// <summary>
-    /// Required. The [attestors][google.cloud.binaryauthorization.v1beta1.Attestor] ID.
+    /// Required. The
+    /// [attestors][google.cloud.binaryauthorization.v1beta1.Attestor] ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AttestorId {
@@ -550,9 +557,11 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int AttestorFieldNumber = 3;
     private global::Google.Cloud.BinaryAuthorization.V1Beta1.Attestor attestor_;
     /// <summary>
-    /// Required. The initial [attestor][google.cloud.binaryauthorization.v1beta1.Attestor] value. The service will
-    /// overwrite the [attestor name][google.cloud.binaryauthorization.v1beta1.Attestor.name] field with the resource name,
-    /// in the format `projects/*/attestors/*`.
+    /// Required. The initial
+    /// [attestor][google.cloud.binaryauthorization.v1beta1.Attestor] value. The
+    /// service will overwrite the [attestor
+    /// name][google.cloud.binaryauthorization.v1beta1.Attestor.name] field with
+    /// the resource name, in the format `projects/*/attestors/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.BinaryAuthorization.V1Beta1.Attestor Attestor {
@@ -787,8 +796,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the [attestor][google.cloud.binaryauthorization.v1beta1.Attestor] to retrieve, in the format
-    /// `projects/*/attestors/*`.
+    /// Required. The name of the
+    /// [attestor][google.cloud.binaryauthorization.v1beta1.Attestor] to retrieve,
+    /// in the format `projects/*/attestors/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -966,9 +976,12 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int AttestorFieldNumber = 1;
     private global::Google.Cloud.BinaryAuthorization.V1Beta1.Attestor attestor_;
     /// <summary>
-    /// Required. The updated [attestor][google.cloud.binaryauthorization.v1beta1.Attestor] value. The service will
-    /// overwrite the [attestor name][google.cloud.binaryauthorization.v1beta1.Attestor.name] field with the resource name
-    /// in the request URL, in the format `projects/*/attestors/*`.
+    /// Required. The updated
+    /// [attestor][google.cloud.binaryauthorization.v1beta1.Attestor] value. The
+    /// service will overwrite the [attestor
+    /// name][google.cloud.binaryauthorization.v1beta1.Attestor.name] field with
+    /// the resource name in the request URL, in the format
+    /// `projects/*/attestors/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.BinaryAuthorization.V1Beta1.Attestor Attestor {
@@ -1158,7 +1171,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the project associated with the
-    /// [attestors][google.cloud.binaryauthorization.v1beta1.Attestor], in the format `projects/*`.
+    /// [attestors][google.cloud.binaryauthorization.v1beta1.Attestor], in the
+    /// format `projects/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -1188,8 +1202,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     private string pageToken_ = "";
     /// <summary>
     /// A token identifying a page of results the server should return. Typically,
-    /// this is the value of [ListAttestorsResponse.next_page_token][google.cloud.binaryauthorization.v1beta1.ListAttestorsResponse.next_page_token] returned
-    /// from the previous call to the `ListAttestors` method.
+    /// this is the value of
+    /// [ListAttestorsResponse.next_page_token][google.cloud.binaryauthorization.v1beta1.ListAttestorsResponse.next_page_token]
+    /// returned from the previous call to the `ListAttestors` method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -1430,8 +1445,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve the next page of results. Pass this value in the
-    /// [ListAttestorsRequest.page_token][google.cloud.binaryauthorization.v1beta1.ListAttestorsRequest.page_token] field in the subsequent call to the
-    /// `ListAttestors` method to retrieve the next page of results.
+    /// [ListAttestorsRequest.page_token][google.cloud.binaryauthorization.v1beta1.ListAttestorsRequest.page_token]
+    /// field in the subsequent call to the `ListAttestors` method to retrieve the
+    /// next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1623,8 +1639,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the [attestors][google.cloud.binaryauthorization.v1beta1.Attestor] to delete, in the format
-    /// `projects/*/attestors/*`.
+    /// Required. The name of the
+    /// [attestors][google.cloud.binaryauthorization.v1beta1.Attestor] to delete,
+    /// in the format `projects/*/attestors/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
