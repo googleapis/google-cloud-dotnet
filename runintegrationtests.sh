@@ -14,6 +14,7 @@ RETRY_ARG=
 COVERAGE_ARG=
 SMOKE_ARG=
 EXCLUDED_APIS=()
+DRY_RUN_ARG=
 
 while (( "$#" )); do
   if [[ "$1" == "--retry" ]]
@@ -27,6 +28,9 @@ while (( "$#" )); do
   elif [[ "$1" == "--smoke" ]]
   then
     SMOKE_ARG=yes
+  elif [[ "$1" == "--dry-run" ]]
+  then
+    DRY_RUN_ARG=yes
   elif [[ "$1" == "--exclude" ]]
   then
     shift
@@ -118,7 +122,15 @@ do
     fi
   done
 
+  # If we just want to see what we would test, log it and continue
+  if [[ "$DRY_RUN_ARG" == "yes" ]]
+  then
+    log_build_action "Dry-run; would test $testdir"
+    continue
+  fi
+  
   log_build_action "Testing $testdir"
+  
   if [[ "$testdir" =~ smoketests.json ]]
   then
     # If we've found a smoketests.json file (which really isn't a "test directory" of course),
