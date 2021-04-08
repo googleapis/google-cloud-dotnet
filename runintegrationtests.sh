@@ -13,6 +13,7 @@ APIS=()
 RETRY_ARG=
 COVERAGE_ARG=
 SMOKE_ARG=
+EXCLUDED_APIS=()
 
 while (( "$#" )); do
   if [[ "$1" == "--retry" ]]
@@ -26,6 +27,18 @@ while (( "$#" )); do
   elif [[ "$1" == "--smoke" ]]
   then
     SMOKE_ARG=yes
+  elif [[ "$1" == "--exclude" ]]
+  then
+    shift
+    if [[ "$#" == 0 ]]
+    then
+      echo "Error: specify the file containing excluded API names"
+      exit 1
+    fi
+    for exclusion in $(cat $1 | sed 's/\r//g')
+    do
+      EXCLUDED_APIS+=($exclusion)
+    done
   else 
     APIS+=($1)
   fi
@@ -94,6 +107,17 @@ fi
 log_build_action "(Start) Integration tests"
 for testdir in $testdirs
 do
+  # Skip excluded APIs
+  api=$(echo $testdir | cut -d/ -f1)
+  for exclusion in ${EXCLUDED_APIS[*]}
+  do
+    if [[ $api == $exclusion ]]
+    then
+      log_build_action "Skipping $testdir for excluded API $api"
+      continue 2
+    fi
+  done
+
   log_build_action "Testing $testdir"
   if [[ "$testdir" =~ smoketests.json ]]
   then
