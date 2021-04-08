@@ -2319,6 +2319,23 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.TextToSpeech.V1beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/tpu/v1",
+      "Name": "tpu.googleapis.com",
+      "Title": "Cloud TPU API",
+      "Description": "TPU API provides customers with access to Google TPU technology.",
+      "ServiceConfigFile": "google/cloud/tpu/v1/tpu_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.tpu.v1",
+      "PackageFromProtos": "google.cloud.tpu.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Tpu.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/translate/v3",
       "Name": "translate.googleapis.com",
       "Title": "Cloud Translation API",
