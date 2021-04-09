@@ -19,6 +19,7 @@ Fields:
 - `type`: "rest", "grpc" or "other":
   - rest = REST-based API; implicitly depends on Google.Api.Gax.Rest
   - grpc = GRPC-based API; implicitly depends on Google.Api.Gax.Grpc
+- `metadataType`: an optional override for the `library_type` field in `.repo-metadata.json` (can usually be omitted)
 - `targetFrameworks`: the frameworks to target in the production code; defaulted for rest and grpc projects
 - `dependencies`: Dependencies in addition to defaults, for the production code
 - `testDependencies`: Dependencies for all test projects. (This can lead to redundant dependencies, but it's simple.)

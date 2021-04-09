@@ -342,6 +342,7 @@
       "version": "2.1.1",
       "commonResourcesConfig": "apis/Google.Cloud.Bigtable.Common.V2/CommonResourcesConfig.json",
       "type": "grpc",
+      "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Bigtable API.",
       "tags": [
         "Bigtable"
@@ -579,6 +580,7 @@
       "productUrl": "https://cloud.google.com/datastore/docs/concepts/overview",
       "version": "3.1.0",
       "type": "grpc",
+      "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Datastore API, which accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
       "tags": [
         "Datastore"
@@ -653,6 +655,7 @@
       "id": "Google.Cloud.Diagnostics.AspNetCore",
       "version": "4.2.0",
       "type": "other",
+      "metadataType": "INTEGRATION",
       "targetFrameworks": "netstandard2.0",
       "testTargetFrameworks": "netcoreapp2.1;net461",
       "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core.",
@@ -687,6 +690,7 @@
       "id": "Google.Cloud.Diagnostics.AspNetCore3",
       "version": "4.2.0",
       "type": "other",
+      "metadataType": "INTEGRATION",
       "targetFrameworks": "netcoreapp3.1",
       "testTargetFrameworks": "netcoreapp3.1",
       "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core 3.",
@@ -901,6 +905,7 @@
       "listingDescription": "Firestore high-level library",
       "version": "2.3.1",
       "type": "other",
+      "metadataType": "VENEER_GRPC",
       "targetFrameworks": "netstandard2.0;net461",
       "testTargetFrameworks": "netcoreapp2.1;net461",
       "description": "Recommended Google client library to access the Firestore API.",
@@ -1063,6 +1068,7 @@
       "productUrl": "https://cloud.google.com/iam/",
       "version": "2.1.0",
       "type": "grpc",
+      "metadataType": "CORE",
       "description": "gRPC services for the Google Identity and Access Management API. This library is typically used as a dependency for other API client libraries.",
       "tags": [
         "IAM",
@@ -1134,6 +1140,7 @@
       "id": "Google.Cloud.Logging.Log4Net",
       "version": "3.2.0",
       "type": "other",
+      "metadataType": "INTEGRATION",
       "targetFrameworks": "netstandard2.0;net461",
       "testTargetFrameworks": "netcoreapp2.1;net461",
       "description": "Log4Net client library for the Google Cloud Logging API.",
@@ -1157,6 +1164,7 @@
       "id": "Google.Cloud.Logging.Console",
       "version": "1.0.0-alpha00",
       "type": "other",
+      "metadataType": "INTEGRATION",
       "targetFrameworks": "netstandard2.0",
       "testTargetFrameworks": "netcoreapp2.1",
       "description": "ConsoleFormatter for Google Cloud Logging.",
@@ -1174,6 +1182,7 @@
       "id": "Google.Cloud.Logging.NLog",
       "version": "3.3.0",
       "type": "other",
+      "metadataType": "INTEGRATION",
       "targetFrameworks": "netstandard2.0;net461",
       "testTargetFrameworks": "netcoreapp2.1;net461",
       "description": "NLog target for the Google Cloud Logging API.",
@@ -1576,6 +1585,7 @@
       "productUrl": "https://cloud.google.com/pubsub/",
       "version": "2.4.0",
       "type": "grpc",
+      "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Pub/Sub API, which provides reliable, many-to-many, asynchronous messaging between applications.",
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
@@ -1972,6 +1982,7 @@
       "testTargetFrameworks": "netcoreapp2.1;net461",
       "version": "3.7.0",
       "type": "other",
+      "metadataType": "INTEGRATION",
       "description": "Google ADO.NET Provider for Google Cloud Spanner.",
       "tags": [
         "Spanner",
@@ -2016,6 +2027,7 @@
       "version": "3.7.0",
       "commonResourcesConfig": "apis/Google.Cloud.Spanner.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
+      "metadataType": "GAPIC_COMBO",
       "description": "Low-level Google client library to access the Google Cloud Spanner API. The ADO.NET provider (Google.Cloud.Spanner.Data) which depends on this package is generally preferred for Spanner access.",
       "tags": [
         "Spanner"
@@ -2035,6 +2047,7 @@
       "productUrl": "https://cloud.google.com/speech",
       "version": "2.1.0",
       "type": "grpc",
+      "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Speech API, which performs speech recognition.",
       "tags": [
         "Speech"
@@ -2054,6 +2067,7 @@
       "version": "2.0.0-beta03",
       "releaseLevelOverride": "beta",
       "type": "grpc",
+      "metadataType": "GAPIC_COMBO",
       "description": "Google client library to access the Google Cloud Speech API version v1p1beta1 with upcoming features.",
       "tags": [
         "Speech"
@@ -2267,6 +2281,7 @@
       "productUrl": "https://cloud.google.com/video-intelligence",
       "version": "2.1.0",
       "type": "grpc",
+      "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Video Intelligence API.",
       "tags": [
         "VideoIntelligence"
@@ -2285,6 +2300,7 @@
       "productUrl": "https://cloud.google.com/vision",
       "version": "2.2.0",
       "type": "grpc",
+      "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Vision API, which integrates Google Vision features, including image labeling, face, logo, and landmark detection, optical character recognition (OCR), and detection of explicit content, into applications.",
       "tags": [
         "Vision"
@@ -2492,6 +2508,7 @@
       "listingDescription": "Support for the Long-Running Operations API pattern",
       "version": "2.1.0",
       "type": "grpc",
+      "metadataType": "CORE",
       "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
       "tags": [
         "LongRunning"

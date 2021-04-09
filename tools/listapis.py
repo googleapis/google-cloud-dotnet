@@ -32,8 +32,7 @@ if len(test_parts) == 1:
 else:
 	matcher = lambda value : value == test_parts[1]
 
-filename = sys.argv[1]
-file = open(filename, "r") 
+file = open(args.file, "r") 
 catalog = json.load(file)
 
 fields = [api.get(args.field) for api in catalog["apis"] if matcher(api.get(test_field))]

@@ -525,6 +525,7 @@ shell.run(
                 distribution_name = api.Id,
                 release_level = releaseLevel,
                 client_documentation = $"https://googleapis.dev/dotnet/{api.Id}/latest",
+                library_type = api.EffectiveMetadataType
             };
             string json = JsonConvert.SerializeObject(metadata, Formatting.Indented);
             File.WriteAllText(metadataPath, json);
