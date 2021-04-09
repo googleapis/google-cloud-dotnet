@@ -36,6 +36,23 @@ namespace Google.Cloud.Tools.Common
         public string TestTargetFrameworks { get; set; }
 
         /// <summary>
+        /// The type to include as library_type in the .repo-metadata.json file, when the defaulting
+        /// in <see cref="EffectiveMetadataType"/> is inappropriate.
+        /// </summary>
+        public string MetadataType { get; set; }
+
+        [JsonIgnore]
+        public string EffectiveMetadataType => MetadataType ?? Type switch
+        {
+            ApiType.None => "OTHER",
+            ApiType.Grpc => "GAPIC_AUTO",
+            ApiType.Rest => "GAPIC_MANUAL", // These aren't the REST generated clients, they're the augmented wrappers.
+            ApiType.Analyzers => "OTHER",
+            ApiType.Other => "OTHER",
+            _ => throw new InvalidOperationException($"Unknown ApiType value {Type}")
+        };
+
+        /// <summary>
         /// The version of the underlying API, taken from the last segment of the package ID,
         /// e.g. Google.Cloud.OSLogin.V1Beta would return V1Beta.
         /// Returns null if there's no match, e.g. for Google.Cloud.Firestore.
