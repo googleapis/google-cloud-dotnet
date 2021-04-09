@@ -1,5 +1,6 @@
 {
   "distribution_name": "Google.Analytics.Admin.V1Alpha",
   "release_level": "alpha",
-  "client_documentation": "https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/latest"
+  "client_documentation": "https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/latest",
+  "library_type": "GAPIC_AUTO"
 }
