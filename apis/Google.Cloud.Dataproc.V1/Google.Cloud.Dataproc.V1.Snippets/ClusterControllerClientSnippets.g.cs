@@ -304,6 +304,152 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for StopCluster</summary>
+        public void StopClusterRequestObject()
+        {
+            // Snippet: StopCluster(StopClusterRequest, CallSettings)
+            // Create client
+            ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
+            // Initialize request argument(s)
+            StopClusterRequest request = new StopClusterRequest
+            {
+                ProjectId = "",
+                Region = "",
+                ClusterName = "",
+                ClusterUuid = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Cluster, ClusterOperationMetadata> response = clusterControllerClient.StopCluster(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Cluster, ClusterOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Cluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Cluster, ClusterOperationMetadata> retrievedResponse = clusterControllerClient.PollOnceStopCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Cluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopClusterAsync</summary>
+        public async Task StopClusterRequestObjectAsync()
+        {
+            // Snippet: StopClusterAsync(StopClusterRequest, CallSettings)
+            // Additional: StopClusterAsync(StopClusterRequest, CancellationToken)
+            // Create client
+            ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
+            // Initialize request argument(s)
+            StopClusterRequest request = new StopClusterRequest
+            {
+                ProjectId = "",
+                Region = "",
+                ClusterName = "",
+                ClusterUuid = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Cluster, ClusterOperationMetadata> response = await clusterControllerClient.StopClusterAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Cluster, ClusterOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Cluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Cluster, ClusterOperationMetadata> retrievedResponse = await clusterControllerClient.PollOnceStopClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Cluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartCluster</summary>
+        public void StartClusterRequestObject()
+        {
+            // Snippet: StartCluster(StartClusterRequest, CallSettings)
+            // Create client
+            ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
+            // Initialize request argument(s)
+            StartClusterRequest request = new StartClusterRequest
+            {
+                ProjectId = "",
+                Region = "",
+                ClusterName = "",
+                ClusterUuid = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Cluster, ClusterOperationMetadata> response = clusterControllerClient.StartCluster(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Cluster, ClusterOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Cluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Cluster, ClusterOperationMetadata> retrievedResponse = clusterControllerClient.PollOnceStartCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Cluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartClusterAsync</summary>
+        public async Task StartClusterRequestObjectAsync()
+        {
+            // Snippet: StartClusterAsync(StartClusterRequest, CallSettings)
+            // Additional: StartClusterAsync(StartClusterRequest, CancellationToken)
+            // Create client
+            ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
+            // Initialize request argument(s)
+            StartClusterRequest request = new StartClusterRequest
+            {
+                ProjectId = "",
+                Region = "",
+                ClusterName = "",
+                ClusterUuid = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Cluster, ClusterOperationMetadata> response = await clusterControllerClient.StartClusterAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Cluster, ClusterOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Cluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Cluster, ClusterOperationMetadata> retrievedResponse = await clusterControllerClient.PollOnceStartClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Cluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteCluster</summary>
         public void DeleteClusterRequestObject()
         {
