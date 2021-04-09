@@ -50,6 +50,10 @@ namespace Google.Cloud.Dataproc.V1
             CreateClusterOperationsSettings = existing.CreateClusterOperationsSettings.Clone();
             UpdateClusterSettings = existing.UpdateClusterSettings;
             UpdateClusterOperationsSettings = existing.UpdateClusterOperationsSettings.Clone();
+            StopClusterSettings = existing.StopClusterSettings;
+            StopClusterOperationsSettings = existing.StopClusterOperationsSettings.Clone();
+            StartClusterSettings = existing.StartClusterSettings;
+            StartClusterOperationsSettings = existing.StartClusterOperationsSettings.Clone();
             DeleteClusterSettings = existing.DeleteClusterSettings;
             DeleteClusterOperationsSettings = existing.DeleteClusterOperationsSettings.Clone();
             GetClusterSettings = existing.GetClusterSettings;
@@ -123,6 +127,66 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateClusterOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ClusterControllerClient.StopCluster</c> and <c>ClusterControllerClient.StopClusterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StopClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ClusterControllerClient.StopCluster</c> and
+        /// <c>ClusterControllerClient.StopClusterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StopClusterOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ClusterControllerClient.StartCluster</c> and <c>ClusterControllerClient.StartClusterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StartClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ClusterControllerClient.StartCluster</c> and
+        /// <c>ClusterControllerClient.StartClusterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StartClusterOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -798,6 +862,112 @@ namespace Google.Cloud.Dataproc.V1
             UpdateClusterAsync(projectId, region, clusterName, cluster, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Stops a cluster in a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Cluster, ClusterOperationMetadata> StopCluster(StopClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops a cluster in a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, ClusterOperationMetadata>> StopClusterAsync(StopClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops a cluster in a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, ClusterOperationMetadata>> StopClusterAsync(StopClusterRequest request, st::CancellationToken cancellationToken) =>
+            StopClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>StopCluster</c>.</summary>
+        public virtual lro::OperationsClient StopClusterOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>StopCluster</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Cluster, ClusterOperationMetadata> PollOnceStopCluster(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Cluster, ClusterOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopClusterOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StopCluster</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, ClusterOperationMetadata>> PollOnceStopClusterAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Cluster, ClusterOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopClusterOperationsClient, callSettings);
+
+        /// <summary>
+        /// Starts a cluster in a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Cluster, ClusterOperationMetadata> StartCluster(StartClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Starts a cluster in a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, ClusterOperationMetadata>> StartClusterAsync(StartClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Starts a cluster in a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, ClusterOperationMetadata>> StartClusterAsync(StartClusterRequest request, st::CancellationToken cancellationToken) =>
+            StartClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>StartCluster</c>.</summary>
+        public virtual lro::OperationsClient StartClusterOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>StartCluster</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Cluster, ClusterOperationMetadata> PollOnceStartCluster(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Cluster, ClusterOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartClusterOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StartCluster</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, ClusterOperationMetadata>> PollOnceStartClusterAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Cluster, ClusterOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartClusterOperationsClient, callSettings);
+
+        /// <summary>
         /// Deletes a cluster in a project. The returned
         /// [Operation.metadata][google.longrunning.Operation.metadata] will be
         /// [ClusterOperationMetadata](https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
@@ -1360,6 +1530,10 @@ namespace Google.Cloud.Dataproc.V1
 
         private readonly gaxgrpc::ApiCall<UpdateClusterRequest, lro::Operation> _callUpdateCluster;
 
+        private readonly gaxgrpc::ApiCall<StopClusterRequest, lro::Operation> _callStopCluster;
+
+        private readonly gaxgrpc::ApiCall<StartClusterRequest, lro::Operation> _callStartCluster;
+
         private readonly gaxgrpc::ApiCall<DeleteClusterRequest, lro::Operation> _callDeleteCluster;
 
         private readonly gaxgrpc::ApiCall<GetClusterRequest, Cluster> _callGetCluster;
@@ -1380,6 +1554,8 @@ namespace Google.Cloud.Dataproc.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             CreateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClusterOperationsSettings);
             UpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings);
+            StopClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopClusterOperationsSettings);
+            StartClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartClusterOperationsSettings);
             DeleteClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteClusterOperationsSettings);
             DiagnoseClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DiagnoseClusterOperationsSettings);
             _callCreateCluster = clientHelper.BuildApiCall<CreateClusterRequest, lro::Operation>(grpcClient.CreateClusterAsync, grpcClient.CreateCluster, effectiveSettings.CreateClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region);
@@ -1388,6 +1564,12 @@ namespace Google.Cloud.Dataproc.V1
             _callUpdateCluster = clientHelper.BuildApiCall<UpdateClusterRequest, lro::Operation>(grpcClient.UpdateClusterAsync, grpcClient.UpdateCluster, effectiveSettings.UpdateClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("cluster_name", request => request.ClusterName);
             Modify_ApiCall(ref _callUpdateCluster);
             Modify_UpdateClusterApiCall(ref _callUpdateCluster);
+            _callStopCluster = clientHelper.BuildApiCall<StopClusterRequest, lro::Operation>(grpcClient.StopClusterAsync, grpcClient.StopCluster, effectiveSettings.StopClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("cluster_name", request => request.ClusterName);
+            Modify_ApiCall(ref _callStopCluster);
+            Modify_StopClusterApiCall(ref _callStopCluster);
+            _callStartCluster = clientHelper.BuildApiCall<StartClusterRequest, lro::Operation>(grpcClient.StartClusterAsync, grpcClient.StartCluster, effectiveSettings.StartClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("cluster_name", request => request.ClusterName);
+            Modify_ApiCall(ref _callStartCluster);
+            Modify_StartClusterApiCall(ref _callStartCluster);
             _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, lro::Operation>(grpcClient.DeleteClusterAsync, grpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("cluster_name", request => request.ClusterName);
             Modify_ApiCall(ref _callDeleteCluster);
             Modify_DeleteClusterApiCall(ref _callDeleteCluster);
@@ -1409,6 +1591,10 @@ namespace Google.Cloud.Dataproc.V1
 
         partial void Modify_UpdateClusterApiCall(ref gaxgrpc::ApiCall<UpdateClusterRequest, lro::Operation> call);
 
+        partial void Modify_StopClusterApiCall(ref gaxgrpc::ApiCall<StopClusterRequest, lro::Operation> call);
+
+        partial void Modify_StartClusterApiCall(ref gaxgrpc::ApiCall<StartClusterRequest, lro::Operation> call);
+
         partial void Modify_DeleteClusterApiCall(ref gaxgrpc::ApiCall<DeleteClusterRequest, lro::Operation> call);
 
         partial void Modify_GetClusterApiCall(ref gaxgrpc::ApiCall<GetClusterRequest, Cluster> call);
@@ -1425,6 +1611,10 @@ namespace Google.Cloud.Dataproc.V1
         partial void Modify_CreateClusterRequest(ref CreateClusterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateClusterRequest(ref UpdateClusterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StopClusterRequest(ref StopClusterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StartClusterRequest(ref StartClusterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteClusterRequest(ref DeleteClusterRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1494,6 +1684,60 @@ namespace Google.Cloud.Dataproc.V1
         {
             Modify_UpdateClusterRequest(ref request, ref callSettings);
             return new lro::Operation<Cluster, ClusterOperationMetadata>(await _callUpdateCluster.Async(request, callSettings).ConfigureAwait(false), UpdateClusterOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>StopCluster</c>.</summary>
+        public override lro::OperationsClient StopClusterOperationsClient { get; }
+
+        /// <summary>
+        /// Stops a cluster in a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Cluster, ClusterOperationMetadata> StopCluster(StopClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StopClusterRequest(ref request, ref callSettings);
+            return new lro::Operation<Cluster, ClusterOperationMetadata>(_callStopCluster.Sync(request, callSettings), StopClusterOperationsClient);
+        }
+
+        /// <summary>
+        /// Stops a cluster in a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Cluster, ClusterOperationMetadata>> StopClusterAsync(StopClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StopClusterRequest(ref request, ref callSettings);
+            return new lro::Operation<Cluster, ClusterOperationMetadata>(await _callStopCluster.Async(request, callSettings).ConfigureAwait(false), StopClusterOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>StartCluster</c>.</summary>
+        public override lro::OperationsClient StartClusterOperationsClient { get; }
+
+        /// <summary>
+        /// Starts a cluster in a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Cluster, ClusterOperationMetadata> StartCluster(StartClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartClusterRequest(ref request, ref callSettings);
+            return new lro::Operation<Cluster, ClusterOperationMetadata>(_callStartCluster.Sync(request, callSettings), StartClusterOperationsClient);
+        }
+
+        /// <summary>
+        /// Starts a cluster in a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Cluster, ClusterOperationMetadata>> StartClusterAsync(StartClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartClusterRequest(ref request, ref callSettings);
+            return new lro::Operation<Cluster, ClusterOperationMetadata>(await _callStartCluster.Async(request, callSettings).ConfigureAwait(false), StartClusterOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteCluster</c>.</summary>

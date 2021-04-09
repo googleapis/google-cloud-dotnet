@@ -58,6 +58,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -96,6 +97,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -136,6 +138,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -174,6 +177,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -214,6 +218,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -252,6 +257,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -292,6 +298,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -330,6 +337,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -370,6 +378,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -408,6 +417,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -447,6 +457,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -484,6 +495,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -523,6 +535,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -560,6 +573,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.GetWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -599,6 +613,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.UpdateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -636,6 +651,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.UpdateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -675,6 +691,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.UpdateWorkflowTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
@@ -712,6 +729,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 {
                     new TemplateParameter(),
                 },
+                DagTimeout = new wkt::Duration(),
             };
             mockGrpcClient.Setup(x => x.UpdateWorkflowTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WorkflowTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);

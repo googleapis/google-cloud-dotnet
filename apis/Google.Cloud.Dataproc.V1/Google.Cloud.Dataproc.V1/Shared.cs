@@ -26,14 +26,16 @@ namespace Google.Cloud.Dataproc.V1 {
           string.Concat(
             "CiVnb29nbGUvY2xvdWQvZGF0YXByb2MvdjEvc2hhcmVkLnByb3RvEhhnb29n",
             "bGUuY2xvdWQuZGF0YXByb2MudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
-            "cHJvdG8qfAoJQ29tcG9uZW50EhkKFUNPTVBPTkVOVF9VTlNQRUNJRklFRBAA",
-            "EgwKCEFOQUNPTkRBEAUSEAoMSElWRV9XRUJIQ0FUEAMSCwoHSlVQWVRFUhAB",
-            "EgoKBlBSRVNUTxAGEgwKCFpFUFBFTElOEAQSDQoJWk9PS0VFUEVSEAhCbwoc",
-            "Y29tLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MUILU2hhcmVkUHJvdG9QAVpA",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9k",
-            "YXRhcHJvYy92MTtkYXRhcHJvY2IGcHJvdG8z"));
+            "cHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8qvwEKCUNv",
+            "bXBvbmVudBIZChVDT01QT05FTlRfVU5TUEVDSUZJRUQQABIMCghBTkFDT05E",
+            "QRAFEgoKBkRPQ0tFUhANEgkKBURSVUlEEAkSCQoFRkxJTksQDhIJCgVIQkFT",
+            "RRALEhAKDEhJVkVfV0VCSENBVBADEgsKB0pVUFlURVIQARIKCgZQUkVTVE8Q",
+            "BhIKCgZSQU5HRVIQDBIICgRTT0xSEAoSDAoIWkVQUEVMSU4QBBINCglaT09L",
+            "RUVQRVIQCEJvChxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxQgtTaGFy",
+            "ZWRQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
+            "cGlzL2Nsb3VkL2RhdGFwcm9jL3YxO2RhdGFwcm9jYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataproc.V1.Component), }, null, null));
     }
     #endregion
@@ -42,6 +44,7 @@ namespace Google.Cloud.Dataproc.V1 {
   #region Enums
   /// <summary>
   /// Cluster components that can be activated.
+  /// Next ID: 16.
   /// </summary>
   public enum Component {
     /// <summary>
@@ -49,9 +52,29 @@ namespace Google.Cloud.Dataproc.V1 {
     /// </summary>
     [pbr::OriginalName("COMPONENT_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// The Anaconda python distribution.
+    /// The Anaconda python distribution. The Anaconda component is not supported
+    /// in the Dataproc
+    /// &lt;a
+    /// href="/dataproc/docs/concepts/versioning/dataproc-release-2.0">2.0
+    /// image&lt;/a>. The 2.0 image is pre-installed with Miniconda.
     /// </summary>
     [pbr::OriginalName("ANACONDA")] Anaconda = 5,
+    /// <summary>
+    /// Docker
+    /// </summary>
+    [pbr::OriginalName("DOCKER")] Docker = 13,
+    /// <summary>
+    /// The Druid query engine. (alpha)
+    /// </summary>
+    [pbr::OriginalName("DRUID")] Druid = 9,
+    /// <summary>
+    /// Flink
+    /// </summary>
+    [pbr::OriginalName("FLINK")] Flink = 14,
+    /// <summary>
+    /// HBase. (beta)
+    /// </summary>
+    [pbr::OriginalName("HBASE")] Hbase = 11,
     /// <summary>
     /// The Hive Web HCatalog (the REST service for accessing HCatalog).
     /// </summary>
@@ -64,6 +87,14 @@ namespace Google.Cloud.Dataproc.V1 {
     /// The Presto query engine.
     /// </summary>
     [pbr::OriginalName("PRESTO")] Presto = 6,
+    /// <summary>
+    /// The Ranger service.
+    /// </summary>
+    [pbr::OriginalName("RANGER")] Ranger = 12,
+    /// <summary>
+    /// The Solr service.
+    /// </summary>
+    [pbr::OriginalName("SOLR")] Solr = 10,
     /// <summary>
     /// The Zeppelin notebook.
     /// </summary>

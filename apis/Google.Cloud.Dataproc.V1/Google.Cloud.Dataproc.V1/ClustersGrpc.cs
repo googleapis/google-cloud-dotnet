@@ -34,6 +34,8 @@ namespace Google.Cloud.Dataproc.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.CreateClusterRequest> __Marshaller_google_cloud_dataproc_v1_CreateClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.CreateClusterRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.UpdateClusterRequest> __Marshaller_google_cloud_dataproc_v1_UpdateClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.UpdateClusterRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.StopClusterRequest> __Marshaller_google_cloud_dataproc_v1_StopClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.StopClusterRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.StartClusterRequest> __Marshaller_google_cloud_dataproc_v1_StartClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.StartClusterRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.DeleteClusterRequest> __Marshaller_google_cloud_dataproc_v1_DeleteClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.DeleteClusterRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.GetClusterRequest> __Marshaller_google_cloud_dataproc_v1_GetClusterRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.GetClusterRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.Cluster> __Marshaller_google_cloud_dataproc_v1_Cluster = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dataproc.V1.Cluster.Parser.ParseFrom);
@@ -53,6 +55,20 @@ namespace Google.Cloud.Dataproc.V1 {
         __ServiceName,
         "UpdateCluster",
         __Marshaller_google_cloud_dataproc_v1_UpdateClusterRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.StopClusterRequest, global::Google.LongRunning.Operation> __Method_StopCluster = new grpc::Method<global::Google.Cloud.Dataproc.V1.StopClusterRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "StopCluster",
+        __Marshaller_google_cloud_dataproc_v1_StopClusterRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.StartClusterRequest, global::Google.LongRunning.Operation> __Method_StartCluster = new grpc::Method<global::Google.Cloud.Dataproc.V1.StartClusterRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "StartCluster",
+        __Marshaller_google_cloud_dataproc_v1_StartClusterRequest,
         __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.DeleteClusterRequest, global::Google.LongRunning.Operation> __Method_DeleteCluster = new grpc::Method<global::Google.Cloud.Dataproc.V1.DeleteClusterRequest, global::Google.LongRunning.Operation>(
@@ -115,6 +131,28 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateCluster(global::Google.Cloud.Dataproc.V1.UpdateClusterRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Stops a cluster in a project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> StopCluster(global::Google.Cloud.Dataproc.V1.StopClusterRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Starts a cluster in a project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> StartCluster(global::Google.Cloud.Dataproc.V1.StartClusterRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -299,6 +337,94 @@ namespace Google.Cloud.Dataproc.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateClusterAsync(global::Google.Cloud.Dataproc.V1.UpdateClusterRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCluster, null, options, request);
+      }
+      /// <summary>
+      /// Stops a cluster in a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation StopCluster(global::Google.Cloud.Dataproc.V1.StopClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StopCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Stops a cluster in a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation StopCluster(global::Google.Cloud.Dataproc.V1.StopClusterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_StopCluster, null, options, request);
+      }
+      /// <summary>
+      /// Stops a cluster in a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StopClusterAsync(global::Google.Cloud.Dataproc.V1.StopClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StopClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Stops a cluster in a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StopClusterAsync(global::Google.Cloud.Dataproc.V1.StopClusterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_StopCluster, null, options, request);
+      }
+      /// <summary>
+      /// Starts a cluster in a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation StartCluster(global::Google.Cloud.Dataproc.V1.StartClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StartCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Starts a cluster in a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation StartCluster(global::Google.Cloud.Dataproc.V1.StartClusterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_StartCluster, null, options, request);
+      }
+      /// <summary>
+      /// Starts a cluster in a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StartClusterAsync(global::Google.Cloud.Dataproc.V1.StartClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StartClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Starts a cluster in a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StartClusterAsync(global::Google.Cloud.Dataproc.V1.StartClusterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_StartCluster, null, options, request);
       }
       /// <summary>
       /// Deletes a cluster in a project. The returned
@@ -522,6 +648,8 @@ namespace Google.Cloud.Dataproc.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateCluster, serviceImpl.CreateCluster)
           .AddMethod(__Method_UpdateCluster, serviceImpl.UpdateCluster)
+          .AddMethod(__Method_StopCluster, serviceImpl.StopCluster)
+          .AddMethod(__Method_StartCluster, serviceImpl.StartCluster)
           .AddMethod(__Method_DeleteCluster, serviceImpl.DeleteCluster)
           .AddMethod(__Method_GetCluster, serviceImpl.GetCluster)
           .AddMethod(__Method_ListClusters, serviceImpl.ListClusters)
@@ -536,6 +664,8 @@ namespace Google.Cloud.Dataproc.V1 {
     {
       serviceBinder.AddMethod(__Method_CreateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataproc.V1.CreateClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateCluster));
       serviceBinder.AddMethod(__Method_UpdateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataproc.V1.UpdateClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateCluster));
+      serviceBinder.AddMethod(__Method_StopCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataproc.V1.StopClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.StopCluster));
+      serviceBinder.AddMethod(__Method_StartCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataproc.V1.StartClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.StartCluster));
       serviceBinder.AddMethod(__Method_DeleteCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataproc.V1.DeleteClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteCluster));
       serviceBinder.AddMethod(__Method_GetCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataproc.V1.GetClusterRequest, global::Google.Cloud.Dataproc.V1.Cluster>(serviceImpl.GetCluster));
       serviceBinder.AddMethod(__Method_ListClusters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataproc.V1.ListClustersRequest, global::Google.Cloud.Dataproc.V1.ListClustersResponse>(serviceImpl.ListClusters));

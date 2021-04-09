@@ -79,6 +79,18 @@
                 "ListClustersAsync"
               ]
             },
+            "StartCluster": {
+              "methods": [
+                "StartCluster",
+                "StartClusterAsync"
+              ]
+            },
+            "StopCluster": {
+              "methods": [
+                "StopCluster",
+                "StopClusterAsync"
+              ]
+            },
             "UpdateCluster": {
               "methods": [
                 "UpdateCluster",
