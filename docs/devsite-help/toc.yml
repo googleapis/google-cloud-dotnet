@@ -1,7 +1,11 @@
 - name: Client Library Help
   items:
-  - name: FAQ
-    href: faq.md
+  - name: Getting started
+    href: getting-started.md
+  - name: Troubleshooting
+    href: troubleshooting.md
+  - name: Emulator support
+    href: emulators.md
   - name: Supported platforms
     href: platforms.md
   - name: Package names
