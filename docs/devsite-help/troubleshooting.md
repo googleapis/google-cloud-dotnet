@@ -1,46 +1,5 @@
 # Frequently Asked Questions
 
-## How can I use non-default credentials for gRPC-based APIs?
-
-The libraries implement a *client builder* pattern to make
-life considerably simpler when you wish to specify different
-credentials or a different API endpoint.
-
-The general pattern is to create a builder (using the same name as
-the client type, with a suffix of `Builder`), populate any
-propreties to override some aspect of the behavior, and then call
-`Build`. For example:
-
-```csharp
-SpeechClient client = new SpeechClientBuilder
-{
-    // Populate properties here
-}.Build();
-```
-
-In terms of credentials, there are four (mutually-exclusive)
-properties you can use to specify credentials:
-
-- `ChannelCredentials`: the gRPC credentials to use
-- `CredentialsPath`: the path to a JSON file containing service account credentials
-- `JsonCredentials`: a string (in JSON format) containing service account credentials
-- `TokenAccessMethod`: a delegate used to provide access tokens
-
-The final property is a delegate to avoid exposing a dependency on
-`Google.Apis.Auth` in the API surface, but the intention of it is to
-allow you to use any `ICredential` (e.g. a `GoogleCredential` or a
-`UserCredential`) via a method group conversion. For example, to
-create a `SpeechClient` with a `UserCredential`, you would write
-code like this:
-
-```csharp
-UserCredential credential = ...;
-SpeechClient client = new SpeechClientBuilder
-{
-    TokenAccessMethod = credential.GetAccessTokenForRequestAsync
-}.Build();
-```
-
 ## How can I trace gRPC issues?
 
 For libraries that use gRPC, it can be very useful to hook into the
@@ -93,46 +52,7 @@ headers and the response body:
 To log *all* events from the message handler, you can set the `LogEvents` property to
 `~LogEventType.None`.
 
-## How can I use emulators?
 
-Some APIs (such as Datastore and PubSub) provide emulators in the
-[Cloud SDK](https://cloud.google.com/sdk/). Client libraries in some
-other languages automatically use emulators if specific environment
-variables are set, but the Google Cloud Libraries for .NET
-deliberately do not do this, to avoid accidentally using an emulator
-when production was expected or vice versa.
-
-Where emulators are directly supported by the libraries, the client
-builder type has an `EmulatorDetection` property which can be set to
-one of the following values:
-
-- `None` (the default): Ignores the presence or absence of emulator configuration.
-- `ProductionOnly`: Always connects to the production servers, but
-   throws an exception if an emulator configuration is detected that would suggest connecting to
-   an emulator is expected.
-- `EmulatorOnly`: Always connect to the emulator, throwing an exception if no emulator
-   configuration is detected.
-- `EmulatorOrProduction`: Connect to the emulator if an emulator configuration is detected,
-  or production otherwise. This is a convenient option, but risks damage to
-  production databases or running up unexpected bills if tests are accidentally
-  run in production due to the emulator configuration being absent unexpectedly.
-  (Using separate projects for production and testing is a best practice for
-  preventing the first issue, but may be unrealistic for small or hobby projects.)
-
-Here emulator configuration presence is usually interpreted as
-"appropriate environment variables being set", but it is possible
-that in the future there will be other conventions for
-configuring emulators.
-
-If you need to connect to an emulator directly (for example because
-it is not yet supported in the library for the API you're using),
-simply use the appropriate client builder, set the endpoint to the
-host and port the emulator is listening on, and set the credentials to
-to `ChannelCredentials.Insecure`.
-
-Example for PubSub:
-
-[!code-cs[](../examples/root.Faq.txt#Emulator)]
 
 ## Why aren't the gRPC native libraries being found?
 
