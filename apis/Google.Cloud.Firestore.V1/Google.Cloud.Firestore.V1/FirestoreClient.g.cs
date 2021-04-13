@@ -1192,7 +1192,7 @@ namespace Google.Cloud.Firestore.V1
             _callDeleteDocument = clientHelper.BuildApiCall<DeleteDocumentRequest, wkt::Empty>(grpcClient.DeleteDocumentAsync, grpcClient.DeleteDocument, effectiveSettings.DeleteDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDocument);
             Modify_DeleteDocumentApiCall(ref _callDeleteDocument);
-            _callBatchGetDocuments = clientHelper.BuildApiCall<BatchGetDocumentsRequest, BatchGetDocumentsResponse>(grpcClient.BatchGetDocuments, effectiveSettings.BatchGetDocumentsSettings);
+            _callBatchGetDocuments = clientHelper.BuildApiCall<BatchGetDocumentsRequest, BatchGetDocumentsResponse>(grpcClient.BatchGetDocuments, effectiveSettings.BatchGetDocumentsSettings).WithGoogleRequestParam("database", request => request.Database);
             Modify_ApiCall(ref _callBatchGetDocuments);
             Modify_BatchGetDocumentsApiCall(ref _callBatchGetDocuments);
             _callBeginTransaction = clientHelper.BuildApiCall<BeginTransactionRequest, BeginTransactionResponse>(grpcClient.BeginTransactionAsync, grpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings).WithGoogleRequestParam("database", request => request.Database);
@@ -1204,7 +1204,7 @@ namespace Google.Cloud.Firestore.V1
             _callRollback = clientHelper.BuildApiCall<RollbackRequest, wkt::Empty>(grpcClient.RollbackAsync, grpcClient.Rollback, effectiveSettings.RollbackSettings).WithGoogleRequestParam("database", request => request.Database);
             Modify_ApiCall(ref _callRollback);
             Modify_RollbackApiCall(ref _callRollback);
-            _callRunQuery = clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>(grpcClient.RunQuery, effectiveSettings.RunQuerySettings);
+            _callRunQuery = clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>(grpcClient.RunQuery, effectiveSettings.RunQuerySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callRunQuery);
             Modify_RunQueryApiCall(ref _callRunQuery);
             _callPartitionQuery = clientHelper.BuildApiCall<PartitionQueryRequest, PartitionQueryResponse>(grpcClient.PartitionQueryAsync, grpcClient.PartitionQuery, effectiveSettings.PartitionQuerySettings).WithGoogleRequestParam("parent", request => request.Parent);

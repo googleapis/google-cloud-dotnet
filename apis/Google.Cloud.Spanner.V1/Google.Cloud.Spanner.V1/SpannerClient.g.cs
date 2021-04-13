@@ -2548,7 +2548,7 @@ namespace Google.Cloud.Spanner.V1
             _callExecuteSql = clientHelper.BuildApiCall<ExecuteSqlRequest, ResultSet>(grpcClient.ExecuteSqlAsync, grpcClient.ExecuteSql, effectiveSettings.ExecuteSqlSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callExecuteSql);
             Modify_ExecuteSqlApiCall(ref _callExecuteSql);
-            _callExecuteStreamingSql = clientHelper.BuildApiCall<ExecuteSqlRequest, PartialResultSet>(grpcClient.ExecuteStreamingSql, effectiveSettings.ExecuteStreamingSqlSettings);
+            _callExecuteStreamingSql = clientHelper.BuildApiCall<ExecuteSqlRequest, PartialResultSet>(grpcClient.ExecuteStreamingSql, effectiveSettings.ExecuteStreamingSqlSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callExecuteStreamingSql);
             Modify_ExecuteStreamingSqlApiCall(ref _callExecuteStreamingSql);
             _callExecuteBatchDml = clientHelper.BuildApiCall<ExecuteBatchDmlRequest, ExecuteBatchDmlResponse>(grpcClient.ExecuteBatchDmlAsync, grpcClient.ExecuteBatchDml, effectiveSettings.ExecuteBatchDmlSettings).WithGoogleRequestParam("session", request => request.Session);
@@ -2557,7 +2557,7 @@ namespace Google.Cloud.Spanner.V1
             _callRead = clientHelper.BuildApiCall<ReadRequest, ResultSet>(grpcClient.ReadAsync, grpcClient.Read, effectiveSettings.ReadSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callRead);
             Modify_ReadApiCall(ref _callRead);
-            _callStreamingRead = clientHelper.BuildApiCall<ReadRequest, PartialResultSet>(grpcClient.StreamingRead, effectiveSettings.StreamingReadSettings);
+            _callStreamingRead = clientHelper.BuildApiCall<ReadRequest, PartialResultSet>(grpcClient.StreamingRead, effectiveSettings.StreamingReadSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callStreamingRead);
             Modify_StreamingReadApiCall(ref _callStreamingRead);
             _callBeginTransaction = clientHelper.BuildApiCall<BeginTransactionRequest, Transaction>(grpcClient.BeginTransactionAsync, grpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings).WithGoogleRequestParam("session", request => request.Session);
