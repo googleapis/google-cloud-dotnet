@@ -76,7 +76,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             { "Grpc.Core.Testing", GrpcVersion },
             { "Grpc.Core.Api", GrpcVersion },
             { "Google.Api.CommonProtos", "2.2.0" },
-            { "Google.Protobuf", "3.13.0" }
+            { "Google.Protobuf", "3.15.8" }
         };
 
         // Hard-coded versions for all analyzer projects.
