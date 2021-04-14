@@ -14,6 +14,7 @@ git submodule update --remote conformance-tests
 # Storage
 $PROTOC \
   --csharp_out=apis/Google.Cloud.Storage.V1/Google.Cloud.Storage.V1.Tests/Conformance \
+  --csharp_opt=file_extension=.g.cs \
   -I conformance-tests \
   -I $CORE_PROTOS_ROOT \
   conformance-tests/storage/v1/proto/google/cloud/conformance/storage/v1/*.proto
@@ -21,6 +22,7 @@ $PROTOC \
 # Firestore
 $PROTOC \
   --csharp_out=apis/Google.Cloud.Firestore/Google.Cloud.Firestore.Tests/Proto \
+  --csharp_opt=file_extension=.g.cs \
   -I conformance-tests \
   -I $CORE_PROTOS_ROOT \
   -I googleapis \
@@ -29,6 +31,7 @@ $PROTOC \
 # Bigtable
 $PROTOC \
   --csharp_out=apis/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.Tests/Conformance \
+  --csharp_opt=file_extension=.g.cs \
   -I conformance-tests \
   -I $CORE_PROTOS_ROOT \
   -I googleapis \
