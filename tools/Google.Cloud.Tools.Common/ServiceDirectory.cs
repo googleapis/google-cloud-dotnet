@@ -174,7 +174,10 @@ namespace Google.Cloud.Tools.Common
                 }
                 var importDirectories = lines
                     .Where(line => line.StartsWith("import "))
-                    .Select(line => line.Substring("import ".Length).Trim(ImportAndOptionValueTrimChars))
+                    .Select(line => line.StartsWith("import public ")
+                        ? line.Substring("import public ".Length)
+                        : line.Substring("import ".Length))
+                    .Select(line => line.Trim(ImportAndOptionValueTrimChars))
                     .Select(file => Path.GetDirectoryName(file).Replace('\\', '/'))
                     .Distinct()
                     .OrderBy(import => import)
