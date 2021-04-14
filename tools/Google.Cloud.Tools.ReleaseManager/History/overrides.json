@@ -9,6 +9,7 @@
   "947a573": "docs: Regenerate all clients with more explicit documentation",
   "0b0773d": "skip", // Enum generation change
   "5c05159": "skip", // Update copyright year
+  "dfc101f": "skip", // Rename generated files to .g.cs
   // Various commits for Ruby/PHP namespace changes, or a C# namespace
   // change in the proto that was previously patched in (so no real change)
   "f6976a5": "skip",
