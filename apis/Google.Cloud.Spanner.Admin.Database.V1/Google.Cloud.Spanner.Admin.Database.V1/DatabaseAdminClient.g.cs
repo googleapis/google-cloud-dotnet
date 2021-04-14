@@ -661,8 +661,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -677,8 +677,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -693,8 +693,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -735,8 +735,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -765,8 +765,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -795,8 +795,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -821,8 +821,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -851,8 +851,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -881,8 +881,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -1019,8 +1019,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1035,8 +1034,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1051,8 +1049,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1094,8 +1091,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
@@ -1122,8 +1118,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
@@ -1150,8 +1145,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
@@ -1171,8 +1165,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
@@ -1199,8 +1192,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
@@ -1227,8 +1219,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
@@ -2129,12 +2120,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
-        /// Cancelling the returned operation will stop the creation and delete the
-        /// backup. There can be only one pending backup creation per database. Backup
-        /// creation of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// creation and delete the backup.
+        /// There can be only one pending backup creation per database. Backup creation
+        /// of different databases can run concurrently.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2149,12 +2140,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
-        /// Cancelling the returned operation will stop the creation and delete the
-        /// backup. There can be only one pending backup creation per database. Backup
-        /// creation of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// creation and delete the backup.
+        /// There can be only one pending backup creation per database. Backup creation
+        /// of different databases can run concurrently.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2169,12 +2160,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
-        /// Cancelling the returned operation will stop the creation and delete the
-        /// backup. There can be only one pending backup creation per database. Backup
-        /// creation of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// creation and delete the backup.
+        /// There can be only one pending backup creation per database. Backup creation
+        /// of different databases can run concurrently.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2215,12 +2206,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
-        /// Cancelling the returned operation will stop the creation and delete the
-        /// backup. There can be only one pending backup creation per database. Backup
-        /// creation of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// creation and delete the backup.
+        /// There can be only one pending backup creation per database. Backup creation
+        /// of different databases can run concurrently.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance in which the backup will be
@@ -2255,12 +2246,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
-        /// Cancelling the returned operation will stop the creation and delete the
-        /// backup. There can be only one pending backup creation per database. Backup
-        /// creation of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// creation and delete the backup.
+        /// There can be only one pending backup creation per database. Backup creation
+        /// of different databases can run concurrently.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance in which the backup will be
@@ -2295,12 +2286,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
-        /// Cancelling the returned operation will stop the creation and delete the
-        /// backup. There can be only one pending backup creation per database. Backup
-        /// creation of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// creation and delete the backup.
+        /// There can be only one pending backup creation per database. Backup creation
+        /// of different databases can run concurrently.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance in which the backup will be
@@ -2330,12 +2321,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
-        /// Cancelling the returned operation will stop the creation and delete the
-        /// backup. There can be only one pending backup creation per database. Backup
-        /// creation of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// creation and delete the backup.
+        /// There can be only one pending backup creation per database. Backup creation
+        /// of different databases can run concurrently.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance in which the backup will be
@@ -2370,12 +2361,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
-        /// Cancelling the returned operation will stop the creation and delete the
-        /// backup. There can be only one pending backup creation per database. Backup
-        /// creation of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// creation and delete the backup.
+        /// There can be only one pending backup creation per database. Backup creation
+        /// of different databases can run concurrently.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance in which the backup will be
@@ -2410,12 +2401,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
-        /// Cancelling the returned operation will stop the creation and delete the
-        /// backup. There can be only one pending backup creation per database. Backup
-        /// creation of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// creation and delete the backup.
+        /// There can be only one pending backup creation per database. Backup creation
+        /// of different databases can run concurrently.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance in which the backup will be
@@ -2439,8 +2430,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             CreateBackupAsync(parent, backup, backupId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets metadata on a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2449,8 +2439,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets metadata on a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2459,8 +2448,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets metadata on a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2469,8 +2457,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             GetBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets metadata on a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup.
@@ -2486,8 +2473,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets metadata on a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup.
@@ -2503,8 +2489,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets metadata on a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup.
@@ -2517,8 +2502,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets metadata on a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup.
@@ -2534,8 +2518,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets metadata on a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup.
@@ -2551,8 +2534,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets metadata on a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup.
@@ -2565,8 +2547,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2575,8 +2556,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2585,8 +2565,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2595,8 +2574,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             UpdateBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="backup">
         /// Required. The backup to update. `backup.name`, and the fields to be updated
@@ -2621,8 +2599,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="backup">
         /// Required. The backup to update. `backup.name`, and the fields to be updated
@@ -2647,8 +2624,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="backup">
         /// Required. The backup to update. `backup.name`, and the fields to be updated
@@ -2669,8 +2645,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             UpdateBackupAsync(backup, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2679,8 +2654,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2689,8 +2663,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2699,8 +2672,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             DeleteBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup to delete.
@@ -2716,8 +2688,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup to delete.
@@ -2733,8 +2704,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup to delete.
@@ -2747,8 +2717,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             DeleteBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup to delete.
@@ -2764,8 +2733,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup to delete.
@@ -2781,8 +2749,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup to delete.
@@ -3845,8 +3812,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3864,8 +3831,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3911,8 +3878,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3930,8 +3896,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&amp;lt;database_name&amp;gt;/operations/&amp;lt;operation_id&amp;gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
-        /// The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4124,12 +4089,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
-        /// Cancelling the returned operation will stop the creation and delete the
-        /// backup. There can be only one pending backup creation per database. Backup
-        /// creation of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// creation and delete the backup.
+        /// There can be only one pending backup creation per database. Backup creation
+        /// of different databases can run concurrently.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4147,12 +4112,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/backups/&amp;lt;backup&amp;gt;/operations/&amp;lt;operation_id&amp;gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
-        /// Cancelling the returned operation will stop the creation and delete the
-        /// backup. There can be only one pending backup creation per database. Backup
-        /// creation of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
+        /// creation and delete the backup.
+        /// There can be only one pending backup creation per database. Backup creation
+        /// of different databases can run concurrently.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4164,8 +4129,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Gets metadata on a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4177,8 +4141,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Gets metadata on a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4190,8 +4153,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Updates a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4203,8 +4165,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Updates a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4216,8 +4177,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Deletes a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4229,8 +4189,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Deletes a pending or completed
-        /// [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

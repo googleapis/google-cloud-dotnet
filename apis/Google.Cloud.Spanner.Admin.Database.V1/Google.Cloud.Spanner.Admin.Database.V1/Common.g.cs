@@ -28,34 +28,34 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             "dG8SIGdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxGh9nb29nbGUv",
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
             "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29n",
-            "bGUvcnBjL3N0YXR1cy5wcm90byKLAQoRT3BlcmF0aW9uUHJvZ3Jlc3MSGAoQ",
-            "cHJvZ3Jlc3NfcGVyY2VudBgBIAEoBRIuCgpzdGFydF90aW1lGAIgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgDIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiUAoQRW5jcnlwdGlvbkNvbmZp",
-            "ZxI8CgxrbXNfa2V5X25hbWUYAiABKAlCJvpBIwohY2xvdWRrbXMuZ29vZ2xl",
-            "YXBpcy5jb20vQ3J5cHRvS2V5IsICCg5FbmNyeXB0aW9uSW5mbxJTCg9lbmNy",
-            "eXB0aW9uX3R5cGUYAyABKA4yNS5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRh",
-            "YmFzZS52MS5FbmNyeXB0aW9uSW5mby5UeXBlQgPgQQMSMgoRZW5jcnlwdGlv",
-            "bl9zdGF0dXMYBCABKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDEkkKD2tt",
-            "c19rZXlfdmVyc2lvbhgCIAEoCUIw4EED+kEqCihjbG91ZGttcy5nb29nbGVh",
-            "cGlzLmNvbS9DcnlwdG9LZXlWZXJzaW9uIlwKBFR5cGUSFAoQVFlQRV9VTlNQ",
-            "RUNJRklFRBAAEh0KGUdPT0dMRV9ERUZBVUxUX0VOQ1JZUFRJT04QARIfChtD",
-            "VVNUT01FUl9NQU5BR0VEX0VOQ1JZUFRJT04QAkKkBAokY29tLmdvb2dsZS5z",
-            "cGFubmVyLmFkbWluLmRhdGFiYXNlLnYxQgtDb21tb25Qcm90b1ABWkhnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL3NwYW5uZXIvYWRt",
-            "aW4vZGF0YWJhc2UvdjE7ZGF0YWJhc2WqAiZHb29nbGUuQ2xvdWQuU3Bhbm5l",
-            "ci5BZG1pbi5EYXRhYmFzZS5WMcoCJkdvb2dsZVxDbG91ZFxTcGFubmVyXEFk",
-            "bWluXERhdGFiYXNlXFYx6gIrR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6QWRt",
-            "aW46OkRhdGFiYXNlOjpWMepBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20v",
-            "Q3J5cHRvS2V5ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
-            "dGlvbn0va2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9f",
-            "a2V5fepBpgEKKGNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleVZl",
-            "cnNpb24SenByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
-            "fS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl9",
-            "L2NyeXB0b0tleVZlcnNpb25zL3tjcnlwdG9fa2V5X3ZlcnNpb259YgZwcm90",
-            "bzM="));
+            "bGUvcnBjL3N0YXR1cy5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
+            "cm90byKLAQoRT3BlcmF0aW9uUHJvZ3Jlc3MSGAoQcHJvZ3Jlc3NfcGVyY2Vu",
+            "dBgBIAEoBRIuCgpzdGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcBIsCghlbmRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXAiUAoQRW5jcnlwdGlvbkNvbmZpZxI8CgxrbXNfa2V5X25h",
+            "bWUYAiABKAlCJvpBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRv",
+            "S2V5IsICCg5FbmNyeXB0aW9uSW5mbxJTCg9lbmNyeXB0aW9uX3R5cGUYAyAB",
+            "KA4yNS5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5FbmNyeXB0",
+            "aW9uSW5mby5UeXBlQgPgQQMSMgoRZW5jcnlwdGlvbl9zdGF0dXMYBCABKAsy",
+            "Ei5nb29nbGUucnBjLlN0YXR1c0ID4EEDEkkKD2ttc19rZXlfdmVyc2lvbhgC",
+            "IAEoCUIw4EED+kEqCihjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9L",
+            "ZXlWZXJzaW9uIlwKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEh0KGUdP",
+            "T0dMRV9ERUZBVUxUX0VOQ1JZUFRJT04QARIfChtDVVNUT01FUl9NQU5BR0VE",
+            "X0VOQ1JZUFRJT04QAkKkBAokY29tLmdvb2dsZS5zcGFubmVyLmFkbWluLmRh",
+            "dGFiYXNlLnYxQgtDb21tb25Qcm90b1ABWkhnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL3NwYW5uZXIvYWRtaW4vZGF0YWJhc2UvdjE7",
+            "ZGF0YWJhc2WqAiZHb29nbGUuQ2xvdWQuU3Bhbm5lci5BZG1pbi5EYXRhYmFz",
+            "ZS5WMcoCJkdvb2dsZVxDbG91ZFxTcGFubmVyXEFkbWluXERhdGFiYXNlXFYx",
+            "6gIrR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6QWRtaW46OkRhdGFiYXNlOjpW",
+            "MepBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5ElNwcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mv",
+            "e2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fepBpgEKKGNsb3Vk",
+            "a21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24SenByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5",
+            "X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl9L2NyeXB0b0tleVZlcnNp",
+            "b25zL3tjcnlwdG9fa2V5X3ZlcnNpb259YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.OperationProgress), global::Google.Cloud.Spanner.Admin.Database.V1.OperationProgress.Parser, new[]{ "ProgressPercent", "StartTime", "EndTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.EncryptionConfig), global::Google.Cloud.Spanner.Admin.Database.V1.EncryptionConfig.Parser, new[]{ "KmsKeyName" }, null, null, null, null),
@@ -584,9 +584,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int EncryptionStatusFieldNumber = 4;
     private global::Google.Rpc.Status encryptionStatus_;
     /// <summary>
-    /// Output only. If present, the status of a recent encrypt/decrypt call on
-    /// underlying data for this database or backup. Regardless of status, data is
-    /// always encrypted at rest.
+    /// Output only. If present, the status of a recent encrypt/decrypt call on underlying data
+    /// for this database or backup. Regardless of status, data is always encrypted
+    /// at rest.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Rpc.Status EncryptionStatus {
@@ -600,8 +600,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int KmsKeyVersionFieldNumber = 2;
     private string kmsKeyVersion_ = "";
     /// <summary>
-    /// Output only. A Cloud KMS key version that is being used to protect the
-    /// database or backup.
+    /// Output only. A Cloud KMS key version that is being used to protect the database or
+    /// backup.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string KmsKeyVersion {
