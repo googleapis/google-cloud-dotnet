@@ -3404,7 +3404,8 @@
         "google/api",
         "google/protobuf",
         "google/rpc",
-        "google/spanner/v1"
+        "google/spanner/v1",
+        "public \"google/spanner/v1"
       ],
       "Stable": true,
       "CSharpNamespaceFromProtos": "Google.Cloud.Spanner.V1"
