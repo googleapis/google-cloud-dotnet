@@ -1,5 +1,12 @@
 # Version history
 
+# Version 2.2.0, released 2021-04-14
+
+- [Commit 9f5f0aa](https://github.com/googleapis/google-cloud-dotnet/commit/9f5f0aa): Regenerate server-streaming calls with Google request params. Fixes [issue 6310](https://github.com/googleapis/google-cloud-dotnet/issues/6310).
+- [Commit 10a22c9](https://github.com/googleapis/google-cloud-dotnet/commit/10a22c9):
+  - feat: add a Arrow compression options (Only LZ4 for now).
+  - feat: Return schema on first ReadRowsResponse. doc: clarify limit on filter string.
+
 # Version 2.1.0, released 2020-10-08
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
