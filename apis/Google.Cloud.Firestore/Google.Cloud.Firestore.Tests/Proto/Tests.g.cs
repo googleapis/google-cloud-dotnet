@@ -144,7 +144,11 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// <summary>
   /// A collection of tests.
   /// </summary>
-  public sealed partial class TestFile : pb::IMessage<TestFile> {
+  public sealed partial class TestFile : pb::IMessage<TestFile>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TestFile> _parser = new pb::MessageParser<TestFile>(() => new TestFile());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -222,11 +226,25 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       tests_.WriteTo(output, _repeated_tests_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      tests_.WriteTo(ref output, _repeated_tests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -249,6 +267,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -261,14 +282,37 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            tests_.AddEntriesFrom(ref input, _repeated_tests_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A Test describes a single client method call and its expected result.
   /// </summary>
-  public sealed partial class Test : pb::IMessage<Test> {
+  public sealed partial class Test : pb::IMessage<Test>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Test> _parser = new pb::MessageParser<Test>(() => new Test());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -525,6 +569,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Description.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Description);
@@ -568,7 +615,57 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Description.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Description);
+      }
+      if (testCase_ == TestOneofCase.Get) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Get);
+      }
+      if (testCase_ == TestOneofCase.Create) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Create);
+      }
+      if (testCase_ == TestOneofCase.Set) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Set);
+      }
+      if (testCase_ == TestOneofCase.Update) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Update);
+      }
+      if (testCase_ == TestOneofCase.UpdatePaths) {
+        output.WriteRawTag(50);
+        output.WriteMessage(UpdatePaths);
+      }
+      if (testCase_ == TestOneofCase.Delete) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Delete);
+      }
+      if (testCase_ == TestOneofCase.Query) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Query);
+      }
+      if (testCase_ == TestOneofCase.Listen) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Listen);
+      }
+      if (Comment.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Comment);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -676,6 +773,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -764,14 +864,113 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Description = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Firestore.Tests.Proto.GetTest subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.GetTest();
+            if (testCase_ == TestOneofCase.Get) {
+              subBuilder.MergeFrom(Get);
+            }
+            input.ReadMessage(subBuilder);
+            Get = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Firestore.Tests.Proto.CreateTest subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.CreateTest();
+            if (testCase_ == TestOneofCase.Create) {
+              subBuilder.MergeFrom(Create);
+            }
+            input.ReadMessage(subBuilder);
+            Create = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Firestore.Tests.Proto.SetTest subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.SetTest();
+            if (testCase_ == TestOneofCase.Set) {
+              subBuilder.MergeFrom(Set);
+            }
+            input.ReadMessage(subBuilder);
+            Set = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Firestore.Tests.Proto.UpdateTest subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.UpdateTest();
+            if (testCase_ == TestOneofCase.Update) {
+              subBuilder.MergeFrom(Update);
+            }
+            input.ReadMessage(subBuilder);
+            Update = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Firestore.Tests.Proto.UpdatePathsTest subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.UpdatePathsTest();
+            if (testCase_ == TestOneofCase.UpdatePaths) {
+              subBuilder.MergeFrom(UpdatePaths);
+            }
+            input.ReadMessage(subBuilder);
+            UpdatePaths = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.Firestore.Tests.Proto.DeleteTest subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.DeleteTest();
+            if (testCase_ == TestOneofCase.Delete) {
+              subBuilder.MergeFrom(Delete);
+            }
+            input.ReadMessage(subBuilder);
+            Delete = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.Firestore.Tests.Proto.QueryTest subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.QueryTest();
+            if (testCase_ == TestOneofCase.Query) {
+              subBuilder.MergeFrom(Query);
+            }
+            input.ReadMessage(subBuilder);
+            Query = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.Firestore.Tests.Proto.ListenTest subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.ListenTest();
+            if (testCase_ == TestOneofCase.Listen) {
+              subBuilder.MergeFrom(Listen);
+            }
+            input.ReadMessage(subBuilder);
+            Listen = subBuilder;
+            break;
+          }
+          case 82: {
+            Comment = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Call to the DocumentRef.Get method.
   /// </summary>
-  public sealed partial class GetTest : pb::IMessage<GetTest> {
+  public sealed partial class GetTest : pb::IMessage<GetTest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetTest> _parser = new pb::MessageParser<GetTest>(() => new GetTest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -870,6 +1069,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (DocRefPath.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(DocRefPath);
@@ -881,7 +1083,25 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DocRefPath.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DocRefPath);
+      }
+      if (request_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Request);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -917,6 +1137,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -936,14 +1159,44 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DocRefPath = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (request_ == null) {
+              Request = new global::Google.Cloud.Firestore.V1.GetDocumentRequest();
+            }
+            input.ReadMessage(Request);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Call to DocumentRef.Create.
   /// </summary>
-  public sealed partial class CreateTest : pb::IMessage<CreateTest> {
+  public sealed partial class CreateTest : pb::IMessage<CreateTest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CreateTest> _parser = new pb::MessageParser<CreateTest>(() => new CreateTest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1079,6 +1332,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (DocRefPath.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(DocRefPath);
@@ -1098,7 +1354,33 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DocRefPath.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DocRefPath);
+      }
+      if (JsonData.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(JsonData);
+      }
+      if (request_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Request);
+      }
+      if (IsError != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsError);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1146,6 +1428,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1173,14 +1458,52 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DocRefPath = input.ReadString();
+            break;
+          }
+          case 18: {
+            JsonData = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (request_ == null) {
+              Request = new global::Google.Cloud.Firestore.V1.CommitRequest();
+            }
+            input.ReadMessage(Request);
+            break;
+          }
+          case 32: {
+            IsError = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A call to DocumentRef.Set.
   /// </summary>
-  public sealed partial class SetTest : pb::IMessage<SetTest> {
+  public sealed partial class SetTest : pb::IMessage<SetTest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SetTest> _parser = new pb::MessageParser<SetTest>(() => new SetTest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1330,6 +1653,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (DocRefPath.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(DocRefPath);
@@ -1353,7 +1679,37 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DocRefPath.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DocRefPath);
+      }
+      if (option_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Option);
+      }
+      if (JsonData.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(JsonData);
+      }
+      if (request_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Request);
+      }
+      if (IsError != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IsError);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1410,6 +1766,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1444,7 +1803,48 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DocRefPath = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (option_ == null) {
+              Option = new global::Google.Cloud.Firestore.Tests.Proto.SetOption();
+            }
+            input.ReadMessage(Option);
+            break;
+          }
+          case 26: {
+            JsonData = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (request_ == null) {
+              Request = new global::Google.Cloud.Firestore.V1.CommitRequest();
+            }
+            input.ReadMessage(Request);
+            break;
+          }
+          case 40: {
+            IsError = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -1452,7 +1852,11 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// A call to the form of DocumentRef.Update that represents the data as a map
   /// or dictionary.
   /// </summary>
-  public sealed partial class UpdateTest : pb::IMessage<UpdateTest> {
+  public sealed partial class UpdateTest : pb::IMessage<UpdateTest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<UpdateTest> _parser = new pb::MessageParser<UpdateTest>(() => new UpdateTest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1602,6 +2006,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (DocRefPath.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(DocRefPath);
@@ -1625,7 +2032,37 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DocRefPath.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DocRefPath);
+      }
+      if (precondition_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Precondition);
+      }
+      if (JsonData.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(JsonData);
+      }
+      if (request_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Request);
+      }
+      if (IsError != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IsError);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1682,6 +2119,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1716,7 +2156,48 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DocRefPath = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (precondition_ == null) {
+              Precondition = new global::Google.Cloud.Firestore.V1.Precondition();
+            }
+            input.ReadMessage(Precondition);
+            break;
+          }
+          case 26: {
+            JsonData = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (request_ == null) {
+              Request = new global::Google.Cloud.Firestore.V1.CommitRequest();
+            }
+            input.ReadMessage(Request);
+            break;
+          }
+          case 40: {
+            IsError = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -1724,7 +2205,11 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// A call to the form of DocumentRef.Update that represents the data as a list
   /// of field paths and their values.
   /// </summary>
-  public sealed partial class UpdatePathsTest : pb::IMessage<UpdatePathsTest> {
+  public sealed partial class UpdatePathsTest : pb::IMessage<UpdatePathsTest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<UpdatePathsTest> _parser = new pb::MessageParser<UpdatePathsTest>(() => new UpdatePathsTest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1889,6 +2374,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (DocRefPath.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(DocRefPath);
@@ -1910,7 +2398,35 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DocRefPath.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DocRefPath);
+      }
+      if (precondition_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Precondition);
+      }
+      fieldPaths_.WriteTo(ref output, _repeated_fieldPaths_codec);
+      jsonValues_.WriteTo(ref output, _repeated_jsonValues_codec);
+      if (request_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Request);
+      }
+      if (IsError != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(IsError);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1965,6 +2481,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2003,14 +2522,63 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DocRefPath = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (precondition_ == null) {
+              Precondition = new global::Google.Cloud.Firestore.V1.Precondition();
+            }
+            input.ReadMessage(Precondition);
+            break;
+          }
+          case 26: {
+            fieldPaths_.AddEntriesFrom(ref input, _repeated_fieldPaths_codec);
+            break;
+          }
+          case 34: {
+            jsonValues_.AddEntriesFrom(ref input, _repeated_jsonValues_codec);
+            break;
+          }
+          case 42: {
+            if (request_ == null) {
+              Request = new global::Google.Cloud.Firestore.V1.CommitRequest();
+            }
+            input.ReadMessage(Request);
+            break;
+          }
+          case 48: {
+            IsError = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A call to DocmentRef.Delete
   /// </summary>
-  public sealed partial class DeleteTest : pb::IMessage<DeleteTest> {
+  public sealed partial class DeleteTest : pb::IMessage<DeleteTest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeleteTest> _parser = new pb::MessageParser<DeleteTest>(() => new DeleteTest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2140,6 +2708,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (DocRefPath.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(DocRefPath);
@@ -2159,7 +2730,33 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DocRefPath.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DocRefPath);
+      }
+      if (precondition_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Precondition);
+      }
+      if (request_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Request);
+      }
+      if (IsError != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsError);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2210,6 +2807,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2240,14 +2840,55 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DocRefPath = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (precondition_ == null) {
+              Precondition = new global::Google.Cloud.Firestore.V1.Precondition();
+            }
+            input.ReadMessage(Precondition);
+            break;
+          }
+          case 26: {
+            if (request_ == null) {
+              Request = new global::Google.Cloud.Firestore.V1.CommitRequest();
+            }
+            input.ReadMessage(Request);
+            break;
+          }
+          case 32: {
+            IsError = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// An option to the DocumentRef.Set call.
   /// </summary>
-  public sealed partial class SetOption : pb::IMessage<SetOption> {
+  public sealed partial class SetOption : pb::IMessage<SetOption>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SetOption> _parser = new pb::MessageParser<SetOption>(() => new SetOption());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2345,6 +2986,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (All != false) {
         output.WriteRawTag(8);
         output.WriteBool(All);
@@ -2353,7 +2997,22 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (All != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(All);
+      }
+      fields_.WriteTo(ref output, _repeated_fields_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2382,6 +3041,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2398,11 +3060,38 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            All = input.ReadBool();
+            break;
+          }
+          case 18: {
+            fields_.AddEntriesFrom(ref input, _repeated_fields_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class QueryTest : pb::IMessage<QueryTest> {
+  public sealed partial class QueryTest : pb::IMessage<QueryTest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<QueryTest> _parser = new pb::MessageParser<QueryTest>(() => new QueryTest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2525,6 +3214,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (CollPath.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(CollPath);
@@ -2541,7 +3233,30 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CollPath.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CollPath);
+      }
+      clauses_.WriteTo(ref output, _repeated_clauses_codec);
+      if (query_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Query);
+      }
+      if (IsError != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsError);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2585,6 +3300,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2612,11 +3330,49 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            CollPath = input.ReadString();
+            break;
+          }
+          case 18: {
+            clauses_.AddEntriesFrom(ref input, _repeated_clauses_codec);
+            break;
+          }
+          case 26: {
+            if (query_ == null) {
+              Query = new global::Google.Cloud.Firestore.V1.StructuredQuery();
+            }
+            input.ReadMessage(Query);
+            break;
+          }
+          case 32: {
+            IsError = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Clause : pb::IMessage<Clause> {
+  public sealed partial class Clause : pb::IMessage<Clause>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Clause> _parser = new pb::MessageParser<Clause>(() => new Clause());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2856,6 +3612,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (clauseCase_ == ClauseOneofCase.Select) {
         output.WriteRawTag(10);
         output.WriteMessage(Select);
@@ -2895,7 +3654,53 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (clauseCase_ == ClauseOneofCase.Select) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Select);
+      }
+      if (clauseCase_ == ClauseOneofCase.Where) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Where);
+      }
+      if (clauseCase_ == ClauseOneofCase.OrderBy) {
+        output.WriteRawTag(26);
+        output.WriteMessage(OrderBy);
+      }
+      if (clauseCase_ == ClauseOneofCase.Offset) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Offset);
+      }
+      if (clauseCase_ == ClauseOneofCase.Limit) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Limit);
+      }
+      if (clauseCase_ == ClauseOneofCase.StartAt) {
+        output.WriteRawTag(50);
+        output.WriteMessage(StartAt);
+      }
+      if (clauseCase_ == ClauseOneofCase.StartAfter) {
+        output.WriteRawTag(58);
+        output.WriteMessage(StartAfter);
+      }
+      if (clauseCase_ == ClauseOneofCase.EndAt) {
+        output.WriteRawTag(66);
+        output.WriteMessage(EndAt);
+      }
+      if (clauseCase_ == ClauseOneofCase.EndBefore) {
+        output.WriteRawTag(74);
+        output.WriteMessage(EndBefore);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2994,6 +3799,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3073,11 +3881,101 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Firestore.Tests.Proto.Select subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.Select();
+            if (clauseCase_ == ClauseOneofCase.Select) {
+              subBuilder.MergeFrom(Select);
+            }
+            input.ReadMessage(subBuilder);
+            Select = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Firestore.Tests.Proto.Where subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.Where();
+            if (clauseCase_ == ClauseOneofCase.Where) {
+              subBuilder.MergeFrom(Where);
+            }
+            input.ReadMessage(subBuilder);
+            Where = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Firestore.Tests.Proto.OrderBy subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.OrderBy();
+            if (clauseCase_ == ClauseOneofCase.OrderBy) {
+              subBuilder.MergeFrom(OrderBy);
+            }
+            input.ReadMessage(subBuilder);
+            OrderBy = subBuilder;
+            break;
+          }
+          case 32: {
+            Offset = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            Limit = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Firestore.Tests.Proto.Cursor subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.Cursor();
+            if (clauseCase_ == ClauseOneofCase.StartAt) {
+              subBuilder.MergeFrom(StartAt);
+            }
+            input.ReadMessage(subBuilder);
+            StartAt = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.Firestore.Tests.Proto.Cursor subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.Cursor();
+            if (clauseCase_ == ClauseOneofCase.StartAfter) {
+              subBuilder.MergeFrom(StartAfter);
+            }
+            input.ReadMessage(subBuilder);
+            StartAfter = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.Firestore.Tests.Proto.Cursor subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.Cursor();
+            if (clauseCase_ == ClauseOneofCase.EndAt) {
+              subBuilder.MergeFrom(EndAt);
+            }
+            input.ReadMessage(subBuilder);
+            EndAt = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.Firestore.Tests.Proto.Cursor subBuilder = new global::Google.Cloud.Firestore.Tests.Proto.Cursor();
+            if (clauseCase_ == ClauseOneofCase.EndBefore) {
+              subBuilder.MergeFrom(EndBefore);
+            }
+            input.ReadMessage(subBuilder);
+            EndBefore = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Select : pb::IMessage<Select> {
+  public sealed partial class Select : pb::IMessage<Select>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Select> _parser = new pb::MessageParser<Select>(() => new Select());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3155,11 +4053,25 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       fields_.WriteTo(output, _repeated_fields_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      fields_.WriteTo(ref output, _repeated_fields_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3182,6 +4094,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3194,11 +4109,34 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            fields_.AddEntriesFrom(ref input, _repeated_fields_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Where : pb::IMessage<Where> {
+  public sealed partial class Where : pb::IMessage<Where>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Where> _parser = new pb::MessageParser<Where>(() => new Where());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3305,6 +4243,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (path_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Path);
@@ -3320,7 +4261,29 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (path_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Path);
+      }
+      if (Op.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Op);
+      }
+      if (JsonValue.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(JsonValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3362,6 +4325,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3385,11 +4351,45 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (path_ == null) {
+              Path = new global::Google.Cloud.Firestore.Tests.Proto.FieldPath();
+            }
+            input.ReadMessage(Path);
+            break;
+          }
+          case 18: {
+            Op = input.ReadString();
+            break;
+          }
+          case 26: {
+            JsonValue = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class OrderBy : pb::IMessage<OrderBy> {
+  public sealed partial class OrderBy : pb::IMessage<OrderBy>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<OrderBy> _parser = new pb::MessageParser<OrderBy>(() => new OrderBy());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3485,6 +4485,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (path_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Path);
@@ -3496,7 +4499,25 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (path_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Path);
+      }
+      if (Direction.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Direction);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3532,6 +4553,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3551,11 +4575,41 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (path_ == null) {
+              Path = new global::Google.Cloud.Firestore.Tests.Proto.FieldPath();
+            }
+            input.ReadMessage(Path);
+            break;
+          }
+          case 18: {
+            Direction = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Cursor : pb::IMessage<Cursor> {
+  public sealed partial class Cursor : pb::IMessage<Cursor>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Cursor> _parser = new pb::MessageParser<Cursor>(() => new Cursor());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3650,6 +4704,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (docSnapshot_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(DocSnapshot);
@@ -3658,7 +4715,22 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (docSnapshot_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DocSnapshot);
+      }
+      jsonValues_.WriteTo(ref output, _repeated_jsonValues_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3690,6 +4762,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3709,11 +4784,41 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (docSnapshot_ == null) {
+              DocSnapshot = new global::Google.Cloud.Firestore.Tests.Proto.DocSnapshot();
+            }
+            input.ReadMessage(DocSnapshot);
+            break;
+          }
+          case 18: {
+            jsonValues_.AddEntriesFrom(ref input, _repeated_jsonValues_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class DocSnapshot : pb::IMessage<DocSnapshot> {
+  public sealed partial class DocSnapshot : pb::IMessage<DocSnapshot>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DocSnapshot> _parser = new pb::MessageParser<DocSnapshot>(() => new DocSnapshot());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3806,6 +4911,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Path.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Path);
@@ -3817,7 +4925,25 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Path.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Path);
+      }
+      if (JsonData.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(JsonData);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3850,6 +4976,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3866,11 +4995,38 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Path = input.ReadString();
+            break;
+          }
+          case 18: {
+            JsonData = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class FieldPath : pb::IMessage<FieldPath> {
+  public sealed partial class FieldPath : pb::IMessage<FieldPath>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<FieldPath> _parser = new pb::MessageParser<FieldPath>(() => new FieldPath());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3948,11 +5104,25 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       field_.WriteTo(output, _repeated_field_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      field_.WriteTo(ref output, _repeated_field_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3975,6 +5145,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3987,7 +5160,26 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            field_.AddEntriesFrom(ref input, _repeated_field_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -4004,7 +5196,11 @@ namespace Google.Cloud.Firestore.Tests.Proto {
   /// should either change their client's ID for testing,
   /// or change the ID in the tests before running them.
   /// </summary>
-  public sealed partial class ListenTest : pb::IMessage<ListenTest> {
+  public sealed partial class ListenTest : pb::IMessage<ListenTest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListenTest> _parser = new pb::MessageParser<ListenTest>(() => new ListenTest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4109,6 +5305,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       responses_.WriteTo(output, _repeated_responses_codec);
       snapshots_.WriteTo(output, _repeated_snapshots_codec);
       if (IsError != false) {
@@ -4118,7 +5317,23 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      responses_.WriteTo(ref output, _repeated_responses_codec);
+      snapshots_.WriteTo(ref output, _repeated_snapshots_codec);
+      if (IsError != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(IsError);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4149,6 +5364,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4169,11 +5387,42 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            responses_.AddEntriesFrom(ref input, _repeated_responses_codec);
+            break;
+          }
+          case 18: {
+            snapshots_.AddEntriesFrom(ref input, _repeated_snapshots_codec);
+            break;
+          }
+          case 24: {
+            IsError = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Snapshot : pb::IMessage<Snapshot> {
+  public sealed partial class Snapshot : pb::IMessage<Snapshot>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Snapshot> _parser = new pb::MessageParser<Snapshot>(() => new Snapshot());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4278,6 +5527,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       docs_.WriteTo(output, _repeated_docs_codec);
       changes_.WriteTo(output, _repeated_changes_codec);
       if (readTime_ != null) {
@@ -4287,7 +5539,23 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      docs_.WriteTo(ref output, _repeated_docs_codec);
+      changes_.WriteTo(ref output, _repeated_changes_codec);
+      if (readTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReadTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4321,6 +5589,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4344,11 +5615,45 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            docs_.AddEntriesFrom(ref input, _repeated_docs_codec);
+            break;
+          }
+          case 18: {
+            changes_.AddEntriesFrom(ref input, _repeated_changes_codec);
+            break;
+          }
+          case 26: {
+            if (readTime_ == null) {
+              ReadTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ReadTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class DocChange : pb::IMessage<DocChange> {
+  public sealed partial class DocChange : pb::IMessage<DocChange>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DocChange> _parser = new pb::MessageParser<DocChange>(() => new DocChange());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4469,6 +5774,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Kind != global::Google.Cloud.Firestore.Tests.Proto.DocChange.Types.Kind.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Kind);
@@ -4488,7 +5796,33 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Kind != global::Google.Cloud.Firestore.Tests.Proto.DocChange.Types.Kind.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Kind);
+      }
+      if (doc_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Doc);
+      }
+      if (OldIndex != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(OldIndex);
+      }
+      if (NewIndex != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(NewIndex);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4536,6 +5870,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4563,7 +5900,41 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Kind = (global::Google.Cloud.Firestore.Tests.Proto.DocChange.Types.Kind) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (doc_ == null) {
+              Doc = new global::Google.Cloud.Firestore.V1.Document();
+            }
+            input.ReadMessage(Doc);
+            break;
+          }
+          case 24: {
+            OldIndex = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            NewIndex = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the DocChange message type.</summary>
