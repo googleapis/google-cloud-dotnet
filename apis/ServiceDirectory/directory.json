@@ -613,6 +613,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.BigQuery.DataTransfer.V1"
     },
     {
+      "ServiceDirectory": "google/cloud/bigquery/migration/v2alpha",
+      "Name": "bigquerymigration.googleapis.com",
+      "Title": "BigQuery Migration API",
+      "Description": "The BigQuery migration service, exposing apis for migration jobs operations, and agent management.",
+      "ServiceConfigFile": "google/cloud/bigquery/migration/v2alpha/bigquerymigration_v2alpha.yaml",
+      "Version": "v2alpha",
+      "PackageFromDirectory": "google.cloud.bigquery.migration.v2alpha",
+      "PackageFromProtos": "google.cloud.bigquery.migration.v2alpha",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/bigquery/migration/v2alpha",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Bigquery.Migration.V2Alpha"
+    },
+    {
       "ServiceDirectory": "google/cloud/bigquery/reservation/v1",
       "Name": "bigqueryreservation.googleapis.com",
       "Title": "BigQuery Reservation API",
