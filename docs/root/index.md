@@ -18,7 +18,7 @@ Each package name links to the documentation for that package.
 
 | Package | Latest version | Description |
 |---------|----------------|-------------|
-| [Google.Analytics.Admin.V1Alpha](Google.Analytics.Admin.V1Alpha/index.html) | 1.0.0-alpha04 | [Analytics Admin](https://developers.google.com/analytics) |
+| [Google.Analytics.Admin.V1Alpha](Google.Analytics.Admin.V1Alpha/index.html) | 1.0.0-alpha05 | [Analytics Admin](https://developers.google.com/analytics) |
 | [Google.Analytics.Data.V1Alpha](Google.Analytics.Data.V1Alpha/index.html) | 1.0.0-alpha04 | [Google Analytics Data (V1Alpha API)](https://developers.google.com/analytics) |
 | [Google.Analytics.Data.V1Beta](Google.Analytics.Data.V1Beta/index.html) | 1.0.0-beta02 | [Google Analytics Data (V1Beta API)](https://developers.google.com/analytics) |
 | [Google.Area120.Tables.V1Alpha1](Google.Area120.Tables.V1Alpha1/index.html) | 1.0.0-alpha02 | Google Area 120 Tables |

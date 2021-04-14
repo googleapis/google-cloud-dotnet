@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.0.0-alpha05, released 2021-04-14
+
+- [Commit 6904fb8](https://github.com/googleapis/google-cloud-dotnet/commit/6904fb8): fix: add `https://www.googleapis.com/auth/analytics.edit` OAuth2 scope to the list of acceptable scopes for all read only methods of the Admin API docs: update the documentation of the `update_mask` field used by Update() methods
+
 # Version 1.0.0-alpha04, released 2021-02-05
 
 - [Commit 3a758af](https://github.com/googleapis/google-cloud-dotnet/commit/3a758af):
