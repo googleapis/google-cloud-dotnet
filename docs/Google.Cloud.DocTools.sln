@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.PostProc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.RegenerateToc", "..\tools\Google.Cloud.Tools.RegenerateToc\Google.Cloud.Tools.RegenerateToc.csproj", "{D1C3EFCD-0ED3-4555-8437-007BAB1D3D63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.DocfxMetadata", "..\Google.Cloud.Tools.DocfxMetadata\Google.Cloud.Tools.DocfxMetadata.csproj", "{150FE2B7-0DEA-4EEE-A47B-30A2DE7D397E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.DocfxMetadata", "..\tools\Google.Cloud.Tools.DocfxMetadata\Google.Cloud.Tools.DocfxMetadata.csproj", "{150FE2B7-0DEA-4EEE-A47B-30A2DE7D397E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
