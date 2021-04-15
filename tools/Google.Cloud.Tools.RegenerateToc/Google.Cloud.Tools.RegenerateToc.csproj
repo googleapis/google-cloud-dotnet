@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Google.Cloud.Tools.DocfxMetadata\Google.Cloud.Tools.DocfxMetadata.csproj" />
+    <ProjectReference Include="..\Google.Cloud.Tools.DocfxMetadata\Google.Cloud.Tools.DocfxMetadata.csproj" />
   </ItemGroup>
 
 
