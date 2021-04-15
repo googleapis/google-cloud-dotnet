@@ -1647,9 +1647,9 @@
       "PackageFromProtos": "google.cloud.policytroubleshooter.v1",
       "ImportDirectories": [
         "google/api",
+        "google/cloud/policytroubleshooter/v1",
         "google/iam/v1",
-        "google/type",
-        "public \"google/cloud/policytroubleshooter/v1"
+        "google/type"
       ],
       "Stable": true,
       "CSharpNamespaceFromProtos": "Google.Cloud.PolicyTroubleshooter.V1"
@@ -2074,8 +2074,7 @@
         "google/cloud/securitycenter/v1",
         "google/iam/v1",
         "google/longrunning",
-        "google/protobuf",
-        "public \"google/cloud/securitycenter/v1"
+        "google/protobuf"
       ],
       "Stable": true,
       "CSharpNamespaceFromProtos": "Google.Cloud.SecurityCenter.V1"
@@ -2113,8 +2112,7 @@
         "google/cloud/securitycenter/v1p1beta1",
         "google/iam/v1",
         "google/longrunning",
-        "google/protobuf",
-        "public \"google/cloud/securitycenter/v1p1beta1"
+        "google/protobuf"
       ],
       "Stable": false,
       "CSharpNamespaceFromProtos": "Google.Cloud.SecurityCenter.V1P1Beta1"
