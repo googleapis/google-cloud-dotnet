@@ -542,6 +542,8 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                PubsubConfig = new PubsubConfig(),
+                Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.CreateBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -587,6 +589,8 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                PubsubConfig = new PubsubConfig(),
+                Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.CreateBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -634,6 +638,8 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                PubsubConfig = new PubsubConfig(),
+                Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.CreateBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -679,6 +685,8 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                PubsubConfig = new PubsubConfig(),
+                Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.CreateBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -726,6 +734,8 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                PubsubConfig = new PubsubConfig(),
+                Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.GetBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -771,6 +781,8 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                PubsubConfig = new PubsubConfig(),
+                Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.GetBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -818,6 +830,8 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                PubsubConfig = new PubsubConfig(),
+                Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.GetBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -863,6 +877,8 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                PubsubConfig = new PubsubConfig(),
+                Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.GetBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -981,6 +997,8 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                PubsubConfig = new PubsubConfig(),
+                Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.UpdateBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1027,6 +1045,8 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                PubsubConfig = new PubsubConfig(),
+                Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.UpdateBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1075,6 +1095,8 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                PubsubConfig = new PubsubConfig(),
+                Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.UpdateBuildTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
@@ -1121,6 +1143,8 @@ namespace Google.Cloud.CloudBuild.V1.Tests
                 },
                 Tags = { "tags52c47ad5", },
                 BuildTriggerName = BuildTriggerName.FromProjectTrigger("[PROJECT]", "[TRIGGER]"),
+                PubsubConfig = new PubsubConfig(),
+                Filter = "filtere47ac9b2",
             };
             mockGrpcClient.Setup(x => x.UpdateBuildTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BuildTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudBuildClient client = new CloudBuildClientImpl(mockGrpcClient.Object, null);
