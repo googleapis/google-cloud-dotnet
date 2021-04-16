@@ -393,8 +393,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for
-  /// [CertificateAuthorityService.CreateCertificate][google.cloud.security.privateca.v1.CertificateAuthorityService.CreateCertificate].
+  /// Request message for [CertificateAuthorityService.CreateCertificate][google.cloud.security.privateca.v1.CertificateAuthorityService.CreateCertificate].
   /// </summary>
   public sealed partial class CreateCertificateRequest : pb::IMessage<CreateCertificateRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -443,10 +442,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the
-    /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
-    /// [Certificate][google.cloud.security.privateca.v1.Certificate], in the
-    /// format `projects/*/locations/*/caPools/*`.
+    /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the [Certificate][google.cloud.security.privateca.v1.Certificate],
+    /// in the format `projects/*/locations/*/caPools/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -462,10 +459,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     /// <summary>
     /// Optional. It must be unique within a location and match the regular
     /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-    /// in the Enterprise
-    /// [CaPool.Tier][google.cloud.security.privateca.v1.CaPool.Tier], but is
-    /// optional and its value is ignored otherwise.
+    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the Enterprise [CertificateAuthority.Tier][],
+    /// but is optional and its value is ignored otherwise.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CertificateId {
@@ -479,8 +474,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CertificateFieldNumber = 3;
     private global::Google.Cloud.Security.PrivateCA.V1.Certificate certificate_;
     /// <summary>
-    /// Required. A [Certificate][google.cloud.security.privateca.v1.Certificate]
-    /// with initial field values.
+    /// Required. A [Certificate][google.cloud.security.privateca.v1.Certificate] with initial field values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Security.PrivateCA.V1.Certificate Certificate {
@@ -494,10 +488,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 4;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -520,15 +514,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int ValidateOnlyFieldNumber = 5;
     private bool validateOnly_;
     /// <summary>
-    /// Optional. If this is true, no
-    /// [Certificate][google.cloud.security.privateca.v1.Certificate] resource will
-    /// be persisted regardless of the
-    /// [CaPool][google.cloud.security.privateca.v1.CaPool]'s
-    /// [tier][google.cloud.security.privateca.v1.CaPool.tier], and the returned
-    /// [Certificate][google.cloud.security.privateca.v1.Certificate] will not
-    /// contain the
-    /// [pem_certificate][google.cloud.security.privateca.v1.Certificate.pem_certificate]
-    /// field.
+    /// Optional. If this is true, no [Certificate][google.cloud.security.privateca.v1.Certificate] resource will be persisted regardless
+    /// of the [CaPool][google.cloud.security.privateca.v1.CaPool]'s [tier][google.cloud.security.privateca.v1.CaPool.tier], and the returned [Certificate][google.cloud.security.privateca.v1.Certificate]
+    /// will not contain the [pem_certificate][google.cloud.security.privateca.v1.Certificate.pem_certificate] field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool ValidateOnly {
@@ -542,24 +530,17 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int IssuingCertificateAuthorityIdFieldNumber = 6;
     private string issuingCertificateAuthorityId_ = "";
     /// <summary>
-    /// Optional. The resource ID of the
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-    /// that should issue the certificate.  This optional field will ignore the
-    /// load-balancing scheme of the Pool and directly issue the certificate from
-    /// the CA with the specified ID, contained in the same
-    /// [CaPool][google.cloud.security.privateca.v1.CaPool] referenced by `parent`.
-    /// Per-CA quota rules apply. If left empty, a
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-    /// will be chosen from the [CaPool][google.cloud.security.privateca.v1.CaPool]
-    /// by the service. For example, to issue a
-    /// [Certificate][google.cloud.security.privateca.v1.Certificate] from a
-    /// Certificate Authority with resource name
+    /// Optional. The resource ID of the [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] that should issue the
+    /// certificate.  This optional field will ignore the load-balancing scheme of
+    /// the Pool and directly issue the certificate from the CA with the specified
+    /// ID, contained in the same [CaPool][google.cloud.security.privateca.v1.CaPool] referenced by `parent`. Per-CA quota
+    /// rules apply. If left empty, a [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] will be chosen from
+    /// the [CaPool][google.cloud.security.privateca.v1.CaPool] by the service. For example, to issue a [Certificate][google.cloud.security.privateca.v1.Certificate] from
+    /// a Certificate Authority with resource name
     /// "projects/my-project/locations/us-central1/caPools/my-pool/certificateAuthorities/my-ca",
-    /// you can set the
-    /// [parent][google.cloud.security.privateca.v1.CreateCertificateRequest.parent]
-    /// to "projects/my-project/locations/us-central1/caPools/my-pool" and the
-    /// [issuing_certificate_authority_id][google.cloud.security.privateca.v1.CreateCertificateRequest.issuing_certificate_authority_id]
-    /// to "my-ca".
+    /// you can set the [parent][google.cloud.security.privateca.v1.CreateCertificateRequest.parent] to
+    /// "projects/my-project/locations/us-central1/caPools/my-pool" and the
+    /// [issuing_certificate_authority_id][google.cloud.security.privateca.v1.CreateCertificateRequest.issuing_certificate_authority_id] to "my-ca".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string IssuingCertificateAuthorityId {
@@ -867,9 +848,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The [name][google.cloud.security.privateca.v1.Certificate.name]
-    /// of the [Certificate][google.cloud.security.privateca.v1.Certificate] to
-    /// get.
+    /// Required. The [name][google.cloud.security.privateca.v1.Certificate.name] of the [Certificate][google.cloud.security.privateca.v1.Certificate] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1003,8 +982,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [CertificateAuthorityService.ListCertificates][google.cloud.security.privateca.v1.CertificateAuthorityService.ListCertificates].
+  /// Request message for [CertificateAuthorityService.ListCertificates][google.cloud.security.privateca.v1.CertificateAuthorityService.ListCertificates].
   /// </summary>
   public sealed partial class ListCertificatesRequest : pb::IMessage<ListCertificatesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1053,8 +1031,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the location associated with the
-    /// [Certificates][google.cloud.security.privateca.v1.Certificate], in the
-    /// format `projects/*/locations/*/caPools/*`.
+    /// [Certificates][google.cloud.security.privateca.v1.Certificate], in the format
+    /// `projects/*/locations/*/caPools/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -1069,13 +1047,11 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     private int pageSize_;
     /// <summary>
     /// Optional. Limit on the number of
-    /// [Certificates][google.cloud.security.privateca.v1.Certificate] to include
-    /// in the response. Further
-    /// [Certificates][google.cloud.security.privateca.v1.Certificate] can
-    /// subsequently be obtained by including the
-    /// [ListCertificatesResponse.next_page_token][google.cloud.security.privateca.v1.ListCertificatesResponse.next_page_token]
-    /// in a subsequent request. If unspecified, the server will pick an
-    /// appropriate default.
+    /// [Certificates][google.cloud.security.privateca.v1.Certificate] to include in the
+    /// response. Further [Certificates][google.cloud.security.privateca.v1.Certificate] can subsequently be obtained
+    /// by including the
+    /// [ListCertificatesResponse.next_page_token][google.cloud.security.privateca.v1.ListCertificatesResponse.next_page_token] in a subsequent
+    /// request. If unspecified, the server will pick an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -1104,8 +1080,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// Optional. Only include resources that match the filter in the response. For
-    /// details on supported filters and syntax, see [Certificates Filtering
+    /// Optional. Only include resources that match the filter in the response. For details
+    /// on supported filters and syntax, see [Certificates Filtering
     /// documentation](https://cloud.google.com/certificate-authority-service/docs/sorting-filtering-certificates#filtering_support).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1120,8 +1096,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int OrderByFieldNumber = 5;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional. Specify how the results should be sorted. For details on
-    /// supported fields and syntax, see [Certificates Sorting
+    /// Optional. Specify how the results should be sorted. For details on supported fields
+    /// and syntax, see [Certificates Sorting
     /// documentation](https://cloud.google.com/certificate-authority-service/docs/sorting-filtering-certificates#sorting_support).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1352,8 +1328,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// Response message for
-  /// [CertificateAuthorityService.ListCertificates][google.cloud.security.privateca.v1.CertificateAuthorityService.ListCertificates].
+  /// Response message for [CertificateAuthorityService.ListCertificates][google.cloud.security.privateca.v1.CertificateAuthorityService.ListCertificates].
   /// </summary>
   public sealed partial class ListCertificatesResponse : pb::IMessage<ListCertificatesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1636,8 +1611,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name for this
-    /// [Certificate][google.cloud.security.privateca.v1.Certificate] in the format
+    /// Required. The resource name for this [Certificate][google.cloud.security.privateca.v1.Certificate] in the
+    /// format
     /// `projects/*/locations/*/caPools/*/certificates/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1652,9 +1627,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int ReasonFieldNumber = 2;
     private global::Google.Cloud.Security.PrivateCA.V1.RevocationReason reason_ = global::Google.Cloud.Security.PrivateCA.V1.RevocationReason.Unspecified;
     /// <summary>
-    /// Required. The
-    /// [RevocationReason][google.cloud.security.privateca.v1.RevocationReason] for
-    /// revoking this certificate.
+    /// Required. The [RevocationReason][google.cloud.security.privateca.v1.RevocationReason] for revoking this certificate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Security.PrivateCA.V1.RevocationReason Reason {
@@ -1668,10 +1641,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -1862,8 +1835,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [CertificateAuthorityService.UpdateCertificate][google.cloud.security.privateca.v1.CertificateAuthorityService.UpdateCertificate].
+  /// Request message for [CertificateAuthorityService.UpdateCertificate][google.cloud.security.privateca.v1.CertificateAuthorityService.UpdateCertificate].
   /// </summary>
   public sealed partial class UpdateCertificateRequest : pb::IMessage<UpdateCertificateRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1909,8 +1881,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CertificateFieldNumber = 1;
     private global::Google.Cloud.Security.PrivateCA.V1.Certificate certificate_;
     /// <summary>
-    /// Required. [Certificate][google.cloud.security.privateca.v1.Certificate]
-    /// with updated values.
+    /// Required. [Certificate][google.cloud.security.privateca.v1.Certificate] with updated values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Security.PrivateCA.V1.Certificate Certificate {
@@ -1938,10 +1909,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -2198,9 +2169,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name for this
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-    /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+    /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
+    /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -2229,8 +2199,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int SubordinateConfigFieldNumber = 3;
     private global::Google.Cloud.Security.PrivateCA.V1.SubordinateConfig subordinateConfig_;
     /// <summary>
-    /// Required. Must include information about the issuer of
-    /// 'pem_ca_certificate', and any further issuers until the self-signed CA.
+    /// Required. Must include information about the issuer of 'pem_ca_certificate', and any
+    /// further issuers until the self-signed CA.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Security.PrivateCA.V1.SubordinateConfig SubordinateConfig {
@@ -2244,10 +2214,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 4;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -2519,10 +2489,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the
-    /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
-    /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority],
-    /// in the format `projects/*/locations/*/caPools/*`.
+    /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+    /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority], in the format
+    /// `projects/*/locations/*/caPools/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2551,9 +2520,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CertificateAuthorityFieldNumber = 3;
     private global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority certificateAuthority_;
     /// <summary>
-    /// Required. A
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-    /// with initial field values.
+    /// Required. A [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] with initial field values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority CertificateAuthority {
@@ -2567,10 +2534,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 4;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -2840,9 +2807,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name for this
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-    /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+    /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
+    /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -2856,10 +2822,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -3072,9 +3038,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name for this
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-    /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+    /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
+    /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -3088,10 +3053,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -3303,9 +3268,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name for this
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-    /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+    /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
+    /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -3618,8 +3582,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [CertificateAuthorityService.GetCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.GetCertificateAuthority].
+  /// Request message for [CertificateAuthorityService.GetCertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthorityService.GetCertificateAuthority].
   /// </summary>
   public sealed partial class GetCertificateAuthorityRequest : pb::IMessage<GetCertificateAuthorityRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3663,10 +3626,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The
-    /// [name][google.cloud.security.privateca.v1.CertificateAuthority.name] of the
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-    /// to get.
+    /// Required. The [name][google.cloud.security.privateca.v1.CertificateAuthority.name] of the [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] to
+    /// get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -3849,10 +3810,9 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the
-    /// [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
-    /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority],
-    /// in the format `projects/*/locations/*/caPools/*`.
+    /// Required. The resource name of the [CaPool][google.cloud.security.privateca.v1.CaPool] associated with the
+    /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority], in the format
+    /// `projects/*/locations/*/caPools/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -3866,14 +3826,12 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. Limit on the number of
-    /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority]
-    /// to include in the response. Further
-    /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority]
-    /// can subsequently be obtained by including the
-    /// [ListCertificateAuthoritiesResponse.next_page_token][google.cloud.security.privateca.v1.ListCertificateAuthoritiesResponse.next_page_token]
-    /// in a subsequent request. If unspecified, the server will pick an
-    /// appropriate default.
+    /// Optional. Limit on the number of [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority] to
+    /// include in the response.
+    /// Further [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority] can subsequently be
+    /// obtained by including the
+    /// [ListCertificateAuthoritiesResponse.next_page_token][google.cloud.security.privateca.v1.ListCertificateAuthoritiesResponse.next_page_token] in a subsequent
+    /// request. If unspecified, the server will pick an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -4195,8 +4153,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority> certificateAuthorities_ = new pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority>();
     /// <summary>
-    /// The list of
-    /// [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
+    /// The list of [CertificateAuthorities][google.cloud.security.privateca.v1.CertificateAuthority].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority> CertificateAuthorities {
@@ -4430,9 +4387,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name for this
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-    /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+    /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
+    /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -4446,10 +4402,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -4663,9 +4619,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name for this
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-    /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+    /// Required. The resource name for this [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] in the
+    /// format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -4679,10 +4634,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -4935,9 +4890,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CertificateAuthorityFieldNumber = 1;
     private global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority certificateAuthority_;
     /// <summary>
-    /// Required.
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-    /// with updated values.
+    /// Required. [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority] with updated values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Security.PrivateCA.V1.CertificateAuthority CertificateAuthority {
@@ -4965,10 +4918,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -5226,8 +5179,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the location associated with the
-    /// [CaPool][google.cloud.security.privateca.v1.CaPool], in the format
-    /// `projects/*/locations/*`.
+    /// [CaPool][google.cloud.security.privateca.v1.CaPool], in the format `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -5256,8 +5208,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CaPoolFieldNumber = 3;
     private global::Google.Cloud.Security.PrivateCA.V1.CaPool caPool_;
     /// <summary>
-    /// Required. A [CaPool][google.cloud.security.privateca.v1.CaPool] with
-    /// initial field values.
+    /// Required. A [CaPool][google.cloud.security.privateca.v1.CaPool] with initial field values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Security.PrivateCA.V1.CaPool CaPool {
@@ -5271,10 +5222,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 4;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -5545,8 +5496,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CaPoolFieldNumber = 1;
     private global::Google.Cloud.Security.PrivateCA.V1.CaPool caPool_;
     /// <summary>
-    /// Required. [CaPool][google.cloud.security.privateca.v1.CaPool] with updated
-    /// values.
+    /// Required. [CaPool][google.cloud.security.privateca.v1.CaPool] with updated values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Security.PrivateCA.V1.CaPool CaPool {
@@ -5574,10 +5524,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -5832,9 +5782,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name for this
-    /// [CaPool][google.cloud.security.privateca.v1.CaPool] in the format
-    /// `projects/*/locations/*/caPools/*`.
+    /// Required. The resource name for this [CaPool][google.cloud.security.privateca.v1.CaPool] in the
+    /// format `projects/*/locations/*/caPools/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -5848,10 +5797,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -6064,9 +6013,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CaPoolFieldNumber = 1;
     private string caPool_ = "";
     /// <summary>
-    /// Required. The resource name for the
-    /// [CaPool][google.cloud.security.privateca.v1.CaPool] in the format
-    /// `projects/*/locations/*/caPools/*`.
+    /// Required. The resource name for the [CaPool][google.cloud.security.privateca.v1.CaPool] in the
+    /// format `projects/*/locations/*/caPools/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CaPool {
@@ -6080,10 +6028,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -6298,8 +6246,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.FetchCaCertsResponse.Types.CertChain> caCerts_ = new pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.FetchCaCertsResponse.Types.CertChain>();
     /// <summary>
     /// The PEM encoded CA certificate chains of all
-    /// [ACTIVE][CertificateAuthority.State.ACTIVE]
-    /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
+    /// [ACTIVE][CertificateAuthority.State.ACTIVE] [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
     /// resources in this [CaPool][google.cloud.security.privateca.v1.CaPool].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6592,8 +6539,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [CertificateAuthorityService.GetCaPool][google.cloud.security.privateca.v1.CertificateAuthorityService.GetCaPool].
+  /// Request message for [CertificateAuthorityService.GetCaPool][google.cloud.security.privateca.v1.CertificateAuthorityService.GetCaPool].
   /// </summary>
   public sealed partial class GetCaPoolRequest : pb::IMessage<GetCaPoolRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6637,8 +6583,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The [name][google.cloud.security.privateca.v1.CaPool.name] of the
-    /// [CaPool][google.cloud.security.privateca.v1.CaPool] to get.
+    /// Required. The [name][google.cloud.security.privateca.v1.CaPool.name] of the [CaPool][google.cloud.security.privateca.v1.CaPool] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -6837,13 +6782,12 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. Limit on the number of
-    /// [CaPools][google.cloud.security.privateca.v1.CaPool] to include in the
-    /// response. Further [CaPools][google.cloud.security.privateca.v1.CaPool] can
-    /// subsequently be obtained by including the
-    /// [ListCaPoolsResponse.next_page_token][google.cloud.security.privateca.v1.ListCaPoolsResponse.next_page_token]
-    /// in a subsequent request. If unspecified, the server will pick an
-    /// appropriate default.
+    /// Optional. Limit on the number of [CaPools][google.cloud.security.privateca.v1.CaPool] to
+    /// include in the response.
+    /// Further [CaPools][google.cloud.security.privateca.v1.CaPool] can subsequently be
+    /// obtained by including the
+    /// [ListCaPoolsResponse.next_page_token][google.cloud.security.privateca.v1.ListCaPoolsResponse.next_page_token] in a subsequent
+    /// request. If unspecified, the server will pick an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -7398,11 +7342,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The
-    /// [name][google.cloud.security.privateca.v1.CertificateRevocationList.name]
-    /// of the
-    /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
-    /// to get.
+    /// Required. The [name][google.cloud.security.privateca.v1.CertificateRevocationList.name] of the
+    /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -7586,8 +7527,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the location associated with the
-    /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList],
-    /// in the format `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
+    /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList], in the format
+    /// `projects/*/locations/*/caPools/*/certificateAuthorities/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -7602,13 +7543,11 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     private int pageSize_;
     /// <summary>
     /// Optional. Limit on the number of
-    /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList]
-    /// to include in the response. Further
-    /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList]
+    /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList] to include in the
+    /// response. Further [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList]
     /// can subsequently be obtained by including the
-    /// [ListCertificateRevocationListsResponse.next_page_token][google.cloud.security.privateca.v1.ListCertificateRevocationListsResponse.next_page_token]
-    /// in a subsequent request. If unspecified, the server will pick an
-    /// appropriate default.
+    /// [ListCertificateRevocationListsResponse.next_page_token][google.cloud.security.privateca.v1.ListCertificateRevocationListsResponse.next_page_token] in a subsequent
+    /// request. If unspecified, the server will pick an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -7930,8 +7869,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList> certificateRevocationLists_ = new pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList>();
     /// <summary>
-    /// The list of
-    /// [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
+    /// The list of [CertificateRevocationLists][google.cloud.security.privateca.v1.CertificateRevocationList].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList> CertificateRevocationLists {
@@ -8166,9 +8104,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CertificateRevocationListFieldNumber = 1;
     private global::Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList certificateRevocationList_;
     /// <summary>
-    /// Required.
-    /// [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList]
-    /// with updated values.
+    /// Required. [CertificateRevocationList][google.cloud.security.privateca.v1.CertificateRevocationList] with updated values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Security.PrivateCA.V1.CertificateRevocationList CertificateRevocationList {
@@ -8196,10 +8132,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -8457,8 +8393,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the location associated with the
-    /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate],
-    /// in the format `projects/*/locations/*`.
+    /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate], in the format
+    /// `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -8487,9 +8423,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CertificateTemplateFieldNumber = 3;
     private global::Google.Cloud.Security.PrivateCA.V1.CertificateTemplate certificateTemplate_;
     /// <summary>
-    /// Required. A
-    /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
-    /// with initial field values.
+    /// Required. A [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] with initial field values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Security.PrivateCA.V1.CertificateTemplate CertificateTemplate {
@@ -8503,10 +8437,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 4;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -8776,9 +8710,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name for this
-    /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
-    /// in the format `projects/*/locations/*/certificateTemplates/*`.
+    /// Required. The resource name for this [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] in the format
+    /// `projects/*/locations/*/certificateTemplates/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -8792,10 +8725,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -9007,10 +8940,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The
-    /// [name][google.cloud.security.privateca.v1.CertificateTemplate.name] of the
-    /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
-    /// to get.
+    /// Required. The [name][google.cloud.security.privateca.v1.CertificateTemplate.name] of the [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] to
+    /// get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -9194,8 +9125,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the location associated with the
-    /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate],
-    /// in the format `projects/*/locations/*`.
+    /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate], in the format
+    /// `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -9210,13 +9141,11 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     private int pageSize_;
     /// <summary>
     /// Optional. Limit on the number of
-    /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate]
-    /// to include in the response. Further
-    /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate]
-    /// can subsequently be obtained by including the
-    /// [ListCertificateTemplatesResponse.next_page_token][google.cloud.security.privateca.v1.ListCertificateTemplatesResponse.next_page_token]
-    /// in a subsequent request. If unspecified, the server will pick an
-    /// appropriate default.
+    /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate] to include in the response.
+    /// Further [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate] can subsequently be
+    /// obtained by including the
+    /// [ListCertificateTemplatesResponse.next_page_token][google.cloud.security.privateca.v1.ListCertificateTemplatesResponse.next_page_token] in a subsequent
+    /// request. If unspecified, the server will pick an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -9538,8 +9467,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Security.PrivateCA.V1.CertificateTemplate.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.CertificateTemplate> certificateTemplates_ = new pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.CertificateTemplate>();
     /// <summary>
-    /// The list of
-    /// [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
+    /// The list of [CertificateTemplates][google.cloud.security.privateca.v1.CertificateTemplate].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Security.PrivateCA.V1.CertificateTemplate> CertificateTemplates {
@@ -9774,9 +9702,7 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int CertificateTemplateFieldNumber = 1;
     private global::Google.Cloud.Security.PrivateCA.V1.CertificateTemplate certificateTemplate_;
     /// <summary>
-    /// Required.
-    /// [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate]
-    /// with updated values.
+    /// Required. [CertificateTemplate][google.cloud.security.privateca.v1.CertificateTemplate] with updated values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Security.PrivateCA.V1.CertificateTemplate CertificateTemplate {
@@ -9804,10 +9730,10 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// Optional. An ID to identify requests. Specify a unique request ID so that
-    /// if you must retry your request, the server will know to ignore the request
-    /// if it has already been completed. The server will guarantee that for at
-    /// least 60 minutes since the first request.
+    /// Optional. An ID to identify requests. Specify a unique request ID so that if you must
+    /// retry your request, the server will know to ignore the request if it has
+    /// already been completed. The server will guarantee that for at least 60
+    /// minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and t
     /// he request times out. If you make the request again with the same request
@@ -10138,9 +10064,8 @@ namespace Google.Cloud.Security.PrivateCA.V1 {
     /// <summary>
     /// Output only. Identifies whether the user has requested cancellation
     /// of the operation. Operations that have successfully been cancelled
-    /// have [Operation.error][] value with a
-    /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
-    /// `Code.CANCELLED`.
+    /// have [Operation.error][] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+    /// corresponding to `Code.CANCELLED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool RequestedCancellation {
