@@ -1056,10 +1056,11 @@ namespace Google.Cloud.DataCatalog.V1
             CreatePolicyTagAsync(parent, policyTag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes
-        /// - all of its descendant policy tags, if any,
-        /// - the policies associated with the policy tag and its descendants, and
-        /// - references from BigQuery table schema of the policy tag and its
+        /// Deletes a policy tag. This method also deletes:
+        /// 
+        /// * all of its descendant policy tags, if any
+        /// * the policies associated with the policy tag and its descendants
+        /// * references from BigQuery table schema of the policy tag and its
         /// descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1069,10 +1070,11 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes
-        /// - all of its descendant policy tags, if any,
-        /// - the policies associated with the policy tag and its descendants, and
-        /// - references from BigQuery table schema of the policy tag and its
+        /// Deletes a policy tag. This method also deletes:
+        /// 
+        /// * all of its descendant policy tags, if any
+        /// * the policies associated with the policy tag and its descendants
+        /// * references from BigQuery table schema of the policy tag and its
         /// descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1082,10 +1084,11 @@ namespace Google.Cloud.DataCatalog.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes
-        /// - all of its descendant policy tags, if any,
-        /// - the policies associated with the policy tag and its descendants, and
-        /// - references from BigQuery table schema of the policy tag and its
+        /// Deletes a policy tag. This method also deletes:
+        /// 
+        /// * all of its descendant policy tags, if any
+        /// * the policies associated with the policy tag and its descendants
+        /// * references from BigQuery table schema of the policy tag and its
         /// descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1095,10 +1098,11 @@ namespace Google.Cloud.DataCatalog.V1
             DeletePolicyTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes
-        /// - all of its descendant policy tags, if any,
-        /// - the policies associated with the policy tag and its descendants, and
-        /// - references from BigQuery table schema of the policy tag and its
+        /// Deletes a policy tag. This method also deletes:
+        /// 
+        /// * all of its descendant policy tags, if any
+        /// * the policies associated with the policy tag and its descendants
+        /// * references from BigQuery table schema of the policy tag and its
         /// descendants.
         /// </summary>
         /// <param name="name">
@@ -1114,10 +1118,11 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes
-        /// - all of its descendant policy tags, if any,
-        /// - the policies associated with the policy tag and its descendants, and
-        /// - references from BigQuery table schema of the policy tag and its
+        /// Deletes a policy tag. This method also deletes:
+        /// 
+        /// * all of its descendant policy tags, if any
+        /// * the policies associated with the policy tag and its descendants
+        /// * references from BigQuery table schema of the policy tag and its
         /// descendants.
         /// </summary>
         /// <param name="name">
@@ -1133,10 +1138,11 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes
-        /// - all of its descendant policy tags, if any,
-        /// - the policies associated with the policy tag and its descendants, and
-        /// - references from BigQuery table schema of the policy tag and its
+        /// Deletes a policy tag. This method also deletes:
+        /// 
+        /// * all of its descendant policy tags, if any
+        /// * the policies associated with the policy tag and its descendants
+        /// * references from BigQuery table schema of the policy tag and its
         /// descendants.
         /// </summary>
         /// <param name="name">
@@ -1149,10 +1155,11 @@ namespace Google.Cloud.DataCatalog.V1
             DeletePolicyTagAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes
-        /// - all of its descendant policy tags, if any,
-        /// - the policies associated with the policy tag and its descendants, and
-        /// - references from BigQuery table schema of the policy tag and its
+        /// Deletes a policy tag. This method also deletes:
+        /// 
+        /// * all of its descendant policy tags, if any
+        /// * the policies associated with the policy tag and its descendants
+        /// * references from BigQuery table schema of the policy tag and its
         /// descendants.
         /// </summary>
         /// <param name="name">
@@ -1168,10 +1175,11 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes
-        /// - all of its descendant policy tags, if any,
-        /// - the policies associated with the policy tag and its descendants, and
-        /// - references from BigQuery table schema of the policy tag and its
+        /// Deletes a policy tag. This method also deletes:
+        /// 
+        /// * all of its descendant policy tags, if any
+        /// * the policies associated with the policy tag and its descendants
+        /// * references from BigQuery table schema of the policy tag and its
         /// descendants.
         /// </summary>
         /// <param name="name">
@@ -1187,10 +1195,11 @@ namespace Google.Cloud.DataCatalog.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes
-        /// - all of its descendant policy tags, if any,
-        /// - the policies associated with the policy tag and its descendants, and
-        /// - references from BigQuery table schema of the policy tag and its
+        /// Deletes a policy tag. This method also deletes:
+        /// 
+        /// * all of its descendant policy tags, if any
+        /// * the policies associated with the policy tag and its descendants
+        /// * references from BigQuery table schema of the policy tag and its
         /// descendants.
         /// </summary>
         /// <param name="name">
@@ -1884,10 +1893,11 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes
-        /// - all of its descendant policy tags, if any,
-        /// - the policies associated with the policy tag and its descendants, and
-        /// - references from BigQuery table schema of the policy tag and its
+        /// Deletes a policy tag. This method also deletes:
+        /// 
+        /// * all of its descendant policy tags, if any
+        /// * the policies associated with the policy tag and its descendants
+        /// * references from BigQuery table schema of the policy tag and its
         /// descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1900,10 +1910,11 @@ namespace Google.Cloud.DataCatalog.V1
         }
 
         /// <summary>
-        /// Deletes a policy tag. This method also deletes
-        /// - all of its descendant policy tags, if any,
-        /// - the policies associated with the policy tag and its descendants, and
-        /// - references from BigQuery table schema of the policy tag and its
+        /// Deletes a policy tag. This method also deletes:
+        /// 
+        /// * all of its descendant policy tags, if any
+        /// * the policies associated with the policy tag and its descendants
+        /// * references from BigQuery table schema of the policy tag and its
         /// descendants.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
