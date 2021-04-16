@@ -571,7 +571,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the
+        /// form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -587,7 +588,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the
+        /// form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -603,7 +605,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the
+        /// form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -616,7 +619,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the
+        /// form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -632,7 +636,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the
+        /// form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -648,7 +653,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the
+        /// form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -1114,7 +1120,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the
+        /// form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
@@ -1130,7 +1137,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the
+        /// form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
@@ -1146,7 +1154,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the
+        /// form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
@@ -1159,7 +1168,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the
+        /// form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
@@ -1175,7 +1185,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the
+        /// form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
@@ -1191,7 +1202,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the
+        /// form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>

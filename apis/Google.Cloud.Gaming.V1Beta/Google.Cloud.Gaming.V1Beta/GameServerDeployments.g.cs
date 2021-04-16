@@ -97,9 +97,10 @@ namespace Google.Cloud.Gaming.V1Beta {
             "ASKOAQoqUHJldmlld0dhbWVTZXJ2ZXJEZXBsb3ltZW50Um9sbG91dFJlc3Bv",
             "bnNlEhMKC3VuYXZhaWxhYmxlGAIgAygJEgwKBGV0YWcYAyABKAkSPQoMdGFy",
             "Z2V0X3N0YXRlGAQgASgLMicuZ29vZ2xlLmNsb3VkLmdhbWluZy52MWJldGEu",
-            "VGFyZ2V0U3RhdGVCZAoeY29tLmdvb2dsZS5jbG91ZC5nYW1pbmcudjFiZXRh",
-            "UAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
-            "dWQvZ2FtaW5nL3YxYmV0YTtnYW1pbmdiBnByb3RvMw=="));
+            "VGFyZ2V0U3RhdGVCgQEKHmNvbS5nb29nbGUuY2xvdWQuZ2FtaW5nLnYxYmV0",
+            "YVABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
+            "b3VkL2dhbWluZy92MWJldGE7Z2FtaW5nygIaR29vZ2xlXENsb3VkXEdhbWlu",
+            "Z1xWMWJldGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Gaming.V1Beta.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -188,11 +189,11 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of items to return.  If unspecified, the server
-    /// will pick an appropriate default. The server may return fewer items than
-    /// requested. A caller should only rely on response's
-    /// [next_page_token][google.cloud.gaming.v1beta.ListGameServerDeploymentsResponse.next_page_token] to
-    /// determine if there are more GameServerDeployments left to be queried.
+    /// Optional. The maximum number of items to return.  If unspecified, the
+    /// server will pick an appropriate default. The server may return fewer items
+    /// than requested. A caller should only rely on response's
+    /// [next_page_token][google.cloud.gaming.v1beta.ListGameServerDeploymentsResponse.next_page_token]
+    /// to determine if there are more GameServerDeployments left to be queried.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -745,7 +746,8 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the game server delpoyment to retrieve. Uses the form:
+    /// Required. The name of the game server delpoyment to retrieve. Uses the
+    /// form:
     ///
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
     /// </summary>
@@ -926,7 +928,8 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the game server delpoyment to retrieve. Uses the form:
+    /// Required. The name of the game server delpoyment to retrieve. Uses the
+    /// form:
     ///
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
     /// </summary>
@@ -3724,8 +3727,8 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int PreviewTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp previewTime_;
     /// <summary>
-    /// Optional. The target timestamp to compute the preview. Defaults to the immediately
-    /// after the proposed rollout completes.
+    /// Optional. The target timestamp to compute the preview. Defaults to the
+    /// immediately after the proposed rollout completes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp PreviewTime {
