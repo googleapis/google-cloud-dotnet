@@ -64,9 +64,10 @@ namespace Google.Cloud.Gaming.V1Beta {
             "QYsBCixnYW1lc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vR2FtZVNlcnZlckNv",
             "bmZpZxJbcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
             "L2dhbWVTZXJ2ZXJEZXBsb3ltZW50cy97ZGVwbG95bWVudH0vY29uZmlncy97",
-            "Y29uZmlnfUJkCh5jb20uZ29vZ2xlLmNsb3VkLmdhbWluZy52MWJldGFQAVpA",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9n",
-            "YW1pbmcvdjFiZXRhO2dhbWluZ2IGcHJvdG8z"));
+            "Y29uZmlnfUKBAQoeY29tLmdvb2dsZS5jbG91ZC5nYW1pbmcudjFiZXRhUAFa",
+            "QGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
+            "Z2FtaW5nL3YxYmV0YTtnYW1pbmfKAhpHb29nbGVcQ2xvdWRcR2FtaW5nXFYx",
+            "YmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Gaming.V1Beta.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -152,8 +153,8 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// Optional. The maximum number of items to return.  If unspecified, server
     /// will pick an appropriate default. Server may return fewer items than
     /// requested. A caller should only rely on response's
-    /// [next_page_token][google.cloud.gaming.v1beta.ListGameServerConfigsResponse.next_page_token] to
-    /// determine if there are more GameServerConfigs left to be queried.
+    /// [next_page_token][google.cloud.gaming.v1beta.ListGameServerConfigsResponse.next_page_token]
+    /// to determine if there are more GameServerConfigs left to be queried.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -167,7 +168,8 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. The next_page_token value returned from a previous list request, if any.
+    /// Optional. The next_page_token value returned from a previous list request,
+    /// if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {

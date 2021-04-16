@@ -90,10 +90,10 @@ namespace Google.Cloud.Gaming.V1Beta {
             "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOogB6kGEAQotZ2FtZXNl",
             "cnZpY2VzLmdvb2dsZWFwaXMuY29tL0dhbWVTZXJ2ZXJDbHVzdGVyElNwcm9q",
             "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVhbG1zL3ty",
-            "ZWFsbX0vZ2FtZVNlcnZlckNsdXN0ZXJzL3tjbHVzdGVyfUJkCh5jb20uZ29v",
-            "Z2xlLmNsb3VkLmdhbWluZy52MWJldGFQAVpAZ29vZ2xlLmdvbGFuZy5vcmcv",
-            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9nYW1pbmcvdjFiZXRhO2dhbWlu",
-            "Z2IGcHJvdG8z"));
+            "ZWFsbX0vZ2FtZVNlcnZlckNsdXN0ZXJzL3tjbHVzdGVyfUKBAQoeY29tLmdv",
+            "b2dsZS5jbG91ZC5nYW1pbmcudjFiZXRhUAFaQGdvb2dsZS5nb2xhbmcub3Jn",
+            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZ2FtaW5nL3YxYmV0YTtnYW1p",
+            "bmfKAhpHb29nbGVcQ2xvdWRcR2FtaW5nXFYxYmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Gaming.V1Beta.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -182,11 +182,11 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of items to return.  If unspecified, the server
-    /// will pick an appropriate default. The server may return fewer items than
-    /// requested. A caller should only rely on response's
-    /// [next_page_token][google.cloud.gaming.v1beta.ListGameServerClustersResponse.next_page_token] to
-    /// determine if there are more GameServerClusters left to be queried.
+    /// Optional. The maximum number of items to return.  If unspecified, the
+    /// server will pick an appropriate default. The server may return fewer items
+    /// than requested. A caller should only rely on response's
+    /// [next_page_token][google.cloud.gaming.v1beta.ListGameServerClustersResponse.next_page_token]
+    /// to determine if there are more GameServerClusters left to be queried.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -200,7 +200,8 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. The next_page_token value returned from a previous List request, if any.
+    /// Optional. The next_page_token value returned from a previous List request,
+    /// if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {

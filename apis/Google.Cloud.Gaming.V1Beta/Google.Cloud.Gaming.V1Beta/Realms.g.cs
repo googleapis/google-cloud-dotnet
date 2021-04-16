@@ -61,10 +61,10 @@ namespace Google.Cloud.Gaming.V1Beta {
             "BGV0YWcYByABKAkSEwoLZGVzY3JpcHRpb24YCCABKAkaLQoLTGFiZWxzRW50",
             "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpe6kFbCiFnYW1l",
             "c2VydmljZXMuZ29vZ2xlYXBpcy5jb20vUmVhbG0SNnByb2plY3RzL3twcm9q",
-            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZWFsbXMve3JlYWxtfUJkCh5j",
-            "b20uZ29vZ2xlLmNsb3VkLmdhbWluZy52MWJldGFQAVpAZ29vZ2xlLmdvbGFu",
-            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9nYW1pbmcvdjFiZXRh",
-            "O2dhbWluZ2IGcHJvdG8z"));
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZWFsbXMve3JlYWxtfUKBAQoe",
+            "Y29tLmdvb2dsZS5jbG91ZC5nYW1pbmcudjFiZXRhUAFaQGdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZ2FtaW5nL3YxYmV0",
+            "YTtnYW1pbmfKAhpHb29nbGVcQ2xvdWRcR2FtaW5nXFYxYmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Gaming.V1Beta.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -150,8 +150,8 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// Optional. The maximum number of items to return.  If unspecified, server
     /// will pick an appropriate default. Server may return fewer items than
     /// requested. A caller should only rely on response's
-    /// [next_page_token][google.cloud.gaming.v1beta.ListRealmsResponse.next_page_token] to
-    /// determine if there are more realms left to be queried.
+    /// [next_page_token][google.cloud.gaming.v1beta.ListRealmsResponse.next_page_token]
+    /// to determine if there are more realms left to be queried.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -2147,8 +2147,8 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int TimeZoneFieldNumber = 6;
     private string timeZone_ = "";
     /// <summary>
-    /// Required. Time zone where all policies targeting this realm are evaluated. The value
-    /// of this field must be from the IANA time zone database:
+    /// Required. Time zone where all policies targeting this realm are evaluated.
+    /// The value of this field must be from the IANA time zone database:
     /// https://www.iana.org/time-zones.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
