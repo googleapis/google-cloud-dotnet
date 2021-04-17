@@ -28,66 +28,102 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
             "X21vZGVsLnByb3RvEiRnb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYx",
             "YmV0YTEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2ds",
             "ZS9hcGkvcmVzb3VyY2UucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3Qu",
-            "cHJvdG8aF2dvb2dsZS90eXBlL21vbmV5LnByb3RvIt4DCgZCdWRnZXQSEQoE",
-            "bmFtZRgBIAEoCUID4EEDEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRJICg1idWRn",
-            "ZXRfZmlsdGVyGAMgASgLMiwuZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0",
-            "cy52MWJldGExLkZpbHRlckID4EEBEkcKBmFtb3VudBgEIAEoCzIyLmdvb2ds",
-            "ZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjFiZXRhMS5CdWRnZXRBbW91bnRC",
-            "A+BBAhJRCg90aHJlc2hvbGRfcnVsZXMYBSADKAsyMy5nb29nbGUuY2xvdWQu",
-            "YmlsbGluZy5idWRnZXRzLnYxYmV0YTEuVGhyZXNob2xkUnVsZUID4EEBElMK",
-            "EGFsbF91cGRhdGVzX3J1bGUYBiABKAsyNC5nb29nbGUuY2xvdWQuYmlsbGlu",
-            "Zy5idWRnZXRzLnYxYmV0YTEuQWxsVXBkYXRlc1J1bGVCA+BBARIRCgRldGFn",
-            "GAcgASgJQgPgQQE6XepBWgokYmlsbGluZ2J1ZGdldHMuZ29vZ2xlYXBpcy5j",
-            "b20vQnVkZ2V0EjJiaWxsaW5nQWNjb3VudHMve2JpbGxpbmdfYWNjb3VudH0v",
-            "YnVkZ2V0cy97YnVkZ2V0fSKlAQoMQnVkZ2V0QW1vdW50Ei4KEHNwZWNpZmll",
-            "ZF9hbW91bnQYASABKAsyEi5nb29nbGUudHlwZS5Nb25leUgAElQKEmxhc3Rf",
-            "cGVyaW9kX2Ftb3VudBgCIAEoCzI2Lmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1",
-            "ZGdldHMudjFiZXRhMS5MYXN0UGVyaW9kQW1vdW50SABCDwoNYnVkZ2V0X2Ft",
-            "b3VudCISChBMYXN0UGVyaW9kQW1vdW50Is0BCg1UaHJlc2hvbGRSdWxlEh4K",
-            "EXRocmVzaG9sZF9wZXJjZW50GAEgASgBQgPgQQISUwoLc3BlbmRfYmFzaXMY",
-            "AiABKA4yOS5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxYmV0YTEu",
-            "VGhyZXNob2xkUnVsZS5CYXNpc0ID4EEBIkcKBUJhc2lzEhUKEUJBU0lTX1VO",
-            "U1BFQ0lGSUVEEAASEQoNQ1VSUkVOVF9TUEVORBABEhQKEEZPUkVDQVNURURf",
-            "U1BFTkQQAiKkAQoOQWxsVXBkYXRlc1J1bGUSGQoMcHVic3ViX3RvcGljGAEg",
-            "ASgJQgPgQQESGwoOc2NoZW1hX3ZlcnNpb24YAiABKAlCA+BBARItCiBtb25p",
-            "dG9yaW5nX25vdGlmaWNhdGlvbl9jaGFubmVscxgDIAMoCUID4EEBEisKHmRp",
-            "c2FibGVfZGVmYXVsdF9pYW1fcmVjaXBpZW50cxgEIAEoCEID4EEBIv8DCgZG",
-            "aWx0ZXISFQoIcHJvamVjdHMYASADKAlCA+BBARIZCgxjcmVkaXRfdHlwZXMY",
-            "ByADKAlCA+BBARJmChZjcmVkaXRfdHlwZXNfdHJlYXRtZW50GAQgASgOMkEu",
-            "Z29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MWJldGExLkZpbHRlci5D",
-            "cmVkaXRUeXBlc1RyZWF0bWVudEID4EEBEhUKCHNlcnZpY2VzGAMgAygJQgPg",
-            "QQESGAoLc3ViYWNjb3VudHMYBSADKAlCA+BBARJNCgZsYWJlbHMYBiADKAsy",
-            "OC5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxYmV0YTEuRmlsdGVy",
-            "LkxhYmVsc0VudHJ5QgPgQQEaSQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
-            "EikKBXZhbHVlGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkxpc3RWYWx1ZToC",
-            "OAEijwEKFENyZWRpdFR5cGVzVHJlYXRtZW50EiYKIkNSRURJVF9UWVBFU19U",
-            "UkVBVE1FTlRfVU5TUEVDSUZJRUQQABIXChNJTkNMVURFX0FMTF9DUkVESVRT",
-            "EAESFwoTRVhDTFVERV9BTExfQ1JFRElUUxACEh0KGUlOQ0xVREVfU1BFQ0lG",
-            "SUVEX0NSRURJVFMQA0J5Cihjb20uZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVk",
-            "Z2V0cy52MWJldGExUAFaS2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvY2xvdWQvYmlsbGluZy9idWRnZXRzL3YxYmV0YTE7YnVkZ2V0",
-            "c2IGcHJvdG8z"));
+            "cHJvdG8aFmdvb2dsZS90eXBlL2RhdGUucHJvdG8aF2dvb2dsZS90eXBlL21v",
+            "bmV5LnByb3RvIt4DCgZCdWRnZXQSEQoEbmFtZRgBIAEoCUID4EEDEhQKDGRp",
+            "c3BsYXlfbmFtZRgCIAEoCRJICg1idWRnZXRfZmlsdGVyGAMgASgLMiwuZ29v",
+            "Z2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MWJldGExLkZpbHRlckID4EEB",
+            "EkcKBmFtb3VudBgEIAEoCzIyLmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdl",
+            "dHMudjFiZXRhMS5CdWRnZXRBbW91bnRCA+BBAhJRCg90aHJlc2hvbGRfcnVs",
+            "ZXMYBSADKAsyMy5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxYmV0",
+            "YTEuVGhyZXNob2xkUnVsZUID4EEBElMKEGFsbF91cGRhdGVzX3J1bGUYBiAB",
+            "KAsyNC5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxYmV0YTEuQWxs",
+            "VXBkYXRlc1J1bGVCA+BBARIRCgRldGFnGAcgASgJQgPgQQE6XepBWgokYmls",
+            "bGluZ2J1ZGdldHMuZ29vZ2xlYXBpcy5jb20vQnVkZ2V0EjJiaWxsaW5nQWNj",
+            "b3VudHMve2JpbGxpbmdfYWNjb3VudH0vYnVkZ2V0cy97YnVkZ2V0fSKlAQoM",
+            "QnVkZ2V0QW1vdW50Ei4KEHNwZWNpZmllZF9hbW91bnQYASABKAsyEi5nb29n",
+            "bGUudHlwZS5Nb25leUgAElQKEmxhc3RfcGVyaW9kX2Ftb3VudBgCIAEoCzI2",
+            "Lmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjFiZXRhMS5MYXN0UGVy",
+            "aW9kQW1vdW50SABCDwoNYnVkZ2V0X2Ftb3VudCISChBMYXN0UGVyaW9kQW1v",
+            "dW50Is0BCg1UaHJlc2hvbGRSdWxlEh4KEXRocmVzaG9sZF9wZXJjZW50GAEg",
+            "ASgBQgPgQQISUwoLc3BlbmRfYmFzaXMYAiABKA4yOS5nb29nbGUuY2xvdWQu",
+            "YmlsbGluZy5idWRnZXRzLnYxYmV0YTEuVGhyZXNob2xkUnVsZS5CYXNpc0ID",
+            "4EEBIkcKBUJhc2lzEhUKEUJBU0lTX1VOU1BFQ0lGSUVEEAASEQoNQ1VSUkVO",
+            "VF9TUEVORBABEhQKEEZPUkVDQVNURURfU1BFTkQQAiKkAQoOQWxsVXBkYXRl",
+            "c1J1bGUSGQoMcHVic3ViX3RvcGljGAEgASgJQgPgQQESGwoOc2NoZW1hX3Zl",
+            "cnNpb24YAiABKAlCA+BBARItCiBtb25pdG9yaW5nX25vdGlmaWNhdGlvbl9j",
+            "aGFubmVscxgDIAMoCUID4EEBEisKHmRpc2FibGVfZGVmYXVsdF9pYW1fcmVj",
+            "aXBpZW50cxgEIAEoCEID4EEBIrcFCgZGaWx0ZXISFQoIcHJvamVjdHMYASAD",
+            "KAlCA+BBARIZCgxjcmVkaXRfdHlwZXMYByADKAlCA+BBARJmChZjcmVkaXRf",
+            "dHlwZXNfdHJlYXRtZW50GAQgASgOMkEuZ29vZ2xlLmNsb3VkLmJpbGxpbmcu",
+            "YnVkZ2V0cy52MWJldGExLkZpbHRlci5DcmVkaXRUeXBlc1RyZWF0bWVudEID",
+            "4EEBEhUKCHNlcnZpY2VzGAMgAygJQgPgQQESGAoLc3ViYWNjb3VudHMYBSAD",
+            "KAlCA+BBARJNCgZsYWJlbHMYBiADKAsyOC5nb29nbGUuY2xvdWQuYmlsbGlu",
+            "Zy5idWRnZXRzLnYxYmV0YTEuRmlsdGVyLkxhYmVsc0VudHJ5QgPgQQESVAoP",
+            "Y2FsZW5kYXJfcGVyaW9kGAggASgOMjQuZ29vZ2xlLmNsb3VkLmJpbGxpbmcu",
+            "YnVkZ2V0cy52MWJldGExLkNhbGVuZGFyUGVyaW9kQgPgQQFIABJQCg1jdXN0",
+            "b21fcGVyaW9kGAkgASgLMjIuZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0",
+            "cy52MWJldGExLkN1c3RvbVBlcmlvZEID4EEBSAAaSQoLTGFiZWxzRW50cnkS",
+            "CwoDa2V5GAEgASgJEikKBXZhbHVlGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "Lkxpc3RWYWx1ZToCOAEijwEKFENyZWRpdFR5cGVzVHJlYXRtZW50EiYKIkNS",
+            "RURJVF9UWVBFU19UUkVBVE1FTlRfVU5TUEVDSUZJRUQQABIXChNJTkNMVURF",
+            "X0FMTF9DUkVESVRTEAESFwoTRVhDTFVERV9BTExfQ1JFRElUUxACEh0KGUlO",
+            "Q0xVREVfU1BFQ0lGSUVEX0NSRURJVFMQA0IOCgx1c2FnZV9wZXJpb2QiZAoM",
+            "Q3VzdG9tUGVyaW9kEioKCnN0YXJ0X2RhdGUYASABKAsyES5nb29nbGUudHlw",
+            "ZS5EYXRlQgPgQQISKAoIZW5kX2RhdGUYAiABKAsyES5nb29nbGUudHlwZS5E",
+            "YXRlQgPgQQEqUwoOQ2FsZW5kYXJQZXJpb2QSHwobQ0FMRU5EQVJfUEVSSU9E",
+            "X1VOU1BFQ0lGSUVEEAASCQoFTU9OVEgQARILCgdRVUFSVEVSEAISCAoEWUVB",
+            "UhADQnkKKGNvbS5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxYmV0",
+            "YTFQAVpLZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
+            "bG91ZC9iaWxsaW5nL2J1ZGdldHMvdjFiZXRhMTtidWRnZXRzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.CalendarPeriod), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.Budget), global::Google.Cloud.Billing.Budgets.V1Beta1.Budget.Parser, new[]{ "Name", "DisplayName", "BudgetFilter", "Amount", "ThresholdRules", "AllUpdatesRule", "Etag" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetAmount), global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetAmount.Parser, new[]{ "SpecifiedAmount", "LastPeriodAmount" }, new[]{ "BudgetAmount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.LastPeriodAmount), global::Google.Cloud.Billing.Budgets.V1Beta1.LastPeriodAmount.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.ThresholdRule), global::Google.Cloud.Billing.Budgets.V1Beta1.ThresholdRule.Parser, new[]{ "ThresholdPercent", "SpendBasis" }, null, new[]{ typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.ThresholdRule.Types.Basis) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule), global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule.Parser, new[]{ "PubsubTopic", "SchemaVersion", "MonitoringNotificationChannels", "DisableDefaultIamRecipients" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.Filter), global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Parser, new[]{ "Projects", "CreditTypes", "CreditTypesTreatment", "Services", "Subaccounts", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Types.CreditTypesTreatment) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.Filter), global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Parser, new[]{ "Projects", "CreditTypes", "CreditTypesTreatment", "Services", "Subaccounts", "Labels", "CalendarPeriod", "CustomPeriod" }, new[]{ "UsagePeriod" }, new[]{ typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Types.CreditTypesTreatment) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.CustomPeriod), global::Google.Cloud.Billing.Budgets.V1Beta1.CustomPeriod.Parser, new[]{ "StartDate", "EndDate" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// A `CalendarPeriod` represents the abstract concept of a time period that
+  /// has a canonical start. Grammatically, "the start of the current
+  /// `CalendarPeriod`". All calendar times begin at 12 AM US and Canadian
+  /// Pacific Time (UTC-8).
+  /// </summary>
+  public enum CalendarPeriod {
+    [pbr::OriginalName("CALENDAR_PERIOD_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// A month. Month starts on the first day of each month, such as January 1,
+    /// February 1, March 1, and so on.
+    /// </summary>
+    [pbr::OriginalName("MONTH")] Month = 1,
+    /// <summary>
+    /// A quarter. Quarters start on dates January 1, April 1, July 1, and October
+    /// 1 of each year.
+    /// </summary>
+    [pbr::OriginalName("QUARTER")] Quarter = 2,
+    /// <summary>
+    /// A year. Year starts on January 1.
+    /// </summary>
+    [pbr::OriginalName("YEAR")] Year = 3,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// A budget is a plan that describes what you expect to spend on Cloud
   /// projects, plus the rules to execute as spend is tracked against that plan,
   /// (for example, send an alert when 90% of the target spend is met).
-  /// Currently all plans are monthly budgets so the usage period(s) tracked are
-  /// implied (calendar months of usage back-to-back).
+  /// The budget time period is configurable, with options such as month (default),
+  /// quarter, year, or custom time period.
   /// </summary>
   public sealed partial class Budget : pb::IMessage<Budget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -168,8 +204,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     public const int BudgetFilterFieldNumber = 3;
     private global::Google.Cloud.Billing.Budgets.V1Beta1.Filter budgetFilter_;
     /// <summary>
-    /// Optional. Filters that define which resources are used to compute
-    /// the actual spend against the budget.
+    /// Optional. Filters that define which resources are used to compute the
+    /// actual spend against the budget amount, such as projects, services, and the
+    /// budget's time period, as well as other filters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Billing.Budgets.V1Beta1.Filter BudgetFilter {
@@ -577,7 +614,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// A specified amount to use as the budget.
     /// `currency_code` is optional. If specified when creating a budget, it must
     /// match the currency of the billing account. If specified when updating a
-    /// budget, it must match the existing budget currency_code.
+    /// budget, it must match the currency_code of the existing budget.
     /// The `currency_code` is provided on output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -593,6 +630,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     public const int LastPeriodAmountFieldNumber = 2;
     /// <summary>
     /// Use the last period's actual spend as the budget for the present period.
+    /// LastPeriodAmount can only be set when the budget's time period is a
+    /// [Filter.calendar_period][google.cloud.billing.budgets.v1beta1.Filter.calendar_period].
+    /// It cannot be set in combination with
+    /// [Filter.custom_period][google.cloud.billing.budgets.v1beta1.Filter.custom_period].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Billing.Budgets.V1Beta1.LastPeriodAmount LastPeriodAmount {
@@ -801,11 +842,15 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
   }
 
   /// <summary>
-  /// Describes a budget amount targeted to last period's spend.
-  /// At this time, the amount is automatically 100% of last period's spend;
-  /// that is, there are no other options yet.
-  /// Future configuration will be described here (for example, configuring a
-  /// percentage of last period's spend).
+  /// Describes a budget amount targeted to the last
+  /// [Filter.calendar_period][google.cloud.billing.budgets.v1beta1.Filter.calendar_period]
+  /// spend. At this time, the amount is automatically 100% of the last calendar
+  /// period's spend; that is, there are no other options yet.
+  /// Future configuration options will be described here (for example, configuring
+  /// a percentage of last period's spend).
+  /// LastPeriodAmount cannot be set for a budget configured with
+  /// a
+  /// [Filter.custom_period][google.cloud.billing.budgets.v1beta1.Filter.custom_period].
   /// </summary>
   public sealed partial class LastPeriodAmount : pb::IMessage<LastPeriodAmount>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1186,6 +1231,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         /// <summary>
         /// Use forecasted spend for the period as the basis for comparison against
         /// the threshold.
+        /// FORECASTED_SPEND can only be set when the budget's time period is a
+        /// [Filter.calendar_period][google.cloud.billing.budgets.v1beta1.Filter.calendar_period].
+        /// It cannot be set in combination with
+        /// [Filter.custom_period][google.cloud.billing.budgets.v1beta1.Filter.custom_period].
         /// </summary>
         [pbr::OriginalName("FORECASTED_SPEND")] ForecastedSpend = 2,
       }
@@ -1248,12 +1297,12 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// be published, in the form `projects/{project_id}/topics/{topic_id}`.
     /// Updates are sent at regular intervals to the topic. The topic needs to be
     /// created before the budget is created; see
-    /// https://cloud.google.com/billing/docs/how-to/budgets#manage-notifications
+    /// https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications
     /// for more details.
     /// Caller is expected to have
     /// `pubsub.topics.setIamPolicy` permission on the topic when it's set for a
     /// budget, otherwise, the API call will fail with PERMISSION_DENIED. See
-    /// https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications
+    /// https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#permissions_required_for_this_task
     /// for more details on Pub/Sub roles and permissions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1543,6 +1592,15 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       services_ = other.services_.Clone();
       subaccounts_ = other.subaccounts_.Clone();
       labels_ = other.labels_.Clone();
+      switch (other.UsagePeriodCase) {
+        case UsagePeriodOneofCase.CalendarPeriod:
+          CalendarPeriod = other.CalendarPeriod;
+          break;
+        case UsagePeriodOneofCase.CustomPeriod:
+          CustomPeriod = other.CustomPeriod.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1578,13 +1636,12 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// [Filter.credit_types_treatment][google.cloud.billing.budgets.v1beta1.Filter.credit_types_treatment]
     /// is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be
     /// subtracted from gross cost to determine the spend for threshold
-    /// calculations.
+    /// calculations. See [a list of acceptable credit type
+    /// values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).
     ///
     /// If
     /// [Filter.credit_types_treatment][google.cloud.billing.budgets.v1beta1.Filter.credit_types_treatment]
-    /// is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty. See [a list
-    /// of acceptable credit type
-    /// values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).
+    /// is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> CreditTypes {
@@ -1657,6 +1714,59 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "calendar_period" field.</summary>
+    public const int CalendarPeriodFieldNumber = 8;
+    /// <summary>
+    /// Optional. Specifies to track usage for recurring calendar period.
+    /// For example, assume that CalendarPeriod.QUARTER is set. The budget will
+    /// track usage from April 1 to June 30, when the current calendar month is
+    /// April, May, June. After that, it will track usage from July 1 to
+    /// September 30 when the current calendar month is July, August, September,
+    /// so on.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Billing.Budgets.V1Beta1.CalendarPeriod CalendarPeriod {
+      get { return usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod ? (global::Google.Cloud.Billing.Budgets.V1Beta1.CalendarPeriod) usagePeriod_ : global::Google.Cloud.Billing.Budgets.V1Beta1.CalendarPeriod.Unspecified; }
+      set {
+        usagePeriod_ = value;
+        usagePeriodCase_ = UsagePeriodOneofCase.CalendarPeriod;
+      }
+    }
+
+    /// <summary>Field number for the "custom_period" field.</summary>
+    public const int CustomPeriodFieldNumber = 9;
+    /// <summary>
+    /// Optional. Specifies to track usage from any start date (required) to any
+    /// end date (optional). This time period is static, it does not recur.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Billing.Budgets.V1Beta1.CustomPeriod CustomPeriod {
+      get { return usagePeriodCase_ == UsagePeriodOneofCase.CustomPeriod ? (global::Google.Cloud.Billing.Budgets.V1Beta1.CustomPeriod) usagePeriod_ : null; }
+      set {
+        usagePeriod_ = value;
+        usagePeriodCase_ = value == null ? UsagePeriodOneofCase.None : UsagePeriodOneofCase.CustomPeriod;
+      }
+    }
+
+    private object usagePeriod_;
+    /// <summary>Enum of possible cases for the "usage_period" oneof.</summary>
+    public enum UsagePeriodOneofCase {
+      None = 0,
+      CalendarPeriod = 8,
+      CustomPeriod = 9,
+    }
+    private UsagePeriodOneofCase usagePeriodCase_ = UsagePeriodOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UsagePeriodOneofCase UsagePeriodCase {
+      get { return usagePeriodCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearUsagePeriod() {
+      usagePeriodCase_ = UsagePeriodOneofCase.None;
+      usagePeriod_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Filter);
@@ -1676,6 +1786,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       if(!services_.Equals(other.services_)) return false;
       if(!subaccounts_.Equals(other.subaccounts_)) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if (CalendarPeriod != other.CalendarPeriod) return false;
+      if (!object.Equals(CustomPeriod, other.CustomPeriod)) return false;
+      if (UsagePeriodCase != other.UsagePeriodCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1688,6 +1801,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       hash ^= services_.GetHashCode();
       hash ^= subaccounts_.GetHashCode();
       hash ^= Labels.GetHashCode();
+      if (usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod) hash ^= CalendarPeriod.GetHashCode();
+      if (usagePeriodCase_ == UsagePeriodOneofCase.CustomPeriod) hash ^= CustomPeriod.GetHashCode();
+      hash ^= (int) usagePeriodCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1713,6 +1829,14 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       subaccounts_.WriteTo(output, _repeated_subaccounts_codec);
       labels_.WriteTo(output, _map_labels_codec);
       creditTypes_.WriteTo(output, _repeated_creditTypes_codec);
+      if (usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) CalendarPeriod);
+      }
+      if (usagePeriodCase_ == UsagePeriodOneofCase.CustomPeriod) {
+        output.WriteRawTag(74);
+        output.WriteMessage(CustomPeriod);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1731,6 +1855,14 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       subaccounts_.WriteTo(ref output, _repeated_subaccounts_codec);
       labels_.WriteTo(ref output, _map_labels_codec);
       creditTypes_.WriteTo(ref output, _repeated_creditTypes_codec);
+      if (usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) CalendarPeriod);
+      }
+      if (usagePeriodCase_ == UsagePeriodOneofCase.CustomPeriod) {
+        output.WriteRawTag(74);
+        output.WriteMessage(CustomPeriod);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1748,6 +1880,12 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       size += services_.CalculateSize(_repeated_services_codec);
       size += subaccounts_.CalculateSize(_repeated_subaccounts_codec);
       size += labels_.CalculateSize(_map_labels_codec);
+      if (usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CalendarPeriod);
+      }
+      if (usagePeriodCase_ == UsagePeriodOneofCase.CustomPeriod) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomPeriod);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1767,6 +1905,18 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       services_.Add(other.services_);
       subaccounts_.Add(other.subaccounts_);
       labels_.Add(other.labels_);
+      switch (other.UsagePeriodCase) {
+        case UsagePeriodOneofCase.CalendarPeriod:
+          CalendarPeriod = other.CalendarPeriod;
+          break;
+        case UsagePeriodOneofCase.CustomPeriod:
+          if (CustomPeriod == null) {
+            CustomPeriod = new global::Google.Cloud.Billing.Budgets.V1Beta1.CustomPeriod();
+          }
+          CustomPeriod.MergeFrom(other.CustomPeriod);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1803,6 +1953,20 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
           }
           case 58: {
             creditTypes_.AddEntriesFrom(input, _repeated_creditTypes_codec);
+            break;
+          }
+          case 64: {
+            usagePeriod_ = input.ReadEnum();
+            usagePeriodCase_ = UsagePeriodOneofCase.CalendarPeriod;
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.Billing.Budgets.V1Beta1.CustomPeriod subBuilder = new global::Google.Cloud.Billing.Budgets.V1Beta1.CustomPeriod();
+            if (usagePeriodCase_ == UsagePeriodOneofCase.CustomPeriod) {
+              subBuilder.MergeFrom(CustomPeriod);
+            }
+            input.ReadMessage(subBuilder);
+            CustomPeriod = subBuilder;
             break;
           }
         }
@@ -1843,6 +2007,20 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
             creditTypes_.AddEntriesFrom(ref input, _repeated_creditTypes_codec);
             break;
           }
+          case 64: {
+            usagePeriod_ = input.ReadEnum();
+            usagePeriodCase_ = UsagePeriodOneofCase.CalendarPeriod;
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.Billing.Budgets.V1Beta1.CustomPeriod subBuilder = new global::Google.Cloud.Billing.Budgets.V1Beta1.CustomPeriod();
+            if (usagePeriodCase_ == UsagePeriodOneofCase.CustomPeriod) {
+              subBuilder.MergeFrom(CustomPeriod);
+            }
+            input.ReadMessage(subBuilder);
+            CustomPeriod = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -1853,8 +2031,11 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Specifies how credits should be treated when determining spend for
-      /// threshold calculations.
+      /// Specifies how credits are applied when determining the spend for
+      /// threshold calculations. Budgets track the total cost minus any applicable
+      /// selected credits.
+      /// [See the documentation for a list of credit
+      /// types](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).
       /// </summary>
       public enum CreditTypesTreatment {
         [pbr::OriginalName("CREDIT_TYPES_TREATMENT_UNSPECIFIED")] Unspecified = 0,
@@ -1869,7 +2050,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("EXCLUDE_ALL_CREDITS")] ExcludeAllCredits = 2,
         /// <summary>
-        /// Credit types specified in the credit_types field are subtracted from the
+        /// [Credit
+        /// types](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type)
+        /// specified in the credit_types field are subtracted from the
         /// gross cost to determine the spend for threshold calculations.
         /// </summary>
         [pbr::OriginalName("INCLUDE_SPECIFIED_CREDITS")] IncludeSpecifiedCredits = 3,
@@ -1877,6 +2060,243 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// All date times begin at 12 AM US and Canadian Pacific Time (UTC-8).
+  /// </summary>
+  public sealed partial class CustomPeriod : pb::IMessage<CustomPeriod>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CustomPeriod> _parser = new pb::MessageParser<CustomPeriod>(() => new CustomPeriod());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CustomPeriod> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetModelReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CustomPeriod() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CustomPeriod(CustomPeriod other) : this() {
+      startDate_ = other.startDate_ != null ? other.startDate_.Clone() : null;
+      endDate_ = other.endDate_ != null ? other.endDate_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CustomPeriod Clone() {
+      return new CustomPeriod(this);
+    }
+
+    /// <summary>Field number for the "start_date" field.</summary>
+    public const int StartDateFieldNumber = 1;
+    private global::Google.Type.Date startDate_;
+    /// <summary>
+    /// Required. The start date must be after January 1, 2017.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Type.Date StartDate {
+      get { return startDate_; }
+      set {
+        startDate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_date" field.</summary>
+    public const int EndDateFieldNumber = 2;
+    private global::Google.Type.Date endDate_;
+    /// <summary>
+    /// Optional. The end date of the time period. Budgets with elapsed end date
+    /// won't be processed. If unset, specifies to track all usage incurred since
+    /// the start_date.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Type.Date EndDate {
+      get { return endDate_; }
+      set {
+        endDate_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CustomPeriod);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CustomPeriod other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StartDate, other.StartDate)) return false;
+      if (!object.Equals(EndDate, other.EndDate)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (startDate_ != null) hash ^= StartDate.GetHashCode();
+      if (endDate_ != null) hash ^= EndDate.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (startDate_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartDate);
+      }
+      if (endDate_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndDate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startDate_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartDate);
+      }
+      if (endDate_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndDate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (startDate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartDate);
+      }
+      if (endDate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndDate);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CustomPeriod other) {
+      if (other == null) {
+        return;
+      }
+      if (other.startDate_ != null) {
+        if (startDate_ == null) {
+          StartDate = new global::Google.Type.Date();
+        }
+        StartDate.MergeFrom(other.StartDate);
+      }
+      if (other.endDate_ != null) {
+        if (endDate_ == null) {
+          EndDate = new global::Google.Type.Date();
+        }
+        EndDate.MergeFrom(other.EndDate);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startDate_ == null) {
+              StartDate = new global::Google.Type.Date();
+            }
+            input.ReadMessage(StartDate);
+            break;
+          }
+          case 18: {
+            if (endDate_ == null) {
+              EndDate = new global::Google.Type.Date();
+            }
+            input.ReadMessage(EndDate);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startDate_ == null) {
+              StartDate = new global::Google.Type.Date();
+            }
+            input.ReadMessage(StartDate);
+            break;
+          }
+          case 18: {
+            if (endDate_ == null) {
+              EndDate = new global::Google.Type.Date();
+            }
+            input.ReadMessage(EndDate);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
