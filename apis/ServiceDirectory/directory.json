@@ -170,6 +170,24 @@
       "CSharpNamespaceFromProtos": "Google.Api.Serviceusage.V1"
     },
     {
+      "ServiceDirectory": "google/api/serviceusage/v1beta1",
+      "Name": "serviceusage.googleapis.com",
+      "Title": "Service Usage API",
+      "Description": "Enables services that service consumers want to use on Google Cloud Platform, lists the available or enabled services, or disables services that service consumers no longer use.",
+      "ServiceConfigFile": "google/api/serviceusage/v1beta1/serviceusage_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.api.serviceusage.v1beta1",
+      "PackageFromProtos": "google.api.serviceusage.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/api/serviceusage/v1beta1",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Api.ServiceUsage.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/appengine/v1",
       "Name": "appengine.googleapis.com",
       "Title": "App Engine Admin API",
