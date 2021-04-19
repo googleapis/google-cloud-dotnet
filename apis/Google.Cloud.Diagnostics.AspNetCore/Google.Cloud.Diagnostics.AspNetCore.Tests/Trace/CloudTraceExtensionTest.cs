@@ -45,8 +45,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var request = context.Request;
             request.Headers[TraceHeaderContext.TraceHeader] = traceHeader;
 
-            var accessor = new HttpContextAccessor();
-            accessor.HttpContext = context;
+            var accessor = new HttpContextAccessor { HttpContext = context };
 
             var traceIdFactory = TraceIdFactory.Create();
 
@@ -63,16 +62,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         {
             var header = $"{_traceId}/{_spanId};o=1";
             var provider = CreateProviderForTraceHeaderContext(header);
-            var headerContext = CloudTraceExtension.CreateTraceHeaderContext(provider);
+            var headerContext = CloudTraceExtension.ProvideGoogleTraceHeaderContext(provider);
             Assert.Equal(TraceHeaderContext.FromHeader(header).ToString(), headerContext.ToString());
         }
 
         [Fact]
-        public void CreateTraceHeaderContext_UseBackUpFunc()
+        public void CreateTraceHeaderContext_UseShouldTraceFallback()
         {
             var header = $"{_traceId}/{_spanId};";
             var provider = CreateProviderForTraceHeaderContext(header);
-            var headerContext = CloudTraceExtension.CreateTraceHeaderContext(provider);
+            var headerContext = CloudTraceExtension.ProvideGoogleTraceHeaderContext(provider);
             Assert.Equal(TraceHeaderContext.FromHeader(header).ToString(), headerContext.ToString());
         }
 

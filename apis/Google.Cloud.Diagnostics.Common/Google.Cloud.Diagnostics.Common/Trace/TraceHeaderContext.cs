@@ -18,15 +18,14 @@ using System.Text.RegularExpressions;
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// Context from the Cloud Trace Header.
+    /// Context from the Google Cloud Trace Header.
     /// </summary>
-    /// 
     /// <remarks>
     /// A trace can be forced by passing information along in the trace header ("X-Cloud-Trace-Context").
     /// The trace id, parent span id and whether or not to trace can be set.
     /// See: https://cloud.google.com/trace/docs/faq#how_do_i_force_a_request_to_be_traced
     /// </remarks>
-    public sealed class TraceHeaderContext
+    public sealed class TraceHeaderContext : ITraceContext
     {
         private static readonly TraceIdFactory _traceIdFactory = TraceIdFactory.Create();
 
@@ -47,16 +46,13 @@ namespace Google.Cloud.Diagnostics.Common
         internal static readonly Regex TraceHeaderRegex =
             new Regex(@"^([A-Fa-f0-9]{32})/([0-9]+)(?:;o=([0-1]))?$", RegexOptions.Compiled);
 
-        /// <summary>Gets the trace id or null if none is available.</summary>
+        /// <inheritdoc/>
         public string TraceId { get; }
 
-        /// <summary>Gets the span id or null if none is available.</summary>
+        /// <inheritdoc/>
         public ulong? SpanId { get; }
 
-        /// <summary>
-        /// True if the request should be traced, false if it should not be.
-        /// Null if the trace header does not indicate whether or not it should be traced.
-        /// </summary>
+        /// <inheritdoc/>
         public bool? ShouldTrace { get; }
 
         /// <summary>

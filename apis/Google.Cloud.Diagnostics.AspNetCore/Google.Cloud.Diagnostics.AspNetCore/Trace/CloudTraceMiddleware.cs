@@ -30,13 +30,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// Middleware that will, when invoked, call the next <see cref="RequestDelegate"/>,
     /// and trace the time taken for the next delegate to run.  The time taken and metadata
-    /// will be sent to the Stackdriver Trace API.
+    /// will be sent to the Google Cloud Trace API.
     /// </summary>
     internal sealed class CloudTraceMiddleware
     {
         private readonly ICloudTraceNameProvider _nameProvider;
         private readonly RequestDelegate _next;
-        private readonly Func<TraceHeaderContext, IManagedTracer> _tracerFactory;
+        private readonly Func<ITraceContext, IManagedTracer> _tracerFactory;
 
         /// <summary>
         /// Create a new instance of <see cref="CloudTraceMiddleware"/>.
@@ -45,11 +45,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="tracerFactory">A factory to create <see cref="IManagedTracer"/>s. Must not be null.</param>
         /// <param name="nameProvider">The cloud trace name provider used for naming the root trace span</param>
         public CloudTraceMiddleware(
-            RequestDelegate next, Func<TraceHeaderContext, IManagedTracer> tracerFactory, ICloudTraceNameProvider nameProvider)
+            RequestDelegate next, Func<ITraceContext, IManagedTracer> tracerFactory, ICloudTraceNameProvider nameProvider)
         {
-            _nameProvider = nameProvider;
             _next = GaxPreconditions.CheckNotNull(next, nameof(next));
             _tracerFactory = GaxPreconditions.CheckNotNull(tracerFactory, nameof(tracerFactory));
+            _nameProvider = nameProvider;
         }
 
         /// <summary>
@@ -58,14 +58,23 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Stackdriver Trace API.
         /// </summary>
         /// <param name="httpContext">The current HTTP context.</param>
-        /// <param name="traceHeaderContext">Information from the current request header. Must not be null.</param>
-        public async Task Invoke(HttpContext httpContext, TraceHeaderContext traceHeaderContext)
+        /// <param name="traceContext">Trace information from the current request. Must not be null.</param>
+        /// <param name="fallback">Predicate to be used if the trace context has no information about whether
+        /// the request should be traced or not.</param>
+        /// <param name="traceContextPropagator">Trace context propagator to be used to set the trace context
+        /// on the <see cref="HttpResponse"/>. Must not be null.</param>
+        public async Task Invoke(
+            HttpContext httpContext, ITraceContext traceContext, TraceDecisionPredicate fallback, Action<HttpResponse, ITraceContext> traceContextPropagator)
         {
-            GaxPreconditions.CheckNotNull(traceHeaderContext, nameof(traceHeaderContext));
+            GaxPreconditions.CheckNotNull(traceContext, nameof(traceContext));
+            GaxPreconditions.CheckNotNull(traceContextPropagator, nameof(traceContextPropagator));
+
+            // Applies the trace decision fallback, if needed.
+            traceContext = WithShouldTraceFallback(traceContext, fallback.ShouldTrace(httpContext.Request));
 
             // Create a tracer for the given request and set it on the context manager so
             // the tracer can be used in other places.
-            var tracer = _tracerFactory(traceHeaderContext);
+            var tracer = _tracerFactory(traceContext);
             ContextTracerManager.SetCurrentTracer(tracer);
 
             if (tracer.GetCurrentTraceId() == null)
@@ -74,13 +83,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }
             else
             {
-                if (traceHeaderContext.TraceId != null)
+                if (traceContext.TraceId != null)
                 {
-                    // Set the trace updated trace header on the response.
-                    var updatedHeaderContext = TraceHeaderContext.Create(
-                        tracer.GetCurrentTraceId(), tracer.GetCurrentSpanId() ?? 0, true);
-                    httpContext.Response.Headers.Add(
-                        TraceHeaderContext.TraceHeader, updatedHeaderContext.ToString());
+                    // Set the current trace context on the response.
+                    var currentTraceContext = ContextTracerManager.GetCurrentTraceContext();
+                    traceContextPropagator.Invoke(httpContext.Response, currentTraceContext);
                 }
 
                 // Trace the delegate and annotate it with information from the current
@@ -112,5 +119,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 }
             }
         }
+
+        private ITraceContext WithShouldTraceFallback(ITraceContext context, bool? fallback) =>
+            context.ShouldTrace is null && fallback is bool ? new SimpleTraceContext(context.TraceId, context.SpanId, fallback) : context;
     }
 }

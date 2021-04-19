@@ -14,7 +14,6 @@
 
 using Moq;
 using Xunit;
-
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
@@ -32,13 +31,13 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private static readonly IConsumer<TraceProto> s_comsumer = new Mock<IConsumer<TraceProto>>().Object;
 
         /// <summary>A trace header that will say to trace.</summary>
-        private static readonly TraceHeaderContext s_headerTrue = TraceHeaderContext.Create(TraceId, SpanId, true);
+        private static readonly ITraceContext s_headerTrue = new SimpleTraceContext(TraceId, SpanId, true);
 
         /// <summary>A trace header that will have no information about whether to trace or not.</summary>
-        private static readonly TraceHeaderContext s_headerNull = TraceHeaderContext.Create(null, null, null);
+        private static readonly ITraceContext s_headerNull = new SimpleTraceContext(null, null, null);
 
         /// <summary>A trace header that will say not to trace.</summary>
-        private static readonly TraceHeaderContext s_headerFalse = TraceHeaderContext.Create(null, null, false);
+        private static readonly ITraceContext s_headerFalse = new SimpleTraceContext(null, null, false);
 
         /// <summary>A managed tracer factory that has an option factory that will always suggest trace.</summary>
         private static readonly ManagedTracerFactory s_tracerFactoryNoLimit = CreateFactory(TraceOptionsFactory.AlwaysTrace);

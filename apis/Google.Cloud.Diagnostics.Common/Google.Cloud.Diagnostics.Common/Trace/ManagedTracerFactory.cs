@@ -19,7 +19,7 @@ namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// A factory that will generate <see cref="IManagedTracer"/>s from 
-    /// <see cref="TraceHeaderContext"/>s.  If the <see cref="TraceHeaderContext"/> does not provide
+    /// <see cref="ITraceContext"/>s. If the <see cref="ITraceContext"/> does not provide
     /// the needed context to determine the proper <see cref="IManagedTracer"/> then the given
     /// <see cref="ITraceOptionsFactory"/> will decide.
     /// </summary>
@@ -36,7 +36,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="projectId">The Google Cloud Platform project ID. Must not be null.</param>
         /// <param name="consumer">A trace consumer for the tracer. Must not be null.</param>
         /// <param name="optionsFactory">An options factory to fall back to if the
-        /// <see cref="TraceHeaderContext"/> does not provide enough context. Must not be null.</param>
+        /// <see cref="ITraceContext"/> does not provide enough context. Must not be null.</param>
         /// <param name="traceIdFactory">A trace Id factory. Must not be null.</param>
         internal ManagedTracerFactory(
             string projectId,
@@ -52,22 +52,22 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <inheritdoc />
-        public IManagedTracer CreateTracer(TraceHeaderContext headerContext)
+        internal IManagedTracer CreateTracer(ITraceContext traceContext)
         {
-            GaxPreconditions.CheckNotNull(headerContext, nameof(headerContext));
-            if (!ShouldTrace(headerContext))
+            GaxPreconditions.CheckNotNull(traceContext, nameof(traceContext));
+            if (!ShouldTrace(traceContext))
             {
                 return NullManagedTracer.Instance;
             }
-            var traceId = headerContext.TraceId ?? _traceIdFactory.NextId();
-            return SimpleManagedTracer.Create(_consumer, _projectId, traceId, headerContext.SpanId);
+            var traceId = traceContext.TraceId ?? _traceIdFactory.NextId();
+            return SimpleManagedTracer.Create(_consumer, _projectId, traceId, traceContext.SpanId);
         }
 
         /// <summary>
-        /// True if the tracing should occur. Decision based on a <see cref="TraceHeaderContext"/>
+        /// True if the tracing should occur. Decision based on a <see cref="ITraceContext"/>
         /// and an <see cref="ITraceOptionsFactory"/>.
         /// </summary>
-        internal bool ShouldTrace(TraceHeaderContext headerContext) =>
-            headerContext.ShouldTrace ?? _optionsFactory.CreateOptions().ShouldTrace;
+        internal bool ShouldTrace(ITraceContext traceContext) =>
+            traceContext.ShouldTrace ?? _optionsFactory.CreateOptions().ShouldTrace;
     }
 }
