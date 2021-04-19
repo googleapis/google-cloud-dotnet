@@ -200,3 +200,50 @@ headers:
 
 {{sample:Trace.TraceOutgoing}}
 
+## Using Tracing with other than Google's own trace header
+
+The `Google.Cloud.Diagnostics` packages have been coupled to
+[Google's own trace header](https://cloud.google.com/trace/docs/setup#force-trace) from their
+initial release up to, and including, version 4.2.0. Starting on version 4.3.0-beta01 and upwards
+it is possible to consume and emit trace context information in a format other than Google's own
+trace header.
+
+The default behaviour of the libraries is still to consume and emit trace context information using
+Google's trace header.
+
+### Custom trace context for incoming HTTP requests
+
+If the HTTP requests that your application handles contain trace context information in a custom format
+you need to use dependency injection to register:
+
+- A `Google.Cloud.Diagnostics.Common.ITraceContext`, which will probably be scoped, and that you can create
+from information obtained from any other services available via dependency injection, including 
+`Microsoft.AspNetCore.Http.IHttpContextAccessor`. The trace context will be obtained per request and used
+as the parent context for all trace spans, either implicit or explicit, initiated from within the code handling
+the request.
+- A `System.Action<Micorosft.AspNetCore.Http.HttpResponse, Google.Cloud.Diagnostics.Common.ITraceContext>`
+that will be used to set trace context information on the HTTP response to each request. This will be called
+before returning a response with the updated (as modified by the request handling code) trace context information.
+
+### Custom trace context for outgoing HTTP requests
+
+If your application itself performs HTTP requests to other services and you want to propagate trace context
+information in a format other than Google's trace header, you can use dependency injection to register a
+`System.Action<System.Net.Http.HttpRequestMessage, Google.Cloud.Diagnostics.Common.ITraceContext>` that will be
+used to set trace context information on outgoing HTTP requests. A few things to notice:
+
+- The format in which you propagate trace context information to external requests doesn't have to be the same as
+the format in which trace context information is received by your application. You might even be accepting Google's
+trace header, but the service you are calling is not.
+- The trace context information propagated to outgoing requests will be the information available at the time the 
+request is made, which may or may not be the same as the information you received. For instance, your code may have
+created several trace spans before making the outgoing request, in which case the span ID that will be propagated
+is the one of the innermost span that remains open at the moment of sending the outgoing request.
+
+### Custom trace context: example
+
+The following is for demonstration purposes only. We assume that trace context information contains a trace ID only
+that is propagated in a `custom_trace_id` header. This is of no use in the real world.
+
+{{sample:Trace.CustomTraceContext}}
+

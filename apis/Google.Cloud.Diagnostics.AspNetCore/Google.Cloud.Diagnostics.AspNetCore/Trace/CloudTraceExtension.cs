@@ -18,7 +18,9 @@ using Google.Cloud.Trace.V1;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using System;
+using System.Net.Http;
 
 #if NETCOREAPP3_1
 namespace Google.Cloud.Diagnostics.AspNetCore3
@@ -116,20 +118,36 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var projectId = Project.GetAndCheckProjectId(serviceOptions.ProjectId);
 
             var consumer = ManagedTracer.CreateConsumer(client, options);
-            var tracerFactory = ManagedTracer.CreateTracerFactory(projectId, consumer, options);
+            var tracerFactory = ManagedTracer.CreateFactory(projectId, consumer, options);
 
-            services.AddScoped(CreateTraceHeaderContext);
+            // We use TryAdd... here to allow user code to inject their own trace context provider
+            // and matching trace context response propagator. We use Google trace header otherwise.
+            services.TryAddScoped<ITraceContext>(ProvideGoogleTraceHeaderContext);
+            services.TryAddSingleton<Action<HttpResponse, ITraceContext>>(PropagateGoogleTraceHeaders);
+
             services.AddSingleton(tracerFactory);
+            // Obsolete: Adding this for backwards compatibility in case someone is using the old factory type.
+            // The new and prefered factory type is Func<ITraceContext, IManagedTracer>.
+            services.AddSingleton<Func<TraceHeaderContext, IManagedTracer>>(tracerFactory);
             services.AddHttpContextAccessor();
             services.AddSingleton(ManagedTracer.CreateDelegatingTracer(ContextTracerManager.GetCurrentTracer));
             services.AddTransient<ICloudTraceNameProvider, DefaultCloudTraceNameProvider>();
-            
+
             // On .Net Standard 2.0 or higher, we can use the System.Net.Http.IHttpClientFactory defined in Microsoft.Extensions.Http,
             // for which we need a DelagatingHandler with no InnerHandler set. This is the recommended way.
             // It should be registered as follows.
-            services.AddTransient(sp => new UnchainedTraceHeaderPropagatingHandler(ContextTracerManager.GetCurrentTracer));
-            // This is to be used for explicitly creating an HttpClient instance. Valid for all platforms.
-            services.AddSingleton(new TraceHeaderPropagatingHandler(ContextTracerManager.GetCurrentTracer));
+            services.AddTransient(UnchainedTraceHeaderPropagatingHandlerFactory);
+
+            // This is to be used for explicitly creating an HttpClient instance. Valid for all platforms but subject to
+            // issues with HttpClient lifetime as described in
+            // https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.
+            // Although TraceHeaderPropagatingHandler supports a custom trace context propagator, we don't support it here by default.
+            // The context propagator may be transient or scoped, in which case we'd have to register the TraceHeaderPropagatingHandler
+            // as transient or scoped respectively. We don't know how to do that, and we don't want to do transient by default because
+            // of the lifecycle issues described on the link above.
+            // We use TryAdd so that user code may add their own TraceHeaderPropagatingHandler.
+            // Obsolete: We are targeting netstastandard2.0 so user code can use the preferred UnchainedTraceHeaderPropagatingHandler.
+            services.TryAddSingleton(new TraceHeaderPropagatingHandler(ContextTracerManager.GetCurrentTracer));
 
             return services.AddSingleton(traceFallbackPredicate);
         }
@@ -137,16 +155,33 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Creates an <see cref="TraceHeaderContext"/> based on the current <see cref="HttpContext"/>
         /// and a <see cref="TraceDecisionPredicate"/>.
+        /// Used by default to obtain trace context, if user code has not specified a trace context provider.
         /// </summary>
-        internal static TraceHeaderContext CreateTraceHeaderContext(IServiceProvider provider)
+        internal static TraceHeaderContext ProvideGoogleTraceHeaderContext(IServiceProvider serviceProvider)
         {
-            var accessor = provider.GetRequiredService<IHttpContextAccessor>();
-            var traceDecisionPredicate = provider.GetRequiredService<TraceDecisionPredicate>();
-
+            var accessor = serviceProvider.GetRequiredService<IHttpContextAccessor>();
             string header = accessor.HttpContext?.Request?.Headers[TraceHeaderContext.TraceHeader];
-            Func<bool?> shouldTraceFunc = () =>
-                traceDecisionPredicate.ShouldTrace(accessor.HttpContext?.Request);
-            return TraceHeaderContext.FromHeader(header, shouldTraceFunc);
+            return TraceHeaderContext.FromHeader(header);
         }
+
+        /// <summary>
+        /// Propagates Google trace context information to the response.
+        /// Used by default if user code has not specified a propagator of their own.
+        /// </summary>
+        internal static void PropagateGoogleTraceHeaders(HttpResponse response, ITraceContext traceContext)
+        {
+            var googleHeader = TraceHeaderContext.Create(traceContext.TraceId, traceContext.SpanId ?? 0, traceContext.ShouldTrace);
+            response.Headers.Add(TraceHeaderContext.TraceHeader, googleHeader.ToString());
+        }
+
+        /// <summary>
+        /// Returns an <see cref="UnchainedTraceHeaderPropagatingHandler"/> configured with the user specified trace context 
+        /// outgoing propagator. If user code has not specified a trace context outgoing propagator, the Google header will
+        /// be propagated.
+        /// </summary>
+        internal static UnchainedTraceHeaderPropagatingHandler UnchainedTraceHeaderPropagatingHandlerFactory(IServiceProvider serviceProvider) =>
+            serviceProvider.GetService<Action<HttpRequestMessage, ITraceContext>>() is Action<HttpRequestMessage, ITraceContext> traceContextOutgoingPropagator ?
+                new UnchainedTraceHeaderPropagatingHandler(ContextTracerManager.GetCurrentTracer, traceContextOutgoingPropagator) :
+                new UnchainedTraceHeaderPropagatingHandler(ContextTracerManager.GetCurrentTracer);
     }
 }

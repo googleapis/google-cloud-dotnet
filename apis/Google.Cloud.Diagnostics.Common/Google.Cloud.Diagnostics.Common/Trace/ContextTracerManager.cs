@@ -43,5 +43,12 @@ namespace Google.Cloud.Diagnostics.Common
         {
             return CurrentTracer ?? NullManagedTracer.Instance;
         }
+
+        /// <summary>
+        /// Gets the current <see cref="ITraceContext"/> as defined by the <see cref="GetCurrentTracer"/>
+        /// or null if the current trace context is not known at the time.
+        /// </summary>
+        public static ITraceContext GetCurrentTraceContext() =>
+            SimpleTraceContext.FromTracer(GetCurrentTracer());
     }
 }

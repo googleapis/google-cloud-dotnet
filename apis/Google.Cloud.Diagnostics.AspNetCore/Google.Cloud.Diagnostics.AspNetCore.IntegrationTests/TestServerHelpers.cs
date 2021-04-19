@@ -94,8 +94,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public static TestServer GetTestServer(IWebHostBuilder hostBuilder) => new TestServer(hostBuilder);
 
-        public static TestServer GetTestServer<TStartup>() where TStartup : class =>
-            GetTestServer(GetHostBuilder<TStartup>());
+        public static TestServer GetTestServer<TStartup>(Action<IWebHostBuilder> configure = null) where TStartup : class =>
+            GetTestServer(GetHostBuilder<TStartup>(configure));
 
         public static IServiceProvider GetServices(TestServer server) => server.Host.Services;
 

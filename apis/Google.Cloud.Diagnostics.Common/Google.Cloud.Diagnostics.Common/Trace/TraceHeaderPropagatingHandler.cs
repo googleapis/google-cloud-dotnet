@@ -50,9 +50,22 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="innerHandler">The inner handler to delegate to. May be null, in which
         /// case a new <see cref="HttpClientHandler"/> will be used.</param>
         public TraceHeaderPropagatingHandler(Func<IManagedTracer> managedTracerFactory, HttpMessageHandler innerHandler = null)
-            :base(managedTracerFactory)
-        {
+            :this(managedTracerFactory, null, innerHandler)
+        { }
+
+        /// <summary>
+        /// Constructs a new instance using the given delegate to obtain the "current" tracer
+        /// on each request.
+        /// </summary>
+        /// <param name="managedTracerFactory">A delegate used to obtain the "current" tracer
+        /// for each request. The delegate should therefore be thread-safe.</param>
+        /// <param name="traceContextPropagator">The trace context propagator used to set the trace context on the outgoing
+        /// HTTP request. May be null, in which case the Google Trace Header will be set.</param>
+        /// <param name="innerHandler">The inner handler to delegate to. May be null, in which
+        /// case a new <see cref="HttpClientHandler"/> will be used.</param>
+        public TraceHeaderPropagatingHandler(
+            Func<IManagedTracer> managedTracerFactory, Action<HttpRequestMessage, ITraceContext> traceContextPropagator, HttpMessageHandler innerHandler = null)
+            : base(managedTracerFactory, traceContextPropagator) =>
             InnerHandler = innerHandler ?? new HttpClientHandler();
-        }
     }
 }

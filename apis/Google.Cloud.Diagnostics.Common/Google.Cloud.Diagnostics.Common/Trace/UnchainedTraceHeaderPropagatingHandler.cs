@@ -21,13 +21,13 @@ using System.Threading.Tasks;
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// Class for tracing outgoing HTTP requests and propagating the trace header.
+    /// Class for tracing outgoing HTTP requests and propagating the trace context.
     /// </summary>
     /// <remarks>
     /// <para>
-    /// Ensures the trace header is propagated in the headers for outgoing HTTP requests and 
+    /// Ensures the trace context is propagated for outgoing HTTP requests and 
     /// traces the total time of the outgoing HTTP request. This is only done if tracing is initialized
-    /// and tracing is enabled for the request current request.
+    /// and tracing is enabled for the current request.
     /// </para>
     /// <para>
     /// Explicitly leaves unset the InnerHandler property so that this Handler can be used with the
@@ -37,6 +37,7 @@ namespace Google.Cloud.Diagnostics.Common
     public class UnchainedTraceHeaderPropagatingHandler : DelegatingHandler
     {
         private readonly Func<IManagedTracer> _managedTracerFactory;
+        private readonly Action<HttpRequestMessage, ITraceContext> _traceContextPropagator;
 
         /// <summary>
         /// Constructs a new instance using the given delegate to obtain the "current" tracer
@@ -45,36 +46,49 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="managedTracerFactory">A delegate used to obtain the "current" tracer
         /// for each request. The delegate should therefore be thread-safe.</param>
         public UnchainedTraceHeaderPropagatingHandler(Func<IManagedTracer> managedTracerFactory)
+            : this(managedTracerFactory, traceContextPropagator: null)
+        { }
+
+        /// <summary>
+        /// Constructs a new instance using the given delegate to obtain the "current" tracer
+        /// on each request.
+        /// </summary>
+        /// <param name="managedTracerFactory">A delegate used to obtain the "current" tracer
+        /// for each request. The delegate should therefore be thread-safe.</param>
+        /// <param name="traceContextPropagator">The trace context propagator used to set the trace context on the outgoing
+        /// HTTP request. May be null, in which case the Google Trace Header will be set.</param>
+        public UnchainedTraceHeaderPropagatingHandler(Func<IManagedTracer> managedTracerFactory, Action<HttpRequestMessage, ITraceContext> traceContextPropagator)
         {
             _managedTracerFactory = GaxPreconditions.CheckNotNull(managedTracerFactory, nameof(managedTracerFactory));
+            _traceContextPropagator = traceContextPropagator ?? PropagateGoogleTraceHeader;
         }
 
         /// <summary>
-        /// Sends the given request. If tracing is initialized and enabled the outgoing request is
-        /// traced and the trace header is added to the request.
+        /// Sends the given request. If tracing is initialized and enabled the outgoing request is traced
+        /// and the trace context is propagated.
         /// </summary>
-        protected override Task<HttpResponseMessage> SendAsync(
-            HttpRequestMessage request, CancellationToken cancellationToken)
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             var tracer = _managedTracerFactory();
-            if (tracer.GetCurrentTraceId() == null)
+            if (SimpleTraceContext.FromTracer(tracer) is SimpleTraceContext traceContext)
             {
-                return base.SendAsync(request, cancellationToken);
+                _traceContextPropagator(request, traceContext);
+
+                return tracer.RunInSpanAsync(
+                    async () =>
+                    {
+                        tracer.AnnotateSpan(TraceLabels.FromHttpRequestMessage(request));
+                        var response = await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
+                        tracer.AnnotateSpan(TraceLabels.FromHttpResponseMessage(response));
+                        return response;
+                    },
+                    request.RequestUri.ToString());
             }
 
-            var traceHeader = TraceHeaderContext.Create(
-                tracer.GetCurrentTraceId(), tracer.GetCurrentSpanId() ?? 0, true);
-            request.Headers.Add(TraceHeaderContext.TraceHeader, traceHeader.ToString());
-
-            return tracer.RunInSpanAsync(
-                async () =>
-                {
-                    tracer.AnnotateSpan(TraceLabels.FromHttpRequestMessage(request));
-                    var response = await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
-                    tracer.AnnotateSpan(TraceLabels.FromHttpResponseMessage(response));
-                    return response;
-                },
-                request.RequestUri.ToString());
+            return base.SendAsync(request, cancellationToken);
         }
+
+        private static void PropagateGoogleTraceHeader(HttpRequestMessage request, ITraceContext context) =>
+            request.Headers.Add(TraceHeaderContext.TraceHeader, new TraceHeaderContext(context.TraceId, context.SpanId ?? 0, context.ShouldTrace).ToString());
     }
 }

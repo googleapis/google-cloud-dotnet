@@ -45,7 +45,22 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="projectId">The Google Cloud Platform project ID. Must not be null</param>
         /// <param name="consumer">The trace consumer.  Must not be null.</param>
         /// <param name="options">Trace options. Must not be null.</param>
-        public static Func<TraceHeaderContext, IManagedTracer> CreateTracerFactory(string projectId, IConsumer<TraceProto> consumer, TraceOptions options)
+        /// <remarks>
+        /// This method has been made obsolete. You should use <see cref="CreateFactory(string, IConsumer{TraceProto}, TraceOptions)"/>
+        /// instead. The function returned by <see cref="CreateFactory(string, IConsumer{TraceProto}, TraceOptions)"/>
+        /// will accept any <see cref="ITraceContext"/> as input and not just <see cref="TraceHeaderContext"/>.
+        /// </remarks>
+        [Obsolete("Please use ManagedTracer.CreateFactory instead which only differs in that the returned factory will accept any ITraceContext as input.")]
+        public static Func<TraceHeaderContext, IManagedTracer> CreateTracerFactory(string projectId, IConsumer<TraceProto> consumer, TraceOptions options) =>
+            CreateFactory(projectId, consumer, options);
+
+        /// <summary>
+        /// Create a factory to generate an <see cref="IManagedTracer"/> from an <see cref="ITraceContext"/>.
+        /// </summary>
+        /// <param name="projectId">The Google Cloud Platform project ID. Must not be null</param>
+        /// <param name="consumer">The trace consumer.  Must not be null.</param>
+        /// <param name="options">Trace options. Must not be null.</param>
+        public static Func<ITraceContext, IManagedTracer> CreateFactory(string projectId, IConsumer<TraceProto> consumer, TraceOptions options)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
@@ -61,6 +76,6 @@ namespace Google.Cloud.Diagnostics.Common
         /// that is retrieved from the given function on each method call.
         /// </summary>
         public static IManagedTracer CreateDelegatingTracer(Func<IManagedTracer> tracerFactory) 
-            => new DelegatingTracer(GaxPreconditions.CheckNotNull(tracerFactory, nameof(tracerFactory)));        
+            => new DelegatingTracer(GaxPreconditions.CheckNotNull(tracerFactory, nameof(tracerFactory)));
     }
 }

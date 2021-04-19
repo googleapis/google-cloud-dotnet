@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Moq;
 using System;
-using System.Linq;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -24,90 +24,148 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class TraceHeaderPropagatingHandlerTest
     {
-        private const string traceId = "105445aa7843bc8bf206b12000100f00";
-        private const ulong spanId = 81237123;
-        private readonly TraceHeaderContext headerContext = 
-            TraceHeaderContext.Create(traceId, spanId, true);
-
-        private Mock<IManagedTracer> GetSetUpTracer()
-        {
-            var mockTracer = new Mock<IManagedTracer>();
-            mockTracer.Setup(t => t.GetCurrentTraceId()).Returns(traceId);
-            mockTracer.Setup(t => t.GetCurrentSpanId()).Returns(spanId);
-            return mockTracer;
-        }
+        private const string TraceId = "105445aa7843bc8bf206b12000100f00";
+        private const ulong SpanId = 81237123;
 
         [Fact]
         public void InnerHandler_Set()
         {
-            var mockTracer = new Mock<IManagedTracer>();
-            var traceHandler = new TraceHeaderPropagatingHandler(() => mockTracer.Object);
-
+            var traceHandler = new TraceHeaderPropagatingHandler(() => new FakeManagedTracer(null, null));
             Assert.NotNull(traceHandler.InnerHandler);
         }
 
         [Fact]
         public async Task SendAsync_NoTrace()
         {
-            var mockTracer = new Mock<IManagedTracer>();
-            var fakeHandler = new FakeDelegatingHandler();
-            var traceHandler = new TraceHeaderPropagatingHandler(() => mockTracer.Object, fakeHandler);
+            var managedTracer = new FakeManagedTracer(null, null);
+            var traceHandler = new TraceHeaderPropagatingHandler(() => managedTracer, new BounceBackRequestHandler());
 
-            using (var httpClient = new HttpClient(traceHandler))
-            {
-                await httpClient.GetAsync("https://www.google.com");
-            }
+            using var httpClient = new HttpClient(traceHandler);
+            var response = await httpClient.GetAsync("https://www.google.com");
 
-            mockTracer.Verify(t => t.StartSpan(It.IsAny<string>(), null), Times.Never());
+            AssertDoesNotContainGoogleTraceHeader(response.RequestMessage);
+            AssertDoesNotContainTraceProperties(response.RequestMessage);
+
+            managedTracer.AssertNoRanInSpan();
         }
 
         [Fact]
-        public async Task SendAsync_Trace()
+        public async Task SendAsync_Trace_Default()
         {
-            var mockTracer = GetSetUpTracer();
-            var fakeHandler = new FakeDelegatingHandler(headerContext);
-            var traceHandler = new TraceHeaderPropagatingHandler(() => mockTracer.Object, fakeHandler);
+            var managedTracer = new FakeManagedTracer(TraceId, SpanId);
+            var traceHandler = new TraceHeaderPropagatingHandler(() => managedTracer, new BounceBackRequestHandler());
 
-            var requestUri = new Uri("https://www.google.com");
-            var requestUriString = requestUri.ToString();
+            var url = "https://www.google.com/";
 
-            mockTracer.Setup(t => t.RunInSpanAsync(
-                It.IsAny<Func<Task<HttpResponseMessage>>>(), requestUri.ToString(), null))
-                .Returns(Task.FromResult(new HttpResponseMessage()));
+            using var httpClient = new HttpClient(traceHandler);
+            var response = await httpClient.GetAsync(url);
 
-            using (var httpClient = new HttpClient(traceHandler))
-            {
-                await httpClient.GetAsync(requestUri);
-            }
+            AssertContainsGoogleTraceHeader(response.RequestMessage);
+            AssertDoesNotContainTraceProperties(response.RequestMessage);
 
-            mockTracer.VerifyAll();
+            managedTracer.AssertSingleRanInSpan(url);
         }
 
-        /// <summary>
-        /// Fake <see cref="DelegatingHandler"/> to verify added trace headers.
-        /// </summary>
-        private class FakeDelegatingHandler : DelegatingHandler
+        [Fact]
+        public async Task SendAsync_Trace_Custom()
         {
-            private readonly TraceHeaderContext _context;
+            var managedTracer = new FakeManagedTracer(TraceId, SpanId);
+            var traceHandler = new TraceHeaderPropagatingHandler(
+                () => managedTracer, SetOutgoingHttpTraceContext, new BounceBackRequestHandler());
 
-            public FakeDelegatingHandler(TraceHeaderContext context = null)
-            {
-                _context = context;
-            }
+            var url = "https://www.google.com/";
 
-            protected override Task<HttpResponseMessage> SendAsync(
-                HttpRequestMessage request, CancellationToken cancellationToken)
-            {
-                if (_context != null)
-                {
-                    var traceHeader = request.Headers.GetValues(TraceHeaderContext.TraceHeader).First();
-                    var currentContext = TraceHeaderContext.FromHeader(traceHeader);
-                    Assert.Equal(_context.TraceId, currentContext.TraceId);
-                    Assert.Equal(_context.SpanId, currentContext.SpanId);
-                    Assert.Equal(_context.ShouldTrace, currentContext.ShouldTrace);
-                }
-                return Task.FromResult(new HttpResponseMessage());
-            }
+            using var httpClient = new HttpClient(traceHandler);
+            var response = await httpClient.GetAsync(url);
+
+            AssertContainsTraceProperties(response.RequestMessage);
+            AssertDoesNotContainGoogleTraceHeader(response.RequestMessage);
+
+            managedTracer.AssertSingleRanInSpan(url);
         }
+
+        private class BounceBackRequestHandler : HttpMessageHandler
+        {
+            protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) =>
+                Task.FromResult(new HttpResponseMessage { RequestMessage = request });
+        }
+
+        private class FakeManagedTracer : IManagedTracer
+        {
+            private readonly string _traceId;
+            private readonly ulong? _spanId;
+            private readonly IList<string> _ranInSpans = new List<string>();
+
+            internal FakeManagedTracer(string traceId, ulong? spanId) => (_traceId, _spanId) = (traceId, spanId);
+
+            public string GetCurrentTraceId() => _traceId;
+
+            public ulong? GetCurrentSpanId() => _spanId;
+
+            public async Task<T> RunInSpanAsync<T>(Func<Task<T>> func, string name, StartSpanOptions options = null)
+            {
+                _ranInSpans.Add(name);
+               return await func();
+            }
+
+            public T RunInSpan<T>(Func<T> func, string name, StartSpanOptions options = null)
+            {
+                _ranInSpans.Add(name);
+                return func();
+            }
+
+            public void RunInSpan(Action action, string name, StartSpanOptions options = null)
+            {
+                _ranInSpans.Add(name);
+                action();
+            }
+
+            public ISpan StartSpan(string name, StartSpanOptions options = null) => throw new NotImplementedException();
+
+            public void AnnotateSpan(Dictionary<string, string> labels)
+            { 
+                // noop
+            }
+
+            public void SetStackTrace(StackTrace stackTrace) => throw new NotImplementedException();
+
+            public void AssertSingleRanInSpan(string spanName)
+            {
+                var span = Assert.Single(_ranInSpans);
+                Assert.Equal(spanName, span);
+            }
+
+            public void AssertNoRanInSpan() => Assert.Empty(_ranInSpans);
+        }
+
+        private static void SetOutgoingHttpTraceContext(HttpRequestMessage request, ITraceContext context)
+        {
+            request.Properties.Add("traceId", context.TraceId);
+            request.Properties.Add("spanId", context.SpanId);
+        }
+
+        private void AssertContainsTraceProperties(HttpRequestMessage request)
+        {
+            Assert.Equal(TraceId, request.Properties["traceId"]);
+            Assert.Equal(SpanId, request.Properties["spanId"]);
+        }
+
+        private void AssertDoesNotContainTraceProperties(HttpRequestMessage request)
+        {
+            Assert.DoesNotContain("traceId", request.Properties);
+            Assert.DoesNotContain("spanId", request.Properties);
+        }
+
+        private void AssertContainsGoogleTraceHeader(HttpRequestMessage request)
+        {
+            var traceHeader = Assert.Single(request.Headers.GetValues(TraceHeaderContext.TraceHeader));
+            var currentContext = TraceHeaderContext.FromHeader(traceHeader);
+            Assert.Equal(TraceId, currentContext.TraceId);
+            Assert.Equal(SpanId, currentContext.SpanId);
+            Assert.True(currentContext.ShouldTrace);
+        }
+
+        private void AssertDoesNotContainGoogleTraceHeader(HttpRequestMessage request) =>
+            Assert.False(request.Headers.Contains(TraceHeaderContext.TraceHeader));
     }
 }

@@ -17,6 +17,7 @@ using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
@@ -28,6 +29,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -44,6 +46,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
     public class TraceTest
     {
+        private const string CustromTraceIdHeader = "custom_trace_id";
+        private const string CustromSpanIdHeader = "custom_span_id";
+        private const string CustromShouldTraceHeader = "custom_should_trace";
+
         private static readonly TraceIdFactory _traceIdFactory = TraceIdFactory.Create();
         private static readonly SpanIdFactory _spanIdFactory = SpanIdFactory.Create();
 
@@ -63,13 +69,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             _startTime = Timestamp.FromDateTime(DateTime.UtcNow);
         }
 
-        [Fact]
-        public async Task Trace()
+        public static TheoryData<Action<IWebHostBuilder>> ConfigurationData =>
+            new TheoryData<Action<IWebHostBuilder>>
+            {
+                null,
+                ConfigureCustomTraceContext
+            };
+
+        [Theory]
+        [MemberData(nameof(ConfigurationData))]
+        public async Task Trace(Action<IWebHostBuilder> testServerConfigurator)
         {
             var uri = $"/Trace/{nameof(TraceController.Trace)}/{_testId}";
             var childSpanName = EntryData.GetMessage(nameof(TraceController.Trace), _testId);
 
-            using var server = GetTestServer<TraceTestNoBufferHighQpsApplication>();
+            using var server = GetTestServer<TraceTestNoBufferHighQpsApplication>(testServerConfigurator);
             using var client = server.CreateClient();
             var response = await client.GetAsync(uri);
 
@@ -79,18 +93,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             TraceEntryVerifiers.AssertSpanLabelsContains(
                 trace.Spans.First(s => s.Name == uri), TraceEntryData.HttpGetSuccessLabels);
 
-            Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
-        }  
-        
-        [Fact]
-        public async Task Trace_DummyNameProvider()
+            AssertNoTraceHeaders(response);
+        }
+
+        [Theory]
+        [MemberData(nameof(ConfigurationData))]
+        public async Task Trace_DummyNameProvider(Action<IWebHostBuilder> testServerConfigurator)
         {
             var uri = $"/Trace/{nameof(TraceController.Trace)}/{_testId}";
             // our dummy provider prefixes with /Dummy
             var expectedTraceName = $"/Dummy{uri}";
             var childSpanName = EntryData.GetMessage(nameof(TraceController.Trace), _testId);
 
-            using var server = GetTestServer<TraceTestCustomNameProviderNoBufferHighQpsApplication>();
+            using var server = GetTestServer<TraceTestCustomNameProviderNoBufferHighQpsApplication>(testServerConfigurator);
             using var client = server.CreateClient();
             var response = await client.GetAsync(uri);
 
@@ -100,16 +115,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             TraceEntryVerifiers.AssertSpanLabelsContains(
                 trace.Spans.First(s => s.Name == expectedTraceName), TraceEntryData.HttpGetSuccessLabels);
 
-            Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
+            AssertNoTraceHeaders(response);
         }
 
-        [Fact]
-        public async Task Trace_Label()
+        [Theory]
+        [MemberData(nameof(ConfigurationData))]
+        public async Task Trace_Label(Action<IWebHostBuilder> testServerConfigurator)
         {
             var uri = $"/Trace/{nameof(TraceController.TraceLabels)}/{_testId}";
             var childSpanName = EntryData.GetMessage(nameof(TraceController.TraceLabels), _testId);
 
-            using var server = GetTestServer<TraceTestNoBufferHighQpsApplication>();
+            using var server = GetTestServer<TraceTestNoBufferHighQpsApplication>(testServerConfigurator);
             using var client = server.CreateClient();
             await client.GetAsync(uri);
 
@@ -123,13 +139,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 });
         }
 
-        [Theory]
-        [InlineData(nameof(TraceController.TraceOutgoing))]
-        [InlineData(nameof(TraceController.TraceOutgoingClientFactory))]
-        public async Task Trace_OutGoing(string methodName)
+        [Fact]
+        public async Task Trace_OutGoing()
         {
-            var uri = $"/Trace/{methodName}/{_testId}";
-            var childSpanName = EntryData.GetMessage(methodName, _testId);
+            // We don't test custom trace context with TraceHeaderPropagatingHandler because it's
+            // pre IHttpClientFactory and has associated lifetime issues.
+            var uri = $"/Trace/{nameof(TraceController.TraceOutgoing)}/{_testId}";
+            var childSpanName = EntryData.GetMessage(nameof(TraceController.TraceOutgoing), _testId);
             var outgoingSpanName = "https://google.com/";
 
             using var server = GetTestServer<TraceTestNoBufferHighQpsApplication>();
@@ -141,13 +157,31 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, childSpanName, outgoingSpanName);
         }
 
-        [Fact]
-        public async Task Trace_StackTrace()
+        [Theory]
+        [MemberData(nameof(ConfigurationData))]
+        public async Task Trace_OutGoingClientFactory(Action<IWebHostBuilder> testServerConfigurator)
+        {
+            var uri = $"/Trace/{nameof(TraceController.TraceOutgoingClientFactory)}/{_testId}";
+            var childSpanName = EntryData.GetMessage(nameof(TraceController.TraceOutgoingClientFactory), _testId);
+            var outgoingSpanName = "https://google.com/";
+
+            using var server = GetTestServer<TraceTestNoBufferHighQpsApplication>(testServerConfigurator);
+            using var client = server.CreateClient();
+            await client.GetAsync(uri);
+
+            var trace = _polling.GetTrace(uri, _startTime);
+
+            TraceEntryVerifiers.AssertParentChildSpan(trace, uri, childSpanName, outgoingSpanName);
+        }
+
+        [Theory]
+        [MemberData(nameof(ConfigurationData))]
+        public async Task Trace_StackTrace(Action<IWebHostBuilder> testServerConfigurator)
         {
             var uri = $"/Trace/{nameof(TraceController.TraceStackTrace)}/{_testId}";
             var childSpanName = EntryData.GetMessage(nameof(TraceController.TraceStackTrace), _testId);
 
-            using var server = GetTestServer<TraceTestNoBufferHighQpsApplication>();
+            using var server = GetTestServer<TraceTestNoBufferHighQpsApplication>(testServerConfigurator);
             using var client = server.CreateClient();
             await client.GetAsync(uri);
 
@@ -159,8 +193,25 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 nameof(TraceEntryData), nameof(TraceEntryData.CreateStackTrace));
         }
 
-        [Fact]
-        public async Task Trace_Header()
+        public static TheoryData<
+            Action<IWebHostBuilder>,
+            Action<HttpRequestHeaders, string, ulong?, bool?>,
+            Action<HttpResponseMessage, string, ulong?, bool?>> HeaderData =>
+            new TheoryData<
+            Action<IWebHostBuilder>,
+            Action<HttpRequestHeaders, string, ulong?, bool?>,
+            Action<HttpResponseMessage, string, ulong?, bool?>>
+            {
+                { null, GoogleTraceContextEmitter, AssertGoogleTraceHeader },
+                { ConfigureCustomTraceContext, CustomTraceContextEmitter, AssertCustomTraceHeader }
+            };
+
+        [Theory]
+        [MemberData(nameof(HeaderData))]
+        public async Task Trace_Header(
+            Action<IWebHostBuilder> testServerConfigurator,
+            Action<HttpRequestHeaders, string, ulong?, bool?> traceContextEmitter,
+            Action<HttpResponseMessage, string, ulong?, bool?> assertTraceContext)
         {
             string traceId = _traceIdFactory.NextId();
             ulong spanId = _spanIdFactory.NextId();
@@ -168,10 +219,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             var uri = $"/Trace/{nameof(TraceController.Trace)}/{_testId}";
             var childSpanName = EntryData.GetMessage(nameof(TraceController.Trace), _testId);
 
-            using var server = GetTestServer<TraceTestNoBufferLowQpsApplication>();
+            using var server = GetTestServer<TraceTestNoBufferLowQpsApplication>(testServerConfigurator);
             using var client = server.CreateClient();
-            var header = TraceHeaderContext.Create(traceId, spanId, shouldTrace: true);
-            client.DefaultRequestHeaders.Add(TraceHeaderContext.TraceHeader, header.ToString());
+            traceContextEmitter(client.DefaultRequestHeaders, traceId, spanId, true);
 
             var response = await client.GetAsync(uri);
 
@@ -183,16 +233,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             var parentSpan = trace.Spans.First(s => s.Name == uri);
             Assert.Equal(spanId, parentSpan.ParentSpanId);
 
-            Assert.True(response.Headers.Contains(TraceHeaderContext.TraceHeader));
-            var returnedHeader = response.Headers.GetValues(TraceHeaderContext.TraceHeader).Single();
-            var headerContext = TraceHeaderContext.FromHeader(returnedHeader);
-            Assert.Equal(traceId, headerContext.TraceId);
-            Assert.Equal(spanId, headerContext.SpanId);
-            Assert.True(headerContext.ShouldTrace);
+            assertTraceContext(response, traceId, spanId, true);
         }
 
-        [Fact]
-        public async Task Trace_MultipleHeaderPropagation()
+        [Theory]
+        [MemberData(nameof(ConfigurationData))]
+        public async Task Trace_MultipleHeaderPropagation(Action<IWebHostBuilder> testServerConfigurator)
         {
             var createFirstSpanUri = $"/Propagation/{nameof(PropagationController.CreateFirstSpan)}/{_testId}";
             var createFirstSpanSpanName = EntryData.GetMessage(nameof(PropagationController.CreateFirstSpan), _testId);
@@ -207,11 +253,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             };
 
             // The clientSideServer is the server to which this method, i.e. the client, will post the request, which in turn will generate other requests to other servers.
-            using (var clientSideServer = GetTestServer<TraceTestNoBufferHighQpsApplication>())
+            using (var clientSideServer = GetTestServer<TraceTestNoBufferHighQpsApplication>(testServerConfigurator))
             // The firstCallServer is the server used from within the first request to make subsequent requests.
-            using (var firstCallServer = GetTestServer<TraceTestNoBufferHighQpsApplication>())
+            using (var firstCallServer = GetTestServer<TraceTestNoBufferHighQpsApplication>(testServerConfigurator))
             // The secondCallServer is the server used from within the second request to make subsequent requests.
-            using (var secondCallServer = GetTestServer<TraceTestNoBufferHighQpsApplication>())
+            using (var secondCallServer = GetTestServer<TraceTestNoBufferHighQpsApplication>(testServerConfigurator))
             using (var client = clientSideServer.CreateClient())
             {
                 // Set the servers on the Controller so it can generate the subsequent requests.
@@ -227,7 +273,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 // 1. Makes a request to a method that does not create a new span but annotates the existing span
                 // which is there because of the propagating header.
                 // 2. Makes a request that creates a second span and within that span calls the same method in 1.
-                var response = await client.GetAsync(createFirstSpanUri);
+                await client.GetAsync(createFirstSpanUri);
 
                 // Cleanup
                 PropagationController.FirstCallServer = null;
@@ -260,13 +306,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             TraceEntryVerifiers.AssertSpanLabelsContains(automaticNoSpanInSecond, createNoSpanLabels);
         }
 
-        [Fact]
-        public void Trace_QPS()
+        [Theory]
+        [MemberData(nameof(ConfigurationData))]
+        public void Trace_QPS(Action<IWebHostBuilder> testServerConfigurator)
         {
             var traceUri = $"/Trace/{nameof(TraceController.Trace)}/{_testId}";
             var traceLabelUri = $"/Trace/{nameof(TraceController.TraceLabels)}/{_testId}";
 
-            using var server = GetTestServer<TraceTestNoBufferApplication>();
+            using var server = GetTestServer<TraceTestNoBufferApplication>(testServerConfigurator);
             using var client = server.CreateClient();
             // Make two requests, one of the two should be traced as they both occur at nearly the same time.
             var traceTask = client.GetAsync(traceUri);
@@ -285,13 +332,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.True((trace == null && traceLabel != null) || (trace != null && traceLabel == null));
         }
 
-        [Fact]
-        public async Task Trace_Buffer()
+        [Theory]
+        [MemberData(nameof(ConfigurationData))]
+        public async Task Trace_Buffer(Action<IWebHostBuilder> testServerConfigurator)
         {
             var traceUri = $"/Trace/{nameof(TraceController.Trace)}/{_testId}";
             var traceStackTraceUri = $"/Trace/{nameof(TraceController.TraceStackTrace)}/{_testId}";
 
-            using var server = GetTestServer<TraceTestTinyBufferHighQpsApplication>();
+            using var server = GetTestServer<TraceTestTinyBufferHighQpsApplication>(testServerConfigurator);
             using var client = server.CreateClient();
             // Make a trace with a small span that will not cause the buffer to flush.
             await client.GetAsync(traceUri);
@@ -304,13 +352,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.NotNull(_polling.GetTrace(traceStackTraceUri, _startTime));
         }
 
-        [Fact]
-        public async Task Trace_Exception()
+        [Theory]
+        [MemberData(nameof(ConfigurationData))]
+        public async Task Trace_Exception(Action<IWebHostBuilder> testServerConfigurator)
         {
             var uri = $"/Trace/{nameof(TraceController.ThrowException)}/{_testId}";
             var childSpanName = EntryData.GetMessage(nameof(TraceController.ThrowException), _testId);
 
-            using var server = GetTestServer<TraceTestNoBufferHighQpsApplication>();
+            using var server = GetTestServer<TraceTestNoBufferHighQpsApplication>(testServerConfigurator);
             using var client = server.CreateClient();
             await Assert.ThrowsAnyAsync<Exception>(() => client.GetAsync(uri));
 
@@ -321,12 +370,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 nameof(TraceController), nameof(TraceController.ThrowException));
         }
 
-        [Fact]
-        public async Task Trace_IgnoreHealthChecks()
+        [Theory]
+        [MemberData(nameof(ConfigurationData))]
+        public async Task Trace_IgnoreHealthChecks(Action<IWebHostBuilder> testServerConfigurator)
         {
             var uri = "/_ah/health";
 
-            using var server = GetTestServer<TraceTestNoBufferHighQpsApplication>();
+            using var server = GetTestServer<TraceTestNoBufferHighQpsApplication>(testServerConfigurator);
             using var client = server.CreateClient();
             var response = await client.GetAsync(uri);
 
@@ -336,8 +386,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.Null(trace);
         }
 
-        [Fact]
-        public async Task Trace_TimedBuffer_Stress()
+        [Theory]
+        [MemberData(nameof(ConfigurationData))]
+        public async Task Trace_TimedBuffer_Stress(Action<IWebHostBuilder> testServerConfigurator)
         {
             var uri = $"/Trace/{_testId}";
             // Not the best ever stress test but we are limited by read quotas anyway.
@@ -346,7 +397,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             // seconds max so let's only expect 90% of entries to be visible.
             var minExpectedRequests = 9 * requests / 10;
             IList<Task<HttpResponseMessage>> responseTasks = new List<Task<HttpResponseMessage>>(300);
-            using (var server = GetTestServer<TraceTestTimedBufferHighQpsApplication>())
+            using (var server = GetTestServer<TraceTestTimedBufferHighQpsApplication>(testServerConfigurator))
             using (var client = server.CreateClient())
             {
                 for (int i = 0; i < requests; i++)
@@ -361,14 +412,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.InRange(traces.Count(), minExpectedRequests, requests);
         }
 
-        [Fact]
-        public async Task Trace_SizedBufferMedium_Stress()
+        [Theory]
+        [MemberData(nameof(ConfigurationData))]
+        public async Task Trace_SizedBufferMedium_Stress(Action<IWebHostBuilder> testServerConfigurator)
         {
             var uri = $"/Trace/{_testId}";
             // Not the best ever stress test but we are limited by read quotas anyway.
             var requests = 300;
             IList<Task<HttpResponseMessage>> responseTasks = new List<Task<HttpResponseMessage>>(300);
-            using (var server = GetTestServer<TraceTestMediumBufferHighQpsApplication>())
+            using (var server = GetTestServer<TraceTestMediumBufferHighQpsApplication>(testServerConfigurator))
             using (var client = server.CreateClient())
             {
                 for (int i = 0; i < requests; i++)
@@ -386,6 +438,125 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             var traces = _polling.GetTraces(uri, _startTime, minEntries: minTraces);
             Assert.InRange(traces.Count(), minTraces, requests);
         }
+
+        private static void AssertNoTraceHeaders(HttpResponseMessage response)
+        {
+            // We check both Google and custom headers to make sure that
+            // we are not adding anything (Google's in particular) by default.
+            AssertNoGoogleTraceHeader(response);
+            AssertNoCustomTraceHeader(response);
+        }
+
+        private static void AssertNoGoogleTraceHeader(HttpResponseMessage response) =>
+            Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
+
+        private static void AssertNoCustomTraceHeader(HttpResponseMessage response)
+        {
+            Assert.False(response.Headers.Contains(CustromTraceIdHeader));
+            Assert.False(response.Headers.Contains(CustromSpanIdHeader));
+            Assert.False(response.Headers.Contains(CustromShouldTraceHeader));
+        }
+
+        private static void AssertGoogleTraceHeader(HttpResponseMessage response, string traceId, ulong? spanId, bool? shouldTrace)
+        {
+            string headerValue = Assert.Single(response.Headers.GetValues(TraceHeaderContext.TraceHeader));
+            var header = TraceHeaderContext.FromHeader(headerValue);
+            Assert.Equal(traceId, header.TraceId);
+            Assert.Equal(spanId, header.SpanId);
+            Assert.Equal(shouldTrace, header.ShouldTrace);
+
+            AssertNoCustomTraceHeader(response);
+        }
+
+        private static void AssertCustomTraceHeader(HttpResponseMessage response, string traceId, ulong? spanId, bool? shouldTrace)
+        {
+            string actualTraceId = response.Headers.GetValues(CustromTraceIdHeader).FirstOrDefault();
+            ulong? actualSpanId = response.Headers.GetValues(CustromSpanIdHeader).FirstOrDefault() is string rawSpanId ? ulong.Parse(rawSpanId) : (ulong?)null;
+            bool? actualShouldTrace = response.Headers.GetValues(CustromShouldTraceHeader).FirstOrDefault() is string rawShouldTrace ? bool.Parse(rawShouldTrace) : (bool?)null;
+
+            Assert.Equal(traceId, actualTraceId);
+            Assert.Equal(spanId, actualSpanId);
+            Assert.Equal(shouldTrace, actualShouldTrace);
+
+            AssertNoGoogleTraceHeader(response);
+        }
+
+        private static void GoogleTraceContextEmitter(HttpRequestHeaders headers, string traceId, ulong? spanId, bool? shouldTrace) =>
+            // To mimic incoming requests with the Google trace header.
+            headers.Add(TraceHeaderContext.TraceHeader, TraceHeaderContext.Create(traceId, spanId, shouldTrace).ToString());
+
+        private static void CustomTraceContextEmitter(HttpRequestHeaders headers, string traceId, ulong? spanId, bool? shouldTrace)
+        {
+            // To mimic incoming requests with the custom trace header.
+            SetHeaderValue(CustromTraceIdHeader, traceId);
+            SetHeaderValue(CustromSpanIdHeader, spanId?.ToString());
+            SetHeaderValue(CustromShouldTraceHeader, shouldTrace?.ToString());
+
+            void SetHeaderValue(string headerKey, string headerValue)
+            {
+                if (!string.IsNullOrEmpty(headerValue))
+                {
+                    headers.Add(headerKey, headerValue);
+                }
+            }
+        }
+
+        private static ITraceContext CustomTraceContextProvider(IServiceProvider serviceProvider)
+        {
+            var accessor = serviceProvider.GetRequiredService<IHttpContextAccessor>();
+
+            string traceId = GetHeaderValue(CustromTraceIdHeader);
+            ulong? spanId = GetHeaderValue(CustromSpanIdHeader) is string rawSpanId && ulong.TryParse(rawSpanId, out ulong parsedSpanId) ? parsedSpanId : (ulong?)null;
+            bool? shouldTrace = GetHeaderValue(CustromShouldTraceHeader) is string rawShouldTrace && bool.TryParse(rawShouldTrace, out bool parsedShouldTrace) ? parsedShouldTrace : (bool?)null;
+
+            return new SimpleTraceContext(traceId, spanId, shouldTrace);
+
+            string GetHeaderValue(string headerKey)
+            {
+                string header = accessor.HttpContext?.Request?.Headers[headerKey];
+                if (header == string.Empty)
+                {
+                    return null;
+                }
+                return header;
+            }
+        }
+
+        private static void CustomTraceContextResponsePropagator(HttpResponse response, ITraceContext traceContext)
+        {
+            SetHeaderValue(CustromTraceIdHeader, traceContext?.TraceId);
+            SetHeaderValue(CustromSpanIdHeader, traceContext?.SpanId?.ToString());
+            SetHeaderValue(CustromShouldTraceHeader, traceContext?.ShouldTrace?.ToString());
+
+            void SetHeaderValue(string headerKey, string headerValue)
+            {
+                if (!string.IsNullOrEmpty(headerValue))
+                {
+                    response.Headers.Add(headerKey, headerValue);
+                }
+            }
+        }
+
+        private static void CustomTraceContextOutgoingPropagator(HttpRequestMessage request, ITraceContext traceContext)
+        {
+            SetHeaderValue(CustromTraceIdHeader, traceContext?.TraceId);
+            SetHeaderValue(CustromSpanIdHeader, traceContext?.SpanId?.ToString());
+            SetHeaderValue(CustromShouldTraceHeader, traceContext?.ShouldTrace?.ToString());
+
+            void SetHeaderValue(string headerKey, string headerValue)
+            {
+                if (!string.IsNullOrEmpty(headerValue))
+                {
+                    request.Headers.Add(headerKey, headerValue);
+                }
+            }
+        }
+
+        private static void ConfigureCustomTraceContext(IWebHostBuilder hostBuilder) =>
+            hostBuilder.ConfigureServices(services => services
+                .AddScoped(CustomTraceContextProvider)
+                .AddSingleton<Action<HttpResponse, ITraceContext>>(CustomTraceContextResponsePropagator)
+                .AddSingleton<Action<HttpRequestMessage, ITraceContext>>(CustomTraceContextOutgoingPropagator));
     }
 
     /// <summary>
@@ -628,9 +799,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public static TestServer SecondCallServer;
 
         private IManagedTracer _tracer;
-        private TraceHeaderPropagatingHandler _propagatingHandler;
+        private UnchainedTraceHeaderPropagatingHandler _propagatingHandler;
 
-        public PropagationController([FromServices] IManagedTracer tracer, [FromServices] TraceHeaderPropagatingHandler propagatingHandler)
+        public PropagationController([FromServices] IManagedTracer tracer, [FromServices] UnchainedTraceHeaderPropagatingHandler propagatingHandler)
         {
             _tracer = tracer;
             _propagatingHandler = propagatingHandler;

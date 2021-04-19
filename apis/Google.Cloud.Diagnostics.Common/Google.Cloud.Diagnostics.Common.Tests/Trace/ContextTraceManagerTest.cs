@@ -27,12 +27,58 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
+        public void Unset_NullTraceContext() =>
+            Assert.Null(ContextTracerManager.GetCurrentTraceContext());
+
+        [Fact]
         public void Set()
         {
             var mockedManagedTracer = new Mock<IManagedTracer>(MockBehavior.Strict).Object;
             ContextTracerManager.SetCurrentTracer(mockedManagedTracer);
 
             Assert.Equal(mockedManagedTracer, ContextTracerManager.GetCurrentTracer());
+        }
+
+        [Fact]
+        public void Set_NullTraceId_NullTraceContext()
+        {
+            var managedTracerMock = new Mock<IManagedTracer>(MockBehavior.Strict);
+            managedTracerMock.Setup(t => t.GetCurrentTraceId()).Returns<IManagedTracer, string>(null);
+            ContextTracerManager.SetCurrentTracer(managedTracerMock.Object);
+
+            Assert.Null(ContextTracerManager.GetCurrentTraceContext());
+        }
+
+        [Fact]
+        public void Set_NullSpanId_TraceContext()
+        {
+            var managedTracerMock = new Mock<IManagedTracer>(MockBehavior.Strict);
+            managedTracerMock.Setup(t => t.GetCurrentTraceId()).Returns("dummyTraceId");
+            managedTracerMock.Setup(t => t.GetCurrentSpanId()).Returns<IManagedTracer, ulong?>(null);
+            ContextTracerManager.SetCurrentTracer(managedTracerMock.Object);
+
+            var traceContext = ContextTracerManager.GetCurrentTraceContext();
+            Assert.NotNull(traceContext);
+
+            Assert.Equal("dummyTraceId", traceContext.TraceId);
+            Assert.Null(traceContext.SpanId);
+            Assert.True(traceContext.ShouldTrace);
+        }
+
+        [Fact]
+        public void Set_TraceContext()
+        {
+            var managedTracerMock = new Mock<IManagedTracer>(MockBehavior.Strict);
+            managedTracerMock.Setup(t => t.GetCurrentTraceId()).Returns("dummyTraceId");
+            managedTracerMock.Setup(t => t.GetCurrentSpanId()).Returns(123456789u);
+            ContextTracerManager.SetCurrentTracer(managedTracerMock.Object);
+
+            var traceContext = ContextTracerManager.GetCurrentTraceContext();
+            Assert.NotNull(traceContext);
+
+            Assert.Equal("dummyTraceId", traceContext.TraceId);
+            Assert.Equal(123456789u, traceContext.SpanId);
+            Assert.True(traceContext.ShouldTrace);
         }
 
         [Fact]
