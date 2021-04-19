@@ -38,8 +38,12 @@ else
   declare -r GOOGLEAPIS="$PWD/googleapis"
 fi
 
-# Allow pre/post-generation scripts to know where to find the repo
+# TODO: Work out whether we need synthtool handling etc.
+declare -r GOOGLEAPIS_DISCOVERY="$PWD/googleapis-discovery"
+
+# Allow pre/post-generation scripts to know where to find the repos
 export GOOGLEAPIS
+export GOOGLEAPIS_DISCOVERY
 
 fetch_github_repos() {
   if [[ "$SYNTHTOOL_GOOGLEAPIS" == "" && "$SYNTHTOOL_PRECONFIG_FILE" == "" ]]
@@ -52,6 +56,13 @@ fetch_github_repos() {
       git remote -v | grep -q google-cloud-dotnet-private && repo=googleapis-private || repo=googleapis
       git clone https://github.com/googleapis/${repo} $GOOGLEAPIS --depth 1
     fi
+  fi
+  
+  if [ -d "$GOOGLEAPIS_DISCOVERY" ]
+  then
+    git -C $GOOGLEAPIS_DISCOVERY pull -q
+  else
+    git clone https://github.com/googleapis/googleapis-discovery $GOOGLEAPIS_DISCOVERY --depth 1
   fi
 }
 
@@ -168,6 +179,68 @@ generate_microgenerator() {
   cp -r $API_TMP_DIR $API_OUT_DIR
 }
 
+# TODO: Use a common function for both kinds of generation
+generate_microgenerator_regapic() {
+  PACKAGE_ID=$1
+  API_TMP_DIR=$OUTDIR/$PACKAGE_ID
+  PRODUCTION_PACKAGE_DIR=$API_TMP_DIR/$PACKAGE_ID
+  GRPC_GENERATION_DIR=$API_TMP_DIR/grpc-$PACKAGE_ID
+  API_OUT_DIR=apis
+  API_SRC_DIR=$GOOGLEAPIS_DISCOVERY/$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE_ID protoPath)
+
+  # Delete previously-generated files
+  delete_generated apis/$1/$1
+  delete_generated apis/$1/$1.Tests
+  delete_generated apis/$1/$1.Snippets
+
+  mkdir -p $PRODUCTION_PACKAGE_DIR
+  mkdir -p $GRPC_GENERATION_DIR
+  
+  # Message and service generation.
+  $PROTOC \
+    --csharp_out=$PRODUCTION_PACKAGE_DIR \
+    --csharp_opt=base_namespace=$1,file_extension=.g.cs \
+    --grpc_out=$GRPC_GENERATION_DIR \
+    --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
+    -I $GOOGLEAPIS_DISCOVERY \
+    -I $GOOGLEAPIS \
+    -I $CORE_PROTOS_ROOT \
+    $(find $API_SRC_DIR -name '*.proto') \
+    2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
+
+  # Change extension of gRPC-generated files
+  if compgen -G "$GRPC_GENERATION_DIR/*.cs" > /dev/null
+  then
+    for grpc_output in $GRPC_GENERATION_DIR/*.cs
+    do
+      mv $grpc_output $(echo $grpc_output | sed -E 's/.cs$/.g.cs/g')
+    done
+    mv $GRPC_GENERATION_DIR/* $PRODUCTION_PACKAGE_DIR
+  fi
+  rm -rf $GRPC_GENERATION_DIR    
+
+  # Client generation.
+  $PROTOC \
+    --gapic_out=$API_TMP_DIR \
+    --gapic_opt=metadata \
+    $SERVICE_CONFIG_OPTION \
+    --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
+    -I $GOOGLEAPIS_DISCOVERY \
+    -I $GOOGLEAPIS \
+    -I $CORE_PROTOS_ROOT \
+    $(find $API_SRC_DIR -name '*.proto') \
+    2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
+
+  # Remove the newly generated standalone snippets until they are ready for surfacing.
+  rm -rf $API_TMP_DIR/$1.StandaloneSnippets
+
+  # We generate our own project files
+  rm $(find tmp -name '*.csproj')
+  
+  # Copy the rest into the right place
+  cp -r $API_TMP_DIR $API_OUT_DIR
+}
+
 generate_proto() {
   # Delete previously-generated files
   delete_generated apis/$1/$1
@@ -230,6 +303,9 @@ generate_api() {
   case "$GENERATOR" in
     micro)
       generate_microgenerator $1
+      ;;
+    regapic)
+      generate_microgenerator_regapic $1
       ;;
     proto)
       generate_proto $1
