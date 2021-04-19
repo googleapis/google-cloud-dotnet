@@ -468,6 +468,22 @@
       "protoPath": "google/devtools/cloudbuild/v1"
     },
     {
+      "id": "Google.Cloud.Compute.V1",
+      "version": "1.0.0-alpha00",
+      "type": "regapic",
+      "productName": "Compute Engine",
+      "productUrl": "https://cloud.google.com/compute",
+      "description": "Recommended Google client library to access the Google Cloud Compute Engine API.",
+      "tags": [
+        "compute"
+      ],
+      "dependencies": {
+        "Google.Api.Gax.Grpc": "3.3.0-alpha02"
+      },
+      "generator": "regapic",
+      "protoPath": "google/cloud/compute/v1"
+    },
+    {
       "id": "Google.Cloud.Container.V1",
       "generator": "micro",
       "protoPath": "google/container/v1",
