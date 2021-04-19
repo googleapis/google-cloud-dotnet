@@ -44,7 +44,8 @@ namespace Google.Cloud.Tools.ReleaseManager
         private static readonly Dictionary<ApiType, string> PackageTypeToDefaultTargetFrameworks = new Dictionary<ApiType, string>
         {
             { ApiType.Rest, "netstandard2.0;net461" },
-            { ApiType.Grpc, "netstandard2.0;net461" }
+            { ApiType.Grpc, "netstandard2.0;net461" },
+            { ApiType.Regapic, "netstandard2.0;net461" }
         };
 
         private const string DefaultTestTargetFrameworks = "netcoreapp2.1;net461";
@@ -53,6 +54,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             {  ApiType.Rest, new[] { "Google.Api.Gax.Rest" } },
             {  ApiType.Grpc, new[] { "Grpc.Core", "Google.Api.Gax.Grpc.GrpcCore" } },
+            {  ApiType.Regapic, new[] { "Google.Api.Gax.Grpc" } },
         };
 
         private const string AnalyzersTargetFramework = "netstandard1.3";
@@ -458,7 +460,9 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private static void GenerateSynthConfiguration(string apiRoot, ApiMetadata api)
         {
-            if (api.Generator == GeneratorType.None)
+            // Note: we don't currently support autosynth for regapic.
+            // (We'll get there over time.)
+            if (api.Generator == GeneratorType.None || api.Generator == GeneratorType.Regapic)
             {
                 return;
             }
