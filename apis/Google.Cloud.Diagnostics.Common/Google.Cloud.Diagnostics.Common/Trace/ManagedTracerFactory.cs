@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.Common
@@ -24,7 +23,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// the needed context to determine the proper <see cref="IManagedTracer"/> then the given
     /// <see cref="ITraceOptionsFactory"/> will decide.
     /// </summary>
-    internal class ManagedTracerFactory : IManagedTracerFactory
+    internal class ManagedTracerFactory
     {
         private readonly string _projectId;
         private readonly IConsumer<TraceProto> _consumer;
@@ -36,8 +35,8 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         /// <param name="projectId">The Google Cloud Platform project ID. Must not be null.</param>
         /// <param name="consumer">A trace consumer for the tracer. Must not be null.</param>
-        /// <param name="optionsFactory">An options factory to fall back to if the 
-        ///     <see cref="TraceHeaderContext"/> does not provide enough context. Must not be null.</param>
+        /// <param name="optionsFactory">An options factory to fall back to if the
+        /// <see cref="TraceHeaderContext"/> does not provide enough context. Must not be null.</param>
         /// <param name="traceIdFactory">A trace Id factory. Must not be null.</param>
         internal ManagedTracerFactory(
             string projectId,
@@ -61,14 +60,14 @@ namespace Google.Cloud.Diagnostics.Common
                 return NullManagedTracer.Instance;
             }
             var traceId = headerContext.TraceId ?? _traceIdFactory.NextId();
-            return SimpleManagedTracer.Create(_consumer, _projectId, traceId,  headerContext.SpanId);
+            return SimpleManagedTracer.Create(_consumer, _projectId, traceId, headerContext.SpanId);
         }
 
         /// <summary>
         /// True if the tracing should occur. Decision based on a <see cref="TraceHeaderContext"/>
         /// and an <see cref="ITraceOptionsFactory"/>.
         /// </summary>
-        internal bool ShouldTrace(TraceHeaderContext headerContext) => 
+        internal bool ShouldTrace(TraceHeaderContext headerContext) =>
             headerContext.ShouldTrace ?? _optionsFactory.CreateOptions().ShouldTrace;
     }
 }
