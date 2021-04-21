@@ -39,7 +39,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             string region = _fixture.Region;
 
             AddressesClient addressesClient = AddressesClient.Create();
-            var addressName = $"testaddr-csharp-{Guid.NewGuid()}";
+            var addressName = _fixture.GenerateResourceId();
 
             FetchNonExistentAddress();
             CreateAddress();
