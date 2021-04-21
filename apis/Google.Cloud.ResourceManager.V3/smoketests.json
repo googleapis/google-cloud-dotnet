@@ -1,0 +1,9 @@
+[
+  {
+    "method": "GetProject",
+    "client": "ProjectsClient",
+    "arguments": {
+      "name": "projects/${PROJECT_ID}"
+    }
+  }
+]
