@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Compute.V1", "Google.Cloud.Compute.V1\Google.Cloud.Compute.V1.csproj", "{AA705DCA-FAD1-4D45-BF12-FFED6E07DB91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Compute.V1", "Google.Cloud.Compute.V1\Google.Cloud.Compute.V1.csproj", "{AA705DCA-FAD1-4D45-BF12-FFED6E07DB91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Compute.V1.Snippets", "Google.Cloud.Compute.V1.Snippets\Google.Cloud.Compute.V1.Snippets.csproj", "{E42EF5AF-0E0F-40E1-AC7B-58A360700AEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Compute.V1.Snippets", "Google.Cloud.Compute.V1.Snippets\Google.Cloud.Compute.V1.Snippets.csproj", "{E42EF5AF-0E0F-40E1-AC7B-58A360700AEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{756BC412-834F-42DF-9D1C-9B4FFEAA993E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{756BC412-834F-42DF-9D1C-9B4FFEAA993E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Compute.V1.Tests", "Google.Cloud.Compute.V1.Tests\Google.Cloud.Compute.V1.Tests.csproj", "{8B297C1A-12A9-462F-A1B2-2681114B1C76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Compute.V1.Tests", "Google.Cloud.Compute.V1.Tests\Google.Cloud.Compute.V1.Tests.csproj", "{8B297C1A-12A9-462F-A1B2-2681114B1C76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Compute.V1.IntegrationTests", "Google.Cloud.Compute.V1.IntegrationTests\Google.Cloud.Compute.V1.IntegrationTests.csproj", "{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AA705DCA-FAD1-4D45-BF12-FFED6E07DB91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,5 +71,23 @@ Global
 		{8B297C1A-12A9-462F-A1B2-2681114B1C76}.Release|x64.Build.0 = Release|Any CPU
 		{8B297C1A-12A9-462F-A1B2-2681114B1C76}.Release|x86.ActiveCfg = Release|Any CPU
 		{8B297C1A-12A9-462F-A1B2-2681114B1C76}.Release|x86.Build.0 = Release|Any CPU
+		{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}.Debug|x64.Build.0 = Debug|Any CPU
+		{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}.Debug|x86.Build.0 = Debug|Any CPU
+		{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}.Release|x64.ActiveCfg = Release|Any CPU
+		{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}.Release|x64.Build.0 = Release|Any CPU
+		{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}.Release|x86.ActiveCfg = Release|Any CPU
+		{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34A4205A-3908-43B3-BF66-BEE1C697B641}
 	EndGlobalSection
 EndGlobal
