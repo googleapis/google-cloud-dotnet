@@ -214,3 +214,10 @@ To configure the project (in terms of permissions), visit the
 [AutoML Vision console](https://cloud.google.com/automl/ui/vision/),
 type in your project ID, click "Continue", and then click "Set up
 now" on the next page.
+
+Google.Cloud.Compute.V1
+-----------------------
+
+The `TEST_PROJECT_LOCATION` environment variable must be set to a
+region, e.g. `us-west1`. (The value used for AppEngine testing
+should be fine for Compute as well.)
